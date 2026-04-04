@@ -21,12 +21,12 @@ claridad arquitectónica - valor práctico
 
 ## Checklist
 
--   [ ] Crear repositorio Git
--   [ ] Definir estructura de carpetas
--   [ ] Configurar entorno Python
--   [ ] Crear CLI básica
--   [ ] Validar input APK
--   [ ] (Opcional) Docker Compose básico
+-   [x] Crear repositorio Git
+-   [x] Definir estructura de carpetas
+-   [x] Configurar entorno Python
+-   [x] Crear CLI básica
+-   [x] Validar input APK
+-   [ ] ~~(Opcional) Docker Compose básico~~
 
 ------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ claridad arquitectónica - valor práctico
 
 ### Tools
 
--   [ ] Extraer manifest (apktool)
+-   [x] Extraer manifest (apktool)
 -   [ ] Ejecutar JADX
 -   [ ] Extraer permisos
 -   [ ] Detectar componentes exportados
