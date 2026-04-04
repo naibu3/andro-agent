@@ -7,7 +7,7 @@ Agent-guided APK analyzer for Android application security analysis.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -e .[dev]
+.venv/bin/pip install -e .[dev]
 ```
 
 ## Commands
@@ -21,7 +21,7 @@ andro-agent inspect samples/app.apk
 ## Testing
 
 ```bash
-pip install -e .[dev]
+.venv/bin/pip install -e ".[dev]"
 pytest
 andro-agent init-dirs
 andro-agent validate samples/app.apk
