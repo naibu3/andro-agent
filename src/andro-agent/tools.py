@@ -12,7 +12,6 @@ APKTOOL_OUT = OUTPUT_DIR / "apktool"
 
 ANDROID_NS = "{http://schemas.android.com/apk/res/android}"
 
-
 def run_jadx(apk_path: str) -> str:
     apk = Path(apk_path).resolve()
 
@@ -29,11 +28,25 @@ def run_jadx(apk_path: str) -> str:
         text=True,
     )
 
+    generated_files = list(JADX_OUT.rglob("*"))
+    has_output = any(p.is_file() for p in generated_files)
+
     if result.returncode != 0:
-        return f"jadx falló:\n{result.stderr}"
+        if has_output:
+            return (
+                f"jadx completado con errores parciales (rc={result.returncode}).\n"
+                f"Se generó salida en: {JADX_OUT}\n"
+                f"STDOUT resumido:\n{result.stdout[-2000:]}\n"
+                f"STDERR:\n{result.stderr}"
+            )
+
+        return (
+            f"jadx falló sin generar salida útil (rc={result.returncode}).\n"
+            f"STDOUT:\n{result.stdout}\n"
+            f"STDERR:\n{result.stderr}"
+        )
 
     return f"jadx completado. Salida: {JADX_OUT}"
-
 
 def run_apktool(apk_path: str) -> str:
     apk = Path(apk_path).resolve()
@@ -541,3 +554,27 @@ def build_initial_evidence() -> str:
     }
 
     return json.dumps(evidence, indent=2, ensure_ascii=False)
+
+def save_text_file(path: str, content: str) -> str:
+    file_path = Path(path).resolve()
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    file_path.write_text(content, encoding="utf-8")
+    return f"Guardado en {file_path}"
+
+
+def read_multiple_files(file_paths: list[str], max_chars_per_file: int = 8000) -> str:
+    chunks = []
+
+    for fp in file_paths:
+        path = Path(fp).resolve()
+        if not path.exists():
+            chunks.append(f"FILE: {fp}\nERROR: no existe\n")
+            continue
+
+        try:
+            content = path.read_text(encoding="utf-8", errors="ignore")[:max_chars_per_file]
+            chunks.append(f"FILE: {path}\n{content}\n")
+        except Exception as e:
+            chunks.append(f"FILE: {fp}\nERROR: {e}\n")
+
+    return "\n\n".join(chunks)

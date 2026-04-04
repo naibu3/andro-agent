@@ -1,0 +1,181 @@
+{
+  "manifest": {
+    "package": "id.blackbear.vulnapk",
+    "version_code": null,
+    "version_name": null,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "id.blackbear.vulnapk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "app_flags": {
+      "debuggable": "true",
+      "allowBackup": "true",
+      "usesCleartextTraffic": "true",
+      "networkSecurityConfig": null,
+      "requestLegacyExternalStorage": null
+    },
+    "components": {
+      "activities": [
+        {
+          "name": "id.blackbear.vulnapk.MainActivity",
+          "exported": "true",
+          "permission": null,
+          "authorities": null,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.MAIN"
+              ],
+              "categories": [
+                "android.intent.category.LAUNCHER"
+              ],
+              "data": []
+            }
+          ]
+        },
+        {
+          "name": "id.blackbear.vulnapk.InsecureStorageActivity",
+          "exported": "false",
+          "permission": null,
+          "authorities": null,
+          "intent_filters": []
+        },
+        {
+          "name": "id.blackbear.vulnapk.InsecureCryptoActivity",
+          "exported": "true",
+          "permission": null,
+          "authorities": null,
+          "intent_filters": []
+        },
+        {
+          "name": "id.blackbear.vulnapk.VulnWeb",
+          "exported": "true",
+          "permission": null,
+          "authorities": null,
+          "intent_filters": []
+        },
+        {
+          "name": "id.blackbear.vulnapk.SettingsActivity",
+          "exported": "false",
+          "permission": null,
+          "authorities": null,
+          "intent_filters": []
+        },
+        {
+          "name": "id.blackbear.vulnapk.RootActivity",
+          "exported": "false",
+          "permission": null,
+          "authorities": null,
+          "intent_filters": []
+        }
+      ],
+      "services": [],
+      "receivers": [],
+      "providers": [
+        {
+          "name": "androidx.startup.InitializationProvider",
+          "exported": "false",
+          "permission": null,
+          "authorities": "id.blackbear.vulnapk.androidx-startup",
+          "intent_filters": []
+        }
+      ]
+    }
+  },
+  "permissions": {
+    "all_permissions": [
+      "android.permission.INTERNET",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "id.blackbear.vulnapk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "interesting_permissions": [
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE"
+    ]
+  },
+  "exported_components": [
+    {
+      "type": "activities",
+      "name": "id.blackbear.vulnapk.MainActivity",
+      "permission": null,
+      "authorities": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.MAIN"
+          ],
+          "categories": [
+            "android.intent.category.LAUNCHER"
+          ],
+          "data": []
+        }
+      ]
+    },
+    {
+      "type": "activities",
+      "name": "id.blackbear.vulnapk.InsecureCryptoActivity",
+      "permission": null,
+      "authorities": null,
+      "intent_filters": []
+    },
+    {
+      "type": "activities",
+      "name": "id.blackbear.vulnapk.VulnWeb",
+      "permission": null,
+      "authorities": null,
+      "intent_filters": []
+    }
+  ],
+  "webview_candidates": [
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/res/layout/activity_web.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/res/values/ids.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/res/values/public.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/smali/androidx/core/text/util/LinkifyCompat.smali",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/smali_classes2/id/blackbear/vulnapk/R$id.smali",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/smali_classes3/id/blackbear/vulnapk/VulnWeb.smali",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/layout/activity_web.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/values/public.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/sources/androidx/core/text/util/LinkifyCompat.java",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/sources/id/blackbear/vulnapk/R.java",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/sources/id/blackbear/vulnapk/VulnWeb.java"
+  ],
+  "secret_candidates": [
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_avd_hide_password__0_res_0x7f070000.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_avd_hide_password__1_res_0x7f070001.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_avd_hide_password__2_res_0x7f070002.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_avd_show_password__0_res_0x7f070003.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_avd_show_password__1_res_0x7f070004.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_avd_show_password__2_res_0x7f070005.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_m3_avd_hide_password__0_res_0x7f070007.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_m3_avd_hide_password__1_res_0x7f070008.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_m3_avd_show_password__0_res_0x7f07000a.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/_m3_avd_show_password__1_res_0x7f07000b.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/avd_hide_password.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/avd_show_password.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/design_ic_visibility.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/design_password_eye.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/m3_avd_hide_password.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/m3_avd_show_password.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/drawable/m3_password_eye.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/layout/activity_insecurecrypto.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/layout/activity_insecurestorage.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/res/values-af/strings.xml"
+  ],
+  "network_candidates": [
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/apktool/AndroidManifest.xml",
+    "/home/agent/android-agent-mvp/android-agent-mvp/output/jadx/resources/AndroidManifest.xml"
+  ],
+  "deeplink_candidates": [],
+  "initial_suspicions": [
+    "App debuggable activada",
+    "allowBackup=true",
+    "usesCleartextTraffic=true",
+    "Componentes exportados detectados",
+    "Uso de WebView detectado en código",
+    "Posibles secretos hardcodeados",
+    "Código de red/TLS interesante detectado"
+  ]
+}
