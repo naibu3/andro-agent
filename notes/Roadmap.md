@@ -37,26 +37,17 @@ claridad arquitectónica - valor práctico
 ### Tools
 
 -   [x] Extraer manifest (apktool)
--   [ ] Ejecutar JADX
+	+  [x] exported sin permiso
+	+  [x] debuggable
+	+  [x] allowBackup
+	+  [x] Generar JSON estructurado
+	+  [x] Guardar facts
+	+  [x] Generar findings JSON
+	+  [ ] Mostrar resultados -> mejorar display por CLI
+-   [x] Ejecutar JADX
 -   [ ] Extraer permisos
 -   [ ] Detectar componentes exportados
 -   [ ] Extraer strings
-
-### Fact Builder
-
--   [ ] Generar JSON estructurado
--   [ ] Guardar facts
-
-### Rule Engine
-
--   [ ] exported sin permiso
--   [ ] debuggable
--   [ ] allowBackup
-
-### Output
-
--   [ ] Generar findings JSON
--   [ ] Mostrar resultados
 
 ------------------------------------------------------------------------
 

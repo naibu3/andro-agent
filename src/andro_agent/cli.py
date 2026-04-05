@@ -7,6 +7,8 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
+from andro_agent.utils.logging import setup_logging
+
 from andro_agent.models import ExtractManifestInput
 from andro_agent.tools.extract_manifest import ExtractManifestTool
 from andro_agent.validators import APKValidationError, validate_apk
@@ -14,6 +16,32 @@ from andro_agent.validators import APKValidationError, validate_apk
 from rich import box
 from andro_agent.facts.manifest_facts import build_manifest_facts
 from andro_agent.models import BuildManifestFactsInput, ExtractManifestInput
+
+from andro_agent.models import (
+    ApplyManifestRulesInput,
+    BuildManifestFactsInput,
+    ExtractManifestInput,
+)
+from andro_agent.rules.manifest_rules import apply_manifest_rules
+
+from andro_agent.pipelines.static_pipeline import StaticAnalysisPipeline
+
+from andro_agent.models import CodeSearchInput, JadxDecompileInput
+from andro_agent.tools.code_search import CodeSearchTool
+from andro_agent.tools.jadx_tool import JadxDecompileTool
+
+from andro_agent.facts.code_search_facts import build_code_search_facts
+from andro_agent.models import (
+    ApplyCodeRulesInput,
+    BuildCodeSearchFactsInput,
+    CodeSearchInput,
+    JadxDecompileInput,
+)
+from andro_agent.rules.code_rules import apply_code_rules
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = typer.Typer(
     help="Andro-Agent CLI",
@@ -27,8 +55,13 @@ app.add_typer(manifest_app, name="manifest")
 facts_app = typer.Typer(help="Facts-related commands")
 app.add_typer(facts_app, name="facts")
 
-console = Console()
+rules_app = typer.Typer(help="Rules-related commands")
+app.add_typer(rules_app, name="rules")
 
+code_app = typer.Typer(help="Code analysis commands")
+app.add_typer(code_app, name="code")
+
+console = Console()
 
 @app.command("init-dirs")
 def init_dirs(
@@ -89,7 +122,7 @@ def inspect(
     """
     Minimal inspection command.
     Validates the APK, extracts/parses AndroidManifest.xml,
-    and builds normalized manifest facts.
+    builds normalized manifest facts, and applies deterministic rules.
     """
     try:
         validate_apk(apk_path)
@@ -126,6 +159,20 @@ def inspect(
             console.print(f"[red]- {error}[/red]")
         raise typer.Exit(code=1)
 
+    rules_result = apply_manifest_rules(
+        ApplyManifestRulesInput(
+            facts_json_path=facts_result.facts_path,
+            case_id=case_id,
+            artifacts_dir=artifacts_dir,
+        )
+    )
+
+    if not rules_result.success:
+        console.print("[red]Inspection failed during rule execution.[/red]")
+        for error in rules_result.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
     table = Table(title="APK inspection", box=box.SIMPLE)
     table.add_column("Field", style="cyan")
     table.add_column("Value")
@@ -135,6 +182,8 @@ def inspect(
     table.add_row("Manifest JSON", str(manifest_result.parsed_json_path))
     table.add_row("Facts JSON", str(facts_result.facts_path))
     table.add_row("Facts count", str(len(facts_result.facts)))
+    table.add_row("Findings JSON", str(rules_result.findings_path))
+    table.add_row("Findings count", str(len(rules_result.findings)))
 
     console.print("[green]APK inspection completed.[/green]")
     console.print(table)
@@ -216,9 +265,224 @@ def build_manifest_facts_cmd(
     console.print("[green]Manifest facts built successfully.[/green]")
     console.print(table)
 
-def main() -> None:
-    app()
+@rules_app.command("manifest")
+def apply_manifest_rules_cmd(
+    facts_json_path: Path = typer.Argument(..., help="Path to manifest facts JSON."),
+    case_id: str = typer.Option(..., "--case-id", help="Case identifier."),
+    artifacts_dir: Path = typer.Option(
+        Path("artifacts"),
+        "--artifacts-dir",
+        help="Base artifacts directory.",
+    ),
+) -> None:
+    """
+    Apply deterministic manifest rules over manifest facts.
+    """
+    result = apply_manifest_rules(
+        ApplyManifestRulesInput(
+            facts_json_path=facts_json_path,
+            case_id=case_id,
+            artifacts_dir=artifacts_dir,
+        )
+    )
+
+    if not result.success:
+        console.print("[red]Manifest rules execution failed.[/red]")
+        for error in result.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
+    table = Table(title="Manifest rules result", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+
+    table.add_row("Findings file", str(result.findings_path))
+    table.add_row("Total findings", str(len(result.findings)))
+
+    console.print("[green]Manifest rules applied successfully.[/green]")
+    console.print(table)
+
+code_app = typer.Typer(help="Code analysis commands")
+app.add_typer(code_app, name="code")
+
+
+@code_app.command("jadx")
+def code_jadx(
+    apk_path: Path = typer.Argument(..., help="Path to the APK file."),
+    case_id: str = typer.Option(..., "--case-id", help="Case identifier."),
+    artifacts_dir: Path = typer.Option(Path("artifacts"), "--artifacts-dir"),
+) -> None:
+    tool = JadxDecompileTool()
+    result = tool.run(
+        JadxDecompileInput(
+            apk_path=apk_path,
+            case_id=case_id,
+            artifacts_dir=artifacts_dir,
+        )
+    )
+
+    if not result.success:
+        console.print("[red]JADX decompilation failed.[/red]")
+        for error in result.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
+    table = Table(title="JADX result", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+    table.add_row("Output dir", str(result.output_dir))
+    table.add_row("Java dir", str(result.java_dir))
+    table.add_row("Resources dir", str(result.resources_dir))
+    console.print("[green]JADX completed successfully.[/green]")
+    console.print(table)
+
+
+@code_app.command("search")
+def code_search_cmd(
+    source_dir: Path = typer.Argument(..., help="Path to JADX sources dir."),
+    case_id: str = typer.Option(..., "--case-id", help="Case identifier."),
+    artifacts_dir: Path = typer.Option(Path("artifacts"), "--artifacts-dir"),
+) -> None:
+    tool = CodeSearchTool()
+    result = tool.run(
+        CodeSearchInput(
+            source_dir=source_dir,
+            case_id=case_id,
+            artifacts_dir=artifacts_dir,
+        )
+    )
+
+    if not result.success:
+        console.print("[red]Code search failed.[/red]")
+        for error in result.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
+    table = Table(title="Code search result", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+    table.add_row("Results path", str(result.results_path))
+    table.add_row("Matches", str(len(result.matches)))
+    console.print("[green]Code search completed successfully.[/green]")
+    console.print(table)
+
+@facts_app.command("build-code-search")
+def build_code_search_facts_cmd(
+    code_search_results_path: Path = typer.Argument(..., help="Path to code search results JSON."),
+    case_id: str = typer.Option(..., "--case-id", help="Case identifier."),
+    artifacts_dir: Path = typer.Option(Path("artifacts"), "--artifacts-dir"),
+) -> None:
+    result = build_code_search_facts(
+        BuildCodeSearchFactsInput(
+            code_search_results_path=code_search_results_path,
+            case_id=case_id,
+            artifacts_dir=artifacts_dir,
+        )
+    )
+
+    if not result.success:
+        console.print("[red]Code search facts build failed.[/red]")
+        for error in result.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
+    table = Table(title="Code search facts result", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+    table.add_row("Facts file", str(result.facts_path))
+    table.add_row("Total facts", str(len(result.facts)))
+    console.print("[green]Code search facts built successfully.[/green]")
+    console.print(table)
+
+@rules_app.command("code")
+def apply_code_rules_cmd(
+    facts_json_path: Path = typer.Argument(..., help="Path to code facts JSON."),
+    case_id: str = typer.Option(..., "--case-id", help="Case identifier."),
+    artifacts_dir: Path = typer.Option(Path("artifacts"), "--artifacts-dir"),
+) -> None:
+    result = apply_code_rules(
+        ApplyCodeRulesInput(
+            facts_json_path=facts_json_path,
+            case_id=case_id,
+            artifacts_dir=artifacts_dir,
+        )
+    )
+
+    if not result.success:
+        console.print("[red]Code rules execution failed.[/red]")
+        for error in result.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
+    table = Table(title="Code rules result", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+    table.add_row("Findings file", str(result.findings_path))
+    table.add_row("Total findings", str(len(result.findings)))
+    console.print("[green]Code rules applied successfully.[/green]")
+    console.print(table)
+
+@app.command("run")
+def run_analysis(
+    apk_path: Path = typer.Argument(..., help="Path to the APK file."),
+    case_id: str = typer.Option(..., "--case-id", help="Case identifier."),
+    artifacts_dir: Path = typer.Option(
+        Path("artifacts"),
+        "--artifacts-dir",
+        help="Base artifacts directory.",
+    ),
+) -> None:
+    """
+    Run full static analysis pipeline.
+    """
+    pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir)
+
+    state = pipeline.run(apk_path=apk_path, case_id=case_id)
+
+    if state.status != "completed":
+        console.print("[red]Pipeline failed.[/red]")
+        for err in state.errors:
+            console.print(f"[red]- {err}[/red]")
+        raise typer.Exit(code=1)
+
+    table = Table(title="Pipeline result", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+
+    table.add_row("Case ID", state.case_id)
+    table.add_row("Status", state.status)
+    table.add_row("Manifest JSON", str(state.manifest_json_path))
+    table.add_row("Facts JSON", str(state.facts_path))
+    table.add_row("Findings JSON", str(state.findings_path))
+    table.add_row("Analysis", f"artifacts/{state.case_id}/analysis/analysis.json")
+    table.add_row("Analysis JSON", str(state.analysis_path))
+    table.add_row("Analysis raw", str(state.analysis_raw_path))
+    table.add_row("JADX dir", str(state.jadx_output_dir))
+    table.add_row("Code search", str(state.code_search_results_path))
+    table.add_row("Static bundle", str(state.static_analysis_bundle_path))
+    table.add_row("Static bundle", str(state.static_analysis_bundle_path))
+    table.add_row("Reasoning JSON", str(state.analysis_path))
+    table.add_row("Reasoning raw", str(state.analysis_raw_path))
+    table.add_row("Markdown report", str(state.static_report_path))
+    table.add_row("Manifest reasoning", str(state.manifest_reasoning_path))
+    table.add_row("Code reasoning", str(state.code_reasoning_path))
+    table.add_row("Fused reasoning", str(state.analysis_path))
+    table.add_row("Markdown report", str(state.static_report_path))
+
+    console.print("[green]Pipeline completed successfully.[/green]")
+    console.print(table)
+
+@app.callback()
+def main(
+    v: int = typer.Option(
+        0,
+        "-v",
+        count=True,
+        help="Increase verbosity (-v, -vv)",
+    ),
+):
+    setup_logging(v)
 
 
 if __name__ == "__main__":
-    main()
+    app()

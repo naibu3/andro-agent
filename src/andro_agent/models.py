@@ -91,3 +91,109 @@ class BuildManifestFactsOutput(BaseModel):
     facts: list[Fact] = Field(default_factory=list)
     errors: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
+
+class Finding(BaseModel):
+    rule_id: str
+    title: str
+    description: str
+    severity: str
+    confidence: str = "high"
+    source: str = "rule_engine"
+    evidence: list[dict[str, Any]] = Field(default_factory=list)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class ApplyManifestRulesInput(BaseModel):
+    facts_json_path: Path
+    case_id: str
+    artifacts_dir: Path = Path("artifacts")
+
+
+class ApplyManifestRulesOutput(BaseModel):
+    success: bool
+    findings_path: Path | None = None
+    findings: list[Finding] = Field(default_factory=list)
+    errors: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+
+class JadxDecompileInput(BaseModel):
+    apk_path: Path
+    case_id: str
+    artifacts_dir: Path = Path("artifacts")
+
+
+class JadxDecompileOutput(BaseModel):
+    success: bool
+    output_dir: Path | None = None
+    java_dir: Path | None = None
+    resources_dir: Path | None = None
+    errors: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+
+
+class CodeSearchPattern(BaseModel):
+    name: str
+    pattern: str
+    category: str
+    description: str
+
+
+class CodeSearchMatch(BaseModel):
+    pattern_name: str
+    category: str
+    file_path: str
+    line_number: int
+    line_text: str
+
+
+class CodeSearchInput(BaseModel):
+    source_dir: Path
+    case_id: str
+    artifacts_dir: Path = Path("artifacts")
+
+
+class CodeSearchOutput(BaseModel):
+    success: bool
+    results_path: Path | None = None
+    matches: list[CodeSearchMatch] = Field(default_factory=list)
+    errors: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+
+class BuildCodeSearchFactsInput(BaseModel):
+    code_search_results_path: Path
+    case_id: str
+    artifacts_dir: Path = Path("artifacts")
+
+
+class BuildCodeSearchFactsOutput(BaseModel):
+    success: bool
+    facts_path: Path | None = None
+    facts: list[Fact] = Field(default_factory=list)
+    errors: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+
+
+class ApplyCodeRulesInput(BaseModel):
+    facts_json_path: Path
+    case_id: str
+    artifacts_dir: Path = Path("artifacts")
+
+
+class ApplyCodeRulesOutput(BaseModel):
+    success: bool
+    findings_path: Path | None = None
+    findings: list[Finding] = Field(default_factory=list)
+    errors: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+
+class ApplyCorrelationRulesInput(BaseModel):
+    case_id: str
+    artifacts_dir: Path = Path("artifacts")
+
+
+class ApplyCorrelationRulesOutput(BaseModel):
+    success: bool
+    findings_path: Path | None = None
+    findings: list[Finding] = Field(default_factory=list)
+    errors: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
