@@ -25,6 +25,9 @@ class CaseState(BaseModel):
     static_analysis_bundle_path: Path | None = None
     static_report_path: Path | None = None
 
+    evidence_registry_path: Path | None = None
+    candidates_path: Path | None = None
+
     manifest_reasoning_path: Path | None = None
     manifest_reasoning_raw_path: Path | None = None
 

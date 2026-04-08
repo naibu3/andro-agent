@@ -45,6 +45,8 @@ from andro_agent.agents.risk_fusion_agent import RiskFusionAgent
 from andro_agent.agents.markdown_report_agent import MarkdownReportAgent
 from andro_agent.metrics import MetricsTracker
 
+import json
+
 import logging
 
 logger = logging.getLogger(__name__)

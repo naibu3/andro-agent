@@ -197,3 +197,23 @@ class ApplyCorrelationRulesOutput(BaseModel):
     findings: list[Finding] = Field(default_factory=list)
     errors: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
+
+class EvidenceItem(BaseModel):
+    id: str
+    source: str  # manifest | code | search
+    category: str  # injection | component | storage | network | crypto
+    subtype: str  # rawQuery | loadUrl | exported_activity...
+
+    file_path: str | None = None
+    component_name: str | None = None
+    line_number: int | None = None
+
+    value: Any | None = None
+
+    confidence: str = "low"  # low | medium | high
+
+    promoted_to_candidate: bool = False
+    deferred_for_dynamic: bool = False
+
+    notes: str | None = None
+    
