@@ -41,6 +41,9 @@ from andro_agent.rules.code_rules import apply_code_rules
 
 from dotenv import load_dotenv
 
+from andro_agent.dynamic.setup import run_dynamic_setup
+from andro_agent.tools.android_sdk_tool import AndroidSDKError
+
 load_dotenv()
 
 app = typer.Typer(
@@ -60,6 +63,9 @@ app.add_typer(rules_app, name="rules")
 
 code_app = typer.Typer(help="Code analysis commands")
 app.add_typer(code_app, name="code")
+
+dynamic_app = typer.Typer(help="Dynamic analysis commands")
+app.add_typer(dynamic_app, name="dynamic")
 
 console = Console()
 
@@ -471,6 +477,153 @@ def run_analysis(
 
     console.print("[green]Pipeline completed successfully.[/green]")
     console.print(table)
+
+@dynamic_app.command("run")
+def dynamic_run(
+    case_id: str = typer.Option(..., "--case-id", help="Existing case identifier."),
+    apk_path: Path = typer.Argument(..., help="Path to the APK file."),
+    package_name: str | None = typer.Option(
+        None,
+        "--package",
+        help="Optional package name override.",
+    ),
+    avd_name: str = typer.Option("Pixel_6_API_34", "--avd", help="AVD name to boot."),
+    artifacts_dir: Path = typer.Option(Path("artifacts"), "--artifacts-dir"),
+) -> None:
+    from andro_agent.core.state import CaseState
+    from andro_agent.pipelines.dynamic_pipeline import DynamicAnalysisPipeline
+    from andro_agent.validators import APKValidationError, validate_apk
+
+    try:
+        validated_apk = validate_apk(apk_path)
+    except APKValidationError as exc:
+        console.print(f"[red]Validation error:[/red] {exc}")
+        raise typer.Exit(code=1)
+
+    case_dir = artifacts_dir / case_id
+    case_state_path = case_dir / "case_state.json"
+
+    if case_state_path.exists():
+        state = CaseState.load(case_id, base_dir=artifacts_dir)
+        state.apk_path = validated_apk
+        if package_name:
+            state.package_name = package_name
+    else:
+        state = CaseState(
+            case_id=case_id,
+            apk_path=validated_apk,
+            package_name=package_name,
+        )
+
+    state.save(artifacts_dir)
+
+    try:
+        pipeline = DynamicAnalysisPipeline(artifacts_dir=artifacts_dir)
+        state = pipeline.run(
+            case_id=case_id,
+            apk_path=validated_apk,
+            avd_name=avd_name,
+            package_override=package_name,
+        )
+    except FileNotFoundError as exc:
+        console.print(f"[red]Environment error:[/red] {exc}")
+        raise typer.Exit(code=1)
+    except Exception as exc:
+        console.print(f"[red]Dynamic execution error:[/red] {exc}")
+        raise typer.Exit(code=1)
+
+    console.print("[green]Dynamic analysis completed.[/green]")
+    console.print(f"Resolved package: {state.package_name}")
+    console.print(f"Plan: {state.dynamic_plan_path}")
+    console.print(f"Results: {state.dynamic_results_path}")
+
+@dynamic_app.command("setup")
+def dynamic_setup(
+    sdk_root: str | None = typer.Option(
+        None,
+        "--sdk-root",
+        help="Android SDK root. If omitted, uses ANDROID_HOME / ANDROID_SDK_ROOT / common paths.",
+    ),
+    avd_name: str = typer.Option(
+        "Pixel_6_API_34",
+        "--avd",
+        help="Name of the AVD to create or reuse.",
+    ),
+    api_level: int = typer.Option(
+        34,
+        "--api-level",
+        help="Android API level for the system image.",
+    ),
+    system_image: str | None = typer.Option(
+        None,
+        "--system-image",
+        help='Optional full SDK package path, e.g. "system-images;android-34;google_apis;x86_64".',
+    ),
+    device: str = typer.Option(
+        "pixel_6",
+        "--device",
+        help='AVD device id used by avdmanager, for example "pixel_6".',
+    ),
+    auto_install: bool = typer.Option(
+        False,
+        "--auto-install",
+        help="Install required SDK packages if missing.",
+    ),
+    accept_licenses: bool = typer.Option(
+        False,
+        "--accept-licenses",
+        help="Run sdkmanager --licenses before installing.",
+    ),
+    force_recreate: bool = typer.Option(
+        False,
+        "--force-recreate",
+        help="Recreate the AVD even if it already exists.",
+    ),
+) -> None:
+    """
+    Prepare Android dynamic analysis environment: verify SDK, install packages, and create an AVD.
+    """
+    result = run_dynamic_setup(
+        sdk_root=sdk_root,
+        avd_name=avd_name,
+        api_level=api_level,
+        system_image=system_image,
+        device=device,
+        auto_install=auto_install,
+        accept_licenses=accept_licenses,
+        force_recreate=force_recreate,
+    )
+
+    table = Table(title="Dynamic setup", box=box.SIMPLE)
+    table.add_column("Field", style="cyan")
+    table.add_column("Value")
+
+    table.add_row("Success", str(result.success))
+    table.add_row("SDK root", str(result.sdk_root))
+    table.add_row("AVD", str(result.avd_name))
+    table.add_row("System image", str(result.system_image))
+
+    if result.details:
+        table.add_row("sdkmanager", result.details.get("sdkmanager", "-"))
+        table.add_row("avdmanager", result.details.get("avdmanager", "-"))
+        table.add_row("adb", result.details.get("adb", "-"))
+        table.add_row("emulator", result.details.get("emulator", "-"))
+
+    if result.installed_packages:
+        table.add_row("Installed packages", "\n".join(result.installed_packages))
+
+    if result.warnings:
+        table.add_row("Warnings", "\n".join(result.warnings))
+
+    if result.errors:
+        table.add_row("Errors", "\n".join(result.errors))
+
+    console.print(table)
+
+    if not result.success:
+        raise typer.Exit(code=1)
+
+    console.print("[green]Dynamic environment is ready.[/green]")
 
 @app.callback()
 def main(

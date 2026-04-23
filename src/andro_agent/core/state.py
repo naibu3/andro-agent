@@ -36,6 +36,13 @@ class CaseState(BaseModel):
 
     metrics_tracker: Any | None = None
 
+    dynamic_plan_path: Path | None = None
+    dynamic_results_path: Path | None = None
+    dynamic_report_path: Path | None = None
+
+    device_profile: str | None = None
+    package_name: str | None = None
+
     # Metadata
     status: str = "created"
     current_step: str | None = None

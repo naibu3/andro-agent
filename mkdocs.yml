@@ -1,0 +1,16 @@
+site_name: Andro-Agent Docs
+site_description: Documentación técnica del sistema multiagente de análisis estático Android
+site_author: naibu3
+
+theme:
+  name: material
+  language: es
+
+nav:
+  - Inicio: index.md
+  - Arquitectura: architecture.md
+  - Pipeline estático: static-analysis-pipeline.md
+  - Artefactos: artifacts.md
+  - Agentes: agents.md
+  - Métricas: metrics.md
+  - Decisiones de diseño: design-decisions.md
