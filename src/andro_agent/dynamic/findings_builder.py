@@ -215,7 +215,45 @@ def build_dynamic_findings(
                     "raw_observation": obs,
                 }
             )
-            
+
+        elif signal == "network_requests_observed" and success:
+            findings.append(
+                {
+                    "id": f"dynamic.{test_id}.network_requests_observed",
+                    "title": "Network traffic observed during dynamic execution",
+                    "severity": "info",
+                    "confidence": "high",
+                    "category": "dynamic.network",
+                    "masvs_control_group": "MASVS-NETWORK",
+                    "summary": summary,
+                    "rationale": (
+                        "The application generated network traffic during dynamic execution. "
+                        "This provides visibility into external communication paths for further review."
+                    ),
+                    "evidence": evidence_items,
+                    "raw_observation": obs,
+                }
+            )
+
+        elif signal == "network_cleartext_http_detected" and success:
+            findings.append(
+                {
+                    "id": f"dynamic.{test_id}.cleartext_http_detected",
+                    "title": "Cleartext HTTP traffic detected",
+                    "severity": "high",
+                    "confidence": "high",
+                    "category": "dynamic.network",
+                    "masvs_control_group": "MASVS-NETWORK",
+                    "summary": summary,
+                    "rationale": (
+                        "Cleartext HTTP traffic was observed during dynamic execution, which may expose "
+                        "sensitive data to interception and indicates weak transport protection."
+                    ),
+                    "evidence": evidence_items,
+                    "raw_observation": obs,
+                }
+            )
+
     composite_findings = build_composite_dynamic_findings(
         observations=observations,
         dynamic_artifacts=dynamic_artifacts,

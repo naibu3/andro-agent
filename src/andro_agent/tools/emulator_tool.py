@@ -13,12 +13,22 @@ class EmulatorTool:
         self.emulator_bin = str(sdk.emulator)
         self.adb_bin = str(sdk.adb)
 
-    def start(self, avd_name: str, no_window: bool = True, wipe_data: bool = False) -> None:
+    def start(
+        self,
+        avd_name: str,
+        no_window: bool = True,
+        wipe_data: bool = False,
+        http_proxy: str | None = None,
+    ) -> None:
+        
         cmd = [self.emulator_bin, "-avd", avd_name]
+        
         if no_window:
             cmd.append("-no-window")
         if wipe_data:
             cmd.append("-wipe-data")
+        if http_proxy:
+            cmd.extend(["-http-proxy", http_proxy])
 
         subprocess.Popen(
             cmd,

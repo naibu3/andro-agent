@@ -19,7 +19,12 @@ from andro_agent.tools.package_resolver import resolve_package_name
 from andro_agent.dynamic.findings_builder import build_dynamic_findings
 from andro_agent.dynamic.ui_analyzer import analyze_ui_dump
 from andro_agent.dynamic.ui_diff import compare_ui_dumps
-
+from andro_agent.dynamic.network_analyzer import (
+    build_network_observations,
+    build_network_summary_from_event_log,
+)
+from andro_agent.tools.mitmproxy_tool import MitmproxyTool
+from andro_agent.tools.android_cert_tool import AndroidCertTool
 
 class DynamicAnalysisPipeline:
     def __init__(
@@ -27,10 +32,13 @@ class DynamicAnalysisPipeline:
         artifacts_dir: Path = Path("artifacts"),
         sdk_root: str | None = None,
     ) -> None:
+        
         self.artifacts_dir = artifacts_dir
         self.emulator = EmulatorTool(sdk_root=sdk_root)
         self.adb = ADBTool(sdk_root=sdk_root)
         self.logcat = LogcatTool(sdk_root=sdk_root)
+        self.mitmproxy = MitmproxyTool()
+        self.android_cert_tool = AndroidCertTool(sdk_root=sdk_root)
 
     def run(
         self,
@@ -39,6 +47,7 @@ class DynamicAnalysisPipeline:
         avd_name: str,
         package_override: str | None = None,
     ) -> CaseState:
+        
         state = CaseState.load(case_id, base_dir=self.artifacts_dir)
         state.current_step = "dynamic_pipeline"
         state.device_profile = "baseline"
@@ -60,7 +69,29 @@ class DynamicAnalysisPipeline:
         state.dynamic_plan_path = plan_path
         state.save(self.artifacts_dir)
 
-        self.emulator.start(avd_name=avd_name, no_window=True, wipe_data=False)
+        network_dir = dynamic_dir / "network"
+        network_dir.mkdir(parents=True, exist_ok=True)
+
+        mitm_event_log_path = network_dir / "mitmdump.log"
+        mitm_flows_path = network_dir / "flows.mitm"
+
+        self.mitmproxy.start(
+            listen_host="127.0.0.1",
+            listen_port=8080,
+            flows_path=mitm_flows_path,
+            event_log_path=mitm_event_log_path,
+        )
+
+        self.emulator.start(
+            avd_name=avd_name,
+            no_window=True,
+            wipe_data=False,
+            http_proxy="http://127.0.0.1:8080",
+        )
+
+        mitm_ca_path = self.android_cert_tool.resolve_mitmproxy_ca_path()
+        self.android_cert_tool.install_mitmproxy_ca_as_system(mitm_ca_path)
+
         try:
             install = self.adb.install_apk(apk_path)
             state.tool_history.append(
@@ -126,6 +157,27 @@ class DynamicAnalysisPipeline:
                 for obs_item in ui_diff_observations:
                     observations.append(DynamicObservation(**obs_item))
 
+            network_summary = build_network_summary_from_event_log(mitm_event_log_path)
+            network_summary_path = network_dir / "network_summary.json"
+            network_summary_path.write_text(
+                json.dumps(network_summary, indent=2),
+                encoding="utf-8",
+            )
+
+            network_observations = build_network_observations(
+                test_id="network-session",
+                network_summary=network_summary,
+                summary_path=network_summary_path,
+            )
+            for obs_item in network_observations:
+                observations.append(DynamicObservation(**obs_item))
+
+            artifacts.extend([
+                str(mitm_event_log_path),
+                str(mitm_flows_path),
+                str(network_summary_path),
+            ])
+
             result = DynamicExecutionResult(
                 case_id=case_id,
                 package_name=package_name,
@@ -162,6 +214,7 @@ class DynamicAnalysisPipeline:
 
         finally:
             self.emulator.stop()
+            self.mitmproxy.stop()
 
     def _build_plan(self, state: CaseState, package_name: str) -> DynamicPlan:
         bundle_path = state.static_analysis_bundle_path
