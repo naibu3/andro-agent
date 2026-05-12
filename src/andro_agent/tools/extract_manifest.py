@@ -8,7 +8,7 @@ from andro_agent.models import ExtractManifestInput, ExtractManifestOutput
 from andro_agent.parsers.manifest_parser import parse_manifest
 from andro_agent.tools.base import BaseTool
 from andro_agent.utils.subprocess_utils import run_command
-from andro_agent.validators import APKValidationError, validate_apk
+from andro_agent.validators.apk import APKValidationError, validate_apk
 
 
 class ExtractManifestTool(BaseTool):

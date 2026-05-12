@@ -39,6 +39,11 @@ check_cmd adb
 check_cmd emulator
 
 echo
+command -v mitmdump >/dev/null 2>&1 || {
+  echo "[NO] mitmdump not found"
+}
+
+echo
 if [ -x "$SDK_ROOT/emulator/emulator" ]; then
   "$SDK_ROOT/emulator/emulator" -list-avds || true
 fi

@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import logging
 
-from andro_agent.config import settings
+from andro_agent.core.config import settings
 from andro_agent.core.state import CaseState
 
 from agno.agent import Agent

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from andro_agent.tools.android_sdk_tool import AndroidSDKError, AndroidSDKTool
+from andro_agent.tools.android.android_sdk_tool import AndroidSDKError, AndroidSDKTool
 
 
 @dataclass

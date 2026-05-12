@@ -4,33 +4,39 @@ from pathlib import Path
 import json
 
 from andro_agent.core.state import CaseState
-from andro_agent.dynamic.plan_from_static import build_dynamic_plan_from_static_bundle
-from andro_agent.models_dynamic import (
+from andro_agent.dynamic.planning.plan_from_static import build_dynamic_plan_from_static_bundle
+from andro_agent.domain.models.dynamic import (
     DynamicAction,
     DynamicExecutionResult,
     DynamicObservation,
     DynamicPlan,
     DynamicTest,
 )
-from andro_agent.tools.adb_tool import ADBTool
-from andro_agent.tools.emulator_tool import EmulatorTool
+from andro_agent.tools.android.adb_tool import ADBTool
+from andro_agent.tools.android.emulator_tool import EmulatorTool
 from andro_agent.tools.logcat_tool import LogcatTool
 from andro_agent.tools.package_resolver import resolve_package_name
-from andro_agent.dynamic.findings_builder import build_dynamic_findings
-from andro_agent.dynamic.ui_analyzer import analyze_ui_dump
-from andro_agent.dynamic.ui_diff import compare_ui_dumps
-from andro_agent.dynamic.network_analyzer import (
+from andro_agent.dynamic.findings.findings_builder import build_dynamic_findings
+from andro_agent.dynamic.analyzers.ui_analyzer import analyze_ui_dump
+from andro_agent.dynamic.analyzers.ui_diff import compare_ui_dumps
+from andro_agent.dynamic.analyzers.network_analyzer import (
     build_network_observations,
     build_network_summary_from_event_log,
 )
-from andro_agent.tools.mitmproxy_tool import MitmproxyTool
-from andro_agent.tools.android_cert_tool import AndroidCertTool
+from andro_agent.tools.network.mitmproxy_tool import MitmproxyTool
+from andro_agent.tools.android.android_cert_tool import AndroidCertTool
+
+from andro_agent.orchestration.task_models import DynamicTask, TaskExecutionResult
+from andro_agent.orchestration.task_router import TaskRouter
+from andro_agent.orchestration.decision_engine import DecisionEngine
+from andro_agent.orchestration.dynamic_orchestrator import DynamicOrchestrator
 
 class DynamicAnalysisPipeline:
     def __init__(
         self,
         artifacts_dir: Path = Path("artifacts"),
         sdk_root: str | None = None,
+        show_avd: bool = False,
     ) -> None:
         
         self.artifacts_dir = artifacts_dir
@@ -40,12 +46,26 @@ class DynamicAnalysisPipeline:
         self.mitmproxy = MitmproxyTool()
         self.android_cert_tool = AndroidCertTool(sdk_root=sdk_root)
 
+        self.router = TaskRouter()
+        self.decision_engine = DecisionEngine()
+        self.orchestrator = DynamicOrchestrator(
+            router=self.router,
+            decision_engine=self.decision_engine,
+        )
+
+        self.router.register("launch_app", self._handle_launch_app_task)
+        self.router.register("launch_activity", self._handle_launch_activity_task)
+        self.router.register("open_deeplink", self._handle_open_deeplink_task)
+        self.router.register("query_content_provider", self._handle_query_content_provider_task)
+
     def run(
         self,
         case_id: str,
         apk_path: Path,
         avd_name: str,
         package_override: str | None = None,
+        show_avd: bool = False,
+        agentic_decisions: bool = False,
     ) -> CaseState:
         
         state = CaseState.load(case_id, base_dir=self.artifacts_dir)
@@ -58,6 +78,8 @@ class DynamicAnalysisPipeline:
             package_override=package_override,
         )
         state.package_name = package_name
+
+        self.decision_engine.enable_agentic_decisions = agentic_decisions
 
         case_dir = self.artifacts_dir / case_id
         dynamic_dir = case_dir / "dynamic"
@@ -75,18 +97,16 @@ class DynamicAnalysisPipeline:
         mitm_event_log_path = network_dir / "mitmdump.log"
         mitm_flows_path = network_dir / "flows.mitm"
 
-        self.mitmproxy.start(
-            listen_host="127.0.0.1",
-            listen_port=8080,
+        http_proxy = self.mitmproxy.start(
             flows_path=mitm_flows_path,
             event_log_path=mitm_event_log_path,
         )
 
         self.emulator.start(
             avd_name=avd_name,
-            no_window=True,
+            no_window=not show_avd,
             wipe_data=False,
-            http_proxy="http://127.0.0.1:8080",
+            http_proxy=http_proxy,
         )
 
         mitm_ca_path = self.android_cert_tool.resolve_mitmproxy_ca_path()
@@ -109,53 +129,22 @@ class DynamicAnalysisPipeline:
             artifacts: list[str] = []
             errors: list[str] = []
 
-            for test in plan.tests:
-                test_dir = dynamic_dir / test.test_id
-                test_dir.mkdir(parents=True, exist_ok=True)
+            tasks = self._build_tasks_from_plan(plan)
+            raw_observations, orchestrator_artifacts, orchestrator_errors = self.orchestrator.run(
+                state={
+                    "case_id": case_id,
+                    "package_name": package_name,
+                    "dynamic_dir": str(dynamic_dir),
+                    "apk_path": str(apk_path),
+                    "pipeline": self,
+                    "case_state": state,
+                },
+                initial_tasks=tasks,
+            )
 
-                before_ui_path = test_dir / "ui_before.xml"
-                after_ui_path = test_dir / "ui.xml"
-                log_path = test_dir / "logcat.txt"
-                screen_path = test_dir / "screen.png"
-
-                self.adb.dump_ui(before_ui_path)
-                self.logcat.clear()
-
-                obs = self._execute_test(test, package_name, test_dir, state)
-                observations.extend(obs)
-
-                self.logcat.dump(log_path)
-                self.adb.screenshot(screen_path)
-                self.adb.dump_ui(after_ui_path)
-
-                artifacts.extend([
-                    str(before_ui_path),
-                    str(log_path),
-                    str(screen_path),
-                    str(after_ui_path),
-                ])
-
-                crash_observations = self._detect_crash_from_logcat(
-                    test_id=test.test_id,
-                    log_path=log_path,
-                )
-                observations.extend(crash_observations)
-
-                ui_observations = analyze_ui_dump(
-                    test_id=test.test_id,
-                    ui_path=after_ui_path,
-                    package_name=package_name,
-                )
-                for obs_item in ui_observations:
-                    observations.append(DynamicObservation(**obs_item))
-
-                ui_diff_observations = compare_ui_dumps(
-                    test_id=test.test_id,
-                    before_ui_path=before_ui_path,
-                    after_ui_path=after_ui_path,
-                )
-                for obs_item in ui_diff_observations:
-                    observations.append(DynamicObservation(**obs_item))
+            observations = [DynamicObservation(**obs) for obs in raw_observations]
+            artifacts.extend(orchestrator_artifacts)
+            errors.extend(orchestrator_errors)
 
             network_summary = build_network_summary_from_event_log(mitm_event_log_path)
             network_summary_path = network_dir / "network_summary.json"
@@ -281,6 +270,319 @@ class DynamicAnalysisPipeline:
             )
 
         return observations
+
+    def _build_tasks_from_plan(self, plan: DynamicPlan) -> list[DynamicTask]:
+        tasks: list[DynamicTask] = []
+
+        for test in plan.tests:
+            for action in test.actions:
+                tasks.append(
+                    DynamicTask(
+                        task_id=test.test_id,
+                        kind=action.action,
+                        priority=test.priority,
+                        target=action.parameters.get("component")
+                        or action.parameters.get("url")
+                        or action.parameters.get("uri"),
+                        context={
+                            "test_id": test.test_id,
+                            "test_title": test.title,
+                            "test_category": test.category,
+                            "masvs_control_group": test.masvs_control_group,
+                            "action_parameters": action.parameters,
+                        },
+                    )
+                )
+
+        return tasks
+
+    def _handle_launch_app_task(self, task: DynamicTask, state_ctx: dict) -> TaskExecutionResult:
+        package_name = state_ctx["package_name"]
+        case_state = state_ctx["case_state"]
+        dynamic_dir = Path(state_ctx["dynamic_dir"])
+        test_id = task.context["test_id"]
+
+        test_dir = dynamic_dir / test_id
+        test_dir.mkdir(parents=True, exist_ok=True)
+
+        before_ui_path = test_dir / "ui_before.xml"
+        after_ui_path = test_dir / "ui.xml"
+        log_path = test_dir / "logcat.txt"
+        screen_path = test_dir / "screen.png"
+
+        self.adb.dump_ui(before_ui_path)
+        self.logcat.clear()
+
+        proc = self.adb.launch_app(package_name)
+        case_state.tool_history.append(
+            {
+                "tool": "adb.launch_app",
+                "test_id": test_id,
+                "returncode": proc.returncode,
+                "stdout": proc.stdout,
+                "stderr": proc.stderr,
+            }
+        )
+
+        observations = [
+            {
+                "test_id": test_id,
+                "signal": "app_launch_attempted",
+                "success": proc.returncode == 0,
+                "summary": "Main launcher intent executed",
+                "metadata": {"stdout": proc.stdout, "stderr": proc.stderr},
+            }
+        ]
+
+        artifacts = self._collect_post_action_artifacts(
+            test_id=test_id,
+            log_path=log_path,
+            screen_path=screen_path,
+            after_ui_path=after_ui_path,
+            before_ui_path=before_ui_path,
+            package_name=package_name,
+            observations=observations,
+        )
+
+        return TaskExecutionResult(
+            task_id=task.task_id,
+            success=proc.returncode == 0,
+            observations=observations,
+            artifacts=artifacts,
+        )
+
+    def _handle_launch_activity_task(self, task: DynamicTask, state_ctx: dict) -> TaskExecutionResult:
+        package_name = state_ctx["package_name"]
+        case_state = state_ctx["case_state"]
+        dynamic_dir = Path(state_ctx["dynamic_dir"])
+        test_id = task.context["test_id"]
+        component = str(task.context["action_parameters"].get("component", ""))
+
+        test_dir = dynamic_dir / test_id
+        test_dir.mkdir(parents=True, exist_ok=True)
+
+        before_ui_path = test_dir / "ui_before.xml"
+        after_ui_path = test_dir / "ui.xml"
+        log_path = test_dir / "logcat.txt"
+        screen_path = test_dir / "screen.png"
+
+        self.adb.dump_ui(before_ui_path)
+        self.logcat.clear()
+
+        proc = self.adb.launch_activity(component)
+        case_state.tool_history.append(
+            {
+                "tool": "adb.launch_activity",
+                "test_id": test_id,
+                "component": component,
+                "returncode": proc.returncode,
+                "stdout": proc.stdout,
+                "stderr": proc.stderr,
+            }
+        )
+
+        observations = [
+            {
+                "test_id": test_id,
+                "signal": "activity_launch_attempted",
+                "success": proc.returncode == 0,
+                "summary": f"Activity launch attempted for {component}",
+                "metadata": {"stdout": proc.stdout, "stderr": proc.stderr},
+            }
+        ]
+
+        artifacts = self._collect_post_action_artifacts(
+            test_id=test_id,
+            log_path=log_path,
+            screen_path=screen_path,
+            after_ui_path=after_ui_path,
+            before_ui_path=before_ui_path,
+            package_name=package_name,
+            observations=observations,
+        )
+
+        return TaskExecutionResult(
+            task_id=task.task_id,
+            success=proc.returncode == 0,
+            observations=observations,
+            artifacts=artifacts,
+        )
+
+    def _handle_open_deeplink_task(self, task: DynamicTask, state_ctx: dict) -> TaskExecutionResult:
+        package_name = state_ctx["package_name"]
+        case_state = state_ctx["case_state"]
+        dynamic_dir = Path(state_ctx["dynamic_dir"])
+        test_id = task.context["test_id"]
+        url = str(task.context["action_parameters"].get("url", ""))
+
+        test_dir = dynamic_dir / test_id
+        test_dir.mkdir(parents=True, exist_ok=True)
+
+        before_ui_path = test_dir / "ui_before.xml"
+        after_ui_path = test_dir / "ui.xml"
+        log_path = test_dir / "logcat.txt"
+        screen_path = test_dir / "screen.png"
+
+        self.adb.dump_ui(before_ui_path)
+        self.logcat.clear()
+
+        proc = self.adb.open_deeplink(url)
+        case_state.tool_history.append(
+            {
+                "tool": "adb.open_deeplink",
+                "test_id": test_id,
+                "url": url,
+                "returncode": proc.returncode,
+                "stdout": proc.stdout,
+                "stderr": proc.stderr,
+            }
+        )
+
+        observations = [
+            {
+                "test_id": test_id,
+                "signal": "deeplink_launch_attempted",
+                "success": proc.returncode == 0,
+                "summary": f"Deep link launch attempted for {url}",
+                "metadata": {"stdout": proc.stdout, "stderr": proc.stderr},
+            }
+        ]
+
+        artifacts = self._collect_post_action_artifacts(
+            test_id=test_id,
+            log_path=log_path,
+            screen_path=screen_path,
+            after_ui_path=after_ui_path,
+            before_ui_path=before_ui_path,
+            package_name=package_name,
+            observations=observations,
+        )
+
+        return TaskExecutionResult(
+            task_id=task.task_id,
+            success=proc.returncode == 0,
+            observations=observations,
+            artifacts=artifacts,
+        )
+
+    def _handle_query_content_provider_task(self, task: DynamicTask, state_ctx: dict) -> TaskExecutionResult:
+        package_name = state_ctx["package_name"]
+        case_state = state_ctx["case_state"]
+        dynamic_dir = Path(state_ctx["dynamic_dir"])
+        test_id = task.context["test_id"]
+        uri = str(task.context["action_parameters"].get("uri", ""))
+
+        test_dir = dynamic_dir / test_id
+        test_dir.mkdir(parents=True, exist_ok=True)
+
+        before_ui_path = test_dir / "ui_before.xml"
+        after_ui_path = test_dir / "ui.xml"
+        log_path = test_dir / "logcat.txt"
+        screen_path = test_dir / "screen.png"
+
+        self.adb.dump_ui(before_ui_path)
+        self.logcat.clear()
+
+        proc = self.adb.query_content_provider(uri)
+        case_state.tool_history.append(
+            {
+                "tool": "adb.query_content_provider",
+                "test_id": test_id,
+                "uri": uri,
+                "returncode": proc.returncode,
+                "stdout": proc.stdout,
+                "stderr": proc.stderr,
+            }
+        )
+
+        stdout_lower = (proc.stdout or "").lower()
+        stderr_lower = (proc.stderr or "").lower()
+        rows_detected = "row:" in stdout_lower
+        permission_denied = "permission denial" in stderr_lower or "permission denial" in stdout_lower
+
+        observations = [
+            {
+                "test_id": test_id,
+                "signal": "content_provider_query_attempted",
+                "success": proc.returncode == 0,
+                "summary": f"Content provider query attempted for {uri}",
+                "metadata": {"stdout": proc.stdout, "stderr": proc.stderr},
+            },
+            {
+                "test_id": test_id,
+                "signal": "content_provider_rows_detected",
+                "success": rows_detected,
+                "summary": f"Content provider returned rows for {uri}",
+                "metadata": {"stdout": proc.stdout, "stderr": proc.stderr},
+            },
+            {
+                "test_id": test_id,
+                "signal": "content_provider_permission_denied",
+                "success": permission_denied,
+                "summary": f"Content provider permission denial status for {uri}",
+                "metadata": {"stdout": proc.stdout, "stderr": proc.stderr},
+            },
+        ]
+
+        artifacts = self._collect_post_action_artifacts(
+            test_id=test_id,
+            log_path=log_path,
+            screen_path=screen_path,
+            after_ui_path=after_ui_path,
+            before_ui_path=before_ui_path,
+            package_name=package_name,
+            observations=observations,
+        )
+
+        return TaskExecutionResult(
+            task_id=task.task_id,
+            success=proc.returncode == 0,
+            observations=observations,
+            artifacts=artifacts,
+        )
+
+    def _collect_post_action_artifacts(
+        self,
+        test_id: str,
+        log_path: Path,
+        screen_path: Path,
+        after_ui_path: Path,
+        before_ui_path: Path,
+        package_name: str,
+        observations: list[dict],
+    ) -> list[str]:
+        self.logcat.dump(log_path)
+        self.adb.screenshot(screen_path)
+        self.adb.dump_ui(after_ui_path)
+
+        artifacts = [
+            str(before_ui_path),
+            str(log_path),
+            str(screen_path),
+            str(after_ui_path),
+        ]
+
+        crash_observations = self._detect_crash_from_logcat(
+            test_id=test_id,
+            log_path=log_path,
+        )
+        observations.extend([obs.model_dump() for obs in crash_observations])
+
+        ui_observations = analyze_ui_dump(
+            test_id=test_id,
+            ui_path=after_ui_path,
+            package_name=package_name,
+        )
+        observations.extend(ui_observations)
+
+        ui_diff_observations = compare_ui_dumps(
+            test_id=test_id,
+            before_ui_path=before_ui_path,
+            after_ui_path=after_ui_path,
+        )
+        observations.extend(ui_diff_observations)
+
+        return artifacts
 
     def _execute_test(
         self,

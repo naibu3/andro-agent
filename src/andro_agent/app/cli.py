@@ -11,7 +11,7 @@ from andro_agent.utils.logging import setup_logging
 
 from andro_agent.models import ExtractManifestInput
 from andro_agent.tools.extract_manifest import ExtractManifestTool
-from andro_agent.validators import APKValidationError, validate_apk
+from andro_agent.validators.apk import APKValidationError, validate_apk
 
 from rich import box
 from andro_agent.facts.manifest_facts import build_manifest_facts
@@ -28,7 +28,7 @@ from andro_agent.pipelines.static_pipeline import StaticAnalysisPipeline
 
 from andro_agent.models import CodeSearchInput, JadxDecompileInput
 from andro_agent.tools.code_search import CodeSearchTool
-from andro_agent.tools.jadx_tool import JadxDecompileTool
+from andro_agent.tools.reverse.jadx_tool import JadxDecompileTool
 
 from andro_agent.facts.code_search_facts import build_code_search_facts
 from andro_agent.models import (
@@ -42,7 +42,11 @@ from andro_agent.rules.code_rules import apply_code_rules
 from dotenv import load_dotenv
 
 from andro_agent.dynamic.setup import run_dynamic_setup
-from andro_agent.tools.android_sdk_tool import AndroidSDKError
+from andro_agent.tools.android.android_sdk_tool import AndroidSDKError
+
+from andro_agent.core.state import CaseState
+from andro_agent.pipelines.dynamic_pipeline import DynamicAnalysisPipeline
+from andro_agent.validators.apk import APKValidationError, validate_apk
 
 load_dotenv()
 
@@ -489,11 +493,18 @@ def dynamic_run(
     ),
     avd_name: str = typer.Option("Pixel_6_API_34", "--avd", help="AVD name to boot."),
     artifacts_dir: Path = typer.Option(Path("artifacts"), "--artifacts-dir"),
+    show_avd: bool = typer.Option(
+        False,
+        "--show-avd",
+        help="Show the Android Emulator window instead of running headless.",
+    ),
+    agentic_decisions: bool = typer.Option(
+        False,
+        "--agentic-decisions",
+        help="Allow the dynamic decision agent to propose follow-up tasks.",
+    ),
 ) -> None:
-    from andro_agent.core.state import CaseState
-    from andro_agent.pipelines.dynamic_pipeline import DynamicAnalysisPipeline
-    from andro_agent.validators import APKValidationError, validate_apk
-
+    
     try:
         validated_apk = validate_apk(apk_path)
     except APKValidationError as exc:
@@ -524,6 +535,8 @@ def dynamic_run(
             apk_path=validated_apk,
             avd_name=avd_name,
             package_override=package_name,
+            show_avd=show_avd,
+            agentic_decisions=agentic_decisions,
         )
     except FileNotFoundError as exc:
         console.print(f"[red]Environment error:[/red] {exc}")

@@ -30,7 +30,7 @@ dev = [
 ]
 
 [project.scripts]
-andro-agent = "andro_agent.cli:app"
+andro-agent = "andro_agent.app.cli:app"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import json
 import os
 import shutil
+import socket
 import subprocess
 import time
 from pathlib import Path
@@ -12,6 +12,8 @@ class MitmproxyTool:
     def __init__(self, mitmdump_bin: str | None = None) -> None:
         self.mitmdump_bin = self._resolve_mitmdump(mitmdump_bin)
         self.process: subprocess.Popen[str] | None = None
+        self.listen_host = "127.0.0.1"
+        self.listen_port: int | None = None
 
     def _resolve_mitmdump(self, mitmdump_bin: str | None) -> str:
         candidates: list[str] = []
@@ -37,22 +39,29 @@ class MitmproxyTool:
 
     def start(
         self,
-        listen_host: str,
-        listen_port: int,
         flows_path: Path,
         event_log_path: Path,
-    ) -> None:
+        listen_host: str = "127.0.0.1",
+        listen_port: int | None = None,
+    ) -> str:
+        if self.process:
+            self.stop()
+
+        if listen_port is None:
+            listen_port = self._find_free_port(listen_host)
+
+        self.listen_host = listen_host
+        self.listen_port = listen_port
+
         flows_path.parent.mkdir(parents=True, exist_ok=True)
         event_log_path.parent.mkdir(parents=True, exist_ok=True)
 
         cmd = [
             self.mitmdump_bin,
             "--mode",
-            "regular",
+            f"regular@{listen_port}",
             "--listen-host",
             listen_host,
-            "--listen-port",
-            str(listen_port),
             "--set",
             f"save_stream_file={flows_path}",
             "--set",
@@ -66,7 +75,15 @@ class MitmproxyTool:
             stderr=subprocess.STDOUT,
             text=True,
         )
+
         time.sleep(2)
+
+        if self.process.poll() is not None:
+            raise RuntimeError(
+                f"mitmdump failed to start. See log: {event_log_path}"
+            )
+
+        return f"http://{listen_host}:{listen_port}"
 
     def stop(self) -> None:
         if not self.process:
@@ -78,21 +95,10 @@ class MitmproxyTool:
         except subprocess.TimeoutExpired:
             self.process.kill()
             self.process.wait(timeout=5)
+        finally:
+            self.process = None
 
-    def export_flows_json(self, flows_path: Path, output_json_path: Path) -> subprocess.CompletedProcess[str]:
-        cmd = [
-            self.mitmdump_bin,
-            "-nr",
-            str(flows_path),
-            "--set",
-            "termlog_verbosity=error",
-            "-w",
-            str(output_json_path),
-        ]
-        return subprocess.run(
-            cmd,
-            check=False,
-            capture_output=True,
-            text=True,
-            timeout=120,
-        )
+    def _find_free_port(self, listen_host: str) -> int:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.bind((listen_host, 0))
+            return int(sock.getsockname()[1])

@@ -6,7 +6,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from andro_agent.tools.android_sdk_tool import AndroidSDKTool
+from andro_agent.tools.android.android_sdk_tool import AndroidSDKTool
 
 
 class AndroidCertTool:
@@ -54,6 +54,39 @@ class AndroidCertTool:
 
             self._run_adb(["reboot"], check=False)
             self._run_adb(["wait-for-device"])
+            self._wait_for_boot_completed()
+            self._wait_for_package_service()
+
+    def _wait_for_boot_completed(self, timeout: int = 180) -> None:
+        import time
+
+        start = time.time()
+        while time.time() - start < timeout:
+            proc = self._run_adb(
+                ["shell", "getprop", "sys.boot_completed"],
+                check=False,
+            )
+            if proc.stdout.strip() == "1":
+                return
+            time.sleep(3)
+
+        raise TimeoutError("Android did not finish booting after reboot")
+
+    def _wait_for_package_service(self, timeout: int = 120) -> None:
+        import time
+
+        start = time.time()
+        while time.time() - start < timeout:
+            proc = self._run_adb(
+                ["shell", "cmd", "package", "list", "packages"],
+                check=False,
+            )
+            if proc.returncode == 0 and "package:" in proc.stdout:
+                time.sleep(5)
+                return
+            time.sleep(3)
+
+        raise TimeoutError("Android package service did not become available after reboot")
 
     def _hash_old_subject(self, cert_pem_path: Path) -> str:
         proc = subprocess.run(

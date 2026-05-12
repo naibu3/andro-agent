@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from andro_agent.models_dynamic import DynamicAction, DynamicPlan, DynamicTest
+from andro_agent.domain.models.dynamic import DynamicAction, DynamicPlan, DynamicTest
 from andro_agent.dynamic.provider_paths import build_provider_candidate_uris_from_bundle
 
 def build_dynamic_plan_from_static_bundle(

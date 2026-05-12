@@ -7,7 +7,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
-from andro_agent.config import settings
+from andro_agent.core.config import settings
 from andro_agent.core.state import CaseState
 
 logger = logging.getLogger(__name__)

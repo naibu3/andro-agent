@@ -5,7 +5,7 @@ import logging
 import re
 from typing import Any
 
-from andro_agent.config import settings
+from andro_agent.core.config import settings
 from andro_agent.core.state import CaseState
 
 from agno.agent import Agent

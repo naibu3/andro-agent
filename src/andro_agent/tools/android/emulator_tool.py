@@ -3,7 +3,7 @@ from __future__ import annotations
 import subprocess
 import time
 
-from andro_agent.tools.android_sdk_tool import AndroidSDKTool
+from andro_agent.tools.android.android_sdk_tool import AndroidSDKTool
 
 
 class EmulatorTool:
@@ -21,8 +21,15 @@ class EmulatorTool:
         http_proxy: str | None = None,
     ) -> None:
         
-        cmd = [self.emulator_bin, "-avd", avd_name]
-        
+        cmd = [
+            self.emulator_bin,
+            "-avd",
+            avd_name,
+            "-no-snapshot-load",
+            "-no-snapshot-save",
+            "-gpu",
+            "swiftshader_indirect",
+        ]
         if no_window:
             cmd.append("-no-window")
         if wipe_data:
@@ -36,6 +43,22 @@ class EmulatorTool:
             stderr=subprocess.DEVNULL,
         )
         self.wait_for_boot()
+
+    def wait_for_package_service(self, timeout: int = 120) -> None:
+        start = time.time()
+        while time.time() - start < timeout:
+            proc = subprocess.run(
+                [self.adb_bin, "shell", "cmd", "package", "list", "packages"],
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=10,
+            )
+            if proc.returncode == 0 and "package:" in proc.stdout:
+                return
+            time.sleep(3)
+
+        raise TimeoutError("Android package service did not become available in time")
 
     def wait_for_boot(self, timeout: int = 180) -> None:
         start = time.time()
@@ -56,6 +79,8 @@ class EmulatorTool:
                     timeout=10,
                 )
                 if boot.stdout.strip() == "1":
+                    self.wait_for_package_service()
+                    time.sleep(5)
                     return
             except Exception:
                 pass

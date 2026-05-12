@@ -3,7 +3,7 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
-from andro_agent.tools.android_sdk_tool import AndroidSDKTool
+from andro_agent.tools.android.android_sdk_tool import AndroidSDKTool
 
 
 class ADBTool:

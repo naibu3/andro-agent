@@ -14,7 +14,7 @@ from andro_agent.models import (
 )
 from andro_agent.rules.manifest_rules import apply_manifest_rules
 from andro_agent.tools.extract_manifest import ExtractManifestTool
-from andro_agent.validators import APKValidationError, validate_apk
+from andro_agent.validators.apk import APKValidationError, validate_apk
 
 from andro_agent.agents.analysis_agent import AnalysisAgent
 
@@ -28,7 +28,7 @@ from andro_agent.models import (
     ApplyCodeRulesInput,
 )
 from andro_agent.tools.code_search import CodeSearchTool
-from andro_agent.tools.jadx_tool import JadxDecompileTool
+from andro_agent.tools.reverse.jadx_tool import JadxDecompileTool
 
 from andro_agent.facts.code_search_facts import build_code_search_facts
 from andro_agent.rules.code_rules import apply_code_rules

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from andro_agent.dynamic.composite_findings import build_composite_dynamic_findings
+from andro_agent.dynamic.findings.composite_findings import build_composite_dynamic_findings
 
 def build_dynamic_findings(
     observations: list[dict[str, Any]],
