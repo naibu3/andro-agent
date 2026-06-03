@@ -1,0 +1,16 @@
+{
+  "case_id": "46e70e35-868a-49cd-aaf7-0ab1785647f7",
+  "duration_seconds": 98.82404605900228,
+  "steps": 13,
+  "agents": 4,
+  "summary": {
+    "status": "completed",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 7,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true
+  }
+}

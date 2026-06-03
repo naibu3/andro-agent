@@ -1,0 +1,8 @@
+{
+  "summary": "Model response could not be parsed as JSON.",
+  "top_risks": [],
+  "correlations": [],
+  "vulnerability_candidates": [],
+  "recommended_next_steps": [],
+  "raw_response": "{\"summary\":\"The app exposes multiple components without adequate protection and includes code patterns that can lead to injection, command execution, and clear‑text network traffic. The overlap between manifest findings (exported components, dangerous permissions) and code evidence creates a rich attack surface for adversaries.\",\"top_risks\":[\"Exported components without protecting permissions\",\"Unparameterized SQL queries (rawQuery, execSQL) → SQL injection\",\"Runtime.exec usage with external input → OS command injection\",\"WebView.loadUrl with untrusted data → XSS or malicious content\",\"Hardcoded HTTP endpoints and clear‑text traffic\"],\"correlations\":[\"Multiple exported activities may trigger the vulnerable Runtime.exec and SQL paths when invoked by other apps.\",\"Dangerous permissions such as READ/WRITE_EXTERNAL_STORAGE are granted but not enforced on exported components, allowing external attackers to manipulate files or inject data.\",\"The presence of WebView in exported components, combined with unvalidated URL loading, expands the risk surface to host‑based XSS across"
+}

@@ -48,6 +48,8 @@ from andro_agent.core.state import CaseState
 from andro_agent.pipelines.dynamic_pipeline import DynamicAnalysisPipeline
 from andro_agent.validators.apk import APKValidationError, validate_apk
 
+import uvicorn
+
 load_dotenv()
 
 app = typer.Typer(
@@ -637,6 +639,22 @@ def dynamic_setup(
         raise typer.Exit(code=1)
 
     console.print("[green]Dynamic environment is ready.[/green]")
+
+@app.command("web")
+def web(
+    host: str = typer.Option("127.0.0.1", "--host", help="Bind host."),
+    port: int = typer.Option(8000, "--port", help="Bind port."),
+    reload: bool = typer.Option(False, "--reload", help="Enable development reload."),
+) -> None:
+    """Start the web dashboard."""
+    
+
+    uvicorn.run(
+        "andro_agent.web.app:app",
+        host=host,
+        port=port,
+        reload=reload,
+    )
 
 @app.callback()
 def main(

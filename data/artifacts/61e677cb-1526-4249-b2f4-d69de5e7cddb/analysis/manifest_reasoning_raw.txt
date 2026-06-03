@@ -1,0 +1,1 @@
+{"summary":"The manifest reveals 6 exported components that lack protecting permissions, a debugg

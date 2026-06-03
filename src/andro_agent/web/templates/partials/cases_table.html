@@ -1,0 +1,32 @@
+{% if cases %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>APK</th>
+      <th>Status</th>
+      <th>Progress</th>
+      <th>Findings</th>
+      <th>SHA256</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for case in cases %}
+    <tr>
+      <td><a href="/cases/{{ case.id }}">{{ case.filename }}</a></td>
+      <td><span class="badge status-{{ case.status }}">{{ case.status }}</span></td>
+      <td>{{ case.progress }}%</td>
+      <td>{{ case.findings_count or 0 }}</td>
+      <td class="mono clipped">{{ case.sha256 }}</td>
+      <td>{{ case.created_at }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="empty">
+  <h2>No hay análisis todavía</h2>
+  <p>Sube un APK para crear el primer caso.</p>
+  <a class="button" href="/upload">Subir APK</a>
+</div>
+{% endif %}

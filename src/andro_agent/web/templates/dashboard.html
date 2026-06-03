@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Andro-Agent{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div>
+    <p class="eyebrow">APK analysis console</p>
+    <h1>Dashboard</h1>
+    <p class="muted">Sube APKs, lanza análisis estáticos y consulta findings desde una interfaz estilo MobSF.</p>
+  </div>
+  <a class="button" href="/upload">Nuevo análisis</a>
+</section>
+
+<section class="stats-grid">
+  <article class="stat-card">
+    <span>Total</span>
+    <strong>{{ stats.total }}</strong>
+  </article>
+  <article class="stat-card">
+    <span>Running</span>
+    <strong>{{ stats.running }}</strong>
+  </article>
+  <article class="stat-card">
+    <span>Completed</span>
+    <strong>{{ stats.completed }}</strong>
+  </article>
+  <article class="stat-card">
+    <span>Failed</span>
+    <strong>{{ stats.failed }}</strong>
+  </article>
+</section>
+
+<section class="panel">
+  <div class="panel-header">
+    <h2>Últimos análisis</h2>
+    <a href="/cases">Ver todos</a>
+  </div>
+
+  {% include "partials/cases_table.html" %}
+</section>
+{% endblock %}

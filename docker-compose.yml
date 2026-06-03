@@ -1,0 +1,17 @@
+services:
+  andro-agent:
+    build: .
+    container_name: andro-agent
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      ANDRO_AGENT_DATA_DIR: /app/data
+      ANDRO_AGENT_DB: /app/data/andro_agent.db
+      ANDRO_AGENT_UPLOADS_DIR: /app/data/uploads
+      ANDRO_AGENT_ARTIFACTS_DIR: /app/data/artifacts
+    command: >
+      uvicorn andro_agent.web.app:app
+      --host 0.0.0.0
+      --port 8000

@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}{{ case.filename }} - Andro-Agent{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div>
+    <a class="back" href="/cases">← Volver a casos</a>
+    <p class="eyebrow">Case detail</p>
+    <h1>{{ case.filename }}</h1>
+    <p class="mono">{{ case.id }}</p>
+  </div>
+  <span class="badge status-{{ case.status }}">{{ case.status }}</span>
+</section>
+
+<section class="stats-grid">
+  <article class="stat-card">
+    <span>Progress</span>
+    <strong>{{ case.progress }}%</strong>
+  </article>
+  <article class="stat-card">
+    <span>Total findings</span>
+    <strong>{{ severity_summary.total }}</strong>
+  </article>
+  <article class="stat-card">
+    <span>High / Critical</span>
+    <strong>{{ severity_summary.high + severity_summary.critical }}</strong>
+  </article>
+  <article class="stat-card">
+    <span>Package</span>
+    <strong class="small">{{ case.package_name or "N/A" }}</strong>
+  </article>
+</section>
+
+<section class="severity-grid">
+  <article class="severity-card severity-critical">
+    <span>Critical</span>
+    <strong>{{ severity_summary.critical }}</strong>
+  </article>
+  <article class="severity-card severity-high">
+    <span>High</span>
+    <strong>{{ severity_summary.high }}</strong>
+  </article>
+  <article class="severity-card severity-medium">
+    <span>Medium</span>
+    <strong>{{ severity_summary.medium }}</strong>
+  </article>
+  <article class="severity-card severity-low">
+    <span>Low</span>
+    <strong>{{ severity_summary.low }}</strong>
+  </article>
+</section>
+
+<section class="panel">
+  <h2>Metadata</h2>
+
+  <dl class="metadata">
+    <dt>SHA256</dt>
+    <dd class="mono">{{ case.sha256 }}</dd>
+
+    <dt>APK path</dt>
+    <dd class="mono">{{ case.apk_path }}</dd>
+
+    <dt>Artifacts</dt>
+    <dd class="mono">{{ case.artifacts_dir }}</dd>
+
+    <dt>Current step</dt>
+    <dd>{{ case.current_step or "N/A" }}</dd>
+
+    <dt>Created</dt>
+    <dd>{{ case.created_at }}</dd>
+
+    <dt>Updated</dt>
+    <dd>{{ case.updated_at }}</dd>
+  </dl>
+
+  {% if case.error_message %}
+  <div class="alert">
+    <strong>Error</strong>
+    <pre>{{ case.error_message }}</pre>
+  </div>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <div class="panel-header">
+    <div>
+      <h2>Findings</h2>
+      <p class="muted">Ordenados por severidad. Los falsos positivos más obvios de namespaces Android y librerías se filtran en la indexación web.</p>
+    </div>
+    <a href="/api/scans/{{ case.id }}/findings">JSON</a>
+  </div>
+
+  {% if category_summary %}
+  <div class="category-row">
+    {% for category, count in category_summary.items() %}
+    <span class="category-pill">{{ category }} <strong>{{ count }}</strong></span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if findings %}
+    <div class="finding-list">
+      {% for finding in findings %}
+      <article class="finding severity-{{ finding.severity|lower }}">
+        <div class="finding-header">
+          <div>
+            <h3>{{ finding.title }}</h3>
+            <p>{{ finding.description or "Sin descripción." }}</p>
+          </div>
+          <span class="badge">{{ finding.severity }}</span>
+        </div>
+
+        <div class="finding-meta">
+          <span>{{ finding.source or "unknown" }}</span>
+          <span>{{ finding.category or "uncategorized" }}</span>
+        </div>
+
+        <details>
+          <summary>Evidencia</summary>
+          <pre>{{ finding.evidence_pretty }}</pre>
+        </details>
+      </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">Todavía no hay findings indexados. Si el análisis está en curso, refresca la página.</p>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <div class="panel-header">
+    <div>
+      <h2>Reporte</h2>
+      <p class="muted">Si el reporte del agente no es coherente con los findings, se muestra un reporte determinista generado desde la evidencia.</p>
+    </div>
+    <a href="/api/scans/{{ case.id }}/report">Markdown JSON</a>
+  </div>
+
+  {% if report_html %}
+    <article class="report">{{ report_html | safe }}</article>
+  {% else %}
+    <p class="muted">No hay reporte Markdown disponible.</p>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <div class="panel-header">
+    <div>
+      <h2>Artifacts</h2>
+      <p class="muted">Artefactos generados por el pipeline.</p>
+    </div>
+  </div>
+
+  {% if artifacts %}
+    <div class="artifact-list">
+      {% for artifact in artifacts %}
+      <div class="artifact-row">
+        <span class="mono">{{ artifact.relative_path }}</span>
+        <span>{{ artifact.size }} bytes</span>
+      </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">No hay artefactos listables.</p>
+  {% endif %}
+</section>
+
+<section class="panel debug-panel">
+  <details>
+    <summary>Raw CaseState</summary>
+    <pre>{{ state_pretty }}</pre>
+  </details>
+</section>
+
+{% if case.status in ["queued", "running"] %}
+<script>
+  setTimeout(() => window.location.reload(), 3000);
+</script>
+{% endif %}
+{% endblock %}

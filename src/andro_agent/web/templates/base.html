@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Andro-Agent Web{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="/" class="brand">Andro-Agent</a>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/upload">Upload APK</a>
+      <a href="/cases">Cases</a>
+      <a href="/docs">API Docs</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

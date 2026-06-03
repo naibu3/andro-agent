@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Upload APK - Andro-Agent{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div>
+    <p class="eyebrow">New scan</p>
+    <h1>Subir APK</h1>
+    <p class="muted">El análisis se ejecutará en segundo plano y podrás seguir el estado desde el detalle del caso.</p>
+  </div>
+</section>
+
+<section class="panel upload-panel">
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label class="dropzone">
+      <span>Selecciona un APK</span>
+      <input type="file" name="file" accept=".apk" required>
+    </label>
+
+    <label class="field">
+      <span>Perfil de análisis</span>
+      <select name="analysis_profile">
+        <option value="static_basic">Static basic</option>
+        <option value="static_llm" disabled>Static + LLM (próximamente)</option>
+        <option value="dynamic_basic" disabled>Dynamic basic (próximamente)</option>
+      </select>
+    </label>
+
+    <button class="button" type="submit">Start scan</button>
+  </form>
+</section>
+{% endblock %}

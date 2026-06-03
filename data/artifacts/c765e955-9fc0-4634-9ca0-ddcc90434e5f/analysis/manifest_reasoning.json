@@ -1,0 +1,29 @@
+{
+  "summary": "The manifest indicates the app is debuggable, allows backups, and exposes several components (2 activities, 1 service, 2 receivers, 1 content provider) without protecting permissions. It requests dangerous permissions such as CAMERA, USE_BIOMETRIC, and external storage access, and uses a custom DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION, presenting a sizable attack surface.",
+  "attack_surface": [
+    "Exported SplashActivity",
+    "Exported AccessControl1ViewActivity",
+    "Exported DownloadInvoiceService",
+    "Exported ShowDataReceiver & ProfileInstallReceiver",
+    "Exported ContentProviderActivity"
+  ],
+  "top_risks": [
+    "Unprotected exported components vulnerable to malicious invocation",
+    "Debuggable flag enabling runtime analysis and code tampering",
+    "AllowBackup exposing sensitive data via backup mechanisms",
+    "External storage and camera permissions enabling data exfiltration",
+    "Unsecured content provider allowing external data leakage"
+  ],
+  "abuse_hypotheses": [
+    "A malicious app can launch SplashActivity or AccessControl1ViewActivity via intents to bypass app flow or access protected data",
+    "Malicious callers can bind to DownloadInvoiceService to trigger arbitrary downloads or data leaks",
+    "External apps can broadcast to ShowDataReceiver or access the exported content provider to read stored user pins or other data"
+  ],
+  "recommended_next_steps": [
+    "Mark all exported components as false or add protective permissions",
+    "Disable android:debuggable and disable allowBackup in release builds",
+    "Enforce secure storage (encrypted shared prefs, internal storage)",
+    "Limit external storage access with scoped storage and runtime permissions",
+    "Restrict content provider to private scope or protect it with a permission"
+  ]
+}

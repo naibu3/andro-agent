@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Cases - Andro-Agent{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div>
+    <p class="eyebrow">Case manager</p>
+    <h1>Casos analizados</h1>
+    <p class="muted">Histórico de APKs subidas y analizadas.</p>
+  </div>
+  <a class="button" href="/upload">Nuevo análisis</a>
+</section>
+
+<section class="panel">
+  {% include "partials/cases_table.html" %}
+</section>
+{% endblock %}
