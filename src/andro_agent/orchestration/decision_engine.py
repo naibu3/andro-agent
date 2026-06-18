@@ -13,9 +13,42 @@ class DecisionEngine:
         self,
         agent: AgenticDecisionAgent | None = None,
         enable_agentic_decisions: bool = False,
+        llm_provider: str | None = None,
+        llm_model: str | None = None,
     ) -> None:
-        self.agent = agent
         self.enable_agentic_decisions = enable_agentic_decisions
+        self.llm_provider = llm_provider
+        self.llm_model = llm_model
+
+        if agent is not None:
+            self.agent = agent
+        elif llm_provider is not None or llm_model is not None:
+            self.agent = AgenticDecisionAgent(
+                provider=llm_provider,
+                model_id=llm_model,
+            )
+        else:
+            self.agent = None
+
+    def configure_llm(
+        self,
+        llm_provider: str | None = None,
+        llm_model: str | None = None,
+    ) -> None:
+        """
+        Configure or rebuild the agentic decision agent.
+
+        This is useful when the pipeline is created before the CLI options
+        are known, or when run(...) receives provider/model overrides.
+        """
+        self.llm_provider = llm_provider
+        self.llm_model = llm_model
+
+        if llm_provider is not None or llm_model is not None:
+            self.agent = AgenticDecisionAgent(
+                provider=llm_provider,
+                model_id=llm_model,
+            )
 
     def decide_followups(
         self,

@@ -505,6 +505,16 @@ def dynamic_run(
         "--agentic-decisions",
         help="Allow the dynamic decision agent to propose follow-up tasks.",
     ),
+    llm_provider: str | None = typer.Option(
+        None,
+        "--llm-provider",
+        help="LLM provider to use for agentic dynamic decisions: openrouter or ollama.",
+    ),
+    llm_model: str | None = typer.Option(
+        None,
+        "--llm-model",
+        help="Model id to use for agentic dynamic decisions.",
+    ),
 ) -> None:
     
     try:
@@ -539,6 +549,8 @@ def dynamic_run(
             package_override=package_name,
             show_avd=show_avd,
             agentic_decisions=agentic_decisions,
+            llm_provider=llm_provider,
+            llm_model=llm_model,
         )
     except FileNotFoundError as exc:
         console.print(f"[red]Environment error:[/red] {exc}")
