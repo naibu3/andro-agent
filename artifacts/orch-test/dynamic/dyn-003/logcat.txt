@@ -1,0 +1,24 @@
+--------- beginning of main
+05-12 09:16:44.318  1296  3458 D TrafficStats: tagSocket(206) with statsTag=0x24000609, statsUid=10128
+05-12 09:16:44.330  1296  3478 D TrafficStats: tagSocket(206) with statsTag=0x24000609, statsUid=10128
+05-12 09:16:44.339  1296  3481 D TrafficStats: tagSocket(206) with statsTag=0x24000609, statsUid=10128
+05-12 09:16:44.346  1296  3458 D TrafficStats: tagSocket(206) with statsTag=0x24000609, statsUid=10128
+05-12 09:16:44.378   379  4550 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+05-12 09:16:44.380   379  4551 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-12 09:16:44.381   379  4551 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cedcd874870
+05-12 09:16:44.381   379  4551 I resolv  : doQuery: rcode=0, ancount=4, return value=157
+05-12 09:16:44.381  3654  3772 V RkpdServerInterface: Requesting data from server. Attempt 6
+05-12 09:16:44.381  3654  3772 D TrafficStats: tagSocket(82) with statsTag=0x0, statsUid=-1
+05-12 09:16:44.388  3654  3770 V RkpdServerInterface: Requesting data from server. Attempt 6
+05-12 09:16:44.388  3654  3770 D TrafficStats: tagSocket(84) with statsTag=0x0, statsUid=-1
+--------- beginning of system
+05-12 09:16:44.392   571  2054 W ActivityTaskManager: callingPackage for (uid=2000, pid=4549) has no WPC
+05-12 09:16:44.396   571  2054 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+05-12 09:16:44.397   571  2054 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=owasp.sat.agoat/.AccessControl1ViewActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+05-12 09:16:44.397   783   820 V WindowManagerShell: Transition requested: android.os.BinderProxy@615f01 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=25 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=3 lastActiveTime=64900 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@2df1a6} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{f94a7e7 owasp.sat.agoat.AccessControl1ViewActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+05-12 09:16:44.404   379  4552 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-12 09:16:44.404   379  4552 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cedad878290
+05-12 09:16:44.404   379  4552 I resolv  : doQuery: rcode=0, ancount=12, return value=237
+05-12 09:16:44.421   429   429 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+--------- beginning of kernel
+05-12 09:16:44.491     0     0 I logd    : logdr: UID=2000 GID=2000 PID=4555 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns

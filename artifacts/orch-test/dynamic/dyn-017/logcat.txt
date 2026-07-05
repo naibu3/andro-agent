@@ -1,0 +1,38 @@
+--------- beginning of system
+05-12 09:18:01.965   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:114 - ### Keystore Watchdog report - BEGIN ###
+05-12 09:18:01.965   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:123 - When extracting from a bug report, please include this header
+05-12 09:18:01.965   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:124 - and all 2 records below.
+05-12 09:18:01.965   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:154 - ThreadId(5) IKeystoreSecurityLevel::generateKey Pending: 6.000433223s Overdue 1.00043345s: SecurityLevel r#TRUSTED_ENVIRONMENT
+05-12 09:18:01.965   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:164 - ThreadId(5) Calling get_rkpd_attestation_key() Pending: 6.000441294s Overdue 5.500441463s
+05-12 09:18:01.965   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:175 - ### Keystore Watchdog report - END ###
+--------- beginning of main
+05-12 09:18:02.013  5965  5965 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:18:02.018  5965  5965 I AndroidRuntime: Using default boot image
+05-12 09:18:02.018  5965  5965 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:18:02.020  5965  5965 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:18:02.020  5965  5965 I app_process: Using CollectorTypeCC GC.
+05-12 09:18:02.080  5965  5965 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:18:02.091  5965  5965 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:18:02.091  5965  5965 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:18:02.096  5965  5965 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:18:02.096  5965  5965 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:18:02.109  5965  5965 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:18:02.109  5965  5965 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:18:02.109  5965  5965 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:18:02.110  5965  5965 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:18:02.106  5965  5965 W main    : type=1400 audit(0.0:174): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:02.106  5965  5965 W main    : type=1400 audit(0.0:175): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:02.106  5965  5965 W main    : type=1400 audit(0.0:176): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:02.112   571  2402 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=5965, uid=2000) that is not exported from UID 10192
+05-12 09:18:02.119  5965  5965 D AndroidRuntime: Shutting down VM
+05-12 09:18:02.872  3654  3769 V RkpdServerInterface: Requesting data from server. Attempt 7
+05-12 09:18:02.873   379  5980 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10173 0}
+05-12 09:18:02.874   379  5981 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-12 09:18:02.874   379  5981 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cedcd8737f0
+05-12 09:18:02.874   379  5982 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-12 09:18:02.874   379  5981 I resolv  : doQuery: rcode=0, ancount=4, return value=163
+05-12 09:18:02.874   379  5982 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cedad875f90
+05-12 09:18:02.874   379  5982 I resolv  : doQuery: rcode=0, ancount=13, return value=259
+05-12 09:18:02.876  3654  3769 D TrafficStats: tagSocket(6) with statsTag=0x0, statsUid=-1
+05-12 09:18:02.895   783   783 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-12 09:18:02.953  3654  3769 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button android:id="@id/settings_delete" android:layout_width="123.0dip" android:layout_height="47.0dip" android:layout_marginTop="532.0dip" android:text="Delete" android:layout_marginEnd="144.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="Settings" android:layout_marginEnd="144.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <EditText android:id="@id/settings_ip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="296.0dip" android:hint="http://ip_addr:port" android:ems="10" android:inputType="textPersonName" android:layout_marginEnd="100.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@id/textView3" android:layout_width="361.0dip" android:layout_height="94.0dip" android:layout_marginTop="132.0dip" android:text="@string/settings" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <Button android:id="@id/settings_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="456.0dip" android:text="Save" android:layout_marginEnd="160.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

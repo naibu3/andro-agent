@@ -1,0 +1,27 @@
+--------- beginning of main
+04-21 09:48:48.686  7548  7548 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 09:48:48.690  7548  7548 I AndroidRuntime: Using default boot image
+04-21 09:48:48.690  7548  7548 I AndroidRuntime: Leaving lock profiling enabled
+04-21 09:48:48.692  7548  7548 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 09:48:48.692  7548  7548 I app_process: Using CollectorTypeCC GC.
+04-21 09:48:48.751  7548  7548 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 09:48:48.761  7548  7548 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 09:48:48.761  7548  7548 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 09:48:48.766  7548  7548 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 09:48:48.766  7548  7548 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 09:48:48.779  7548  7548 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 09:48:48.779  7548  7548 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 09:48:48.779  7548  7548 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 09:48:48.773  7548  7548 W main    : type=1400 audit(0.0:194): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:48:48.780  7548  7548 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 09:48:48.773  7548  7548 W main    : type=1400 audit(0.0:195): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:48:48.777  7548  7548 W main    : type=1400 audit(0.0:196): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+04-21 09:48:48.782   555  1015 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=7548, uid=2000) that is not exported from UID 10192
+04-21 09:48:48.783  7548  7548 D AndroidRuntime: Shutting down VM
+04-21 09:48:48.867  1961  2900 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1776755101947_a64a3f98d26fa7e7180cd6d29bf44fced216fc32
+04-21 09:48:49.179  1961  2886 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1776755101946_1d48ae4b292cd15bc945ae5ddedb9565d268f7e2
+04-21 09:48:49.180  1961  2229 D t       : Starting download: https://dl.google.com/assistant/nga/1/c11ffd9ddd4f0c6433a5cb07a437812b735fa547.mddz
+04-21 09:48:49.180  1961  2229 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/c11ffd9ddd4f0c6433a5cb07a437812b735fa547.mddz)
+04-21 09:48:49.532   555  1015 D OomAdjuster: Not killing cached processes
+04-21 09:48:49.532  6248  6248 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.clearcut.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }

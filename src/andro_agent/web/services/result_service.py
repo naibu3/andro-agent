@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import json
 import re
+import zipfile
 from collections import Counter
+from html import escape
 from pathlib import Path
 from typing import Any
 
@@ -153,6 +155,179 @@ def extract_artifacts(case_dir: Path) -> list[dict[str, str]]:
         )
 
     return artifacts
+
+
+def safe_final_artifacts(case_dir: Path) -> list[Path]:
+    if not case_dir.exists():
+        return []
+
+    case_root = case_dir.resolve()
+
+    allowed_suffixes = {
+        ".json",
+        ".txt",
+        ".md",
+        ".xml",
+        ".log",
+    }
+    excluded_dirs = {
+        "__pycache__",
+        ".pytest_cache",
+        ".venv",
+        "venv",
+        "env",
+        ".env",
+        "cache",
+        ".cache",
+        "tmp",
+        "temp",
+        "temporary",
+    }
+    excluded_names = {
+        "bundle.zip",
+        "case_state.json",
+    }
+
+    artifacts: list[Path] = []
+
+    for path in sorted(case_dir.rglob("*")):
+        if path.is_symlink():
+            continue
+
+        if not path.is_file():
+            continue
+
+        resolved_path = path.resolve()
+
+        try:
+            resolved_path.relative_to(case_root)
+        except ValueError:
+            continue
+
+        relative = path.relative_to(case_dir)
+        parts = set(relative.parts)
+
+        if parts & excluded_dirs:
+            continue
+
+        if path.name in excluded_names:
+            continue
+
+        if path.name.endswith((".tmp", ".temp", ".bak")):
+            continue
+
+        if path.suffix.lower() not in allowed_suffixes:
+            continue
+
+        artifacts.append(path)
+
+    return artifacts
+
+
+def render_report_html(report_md: str) -> str:
+    if not report_md:
+        return ""
+
+    escaped_report = escape(report_md)
+
+    try:
+        import markdown
+
+        return markdown.markdown(
+            escaped_report,
+            extensions=["tables", "fenced_code", "toc"],
+        )
+    except Exception:
+        return f"<pre>{escaped_report}</pre>"
+
+
+def final_report_markdown(
+    *,
+    case: dict[str, Any],
+    state: dict[str, Any],
+    findings: list[dict[str, Any]],
+) -> str:
+    report_md = read_text_if_exists(state.get("static_report_path"))
+
+    if should_use_fallback_report(report_md, findings):
+        report_md = build_fallback_report_markdown(
+            case=case,
+            state=state,
+            findings=findings,
+        )
+
+    return report_md
+
+
+def write_final_download_files(
+    *,
+    case_dir: Path,
+    case: dict[str, Any],
+    state: dict[str, Any],
+    findings: list[dict[str, Any]],
+) -> dict[str, Path]:
+    downloads_dir = case_dir / "downloads"
+    downloads_dir.mkdir(parents=True, exist_ok=True)
+
+    findings_path = downloads_dir / "findings.json"
+    report_md_path = downloads_dir / "report.md"
+    report_html_path = downloads_dir / "report.html"
+
+    report_md = final_report_markdown(case=case, state=state, findings=findings)
+    report_html = render_report_html(report_md)
+
+    findings_path.write_text(
+        json.dumps(findings, indent=2, ensure_ascii=False, default=str),
+        encoding="utf-8",
+    )
+    report_md_path.write_text(report_md, encoding="utf-8")
+    report_html_path.write_text(report_html, encoding="utf-8")
+
+    return {
+        "findings": findings_path,
+        "report_md": report_md_path,
+        "report_html": report_html_path,
+    }
+
+
+def build_download_bundle(
+    *,
+    case_dir: Path,
+    case: dict[str, Any],
+    state: dict[str, Any],
+    findings: list[dict[str, Any]],
+) -> Path:
+    case_root = case_dir.resolve()
+    paths = write_final_download_files(
+        case_dir=case_dir,
+        case=case,
+        state=state,
+        findings=findings,
+    )
+    bundle_path = case_dir / "downloads" / "bundle.zip"
+
+    with zipfile.ZipFile(bundle_path, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
+        bundle.write(paths["findings"], "findings.json")
+        bundle.write(paths["report_md"], "report.md")
+        bundle.write(paths["report_html"], "report.html")
+
+        for artifact_path in safe_final_artifacts(case_dir):
+            if artifact_path in paths.values():
+                continue
+
+            resolved_artifact = artifact_path.resolve()
+
+            try:
+                relative = resolved_artifact.relative_to(case_root).as_posix()
+            except ValueError:
+                continue
+
+            if relative.startswith("downloads/"):
+                continue
+
+            bundle.write(resolved_artifact, f"artifacts/{relative}")
+
+    return bundle_path
 
 
 def normalize_findings(
@@ -450,11 +625,11 @@ def is_noise_finding(finding: dict[str, Any]) -> bool:
 
 
 def should_use_fallback_report(report_md: str, findings: list[dict[str, Any]]) -> bool:
-    if not findings:
-        return False
-
     if not report_md.strip():
         return True
+
+    if not findings:
+        return False
 
     lowered = report_md.lower()
 

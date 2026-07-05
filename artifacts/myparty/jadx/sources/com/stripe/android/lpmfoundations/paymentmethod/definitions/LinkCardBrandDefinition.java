@@ -1,0 +1,55 @@
+package com.stripe.android.lpmfoundations.paymentmethod.definitions;
+
+import com.stripe.android.lpmfoundations.paymentmethod.AddPaymentMethodRequirement;
+import com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition;
+import com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodMetadata;
+import com.stripe.android.lpmfoundations.paymentmethod.UiDefinitionFactory;
+import com.stripe.android.model.PaymentMethod;
+import java.util.Set;
+import kotlin.Metadata;
+import kotlin.collections.SetsKt;
+import kotlin.jvm.internal.Intrinsics;
+
+/* compiled from: LinkCardBrandDefinition.kt */
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bÁ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0016\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000e0\r2\u0006\u0010\u000f\u001a\u00020\tH\u0016J\u0010\u0010\u0010\u001a\u00020\t2\u0006\u0010\u0011\u001a\u00020\u0012H\u0016J\b\u0010\u0013\u001a\u00020\u0014H\u0016R\u0014\u0010\u0004\u001a\u00020\u0005X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007R\u0014\u0010\b\u001a\u00020\tX\u0096D¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b¨\u0006\u0015"}, d2 = {"Lcom/stripe/android/lpmfoundations/paymentmethod/definitions/LinkCardBrandDefinition;", "Lcom/stripe/android/lpmfoundations/paymentmethod/PaymentMethodDefinition;", "<init>", "()V", "type", "Lcom/stripe/android/model/PaymentMethod$Type;", "getType", "()Lcom/stripe/android/model/PaymentMethod$Type;", "supportedAsSavedPaymentMethod", "", "getSupportedAsSavedPaymentMethod", "()Z", "requirementsToBeUsedAsNewPaymentMethod", "", "Lcom/stripe/android/lpmfoundations/paymentmethod/AddPaymentMethodRequirement;", "hasIntentToSetup", "requiresMandate", "metadata", "Lcom/stripe/android/lpmfoundations/paymentmethod/PaymentMethodMetadata;", "uiDefinitionFactory", "Lcom/stripe/android/lpmfoundations/paymentmethod/UiDefinitionFactory;", "paymentsheet_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes5.dex */
+public final class LinkCardBrandDefinition implements PaymentMethodDefinition {
+    public static final int $stable = 0;
+    private static final boolean supportedAsSavedPaymentMethod = false;
+    public static final LinkCardBrandDefinition INSTANCE = new LinkCardBrandDefinition();
+    private static final PaymentMethod.Type type = PaymentMethod.Type.Link;
+
+    @Override // com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition
+    public boolean requiresMandate(PaymentMethodMetadata metadata) {
+        Intrinsics.checkNotNullParameter(metadata, "metadata");
+        return true;
+    }
+
+    private LinkCardBrandDefinition() {
+    }
+
+    @Override // com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition
+    public boolean getSupportsTermDisplayConfiguration() {
+        return PaymentMethodDefinition.DefaultImpls.getSupportsTermDisplayConfiguration(this);
+    }
+
+    @Override // com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition
+    public PaymentMethod.Type getType() {
+        return type;
+    }
+
+    @Override // com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition
+    public boolean getSupportedAsSavedPaymentMethod() {
+        return supportedAsSavedPaymentMethod;
+    }
+
+    @Override // com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition
+    public Set<AddPaymentMethodRequirement> requirementsToBeUsedAsNewPaymentMethod(boolean hasIntentToSetup) {
+        return SetsKt.setOf((Object[]) new AddPaymentMethodRequirement[]{AddPaymentMethodRequirement.FinancialConnectionsSdk, AddPaymentMethodRequirement.LinkCardBrand});
+    }
+
+    @Override // com.stripe.android.lpmfoundations.paymentmethod.PaymentMethodDefinition
+    public UiDefinitionFactory uiDefinitionFactory() {
+        return LinkCardBrandDefinitionFactory.INSTANCE;
+    }
+}

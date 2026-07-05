@@ -1,0 +1,11 @@
+{
+  "parsed": {
+    "summary": "The APK contains several critical security misconfigurations: a debuggable build, allowBackup enabled, and multiple exported components (activities, services, receivers, and a content provider) without protecting permissions. These issues expand the attack surface, enable external apps to access internal functionality, and increase the risk of data leakage or runtime tampering.",
+    "key_risks": [
+      "Exported components without permissions expose internal functionality to external apps, potentially allowing unauthorized data access or execution of sensitive operations.",
+      "The debuggable flag enables unrestricted debugging, which can be abused for runtime analysis, manipulation, or injection of malicious code.",
+      "Allowing automatic backup can cause sensitive user data to be exported to external storage or cloud, facilitating data exfiltration."
+    ]
+  },
+  "raw": "{\"summary\":\"The APK contains several critical security misconfigurations: a debuggable build, allowBackup enabled, and multiple exported components (activities, services, receivers, and a content provider) without protecting permissions. These issues expand the attack surface, enable external apps to access internal functionality, and increase the risk of data leakage or runtime tampering.\",\"key_risks\":[\"Exported components without permissions expose internal functionality to external apps, potentially allowing unauthorized data access or execution of sensitive operations.\",\"The debuggable flag enables unrestricted debugging, which can be abused for runtime analysis, manipulation, or injection of malicious code.\",\"Allowing automatic backup can cause sensitive user data to be exported to external storage or cloud, facilitating data exfiltration.\"]}"
+}

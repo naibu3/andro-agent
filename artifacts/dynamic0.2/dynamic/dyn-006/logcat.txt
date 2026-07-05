@@ -1,0 +1,165 @@
+--------- beginning of main
+04-21 09:12:01.058   361  6558 I resolv  : res_nsend: used send_dg 232 terrno: 0
+04-21 09:12:01.058   361  6555 I resolv  : res_nsend: used send_dg 45 terrno: 0
+04-21 09:12:01.058   361  6558 I resolv  : doQuery: rcode=0, ancount=12, return value=232
+04-21 09:12:01.059   361  6555 I resolv  : doQuery: rcode=0, ancount=1, return value=45
+04-21 09:12:01.059   361  6557 I resolv  : res_nsend: used send_dg 152 terrno: 0
+04-21 09:12:01.059   361  6557 I resolv  : doQuery: rcode=0, ancount=4, return value=152
+04-21 09:12:01.059   361  6554 I resolv  : res_nsend: used send_dg 57 terrno: 0
+04-21 09:12:01.059   361  6554 I resolv  : doQuery: rcode=0, ancount=1, return value=57
+04-21 09:12:01.060  2191  2479 D TrafficStats: tagSocket(69) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.061  2191  2510 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.066  6248  6291 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+04-21 09:12:01.066  6248  6291 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 09:12:01.066  6248  6291 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 09:12:01.076  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.076  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.076  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+04-21 09:12:01.076  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.077  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.077  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+04-21 09:12:01.077  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.077  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.077  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+04-21 09:12:01.077  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.078  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+04-21 09:12:01.079  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.079  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.079  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+04-21 09:12:01.079  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.079  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+04-21 09:12:01.083  6335  6433 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms
+04-21 09:12:01.085  6248  6448 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 693648]
+04-21 09:12:01.090  6248  6448 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 693653]
+04-21 09:12:01.090  6335  6433 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication
+04-21 09:12:01.101  6335  6433 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+04-21 09:12:01.118  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.119  2191  2479 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (max-target-q, reflection, denied)
+04-21 09:12:01.121  6335  6433 I Icing   : Indexing done com.google.android.gms-apps
+--------- beginning of system
+04-21 09:12:01.122   555  2102 D CompatibilityChangeReporter: Compat change id reported: 261072174; UID 10123; state: DISABLED
+04-21 09:12:01.124  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.124  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (max-target-q, reflection, denied)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: Voilatile gRPC failure INVALID_ARGUMENT: Application credential header not valid. Please fix the client to pass a valid application credential header. [CONTEXT service_id=6 ]
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: enms: INVALID_ARGUMENT: Application credential header not valid. Please fix the client to pass a valid application credential header.
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at enmr.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at abxw.u(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at abxw.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at abxw.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at cyeg.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):27)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at czpd.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 09:12:01.125  6248  6328 W GlsClientGrpc: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 09:12:01.136  6562  6562 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 09:12:01.139  2191  2479 I HttpGrpcBindableService: Responding with header information for URL 'https://storage.googleapis.com/captions/sound_recognition_v1.zip'
+04-21 09:12:01.140  1834  2484 I AstreaHttpConnection: Started download from url='https://storage.googleapis.com/captions/sound_recognition_v1.zip'
+04-21 09:12:01.142   361  6564 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10120 0}
+04-21 09:12:01.143   361  6566 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 09:12:01.143   361  6566 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7393c7153250
+04-21 09:12:01.143   361  6566 I resolv  : doQuery: rcode=0, ancount=1, return value=49
+04-21 09:12:01.144   361  6565 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 09:12:01.144   361  6565 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7393c7154090
+04-21 09:12:01.144   361  6565 I resolv  : doQuery: rcode=0, ancount=1, return value=61
+04-21 09:12:01.144  2191  2510 D TrafficStats: tagSocket(73) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.145  6562  6562 I AndroidRuntime: Using default boot image
+04-21 09:12:01.145  6562  6562 I AndroidRuntime: Leaving lock profiling enabled
+04-21 09:12:01.147  6562  6562 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 09:12:01.148  6562  6562 I app_process: Using CollectorTypeCC GC.
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.160  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+04-21 09:12:01.210  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (max-target-q,core-platform-api, reflection, denied)
+04-21 09:12:01.210  2191  2510 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (max-target-q, reflection, denied)
+04-21 09:12:01.282  2191  2510 I HttpGrpcBindableService: Responding with header information for URL 'https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip'
+04-21 09:12:01.283  2191  6567 W HttpGrpcBindableService: Failed to fetch response body for URL 'https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip'. Call cancelled by client.
+04-21 09:12:01.284   555   878 D ConnectivityService: reportNetworkConnectivity(100, false) by 10132
+04-21 09:12:01.286  1128  2217 D NetworkMonitor/100: Forcing reevaluation for UID 10132. Dns signal count: 0
+04-21 09:12:01.294  1128  6569 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+04-21 09:12:01.295  1128  6569 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+04-21 09:12:01.297  1128  6570 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+04-21 09:12:01.297  1128  6570 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+04-21 09:12:01.298   361  6571 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 09:12:01.299   361  6573 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 09:12:01.301   361  6572 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 09:12:01.303   361  6574 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 09:12:01.322   361  6571 I resolv  : res_nsend: used send_dg 256 terrno: 0
+04-21 09:12:01.322   361  6572 I resolv  : res_nsend: used send_dg 75 terrno: 0
+04-21 09:12:01.322   361  6573 I resolv  : res_nsend: used send_dg 160 terrno: 0
+04-21 09:12:01.323   361  6574 I resolv  : res_nsend: used send_dg 63 terrno: 0
+04-21 09:12:01.323  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.324  6562  6562 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 09:12:01.324  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.324  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.325  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.325  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.325  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.326  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.326  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.327  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.327  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.328  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.328  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.329  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.329  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.330  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.330  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.331  1128  6569 D NetworkMonitor/100: PROBE_DNS www.google.com 37ms OK 142.251.155.119,142.251.156.119,142.251.151.119,142.251.154.119,142.251.157.119,142.251.152.119,142.251.153.119,142.251.150.119,2001:4860:482d:7700::,2001:4860:4828:7700::,2001:4860:482b:7700::,2001:4860:4826:7700::,2001:4860:4827:7700::,2001:4860:4829:7700::,2001:4860:482c:7700::,2001:4860:482a:7700::
+04-21 09:12:01.332  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.334  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 09:12:01.335   361  6575 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+04-21 09:12:01.335  1128  6570 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 38ms OK 216.58.205.35,2a00:1450:4003:814::2003
+04-21 09:12:01.335   361  6577 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 09:12:01.335   361  6577 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x73940715e6f0
+04-21 09:12:01.335   361  6577 I resolv  : doQuery: rcode=0, ancount=8, return value=160
+04-21 09:12:01.336   361  6576 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 09:12:01.336   361  6576 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7394f715a710
+04-21 09:12:01.336   361  6576 I resolv  : doQuery: rcode=0, ancount=8, return value=256
+04-21 09:12:01.337  1128  6569 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+04-21 09:12:01.338   361  6578 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+04-21 09:12:01.339   361  6579 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 09:12:01.339   361  6579 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x739427157710
+04-21 09:12:01.339   361  6579 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+04-21 09:12:01.340  6562  6562 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 09:12:01.340  6562  6562 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 09:12:01.345   361  6580 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 09:12:01.345   361  6580 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x739427158dd0
+04-21 09:12:01.345   361  6580 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+04-21 09:12:01.346  1128  6570 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+04-21 09:12:01.350  6562  6562 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 09:12:01.350  6562  6562 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 09:12:01.377  6562  6562 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 09:12:01.377  6562  6562 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 09:12:01.377  6562  6562 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 09:12:01.370  6562  6562 W main    : type=1400 audit(0.0:118): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:12:01.379  6562  6562 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 09:12:01.374  6562  6562 W main    : type=1400 audit(0.0:119): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:12:01.374  6562  6562 W main    : type=1400 audit(0.0:120): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:12:01.384   555  2556 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6562, uid=2000) that is not exported from UID 10192
+04-21 09:12:01.385  6562  6562 D AndroidRuntime: Shutting down VM
+04-21 09:12:01.405  1128  6570 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=69ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Tue, 21 Apr 2026 07:12:01 GMT], X-Android-Received-Millis=[1776755521404], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1776755521372]}
+04-21 09:12:01.433  2191  3355 I HttpGrpcBindableService: [pfd-write] DOWNLOAD COMPLETE: Downloaded 2565038 bytes from URL [https://storage.googleapis.com/captions/sound_recognition_v1.zip].
+04-21 09:12:01.434  1834  2484 I AstreaHttpConnection: Download completed for url [https://storage.googleapis.com/captions/sound_recognition_v1.zip].
+04-21 09:12:01.434  1834  2238 I SP.AiAi : Download stopped: captions_i18n_v0_mandatory:sound_recognition_v1, succeeded, size: 2565038
+04-21 09:12:01.436  2191  2510 I HttpGrpcBindableService: Downloading requested for URL 'https://storage.googleapis.com/captions/aiai-en-US-v3003.zip'
+04-21 09:12:01.439  1834  2238 I SP.AiAi : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 7 pending: manifests:spelling_correction-22110320 {W:b:I:l, bg}, kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090 {W:b:u:l, bg}, actions-ranking-table:table_5f787033cc44fc7a8804e0030b2bf848 {W:b:u:l, bg}, manifests:text-classifier-annotator-272525175 {W:b:u:l, bg}, manifests:text-classifier-actions-1140547708 {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 {W:b:u:l, bg}, captions_i18n_v0_en-US:asr_en-US_v3003 @ {W:b:u:l, bg}
+04-21 09:12:01.439  1128  6569 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=107ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Tue, 21 Apr 2026 07:12:02 GMT], X-Android-Received-Millis=[1776755521438], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1776755521425]}
+04-21 09:12:01.439  1128  6568 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=148ms
+04-21 09:12:01.440   555   878 D ConnectivityService: [100 WIFI] validation passed
+04-21 09:12:01.507  1834  2110 I SP.AiAi : Sync for captions_i18n_v0_mandatory succeeded in 62249 ms: {added: [sound_recognition_v1], metadata: false
+04-21 09:12:01.512  1834  2110 I SP.AiAi : GC for 'captions_i18n_v0_mandatory' (10) with ttl of 0 ms took 0 ms (0/0/0)
+04-21 09:12:01.512  1834  2110 I AiAiNowPlaying: Superpacks changed. Refreshing FA controller
+04-21 09:12:01.513  1834  6594 I AiAiCaptions: downloadSuperpack(): Successfully downloaded superpack 'captions_i18n_v0_mandatory' version 20210623.
+04-21 09:12:01.739  2191  2510 I HttpGrpcBindableService: Responding with header information for URL 'https://storage.googleapis.com/captions/aiai-en-US-v3003.zip'
+04-21 09:12:01.740  1834  2484 I AstreaHttpConnection: Started download from url='https://storage.googleapis.com/captions/aiai-en-US-v3003.zip'
+04-21 09:12:01.929   555   669 D ActivityManager: freezing 4740 com.google.android.marvin.talkback
+04-21 09:12:01.930   555   669 D ActivityManager: freezing 4145 com.google.android.projection.gearhead:shared

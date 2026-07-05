@@ -1,0 +1,73 @@
+{
+  "case_id": "myparty",
+  "apk_path": "/home/naibu3/Escritorio/TFM/andro-agent/samples/myparty.apk",
+  "manifest_json_path": "artifacts/myparty/parsed/manifest.json",
+  "facts_path": "artifacts/myparty/facts/manifest_facts.json",
+  "findings_path": "artifacts/myparty/findings/manifest_findings.json",
+  "analysis_path": "artifacts/myparty/analysis/static_analysis_reasoning.json",
+  "analysis_raw_path": "artifacts/myparty/analysis/static_analysis_reasoning_raw.txt",
+  "jadx_output_dir": "artifacts/myparty/jadx",
+  "code_search_results_path": "artifacts/myparty/code_search/code_search_results.json",
+  "code_facts_path": "artifacts/myparty/facts/code_search_facts.json",
+  "code_findings_path": "artifacts/myparty/findings/code_findings.json",
+  "correlated_findings_path": null,
+  "static_analysis_bundle_path": "artifacts/myparty/bundle/static_analysis_bundle.json",
+  "static_report_path": "artifacts/myparty/report/static_analysis_report.md",
+  "evidence_registry_path": null,
+  "candidates_path": null,
+  "manifest_reasoning_path": "artifacts/myparty/analysis/manifest_reasoning.json",
+  "manifest_reasoning_raw_path": "artifacts/myparty/analysis/manifest_reasoning_raw.txt",
+  "code_reasoning_path": "artifacts/myparty/analysis/code_reasoning.json",
+  "code_reasoning_raw_path": "artifacts/myparty/analysis/code_reasoning_raw.txt",
+  "metrics_tracker": null,
+  "dynamic_plan_path": "artifacts/myparty/dynamic/dynamic_plan.json",
+  "dynamic_results_path": null,
+  "dynamic_report_path": null,
+  "device_profile": "baseline",
+  "package_name": "app.myparty.houses",
+  "status": "completed",
+  "current_step": "dynamic_pipeline",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 316
+    },
+    {
+      "agent": "manifest_risk_agent",
+      "success": true,
+      "output": "artifacts/myparty/analysis/manifest_reasoning.json",
+      "raw_output": "artifacts/myparty/analysis/manifest_reasoning_raw.txt"
+    },
+    {
+      "agent": "code_risk_agent",
+      "success": true,
+      "output": "artifacts/myparty/analysis/code_reasoning.json",
+      "raw_output": "artifacts/myparty/analysis/code_reasoning_raw.txt"
+    },
+    {
+      "agent": "risk_fusion_agent",
+      "success": true,
+      "output": "artifacts/myparty/analysis/static_analysis_reasoning.json",
+      "raw_output": "artifacts/myparty/analysis/static_analysis_reasoning_raw.txt"
+    },
+    {
+      "agent": "markdown_report_agent",
+      "success": true,
+      "output": "artifacts/myparty/report/static_analysis_report.md"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

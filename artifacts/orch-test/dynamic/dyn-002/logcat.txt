@@ -1,0 +1,21 @@
+--------- beginning of main
+05-12 09:16:36.104  4289  4289 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10190; state: ENABLED
+05-12 09:16:36.104  4289  4289 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10190; state: ENABLED
+--------- beginning of system
+05-12 09:16:36.106   571  2468 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10190; state: ENABLED
+05-12 09:16:36.116   571  2468 W ActivityTaskManager: callingPackage for (uid=2000, pid=4309) has no WPC
+05-12 09:16:36.116   571  2468 D CompatibilityChangeReporter: Compat change id reported: 244637991; UID 2000; state: ENABLED
+05-12 09:16:36.120   571  2468 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+05-12 09:16:36.121   571  2468 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+05-12 09:16:36.135  4289  4289 D nativeloader: Configuring clns-shared-6 for other apk /apex/com.android.adservices/priv-app/AdServicesApkGoogle@340818040/AdServicesApkGoogle.apk. target_sdk_version=34, uses_libraries=, library_path=/apex/com.android.adservices/priv-app/AdServicesApkGoogle@340818040/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.adservices.api:/apex/com.android.adservices/priv-app/AdServicesApkGoogle@340818040:/system/lib64:/system_ext/lib64
+05-12 09:16:36.148  4289  4289 D nativeloader: InitApexLibraries:
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_adservices: libhpke_jni.so:libtflite_support_classifiers_native.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_appsearch: libicing.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_art: libartservice.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_btservices: libbluetooth_jni.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_conscrypt: libjavacrypto.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_extservices: libtflite_support_classifiers_native.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_os_statsd: libstats_jni.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_tethering: libandroid_net_connectivity_com_android_net_module_util_jni.so:libcronet.114.0.5735.84.so:libframework-connectivity-jni.so:libframework-connectivity-tiramisu-jni.so:libservice-connectivity.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_uwb: libuwb_uci_jni_rust.so
+05-12 09:16:36.148  4289  4289 D nativeloader:   com_android_virt: libvirtualizationservice_jni.so:libvirtualmachine_jni.so

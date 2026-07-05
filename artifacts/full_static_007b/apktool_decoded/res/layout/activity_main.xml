@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:id="@id/main_text" android:layout_width="331.0dip" android:layout_height="601.0dip" android:text="@string/description" android:layout_centerInParent="true" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0sp" android:text="Overview" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView android:layout_gravity="start" android:id="@id/navigation_view" android:layout_width="wrap_content" android:layout_height="fill_parent" app:menu="@menu/menu_slider" />
+</androidx.drawerlayout.widget.DrawerLayout>

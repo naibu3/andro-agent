@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" package="app.myparty.houses" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="false" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="false"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="http"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+            <category android:name="android.intent.category.OPENABLE"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.android.chrome"/>
+        <intent>
+            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION"/>
+        </intent>
+        <package android:name="com.facebook.katana"/>
+        <intent>
+            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+    <permission android:name="app.myparty.houses.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="app.myparty.houses.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@xml/secure_store_data_extraction_rules" android:enableOnBackInvokedCallback="false" android:extractNativeLibs="false" android:fullBackupContent="@xml/secure_store_backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="app.myparty.houses.MainApplication" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="MyParty"/>
+        <meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="false"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/notification_icon_color"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@null"/>
+        <meta-data android:name="expo.modules.notifications.default_notification_color" android:resource="@color/notification_icon_color"/>
+        <meta-data android:name="expo.modules.notifications.default_notification_icon" android:resource="@null"/>
+        <meta-data android:name="expo.modules.updates.ENABLED" android:value="false"/>
+        <meta-data android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH" android:value="ALWAYS"/>
+        <meta-data android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS" android:value="0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize|uiMode" android:exported="true" android:launchMode="singleTask" android:name="app.myparty.houses.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.App.SplashScreen" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="myparty"/>
+            </intent-filter>
+            <intent-filter data-generated="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="myparty"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="cct.app.myparty.houses" android:scheme="fbconnect"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.reactnativestripesdk.CustomPaymentMethodActivity" android:noHistory="true" android:theme="@style/Theme.StripeReactNative.Transparent"/>
+        <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/ad_services_config"/>
+        <meta-data android:name="org.unimodules.core.AppLoader#react-native-headless" android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader"/>
+        <meta-data android:name="com.facebook.soloader.enabled" android:value="true"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="link-accounts" android:pathPrefix="/app.myparty.houses/authentication_return" android:scheme="stripe-auth"/>
+                <data android:host="link-native-accounts" android:pathPrefix="/app.myparty.houses/authentication_return" android:scheme="stripe-auth"/>
+                <data android:host="link-accounts" android:path="/app.myparty.houses/success" android:scheme="stripe-auth"/>
+                <data android:host="link-accounts" android:path="/app.myparty.houses/cancel" android:scheme="stripe-auth"/>
+                <data android:host="native-redirect" android:pathPrefix="/app.myparty.houses" android:scheme="stripe-auth"/>
+                <data android:host="auth-redirect" android:pathPrefix="/app.myparty.houses" android:scheme="stripe"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity" android:theme="@style/StripeFinancialConnectionsDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity" android:theme="@style/StripeFinancialConnectionsDefaultTheme" android:windowSoftInputMode="adjustResize"/>
+        <service android:exported="false" android:name="expo.modules.notifications.service.ExpoFirebaseMessagingService">
+            <intent-filter android:priority="-1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="expo.modules.notifications.service.NotificationsService">
+            <intent-filter android:priority="-1">
+                <action android:name="expo.modules.notifications.NOTIFICATION_EVENT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.REBOOT"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="standard" android:name="expo.modules.notifications.service.NotificationForwarderActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.metadata.ModuleDependencies">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES"/>
+            </intent-filter>
+            <meta-data android:name="photopicker_activity:0:required" android:value=""/>
+        </service>
+        <activity android:exported="false" android:name="expo.modules.imagepicker.ExpoCropImageActivity" android:theme="@style/Base.Theme.AppCompat"/>
+        <provider android:authorities="app.myparty.houses.ImagePickerFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="expo.modules.imagepicker.fileprovider.ImagePickerFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/image_picker_provider_paths"/>
+        </provider>
+        <provider android:authorities="app.myparty.houses.cropper.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.canhub.cropper.CropFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/library_file_paths"/>
+        </provider>
+        <activity android:exported="true" android:name="com.canhub.cropper.CropImageActivity"/>
+        <provider android:authorities="app.myparty.houses.ClipboardFileProvider" android:exported="true" android:name="expo.modules.clipboard.ClipboardFileProvider">
+            <meta-data android:name="expo.modules.clipboard.CLIPBOARD_FILE_PROVIDER_PATHS" android:resource="@xml/clipboard_provider_paths"/>
+        </provider>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.PaymentSheetActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.customersheet.CustomerSheetActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.addresselement.AutocompleteActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.ui.SepaMandateActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentsheet.ExternalPaymentMethodProxyActivity" android:theme="@style/StripePayLauncherDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.paymentelement.confirmation.cpms.CustomPaymentMethodProxyActivity" android:theme="@style/StripePayLauncherDefaultTheme"/>
+        <activity android:name="com.stripe.android.paymentsheet.paymentdatacollection.cvcrecollection.CvcRecollectionActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:name="com.stripe.android.paymentelement.embedded.form.FormActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:name="com.stripe.android.paymentelement.embedded.manage.ManageActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:autoRemoveFromRecents="true" android:exported="false" android:label="@string/stripe_link" android:name="com.stripe.android.link.LinkActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTop" android:name="com.stripe.android.link.LinkForegroundActivity" android:theme="@style/StripeTransparentTheme"/>
+        <activity android:autoRemoveFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.stripe.android.link.LinkRedirectHandlerActivity" android:theme="@style/StripeTransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="complete" android:path="/app.myparty.houses" android:scheme="link-popup"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.stripe.android.shoppay.ShopPayActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:name="com.stripe.android.challenge.PassiveChallengeActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.ui.core.cardscan.CardScanActivity" android:theme="@style/StripePaymentSheetDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.view.PaymentAuthWebViewActivity" android:theme="@style/StripeDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.view.PaymentRelayActivity" android:theme="@style/StripeTransparentTheme"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.stripe.android.payments.StripeBrowserLauncherActivity" android:theme="@style/StripeTransparentTheme"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity" android:theme="@style/StripeTransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="payment_return_url" android:path="/app.myparty.houses" android:scheme="stripesdk"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity" android:theme="@style/StripeDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity" android:theme="@style/StripeGooglePayDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity" android:theme="@style/StripeGooglePayDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity" android:theme="@style/StripePayLauncherDefaultTheme"/>
+        <activity android:exported="false" android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity" android:theme="@style/StripeTransparentTheme"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="financial-connections-lite" android:pathPrefix="/app.myparty.houses/auth_redirect" android:scheme="stripe"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteActivity" android:theme="@style/StripeBottomSheetActivityTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity" android:theme="@style/Stripe3DS2Theme"/>
+        <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode_ui"/>
+        <uses-library android:name="androidx.camera.extensions.impl" android:required="false"/>
+        <service android:enabled="false" android:exported="false" android:name="androidx.camera.core.impl.MetadataHolderService">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:exported="false" android:name="com.google.mlkit.vision.codescanner.internal.GmsBarcodeScanningDelegateActivity" android:screenOrientation="portrait"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="app.myparty.houses.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
+        <provider android:authorities="app.myparty.houses.FileSystemFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="expo.modules.filesystem.FileSystemFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_system_provider_paths"/>
+        </provider>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" android:value="true"/>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="app.myparty.houses.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="app.myparty.houses.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <provider android:authorities="app.myparty.houses.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <meta-data android:name="aia-compat-api-min-version" android:value="1"/>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <activity android:exported="false" android:name="com.pairip.licensecheck.LicenseActivity"/>
+        <provider android:authorities="app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:name="com.pairip.licensecheck.LicenseContentProvider"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+</manifest>

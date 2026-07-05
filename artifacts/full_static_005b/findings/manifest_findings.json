@@ -1,0 +1,309 @@
+[
+  {
+    "rule_id": "MANIFEST_CLEARTEXT_TRAFFIC_ENABLED",
+    "title": "Application allows cleartext traffic",
+    "description": "The application has android:usesCleartextTraffic enabled, which may allow unencrypted network communications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.uses_cleartext_traffic",
+        "key": "uses_cleartext_traffic",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.indalweb.aficionFAB.MainActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.indalweb.aficionFAB.MainActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.indalweb.aficionFAB.MainActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.indalweb.aficionFAB.MainActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.indalweb.aficionFAB.MainActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.indalweb.aficionFAB.MainActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_SERVICE",
+    "title": "Exported service detected",
+    "description": "The service 'androidx.work.impl.background.systemjob.SystemJobService' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.service.exported",
+        "key": "androidx.work.impl.background.systemjob.SystemJobService",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "service",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "service",
+      "component_name": "androidx.work.impl.background.systemjob.SystemJobService"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'nl.xservices.plugins.ShareChooserPendingIntent' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "nl.xservices.plugins.ShareChooserPendingIntent",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "nl.xservices.plugins.ShareChooserPendingIntent"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER_NO_PERMISSION",
+    "title": "Exported receiver without permission",
+    "description": "The exported receiver 'nl.xservices.plugins.ShareChooserPendingIntent' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "nl.xservices.plugins.ShareChooserPendingIntent",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "nl.xservices.plugins.ShareChooserPendingIntent"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'com.google.firebase.iid.FirebaseInstanceIdReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "com.google.firebase.iid.FirebaseInstanceIdReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'androidx.work.impl.diagnostics.DiagnosticsReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "androidx.work.impl.diagnostics.DiagnosticsReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'androidx.profileinstaller.ProfileInstallReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "androidx.profileinstaller.ProfileInstallReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "androidx.profileinstaller.ProfileInstallReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'androidx.core.content.FileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "androidx.core.content.FileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "androidx.core.content.FileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'io.github.pwlin.cordova.plugins.fileopener2.FileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'de.sitewaerts.cordova.documentviewer.FileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "de.sitewaerts.cordova.documentviewer.FileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "de.sitewaerts.cordova.documentviewer.FileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'nl.xservices.plugins.FileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "nl.xservices.plugins.FileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "nl.xservices.plugins.FileProvider"
+    }
+  }
+]

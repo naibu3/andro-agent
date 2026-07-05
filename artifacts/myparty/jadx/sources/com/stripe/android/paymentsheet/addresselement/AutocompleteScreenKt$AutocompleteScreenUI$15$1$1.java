@@ -1,0 +1,57 @@
+package com.stripe.android.paymentsheet.addresselement;
+
+import android.os.Handler;
+import android.os.Looper;
+import androidx.compose.ui.focus.FocusRequester;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+/* compiled from: AutocompleteScreen.kt */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.stripe.android.paymentsheet.addresselement.AutocompleteScreenKt$AutocompleteScreenUI$15$1$1", f = "AutocompleteScreen.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+/* loaded from: classes6.dex */
+final class AutocompleteScreenKt$AutocompleteScreenUI$15$1$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ FocusRequester $focusRequester;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    AutocompleteScreenKt$AutocompleteScreenUI$15$1$1(FocusRequester focusRequester, Continuation<? super AutocompleteScreenKt$AutocompleteScreenUI$15$1$1> continuation) {
+        super(2, continuation);
+        this.$focusRequester = focusRequester;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+        return new AutocompleteScreenKt$AutocompleteScreenUI$15$1$1(this.$focusRequester, continuation);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
+        return ((AutocompleteScreenKt$AutocompleteScreenUI$15$1$1) create(coroutineScope, continuation)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) {
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        ResultKt.throwOnFailure(obj);
+        Handler handler = new Handler(Looper.getMainLooper());
+        final FocusRequester focusRequester = this.$focusRequester;
+        handler.post(new Runnable() { // from class: com.stripe.android.paymentsheet.addresselement.AutocompleteScreenKt$AutocompleteScreenUI$15$1$1$$ExternalSyntheticLambda0
+            @Override // java.lang.Runnable
+            public final void run() {
+                focusRequester.requestFocus();
+            }
+        });
+        return Unit.INSTANCE;
+    }
+}

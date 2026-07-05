@@ -1,0 +1,129 @@
+{
+  "case_id": "dynamic0.2",
+  "package_name": "owasp.sat.agoat",
+  "device_profile": "baseline",
+  "tests_executed": 6,
+  "observations": [
+    {
+      "test_id": "dyn-001",
+      "signal": "app_launch_attempted",
+      "success": true,
+      "summary": "Main launcher intent executed",
+      "metadata": {
+        "stdout": "  bash arg: -p\n  bash arg: owasp.sat.agoat\n  bash arg: -c\n  bash arg: android.intent.category.LAUNCHER\n  bash arg: 1\nEvents injected: 1\n## Network stats: elapsed time=56ms (0ms mobile, 0ms wifi, 56ms not connected)\n",
+        "stderr": "args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]\n arg: \"-p\"\n arg: \"owasp.sat.agoat\"\n arg: \"-c\"\n arg: \"android.intent.category.LAUNCHER\"\n arg: \"1\"\ndata=\"owasp.sat.agoat\"\ndata=\"android.intent.category.LAUNCHER\"\n"
+      }
+    },
+    {
+      "test_id": "dyn-002",
+      "signal": "activity_launch_attempted",
+      "success": true,
+      "summary": "Activity launch attempted for owasp.sat.agoat/owasp.sat.agoat.SplashActivity",
+      "metadata": {
+        "stdout": "Starting: Intent { cmp=owasp.sat.agoat/.SplashActivity }\n",
+        "stderr": ""
+      }
+    },
+    {
+      "test_id": "dyn-003",
+      "signal": "activity_launch_attempted",
+      "success": true,
+      "summary": "Activity launch attempted for owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity",
+      "metadata": {
+        "stdout": "Starting: Intent { cmp=owasp.sat.agoat/.AccessControl1ViewActivity }\n",
+        "stderr": ""
+      }
+    },
+    {
+      "test_id": "dyn-004",
+      "signal": "deeplink_launch_attempted",
+      "success": true,
+      "summary": "Deep link launch attempted for androgoat://vulnapp",
+      "metadata": {
+        "stdout": "Starting: Intent { act=android.intent.action.VIEW dat=androgoat://vulnapp/... }\n",
+        "stderr": ""
+      }
+    },
+    {
+      "test_id": "dyn-005",
+      "signal": "content_provider_query_attempted",
+      "success": true,
+      "summary": "Content provider query attempted for content://owasp.sat.agoat.provider.userpinsprovider",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.provider.userpinsprovider\njava.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:172)\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)\n\tat android.content.ContentProviderProxy.query(ContentProviderNative.java:495)\n\tat com.android.commands.content.Content$QueryCommand.onExecute(Content.java:661)\n\tat com.android.commands.content.Content$Command.execute(Content.java:522)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\n"
+      }
+    },
+    {
+      "test_id": "dyn-005",
+      "signal": "content_provider_rows_detected",
+      "success": false,
+      "summary": "Content provider returned rows for content://owasp.sat.agoat.provider.userpinsprovider",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.provider.userpinsprovider\njava.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:172)\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)\n\tat android.content.ContentProviderProxy.query(ContentProviderNative.java:495)\n\tat com.android.commands.content.Content$QueryCommand.onExecute(Content.java:661)\n\tat com.android.commands.content.Content$Command.execute(Content.java:522)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\n"
+      }
+    },
+    {
+      "test_id": "dyn-005",
+      "signal": "content_provider_permission_denied",
+      "success": false,
+      "summary": "Content provider permission denial status for content://owasp.sat.agoat.provider.userpinsprovider",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.provider.userpinsprovider\njava.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:172)\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)\n\tat android.content.ContentProviderProxy.query(ContentProviderNative.java:495)\n\tat com.android.commands.content.Content$QueryCommand.onExecute(Content.java:661)\n\tat com.android.commands.content.Content$Command.execute(Content.java:522)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\n"
+      }
+    },
+    {
+      "test_id": "dyn-006",
+      "signal": "content_provider_query_attempted",
+      "success": true,
+      "summary": "Content provider query attempted for content://owasp.sat.agoat.androidx-startup",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.androidx-startup\njava.lang.SecurityException: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6562, uid=2000) that is not exported from UID 10192\n\tat android.os.Parcel.createExceptionOrNull(Parcel.java:3057)\n\tat android.os.Parcel.createException(Parcel.java:3041)\n\tat android.os.Parcel.readException(Parcel.java:3024)\n\tat android.os.Parcel.readException(Parcel.java:2966)\n\tat android.app.IActivityManager$Stub$Proxy.getContentProviderExternal(IActivityManager.java:7722)\n\tat com.android.commands.content.Content$Command.execute(Content.java:516)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\nCaused by: android.os.RemoteException: Remote stack trace:\n\tat com.android.server.am.ContentProviderHelper.checkAssociationAndPermissionLocked(ContentProviderHelper.java:691)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderImpl(ContentProviderHelper.java:287)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternalUnchecked(ContentProviderHelper.java:162)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternal(ContentProviderHelper.java:156)\n\tat com.android.server.am.ActivityManagerService.getContentProviderExternal(ActivityManagerService.java:6724)\n\n"
+      }
+    },
+    {
+      "test_id": "dyn-006",
+      "signal": "content_provider_rows_detected",
+      "success": false,
+      "summary": "Content provider returned rows for content://owasp.sat.agoat.androidx-startup",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.androidx-startup\njava.lang.SecurityException: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6562, uid=2000) that is not exported from UID 10192\n\tat android.os.Parcel.createExceptionOrNull(Parcel.java:3057)\n\tat android.os.Parcel.createException(Parcel.java:3041)\n\tat android.os.Parcel.readException(Parcel.java:3024)\n\tat android.os.Parcel.readException(Parcel.java:2966)\n\tat android.app.IActivityManager$Stub$Proxy.getContentProviderExternal(IActivityManager.java:7722)\n\tat com.android.commands.content.Content$Command.execute(Content.java:516)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\nCaused by: android.os.RemoteException: Remote stack trace:\n\tat com.android.server.am.ContentProviderHelper.checkAssociationAndPermissionLocked(ContentProviderHelper.java:691)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderImpl(ContentProviderHelper.java:287)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternalUnchecked(ContentProviderHelper.java:162)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternal(ContentProviderHelper.java:156)\n\tat com.android.server.am.ActivityManagerService.getContentProviderExternal(ActivityManagerService.java:6724)\n\n"
+      }
+    },
+    {
+      "test_id": "dyn-006",
+      "signal": "content_provider_permission_denied",
+      "success": true,
+      "summary": "Content provider permission denial status for content://owasp.sat.agoat.androidx-startup",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.androidx-startup\njava.lang.SecurityException: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6562, uid=2000) that is not exported from UID 10192\n\tat android.os.Parcel.createExceptionOrNull(Parcel.java:3057)\n\tat android.os.Parcel.createException(Parcel.java:3041)\n\tat android.os.Parcel.readException(Parcel.java:3024)\n\tat android.os.Parcel.readException(Parcel.java:2966)\n\tat android.app.IActivityManager$Stub$Proxy.getContentProviderExternal(IActivityManager.java:7722)\n\tat com.android.commands.content.Content$Command.execute(Content.java:516)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\nCaused by: android.os.RemoteException: Remote stack trace:\n\tat com.android.server.am.ContentProviderHelper.checkAssociationAndPermissionLocked(ContentProviderHelper.java:691)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderImpl(ContentProviderHelper.java:287)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternalUnchecked(ContentProviderHelper.java:162)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternal(ContentProviderHelper.java:156)\n\tat com.android.server.am.ActivityManagerService.getContentProviderExternal(ActivityManagerService.java:6724)\n\n"
+      }
+    }
+  ],
+  "artifacts": [
+    "artifacts/dynamic0.2/dynamic/dyn-001/logcat.txt",
+    "artifacts/dynamic0.2/dynamic/dyn-001/screen.png",
+    "artifacts/dynamic0.2/dynamic/dyn-001/ui.xml",
+    "artifacts/dynamic0.2/dynamic/dyn-002/logcat.txt",
+    "artifacts/dynamic0.2/dynamic/dyn-002/screen.png",
+    "artifacts/dynamic0.2/dynamic/dyn-002/ui.xml",
+    "artifacts/dynamic0.2/dynamic/dyn-003/logcat.txt",
+    "artifacts/dynamic0.2/dynamic/dyn-003/screen.png",
+    "artifacts/dynamic0.2/dynamic/dyn-003/ui.xml",
+    "artifacts/dynamic0.2/dynamic/dyn-004/logcat.txt",
+    "artifacts/dynamic0.2/dynamic/dyn-004/screen.png",
+    "artifacts/dynamic0.2/dynamic/dyn-004/ui.xml",
+    "artifacts/dynamic0.2/dynamic/dyn-005/logcat.txt",
+    "artifacts/dynamic0.2/dynamic/dyn-005/screen.png",
+    "artifacts/dynamic0.2/dynamic/dyn-005/ui.xml",
+    "artifacts/dynamic0.2/dynamic/dyn-006/logcat.txt",
+    "artifacts/dynamic0.2/dynamic/dyn-006/screen.png",
+    "artifacts/dynamic0.2/dynamic/dyn-006/ui.xml"
+  ],
+  "errors": []
+}

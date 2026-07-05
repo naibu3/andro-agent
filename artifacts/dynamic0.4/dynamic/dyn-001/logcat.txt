@@ -1,0 +1,166 @@
+--------- beginning of main
+04-21 14:13:16.457  6248  6256 I .gms.persistent: Background concurrent copying GC freed 213309(10080KB) AllocSpace objects, 3(240KB) LOS objects, 49% free, 11MB/23MB, paused 75us,19us total 360.120ms
+04-21 14:13:16.529  5630  5676 D BtGatt.ScanManager: uid 10123 isForeground true scanMode -1
+04-21 14:13:16.529  5630  5676 D BtGatt.ScanManager: uid 10123 isForeground true scanMode -1
+04-21 14:13:16.560  1834  7158 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+--------- beginning of system
+04-21 14:13:16.560   555   594 W WindowMagnificationMgr: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+04-21 14:13:16.561  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 14:13:16.561  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 14:13:16.561  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 14:13:16.561  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 14:13:16.562  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 14:13:16.562  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 14:13:16.562  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 14:13:16.562  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 14:13:16.562  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 14:13:16.563  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-21 14:13:16.592   555   594 W WindowMagnificationMgr: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+04-21 14:13:16.604  9102  9102 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 14:13:16.606  1236  3641 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[NexusLauncherActivity]#18) as ready
+04-21 14:13:16.606   555   568 I system_server: Background concurrent copying GC freed 569504(23MB) AllocSpace objects, 52(1048KB) LOS objects, 47% free, 26MB/50MB, paused 209us,395us total 490.900ms
+04-21 14:13:16.606  1236  3641 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[NexusLauncherActivity]#19) as ready
+04-21 14:13:16.611  9102  9102 I AndroidRuntime: Using default boot image
+04-21 14:13:16.611  9102  9102 I AndroidRuntime: Leaving lock profiling enabled
+04-21 14:13:16.615  9102  9102 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 14:13:16.615  1826  1826 W MediaProvider: WorkProfileOwnerApps cache is empty
+04-21 14:13:16.616  9102  9102 I app_process: Using CollectorTypeCC GC.
+04-21 14:13:16.618  1885  1885 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REMOVED dat=package: flg=0x4000010 (has extras) }
+04-21 14:13:16.623  1885  1885 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) }
+04-21 14:13:16.623  1885  1885 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REPLACED dat=package: flg=0x4000010 (has extras) }
+04-21 14:13:16.640   951  1025 D EGL_emulation: app_time_stats: avg=2490.80ms min=2490.80ms max=2490.80ms count=1
+04-21 14:13:16.643   951   951 D GlobalActionsDialogLite: Service changed before actions created
+04-21 14:13:16.643   951   951 D GlobalActionsDialogLite: Service changed before actions created
+04-21 14:13:16.643   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 14:13:16.644   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 14:13:16.644   951   951 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-21 14:13:16.645   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 14:13:16.646   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 14:13:16.646   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 14:13:16.646   951   951 D TileServices: Couldn't find tile for ComponentInfo{com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.focusmode.quicksettings.FocusModeTileService}(0)
+04-21 14:13:16.672   951  1464 I OpenGLRenderer: Davey! duration=1417ms; Flags=0, FrameTimelineVsyncId=45860, IntendedVsync=314467604556, Vsync=314467604556, InputEventId=0, HandleInputStart=314468246781, AnimationStart=314468247428, PerformTraversalsStart=314468247605, DrawStart=314489470576, FrameDeadline=314484271222, FrameInterval=314468208320, FrameStartTime=16666666, SyncQueued=314490111221, SyncStart=314490215816, IssueDrawCommandsStart=314490798737, SwapBuffers=314554249316, FrameCompleted=315885257581, DequeueBufferDuration=12482, QueueBufferDuration=8519275, GpuCompleted=315884850737, SwapBuffersCompleted=315885257581, DisplayPresentTime=0, CommandSubmissionCompleted=314554249316, 
+04-21 14:13:16.675  5630  5676 D BtGatt.ScanManager: uid 10123 isForeground true scanMode -1
+04-21 14:13:16.675  5630  5676 D BtGatt.ScanManager: uid 10123 isForeground true scanMode -1
+04-21 14:13:16.702  1961  3260 I A       : Using proto config with mendel
+04-21 14:13:16.703  1961  3260 I A       : Using proto config with mendel
+04-21 14:13:16.703  1961  3260 I A       : Using proto config with mendel
+04-21 14:13:16.703  1961  3260 I A       : Merging legacy hotword config map with new proto.
+04-21 14:13:16.703  1961  3260 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+04-21 14:13:16.703  1961  3260 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+04-21 14:13:16.703  1961  3260 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+04-21 14:13:16.703  1961  3260 I A       : Skipping. Expected model: 2 Found: 1
+04-21 14:13:16.703  1961  3260 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+04-21 14:13:16.704  1961  3260 I A       : Using proto config with mendel
+04-21 14:13:16.704  1961  3260 I A       : Using proto config with mendel
+04-21 14:13:16.705  1961  3260 I A       : Using proto config with mendel
+04-21 14:13:16.716  1961  3260 I MicroDetectionState: Should stop hotword detection immediately - true
+04-21 14:13:16.718  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 14:13:16.718  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 14:13:16.719  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 14:13:16.726  6248  9093 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_REMOVED [CONTEXT service_id=17 ]
+04-21 14:13:16.733  6335  9085 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+04-21 14:13:16.743  6248  9093 I ProximityAuth: [RecentAppsMediator] Package added: (user=UserHandle{0}) owasp.sat.agoat
+04-21 14:13:16.746  9102  9102 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 14:13:16.758  9102  9102 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 14:13:16.758  9102  9102 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 14:13:16.764  9102  9102 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 14:13:16.764  9102  9102 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 14:13:16.772  6335  6335 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 14:13:16.772  6335  6335 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 14:13:16.786  6335  6335 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 14:13:16.793  6335  9082 W SQLiteLog: (28) double-quoted string literal: "owasp.sat.agoat"
+04-21 14:13:16.797   555   588 I WindowManager: Queue is too deep! Purged item with index=15
+04-21 14:13:16.802  6248  9109 I FontLog : Package owasp.sat.agoat has no metadata [CONTEXT service_id=132 ]
+04-21 14:13:16.808   555   588 I WindowManager: Queue is too deep! Purged item with index=15
+04-21 14:13:16.808  6248  6276 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+04-21 14:13:16.810   555   587 W system_server: Long monitor contention with owner android.anim (588) at android.content.res.Configuration com.android.server.wm.ActivityTaskManagerService.getGlobalConfigurationForPid(int)(ActivityTaskManagerService.java:1133) waiters=0 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 203ms
+04-21 14:13:16.812   555   584 V WindowManager: Sent Transition #41 createdAt=04-21 14:13:15.489 via request=TransitionRequestInfo { type = CLOSE, triggerTask = null, remoteTransition = null, displayChange = null }
+04-21 14:13:16.812   555   584 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+04-21 14:13:16.812   951   993 V WindowManagerShell: onTransitionReady android.os.BinderProxy@35ba425: {id=41 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@f644d75} m=TO_BACK f=NONE leash=Surface(name=Task=15)/@0xd937eb9 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@accd10a} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x47f82fe sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0x2a85a5f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 14:13:16.812   555   584 V WindowManager:     info={id=41 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{9d2beb6 Task{2d81f18 #15 type=standard A=10192:owasp.sat.agoat}}} m=TO_BACK f=NONE leash=Surface(name=Task=15)/@0x10d368c sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{RemoteToken{727b566 Task{2252daf #1 type=home}}} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x1ff99b0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0x719c64d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 14:13:16.812   951   993 V WindowManagerShell: Playing animation for (#41)android.os.BinderProxy@35ba425@0
+04-21 14:13:16.812   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@3d7b469
+04-21 14:13:16.812   951   993 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@e05feee
+04-21 14:13:16.812   951   993 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@64e3f8f
+04-21 14:13:16.812   951   993 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@e48d21c
+04-21 14:13:16.812   951   993 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+04-21 14:13:16.812   951   993 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@2ae2e25
+04-21 14:13:16.812   951   993 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@bd71bfa
+04-21 14:13:16.813   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@27945ab
+04-21 14:13:16.813   951   993 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=41 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@f644d75} m=TO_BACK f=NONE leash=Surface(name=Task=15)/@0xd937eb9 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@accd10a} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x47f82fe sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0x2a85a5f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 14:13:16.813   951   993 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@8a1c9ba, appThread = android.app.IApplicationThread$Stub$Proxy@835c06b, debugName = LauncherToDream }}
+04-21 14:13:16.813   951   993 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@d45b7c8, appThread = android.app.IApplicationThread$Stub$Proxy@15e6061, debugName = QuickstepLaunchHome }}
+04-21 14:13:16.813   951   993 V WindowManagerShell:  Delegate animation for #41 to null
+04-21 14:13:16.813   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@9b348b4
+04-21 14:13:16.813   951   993 V WindowManagerShell: start default transition animation, info = {id=41 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@f644d75} m=TO_BACK f=NONE leash=Surface(name=Task=15)/@0xd937eb9 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@accd10a} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x47f82fe sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0x2a85a5f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 14:13:16.816   951   993 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@3f1d798 animAttr=0x10 type=CLOSE isEntrance=true
+04-21 14:13:16.817  9102  9102 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 14:13:16.817  9102  9102 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 14:13:16.817  9102  9102 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 14:13:16.815  9102  9102 W main    : type=1400 audit(0.0:379): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:13:16.819   951   993 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@8d3657 animAttr=0x11 type=CLOSE isEntrance=false
+04-21 14:13:16.819  9102  9102 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+04-21 14:13:16.820  9102  9102 W Monkey  : args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]
+04-21 14:13:16.820  9102  9102 W Monkey  :  arg: "-p"
+04-21 14:13:16.820  9102  9102 W Monkey  :  arg: "owasp.sat.agoat"
+04-21 14:13:16.820  9102  9102 W Monkey  :  arg: "-c"
+04-21 14:13:16.820  9102  9102 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+04-21 14:13:16.820  9102  9102 W Monkey  :  arg: "1"
+04-21 14:13:16.820  9102  9102 W Monkey  : data="owasp.sat.agoat"
+04-21 14:13:16.820  9102  9102 W Monkey  : data="android.intent.category.LAUNCHER"
+04-21 14:13:16.822   951   993 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@9b348b4
+04-21 14:13:16.835   555  1036 W ActivityManager: registerReceiverWithFeature: no app for null
+04-21 14:13:16.838  9102  9102 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:13:16.838  9102  9102 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:13:16.838  9102  9102 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:13:16.843   555  2531 W ActivityTaskManager: callingPackage for (uid=2000, pid=9102) has no WPC
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10192; state: DISABLED
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10192; state: DISABLED
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10192; state: DISABLED
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10192; state: DISABLED
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10192; state: DISABLED
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10192; state: DISABLED
+04-21 14:13:16.844   555  2531 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10192; state: DISABLED
+04-21 14:13:16.845   555  2531 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10192; state: DISABLED
+04-21 14:13:16.847   555  2531 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10192; state: ENABLED
+04-21 14:13:16.849   951   993 W Looper  : Slow delivery took 34ms wmshell.main h=android.os.Handler c=null m=2
+04-21 14:13:16.849   951   993 W Looper  : Drained
+04-21 14:13:16.851   555  2531 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10192; state: DISABLED
+04-21 14:13:16.851   555  2531 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10192; state: DISABLED
+04-21 14:13:16.851   555  2531 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10192; state: ENABLED
+04-21 14:13:16.852   555  2531 V SplashScreenExceptionList: SplashScreen checking exception for package owasp.sat.agoat (target sdk:33) -> false
+04-21 14:13:16.852   555  2531 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10192; state: ENABLED
+04-21 14:13:16.815  9102  9102 W main    : type=1400 audit(0.0:380): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:13:16.870   555  2531 I ActivityTaskManager: Add Task{2d81f18 #15 type=standard A=10192:owasp.sat.agoat} to hidden list because adding Task{47be25d #16 type=standard A=10192:owasp.sat.agoat}
+04-21 14:13:16.871   555  2531 D CompatibilityChangeReporter: Compat change id reported: 194833441; UID 10192; state: ENABLED
+04-21 14:13:16.871   555  2531 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 14:13:16.871   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@b48829 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=16 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=1 lastActiveTime=316114 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@710a7ae} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{3c2994f owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+04-21 14:13:16.874  9102  9102 I Monkey  : Events injected: 1
+04-21 14:13:16.874   951  1004 D SplashScreenView: Build android.window.SplashScreenView{e47de5 V.E...... ......ID 0,0-0,0}
+04-21 14:13:16.874   951  1004 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-21 14:13:16.874   951  1004 D SplashScreenView: Branding: view: android.view.View{3c390ba G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-21 14:13:16.877   555   587 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+04-21 14:13:16.877   555   587 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10192; state: DISABLED
+04-21 14:13:16.877   555   587 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10192; state: DISABLED
+04-21 14:13:16.877   555   587 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10192; state: ENABLED
+04-21 14:13:16.878   555   596 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+04-21 14:13:16.882   951   973 I ndroid.systemui: Background concurrent copying GC freed 84880(4266KB) AllocSpace objects, 15(300KB) LOS objects, 49% free, 18MB/36MB, paused 110us,31us total 208.681ms
+04-21 14:13:16.815  9102  9102 W main    : type=1400 audit(0.0:381): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:13:16.893  6248  6276 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+04-21 14:13:16.893  6335  6509 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36
+04-21 14:13:16.896   362   362 D Zygote  : Forked child process 9135
+04-21 14:13:16.900   555   596 I ActivityManager: Start proc 9135:owasp.sat.agoat/u0a192 for next-top-activity {owasp.sat.agoat/owasp.sat.agoat.SplashActivity}
+04-21 14:13:16.901  9102  9102 I Monkey  : ## Network stats: elapsed time=35ms (0ms mobile, 0ms wifi, 35ms not connected)
+04-21 14:13:16.903  9102  9102 I app_process: System.exit called, status: 0
+04-21 14:13:16.903  9102  9102 I AndroidRuntime: VM exiting with result code 0.
+04-21 14:13:16.918  6335  6335 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-21 14:13:16.918  6335  6335 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-21 14:13:16.959  9135  9135 I owasp.sat.agoat: Late-enabling -Xcheck:jni

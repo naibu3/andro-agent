@@ -1,0 +1,537 @@
+[
+  {
+    "rule_id": "MANIFEST_ALLOW_BACKUP_ENABLED",
+    "title": "Application allows backups",
+    "description": "The application has android:allowBackup enabled, which may expose app data to backup/restore abuse depending on platform and deployment context.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.allow_backup",
+        "key": "allow_backup",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'app.myparty.houses.MainActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "app.myparty.houses.MainActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "app.myparty.houses.MainActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'app.myparty.houses.MainActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "app.myparty.houses.MainActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "app.myparty.houses.MainActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.facebook.CustomTabActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.facebook.CustomTabActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.facebook.CustomTabActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.facebook.CustomTabActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.facebook.CustomTabActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.facebook.CustomTabActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.canhub.cropper.CropImageActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.canhub.cropper.CropImageActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.canhub.cropper.CropImageActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.canhub.cropper.CropImageActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.canhub.cropper.CropImageActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.canhub.cropper.CropImageActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.stripe.android.link.LinkRedirectHandlerActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.link.LinkRedirectHandlerActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.link.LinkRedirectHandlerActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.stripe.android.link.LinkRedirectHandlerActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.link.LinkRedirectHandlerActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.link.LinkRedirectHandlerActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.stripe.android.payments.StripeBrowserProxyReturnActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.stripe.android.payments.StripeBrowserProxyReturnActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'com.google.firebase.iid.FirebaseInstanceIdReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "com.google.firebase.iid.FirebaseInstanceIdReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'androidx.profileinstaller.ProfileInstallReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "androidx.profileinstaller.ProfileInstallReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "androidx.profileinstaller.ProfileInstallReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_PROVIDER",
+    "title": "Exported provider detected",
+    "description": "The provider 'expo.modules.clipboard.ClipboardFileProvider' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.exported",
+        "key": "expo.modules.clipboard.ClipboardFileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "provider",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "expo.modules.clipboard.ClipboardFileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_PROVIDER_NO_PERMISSION",
+    "title": "Exported provider without permission",
+    "description": "The exported provider 'expo.modules.clipboard.ClipboardFileProvider' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.exported",
+        "key": "expo.modules.clipboard.ClipboardFileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "provider",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "expo.modules.clipboard.ClipboardFileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'expo.modules.imagepicker.fileprovider.ImagePickerFileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'com.canhub.cropper.CropFileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "com.canhub.cropper.CropFileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "com.canhub.cropper.CropFileProvider"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_PROVIDER_GRANT_URI_PERMISSIONS",
+    "title": "Provider grants URI permissions",
+    "description": "The provider 'expo.modules.filesystem.FileSystemFileProvider' has grantUriPermissions enabled.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.grant_uri_permissions",
+        "key": "expo.modules.filesystem.FileSystemFileProvider",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "expo.modules.filesystem.FileSystemFileProvider"
+    }
+  }
+]

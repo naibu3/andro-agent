@@ -1,0 +1,33 @@
+--------- beginning of main
+05-12 09:18:12.909   875  6121 D NetworkMonitor/100: PROBE_FALLBACK http://www.google.com/gen_204 time=611ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Content-Security-Policy=[object-src 'none';base-uri 'self';script-src 'nonce-zkF1nXbGCsx_jvNij17YlA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other], Content-Type=[text/html; charset=UTF-8], Date=[Tue, 12 May 2026 07:18:13 GMT], Permissions-Policy=[unload=()], Server=[gws], X-Android-Received-Millis=[1778570292908], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1778570292299], X-Frame-Options=[SAMEORIGIN], X-XSS-Protection=[0]}
+05-12 09:18:12.909   875  6121 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=false isPortal()=false RedirectUrl=null isPartialConnectivity()=true Time=744ms
+05-12 09:18:12.909   571   714 D ConnectivityService: [100 CELLULAR] validation failed
+05-12 09:18:12.972  6137  6137 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:18:12.977  6137  6137 I AndroidRuntime: Using default boot image
+05-12 09:18:12.977  6137  6137 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:18:12.979  6137  6137 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:18:12.979  6137  6137 I app_process: Using CollectorTypeCC GC.
+05-12 09:18:13.044  6137  6137 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:18:13.053  6137  6137 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:18:13.053  6137  6137 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:18:13.059  6137  6137 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:18:13.059  6137  6137 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:18:13.071  6137  6137 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:18:13.071  6137  6137 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:18:13.071  6137  6137 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:18:13.070  6137  6137 W main    : type=1400 audit(0.0:194): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:13.072  6137  6137 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:18:13.070  6137  6137 W main    : type=1400 audit(0.0:195): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:13.070  6137  6137 W main    : type=1400 audit(0.0:196): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+05-12 09:18:13.074   571  2178 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6137, uid=2000) that is not exported from UID 10192
+05-12 09:18:13.075  6137  6137 D AndroidRuntime: Shutting down VM
+05-12 09:18:13.451   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:114 - ### Keystore Watchdog report - BEGIN ###
+05-12 09:18:13.451   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:123 - When extracting from a bug report, please include this header
+05-12 09:18:13.451   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:124 - and all 2 records below.
+05-12 09:18:13.451   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:154 - ThreadId(5) IKeystoreSecurityLevel::generateKey Pending: 6.000518635s Overdue 1.000518967s: SecurityLevel r#TRUSTED_ENVIRONMENT
+05-12 09:18:13.451   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:164 - ThreadId(5) Calling get_rkpd_attestation_key() Pending: 6.000558242s Overdue 5.500558539s
+05-12 09:18:13.451   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:175 - ### Keystore Watchdog report - END ###
+05-12 09:18:13.553   571  2402 W BatteryExternalStatsWorker: error reading Bluetooth stats: 11
+05-12 09:18:13.554   571  2178 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=154058 mSleepTimeMs=0 mIdleTimeMs=149022 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+05-12 09:18:13.574   379   447 I netd    : tetherGetStats() -> {[]} <2.89ms>

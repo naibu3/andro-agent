@@ -1,0 +1,13 @@
+package com.stripe.android.uicore.elements;
+
+import kotlin.Metadata;
+import kotlinx.coroutines.flow.StateFlow;
+
+/* compiled from: AddressFieldsElement.kt */
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\bg\u0018\u00002\u00020\u0001R\u0018\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006R\u0012\u0010\u0007\u001a\u00020\bX¦\u0004¢\u0006\u0006\u001a\u0004\b\t\u0010\n¨\u0006\u000b"}, d2 = {"Lcom/stripe/android/uicore/elements/AddressFieldsElement;", "Lcom/stripe/android/uicore/elements/SectionFieldElement;", "addressController", "Lkotlinx/coroutines/flow/StateFlow;", "Lcom/stripe/android/uicore/elements/AddressController;", "getAddressController", "()Lkotlinx/coroutines/flow/StateFlow;", "countryElement", "Lcom/stripe/android/uicore/elements/CountryElement;", "getCountryElement", "()Lcom/stripe/android/uicore/elements/CountryElement;", "stripe-ui-core_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes6.dex */
+public interface AddressFieldsElement extends SectionFieldElement {
+    StateFlow<AddressController> getAddressController();
+
+    CountryElement getCountryElement();
+}

@@ -1,0 +1,71 @@
+--------- beginning of main
+04-21 09:11:53.542  1524  5349 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+04-21 09:11:53.543  1524  5349 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+04-21 09:11:53.543  1524  5349 I NamespaceManager: Package com.android.media name not found! Using module version.
+04-21 09:11:53.543  1524  5349 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+04-21 09:11:53.543  1524  5349 I NamespaceManager: Package com.android.appsearch name not found! Using module version.
+04-21 09:11:53.545  1524  5349 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+04-21 09:11:53.545  1524  5349 I NamespaceManager: Package com.android.media name not found! Using module version.
+04-21 09:11:53.547  1524  5349 I NamespaceManager: Package 1 name not found! Using module version.
+--------- beginning of system
+04-21 09:11:53.549   555   555 I PackageWatchdog: Syncing health check requests for packages: {com.google.android.apps.nexuslauncher, com.android.settings, com.android.systemui}
+04-21 09:11:53.549   555   555 I ExplicitHealthCheckController: Service not ready to get health check supported packages. Binding...
+04-21 09:11:53.562   555   555 I ExplicitHealthCheckController: Explicit health check service is bound
+04-21 09:11:53.563  4691  4802 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.experiments.receiver.BuglePhenotypeBroadcastReceiver@a314ab
+04-21 09:11:53.567  4691  5825 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.libraries.internal.growth.growthkit#com.google.android.apps.messaging
+04-21 09:11:53.570  1524  5899 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+04-21 09:11:53.571  1524  5899 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+04-21 09:11:53.571   555   555 I ExplicitHealthCheckController: Explicit health check service is connected ComponentInfo{com.google.android.ext.services/android.ext.services.watchdog.ExplicitHealthCheckServiceImpl}
+04-21 09:11:53.571   555   555 I ExplicitHealthCheckController: Service initialized, syncing requests
+04-21 09:11:53.572   555   555 I PackageWatchdog: Syncing health check requests for packages: {com.google.android.apps.nexuslauncher, com.android.settings, com.android.systemui}
+04-21 09:11:53.572   555   555 D ExplicitHealthCheckController: Getting health check supported packages
+04-21 09:11:53.572   555  2052 I ExplicitHealthCheckController: Explicit health check supported packages [PackageConfig{com.google.android.networkstack, 86400000}]
+04-21 09:11:53.572   555  2052 D PackageWatchdog: Received supported packages [PackageConfig{com.google.android.networkstack, 86400000}]
+04-21 09:11:53.572   555  2052 I PackageWatchdog: Updated health check state for package com.google.android.apps.nexuslauncher: INACTIVE -> PASSED
+04-21 09:11:53.572   555  2052 I PackageWatchdog: Updated health check state for package com.android.settings: INACTIVE -> PASSED
+04-21 09:11:53.572   555  2052 I PackageWatchdog: Updated health check state for package com.android.systemui: INACTIVE -> PASSED
+04-21 09:11:53.572   555  2052 I PackageWatchdog: Syncing state, reason: updated health check supported packages [PackageConfig{com.google.android.networkstack, 86400000}]
+04-21 09:11:53.572   555  2052 D ExplicitHealthCheckController: Getting health check requested packages
+04-21 09:11:53.572   555   594 I PackageWatchdog: Saving observer state to file
+04-21 09:11:53.573   555  2554 I ExplicitHealthCheckController: Explicit health check requested packages []
+04-21 09:11:53.573   555  2554 I ExplicitHealthCheckController: No more health check requests, unbinding...
+04-21 09:11:53.573   555   555 I PackageWatchdog: Syncing health check requests for packages: {}
+04-21 09:11:53.574  4691  4802 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.experiments.receiver.BuglePhenotypeBroadcastReceiver@e7c5087
+04-21 09:11:53.577   555  2554 I ExplicitHealthCheckController: Explicit health check service is unbound
+04-21 09:11:53.577   555   555 I ExplicitHealthCheckController: Service not ready to get health check supported packages. Binding...
+04-21 09:11:53.577  1524  5899 I NamespaceManager: Package com.android.media name not found! Using module version.
+04-21 09:11:53.577   555   555 I ExplicitHealthCheckController: Explicit health check service is bound
+04-21 09:11:53.578  1524  5899 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+04-21 09:11:53.579  4691  4691 I PhenotypeBackgroundRecv: Skipping com.google.lighter.android#com.google.android.apps.messaging which doesn't use ProcessStable flags.
+04-21 09:11:53.579   555   555 I ExplicitHealthCheckController: Explicit health check service is connected ComponentInfo{com.google.android.ext.services/android.ext.services.watchdog.ExplicitHealthCheckServiceImpl}
+04-21 09:11:53.579   555   555 I ExplicitHealthCheckController: Service initialized, syncing requests
+04-21 09:11:53.579   555   555 I PackageWatchdog: Syncing health check requests for packages: {}
+04-21 09:11:53.579   555   555 D ExplicitHealthCheckController: Getting health check supported packages
+04-21 09:11:53.580   555  2554 I ExplicitHealthCheckController: Explicit health check supported packages [PackageConfig{com.google.android.networkstack, 86400000}]
+04-21 09:11:53.580   555  2554 D PackageWatchdog: Received supported packages [PackageConfig{com.google.android.networkstack, 86400000}]
+04-21 09:11:53.580   555  2554 D ExplicitHealthCheckController: Getting health check requested packages
+04-21 09:11:53.580   555   649 I ExplicitHealthCheckController: Explicit health check requested packages []
+04-21 09:11:53.580   555   649 I ExplicitHealthCheckController: No more health check requests, unbinding...
+04-21 09:11:53.581  1524  5899 I NamespaceManager: Package com.android.appsearch name not found! Using module version.
+04-21 09:11:53.581   555   649 I ExplicitHealthCheckController: Explicit health check service is unbound
+04-21 09:11:53.582  1524  5899 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+04-21 09:11:53.583  4691  4802 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.experiments.receiver.BuglePhenotypeBroadcastReceiver@dc36e23
+04-21 09:11:53.584  1524  5899 I NamespaceManager: Package com.android.media name not found! Using module version.
+04-21 09:11:53.584   555  2556 W ActivityTaskManager: callingPackage for (uid=2000, pid=6095) has no WPC
+04-21 09:11:53.585  1524  5899 I NamespaceManager: Package 1 name not found! Using module version.
+04-21 09:11:53.585  4691  4691 I PhenotypeBackgroundRecv: Skipping com.google.android.gms.icing.mdd#com.google.android.apps.messaging which doesn't use ProcessStable flags.
+04-21 09:11:53.588  4691  4802 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.experiments.receiver.BuglePhenotypeBroadcastReceiver@2d4c97f
+04-21 09:11:53.588  4691  4691 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.messaging.auto#com.google.android.apps.messaging which doesn't use ProcessStable flags.
+04-21 09:11:53.596  1616  4012 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=agsa_icing_connection serviceId=33
+04-21 09:11:53.598  1616  4012 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=agsa_icing_connection serviceId=32
+04-21 09:11:53.599  1616  5840 W Icing   : No valid account for uploading user actions
+04-21 09:11:53.600  4691  5825 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 09:11:53.601  1616  5840 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+04-21 09:11:53.602   555  2556 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+04-21 09:11:53.603   555  2556 I ActivityTaskManager: START u0 {act=android.intent.action.VIEW dat=androgoat://vulnapp/... flg=0x10000000 cmp=owasp.sat.agoat/.AccessControl1ViewActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 09:11:53.603   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@73252b5 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=12 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=4 lastActiveTime=156164 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@29e8d4a} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{dcae4bb owasp.sat.agoat.AccessControl1ViewActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+04-21 09:11:53.605  1616  5840 W Icing   : No valid account for uploading user actions
+04-21 09:11:53.621   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+04-21 09:11:53.630  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:11:53.630  1961  2229 I BgTaskExecutorImpl: Starting EXCLUSIVE background task FETCH_CONFIGS_FROM_PHENOTYPE.
+04-21 09:11:53.672  4691  4793 W TimedProcessReaper: Scheduling killing of process to refresh configuration

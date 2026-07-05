@@ -1,0 +1,494 @@
+{
+  "OPCIONES_MENU": {
+    "INICIO": "Inicio",
+    "CAMBIAR_IDIOMA": "Cambiar Idioma",
+    "CERRAR_SESION": "Cerrar Sesión",
+    "CERRAR": "Cerrar",
+    "CONELSISTEMA": "Con el sistema de ",
+    "ZONA_USUARIOS": "Zona Usuarios",
+    "MIS_DATOS": "Mis datos",
+    "CONFIGURACION_ANUNCIOS": "Configuración anuncios",
+    "SALIR": "Salir"
+  },
+
+  "MENU": {
+    "INICIO": "Inicio",
+    "COMPARTIR_APP": "Compartir APP",
+    "NOTICIAS": "Noticias",
+    "PROXIMOS_PARTIDOS": "Próximos partidos",
+    "BUSCADOR": "Buscador",
+    "MIS_EQUIPOS": "Mis Equipos",
+    "MIS_JUGADORES": "Mis Jugadores",
+    "AVISO_LEGAL": "Aviso legal",
+    "AVISO_LEGAL_CONDICIONES": "Aviso legal y condiciones de uso",
+    "POLITICA_PRIVACIDAD": "Política privacidad",
+    "CONFIGURACION": "Configuración"
+  },
+
+
+  "BOTONES": {
+    "OK": "OK",
+    "CANCELAR": "CANCELAR",
+    "SI": "SI",
+    "NO": "NO",
+    "ACEPTAR": "ACEPTAR",
+    "SIGUIENTE": "SIGUIENTE",
+    "FINALIZAR": "FINALIZAR",
+    "ANADIR": "AÑADIR",
+    "ACCEDER": "ACCEDER",
+    "ENTRAR": "ENTRAR",
+    "CERRAR_SESION": "CERRAR SESIÓN",
+    "PDF": "PDF",
+    "EXCEL": "EXCEL",
+    "VER_VIDEO": "Ver vídeo",
+    "VER_DIRECTO": "Ver en directo",
+    "TODOS":"TODOS",
+    "INICIO":"Inicio",
+    "CERRAR":"CERRAR"
+  },
+
+  "PESTANAS": {
+    "EQUIPOS":"EQUIPOS",
+    "MEDIAS":"MEDIAS",
+    "PARTIDOS":"PARTIDOS",
+    "CLASIFICACION":"CLASIFICACIÓN",
+    "JUGADORES":"JUGADORES",
+    "EST_EQUIPO":"EST. EQUIPO",
+    "EST_JUGADOR":"EST. JUGADOR",
+    "MEJORES_JUGADORES":"MEJORES JUGADORES"
+  },
+
+  "FILTRO": {
+    "POR_JORNADAS":"Por jornadas",
+    "VER_ENTRE_FECHAS":"Ver entre fechas",
+    "JORNADA":"Jornada"
+  },
+
+  "CIFRAS": {
+    "EQUIPO":"EQUIPO",
+    "JUGADORES":"JUGADORES",
+    "JUGADOR":"JUGADOR",
+    "PART":"PART",
+    "PJ":"PJ",
+    "PG":"PG",
+    "PPP":"PPP",
+    "PTS":"PTS",
+    "PPC":"PPC",
+    "PP":"PP",
+    "PT":"PT",
+    "MPP":"MPP",
+    "M":"M",
+    "TL":"TL",
+    "POR_TL":"%TL",
+    "T2":"T2",
+    "POR_T2":"%T2",
+    "T3":"T3",
+    "POR_T3":"%T3",
+    "RD":"RD",
+    "RO":"RO",
+    "RT":"RT",
+    "AST":"AST",
+    "PD":"PD",
+    "RB":"RB",
+    "TAP":"TAP",
+    "FP":"FP",
+    "VAL":"VAL",
+    "MEDIA":"MEDIA",
+    "TOTAL":"TOTAL",
+    "BONUS":"BONUS",
+    "F":"F",
+    "TM":"TM",
+    "AS":"AS",
+    "TC_2P":"TC 2P",
+    "TC_3P":"TC 3P",
+    "REBOTES":"Rebotes",
+    "FAL":"FAL",
+    "MIN":"Min",
+    "MIN_MAYUS":"MIN",
+    "A_I":"A/I",
+    "POR":"%",
+    "DEF":"Def.",
+    "OFE":"Ofe.",
+    "TOT":"Tot.",
+    "REC":"REC",
+    "PER":"PÉR",
+    "COM":"Com.",
+    "REC_2":"Rec.",
+    "TC":"TC",
+    "DOSP":"2P",
+    "TRESP":"3P",
+    "FC":"FC",
+    "DIAS":"días",
+    "TOT_MAYUS":"TOT.",
+    "MED":"MED.",
+    "ANOTADOS":"ANOTADOS",
+    "INTENTOS":"INTENTOS"
+  },
+
+
+
+  "INICIO": {
+    "MIS_EQUIPOS": "Mis Equipos",
+    "MIS_JUGADORES": "Mis Jugadores",
+    "LICENCIA": "¿Tienes licencia en la federación o perteneces a algún club?",
+    "ACCEDE_LICENCIA": "Accede a tu licencia y tus equipos accediendo con tus datos a nuestra App.",
+    "MI_CLUB": "Equipos de mi club",
+    "FRASE_PUBLICIDAD_1": "¿Quieres ver tú App ",
+    "FRASE_PUBLICIDAD_1_2": "sin publicidad",
+    "FRASE_PUBLICIDAD_1_3": " ?",
+    "FRASE_PUBLICIDAD_2": "SUSCRÍBETE Y ",
+    "FRASE_PUBLICIDAD_2_2": "HAZTE PREMIUM",
+    "ULTIMA_NOTICIA": "Últimas noticias",
+    "CANAL_SALUD": "Canal de Salud",
+    "VER_ESTADISTICAS": "Ver estadísticas categoría",
+    "VER_NOTICIA": "Ver noticia"
+  },
+
+  "NOTICIAS": {
+    "ULTIMAS_NOTICIAS": "Últimas noticias"
+  },
+
+  "SELECCION_EQUIPO": {
+    "BIENVENIDO": "Bienvenido a la App",
+    "APP": "FAB",
+    "APP_CAB": "CAB",
+    "FEDERACIONES": "Federaciones",
+    "COMPETICIONES": "Competiciones",
+    "COMPETENCIAS": "Competencias",
+    "EQUIPO": "Equipo",
+    "JUGADOR": "Jugador",
+    "CATEGORIA": "Categoría",
+    "CLUB": "Club",
+    "PRIMER_PASO": "Es la primera vez que usas esta App, asi que tienes que escoger un equipo para seguir.",
+    "ESCOGER_COMPETICION": "El primer paso es escoger una competición.",
+    "ANADIR_NUEVO": "Añadir un nuevo",
+    "ASISTENTE_EQUIPO": "Sigue el asistente para añadir nuevos equipos a tus favoritos y seguir todos sus resultados y estadísticas:",
+    "ASISTENTE_JUGADOR": "Sigue el asistente para añadir nuevos jugadores a tus favoritos y seguir todos sus estadísticas:",
+    "ESCOJA_INICIO": "Escoja una categoría y un club:",
+    "ESCOJA_EQUIPO": "Escoja una categoría, un club y un equipo:",
+    "ESCOJA_JUGADOR": "Escoja una categoría y un club:",
+    "ESCOGER_CATEGORIA_DELEGACION": "Ahora debe escoger una categoría y un club de la delegación de",
+    "PARA_SEGUIR": "para seguir:"
+  },
+
+  "LOGIN": {
+    "TITULO":"¿Tienes licencia en la federación o perteneces a algún club?",
+    "TEXTO":"Ahora puedes acceder a tu licencia y añadir todos tus equipos accediendo con tus datos.",
+    "PERFIL":"Perfil:",
+    "TIPO_PERFIL": {
+      "DIRECTOR_DEPORTIVO": "Director deportivo",
+      "RESPONSABLE": "Responsable",
+      "JUGADOR_ENTRENADOR": "Jugador, entrenador o delegado",
+      "ARBITRO": "Árbitro"
+    },
+    "USUARIO":"Usuario:",
+    "CLAVE":"Clave:",
+    "BIENVENIDO":"Bienvenido/a:",
+    "TEXTO_LOGIN_1":"Ahora se añadirán todos los equipos de forma automática en la pantalla de inicio de la App.",
+    "TEXTO_LOGIN_2":"Próximamente añadiremos más mejoras a nuestra app."
+  },
+
+  "BUSCADOR": {
+    "BUSCADOR": "Buscar",
+    "PARTIDOS_BUSCADOR": "Partidos",
+    "EQUIPOS_BUSCADOR": "Equipos",
+    "JUGADORES_BUSCADOR": "Jugadores",
+    "CLUBES_BUSCADOR": "Clubes",
+    "CATEGORIAS_BUSCADOR": "Categorías",
+    "TEXTO_BUSCADOR": "Buscador ...",
+    "TEXTO_NOMBRE": "Nombre ...",
+    "TEXTO_APELLIDOS": "Apellidos ...",
+    "BUSCAR": "BUSCAR",
+    "ANADIR_EQUIPO": "Añadir equipo",
+    "ANADIR_JUGADOR": "Añadir jugador"
+  },
+
+  "ESTADOS_PARTIDO": {
+    "TERMINADO":"Terminado",
+    "NO_COMENZADO":"No comenzado",
+    "EN_VIVO":"En vivo",
+    "ESTADISTICAS":"Estadísticas",
+    "PROXIMOS":"Próximos"
+  },
+
+  "ESTADOS_EQUIPO": {
+    "PUNTOS":"Puntos",
+    "VALORACION":"Valoración",
+    "REBOTES":"Rebotes",
+    "ASISTENCIAS":"Asistencias",
+    "TAPONES":"Tapones",
+    "ROBOS":"Robos",
+    "TL":"TL",
+    "DOS_P":"2PTOS",
+    "TRES_P":"3PTOS"
+  },
+
+  "PARTIDO": {
+    "JUGADOR":"JUGADOR",
+    "FALTAS":"FALTAS",
+    "NO_DATOS":"No disponemos aún de datos para este partido.",
+    "ENCUENTRO":"Puede que el encuentro no haya comenzado, se haya suspendido o tenga algún tipo de retraso.",
+    "DISCULPAS":"Disculpe las molestias.",
+    "TU_HORARIO":"En tu horario:",
+    "PESTANAS": {
+      "ENTRENADOR":"Entrenador",
+      "EN_VIVO":"En Vivo",
+      "ESTADISTICAS":"Estadísticas",
+      "MEJORES_JUGADORES":"Mejores jugadores",
+      "MAPA_TIRO":"Mapa de tiro",
+      "COMPARATIVA":"Comparativa",
+      "VIDEOS":"Videos"
+    },
+    "ENTRENADOR": {
+      "PERIODO_ACTUAL":"Periodo actual:",
+      "EQUIPO_LOCAL":"Equipo Local",
+      "EQUIPO_VISITANTE":"Equipo Visitante",
+      "FALTA_EQUIPO":"Falta equipo",
+      "FALTAS_EQUIPO_LOCAL":"FALTAS EQUIPO LOCAL",
+      "FALTAS_EQUIPO_VISITANTE":"FALTAS EQUIPO VISITANTE",
+      "EN_PISTA":"En pista",
+      "BANQUILLO":"Banquillo"
+    },
+    "EN_VIVO": {
+      "BUSCADOR":"Buscar por nombre, accion o dorsal",
+      "JUGADORES_CAMPO":"Ver jugadores en el campo",
+      "AHORA_EN_PISTA":"AHORA EN PISTA:",
+      "BANQUILLO":"Banquillo"
+    },
+    "ACCIONES_PARTIDO":{
+      "INICIO-PARTIDO": "INICIO DEL PARTIDO",
+      "FINAL-PARTIDO": "FINAL DEL PARTIDO",
+      "INICIO-PERIODO": "INICIO DEL PERIODO ",
+      "FINAL-PERIODO": "FINAL DEL PERIODO ",
+      "CAMBIO-JUGADOR-ENTRA":"ENTRA A PISTA EL ",
+      "CAMBIO-JUGADOR-SALE":"ABANDONA LA PISTA EL ",
+      "FLECHA-ALTERNANCIA-IZQUIERDA":"FLECHA ALTERNANCIA IZQUIERDA",
+      "FLECHA-ALTERNANCIA-DERECHA":"FLECHA ALTERNANCIA DERECHA",
+      "FLECHA-ALTERNANCIA-LOCAL":"FLECHA ALTERNANCIA LOCAL",
+      "FLECHA-ALTERNANCIA-VISITANTE":"FLECHA ALTERNANCIA VISITANTE",
+      "CANASTA-1P":"TIRO LIBRE ANOTADO",
+      "CANASTA-2P":"CANASTA DE 2 PUNTOS",
+      "CANASTA-3P":"TRIPLE",
+      "TIRO1-FALLADO":"TIRO LIBRE FALLADO",
+      "TIRO2-FALLADO":"TIRO DE 2 FALLADO",
+      "TIRO3-FALLADO":"TIRO DE 3 FALLADO",
+      "1-TIRO-LIBRE":"1 TIRO LIBRE PARA EL ",
+      "2-TIROS-LIBRES":"2 TIROS LIBRES PARA EL ",
+      "3-TIROS-LIBRES":"3 TIROS LIBRES PARA EL ",
+      "TIROS-LIBRE-VACIO":"TIRO LIBRE VACÍO ",
+      "TAPON-COMETIDO":"TAPÓN REALIZADO",
+      "TAPON-RECIBIDO":"TAPÓN RECIBIDO",
+      "FALTA-COMETIDA":"FALTA COMETIDA",
+      "FALTA-RECIBIDA":"FALTA RECIBIDA",
+      "PERDIDA":"PÉRDIDA DE BALÓN",
+      "RECUPERACION":"RECUPERACIÓN",
+      "ASISTENCIA":"ASISTENCIA",
+      "REBOTE-DEFENSIVO":"REBOTE DEFENSIVO ",
+      "REBOTE-OFENSIVO":"REBOTE OFENSIVO ",
+      "TIEMPO-MUERTO-SOLICITADO":"TIEMPO MUERTO SOLICITADO",
+      "TIEMPO-MUERTO-CANCELADO":"TIEMPO MUERTO CANCELADO",
+      "TANTIDEPORTIVA":"ANTIDEPORTIVA",
+      "TECNICA":"TÉCNICA",
+      "TECNICA-E":"TÉCNICA-E (ALINEACIÓN ILEGAL)",
+      "TBANQUILLO-B":"TÉCNICA BANQUILLO (B)",
+      "TBANQUILLO-C":"TÉCNICA BANQUILLO (C)",
+      "TDESCALIFICANTE":"TÉCNICA DESCALIFICANTE",
+      "DESCALIFICANTE-ACOMPANANTE":"TÉCNICA DESCALIFICANTE ACOMPAÑANTE",
+      "TDESCALIFICANTE-ENOPARTICIPA":"TÉCNICA DESCALIFICANTE NO PARTICIPA",
+      "TDESCALIFICANTE-EPARTICIPA":"TÉCNICA DESCALIFICANTE PARTICIPA",
+      "DESCALIFICANTE-ACOMPANANTE-ENOPARTICIPA":"TÉCNICA DESCALIFICANTE ACOMPAÑANTE NO PARTICIPA",
+      "DESCALIFICANTE-ACOMPANANTE-EPARTICIPA":"TÉCNICA DESCALIFICANTE ACOMPAÑANTE PARTICIPA",
+      "TDESCALIFICANTE-E":"TÉCNICA DESCALIFICANTE POR ENFRENTAMIENTO"
+    },
+    "ESTADISTICAS": {
+      "ENTRENADOR":"Entrenador:",
+      "NOMBRE":"Nombre"
+    },
+    "MEJORES_JUGADORES": {
+      "VALORACION":"Valoración",
+      "PUNTOS":"Puntos",
+      "REBOTES":"Rebotes",
+      "ASISTENCIAS":"Asistencias",
+      "TAPONES":"Tapones",
+      "RECUPERACIONES":"Recuperaciones"
+    },
+    "MAPA_TIRO": {
+      "MAPA_TIRO":"Mapa de tiro",
+      "ZONA_TIRO":"Zona de tiro",
+      "TODOS":"Todos",
+      "ACIERTOS_TIROS":"ACIERTOS EN TIROS",
+      "TIROS_2P":"TIROS 2P",
+      "TIROS_3P":"TIROS 3P",
+      "TIROS_LIBRES":"T.LIBRES"
+    },
+    "COMPARATIVA": {
+      "PUNTOS_MINUTOS":"DISTANCIA DE PUNTOS / MINUTOS DE PARTIDO",
+      "REBOTES":"REBOTES",
+      "ASISTENCIAS":"ASISTENCIAS",
+      "TAPONES":"TAPONES",
+      "RECUPERACIONES":"RECUPERACIONES"
+    }
+  },
+
+
+  "INFO_JUGADORES": {
+    "LEYENDA_1":"Media jugador por partido.",
+    "LEYENDA_2":"Media por partido de todos los jugadores C/C.",
+    "MINUTOS":"MINUTOS",
+    "PUNTOS":"PUNTOS",
+    "TIROS_LIBRES_ANOTADOS":"TIROS LIBRES ANOTADOS",
+    "TIROS_LIBRES":"TIROS LIBRES",
+    "POR_TIROS_LIBRES":"% TIROS LIBRES",
+    "TIROS_DOS_ANOTADOS":"TIROS DE 2 ANOTADOS",
+    "TIROS_DOS":"TIROS DE 2",
+    "POR_TIROS_DOS":"% TIROS DE 2",
+    "TRIPLES_ANOTADOS":"TRIPLES ANOTADOS",
+    "TRIPLES":"TRIPLES",
+    "POR_TIROS_TRIPLES":"% TIROS TRIPLES",
+    "TIROS_CAMPO_ANOTADOS":"TIROS CAMPO ANOTADOS",
+    "TIROS_CAMPO":"TIROS CAMPO",
+    "POR_TIROS_CAMPO":"% TIROS CAMPO",
+    "REBOTES_DEFENSIVOS":"REBOTES DEFENSIVOS",
+    "REBOTES_OFENSIVOS":"REBOTES OFENSIVOS",
+    "REBOTES":"REBOTES",
+    "ASISTENCIAS":"ASISTENCIAS",
+    "PERDIDAS":"PERDIDAS",
+    "RECUPERACIONES":"RECUPERACIONES",
+    "TAPONES_COMETIDOS":"TAPONES COMETIDOS",
+    "TAPONES_RECIBIDOS":"TAPONES RECIBIDOS",
+    "FALTAS_COMETIDAS":"FALTAS COMETIDAS",
+    "FALTAS_RECIBIDAS":"FALTAS RECIBIDAS",
+    "VALORACION":"VALORACIÓN",
+    "ESTADISTICAS": {
+      "DORSAL" : "DORSAL",
+      "ESTADISTICAS_PARTIDO" : "ESTADÍSTICAS DEL PARTIDO"
+    }
+  },
+
+  "ZONA_USUARIOS": {
+    "ZONA_USUARIOS" : "Zona de Usuarios",
+    "DATOS_PERSONALES" : "Datos personales:",
+    "FALTAN_DATOS" : "Faltan datos del usuario para mostrar.",
+    "DISCULPAS" : "Disculpe las molestias.",
+    "RESPONSABLE" : "Se ha habilitado una nueva zona en la parte inferior de la pantalla de inicio con todos los equipos de los que es responsable.",
+    "DIRECTOR_DEPORTIVO" : "Se ha habilitado una nueva zona en la parte inferior de la pantalla de inicio con todos los equipos del club.",
+    "LICENCIAS" : "Licencias disponibles:",
+    "ESTADO_LICENCIA": {
+      "TIPO": "Tipo:",
+      "EQUIPO": "Equipo:",
+      "CLUB": "Club:",
+      "CAT": "Cat.:"
+    },
+    "NO_DATOS": "No hay datos de licencias disponibles.",
+    "COMPETICION": "Puede que juegue en una competición o categoría de la que no disponemos datos actualmente.",
+    "MOLESTIAS": "Disculpe las molestias."
+  },
+
+
+  "CONFIGURACION": {
+    "CONFIGURACION": "Configuración",
+    "ENLACES_APP": "Enlaces directos App",
+    "MOSTRAR_ENLACES": "Mostrar enlaces directos en el lateral.",
+    "IDENTIFICADOR": "Identificador dispositivo:",
+    "ULTIMAS_ACTUALIZACIONES": "Últimas actualizaciones:",
+    "VERSIONAPP": "Versión",
+    "CORRECCION_ERRORES": "Corrección de errores",
+    "ACTUALIZACION_APP": "Actualización de la App",
+    "CAMBIAR_IDIOMA": "Cambiar Idioma",
+    "IDIOMA_ACTUAL": "Idioma actual",
+    "SUSCRIPCIONES": "Suscripciones",
+    "APP_SIN_PUBLICIDAD": "App sin publicidad",
+    "TEXTO_1_SIN_PUBLICIDAD": "Actualmente no dispone de una suscripción activa para disfrutar de nuestra app sin publicidad.",
+    "TEXTO_2_SIN_PUBLICIDAD": "Si desea acceder a todas las secciones de nuestra app sin publicidad, puede escoger un modelo de suscripción del siguiente listado: ",
+    "ESTADO_SUSCRIPCION": "Estado suscripción",
+    "ESTADO_ACTUAL": "Actualmente dispone de una suscripción activa.",
+    "PLAN_ANUAL": "PLAN ANUAL",
+    "PLAN_MENSUAL": "PLAN MENSUAL",
+    "PLAN_SEMANAL": "PLAN SEMANAL",
+    "SUSCRIBIRSE": "Suscribirse",
+    "FECHA_EXPIRACION": "Fecha expiración: ",
+    "ANULAR_SUSCRIPCION": "Anular suscripción",
+
+    "TITULO_PLAN_ANUAL": "Premium Anual",
+    "TITULO_PLAN_MENSUAL": "Premium Mensual",
+    "DESCRIPCION_PLAN_ANUAL": "Disfruta de toda la información y secciones de nuestra app sin publicidad durante un año.",
+    "DESCRIPCION_PLAN_MENSUAL": "Disfruta de toda la información y secciones de nuestra app sin publicidad durante un mes.",
+
+    "TITULO_PLAN_ANUAL_VIDEOS": "Premium Vídeos Anual",
+    "TITULO_PLAN_MENSUAL_VIDEOS": "Premium Vídeos Mensual",
+    "DESCRIPCION_PLAN_ANUAL_VIDEOS": "Suscripción anual a nuestra app sin publicidad, con la que podrás ver los datos y vídeos de los partidos que se graben y compartir las jugadas y su vídeo desde el 'en vivo' de los encuentros.",
+    "DESCRIPCION_PLAN_MENSUAL_VIDEOS": "Suscripción mensual a nuestra app sin publicidad, con la que podrás ver los datos y vídeos de los partidos que se graben y compartir las jugadas y su vídeo desde el 'en vivo' de los encuentros",
+
+    "RESTAURAR_COMPRAS": "RESTAURAR COMPRAS",
+    "MAS_INFORMACION": "¿Necesita más información?",
+    "VISITA_NUESTRO": "Para conocer más detalles de nuestra app, puede visitar nuestros ",
+    "TERMINOS_USO": "Terminos y condiciones de uso",
+    "O_NUESTRO": "o nuestro",
+    "AVISO_LEGAL": "Aviso legal y Política de privacidad",
+    "SUSCRIPCION_IOS_1": "La suscripción adquirida se cobrará en tu cuenta de iTunes.",
+    "SUSCRIPCION_IOS_2": "La suscripción se renovará automáticamente a menos que la renovación automática se desactive al menos 24 horas antes del final del periodo actual. Puede acceder a la configuración de su cuenta de iTunes para administrar su suscripción.",
+    "CAMBIOS": {
+      "LINEA_1": "Compatibilidad con las últimas versiones de IOS y Android.",
+      "LINEA_2": "Ahora la app es multi-idioma y podrás cambiarlo en la sección configuración.",
+      "LINEA_3": "Mejoras y cambios en la interfaz para un mejor acceso a la información.",
+      "LINEA_4": "Correcciones en la funcionalidad de algunas pestañas de información.",
+      "LINEA_5": "Ahora si entras a la app con otra franja horaria con tu dispositivo podrás ver el día y hora de los partidos correspondiente a esa zona horaria."
+    }
+  },
+
+  "AVISO_LEGAL": {
+    "AVISO_LEGAL" : "Aviso Legal"
+  },
+
+  "PROXIMOS_PARTIDOS": {
+    "PROXIMOS_PARTIDOS" : "Próximos partidos"
+  },
+
+  "ERRORES": {
+    "NO_HAY_DATOS" : "No hay datos",
+    "DISCULPEN" : "Disculpen las molestias"
+  },
+
+  "TEXTOS_GENERALES": {
+    "TITULO_MODAL": "FAB",
+    "MENSAJE_COMPARTIR_MODAL": "La aplicación de 'Afición FAB' seguro que es de tu interés: datos de la Federación Andaluza de Baloncesto, estadísticas, clasificaciones, resultados, en vivo...",
+    "CERRAR_APP": "¿Quiere cerrar la APP Afición FAB?",
+    "CERRAR_APP_GENERAL": "Cerrar App",
+    "MENSAJE_CERRAR_APP": "¿Desea cerrar la aplicación?",
+    "COMPARTIR_APP": "La aplicación de 'Afición FAB' seguro que es de tu interés: datos de la Federación Andaluza de Baloncesto, estadísticas, clasificaciones, resultados, en vivo...",
+    "DIAS": {
+      "LUNES" : "Lunes",
+      "MARTES" : "Martes",
+      "MIERCOLES" : "Miércoles",
+      "JUEVES" : "Jueves",
+      "VIERNES" : "Viernes",
+      "SABADO" : "Sábado",
+      "DOMINGO" : "Domingo"
+    }
+  },
+
+  "ALERTAS": {
+    "CANCELAR_SUSCRIPCION": "Cancelar suscripción",
+    "MSG_CANCELAR_SUSCRIPCION_APPLE": "¿Estás seguro de que deseas cancelar tu suscripción? Serás redirigido a iTunes Store.",
+    "MSG_CANCELAR_SUSCRIPCION_ANDROID": "¿Estás seguro de que deseas cancelar tu suscripción? Serás redirigido a Google Play.",
+    "SUSCRIPCION_REALIZADA": "Suscripción realizada",
+    "MSG_SUSCRITO_CORRECTAMENTE": "Se ha suscrito correctamente a nuestra app.",
+    "SELECCION_DE_FEDERACION": "Selección de federación",
+    "MSG_SELECCION_DE_FEDERACION": "Debe seleccionar una federación para poder mostrar competencias y sus datos.",
+    "CERRAR_APP": "¿Cerrar App?",
+    "QUIERES_BORRAR_EL_JUGADOR": "¿Quieres borrar el jugador?",
+    "QUIERES_BORRAR_EL_EQUIPO": "¿Quieres borrar el equipo?",
+    "QUIERES_BORRAR_EL_PARTIDO": "¿Quieres borrar el partido?",
+    "SUSCRIPCION_RESTAURADA": "Restaurar suscripciones",
+    "MSG_SUSCRIPCION_RESTAURADA": "Su información se ha restaurado correctamente.",
+    "SUSCRIPCION_VACIA": "Aviso suscripciones",
+    "MSG_SUSCRIPCION_VACIA": "No dispone de ninguna suscripción activa en estos momentos."
+  },
+  "TOAST": {
+    "FALTAN_DATOS_POR_RELLENAR": "Faltan datos por rellenar.",
+    "NO_HAY_DATOS_DISPONIBLES_ACTUALMENTE": "No hay datos disponibles actualmente.",
+    "USUARIO_O_CONTRASENA_INCORRECTOS": "Usuario o contraseña incorrectos.",
+    "NO_SE_HA_CERRADO_LA_SESION_CORRECTAMENTE": "No se ha cerrado la sesión correctamente."
+  }
+}
+

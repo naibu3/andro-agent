@@ -1,0 +1,16 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@23.2.0 */
+/* loaded from: classes2.dex */
+public final class zzezb implements zzhkp {
+    public static String zza(zzeza zzezaVar) {
+        String strZzc = zzezaVar.zzc();
+        zzhkx.zzb(strZzc);
+        return strZzc;
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzhlg
+    public final /* bridge */ /* synthetic */ Object zzb() {
+        throw null;
+    }
+}

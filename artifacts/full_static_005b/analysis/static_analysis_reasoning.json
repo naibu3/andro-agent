@@ -1,0 +1,8 @@
+{
+  "summary": "Model response could not be parsed as JSON.",
+  "top_risks": [],
+  "correlations": [],
+  "vulnerability_candidates": [],
+  "recommended_next_steps": [],
+  "raw_response": "This endpoint's maximum context length is 131072 tokens. However, you requested about 182604 tokens (181580 of text input, 1024 in the output). Please reduce the length of either one, or use the context-compression plugin to compress your prompt automatically."
+}

@@ -1,0 +1,439 @@
+[
+  {
+    "type": "code.pattern.file_output_stream",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 158,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+    "value": "file_output_stream",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 158,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 168,
+      "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 168,
+      "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 70,
+      "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 70,
+      "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 111,
+      "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 111,
+      "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 123,
+      "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 123,
+      "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+    }
+  },
+  {
+    "type": "code.pattern.file_output_stream",
+    "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 159,
+      "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+    "value": "file_output_stream",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 159,
+      "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+    }
+  },
+  {
+    "type": "code.pattern.file_output_stream",
+    "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 1027,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+    "value": "file_output_stream",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 1027,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+    }
+  },
+  {
+    "type": "code.pattern.file_output_stream",
+    "key": "artifacts/full_static_007d/jadx/sources/T/j.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 51,
+      "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/T/j.java",
+    "value": "file_output_stream",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 51,
+      "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+    }
+  },
+  {
+    "type": "code.pattern.file_output_stream",
+    "key": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 273,
+      "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+    "value": "file_output_stream",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 273,
+      "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+    }
+  },
+  {
+    "type": "code.pattern.base64_decode",
+    "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "encoding",
+      "line_number": 144,
+      "line_text": "arrayList2.add(Base64.decode(str, 0));"
+    }
+  },
+  {
+    "type": "code.category.encoding",
+    "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+    "value": "base64_decode",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 144,
+      "line_text": "arrayList2.add(Base64.decode(str, 0));"
+    }
+  },
+  {
+    "type": "code.pattern.base64_decode",
+    "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "encoding",
+      "line_number": 153,
+      "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+    }
+  },
+  {
+    "type": "code.category.encoding",
+    "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+    "value": "base64_decode",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 153,
+      "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 54,
+      "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 54,
+      "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 113,
+      "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 113,
+      "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 143,
+      "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 143,
+      "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 54,
+      "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 54,
+      "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+    }
+  },
+  {
+    "type": "code.pattern.sharedprefs_write",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 89,
+      "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+    "value": "sharedprefs_write",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 89,
+      "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+    }
+  },
+  {
+    "type": "code.pattern.file_output_stream",
+    "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "storage",
+      "line_number": 191,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+    }
+  },
+  {
+    "type": "code.category.storage",
+    "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+    "value": "file_output_stream",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 191,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+    }
+  },
+  {
+    "type": "code.pattern.cipher_instance",
+    "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "crypto",
+      "line_number": 69,
+      "line_text": "cipher = Cipher.getInstance(strConcat);"
+    }
+  },
+  {
+    "type": "code.category.crypto",
+    "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+    "value": "cipher_instance",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 69,
+      "line_text": "cipher = Cipher.getInstance(strConcat);"
+    }
+  },
+  {
+    "type": "code.pattern.cipher_instance",
+    "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+    "value": true,
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "category": "crypto",
+      "line_number": 87,
+      "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+    }
+  },
+  {
+    "type": "code.category.crypto",
+    "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+    "value": "cipher_instance",
+    "source": "code_search",
+    "confidence": "high",
+    "metadata": {
+      "line_number": 87,
+      "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+    }
+  }
+]

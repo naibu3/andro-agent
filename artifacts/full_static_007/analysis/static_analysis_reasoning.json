@@ -1,0 +1,31 @@
+{
+  "summary": "The merged analysis surfaces a multi‑vector risk profile: broad attack surface from exported components and permissions, combined with code‑level weaknesses in WebView handling, JavaScript interfaces, and database queries. The strongest threat emerges when external actors can invoke exported entry points and then interact with vulnerable WebViews or databases inside the app.",
+  "top_risks": [
+    "External apps can invoke exported activities/services without authentication",
+    "Unprotected broadcast receivers allow arbitrary code execution",
+    "Cleartext network traffic exposes credentials and hardcoded URLs",
+    "Unsanitized WebView loadUrl leads to XSS/command injection",
+    "JavaScript interfaces expose native code to untrusted web content"
+  ],
+  "correlations": [
+    "Exported MainActivity, SystemJobService, and receivers are also referenced in code paths that load URLs or execute SQL via dynamic input",
+    "Cleartext traffic is enabled while WebView loadUrl and rawQuery use hardcoded HTTP endpoints",
+    "FileProvider grantUriPermissions could be abused together with WebView content sharing",
+    "High dangerous permission count correlates with the ability to start services or expose receivers",
+    "Hardcoded HTTP URLs in SDK files align with the network config allowing cleartext traffic"
+  ],
+  "vulnerability_candidates": [
+    "MainActivity (exported, no protection)",
+    "FirebaseInstanceIdReceiver (exported, no protection)",
+    "DiagnosticsReceiver (exported, no protection)",
+    "ProfileInstallReceiver (exported, no protection)",
+    "IonicWebViewEngine.loadUrl (unsanitized input)"
+  ],
+  "recommended_next_steps": [
+    "Restrict all exported components, applying proper <intent-filter> protection or removing them",
+    "Update network_security_config to disallow cleartext and enforce HTTPS only",
+    "Audit and minimize dangerous permissions, request runtime as needed",
+    "Validate and encode all parameters to loadUrl, restrict WebView to safe domains",
+    "Limit JavaScript interface exposure to whitelisted methods and remove from untrusted pages"
+  ]
+}

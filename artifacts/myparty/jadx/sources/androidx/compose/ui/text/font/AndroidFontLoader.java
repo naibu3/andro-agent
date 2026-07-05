@@ -1,0 +1,143 @@
+package androidx.compose.ui.text.font;
+
+import android.content.Context;
+import android.content.res.Resources;
+import androidx.compose.ui.text.font.AndroidFont;
+import com.facebook.soloader.Elf64;
+import kotlin.Metadata;
+import kotlin.Result;
+import kotlin.ResultKt;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* compiled from: AndroidFontLoader.android.kt */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0000\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0018\u0010\n\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\f\u001a\u00020\rH\u0096@¢\u0006\u0002\u0010\u000eJ\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\f\u001a\u00020\rH\u0016R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0016\u0010\u0002\u001a\n \t*\u0004\u0018\u00010\u00030\u0003X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0010"}, d2 = {"Landroidx/compose/ui/text/font/AndroidFontLoader;", "Landroidx/compose/ui/text/font/PlatformFontLoader;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "cacheKey", "", "getCacheKey", "()Ljava/lang/Object;", "kotlin.jvm.PlatformType", "awaitLoad", "Landroid/graphics/Typeface;", "font", "Landroidx/compose/ui/text/font/Font;", "(Landroidx/compose/ui/text/font/Font;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "loadBlocking", "ui-text_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes3.dex */
+public final class AndroidFontLoader implements PlatformFontLoader {
+    public static final int $stable = 8;
+    private final Object cacheKey;
+    private final Context context;
+
+    /* compiled from: AndroidFontLoader.android.kt */
+    @Metadata(k = 3, mv = {1, 8, 0}, xi = 48)
+    @DebugMetadata(c = "androidx.compose.ui.text.font.AndroidFontLoader", f = "AndroidFontLoader.android.kt", i = {1, 1}, l = {57, Elf64.Ehdr.E_SHENTSIZE}, m = "awaitLoad", n = {"this", "font"}, s = {"L$0", "L$1"})
+    /* renamed from: androidx.compose.ui.text.font.AndroidFontLoader$awaitLoad$1, reason: invalid class name */
+    static final class AnonymousClass1 extends ContinuationImpl {
+        Object L$0;
+        Object L$1;
+        int label;
+        /* synthetic */ Object result;
+
+        AnonymousClass1(Continuation<? super AnonymousClass1> continuation) {
+            super(continuation);
+        }
+
+        @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+        public final Object invokeSuspend(Object obj) {
+            this.result = obj;
+            this.label |= Integer.MIN_VALUE;
+            return AndroidFontLoader.this.awaitLoad(null, this);
+        }
+    }
+
+    public AndroidFontLoader(Context context) {
+        this.context = context.getApplicationContext();
+    }
+
+    @Override // androidx.compose.ui.text.font.PlatformFontLoader
+    public android.graphics.Typeface loadBlocking(Font font) throws Resources.NotFoundException {
+        Object objM9118constructorimpl;
+        android.graphics.Typeface typefaceLoad;
+        if (font instanceof AndroidFont) {
+            AndroidFont androidFont = (AndroidFont) font;
+            return androidFont.getTypefaceLoader().loadBlocking(this.context, androidFont);
+        }
+        if (!(font instanceof ResourceFont)) {
+            return null;
+        }
+        int loadingStrategy = font.getLoadingStrategy();
+        if (FontLoadingStrategy.m5699equalsimpl0(loadingStrategy, FontLoadingStrategy.INSTANCE.m5704getBlockingPKNRLFQ())) {
+            typefaceLoad = AndroidFontLoader_androidKt.load((ResourceFont) font, this.context);
+        } else if (FontLoadingStrategy.m5699equalsimpl0(loadingStrategy, FontLoadingStrategy.INSTANCE.m5705getOptionalLocalPKNRLFQ())) {
+            try {
+                Result.Companion companion = Result.INSTANCE;
+                AndroidFontLoader androidFontLoader = this;
+                objM9118constructorimpl = Result.m9118constructorimpl(AndroidFontLoader_androidKt.load((ResourceFont) font, this.context));
+            } catch (Throwable th) {
+                Result.Companion companion2 = Result.INSTANCE;
+                objM9118constructorimpl = Result.m9118constructorimpl(ResultKt.createFailure(th));
+            }
+            typefaceLoad = (android.graphics.Typeface) (Result.m9124isFailureimpl(objM9118constructorimpl) ? null : objM9118constructorimpl);
+        } else {
+            if (FontLoadingStrategy.m5699equalsimpl0(loadingStrategy, FontLoadingStrategy.INSTANCE.m5703getAsyncPKNRLFQ())) {
+                throw new UnsupportedOperationException("Unsupported Async font load path");
+            }
+            throw new IllegalArgumentException("Unknown loading type " + ((Object) FontLoadingStrategy.m5701toStringimpl(font.getLoadingStrategy())));
+        }
+        return PlatformTypefaces_androidKt.setFontVariationSettings(typefaceLoad, ((ResourceFont) font).getVariationSettings(), this.context);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:7:0x0014  */
+    @Override // androidx.compose.ui.text.font.PlatformFontLoader
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public Object awaitLoad(Font font, Continuation<? super android.graphics.Typeface> continuation) throws Resources.NotFoundException {
+        AnonymousClass1 anonymousClass1;
+        AndroidFontLoader androidFontLoader;
+        if (continuation instanceof AnonymousClass1) {
+            anonymousClass1 = (AnonymousClass1) continuation;
+            if ((anonymousClass1.label & Integer.MIN_VALUE) != 0) {
+                anonymousClass1.label -= Integer.MIN_VALUE;
+            } else {
+                anonymousClass1 = new AnonymousClass1(continuation);
+            }
+        }
+        Object objLoadAsync = anonymousClass1.result;
+        Object coroutine_suspended = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int i = anonymousClass1.label;
+        if (i == 0) {
+            ResultKt.throwOnFailure(objLoadAsync);
+            if (font instanceof AndroidFont) {
+                AndroidFont androidFont = (AndroidFont) font;
+                AndroidFont.TypefaceLoader typefaceLoader = androidFont.getTypefaceLoader();
+                Context context = this.context;
+                anonymousClass1.label = 1;
+                Object objAwaitLoad = typefaceLoader.awaitLoad(context, androidFont, anonymousClass1);
+                if (objAwaitLoad != coroutine_suspended) {
+                    return objAwaitLoad;
+                }
+            } else if (font instanceof ResourceFont) {
+                Context context2 = this.context;
+                anonymousClass1.L$0 = this;
+                anonymousClass1.L$1 = font;
+                anonymousClass1.label = 2;
+                objLoadAsync = AndroidFontLoader_androidKt.loadAsync((ResourceFont) font, context2, anonymousClass1);
+                if (objLoadAsync != coroutine_suspended) {
+                    androidFontLoader = this;
+                }
+            } else {
+                throw new IllegalArgumentException("Unknown font type: " + font);
+            }
+            return coroutine_suspended;
+        }
+        if (i == 1) {
+            ResultKt.throwOnFailure(objLoadAsync);
+            return objLoadAsync;
+        }
+        if (i != 2) {
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        font = (Font) anonymousClass1.L$1;
+        androidFontLoader = (AndroidFontLoader) anonymousClass1.L$0;
+        ResultKt.throwOnFailure(objLoadAsync);
+        return PlatformTypefaces_androidKt.setFontVariationSettings((android.graphics.Typeface) objLoadAsync, ((ResourceFont) font).getVariationSettings(), androidFontLoader.context);
+    }
+
+    @Override // androidx.compose.ui.text.font.PlatformFontLoader
+    public Object getCacheKey() {
+        return this.cacheKey;
+    }
+}

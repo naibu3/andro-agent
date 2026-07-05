@@ -1,0 +1,197 @@
+{
+  "case_id": "practica_auditoria",
+  "started_at": "2026-04-06 19:23:37.669778",
+  "finished_at": "2026-04-06 19:25:02.522496",
+  "duration_seconds": 84.85272484600137,
+  "steps": [
+    {
+      "name": "validate",
+      "started_at": "2026-04-06 19:23:37.669793",
+      "finished_at": "2026-04-06 19:23:37.674204",
+      "duration_seconds": 0.0043950700055575,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "extract_manifest",
+      "started_at": "2026-04-06 19:23:37.674256",
+      "finished_at": "2026-04-06 19:23:44.986080",
+      "duration_seconds": 7.31176316300116,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_manifest_facts",
+      "started_at": "2026-04-06 19:23:44.986095",
+      "finished_at": "2026-04-06 19:23:44.987401",
+      "duration_seconds": 0.0012872709921794012,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_manifest_rules",
+      "started_at": "2026-04-06 19:23:44.987411",
+      "finished_at": "2026-04-06 19:23:44.988260",
+      "duration_seconds": 0.000835674989502877,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "jadx_decompile",
+      "started_at": "2026-04-06 19:23:44.988269",
+      "finished_at": "2026-04-06 19:24:08.991193",
+      "duration_seconds": 24.00289818899182,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_search",
+      "started_at": "2026-04-06 19:24:08.991215",
+      "finished_at": "2026-04-06 19:24:11.960327",
+      "duration_seconds": 2.969085714998073,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_code_facts",
+      "started_at": "2026-04-06 19:24:11.960337",
+      "finished_at": "2026-04-06 19:24:11.961550",
+      "duration_seconds": 0.0011990450002485886,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_code_rules",
+      "started_at": "2026-04-06 19:24:11.961556",
+      "finished_at": "2026-04-06 19:24:11.963201",
+      "duration_seconds": 0.0016324220050591975,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_static_bundle",
+      "started_at": "2026-04-06 19:24:11.963212",
+      "finished_at": "2026-04-06 19:24:11.965465",
+      "duration_seconds": 0.002240008005173877,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "manifest_risk_agent",
+      "started_at": "2026-04-06 19:24:11.965475",
+      "finished_at": "2026-04-06 19:24:44.870505",
+      "duration_seconds": 32.90501047699945,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "started_at": "2026-04-06 19:24:44.870512",
+      "finished_at": "2026-04-06 19:24:48.811120",
+      "duration_seconds": 3.940587561999564,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "started_at": "2026-04-06 19:24:48.811125",
+      "finished_at": "2026-04-06 19:24:55.805803",
+      "duration_seconds": 6.994660632000887,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "started_at": "2026-04-06 19:24:55.805808",
+      "finished_at": "2026-04-06 19:25:02.522463",
+      "duration_seconds": 6.7166383680014405,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "agents": [
+    {
+      "name": "manifest_risk_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-06 19:24:11.972676",
+      "finished_at": "2026-04-06 19:24:44.870459",
+      "duration_seconds": 32.897714586011716,
+      "success": true,
+      "input_chars": 51241,
+      "output_chars": 1738,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-06 19:24:44.871898",
+      "finished_at": "2026-04-06 19:24:48.811101",
+      "duration_seconds": 3.9391782650054665,
+      "success": true,
+      "input_chars": 56481,
+      "output_chars": 2118,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-06 19:24:48.812152",
+      "finished_at": "2026-04-06 19:24:55.805779",
+      "duration_seconds": 6.993602046990418,
+      "success": true,
+      "input_chars": 4553,
+      "output_chars": 2494,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-06 19:24:55.806079",
+      "finished_at": "2026-04-06 19:25:02.522432",
+      "duration_seconds": 6.716287112998543,
+      "success": true,
+      "input_chars": 2886,
+      "output_chars": 3069,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "summary": {
+    "status": "completed",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 7,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true
+  }
+}

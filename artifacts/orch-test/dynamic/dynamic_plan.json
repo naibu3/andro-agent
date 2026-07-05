@@ -1,0 +1,557 @@
+{
+  "case_id": "orch-test",
+  "package_name": "owasp.sat.agoat",
+  "device_profile": "baseline",
+  "tests": [
+    {
+      "test_id": "dyn-001",
+      "title": "Launch main app entrypoint",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "app_launch",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_app",
+          "parameters": {}
+        }
+      ],
+      "expected_signals": [
+        "app_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-002",
+      "title": "Launch exported activity owasp.sat.agoat/owasp.sat.agoat.SplashActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "owasp.sat.agoat/owasp.sat.agoat.SplashActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-003",
+      "title": "Launch exported activity owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-004",
+      "title": "Open deep link androgoat://vulnapp",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "androgoat://vulnapp"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-005",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-006",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-007",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-008",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-009",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-010",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-011",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-012",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-013",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-014",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-015",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-016",
+      "title": "Query content provider content://owasp.sat.agoat.provider.userpinsprovider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.provider.userpinsprovider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-017",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-018",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-019",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-020",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-021",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-022",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-023",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-024",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-025",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-026",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-027",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-028",
+      "title": "Query content provider content://owasp.sat.agoat.androidx-startup/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://owasp.sat.agoat.androidx-startup/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    }
+  ]
+}

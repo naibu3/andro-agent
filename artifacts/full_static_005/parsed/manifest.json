@@ -1,0 +1,124 @@
+{
+  "package_name": "id.blackbear.vulnapk",
+  "version_code": null,
+  "version_name": null,
+  "min_sdk": null,
+  "target_sdk": null,
+  "compile_sdk_version": "33",
+  "permissions": [
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.INTERNET",
+    "id.blackbear.vulnapk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "application": {
+    "debuggable": true,
+    "allow_backup": true,
+    "uses_cleartext_traffic": true,
+    "network_security_config": null,
+    "request_legacy_external_storage": null,
+    "test_only": null,
+    "full_backup_content": "@xml/backup_rules"
+  },
+  "activities": [
+    {
+      "name": "id.blackbear.vulnapk.MainActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.MAIN"
+          ],
+          "categories": [
+            "android.intent.category.LAUNCHER"
+          ],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "id.blackbear.vulnapk.InsecureStorageActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "id.blackbear.vulnapk.InsecureCryptoActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "id.blackbear.vulnapk.VulnWeb",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "id.blackbear.vulnapk.SettingsActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "id.blackbear.vulnapk.RootActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "activity_aliases": [],
+  "services": [],
+  "receivers": [],
+  "providers": [
+    {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "id.blackbear.vulnapk.androidx-startup",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ]
+}

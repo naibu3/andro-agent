@@ -1,0 +1,209 @@
+[
+  {
+    "rule_id": "MANIFEST_DEBUGGABLE_ENABLED",
+    "title": "Application is debuggable",
+    "description": "The application has android:debuggable enabled, which may ease runtime analysis and abuse in non-production contexts.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.debuggable",
+        "key": "debuggable",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_ALLOW_BACKUP_ENABLED",
+    "title": "Application allows backups",
+    "description": "The application has android:allowBackup enabled, which may expose app data to backup/restore abuse depending on platform and deployment context.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.allow_backup",
+        "key": "allow_backup",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_CLEARTEXT_TRAFFIC_ENABLED",
+    "title": "Application allows cleartext traffic",
+    "description": "The application has android:usesCleartextTraffic enabled, which may allow unencrypted network communications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.uses_cleartext_traffic",
+        "key": "uses_cleartext_traffic",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'id.blackbear.vulnapk.MainActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "id.blackbear.vulnapk.MainActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "id.blackbear.vulnapk.MainActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'id.blackbear.vulnapk.MainActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "id.blackbear.vulnapk.MainActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "id.blackbear.vulnapk.MainActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'id.blackbear.vulnapk.InsecureCryptoActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "id.blackbear.vulnapk.InsecureCryptoActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "id.blackbear.vulnapk.InsecureCryptoActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'id.blackbear.vulnapk.InsecureCryptoActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "id.blackbear.vulnapk.InsecureCryptoActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "id.blackbear.vulnapk.InsecureCryptoActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'id.blackbear.vulnapk.VulnWeb' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "id.blackbear.vulnapk.VulnWeb",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "id.blackbear.vulnapk.VulnWeb"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'id.blackbear.vulnapk.VulnWeb' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "id.blackbear.vulnapk.VulnWeb",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "id.blackbear.vulnapk.VulnWeb"
+    }
+  }
+]

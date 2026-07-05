@@ -1,0 +1,18 @@
+{
+  "case_id": "pipeline_001",
+  "apk_path": "samples/AndroGoat.apk",
+  "manifest_json_path": "artifacts/pipeline_001/parsed/manifest.json",
+  "facts_path": "artifacts/pipeline_001/facts/manifest_facts.json",
+  "findings_path": "artifacts/pipeline_001/findings/manifest_findings.json",
+  "status": "completed",
+  "current_step": "apply_manifest_rules",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

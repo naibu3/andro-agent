@@ -1,0 +1,1548 @@
+{
+  "case_id": "full_static_007d",
+  "apk_path": "samples/celestial_scribe.apk",
+  "manifest": {
+    "package_name": "htb.d3vnu11.securenotes",
+    "version_code": null,
+    "version_name": null,
+    "min_sdk": null,
+    "target_sdk": null,
+    "compile_sdk_version": "35",
+    "permissions": [
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.INTERNET",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "htb.d3vnu11.securenotes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "application": {
+      "debuggable": null,
+      "allow_backup": true,
+      "uses_cleartext_traffic": true,
+      "network_security_config": null,
+      "request_legacy_external_storage": true,
+      "test_only": null,
+      "full_backup_content": "@xml/backup_rules"
+    },
+    "activities": [
+      {
+        "name": "htb.d3vnu11.securenotes.MainActivity",
+        "exported": true,
+        "exported_source": "explicit",
+        "permission": null,
+        "enabled": null,
+        "intent_filters": [
+          {
+            "actions": [
+              "android.intent.action.MAIN"
+            ],
+            "categories": [
+              "android.intent.category.LAUNCHER"
+            ],
+            "data": []
+          }
+        ],
+        "authorities": null,
+        "read_permission": null,
+        "write_permission": null,
+        "grant_uri_permissions": null
+      },
+      {
+        "name": "htb.d3vnu11.securenotes.NoteActivity",
+        "exported": false,
+        "exported_source": "inferred_default_false",
+        "permission": null,
+        "enabled": null,
+        "intent_filters": [],
+        "authorities": null,
+        "read_permission": null,
+        "write_permission": null,
+        "grant_uri_permissions": null
+      },
+      {
+        "name": "htb.d3vnu11.securenotes.EditNoteActivity",
+        "exported": false,
+        "exported_source": "inferred_default_false",
+        "permission": null,
+        "enabled": null,
+        "intent_filters": [],
+        "authorities": null,
+        "read_permission": null,
+        "write_permission": null,
+        "grant_uri_permissions": null
+      },
+      {
+        "name": "htb.d3vnu11.securenotes.LoginActivity",
+        "exported": false,
+        "exported_source": "inferred_default_false",
+        "permission": null,
+        "enabled": null,
+        "intent_filters": [],
+        "authorities": null,
+        "read_permission": null,
+        "write_permission": null,
+        "grant_uri_permissions": null
+      }
+    ],
+    "activity_aliases": [],
+    "services": [],
+    "receivers": [
+      {
+        "name": "androidx.profileinstaller.ProfileInstallReceiver",
+        "exported": true,
+        "exported_source": "explicit",
+        "permission": "android.permission.DUMP",
+        "enabled": true,
+        "intent_filters": [
+          {
+            "actions": [
+              "androidx.profileinstaller.action.INSTALL_PROFILE"
+            ],
+            "categories": [],
+            "data": []
+          },
+          {
+            "actions": [
+              "androidx.profileinstaller.action.SKIP_FILE"
+            ],
+            "categories": [],
+            "data": []
+          },
+          {
+            "actions": [
+              "androidx.profileinstaller.action.SAVE_PROFILE"
+            ],
+            "categories": [],
+            "data": []
+          },
+          {
+            "actions": [
+              "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+            ],
+            "categories": [],
+            "data": []
+          }
+        ],
+        "authorities": null,
+        "read_permission": null,
+        "write_permission": null,
+        "grant_uri_permissions": null
+      }
+    ],
+    "providers": [
+      {
+        "name": "androidx.startup.InitializationProvider",
+        "exported": false,
+        "exported_source": "explicit",
+        "permission": null,
+        "enabled": null,
+        "intent_filters": [],
+        "authorities": "htb.d3vnu11.securenotes.androidx-startup",
+        "read_permission": null,
+        "write_permission": null,
+        "grant_uri_permissions": null
+      }
+    ]
+  },
+  "manifest_facts": [
+    {
+      "type": "manifest.package",
+      "key": "package_name",
+      "value": "htb.d3vnu11.securenotes",
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.compile_sdk_version",
+      "key": "compile_sdk_version",
+      "value": "35",
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.application.allow_backup",
+      "key": "allow_backup",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.application.uses_cleartext_traffic",
+      "key": "uses_cleartext_traffic",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.application.request_legacy_external_storage",
+      "key": "request_legacy_external_storage",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.application.full_backup_content",
+      "key": "full_backup_content",
+      "value": "@xml/backup_rules",
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.permission",
+      "key": "android.permission.ACCESS_NETWORK_STATE",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.permission",
+      "key": "android.permission.INTERNET",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.permission",
+      "key": "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.permission",
+      "key": "htb.d3vnu11.securenotes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    },
+    {
+      "type": "manifest.component.activity.present",
+      "key": "htb.d3vnu11.securenotes.MainActivity",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity"
+      }
+    },
+    {
+      "type": "manifest.component.activity.exported",
+      "key": "htb.d3vnu11.securenotes.MainActivity",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity",
+        "exported_source": "explicit"
+      }
+    },
+    {
+      "type": "manifest.component.activity.intent_filters_count",
+      "key": "htb.d3vnu11.securenotes.MainActivity",
+      "value": 1,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity"
+      }
+    },
+    {
+      "type": "manifest.component.activity.present",
+      "key": "htb.d3vnu11.securenotes.NoteActivity",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity"
+      }
+    },
+    {
+      "type": "manifest.component.activity.exported",
+      "key": "htb.d3vnu11.securenotes.NoteActivity",
+      "value": false,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity",
+        "exported_source": "inferred_default_false"
+      }
+    },
+    {
+      "type": "manifest.component.activity.present",
+      "key": "htb.d3vnu11.securenotes.EditNoteActivity",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity"
+      }
+    },
+    {
+      "type": "manifest.component.activity.exported",
+      "key": "htb.d3vnu11.securenotes.EditNoteActivity",
+      "value": false,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity",
+        "exported_source": "inferred_default_false"
+      }
+    },
+    {
+      "type": "manifest.component.activity.present",
+      "key": "htb.d3vnu11.securenotes.LoginActivity",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity"
+      }
+    },
+    {
+      "type": "manifest.component.activity.exported",
+      "key": "htb.d3vnu11.securenotes.LoginActivity",
+      "value": false,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "activity",
+        "exported_source": "inferred_default_false"
+      }
+    },
+    {
+      "type": "manifest.component.receiver.present",
+      "key": "androidx.profileinstaller.ProfileInstallReceiver",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "receiver"
+      }
+    },
+    {
+      "type": "manifest.component.receiver.exported",
+      "key": "androidx.profileinstaller.ProfileInstallReceiver",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "receiver",
+        "exported_source": "explicit"
+      }
+    },
+    {
+      "type": "manifest.component.receiver.permission",
+      "key": "androidx.profileinstaller.ProfileInstallReceiver",
+      "value": "android.permission.DUMP",
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "receiver"
+      }
+    },
+    {
+      "type": "manifest.component.receiver.enabled",
+      "key": "androidx.profileinstaller.ProfileInstallReceiver",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "receiver"
+      }
+    },
+    {
+      "type": "manifest.component.receiver.intent_filters_count",
+      "key": "androidx.profileinstaller.ProfileInstallReceiver",
+      "value": 4,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "receiver"
+      }
+    },
+    {
+      "type": "manifest.component.provider.present",
+      "key": "androidx.startup.InitializationProvider",
+      "value": true,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "provider"
+      }
+    },
+    {
+      "type": "manifest.component.provider.exported",
+      "key": "androidx.startup.InitializationProvider",
+      "value": false,
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {
+        "component_type": "provider",
+        "exported_source": "explicit"
+      }
+    },
+    {
+      "type": "manifest.component.provider.authorities",
+      "key": "androidx.startup.InitializationProvider",
+      "value": "htb.d3vnu11.securenotes.androidx-startup",
+      "source": "manifest",
+      "confidence": "high",
+      "metadata": {}
+    }
+  ],
+  "manifest_findings": [
+    {
+      "rule_id": "MANIFEST_ALLOW_BACKUP_ENABLED",
+      "title": "Application allows backups",
+      "description": "The application has android:allowBackup enabled, which may expose app data to backup/restore abuse depending on platform and deployment context.",
+      "severity": "medium",
+      "confidence": "high",
+      "source": "rule_engine",
+      "evidence": [
+        {
+          "type": "manifest.application.allow_backup",
+          "key": "allow_backup",
+          "value": true,
+          "source": "manifest",
+          "confidence": "high",
+          "metadata": {}
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "MANIFEST_CLEARTEXT_TRAFFIC_ENABLED",
+      "title": "Application allows cleartext traffic",
+      "description": "The application has android:usesCleartextTraffic enabled, which may allow unencrypted network communications.",
+      "severity": "medium",
+      "confidence": "high",
+      "source": "rule_engine",
+      "evidence": [
+        {
+          "type": "manifest.application.uses_cleartext_traffic",
+          "key": "uses_cleartext_traffic",
+          "value": true,
+          "source": "manifest",
+          "confidence": "high",
+          "metadata": {}
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+      "title": "Exported activity detected",
+      "description": "The activity 'htb.d3vnu11.securenotes.MainActivity' is exported and may be reachable by external applications.",
+      "severity": "medium",
+      "confidence": "high",
+      "source": "rule_engine",
+      "evidence": [
+        {
+          "type": "manifest.component.activity.exported",
+          "key": "htb.d3vnu11.securenotes.MainActivity",
+          "value": true,
+          "source": "manifest",
+          "confidence": "high",
+          "metadata": {
+            "component_type": "activity",
+            "exported_source": "explicit"
+          }
+        }
+      ],
+      "metadata": {
+        "component_type": "activity",
+        "component_name": "htb.d3vnu11.securenotes.MainActivity"
+      }
+    },
+    {
+      "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+      "title": "Exported activity without permission",
+      "description": "The exported activity 'htb.d3vnu11.securenotes.MainActivity' does not declare a protecting permission.",
+      "severity": "high",
+      "confidence": "high",
+      "source": "rule_engine",
+      "evidence": [
+        {
+          "type": "manifest.component.activity.exported",
+          "key": "htb.d3vnu11.securenotes.MainActivity",
+          "value": true,
+          "source": "manifest",
+          "confidence": "high",
+          "metadata": {
+            "component_type": "activity",
+            "exported_source": "explicit"
+          }
+        }
+      ],
+      "metadata": {
+        "component_type": "activity",
+        "component_name": "htb.d3vnu11.securenotes.MainActivity"
+      }
+    },
+    {
+      "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+      "title": "Exported receiver detected",
+      "description": "The receiver 'androidx.profileinstaller.ProfileInstallReceiver' is exported and may be reachable by external applications.",
+      "severity": "medium",
+      "confidence": "high",
+      "source": "rule_engine",
+      "evidence": [
+        {
+          "type": "manifest.component.receiver.exported",
+          "key": "androidx.profileinstaller.ProfileInstallReceiver",
+          "value": true,
+          "source": "manifest",
+          "confidence": "high",
+          "metadata": {
+            "component_type": "receiver",
+            "exported_source": "explicit"
+          }
+        }
+      ],
+      "metadata": {
+        "component_type": "receiver",
+        "component_name": "androidx.profileinstaller.ProfileInstallReceiver"
+      }
+    }
+  ],
+  "code_search_results": [
+    {
+      "pattern_name": "file_output_stream",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+      "line_number": 158,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+      "line_number": 168,
+      "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "line_number": 70,
+      "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "line_number": 111,
+      "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "line_number": 123,
+      "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+    },
+    {
+      "pattern_name": "file_output_stream",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/T/f.java",
+      "line_number": 159,
+      "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+    },
+    {
+      "pattern_name": "file_output_stream",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/T/f.java",
+      "line_number": 1027,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+    },
+    {
+      "pattern_name": "file_output_stream",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/T/j.java",
+      "line_number": 51,
+      "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+    },
+    {
+      "pattern_name": "file_output_stream",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+      "line_number": 273,
+      "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+    },
+    {
+      "pattern_name": "base64_decode",
+      "category": "encoding",
+      "file_path": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+      "line_number": 144,
+      "line_text": "arrayList2.add(Base64.decode(str, 0));"
+    },
+    {
+      "pattern_name": "base64_decode",
+      "category": "encoding",
+      "file_path": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+      "line_number": 153,
+      "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "line_number": 54,
+      "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "line_number": 113,
+      "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "line_number": 143,
+      "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+      "line_number": 54,
+      "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+    },
+    {
+      "pattern_name": "sharedprefs_write",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+      "line_number": 89,
+      "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+    },
+    {
+      "pattern_name": "file_output_stream",
+      "category": "storage",
+      "file_path": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+      "line_number": 191,
+      "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+    },
+    {
+      "pattern_name": "cipher_instance",
+      "category": "crypto",
+      "file_path": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+      "line_number": 69,
+      "line_text": "cipher = Cipher.getInstance(strConcat);"
+    },
+    {
+      "pattern_name": "cipher_instance",
+      "category": "crypto",
+      "file_path": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+      "line_number": 87,
+      "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+    }
+  ],
+  "code_facts": [
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 158,
+        "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+      "value": "file_output_stream",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 158,
+        "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 168,
+        "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 168,
+        "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 70,
+        "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 70,
+        "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 111,
+        "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 111,
+        "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 123,
+        "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 123,
+        "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+      }
+    },
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 159,
+        "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+      "value": "file_output_stream",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 159,
+        "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+      }
+    },
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 1027,
+        "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+      "value": "file_output_stream",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 1027,
+        "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+      }
+    },
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/full_static_007d/jadx/sources/T/j.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 51,
+        "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/T/j.java",
+      "value": "file_output_stream",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 51,
+        "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+      }
+    },
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 273,
+        "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+      "value": "file_output_stream",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 273,
+        "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+      }
+    },
+    {
+      "type": "code.pattern.base64_decode",
+      "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "encoding",
+        "line_number": 144,
+        "line_text": "arrayList2.add(Base64.decode(str, 0));"
+      }
+    },
+    {
+      "type": "code.category.encoding",
+      "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+      "value": "base64_decode",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 144,
+        "line_text": "arrayList2.add(Base64.decode(str, 0));"
+      }
+    },
+    {
+      "type": "code.pattern.base64_decode",
+      "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "encoding",
+        "line_number": 153,
+        "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+      }
+    },
+    {
+      "type": "code.category.encoding",
+      "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+      "value": "base64_decode",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 153,
+        "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 54,
+        "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 54,
+        "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 113,
+        "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 113,
+        "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 143,
+        "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 143,
+        "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 54,
+        "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 54,
+        "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+      }
+    },
+    {
+      "type": "code.pattern.sharedprefs_write",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 89,
+        "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+      "value": "sharedprefs_write",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 89,
+        "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+      }
+    },
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 191,
+        "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+      }
+    },
+    {
+      "type": "code.category.storage",
+      "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+      "value": "file_output_stream",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 191,
+        "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+      }
+    },
+    {
+      "type": "code.pattern.cipher_instance",
+      "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "crypto",
+        "line_number": 69,
+        "line_text": "cipher = Cipher.getInstance(strConcat);"
+      }
+    },
+    {
+      "type": "code.category.crypto",
+      "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+      "value": "cipher_instance",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 69,
+        "line_text": "cipher = Cipher.getInstance(strConcat);"
+      }
+    },
+    {
+      "type": "code.pattern.cipher_instance",
+      "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "crypto",
+        "line_number": 87,
+        "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+      }
+    },
+    {
+      "type": "code.category.crypto",
+      "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+      "value": "cipher_instance",
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "line_number": 87,
+        "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+      }
+    }
+  ],
+  "code_findings": [
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/u.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 168,
+            "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/i.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 70,
+            "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/i.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 111,
+            "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/i.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 123,
+            "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 54,
+            "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 113,
+            "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 143,
+            "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 54,
+            "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "title": "SharedPreferences usage detected",
+      "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java. Review storage of sensitive data.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.sharedprefs_write",
+          "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 89,
+            "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_FILE_OUTPUT_STREAM",
+      "title": "FileOutputStream usage detected",
+      "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/Z/u.java. Review file output location and sensitivity.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.file_output_stream",
+          "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 158,
+            "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_FILE_OUTPUT_STREAM",
+      "title": "FileOutputStream usage detected",
+      "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/T/f.java. Review file output location and sensitivity.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.file_output_stream",
+          "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 159,
+            "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_FILE_OUTPUT_STREAM",
+      "title": "FileOutputStream usage detected",
+      "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/T/f.java. Review file output location and sensitivity.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.file_output_stream",
+          "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 1027,
+            "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_FILE_OUTPUT_STREAM",
+      "title": "FileOutputStream usage detected",
+      "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/T/j.java. Review file output location and sensitivity.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.file_output_stream",
+          "key": "artifacts/full_static_007d/jadx/sources/T/j.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 51,
+            "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_FILE_OUTPUT_STREAM",
+      "title": "FileOutputStream usage detected",
+      "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/C0/f.java. Review file output location and sensitivity.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.file_output_stream",
+          "key": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 273,
+            "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_FILE_OUTPUT_STREAM",
+      "title": "FileOutputStream usage detected",
+      "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java. Review file output location and sensitivity.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.file_output_stream",
+          "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "storage",
+            "line_number": 191,
+            "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_BASE64_DECODE",
+      "title": "Base64 decode usage detected",
+      "description": "Base64 decoding found in artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java. Review for encoded secrets, payloads, or obfuscation.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.base64_decode",
+          "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "encoding",
+            "line_number": 144,
+            "line_text": "arrayList2.add(Base64.decode(str, 0));"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_BASE64_DECODE",
+      "title": "Base64 decode usage detected",
+      "description": "Base64 decoding found in artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java. Review for encoded secrets, payloads, or obfuscation.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.base64_decode",
+          "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "encoding",
+            "line_number": 153,
+            "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_CIPHER_USAGE",
+      "title": "Cryptographic API usage detected",
+      "description": "Cipher.getInstance found in artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java. Review algorithm choice, mode, and key handling.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.cipher_instance",
+          "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "crypto",
+            "line_number": 69,
+            "line_text": "cipher = Cipher.getInstance(strConcat);"
+          }
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "rule_id": "CODE_CIPHER_USAGE",
+      "title": "Cryptographic API usage detected",
+      "description": "Cipher.getInstance found in artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java. Review algorithm choice, mode, and key handling.",
+      "severity": "low",
+      "confidence": "high",
+      "source": "code_rule_engine",
+      "evidence": [
+        {
+          "type": "code.pattern.cipher_instance",
+          "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+          "value": true,
+          "source": "code_search",
+          "confidence": "high",
+          "metadata": {
+            "category": "crypto",
+            "line_number": 87,
+            "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+          }
+        }
+      ],
+      "metadata": {}
+    }
+  ],
+  "correlated_findings": [],
+  "summary": {
+    "exported_components": 2,
+    "dangerous_permissions": 5,
+    "code_matches": 19,
+    "manifest_findings": 5,
+    "code_findings": 19,
+    "correlated_findings": 0
+  },
+  "metadata": {
+    "tools": [
+      "apktool",
+      "jadx",
+      "code_search"
+    ],
+    "generated_at": "2026-04-05T13:35:40.788608",
+    "version": "1.0"
+  }
+}

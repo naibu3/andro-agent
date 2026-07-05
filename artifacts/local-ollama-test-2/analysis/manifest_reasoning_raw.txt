@@ -1,0 +1,68 @@
+{
+  "app_id": "com.example.app",
+  "version_code": 20,
+  "version_name": "1.20",
+  "package_name": "com.example.app",
+  "min_sdk_version": 21,
+  "target_sdk_version": 30,
+  "compile_sdk_version": 30,
+  "app_permissions": [
+    {
+      "name": "INTERNET",
+      "description": "Allows the app to access the internet"
+    },
+    {
+      "name": "ACCESS_FINE_LOCATION",
+      "description": "Allows the app to access precise location data"
+    },
+    {
+      "name": "ACCESS_COARSE_LOCATION",
+      "description": "Allows the app to access approximate location data"
+    },
+    {
+      "name": "CAMERA",
+      "description": "Allows the app to use the camera"
+    },
+    {
+      "name": "WRITE_EXTERNAL_STORAGE",
+      "description": "Allows the app to write to external storage"
+    },
+    {
+      "name": "READ_EXTERNAL_STORAGE",
+      "description": "Allows the app to read from external storage"
+    },
+    {
+      "name": "RECEIVE_BOOT_COMPLETED",
+      "description": "Allows the app to receive boot completed broadcasts"
+    }
+  ],
+  "app_features": [
+    {
+      "feature_name": "android.hardware.camera",
+      "description": "Camera hardware support"
+    },
+    {
+      "feature_name": "android.hardware.location.gps",
+      "description": "GPS location support"
+    },
+    {
+      "feature_name": "android.hardware.location.network",
+      "description": "Network location support"
+    }
+  ],
+  "app_dependencies": [
+    {
+      "dependency_name": "com.google.android.material:material:1.4.0",
+      "version": "1.4.0"
+    },
+    {
+      "dependency_name": "androidx.appcompat:appcompat:1.3.1",
+      "version": "1.3.1"
+    }
+  ],
+  "app_size": 50,
+  "app_type": "mobile",
+  "app_category": "utility",
+  "app_rating": 4.5,
+  "app_reviews_count": 1000
+}

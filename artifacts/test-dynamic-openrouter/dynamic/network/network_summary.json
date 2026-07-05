@@ -1,0 +1,18 @@
+{
+  "hosts": [
+    "connectivitycheck.gstatic.com",
+    "play.googleapis.com",
+    "www.google.com"
+  ],
+  "urls": [
+    "http://connectivitycheck.gstatic.com/generate_204",
+    "http://play.googleapis.com/generate_204",
+    "http://www.google.com/gen_204"
+  ],
+  "http_cleartext_urls": [
+    "http://connectivitycheck.gstatic.com/generate_204",
+    "http://play.googleapis.com/generate_204",
+    "http://www.google.com/gen_204"
+  ],
+  "request_count": 22
+}

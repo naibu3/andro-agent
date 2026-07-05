@@ -1,0 +1,65 @@
+package com.stripe.android.financialconnections.features.institutionpicker;
+
+import androidx.compose.foundation.lazy.LazyListState;
+import androidx.compose.runtime.MutableState;
+import com.stripe.android.financialconnections.model.FinancialConnectionsInstitution;
+import com.stripe.android.financialconnections.model.InstitutionResponse;
+import com.stripe.android.financialconnections.presentation.Async;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+/* compiled from: InstitutionPickerScreen.kt */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.stripe.android.financialconnections.features.institutionpicker.InstitutionPickerScreenKt$LoadedContent$2$1", f = "InstitutionPickerScreen.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+/* loaded from: classes5.dex */
+final class InstitutionPickerScreenKt$LoadedContent$2$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ Async<InstitutionResponse> $institutions;
+    final /* synthetic */ LazyListState $listState;
+    final /* synthetic */ Function0<Unit> $onScrollChanged;
+    final /* synthetic */ MutableState<Boolean> $shouldEmitScrollEvent$delegate;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    InstitutionPickerScreenKt$LoadedContent$2$1(Async<InstitutionResponse> async, LazyListState lazyListState, Function0<Unit> function0, MutableState<Boolean> mutableState, Continuation<? super InstitutionPickerScreenKt$LoadedContent$2$1> continuation) {
+        super(2, continuation);
+        this.$institutions = async;
+        this.$listState = lazyListState;
+        this.$onScrollChanged = function0;
+        this.$shouldEmitScrollEvent$delegate = mutableState;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+        return new InstitutionPickerScreenKt$LoadedContent$2$1(this.$institutions, this.$listState, this.$onScrollChanged, this.$shouldEmitScrollEvent$delegate, continuation);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
+        return ((InstitutionPickerScreenKt$LoadedContent$2$1) create(coroutineScope, continuation)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        List<FinancialConnectionsInstitution> data;
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) {
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        ResultKt.throwOnFailure(obj);
+        InstitutionResponse institutionResponseInvoke = this.$institutions.invoke();
+        if (institutionResponseInvoke != null && (data = institutionResponseInvoke.getData()) != null && (!data.isEmpty()) && !this.$listState.isScrollInProgress() && InstitutionPickerScreenKt.LoadedContent$lambda$14(this.$shouldEmitScrollEvent$delegate)) {
+            this.$onScrollChanged.invoke();
+            InstitutionPickerScreenKt.LoadedContent$lambda$15(this.$shouldEmitScrollEvent$delegate, false);
+        }
+        return Unit.INSTANCE;
+    }
+}

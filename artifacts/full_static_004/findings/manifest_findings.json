@@ -1,0 +1,315 @@
+[
+  {
+    "rule_id": "MANIFEST_DEBUGGABLE_ENABLED",
+    "title": "Application is debuggable",
+    "description": "The application has android:debuggable enabled, which may ease runtime analysis and abuse in non-production contexts.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.debuggable",
+        "key": "debuggable",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_ALLOW_BACKUP_ENABLED",
+    "title": "Application allows backups",
+    "description": "The application has android:allowBackup enabled, which may expose app data to backup/restore abuse depending on platform and deployment context.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.application.allow_backup",
+        "key": "allow_backup",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'owasp.sat.agoat.SplashActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.SplashActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "owasp.sat.agoat.SplashActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'owasp.sat.agoat.SplashActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.SplashActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "owasp.sat.agoat.SplashActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY",
+    "title": "Exported activity detected",
+    "description": "The activity 'owasp.sat.agoat.AccessControl1ViewActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "owasp.sat.agoat.AccessControl1ViewActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+    "title": "Exported activity without permission",
+    "description": "The exported activity 'owasp.sat.agoat.AccessControl1ViewActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "activity",
+      "component_name": "owasp.sat.agoat.AccessControl1ViewActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_SERVICE",
+    "title": "Exported service detected",
+    "description": "The service 'owasp.sat.agoat.DownloadInvoiceService' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.service.exported",
+        "key": "owasp.sat.agoat.DownloadInvoiceService",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "service",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "service",
+      "component_name": "owasp.sat.agoat.DownloadInvoiceService"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_SERVICE_NO_PERMISSION",
+    "title": "Exported service without permission",
+    "description": "The exported service 'owasp.sat.agoat.DownloadInvoiceService' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.service.exported",
+        "key": "owasp.sat.agoat.DownloadInvoiceService",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "service",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "service",
+      "component_name": "owasp.sat.agoat.DownloadInvoiceService"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'owasp.sat.agoat.ShowDataReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "owasp.sat.agoat.ShowDataReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "owasp.sat.agoat.ShowDataReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER_NO_PERMISSION",
+    "title": "Exported receiver without permission",
+    "description": "The exported receiver 'owasp.sat.agoat.ShowDataReceiver' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "owasp.sat.agoat.ShowDataReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "owasp.sat.agoat.ShowDataReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_RECEIVER",
+    "title": "Exported receiver detected",
+    "description": "The receiver 'androidx.profileinstaller.ProfileInstallReceiver' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.receiver.exported",
+        "key": "androidx.profileinstaller.ProfileInstallReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "receiver",
+      "component_name": "androidx.profileinstaller.ProfileInstallReceiver"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_PROVIDER",
+    "title": "Exported provider detected",
+    "description": "The provider 'owasp.sat.agoat.ContentProviderActivity' is exported and may be reachable by external applications.",
+    "severity": "medium",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.exported",
+        "key": "owasp.sat.agoat.ContentProviderActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "provider",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "owasp.sat.agoat.ContentProviderActivity"
+    }
+  },
+  {
+    "rule_id": "MANIFEST_EXPORTED_PROVIDER_NO_PERMISSION",
+    "title": "Exported provider without permission",
+    "description": "The exported provider 'owasp.sat.agoat.ContentProviderActivity' does not declare a protecting permission.",
+    "severity": "high",
+    "confidence": "high",
+    "source": "rule_engine",
+    "evidence": [
+      {
+        "type": "manifest.component.provider.exported",
+        "key": "owasp.sat.agoat.ContentProviderActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "provider",
+          "exported_source": "explicit"
+        }
+      }
+    ],
+    "metadata": {
+      "component_type": "provider",
+      "component_name": "owasp.sat.agoat.ContentProviderActivity"
+    }
+  }
+]

@@ -1,0 +1,268 @@
+{
+  "case_id": "test-dynamic-openrouter",
+  "package_name": "owasp.sat.agoat",
+  "device_profile": "baseline",
+  "tests_executed": 1,
+  "observations": [
+    {
+      "test_id": "dyn-001",
+      "signal": "app_launch_attempted",
+      "success": true,
+      "summary": "Main launcher intent executed",
+      "metadata": {
+        "stdout": "  bash arg: -p\n  bash arg: owasp.sat.agoat\n  bash arg: -c\n  bash arg: android.intent.category.LAUNCHER\n  bash arg: 1\nEvents injected: 1\n## Network stats: elapsed time=294ms (0ms mobile, 0ms wifi, 294ms not connected)\n",
+        "stderr": "args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]\n arg: \"-p\"\n arg: \"owasp.sat.agoat\"\n arg: \"-c\"\n arg: \"android.intent.category.LAUNCHER\"\n arg: \"1\"\ndata=\"owasp.sat.agoat\"\ndata=\"android.intent.category.LAUNCHER\"\n"
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "crash_detected_in_logcat",
+      "success": true,
+      "summary": "Potential application crash detected in logcat",
+      "metadata": {
+        "log_path": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/logcat.txt",
+        "matched_markers": [
+          "androidruntime"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_dump_available",
+      "success": true,
+      "summary": "UI dump captured successfully",
+      "metadata": {
+        "ui_path": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml"
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_text_detected",
+      "success": true,
+      "summary": "Visible text detected in UI dump",
+      "metadata": {
+        "ui_path": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+        "texts": [
+          "by Satish Patnayak"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_package_matches_target",
+      "success": true,
+      "summary": "UI dump contains nodes from target package",
+      "metadata": {
+        "ui_path": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+        "packages": [
+          "owasp.sat.agoat"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_resource_ids_detected",
+      "success": true,
+      "summary": "Resource identifiers detected in UI dump",
+      "metadata": {
+        "ui_path": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+        "resource_ids": [
+          "owasp.sat.agoat:id/decor_content_parent",
+          "android:id/content",
+          "owasp.sat.agoat:id/imageView",
+          "android:id/navigationBarBackground"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_classes_detected",
+      "success": true,
+      "summary": "UI classes detected in UI dump",
+      "metadata": {
+        "ui_path": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+        "classes": [
+          "android.view.View",
+          "android.view.ViewGroup",
+          "android.widget.FrameLayout",
+          "android.widget.ImageView",
+          "android.widget.LinearLayout",
+          "android.widget.TextView"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_changed_after_action",
+      "success": true,
+      "summary": "UI changed after dynamic action",
+      "metadata": {
+        "before_ui": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui_before.xml",
+        "after_ui": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+        "text_changed": true,
+        "package_changed": true,
+        "resource_changed": true,
+        "class_changed": true
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_text_diff_detected",
+      "success": true,
+      "summary": "New visible text detected after action",
+      "metadata": {
+        "before_ui": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui_before.xml",
+        "after_ui": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+        "new_texts": [
+          "by Satish Patnayak"
+        ]
+      }
+    },
+    {
+      "test_id": "agent-task-002",
+      "signal": "agentic_ui_transition_analysis_requested",
+      "success": true,
+      "summary": "Agent requested UI transition analysis based on collected UI artifacts",
+      "metadata": {
+        "task_id": "agent-task-002",
+        "target": null,
+        "package_name": "owasp.sat.agoat",
+        "context": {
+          "before_ui": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui_before.xml",
+          "after_ui": "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+          "analysis_purpose": "Determine UI changes that may have led to crash."
+        },
+        "dynamic_dir": "artifacts/test-dynamic-openrouter/dynamic"
+      }
+    },
+    {
+      "test_id": "agent-task-003",
+      "signal": "agentic_pinning_triage_requested",
+      "success": true,
+      "summary": "Agent requested TLS pinning triage based on network/proxy evidence",
+      "metadata": {
+        "task_id": "agent-task-003",
+        "target": null,
+        "context": {
+          "reason": "Investigate whether app crash is related to secure key or pinning mechanism failure."
+        },
+        "network_summary_path": "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json",
+        "mitm_event_log_path": "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+        "mitm_flows_path": "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+        "artifacts_found": [
+          "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+          "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm"
+        ]
+      }
+    },
+    {
+      "test_id": "agent-task-011",
+      "signal": "agentic_network_analysis_requested",
+      "success": true,
+      "summary": "Agent requested network analysis based on mitmproxy artifacts",
+      "metadata": {
+        "task_id": "agent-task-011",
+        "target": null,
+        "context": {
+          "package_name": "owasp.sat.agoat",
+          "purpose": "Identify network requests that may have triggered crash and assess certificate pinning configuration."
+        },
+        "network_summary_path": "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json",
+        "mitm_event_log_path": "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+        "mitm_flows_path": "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+        "artifacts_found": [
+          "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+          "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm"
+        ]
+      }
+    },
+    {
+      "test_id": "agent-task-012",
+      "signal": "agentic_pinning_triage_requested",
+      "success": true,
+      "summary": "Agent requested TLS pinning triage based on network/proxy evidence",
+      "metadata": {
+        "task_id": "agent-task-012",
+        "target": null,
+        "context": {
+          "package_name": "owasp.sat.agoat",
+          "reason": "Potential certificate pinning leading to network failures observed during crash investigation."
+        },
+        "network_summary_path": "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json",
+        "mitm_event_log_path": "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+        "mitm_flows_path": "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+        "artifacts_found": [
+          "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+          "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm"
+        ]
+      }
+    },
+    {
+      "test_id": "agent-task-001",
+      "signal": "agentic_pinning_triage_requested",
+      "success": true,
+      "summary": "Agent requested TLS pinning triage based on network/proxy evidence",
+      "metadata": {
+        "task_id": "agent-task-001",
+        "target": null,
+        "context": {
+          "reason": "Determine whether the application implements certificate pinning to confirm that network requests observed by the previous analysis were properly verified and to identify potential bypass points for dynamic network manipulation."
+        },
+        "network_summary_path": "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json",
+        "mitm_event_log_path": "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+        "mitm_flows_path": "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+        "artifacts_found": [
+          "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+          "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm"
+        ]
+      }
+    },
+    {
+      "test_id": "network-session",
+      "signal": "network_requests_observed",
+      "success": true,
+      "summary": "Network requests were observed during dynamic execution",
+      "metadata": {
+        "summary_path": "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json",
+        "request_count": 22,
+        "hosts": [
+          "connectivitycheck.gstatic.com",
+          "play.googleapis.com",
+          "www.google.com"
+        ]
+      }
+    },
+    {
+      "test_id": "network-session",
+      "signal": "network_cleartext_http_detected",
+      "success": true,
+      "summary": "Cleartext HTTP traffic was observed",
+      "metadata": {
+        "summary_path": "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json",
+        "http_cleartext_urls": [
+          "http://connectivitycheck.gstatic.com/generate_204",
+          "http://play.googleapis.com/generate_204",
+          "http://www.google.com/gen_204"
+        ]
+      }
+    }
+  ],
+  "artifacts": [
+    "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui_before.xml",
+    "artifacts/test-dynamic-openrouter/dynamic/dyn-001/logcat.txt",
+    "artifacts/test-dynamic-openrouter/dynamic/dyn-001/screen.png",
+    "artifacts/test-dynamic-openrouter/dynamic/dyn-001/ui.xml",
+    "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+    "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+    "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+    "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+    "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+    "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+    "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+    "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+    "artifacts/test-dynamic-openrouter/dynamic/network/mitmdump.log",
+    "artifacts/test-dynamic-openrouter/dynamic/network/flows.mitm",
+    "artifacts/test-dynamic-openrouter/dynamic/network/network_summary.json"
+  ],
+  "errors": []
+}

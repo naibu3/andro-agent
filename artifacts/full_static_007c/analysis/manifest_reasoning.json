@@ -1,0 +1,8 @@
+{
+  "summary": "Model response could not be parsed as JSON.",
+  "attack_surface": [],
+  "top_risks": [],
+  "abuse_hypotheses": [],
+  "recommended_next_steps": [],
+  "raw_response": "{\"summary\":\"6 exported components, 8 dangerous permissions, 13 findings\",\"attack_surface\":[\"Exported activities Accessible"
+}

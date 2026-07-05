@@ -1,0 +1,1459 @@
+[
+  {
+    "type": "manifest.package",
+    "key": "package_name",
+    "value": "com.indalweb.aficionFAB",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.compile_sdk_version",
+    "key": "compile_sdk_version",
+    "value": "35",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.uses_cleartext_traffic",
+    "key": "uses_cleartext_traffic",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.network_security_config",
+    "key": "network_security_config",
+    "value": "@xml/network_security_config",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.INTERNET",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.POST_NOTIFICATIONS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.android.vending.BILLING",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_NETWORK_STATE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.WRITE_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.READ_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.WAKE_LOCK",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.google.android.c2dm.permission.RECEIVE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sec.android.provider.badge.permission.READ",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sec.android.provider.badge.permission.WRITE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.htc.launcher.permission.READ_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sonyericsson.home.permission.BROADCAST_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.anddoes.launcher.permission.UPDATE_COUNT",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.majeur.launcher.permission.UPDATE_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.huawei.android.launcher.permission.CHANGE_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.huawei.android.launcher.permission.READ_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.READ_APP_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.oppo.launcher.permission.READ_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "me.everything.badger.permission.BADGE_COUNT_READ",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "me.everything.badger.permission.BADGE_COUNT_WRITE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.google.android.gms.permission.AD_ID",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.FOREGROUND_SERVICE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.indalweb.aficionFAB.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.indalweb.aficionFAB.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.indalweb.aficionFAB.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "com.indalweb.aficionFAB.MainActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.android.gms.ads.AdActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.android.gms.ads.AdActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.qonversion.android.sdk.automations.mvp.ScreenActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.qonversion.android.sdk.automations.mvp.ScreenActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.android.gms.ads.OutOfContextTestingActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.android.gms.ads.OutOfContextTestingActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.android.gms.ads.NotificationHandlerActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.android.gms.ads.NotificationHandlerActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.android.billingclient.api.ProxyBillingActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.android.billingclient.api.ProxyBillingActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.android.billingclient.api.ProxyBillingActivityV2",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.android.billingclient.api.ProxyBillingActivityV2",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.android.gms.common.api.GoogleApiActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.android.gms.common.api.GoogleApiActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.intent_filters_count",
+    "key": "by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.firebase.messaging.FirebaseMessagingService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.firebase.messaging.FirebaseMessagingService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.intent_filters_count",
+    "key": "com.google.firebase.messaging.FirebaseMessagingService",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.firebase.components.ComponentDiscoveryService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.firebase.components.ComponentDiscoveryService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.android.gms.ads.AdService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.android.gms.ads.AdService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "com.google.android.gms.ads.AdService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "androidx.work.impl.background.systemjob.SystemJobService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "androidx.work.impl.background.systemjob.SystemJobService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.permission",
+    "key": "androidx.work.impl.background.systemjob.SystemJobService",
+    "value": "android.permission.BIND_JOB_SERVICE",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "androidx.work.impl.background.systemjob.SystemJobService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "androidx.work.impl.foreground.SystemForegroundService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "androidx.work.impl.foreground.SystemForegroundService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "androidx.work.impl.foreground.SystemForegroundService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.permission",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "value": "android.permission.BIND_JOB_SERVICE",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "androidx.room.MultiInstanceInvalidationService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "androidx.room.MultiInstanceInvalidationService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "nl.xservices.plugins.ShareChooserPendingIntent",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "nl.xservices.plugins.ShareChooserPendingIntent",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "nl.xservices.plugins.ShareChooserPendingIntent",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "nl.xservices.plugins.ShareChooserPendingIntent",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": "com.google.android.c2dm.permission.SEND",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+    "value": "android.permission.DUMP",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": "android.permission.DUMP",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": 4,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "androidx.core.content.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "androidx.core.content.FileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "androidx.core.content.FileProvider",
+    "value": "com.indalweb.aficionFAB.cdv.core.file.provider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "androidx.core.content.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider",
+    "value": "com.indalweb.aficionFAB.fileOpener2.provider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "de.sitewaerts.cordova.documentviewer.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "de.sitewaerts.cordova.documentviewer.FileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "de.sitewaerts.cordova.documentviewer.FileProvider",
+    "value": "com.indalweb.aficionFAB.DocumentViewerPlugin.fileprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "de.sitewaerts.cordova.documentviewer.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "nl.xservices.plugins.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "nl.xservices.plugins.FileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "nl.xservices.plugins.FileProvider",
+    "value": "com.indalweb.aficionFAB.sharing.provider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "nl.xservices.plugins.FileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.google.android.gms.ads.MobileAdsInitProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.google.android.gms.ads.MobileAdsInitProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.google.android.gms.ads.MobileAdsInitProvider",
+    "value": "com.indalweb.aficionFAB.mobileadsinitprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.google.firebase.provider.FirebaseInitProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.google.firebase.provider.FirebaseInitProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.google.firebase.provider.FirebaseInitProvider",
+    "value": "com.indalweb.aficionFAB.firebaseinitprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "androidx.startup.InitializationProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "androidx.startup.InitializationProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "androidx.startup.InitializationProvider",
+    "value": "com.indalweb.aficionFAB.androidx-startup",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  }
+]

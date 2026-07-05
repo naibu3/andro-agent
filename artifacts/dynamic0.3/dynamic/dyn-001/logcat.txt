@@ -1,0 +1,367 @@
+--------- beginning of kernel
+04-21 09:42:12.493     0     0 W audit   : audit_lost=3 audit_rate_limit=5 audit_backlog_limit=64
+04-21 09:42:12.493     0     0 E audit   : rate limit exceeded
+04-21 09:42:12.514     0     0 W logd    : Skipping entries from slow reader, pid 462, fd 14, from LogBuffer::Prune()
+--------- beginning of main
+04-21 09:48:28.772  5630  5630 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_REMOVED
+04-21 09:48:28.773  5630  5630 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_REMOVED
+04-21 09:48:28.782  5630  5630 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_ADDED
+04-21 09:48:28.782  5630  5630 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_ADDED
+04-21 09:48:28.784   954   954 I SafetyLabelChangedBroadcastReceiver: received broadcast packageName: owasp.sat.agoat, current user: UserHandle{0}, packageChangeEvent: UPDATE, intent user: UserHandle{0}
+04-21 09:48:28.796   935   935 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+--------- beginning of system
+04-21 09:48:28.797   555   619 D PackageInstallerSession: Marking session 234905702 as applied
+04-21 09:48:28.852   555   584 W Looper  : Slow delivery took 215ms android.fg h=android.os.Handler c=<recycled PooledLambda@590295f> m=0
+04-21 09:48:28.869  1834  1854 I ogle.android.as: Background concurrent copying GC freed 50197(2310KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 6795KB/13MB, paused 97us,22us total 119.247ms
+04-21 09:48:28.871  1834  1856 E native  : E0000 00:00:1776757708.871615    1856 mmap.cc:233] Error during Unmap / munmap: Invalid argument
+04-21 09:48:28.875   555   884 E AppOps  : attributionTag VCN not declared in manifest of android
+04-21 09:48:28.877   555   691 W PackageConfigPersister: App-specific configuration not found for packageName: owasp.sat.agoat and userId: 0
+04-21 09:48:28.877   555   884 E AppOps  : attributionTag VCN not declared in manifest of android
+04-21 09:48:28.878   555   920 I SdkSandboxManager: No SDKs used. Skipping SDK data reconcilation for CallingInfo{mUid=10192, mPackageName='owasp.sat.agoat, mAppProcessToken='null'}
+04-21 09:48:28.879   555   584 W Looper  : Drained
+04-21 09:48:28.879   555   920 I SdkSandboxManager: No SDKs used. Skipping SDK data reconcilation for CallingInfo{mUid=10192, mPackageName='owasp.sat.agoat, mAppProcessToken='null'}
+04-21 09:48:28.879   555   884 E AppOps  : attributionTag VCN not declared in manifest of android
+04-21 09:48:29.102   420   420 E BpTransactionCompletedListener: Failed to transact (-32)
+04-21 09:48:29.103   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+04-21 09:48:29.108   555   555 W Looper  : Slow dispatch took 233ms main h=android.app.ActivityThread$H c=android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0@c4624e5 m=0
+04-21 09:48:29.109   555   555 W Looper  : Slow delivery took 235ms main h=android.app.ActivityThread$H c=android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0@739abba m=0
+04-21 09:48:29.117  1192  1192 D CarrierSvcBindHelper: onPackageUpdateFinished: owasp.sat.agoat
+04-21 09:48:29.117  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 09:48:29.117  1192  1192 D CarrierSvcBindHelper: onPackageModified: owasp.sat.agoat
+04-21 09:48:29.118  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 09:48:29.137  1192  1489 D ImsResolver: maybeAddedImsService, packageName: owasp.sat.agoat
+04-21 09:48:29.234   951  1025 D EGL_emulation: app_time_stats: avg=7488.74ms min=7488.74ms max=7488.74ms count=1
+04-21 09:48:29.269  1826  1826 W MediaProvider: WorkProfileOwnerApps cache is empty
+04-21 09:48:29.413  1885  1885 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REMOVED dat=package: flg=0x4000010 (has extras) }
+04-21 09:48:29.415   555   584 W Looper  : Slow dispatch took 282ms android.fg h=android.os.Handler c=com.android.server.location.injector.SystemPackageResetHelper$Receiver$$ExternalSyntheticLambda1@6730027 m=0
+04-21 09:48:29.422   555   584 W Looper  : Slow delivery took 284ms android.fg h=android.os.Handler c=<recycled PooledLambda@d7ae772> m=0
+04-21 09:48:29.425   555   680 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+04-21 09:48:29.425  1961  1961 I Choreographer: Skipped 54 frames!  The application may be doing too much work on its main thread.
+04-21 09:48:29.427  1885  1885 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) }
+04-21 09:48:29.433  1885  1885 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REPLACED dat=package: flg=0x4000010 (has extras) }
+04-21 09:48:29.436   555  1036 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1270 android.content.Context.sendBroadcastMultiplePermissions:2476 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3548 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 
+04-21 09:48:29.437   555  1036 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3553 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 android.os.Binder.execTransactInternal:1339 
+04-21 09:48:29.437   555  1036 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3562 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 android.os.Binder.execTransactInternal:1339 
+04-21 09:48:29.437   555  1036 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3568 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 android.os.Binder.execTransactInternal:1339 
+04-21 09:48:29.438  1192  1192 D ServiceStateProvider: subId=1
+04-21 09:48:29.438  1362  1362 D CellBroadcastReceiver: onReceive Intent { act=android.intent.action.SERVICE_STATE flg=0x1000010 cmp=com.google.android.cellbroadcastreceiver/com.android.cellbroadcastreceiver.CellBroadcastReceiver (has extras) }
+04-21 09:48:29.438  1362  1362 D CellBroadcastReceiver: onServiceStateChanged, ss: 0
+04-21 09:48:29.439  1362  1362 D CellBroadcastReceiver: networkOperator: 310260
+04-21 09:48:29.440  1362  1362 D CellBroadcastReceiver: update supported roaming operator as 
+04-21 09:48:29.443   555   584 W Looper  : Drained
+04-21 09:48:29.445   555   587 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+04-21 09:48:29.446   361   402 I netd    : tetherGetStats() -> {[]} <1.39ms>
+04-21 09:48:29.448   555   878 I ConnectivityService: Update capabilities for net 101 : +NOT_SUSPENDED
+04-21 09:48:29.457   555   680 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+04-21 09:48:29.466   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.466   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.466   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.473   555   878 D ConnectivityService: [101 CELLULAR] EVENT_NETWORK_INFO_CHANGED, going from SUSPENDED to CONNECTED
+04-21 09:48:29.474   555   555 I Telecom : CarModeTracker: Package owasp.sat.agoat is not tracked.: SSH.oR@AV4🔒
+04-21 09:48:29.474   555   555 I Telecom : InCallController: updateCarModeForConnections: car mode apps: : SSH.oR@AV4🔒
+04-21 09:48:29.474   555   555 I Telecom : InCallController: update carmode current:UserHandle{0} parent:null: SSH.oR@AV4🔒
+04-21 09:48:29.474   555   555 W Looper  : Slow dispatch took 357ms main h=android.app.ActivityThread$H c=android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0@57c1c3b m=0
+04-21 09:48:29.477   555   555 V BackupManagerConstants: getFullBackupIntervalMilliseconds(...) returns 86400000
+04-21 09:48:29.478   555   555 V BackupManagerConstants: getFullBackupRequiredNetworkType(...) returns 2
+04-21 09:48:29.478   555   555 V BackupManagerConstants: getFullBackupRequireCharging(...) returns true
+04-21 09:48:29.482  1192  1344 D TelephonyProvider: subIdString = 1 subId = 1
+04-21 09:48:29.525   954  4881 I PermissionControllerServiceImpl: Updating user sensitive for uid 10192
+04-21 09:48:29.528   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.532   555   937 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 android.content.Context.sendBroadcastMultiplePermissions:2422 android.content.Context.sendBroadcastMultiplePermissions:2410 com.android.server.TelephonyRegistry.broadcastDataConnectionStateChanged:3767 com.android.server.TelephonyRegistry.notifyDataConnectionForSubscriber:2159 
+04-21 09:48:29.534  1236  3641 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[NexusLauncherActivity]#14) as ready
+04-21 09:48:29.534  1236  3641 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[NexusLauncherActivity]#15) as ready
+04-21 09:48:29.535  7248  7248 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 09:48:29.542  7248  7248 I AndroidRuntime: Using default boot image
+04-21 09:48:29.542  7248  7248 I AndroidRuntime: Leaving lock profiling enabled
+04-21 09:48:29.546  7248  7248 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 09:48:29.547  7248  7248 I app_process: Using CollectorTypeCC GC.
+04-21 09:48:29.560   951  1024 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+04-21 09:48:29.565  1192  1192 D MultiSimSettingController: notifySubscriptionInfoChanged
+04-21 09:48:29.568   555   949 D NetworkStatsObservers: Unregistering RequestInfo from pid/uid:555/1000(android) for DataUsageRequest [ requestId=19, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3472108 ] accessLevel:3
+04-21 09:48:29.570  4691  5296 I BugleRcsEngine: [68] bscg.c: SIM state event delay enabled: attempts 1, maxAttempts 3, delaySeconds 90 MSIM delayseconds 90, effective delay seconds 90
+04-21 09:48:29.570  4691  5296 I BugleRcsEngine: [68] bscg.c: posted simEventProcessTask to handler with delay 90
+04-21 09:48:29.570   555   884 E AppOps  : attributionTag VCN not declared in manifest of android
+04-21 09:48:29.572  5730  5823 I BugleRcsEngine: [70] bscg.c: SIM state event delay enabled: attempts 1, maxAttempts 3, delaySeconds 90 MSIM delayseconds 90, effective delay seconds 90
+04-21 09:48:29.572  1192  1364 D CellBroadcastConfigTracker-0: IdleState message:5
+04-21 09:48:29.572  1192  1364 D CellBroadcastConfigTracker-0: DefaultState message:5
+04-21 09:48:29.573  5730  5823 I BugleRcsEngine: [70] bscg.c: posted simEventProcessTask to handler with delay 90
+04-21 09:48:29.575   555   869 D NetworkStatsObservers: Registering observer for RequestInfo from pid/uid:555/1000(android) for DataUsageRequest [ requestId=20, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3465545 ] accessLevel:3
+04-21 09:48:29.576   361   402 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.77ms>
+04-21 09:48:29.578   361   402 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.50ms>
+04-21 09:48:29.580  1192  1192 I Telephony: TelecomAccountTelephonyCallback: onServiceStateChanged: newState=0, mServiceState=1
+04-21 09:48:29.587  1885  1885 I GsaVoiceInteractionSrv: Handling ACTION_START_HOTWORD
+04-21 09:48:29.588  1885  2468 I GsaVoiceInteractionSrv: disregardVoiceMatch: false
+04-21 09:48:29.588  1885  2468 I GsaVoiceInteractionSrv: Cannot start hotword, hotword has been explicitly disabled.
+04-21 09:48:29.591  1192  1192 I Telephony: onServiceStateChanged: Tearing down and re-setting up accounts.
+04-21 09:48:29.591  1192  1192 I Telephony: PstnIncomingCallNotifier: Unregistering: [0]
+04-21 09:48:29.591  1192  1192 D Telephony: Unregistering: Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}
+04-21 09:48:29.591  1192  1192 I PhoneInterfaceManager: unregisterMmTelCapabilityCallback: 1 is inactive, ignoring unregister.
+04-21 09:48:29.591  1192  1192 I PhoneInterfaceManager: unregisterImsRegistrationCallback: 1is inactive, ignoring unregister.
+04-21 09:48:29.591  1192  1192 I Telephony: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-21 09:48:29.591  1192  1192 I Telephony: TelecomAccountRegistry: setupAccounts: Phone with subscription id 1
+04-21 09:48:29.603   555   555 D CompatibilityChangeReporter: Compat change id reported: 171306433; UID 10192; state: ENABLED
+04-21 09:48:29.603   555   555 W AlarmManager: Package owasp.sat.agoat, uid 10192 lost permission to set exact alarms!
+04-21 09:48:29.603   555   555 I AS.AudioService: onSubscriptionsChanged()
+04-21 09:48:29.604   555   555 W Looper  : Drained
+04-21 09:48:29.605  1192  1192 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+04-21 09:48:29.605  1192  1192 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+04-21 09:48:29.605  1192  1192 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+04-21 09:48:29.605  1192  1192 I Telephony:  isRttSupported: false
+04-21 09:48:29.605  1192  1192 I Telephony:  alwaysAllowWhileRoaming: false
+04-21 09:48:29.605  1192  1192 I Telephony:  isRoaming: false
+04-21 09:48:29.605  1192  1192 I Telephony:  isOnWfc: false
+04-21 09:48:29.612   951   980 I OpenGLRenderer: Davey! duration=1040ms; Flags=0, FrameTimelineVsyncId=33563, IntendedVsync=193467609396, Vsync=193484276062, InputEventId=0, HandleInputStart=193496078335, AnimationStart=193496079454, PerformTraversalsStart=193496079651, DrawStart=193497413022, FrameDeadline=193484276062, FrameInterval=193496065916, FrameStartTime=16666666, SyncQueued=193498344926, SyncStart=193498432400, IssueDrawCommandsStart=193498830348, SwapBuffers=193552012781, FrameCompleted=194507950281, DequeueBufferDuration=21985, QueueBufferDuration=441896, GpuCompleted=194507640615, SwapBuffersCompleted=194507950281, DisplayPresentTime=0, CommandSubmissionCompleted=193552012781, 
+04-21 09:48:29.622  4691  4805 W Bugle   : BuglePhoneNumberUtils: canonicalizeMccMnc: invalid mccmnc. mcc: null, mnc: null
+04-21 09:48:29.625  6248  6931 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_REMOVED [CONTEXT service_id=17 ]
+04-21 09:48:29.626  6248  6384 I ProximityAuth: [RecentAppsMediator] Package added: (user=UserHandle{0}) owasp.sat.agoat
+04-21 09:48:29.628   951  1024 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+04-21 09:48:29.630   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 09:48:29.630   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 09:48:29.631   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 09:48:29.631   951   951 D GlobalActionsDialogLite: Service changed before actions created
+04-21 09:48:29.631   951   951 D GlobalActionsDialogLite: Service changed before actions created
+04-21 09:48:29.632   951   951 D TileServices: Couldn't find tile for ComponentInfo{com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.screen.ui.GrayscaleTileService}(0)
+04-21 09:48:29.632   951   951 D TileServices: Couldn't find tile for ComponentInfo{com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.focusmode.quicksettings.FocusModeTileService}(0)
+04-21 09:48:29.632   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.637   361   402 I netd    : tetherGetStats() -> {[]} <0.34ms>
+04-21 09:48:29.643   555   949 D NetworkStatsObservers: Unregistering RequestInfo from pid/uid:555/1000(android) for DataUsageRequest [ requestId=20, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3465545 ] accessLevel:3
+04-21 09:48:29.643   555   869 D NetworkStatsObservers: Registering observer for RequestInfo from pid/uid:555/1000(android) for DataUsageRequest [ requestId=21, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3464201 ] accessLevel:3
+04-21 09:48:29.644  6248  6924 I FontLog : Package owasp.sat.agoat has no metadata [CONTEXT service_id=132 ]
+04-21 09:48:29.644   361   402 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.56ms>
+04-21 09:48:29.646   361   402 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.61ms>
+04-21 09:48:29.650   951  1024 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+04-21 09:48:29.656   951  1024 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+04-21 09:48:29.657  1192  1192 I Telephony: AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with Telecom. subId=1
+04-21 09:48:29.658   555  2551 I Telecom : : registerPhoneAccount: account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AWA🔒
+04-21 09:48:29.658   555  2551 I Telecom : PhoneAccountRegistrar: Modify account: [ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}]: TSI.rPA(cap)@AWA🔒
+04-21 09:48:29.659   555  2551 I Telecom : CallsManager: handlePhoneAccountChanged: phoneAccount=[[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AWA🔒
+04-21 09:48:29.661   555  2551 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@AWA🔒
+04-21 09:48:29.661   555  2551 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@AWA🔒
+04-21 09:48:29.661  1192  1192 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}, hasService=false, callingPackage=com.android.server.telecom
+04-21 09:48:29.661  1192  1192 I Telephony: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+04-21 09:48:29.661  1192  1192 I Telephony: PstnIncomingCallNotifier: Registering: [0]
+04-21 09:48:29.661  1192  1192 D Telephony: Registering: Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}
+04-21 09:48:29.662  1192  1192 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 09:48:29.662  1192  1192 W Telephony: registerImsRegistrationCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 09:48:29.665  1192  1192 D MultiSimSettingController: onSubscriptionsChanged
+04-21 09:48:29.666  1192  1192 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true
+04-21 09:48:29.666  1192  1192 D MultiSimSettingController: updateDefaults
+04-21 09:48:29.666   951  1024 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+04-21 09:48:29.666  1192  1192 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true
+04-21 09:48:29.666  1192  1192 D MultiSimSettingController: updateDefaultValues: change: 0
+04-21 09:48:29.666  1192  1192 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true
+04-21 09:48:29.667  1192  1192 D CallNotifier: updatePhoneStateListeners: update CF notifications.
+04-21 09:48:29.667  1192  1192 I NotificationMgr: updateCfi: subId= 1, visible=N
+04-21 09:48:29.668   361   402 I netd    : tetherGetStats() -> {[]} <0.35ms>
+04-21 09:48:29.673   361   402 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.44ms>
+04-21 09:48:29.673   361   402 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.31ms>
+04-21 09:48:29.675  1192  1192 I NotificationMgr: updateMwi(): subId 1 update to false
+04-21 09:48:29.675  1192  1192 I Telephony: TelecomAccountRegistry: onSubscriptionsChanged - update accounts
+04-21 09:48:29.675  1192  1192 I Telephony: PstnIncomingCallNotifier: Unregistering: [0]
+04-21 09:48:29.675  1192  1192 D Telephony: Unregistering: Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}
+04-21 09:48:29.676  1192  1192 I PhoneInterfaceManager: unregisterMmTelCapabilityCallback: 1 is inactive, ignoring unregister.
+04-21 09:48:29.676  1192  1192 I PhoneInterfaceManager: unregisterImsRegistrationCallback: 1is inactive, ignoring unregister.
+04-21 09:48:29.676   951  1024 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+04-21 09:48:29.676  1192  1192 I Telephony: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+04-21 09:48:29.676  1192  1192 I Telephony: TelecomAccountRegistry: setupAccounts: Phone with subscription id 1
+04-21 09:48:29.677  1192  1192 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+04-21 09:48:29.677  1192  1192 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+04-21 09:48:29.677  1192  1192 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+04-21 09:48:29.677  1192  1192 I Telephony:  isRttSupported: false
+04-21 09:48:29.677  1192  1192 I Telephony:  alwaysAllowWhileRoaming: false
+04-21 09:48:29.677  1192  1192 I Telephony:  isRoaming: false
+04-21 09:48:29.677  1192  1192 I Telephony:  isOnWfc: false
+04-21 09:48:29.680   951  1024 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+04-21 09:48:29.686   951  1024 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+04-21 09:48:29.688   951  1024 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+04-21 09:48:29.689   951  1024 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+04-21 09:48:29.690   951  1024 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+04-21 09:48:29.723   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.730  1192  1192 I Telephony: AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with Telecom. subId=1
+04-21 09:48:29.730   555  2062 I Telecom : : registerPhoneAccount: account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AWI🔒
+04-21 09:48:29.731   555  2062 I Telecom : PhoneAccountRegistrar: Modify account: [ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}]: TSI.rPA(cap)@AWI🔒
+04-21 09:48:29.732   555  2062 I Telecom : CallsManager: handlePhoneAccountChanged: phoneAccount=[[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AWI🔒
+04-21 09:48:29.733   555  2062 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@AWI🔒
+04-21 09:48:29.734   555  2062 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@AWI🔒
+04-21 09:48:29.734  1192  1192 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}, hasService=false, callingPackage=com.android.server.telecom
+04-21 09:48:29.734  1192  1192 I Telephony: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+04-21 09:48:29.734  1192  1192 I Telephony: PstnIncomingCallNotifier: Registering: [0]
+04-21 09:48:29.734  1192  1192 D Telephony: Registering: Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}
+04-21 09:48:29.734  1192  1192 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 09:48:29.735  1192  1192 W Telephony: registerImsRegistrationCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 09:48:29.735  1192  1192 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+04-21 09:48:29.735  1192  1192 D ImsExternalCallTracker: refreshCallPullState
+04-21 09:48:29.748  1192  1192 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+04-21 09:48:29.757   555   588 I WindowManager: Queue is too deep! Purged item with index=13
+04-21 09:48:29.768   555   588 I WindowManager: Queue is too deep! Purged item with index=13
+04-21 09:48:29.771   555   584 V WindowManager: Sent Transition #28 createdAt=04-21 09:48:28.415 via request=TransitionRequestInfo { type = CLOSE, triggerTask = null, remoteTransition = null, displayChange = null }
+04-21 09:48:29.771   951   993 V WindowManagerShell: onTransitionReady android.os.BinderProxy@5e10be6: {id=28 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@4abbf6} m=TO_BACK f=NONE leash=Surface(name=Task=13)/@0x946572a sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@b5b2bf7} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x5fe191b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0xeb91ab8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 09:48:29.771   951   993 V WindowManagerShell: Playing animation for (#28)android.os.BinderProxy@5e10be6@0
+04-21 09:48:29.771   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@3d7b469
+04-21 09:48:29.771   951   993 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@e05feee
+04-21 09:48:29.771   951   993 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@64e3f8f
+04-21 09:48:29.772   951   993 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@e48d21c
+04-21 09:48:29.772   951   993 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+04-21 09:48:29.772   951   993 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@2ae2e25
+04-21 09:48:29.772   951   993 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@bd71bfa
+04-21 09:48:29.772   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@27945ab
+04-21 09:48:29.772   951   993 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=28 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@4abbf6} m=TO_BACK f=NONE leash=Surface(name=Task=13)/@0x946572a sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@b5b2bf7} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x5fe191b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0xeb91ab8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 09:48:29.773   555   584 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+04-21 09:48:29.773   555   584 V WindowManager:     info={id=28 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{8809210 Task{42317e0 #13 type=standard A=10192:owasp.sat.agoat}}} m=TO_BACK f=NONE leash=Surface(name=Task=13)/@0x93ca10d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{RemoteToken{727b566 Task{2252daf #1 type=home}}} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x1ff99b0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0x719c64d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 09:48:29.777   951   993 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@8a1c9ba, appThread = android.app.IApplicationThread$Stub$Proxy@835c06b, debugName = LauncherToDream }}
+04-21 09:48:29.777   951   993 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@d45b7c8, appThread = android.app.IApplicationThread$Stub$Proxy@15e6061, debugName = QuickstepLaunchHome }}
+04-21 09:48:29.777   951   993 V WindowManagerShell:  Delegate animation for #28 to null
+04-21 09:48:29.777   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@9b348b4
+04-21 09:48:29.777   951   993 V WindowManagerShell: start default transition animation, info = {id=28 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@4abbf6} m=TO_BACK f=NONE leash=Surface(name=Task=13)/@0x946572a sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@b5b2bf7} m=TO_FRONT f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x5fe191b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{ca80d1b token=android.os.Binder@14f9b2a})/@0xeb91ab8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 09:48:29.781  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.781  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.781  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.781  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.781  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.786   555   594 W WindowMagnificationMgr: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+04-21 09:48:29.787   555   594 W WindowMagnificationMgr: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+04-21 09:48:29.788   951   993 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@501b4cd animAttr=0x10 type=CLOSE isEntrance=true
+04-21 09:48:29.793   951   993 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@a1888d0 animAttr=0x11 type=CLOSE isEntrance=false
+04-21 09:48:29.794   951   993 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@9b348b4
+04-21 09:48:29.795  1834  2565 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+04-21 09:48:29.796  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 09:48:29.797  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 09:48:29.798  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 09:48:29.798  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-21 09:48:29.799  1192  1192 W FeatureConnection: getRegistrationTech: ImsRegistration is null
+04-21 09:48:29.799  1192  1192 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+04-21 09:48:29.799  1192  1192 D ImsExternalCallTracker: refreshCallPullState
+04-21 09:48:29.799  1192  1192 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+04-21 09:48:29.800  1192  1192 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+04-21 09:48:29.800  1192  1192 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+04-21 09:48:29.800  1192  1192 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 09:48:29.801  1192  1192 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+04-21 09:48:29.801  1192  1192 I Telephony:  isRttSupported: false
+04-21 09:48:29.801  1192  1192 I Telephony:  alwaysAllowWhileRoaming: false
+04-21 09:48:29.801  1192  1192 I Telephony:  isRoaming: false
+04-21 09:48:29.801  1192  1192 I Telephony:  isOnWfc: false
+04-21 09:48:29.806  6335  7176 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+04-21 09:48:29.809  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.809  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.809  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.809  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.810  6335  6335 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 09:48:29.810  6335  6335 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 09:48:29.810  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.810  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.810  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 09:48:29.821  6335  6335 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 09:48:29.829  6335  7174 W SQLiteLog: (28) double-quoted string literal: "owasp.sat.agoat"
+04-21 09:48:29.866  1192  1192 I Telephony: AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with Telecom. subId=1
+04-21 09:48:29.871   555  1049 I Telecom : : registerPhoneAccount: account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AWQ🔒
+04-21 09:48:29.872   555  1049 I Telecom : PhoneAccountRegistrar: Modify account: [ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}]: TSI.rPA(cap)@AWQ🔒
+04-21 09:48:29.874   555  1049 I Telecom : CallsManager: handlePhoneAccountChanged: phoneAccount=[[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AWQ🔒
+04-21 09:48:29.876   555  1049 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@AWQ🔒
+04-21 09:48:29.876   555  1049 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@AWQ🔒
+04-21 09:48:29.877  1192  1192 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}, hasService=false, callingPackage=com.android.server.telecom
+04-21 09:48:29.878   490   490 W libgoldfish-rild: Multi-element reporting criteria are not supported with HIDL HAL
+04-21 09:48:29.878  5630  5685 I HeadsetPhoneState: stopListenForPhoneState(), no listener indicates nothing is listening
+04-21 09:48:29.878  5630  5685 W HeadsetPhoneState: startListenForPhoneState, no event to listen
+04-21 09:48:29.885   555   568 I system_server: Background young concurrent copying GC freed 532682(20MB) AllocSpace objects, 15(380KB) LOS objects, 23% free, 38MB/50MB, paused 14.710ms,105us total 1.235s
+04-21 09:48:29.911   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.911   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:48:29.949  6248  6276 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+04-21 09:48:29.959  7248  7248 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 09:48:29.963  1236  1248 I s.nexuslauncher: NativeAlloc concurrent copying GC freed 81899(3200KB) AllocSpace objects, 18(1856KB) LOS objects, 49% free, 5825KB/11MB, paused 108us,18us total 189.608ms
+04-21 09:48:29.964   951  1001 W Looper  : Slow delivery took 36ms wmshell.anim h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver@3c48c m=0
+04-21 09:48:29.974   951  1025 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-21 09:48:29.980   951  1001 W Looper  : Drained
+04-21 09:48:30.006  7248  7248 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 09:48:30.015  6248  6276 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+04-21 09:48:30.016  7248  7248 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 09:48:30.031  7248  7248 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 09:48:30.031  7248  7248 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 09:48:30.054   951   993 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#28)android.os.BinderProxy@5e10be6@0
+04-21 09:48:30.068   555   584 V WindowManager: Finish Transition #28: created at 04-21 09:48:28.415 collect-started=0.043ms request-sent=0.1ms started=54.296ms ready=54.261ms sent=1353.664ms finished=1649.975ms
+04-21 09:48:30.069   555  2554 W WindowManager: Exception thrown during dispatchAppVisibility Window{900633c u0 owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity EXITING}
+04-21 09:48:30.069   555  2554 W WindowManager: android.os.DeadObjectException
+04-21 09:48:30.069   555  2554 W WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:584)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at android.view.IWindow$Stub$Proxy.dispatchAppVisibility(IWindow.java:546)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.WindowState.sendAppVisibilityToClients(WindowState.java:3271)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.WindowContainer.sendAppVisibilityToClients(WindowContainer.java:1221)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.WindowToken.setClientVisible(WindowToken.java:409)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.ActivityRecord.setClientVisible(ActivityRecord.java:6946)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.ActivityRecord.postApplyAnimation(ActivityRecord.java:5637)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.ActivityRecord.commitVisibility(ActivityRecord.java:5580)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.Transition.finishTransition(Transition.java:1151)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.TransitionController.finishTransition(TransitionController.java:868)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.finishTransition(WindowOrganizerController.java:396)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at android.window.IWindowOrganizerController$Stub.onTransact(IWindowOrganizerController.java:286)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.onTransact(WindowOrganizerController.java:181)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+04-21 09:48:30.069   555  2554 W WindowManager: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 09:48:30.070   555  2554 I Process : Sending signal. PID: 6724 SIG: 9
+04-21 09:48:30.075   951   951 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-21 09:48:30.076   555   587 W ActivityManager: setHasOverlayUi called on unknown pid: 6724
+04-21 09:48:30.073  7248  7248 W main    : type=1400 audit(0.0:171): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:48:30.083  7248  7248 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 09:48:30.081  7248  7248 W main    : type=1400 audit(0.0:172): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:48:30.085  6335  6398 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+04-21 09:48:30.085  7248  7248 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 09:48:30.081  7248  7248 W main    : type=1400 audit(0.0:173): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:48:30.087  7248  7248 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 09:48:30.089  7248  7248 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+04-21 09:48:30.095  7248  7248 W Monkey  : args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]
+04-21 09:48:30.096  7248  7248 W Monkey  :  arg: "-p"
+04-21 09:48:30.096  7248  7248 W Monkey  :  arg: "owasp.sat.agoat"
+04-21 09:48:30.096  7248  7248 W Monkey  :  arg: "-c"
+04-21 09:48:30.096  7248  7248 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+04-21 09:48:30.096  7248  7248 W Monkey  :  arg: "1"
+04-21 09:48:30.097  7248  7248 W Monkey  : data="owasp.sat.agoat"
+04-21 09:48:30.097  7248  7248 W Monkey  : data="android.intent.category.LAUNCHER"
+04-21 09:48:30.098  6335  6398 I Icing   : Indexing done com.google.android.gms-apps
+04-21 09:48:30.098  6335  6398 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+04-21 09:48:30.099  6335  6398 I Icing   : Indexing done com.google.android.gms-apps
+04-21 09:48:30.107   951   993 V WindowManagerShell: Track 0 became idle
+04-21 09:48:30.111   951   993 V WindowManagerShell: All active transition animations finished
+04-21 09:48:30.112   420   420 E BpTransactionCompletedListener: Failed to transact (-32)
+04-21 09:48:30.112   951   993 W Looper  : Slow dispatch took 59ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.DefaultTransitionHandler$$ExternalSyntheticLambda0@b156e92 m=0
+04-21 09:48:30.112   951   993 W Looper  : Slow delivery took 41ms wmshell.main h=android.os.Handler c=android.window.TaskOrganizer$1$$ExternalSyntheticLambda3@6bcc063 m=0
+04-21 09:48:30.114   951   993 W Looper  : Drained
+04-21 09:48:30.152   555  2554 W ActivityManager: registerReceiverWithFeature: no app for null
+04-21 09:48:30.154  7248  7248 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 09:48:30.155  7248  7248 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 09:48:30.155  7248  7248 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 09:48:30.161   555  2554 W ActivityTaskManager: callingPackage for (uid=2000, pid=7248) has no WPC
+04-21 09:48:30.197   555  2554 V SplashScreenExceptionList: SplashScreen checking exception for package owasp.sat.agoat (target sdk:33) -> false
+04-21 09:48:30.197   555  2554 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10192; state: ENABLED
+04-21 09:48:30.201   555  2554 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 09:48:30.202  7248  7248 I Monkey  : Events injected: 1
+04-21 09:48:30.279   951  1025 D EGL_emulation: app_time_stats: avg=2716.52ms min=19.32ms max=21432.94ms count=8
+04-21 09:48:30.306  6335  6345 I gle.android.gms: Background young concurrent copying GC freed 133152(5901KB) AllocSpace objects, 50(1896KB) LOS objects, 36% free, 11MB/18MB, paused 104us,22us total 320.639ms
+04-21 09:48:30.348  1834  3650 W ogle.android.as: Long monitor contention with owner aiai-min-shared-0 (2220) at java.lang.Object erb.b()(PG:2) waiters=0 in java.lang.Object erb.b() for 425ms
+04-21 09:48:30.349   555   588 W system_server: Long monitor contention with owner binder:555_1B (2554) at void com.android.server.wm.WindowManagerService.freezeDisplayRotation(int, int)(WindowManagerService.java:4296) waiters=1 in void com.android.server.wm.WindowAnimator.lambda$new$1(long) for 137ms
+04-21 09:48:30.353   555   587 W ActivityManager: Slow operation: 149ms so far, now at startProcess: done creating new process record
+04-21 09:48:30.353   555   587 W ActivityManager: Slow operation: 149ms so far, now at startProcess: stepping in to startProcess
+04-21 09:48:30.353   555   587 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+04-21 09:48:30.353   555   587 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10192; state: DISABLED
+04-21 09:48:30.353   555   587 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10192; state: DISABLED
+04-21 09:48:30.353   555   587 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10192; state: ENABLED
+04-21 09:48:30.354   555   587 W ActivityManager: Slow operation: 150ms so far, now at startProcess: done starting proc!
+04-21 09:48:30.360  7248  7248 I Monkey  : ## Network stats: elapsed time=196ms (0ms mobile, 0ms wifi, 196ms not connected)
+04-21 09:48:30.369   555   596 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+04-21 09:48:30.377  7248  7248 I app_process: System.exit called, status: 0
+04-21 09:48:30.377  7248  7248 I AndroidRuntime: VM exiting with result code 0.
+04-21 09:48:30.386   362   362 D Zygote  : Forked child process 7280
+04-21 09:48:30.389   555   596 I ActivityManager: Start proc 7280:owasp.sat.agoat/u0a192 for next-top-activity {owasp.sat.agoat/owasp.sat.agoat.SplashActivity}
+04-21 09:48:30.391   951   993 W Looper  : Slow delivery took 192ms wmshell.main h=android.os.Handler c=android.window.TaskOrganizer$1$$ExternalSyntheticLambda8@270c131 m=0
+04-21 09:48:30.391   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@1c56016 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=14 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=1 lastActiveTime=195471 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@b54cd97} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{389bb84 owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+04-21 09:48:30.398   951   973 I ndroid.systemui: NativeAlloc concurrent copying GC freed 98903(4946KB) AllocSpace objects, 11(220KB) LOS objects, 49% free, 18MB/36MB, paused 142us,34us total 618.360ms
+04-21 09:48:30.426   951   993 W Looper  : Drained
+04-21 09:42:14.126     0     0 I logd    : logdr: UID=2000 GID=2000 PID=7281 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+04-21 09:48:30.442   951  1004 D SplashScreenView: Build android.window.SplashScreenView{a3def25 V.E...... ......ID 0,0-0,0}
+04-21 09:48:30.442   951  1004 D SplashScreenView: Icon: view: android.widget.ImageView{6da48fa V.ED..... ......I. 0,0-0,0 #10204f0 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@8896eab size: 504
+04-21 09:48:30.442   951  1004 D SplashScreenView: Branding: view: android.view.View{57e6908 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-21 09:48:30.445   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 

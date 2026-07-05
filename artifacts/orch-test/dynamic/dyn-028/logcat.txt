@@ -1,0 +1,21 @@
+--------- beginning of main
+05-12 09:19:02.456  6773  6773 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:19:02.460  6773  6773 I AndroidRuntime: Using default boot image
+05-12 09:19:02.460  6773  6773 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:19:02.462  6773  6773 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:19:02.463  6773  6773 I app_process: Using CollectorTypeCC GC.
+05-12 09:19:02.524  6773  6773 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:19:02.535  6773  6773 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:19:02.535  6773  6773 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:19:02.539  6773  6773 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:19:02.539  6773  6773 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:19:02.552  6773  6773 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:19:02.552  6773  6773 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:19:02.552  6773  6773 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:19:02.550  6773  6773 W main    : type=1400 audit(0.0:279): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:19:02.553  6773  6773 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:19:02.550  6773  6773 W main    : type=1400 audit(0.0:280): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:19:02.550  6773  6773 W main    : type=1400 audit(0.0:281): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+05-12 09:19:02.555   571  1378 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6773, uid=2000) that is not exported from UID 10192
+05-12 09:19:02.556  6773  6773 D AndroidRuntime: Shutting down VM

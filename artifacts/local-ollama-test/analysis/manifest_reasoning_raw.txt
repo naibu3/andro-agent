@@ -1,0 +1,78 @@
+{  
+   "app_name":"AndroidApp",  
+   "version_code":1,  
+   "version_name":"1.0",  
+   "package_name":"com.example.androidapp",  
+   "min_sdk_version":21,  
+   "target_sdk_version":30,  
+   "compile_sdk_version":30,  
+   "permissions":[  
+      {  
+         "name":"android.permission.ACCESS_FINE_LOCATION",  
+         "description":"Allows the app to access precise location data.",  
+         "dangerous":true  
+      },  
+      {  
+         "name":"android.permission.ACCESS_COARSE_LOCATION",  
+         "description":"Allows the app to access approximate location data.",  
+         "dangerous":true  
+      },  
+      {  
+         "name":"android.permission.CAMERA",  
+         "description":"Allows the app to use the camera.",  
+         "dangerous":true  
+      },  
+      {  
+         "name":"android.permission.READ_EXTERNAL_STORAGE",  
+         "description":"Allows the app to read from external storage.",  
+         "dangerous":true  
+      },  
+      {  
+         "name":"android.permission.WRITE_EXTERNAL_STORAGE",  
+         "description":"Allows the app to write to external storage.",  
+         "dangerous":true  
+      },  
+      {  
+         "name":"android.permission.RECEIVE_BOOT_COMPLETED",  
+         "description":"Allows the app to receive a broadcast when the device boots up.",  
+         "dangerous":true  
+      },  
+      {  
+         "name":"android.permission.VIBRATE",  
+         "description":"Allows the app to control vibration.",  
+         "dangerous":false  
+      }  
+   ],  
+   "components":[  
+      {  
+         "type":"activity",  
+         "name":"com.example.androidapp.SplashActivity",  
+         "exported":true,  
+         "permissions":["android.permission.ACCESS_FINE_LOCATION"]  
+      },  
+      {  
+         "type":"activity",  
+         "name":"com.example.androidapp.AccessControl1ViewActivity",  
+         "exported":true,  
+         "permissions":["android.permission.ACCESS_FINE_LOCATION"]  
+      },  
+      {  
+         "type":"service",  
+         "name":"com.example.androidapp.DownloadInvoiceService",  
+         "exported":true,  
+         "permissions":["android.permission.RECEIVE_BOOT_COMPLETED"]  
+      },  
+      {  
+         "type":"receiver",  
+         "name":"com.example.androidapp.ShowDataReceiver",  
+         "exported":true,  
+         "permissions":["android.permission.ACCESS_FINE_LOCATION"]  
+      },  
+      {  
+         "type":"provider",  
+         "name":"com.example.androidapp.ContentProviderActivity",  
+         "exported":true,  
+         "permissions":["android.permission.READ_EXTERNAL_STORAGE","android.permission.WRITE_EXTERNAL_STORAGE"]  
+      }  
+   ]  
+}

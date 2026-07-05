@@ -1,0 +1,634 @@
+{
+  "package_name": "com.indalweb.aficionFAB",
+  "version_code": null,
+  "version_name": null,
+  "min_sdk": null,
+  "target_sdk": null,
+  "compile_sdk_version": "35",
+  "permissions": [
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "com.android.vending.BILLING",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.WAKE_LOCK",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.sec.android.provider.badge.permission.READ",
+    "com.sec.android.provider.badge.permission.WRITE",
+    "com.htc.launcher.permission.READ_SETTINGS",
+    "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "com.sonyericsson.home.permission.BROADCAST_BADGE",
+    "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+    "com.anddoes.launcher.permission.UPDATE_COUNT",
+    "com.majeur.launcher.permission.UPDATE_BADGE",
+    "com.huawei.android.launcher.permission.CHANGE_BADGE",
+    "com.huawei.android.launcher.permission.READ_SETTINGS",
+    "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "android.permission.READ_APP_BADGE",
+    "com.oppo.launcher.permission.READ_SETTINGS",
+    "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "me.everything.badger.permission.BADGE_COUNT_READ",
+    "me.everything.badger.permission.BADGE_COUNT_WRITE",
+    "com.google.android.gms.permission.AD_ID",
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "android.permission.FOREGROUND_SERVICE",
+    "com.indalweb.aficionFAB.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "application": {
+    "debuggable": null,
+    "allow_backup": null,
+    "uses_cleartext_traffic": true,
+    "network_security_config": "@xml/network_security_config",
+    "request_legacy_external_storage": null,
+    "test_only": null,
+    "full_backup_content": null
+  },
+  "activities": [
+    {
+      "name": "com.indalweb.aficionFAB.MainActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.MAIN"
+          ],
+          "categories": [
+            "android.intent.category.LAUNCHER"
+          ],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.ads.AdActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.qonversion.android.sdk.automations.mvp.ScreenActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.ads.OutOfContextTestingActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.ads.NotificationHandlerActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.android.billingclient.api.ProxyBillingActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.android.billingclient.api.ProxyBillingActivityV2",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "activity_aliases": [],
+  "services": [
+    {
+      "name": "by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.firebase.MESSAGING_EVENT"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.messaging.FirebaseMessagingService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.firebase.MESSAGING_EVENT"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.components.ComponentDiscoveryService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.ads.AdService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": true,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemjob.SystemJobService",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": false,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.foreground.SystemForegroundService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.room.MultiInstanceInvalidationService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "receivers": [
+    {
+      "name": "nl.xservices.plugins.ShareChooserPendingIntent",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": true,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.SEND"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "com.google.android.c2dm.permission.SEND",
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.android.c2dm.intent.RECEIVE"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": true,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.ACTION_POWER_CONNECTED",
+            "android.intent.action.ACTION_POWER_DISCONNECTED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.BATTERY_OKAY",
+            "android.intent.action.BATTERY_LOW"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.DEVICE_STORAGE_LOW",
+            "android.intent.action.DEVICE_STORAGE_OK"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.net.conn.CONNECTIVITY_CHANGE"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.BOOT_COMPLETED",
+            "android.intent.action.TIME_SET",
+            "android.intent.action.TIMEZONE_CHANGED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "androidx.work.impl.background.systemalarm.UpdateProxies"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "android.permission.DUMP",
+      "enabled": true,
+      "intent_filters": [
+        {
+          "actions": [
+            "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "android.permission.DUMP",
+      "enabled": true,
+      "intent_filters": [
+        {
+          "actions": [
+            "androidx.profileinstaller.action.INSTALL_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SKIP_FILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SAVE_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "androidx.core.content.FileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.cdv.core.file.provider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "io.github.pwlin.cordova.plugins.fileopener2.FileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.fileOpener2.provider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "de.sitewaerts.cordova.documentviewer.FileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.DocumentViewerPlugin.fileprovider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "nl.xservices.plugins.FileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.sharing.provider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "com.google.android.gms.ads.MobileAdsInitProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.mobileadsinitprovider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.provider.FirebaseInitProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.firebaseinitprovider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "com.indalweb.aficionFAB.androidx-startup",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ]
+}

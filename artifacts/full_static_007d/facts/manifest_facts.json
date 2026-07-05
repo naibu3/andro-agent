@@ -1,0 +1,256 @@
+[
+  {
+    "type": "manifest.package",
+    "key": "package_name",
+    "value": "htb.d3vnu11.securenotes",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.compile_sdk_version",
+    "key": "compile_sdk_version",
+    "value": "35",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.allow_backup",
+    "key": "allow_backup",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.uses_cleartext_traffic",
+    "key": "uses_cleartext_traffic",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.request_legacy_external_storage",
+    "key": "request_legacy_external_storage",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.full_backup_content",
+    "key": "full_backup_content",
+    "value": "@xml/backup_rules",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_NETWORK_STATE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.INTERNET",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.MANAGE_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "htb.d3vnu11.securenotes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "htb.d3vnu11.securenotes.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "htb.d3vnu11.securenotes.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "htb.d3vnu11.securenotes.MainActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "htb.d3vnu11.securenotes.NoteActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "htb.d3vnu11.securenotes.NoteActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "htb.d3vnu11.securenotes.EditNoteActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "htb.d3vnu11.securenotes.EditNoteActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "htb.d3vnu11.securenotes.LoginActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "htb.d3vnu11.securenotes.LoginActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": "android.permission.DUMP",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": 4,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "androidx.startup.InitializationProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "androidx.startup.InitializationProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "androidx.startup.InitializationProvider",
+    "value": "htb.d3vnu11.securenotes.androidx-startup",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  }
+]

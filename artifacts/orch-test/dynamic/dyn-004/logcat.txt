@@ -1,0 +1,54 @@
+--------- beginning of main
+05-12 09:16:49.940  1296  3481 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.common.systemhealthutils.restart.GmsRestartPersistentService finished executing. cause:5 result: 1 elapsed_millis: 16 uptime_millis: 16 exec_start_elapsed_seconds: 70 [CONTEXT service_id=218 ]
+05-12 09:16:49.942  1495  1495 I PhenotypeModule: PhenotypeModule.receiveBroadcast():373 onReceive() urgent = false
+05-12 09:16:49.943  1495  1495 I PhenotypeModule: PhenotypeModule.maybeFetchAndUpdate():166 maybeFetchAndUpdate: start new task to fetch
+05-12 09:16:49.954  1495  2824 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.libraries.performance.primes#com.google.android.inputmethod.latin
+05-12 09:16:49.959  1495  1495 I PhenotypeModule: PhenotypeModule.receiveBroadcast():373 onReceive() urgent = false
+05-12 09:16:49.959  1495  1495 I PhenotypeBackgroundRecv: Skipping com.google.android.inputmethod.latin#com.google.android.inputmethod.latin which doesn't use ProcessStable flags.
+05-12 09:16:49.977  1920  4666 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.projection.gearhead
+05-12 09:16:49.982  1296  1345 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+05-12 09:16:49.982  1296  1345 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+05-12 09:16:49.984  1296  1345 I NamespaceManager: Package com.android.media name not found! Using module version.
+05-12 09:16:49.985  1296  1345 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+05-12 09:16:49.985  1296  1345 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+05-12 09:16:49.989  1296  1345 I NamespaceManager: Package com.android.media name not found! Using module version.
+05-12 09:16:49.992  1296  1345 I NamespaceManager: Package 1 name not found! Using module version.
+05-12 09:16:49.992  1296  1345 I NamespaceManager: Package rkpd name not found! Using module version.
+05-12 09:16:49.993  1296  1345 I NamespaceManager: Package android.companion name not found! Using module version.
+--------- beginning of system
+05-12 09:16:49.995   571  2509 W ActivityTaskManager: callingPackage for (uid=2000, pid=4670) has no WPC
+05-12 09:16:50.004  1296  1345 I NamespaceManager: Package com.google.android.aicore name not found! Using module version.
+05-12 09:16:50.009   571  2509 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+05-12 09:16:50.010   783   820 V WindowManagerShell: Transition requested: android.os.BinderProxy@853f342 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=25 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=4 lastActiveTime=70506 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@6e8df53} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{2649090 owasp.sat.agoat.AccessControl1ViewActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+05-12 09:16:50.011   571  2509 I ActivityTaskManager: START u0 {act=android.intent.action.VIEW dat=androgoat://vulnapp/... flg=0x10000000 cmp=owasp.sat.agoat/.AccessControl1ViewActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+05-12 09:16:50.025  1296  2256 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.common.systemhealthutils.restart.GmsRestartGmsService started execution. cause:5 exec_start_elapsed_seconds: 70 [CONTEXT service_id=218 ]
+05-12 09:16:50.029  1296  2256 E NanoAppLogging: Failed to begin contexthub communication
+05-12 09:16:50.030  1514  4650 V Backup  : [CustomDownloadSchedulingIO] Received Action: com.google.android.gms.phenotype.com.google.android.gms.backup.COMMITTED
+05-12 09:16:50.030  1514  4423 V Backup  : [G1ModuleInitIntentOperation] Flags updated
+05-12 09:16:50.030  1514  4650 V Backup  : [CustomDownloadSchedulingIO] listenToSetupWizardFinishedBroadcast or customBackupDownloadEnableSuwTriggerWithGmsUpdateCheck flag on
+05-12 09:16:50.032  1514  4650 V Backup  : [ShowPhotosNotifIO] Flag not enabled; returning.
+05-12 09:16:50.033  1514  4423 V Backup  : [G1ModuleInitIntentOperation] Running restore operation is disabled by flag
+05-12 09:16:50.034  1514  4423 W ChimeraUtils: Module com.google.android.gms.backup_g1 missing resource null(0)
+05-12 09:16:50.036  1514  4423 W ChimeraUtils: Module com.google.android.gms.backup_g1 missing resource null(0)
+05-12 09:16:50.038  1514  4423 W ChimeraUtils: Module com.google.android.gms.backup_g1 missing resource null(0)
+05-12 09:16:50.045  4625  4655 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.libraries.onegoogle#com.google.android.googlequicksearchbox
+05-12 09:16:50.051  1495  2008 E PhenotypeModule: PhenotypeModule.handlePhenotypeConfigurationUpdates():268 Get empty configurations.
+05-12 09:16:50.053  1296  4493 I PTCommittedOperation: Receive new configuration for com.google.android.gms.auth_account
+05-12 09:16:50.054  1495  2008 I PhenotypeModule: PhenotypeModule.lambda$fetchAndUpdate$2():220 fetchAndUpdate() : Success, hasFlags=false, fetchStatus=2026-05-12 09:16:49{reason=2, isFullFetch=false, success=true, isEmpty=true, isDelta=false, fetchedFlagsCount=0, deletedFlagsCount=0, updatedFlagsCount=0, totalTime=110}
+05-12 09:16:50.054  1514  4650 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+05-12 09:16:50.055   429   429 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+05-12 09:16:50.055  1514  4650 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+05-12 09:16:50.058  1514  4674 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+05-12 09:16:50.058  1514  4674 V Backup  : [PhenotypeConfigIO] Phenotype broadcast received for different package
+05-12 09:16:50.059  1514  4674 I SyncIntentOperation: Handling the intent: Intent { act=com.google.android.gms.phenotype.COMMITTED flg=0x10 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }. [CONTEXT service_id=80 ]
+05-12 09:16:50.080  1514  4683 I MdiSyncModule: flag handling is skipping irrelevant intent.
+05-12 09:16:50.080  1514  4683 I MlBenchmarkInstaller: Intent: com.google.android.gms.phenotype.COMMITTED [CONTEXT service_id=340 ]
+05-12 09:16:50.080  1514  4683 I MlBenchmarkInstaller: COMMITTED Extra package name: com.google.android.gms.auth_account [CONTEXT service_id=340 ]
+05-12 09:16:50.085  1626  3239 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+05-12 09:16:50.092  4625  4625 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.googleapp.user#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+05-12 09:16:50.094  4625  4625 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.search.assistant.mobile.user#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+05-12 09:16:50.095  1514  4680 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+05-12 09:16:50.099  1296  1345 I NamespaceManager: Package com.google.android.audioproxy name not found! Using module version.
+05-12 09:16:50.099  1296  1345 I NamespaceManager: Package com.google.android.apps.pixel.psi name not found! Using module version.
+05-12 09:16:50.099  1296  1345 I NamespaceManager: Package com.google.android.apps.safetycore name not found! Using module version.
+05-12 09:16:50.099  1296  1345 I NamespaceManager: Package com.google.android.crashrecovery name not found! Using module version.

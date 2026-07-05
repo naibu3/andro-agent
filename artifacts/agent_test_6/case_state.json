@@ -1,0 +1,36 @@
+{
+  "case_id": "agent_test_6",
+  "apk_path": "samples/AndroGoat.apk",
+  "manifest_json_path": "artifacts/agent_test_6/parsed/manifest.json",
+  "facts_path": "artifacts/agent_test_6/facts/manifest_facts.json",
+  "findings_path": "artifacts/agent_test_6/findings/manifest_findings.json",
+  "analysis_path": "artifacts/agent_test_6/analysis/analysis.json",
+  "analysis_raw_path": "artifacts/agent_test_6/analysis/analysis_raw.txt",
+  "status": "completed",
+  "current_step": "analysis_agent",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "agent": "analysis_agent",
+      "success": true,
+      "output": "artifacts/agent_test_6/analysis/analysis.json",
+      "raw_output": "artifacts/agent_test_6/analysis/analysis_raw.txt"
+    },
+    {
+      "agent": "analysis_agent",
+      "success": true,
+      "output": "artifacts/agent_test_6/analysis/analysis.json",
+      "raw_output": "artifacts/agent_test_6/analysis/analysis_raw.txt"
+    },
+    {
+      "agent": "analysis_agent",
+      "output": "artifacts/agent_test_6/analysis/analysis.json"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

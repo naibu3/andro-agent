@@ -1,0 +1,38 @@
+--------- beginning of main
+05-12 09:18:18.407  3654  3771 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+05-12 09:18:18.456  6214  6214 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:18:18.460  6214  6214 I AndroidRuntime: Using default boot image
+05-12 09:18:18.460  6214  6214 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:18:18.461  6214  6214 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:18:18.462  6214  6214 I app_process: Using CollectorTypeCC GC.
+05-12 09:18:18.507  3654  3771 V RkpdServerInterface: Requesting data from server. Attempt 2
+05-12 09:18:18.507  3654  3771 D TrafficStats: tagSocket(6) with statsTag=0x0, statsUid=-1
+05-12 09:18:18.522  6214  6214 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:18:18.534  6214  6214 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:18:18.534  6214  6214 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:18:18.539  6214  6214 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:18:18.539  6214  6214 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:18:18.551  6214  6214 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:18:18.552  6214  6214 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:18:18.552  6214  6214 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:18:18.550  6214  6214 W main    : type=1400 audit(0.0:205): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:18.553  6214  6214 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:18:18.550  6214  6214 W main    : type=1400 audit(0.0:206): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:18.550  6214  6214 W main    : type=1400 audit(0.0:207): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+05-12 09:18:18.555   571  2049 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6214, uid=2000) that is not exported from UID 10192
+05-12 09:18:18.556  6214  6214 D AndroidRuntime: Shutting down VM
+05-12 09:18:18.576  3654  3771 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+05-12 09:18:18.777  3654  3771 V RkpdServerInterface: Requesting data from server. Attempt 3
+05-12 09:18:18.778  3654  3771 D TrafficStats: tagSocket(6) with statsTag=0x0, statsUid=-1
+05-12 09:18:18.807   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:114 - ### Keystore Watchdog report - BEGIN ###
+05-12 09:18:18.807   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:123 - When extracting from a bug report, please include this header
+05-12 09:18:18.807   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:124 - and all 1 records below.
+05-12 09:18:18.807   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:164 - ThreadId(5) Calling get_rkpd_attestation_key() Pending: 500.296555ms Overdue 296.961µs
+05-12 09:18:18.808   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:175 - ### Keystore Watchdog report - END ###
+05-12 09:18:18.837   571   659 D ActivityManager: freezing 2564 com.google.android.apps.messaging
+05-12 09:18:18.856  3654  3771 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+05-12 09:18:18.933   965   965 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=159437 mSleepTimeMs=0 mIdleTimeMs=154400 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+05-12 09:18:19.256  3654  3771 V RkpdServerInterface: Requesting data from server. Attempt 4
+05-12 09:18:19.257  3654  3771 D TrafficStats: tagSocket(6) with statsTag=0x0, statsUid=-1
+05-12 09:18:19.332  3654  3771 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.

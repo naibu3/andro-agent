@@ -1,0 +1,29 @@
+--------- beginning of main
+05-12 09:18:45.986  6564  6564 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:18:45.990  6564  6564 I AndroidRuntime: Using default boot image
+05-12 09:18:45.990  6564  6564 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:18:45.992  6564  6564 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:18:45.992  6564  6564 I app_process: Using CollectorTypeCC GC.
+05-12 09:18:46.051  6564  6564 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:18:46.061  6564  6564 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:18:46.061  6564  6564 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:18:46.065  6564  6564 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:18:46.065  6564  6564 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:18:46.078  6564  6564 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:18:46.078  6564  6564 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:18:46.078  6564  6564 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:18:46.074  6564  6564 W main    : type=1400 audit(0.0:252): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:46.079  6564  6564 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:18:46.078  6564  6564 W main    : type=1400 audit(0.0:253): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:18:46.078  6564  6564 W main    : type=1400 audit(0.0:254): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+05-12 09:18:46.081   571  1010 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6564, uid=2000) that is not exported from UID 10192
+05-12 09:18:46.082  6564  6564 D AndroidRuntime: Shutting down VM
+05-12 09:18:46.718  1296  3481 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.telephonyspam.sync.SpamListSyncTaskService started execution. cause:4 exec_start_elapsed_seconds: 187 [CONTEXT service_id=218 ]
+05-12 09:18:46.719  1514  3905 I TelephonySpamChimeraSer: Running Telephony Spam Chimera Service [CONTEXT service_id=150 ]
+05-12 09:18:46.720  1514  3905 I TelephonySpamChimeraSer: Cleaning SIP Header local table of old entries [CONTEXT service_id=150 ]
+05-12 09:18:46.720  1514  3905 I SpamListSync: Call spam module disabled. Skipping cleaning cache sip header table. [CONTEXT service_id=150 ]
+05-12 09:18:46.720  1514  3905 I TelephonySpamChimeraSer: Syncing Call Spam List [CONTEXT service_id=150 ]
+05-12 09:18:46.720  1514  3905 I SpamListSync: SpamListSyncChimeraService.syncSpamList called with tag: telephonyspam.SpamListSyncOneOffTask, extras: Bundle[{SpamList Type=0, Action=1.0}] [CONTEXT service_id=150 ]
+05-12 09:18:46.721  1514  3905 I SpamListSync: Call spam module disabled. Skipping spam list syncing. [CONTEXT service_id=150 ]
+05-12 09:18:46.722  1296  3479 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.telephonyspam.sync.SpamListSyncTaskService finished executing. cause:4 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 187 [CONTEXT service_id=218 ]

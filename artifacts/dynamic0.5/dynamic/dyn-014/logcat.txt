@@ -1,0 +1,36 @@
+--------- beginning of main
+04-21 14:15:59.061 10054 10054 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 14:15:59.065 10054 10054 I AndroidRuntime: Using default boot image
+04-21 14:15:59.065 10054 10054 I AndroidRuntime: Leaving lock profiling enabled
+04-21 14:15:59.067 10054 10054 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 14:15:59.067 10054 10054 I app_process: Using CollectorTypeCC GC.
+04-21 14:15:59.129 10054 10054 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 14:15:59.138 10054 10054 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 14:15:59.138 10054 10054 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 14:15:59.142 10054 10054 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 14:15:59.142 10054 10054 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 14:15:59.154 10054 10054 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 14:15:59.154 10054 10054 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 14:15:59.155 10054 10054 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 14:15:59.151 10054 10054 W main    : type=1400 audit(0.0:472): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:15:59.155 10054 10054 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 14:15:59.151 10054 10054 W main    : type=1400 audit(0.0:473): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:15:59.151 10054 10054 W main    : type=1400 audit(0.0:474): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:15:59.157 10054 10054 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:15:59.157 10054 10054 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:15:59.157 10054 10054 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: Writing exception to parcel
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/profile
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 14:15:59.159  9393  9418 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 14:15:59.160 10054 10054 D AndroidRuntime: Shutting down VM
+04-21 14:16:00.003  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 14:16:00.003  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 14:16:00.003  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 14:16:00.003  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 14:16:00.004  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])

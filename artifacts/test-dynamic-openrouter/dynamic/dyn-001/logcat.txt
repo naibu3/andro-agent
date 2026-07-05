@@ -1,0 +1,576 @@
+--------- beginning of main
+06-03 17:21:47.288  3037  3037 D CompatibilityChangeReporter: Compat change id reported: 3400644; UID 10084; state: ENABLED
+06-03 17:21:47.344  1663  1971 I ZipLPPopulator: Updated file group for group 'langpack-domain_en-US_3008_zipfile' from location: https://dl.google.com/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip
+06-03 17:21:47.344  1663  1971 I ZipLPPopulator: Updated file group for group 'langpack-domain_en-US_3008_zipfile' from location: https://dl.google.com/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip
+06-03 17:21:47.345  1663  1971 I lpi     : #getPendingPackages
+06-03 17:21:47.346  1663  1971 I DownloaderCallbacksTrig: No #onInstallRequest callbacks registered. Request logged for en-US_v3008
+06-03 17:21:47.346  1663  1971 I LPRequestState: [ManagerRequests] #resolveUnusedLanguagePacks
+06-03 17:21:47.346  1663  1971 I LPRequestState: [ManagerRequests] #resolveDesiredLanguagePacks
+06-03 17:21:47.364  1841  2986 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+06-03 17:21:47.371  1663  2095 I AiAiStatsd: Successfully logged feature enablement for ECHO_ALL_APPS.
+06-03 17:21:47.382  1784  2156 W s.youtube.music: Long monitor contention with owner yt-critical12-4 (2433) at java.lang.Object bflx.a()(PG:2) waiters=0 in java.lang.Object bflx.a() for 1.082s
+06-03 17:21:47.400  1842  2860 D TrafficStats: tagSocket(103) with statsTag=0x8003, statsUid=-1
+06-03 17:21:47.403   786   866 D EGL_emulation: app_time_stats: avg=7180.47ms min=7180.47ms max=7180.47ms count=1
+06-03 17:21:47.421  1549  1941 I SP      : Sync for dynamic_art succeeded in 285 ms: no changes
+06-03 17:21:47.422  1549  1941 I SP      : GC for 'dynamic_art' (10) with ttl of 0 ms took 0 ms (0/0/0)
+06-03 17:21:47.437  1841  2311 W earchbox:search: Long monitor contention with owner BG Thread #1 (2267) at void java.lang.Runtime.loadLibrary0(java.lang.ClassLoader, java.lang.Class, java.lang.String)(Runtime.java:1084) waiters=0 in void java.lang.Runtime.loadLibrary0(java.lang.ClassLoader, java.lang.Class, java.lang.String) for 650ms
+06-03 17:21:47.445  1841  2267 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1776755101943]
+06-03 17:21:47.451  2767  2998 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES" ]
+06-03 17:21:47.535  2767  2975 I DialerDialerBlockedNumberPhoneLookupContributor: com.android.dialer.phonelookup.blockednumber.DialerBlockedNumberPhoneLookupContributor.getMostRecentInfo:99 getMostRecentInfo
+06-03 17:21:47.535  2767  2975 I DialerSystemBlockedNumberPhoneLookupContributor: com.android.dialer.phonelookup.blockednumber.SystemBlockedNumberPhoneLookupContributor.getMostRecentInfo:104 getMostRecentInfo
+06-03 17:21:47.569  1841  2370 I MicroDataManager: MicroDataManager InitializationTask. googleHotwordData is null: true, hotwordModel is null: false , sourceLocationOfCurrentHotwordModel https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data
+06-03 17:21:47.570  1841  2952 I A       : Using proto config with mendel
+06-03 17:21:47.571  1841  2952 I A       : Using proto config with mendel
+06-03 17:21:47.571  1841  2952 I A       : Using proto config with mendel
+06-03 17:21:47.572  1841  2952 I A       : Merging legacy hotword config map with new proto.
+06-03 17:21:47.572  1841  2952 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+06-03 17:21:47.572  1841  2952 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+06-03 17:21:47.572  1841  2952 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+06-03 17:21:47.572  1841  2952 I A       : Skipping. Expected model: 2 Found: 1
+06-03 17:21:47.572  1841  2952 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+06-03 17:21:47.573  1841  2952 I MicroDetectionState: Should stop hotword detection immediately - true
+06-03 17:21:47.579   786   866 D EGL_emulation: app_time_stats: avg=7259.10ms min=7259.10ms max=7259.10ms count=1
+06-03 17:21:47.581  1841  2952 I A       : Using proto config with mendel
+06-03 17:21:47.581  1841  2952 I A       : Using proto config with mendel
+06-03 17:21:47.604  3037  3037 D nativeloader: Configuring clns-shared-6 for other apk /system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk. target_sdk_version=34, uses_libraries=, library_path=/system/priv-app/ExternalStorageProvider/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.externalstorage:/system/priv-app/ExternalStorageProvider:/system/lib64:/system_ext/lib64
+--------- beginning of kernel
+06-03 17:21:47.770     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+06-03 17:21:47.671  1784  2121 W s.youtube.music: Long monitor contention with owner yt-critical12-4 (2433) at java.lang.Object bflx.a()(PG:2) waiters=0 in java.lang.Object bflx.a() for 1.381s
+06-03 17:21:47.689  1663  2095 I AiAiStatsd: Successfully logged feature enablement for HYBRID_HOTSEAT.
+06-03 17:21:47.697   163   163 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+06-03 17:21:47.702  2767  2973 I GnpSdk  : [GrowthKitBootCompletedListener] GrowthKit enabled by flag, registered to Phenotype and schedule jobs.
+06-03 17:21:47.704  1841  2267 W A       : Couldn't calculate ClientInstanceId, no account name
+--------- beginning of system
+06-03 17:21:47.714  2767  2767 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.dialer
+06-03 17:21:47.716  1841  2986 I Gralloc4: mapper 4.x is not supported
+06-03 17:21:47.719  1784  1784 E YouTubeMusic: Trying to detachMediaView when it wasn't the most recent MediaView Setter
+06-03 17:21:47.721  1784  1784 E Widget.RecentlyPlayed: Filling bundle but recently played items are EMPTY.
+06-03 17:21:47.729  2767  2767 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.dialer
+06-03 17:21:47.887     0     0 I servicemanager: Notifying apexservice they don't (previously: do) have clients when we now have no record of a client
+06-03 17:21:47.888     0     0 I servicemanager: Notifying artd they don't (previously: do) have clients when we now have no record of a client
+06-03 17:21:47.890     0     0 I AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification apexservice has clients: 0
+06-03 17:21:47.896     0     0 I AidlLazyServiceRegistrar: Trying to shut down the service. No clients in use for any service in process.
+06-03 17:21:47.781  2511  2559 I AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification artd has clients: 0
+06-03 17:21:47.781  2511  2559 I AidlLazyServiceRegistrar: Trying to shut down the service. No clients in use for any service in process.
+06-03 17:21:47.904     0     0 I servicemanager: Unregistering apexservice
+06-03 17:21:47.905     0     0 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+06-03 17:21:47.796  1842  2860 D TrafficStats: tagSocket(103) with statsTag=0x8003, statsUid=-1
+06-03 17:21:47.797  1784  2134 E Widget.RecentlyPlayed: Filling bundle but recently played items are EMPTY.
+06-03 17:21:47.916     0     0 I AidlLazyServiceRegistrar: Unregistered all clients and exiting
+06-03 17:21:47.917     0     0 I servicemanager: Unregistering artd
+06-03 17:21:47.811  1663  1971 I DownloaderCallbacksTrig: No #onInstallRequest callbacks registered. Request logged for en-US_v3008
+06-03 17:21:47.812  1663  1971 I LPRequestState: [ManagerRequests] #resolveUnusedLanguagePacks
+06-03 17:21:47.812  1663  1971 I LPRequestState: [ManagerRequests] #resolveDesiredLanguagePacks
+06-03 17:21:47.812  1663  1971 I DefaultLPManager: #calculateRolledBackPacks
+06-03 17:21:47.813  1663  1971 I LanguagePackMaintenance: Background deleting 0 stale packs: 
+06-03 17:21:47.952     0     0 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+06-03 17:21:47.836  2511  2559 I AidlLazyServiceRegistrar: Unregistered all clients and exiting
+06-03 17:21:47.872   786   786 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+06-03 17:21:47.873   786   786 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+06-03 17:21:47.888  3037  3037 V GraphicsEnvironment: Currently set values for:
+06-03 17:21:47.888  3037  3037 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+06-03 17:21:47.888  3037  3037 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+06-03 17:21:47.892   786   786 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+06-03 17:21:47.892  3037  3037 V GraphicsEnvironment: ANGLE GameManagerService for com.android.externalstorage: false
+06-03 17:21:47.894  3037  3037 V GraphicsEnvironment: com.android.externalstorage is not listed in per-application setting
+06-03 17:21:47.894  3037  3037 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+06-03 17:21:47.896   786   786 D NavigationModeController: ACTION_OVERLAY_CHANGED
+06-03 17:21:47.897   786   786 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+06-03 17:21:47.897   786   786 D NavigationModeController: getCurrentInteractionMode: mode=2 contextUser=0
+06-03 17:21:47.897   786   786 D NavigationModeController: updateCurrentInteractionMode: mode=2
+06-03 17:21:47.897   786   786 D NavigationModeController:   contextUser=0
+06-03 17:21:47.899   786   786 D NavigationModeController:   assetPaths=
+06-03 17:21:47.899   786   786 D NavigationModeController:     <empty> and /system/framework/framework-res.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /vendor/overlay/framework-res__auto_generated_rro_vendor.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/GoogleConfigOverlay.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/GoogleWebViewOverlay.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/LargeScreenConfigOverlay.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/PixelConfigOverlayCommon.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/framework-res__auto_generated_rro_product.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     <empty> and /system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/EmulationPixel6/EmulationPixel6Overlay.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/SystemUIGoogle__auto_generated_rro_product.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/SystemUIEmulationPixel6/SystemUIEmulationPixel6Overlay.apk
+06-03 17:21:47.899   786   786 D NavigationModeController:     /product/overlay/SystemUIGXOverlay.apk
+06-03 17:21:47.900   786   786 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+06-03 17:21:47.912   786   786 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+06-03 17:21:47.921  2767  2963 I DialerBusinessMessagingSuggestEnabledFn: com.android.dialer.businessvoice.businessmessagingsuggest.impl.BusinessMessagingSuggestEnabledFn.isEnabled:29 disabled by flag [CONTEXT ratelimit_period="1 MINUTES" ]
+06-03 17:21:47.937   786   786 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: Object tried to add another callback
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: java.lang.Exception: Called by
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at com.android.keyguard.KeyguardUpdateMonitor.registerCallback(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:38)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at com.android.keyguard.CarrierTextManager$$ExternalSyntheticLambda0.run(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:35)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Handler.handleCallback(Handler.java:958)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Looper.loopOnce(Looper.java:205)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Looper.loop(Looper.java:294)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at android.app.ActivityThread.main(ActivityThread.java:8177)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at java.lang.reflect.Method.invoke(Native Method)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)
+06-03 17:21:47.939   786   898 E KeyguardUpdateMonitorLog: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: Object tried to add another callback
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: java.lang.Exception: Called by
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at com.android.keyguard.KeyguardUpdateMonitor.registerCallback(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:38)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at com.android.keyguard.CarrierTextManager$$ExternalSyntheticLambda0.run(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:35)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Handler.handleCallback(Handler.java:958)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Looper.loopOnce(Looper.java:205)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at android.os.Looper.loop(Looper.java:294)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at android.app.ActivityThread.main(ActivityThread.java:8177)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at java.lang.reflect.Method.invoke(Native Method)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)
+06-03 17:21:47.940   786   898 E KeyguardUpdateMonitorLog: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+06-03 17:21:47.943   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.943   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.944   786   786 D SsMediaDataProvider: Forwarding Smartspace updates []
+06-03 17:21:47.944   786   786 D SsMediaDataProvider: Forwarding Smartspace updates []
+06-03 17:21:47.944   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.944   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.944   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.948   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.949   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.949   786   786 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10168; state: ENABLED
+06-03 17:21:47.954   786   786 D SsMediaDataProvider: Forwarding Smartspace updates []
+06-03 17:21:47.954   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.957  3037  3037 D ExternalStorage: After updating volumes, found 1 active roots
+06-03 17:21:47.959   786   786 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+06-03 17:21:47.959   786   786 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+06-03 17:21:47.960   786   786 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+06-03 17:21:47.961   786   786 I Choreographer: Skipped 67 frames!  The application may be doing too much work on its main thread.
+06-03 17:21:48.135     0     0 I init    : Service 'apexd' (pid 223) exited with status 0 oneshot service took 78.143997 seconds in background
+06-03 17:21:48.139     0     0 I init    : Sending signal 9 to service 'apexd' (pid 223) process group...
+06-03 17:21:48.143     0     0 I libprocessgroup: Successfully killed process cgroup uid 0 pid 223 in 0ms
+06-03 17:21:48.041  1842  2519 W GoogleApiManager: pno could not execute call because it requires feature (get_storage_info_api, 1).
+06-03 17:21:48.053  1841  3090 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[NexusLauncherActivity]#0) as ready
+06-03 17:21:48.053  1841  3090 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[NexusLauncherActivity]#1) as ready
+06-03 17:21:48.083  2767  2998 I DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$execute$6:166 Beginning VVM action: SYNC with retryCount: 0 [CONTEXT enable_persistent_logger=true ]
+06-03 17:21:48.083   573  2264 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10132 pid=0
+06-03 17:21:48.083   573  2264 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10132 => denied (192 us)
+06-03 17:21:48.083   573  2264 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10132 pid=0
+06-03 17:21:48.083   573  2264 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10132 => denied (38 us)
+06-03 17:21:48.084   573  2264 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10132 pid=0
+06-03 17:21:48.084   573  2264 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10132 => denied (47 us)
+06-03 17:21:48.097  2767  2974 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_SYNC_STARTED
+06-03 17:21:48.111   573   637 D SystemServerTiming: getUserSwitchability-0
+06-03 17:21:48.114  2767  2975 I DialerLegacyCountryDetector: com.android.dialer.location.LegacyCountryDetector.getCurrentCountryIso:134 returning Redacted-2-chars
+06-03 17:21:48.117  2767  2998 I DialerRestartCompletedReceiver: com.android.dialer.businessvoice.verifiedcall.impl.registration.RestartCompletedReceiver.lambda$enqueueWorker$2:116 Enqueued worker: CONSTELLATION_SYNC
+06-03 17:21:48.119   573   637 D SystemServerTiming: TM.isInCall
+06-03 17:21:48.124   573   637 V SystemServerTiming: TM.isInCall took to complete: 5ms
+06-03 17:21:48.124   573   637 D SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH
+06-03 17:21:48.124   573   637 V SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH took to complete: 0ms
+06-03 17:21:48.124   573   637 D SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED
+06-03 17:21:48.124   573   637 V SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED took to complete: 0ms
+06-03 17:21:48.124   573   637 D SystemServerTiming: isUserUnlocked-USER_SYSTEM
+06-03 17:21:48.124   573   637 V SystemServerTiming: isUserUnlocked-USER_SYSTEM took to complete: 0ms
+06-03 17:21:48.124   573   637 V SystemServerTiming: getUserSwitchability-0 took to complete: 5ms
+06-03 17:21:48.168  2767  2767 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.dialer
+06-03 17:21:48.169  2767  2767 I DialerVoicemailPowerCycleReceiver: com.android.voicemail.VoicemailPowerCycleReceiver.onReceive:42 onReceive with intent action: android.intent.action.BOOT_COMPLETED
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$executeWorkOnCarrierService$14:301 Could not complete vvm work
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: java.lang.IllegalStateException: VvmStatusSms should be present at this point but is absent.
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at jnd.get(PG:32)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at java.util.Optional.orElseThrow(Optional.java:404)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at cuc.call(PG:105)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at svs.call(PG:7)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at swe.a(Unknown Source:2)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at sxh.run(PG:3)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at ocg.run(PG:1)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at oca.run(PG:19)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at oca.run(PG:32)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at java.lang.Thread.run(Thread.java:1012)
+06-03 17:21:48.174  2767  2998 W DialerVvmExecutorImpl: 	at ocj.run(PG:6)
+06-03 17:21:48.180  2767  2998 W DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$executeWorkOnCarrierService$15:326 Could not complete vvm work with action: SYNC. Error: [GeneralFailureReason: FAILED_FUTURE, RestFailureReason: REST_UNSPECIFIED, OmtpFailureReason: OMTP_UNSPECIFIED] [CONTEXT enable_persistent_logger=true ]
+06-03 17:21:48.198   573  1660 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 10084. pid: 3037
+06-03 17:21:48.199  3037  3037 D ExternalStorage: After updating volumes, found 1 active roots
+06-03 17:21:48.201   573   658 D ActivityManager: freezing 1959 com.android.printspooler
+06-03 17:21:48.259  2767  2975 I WM-WorkerWrapper: Worker result FAILURE for Work [ id=3556500d-b6d5-4d0e-be71-3a4b84e013bb, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, 1, SYNC, TikTokWorker#com.android.dialer.voicemail.service.impl.VvmTaskWorker } ]
+06-03 17:21:48.442     0     0 I init    : Service 'artd' (pid 2511) exited with status 0 oneshot service took 10.262000 seconds in background
+06-03 17:21:48.448     0     0 I init    : Sending signal 9 to service 'artd' (pid 2511) process group...
+06-03 17:21:48.449     0     0 I libprocessgroup: Successfully killed process cgroup uid 1082 pid 2511 in 0ms
+06-03 17:21:48.340  1793  1872 W SQLiteLog: (28) double-quoted string literal: "1780327308340"
+06-03 17:21:48.340  1793  1872 W SQLiteLog: (28) double-quoted string literal: "1"
+06-03 17:21:48.355   573   593 W Looper  : Slow dispatch took 171ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=68
+06-03 17:21:48.411  3037  3037 D ExternalStorage: After updating volumes, found 1 active roots
+06-03 17:21:48.467  1663  2095 I AiAiTextClassifier: [KnowledgeGraphCollectionsTableDownloaderImpl] reading KnowledgeGraphCollectionsTable from path /data/user/0/com.google.android.as/files/superpacks/kg_collections_table/collections_table_main_21980965fbd997111d89f86c16e9e090/collections_table.
+06-03 17:21:48.469   573   593 W Looper  : Slow dispatch took 105ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=com.android.server.am.UidObserverController$$ExternalSyntheticLambda0@b8d4843 m=0
+06-03 17:21:48.470  1663  2095 I AiAiTextClassifier: [TcLibModelManagerImpl]: downloadNewModelRecursively: packSet downloaded successfully: https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/superpacks_manifest.zip
+06-03 17:21:48.473  1663  2095 I AiAiTextClassifier: [TcLibModelManagerImpl]: downloadNewModelRecursively: packSet downloaded successfully: https://gstatic.com/matchmaker/tclib_models/actions/v104/en-us/superpacks_manifest.zip
+06-03 17:21:48.477   786  3083 I OpenGLRenderer: Davey! duration=1494ms; Flags=0, FrameTimelineVsyncId=5732, IntendedVsync=87814816438, Vsync=88931483060, InputEventId=0, HandleInputStart=88936378218, AnimationStart=88936379615, PerformTraversalsStart=88937630107, DrawStart=88960740755, FrameDeadline=87831483104, FrameInterval=88936144124, FrameStartTime=16666666, SyncQueued=88961390759, SyncStart=89069128859, IssueDrawCommandsStart=89069362730, SwapBuffers=89115003008, FrameCompleted=89417407003, DequeueBufferDuration=16435, QueueBufferDuration=2925813, GpuCompleted=89417277203, SwapBuffersCompleted=89417407003, DisplayPresentTime=0, CommandSubmissionCompleted=89115003008, 
+06-03 17:21:48.479  1663  2095 I AiAiTextClassifier: [TcLibModelManagerImpl]: downloadNewModelRecursively: packSet downloaded successfully: https://gstatic.com/matchmaker/tclib_models/langid/v1/superpacks_manifest.zip
+06-03 17:21:48.501  2767  2767 I DialerVoicemailModule: com.android.voicemail.impl.VoicemailModule.provideVoicemailClient:79 providing VoicemailClientImpl [CONTEXT enable_persistent_logger=true ]
+06-03 17:21:48.512   996   996 I ImsResolver: Received BOOT_COMPLETED
+06-03 17:21:48.512   996  1169 D ImsResolver: maybeAddedImsService, packageName: null
+06-03 17:21:48.515  2767  2767 I DialerDialerVisualVoicemailService: com.android.voicemail.impl.DialerVisualVoicemailService.onBoot:258 onBoot [CONTEXT enable_persistent_logger=true ]
+06-03 17:21:48.539   996   996 D CarrierConfigLoader: mHandler: EVENT_SYSTEM_UNLOCKED phoneId: 0
+06-03 17:21:48.539   996   996 D CarrierConfigLoader: System unlocked
+06-03 17:21:48.539   996   996 D CarrierConfigLoader: mHandler: EVENT_DO_FETCH_DEFAULT phoneId: 0
+06-03 17:21:48.549   786   786 D TileServices: Couldn't find tile for ComponentInfo{com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.screen.ui.GrayscaleTileService}(0)
+06-03 17:21:48.551   996   996 D CarrierConfigLoader: File not found : /data/user_de/0/com.android.phone/files/carrierconfig-com.android.carrierconfig-override-89860***************-1.xml
+06-03 17:21:48.552   996   996 D CarrierConfigLoader: Loaded config from XML. package=com.android.carrierconfig phoneId=0
+06-03 17:21:48.552   996   996 D CarrierConfigLoader: mHandler: EVENT_FETCH_DEFAULT_DONE phoneId: 0
+06-03 17:21:48.552   996   996 D CarrierConfigLoader: updateSubscriptionDatabase: phoneId=0
+06-03 17:21:48.556   996  1124 D TelephonyProvider: subIdString = 1 subId = 1
+06-03 17:21:48.560   996   996 D MultiSimSettingController: notifySubscriptionInfoChanged
+06-03 17:21:48.579  2767  2985 I DialerVisualVoicemailUpdateTask: com.android.dialer.app.calllog.VisualVoicemailUpdateTask.lambda$updateNotification$2:148 no voicemails to notify about
+06-03 17:21:48.580  2767  2985 I DialerVisualVoicemailNotifier: com.android.dialer.app.calllog.VisualVoicemailNotifier.cancelAllVoicemailNotifications:278 enter
+06-03 17:21:48.584  2767  2985 I DialerVoicemailNotificationJobService: com.android.dialer.app.calllog.VoicemailNotificationJobService.cancelJob:69 cancelJob
+06-03 17:21:48.594   573   720 E AppOps  : attributionTag VCN not declared in manifest of android
+06-03 17:21:48.610  1716  2728 I BugleRcsEngine: [66] bscg.c: SIM state event delay enabled: attempts 1, maxAttempts 3, delaySeconds 90 MSIM delayseconds 90, effective delay seconds 90
+06-03 17:21:48.632  1716  2728 I BugleRcsEngine: [66] bscg.c: posted simEventProcessTask to handler with delay 90
+06-03 17:21:48.637   573  1199 D CompatibilityChangeReporter: Compat change id reported: 157233955; UID 1000; state: ENABLED
+06-03 17:21:48.647   996   996 D CarrierConfigLoader: mHandler: EVENT_SUBSCRIPTION_INFO_UPDATED phoneId: 0
+06-03 17:21:48.670   996  1128 D CellBroadcastConfigTracker-0: IdleState message:5
+06-03 17:21:48.677   996  1128 D CellBroadcastConfigTracker-0: DefaultState message:5
+06-03 17:21:48.707   573   573 I AS.AudioService: onSubscriptionsChanged()
+06-03 17:21:48.716  1841  2267 W A       : Didn't find the session (MAIN_FEED, true)
+06-03 17:21:48.745  3113  3113 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+06-03 17:21:48.761   573   595 D ColorDisplayService: GlobalSaturationTintController Animation cancelled: false to matrix: 
+06-03 17:21:48.761   573   595 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 min matrix coefficients: 
+06-03 17:21:48.761   573   595 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 max matrix coefficients: 
+06-03 17:21:48.761   573   595 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+06-03 17:21:48.793  3113  3113 I AndroidRuntime: Using default boot image
+06-03 17:21:48.793  3113  3113 I AndroidRuntime: Leaving lock profiling enabled
+06-03 17:21:48.799  3113  3113 I app_process: Core platform API reporting enabled, enforcing=false
+06-03 17:21:48.811  3113  3113 I app_process: Using CollectorTypeCC GC.
+06-03 17:21:48.850   786   786 I Choreographer: Skipped 50 frames!  The application may be doing too much work on its main thread.
+06-03 17:21:48.868   370   439 I netd    : bandwidthRemoveInterfaceQuota(eth0) <57.70ms>
+06-03 17:21:48.883   370   439 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <7.17ms>
+06-03 17:21:48.962   573   637 D SystemServerTiming: getUserSwitchability-0
+06-03 17:21:48.962   573   637 D SystemServerTiming: TM.isInCall
+06-03 17:21:48.963   573   637 V SystemServerTiming: TM.isInCall took to complete: 1ms
+06-03 17:21:48.963   573   637 D SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH
+06-03 17:21:48.963   573   637 V SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH took to complete: 0ms
+06-03 17:21:48.963   573   637 D SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED
+06-03 17:21:48.963   573   637 V SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED took to complete: 0ms
+06-03 17:21:48.963   573   637 D SystemServerTiming: isUserUnlocked-USER_SYSTEM
+06-03 17:21:48.963   573   637 V SystemServerTiming: isUserUnlocked-USER_SYSTEM took to complete: 0ms
+06-03 17:21:48.963   573   637 V SystemServerTiming: getUserSwitchability-0 took to complete: 1ms
+06-03 17:21:49.029   573   637 D CompatibilityChangeReporter: Compat change id reported: 183164979; UID 10168; state: ENABLED
+06-03 17:21:49.162  1841  1841 I ContentCaptureHelper: Setting logging level to DEBUG
+06-03 17:21:49.162  1841  1841 D ContentCaptureManager: setFlushViewTreeAppearingEventDisabled(): setting to false
+06-03 17:21:49.173   573   754 I SdkSandboxManager: Reconciling sdk data package directories for 0
+06-03 17:21:49.178  1841  2944 I OpenGLRenderer: Davey! duration=4260ms; Flags=1, FrameTimelineVsyncId=5236, IntendedVsync=85831494191, Vsync=87598160575, InputEventId=0, HandleInputStart=87616119958, AnimationStart=87616122083, PerformTraversalsStart=87616123009, DrawStart=89614258674, FrameDeadline=85848160857, FrameInterval=87610649659, FrameStartTime=16666664, SyncQueued=89693715063, SyncStart=89732269443, IssueDrawCommandsStart=89772314378, SwapBuffers=89776850423, FrameCompleted=90130717155, DequeueBufferDuration=5690, QueueBufferDuration=691194, GpuCompleted=90130717155, SwapBuffersCompleted=90108944688, DisplayPresentTime=0, CommandSubmissionCompleted=89776850423, 
+06-03 17:21:49.196  2740  3004 I tflite  : Initialized TensorFlow Lite runtime.
+06-03 17:21:49.198  2740  3004 E tflite  : third_party/tensorflow/lite/core/subgraph.cc:903 tensor.data.raw != nullptr was not true.
+06-03 17:21:49.251  1793  1872 W gle.android.gms: Long monitor contention with owner [com.google.android.gms.chimera.container.intentoperation.GmsIntentOperationChimeraService-Executor] processing com.google.android.gms.checkin.CheckinIntentOperation for action com.google.android.gms.checkin.CHECKIN_START_ACTION (2442) at cvdh cvdh.a(android.content.ContentResolver, android.net.Uri, java.lang.Runnable)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3) waiters=0 in cvdh cvdh.a(android.content.ContentResolver, android.net.Uri, java.lang.Runnable) for 742ms
+06-03 17:21:49.286   573   589 D OomAdjuster: Not killing cached processes
+06-03 17:21:49.286   786  1365 W ndroid.systemui: Long monitor contention with owner DefaultDispatcher-worker-15 (1282) at boolean com.android.systemui.log.LogcatEchoTrackerDebug.isTagLoggable(java.lang.String, com.android.systemui.log.LogLevel)(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:20) waiters=1 in boolean com.android.systemui.log.LogcatEchoTrackerDebug.isBufferLoggable(java.lang.String, com.android.systemui.log.LogLevel) for 447ms
+06-03 17:21:49.289   786  1425 W ndroid.systemui: Long monitor contention with owner DefaultDispatcher-worker-15 (1282) at boolean com.android.systemui.log.LogcatEchoTrackerDebug.isTagLoggable(java.lang.String, com.android.systemui.log.LogLevel)(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:20) waiters=2 in boolean com.android.systemui.log.LogcatEchoTrackerDebug.isBufferLoggable(java.lang.String, com.android.systemui.log.LogLevel) for 443ms
+06-03 17:21:49.323  1663  3125 I tflite  : Initialized TensorFlow Lite runtime.
+06-03 17:21:49.331   786  1302 W ndroid.systemui: Long monitor contention with owner DefaultDispatcher-worker-15 (1282) at boolean com.android.systemui.log.LogcatEchoTrackerDebug.isTagLoggable(java.lang.String, com.android.systemui.log.LogLevel)(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:20) waiters=5 in boolean com.android.systemui.log.LogcatEchoTrackerDebug.isBufferLoggable(java.lang.String, com.android.systemui.log.LogLevel) for 323ms
+06-03 17:21:49.341   786  1367 W ndroid.systemui: Long monitor contention with owner DefaultDispatcher-worker-15 (1282) at boolean com.android.systemui.log.LogcatEchoTrackerDebug.isTagLoggable(java.lang.String, com.android.systemui.log.LogLevel)(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:20) waiters=6 in boolean com.android.systemui.log.LogcatEchoTrackerDebug.isBufferLoggable(java.lang.String, com.android.systemui.log.LogLevel) for 296ms
+06-03 17:21:49.351   786   876 W ndroid.systemui: Long monitor contention with owner DefaultDispatcher-worker-15 (1282) at boolean com.android.systemui.log.LogcatEchoTrackerDebug.isTagLoggable(java.lang.String, com.android.systemui.log.LogLevel)(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:20) waiters=0 in boolean com.android.systemui.log.LogcatEchoTrackerDebug.isBufferLoggable(java.lang.String, com.android.systemui.log.LogLevel) for 514ms
+06-03 17:21:49.422  3113  3113 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+06-03 17:21:49.424   573  1427 D ConnectivityService: requestNetwork for uid/pid:10131/2342 activeRequest: null callbackRequest: 88 [NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+06-03 17:21:49.431   573   714 D ConnectivityService: NetReassign [89 : null → 100] [c 0] [a 5] [i 1]
+06-03 17:21:49.432   573   707 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+06-03 17:21:49.432   573   707 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+06-03 17:21:49.432   573   707 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+06-03 17:21:49.432   573   707 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+06-03 17:21:49.443  3113  3113 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+06-03 17:21:49.443  3113  3113 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+06-03 17:21:49.451  1793  1793 I NearbySharing: SharingTileService created. [CONTEXT service_id=194 ]
+06-03 17:21:49.466  1841  1841 I A       : #accountsLoadedAppFlow
+06-03 17:21:49.477   573   953 W system_server: Long monitor contention with owner binder:573_2 (589) at boolean com.android.server.am.OomAdjuster.updateOomAdjLocked(com.android.server.am.ProcessRecord, int)(OomAdjuster.java:609) waiters=0 in int com.android.server.am.ActivityManagerService.getUidState(int) for 799ms
+06-03 17:21:49.479   573  2491 W system_server: Long monitor contention with owner binder:573_2 (589) at boolean com.android.server.am.OomAdjuster.updateOomAdjLocked(com.android.server.am.ProcessRecord, int)(OomAdjuster.java:609) waiters=1 in int com.android.server.am.ActivityManagerService.getUidState(int) for 800ms
+06-03 17:21:49.479   573   658 W system_server: Long monitor contention with owner binder:573_2 (589) at boolean com.android.server.am.OomAdjuster.updateOomAdjLocked(com.android.server.am.ProcessRecord, int)(OomAdjuster.java:609) waiters=2 in void com.android.server.am.CachedAppOptimizer$MemCompactionHandler.handleMessage(android.os.Message) for 734ms
+06-03 17:21:49.498  1663  2095 I AiAiTextClassifier: [TcLibModelManagerImpl]: updateModelsInTextClassifierLib: Done executing updateModels() from path: /data/user/0/com.google.android.as/files/superpacks/text-classifier-annotator/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0/en.fb.
+06-03 17:21:49.500  1663  2095 I AiAiTextClassifier: [TcLibModelManagerImpl]: updateModelsInTextClassifierLib: Done executing updateModels() from path: /data/user/0/com.google.android.as/files/superpacks/text-classifier-actions/tc_model_e202592534082c01f9642f709a627dd9/en.model.
+06-03 17:21:49.500  1663  2095 I AiAiTextClassifier: [TcLibModelManagerImpl]: updateModelsInTextClassifierLib: Done executing updateModels() from path: /data/user/0/com.google.android.as/files/superpacks/text-classifier-langid/tc_model_436dc3fd14049b93d75788a8c0cc8eea/model.smfb.
+06-03 17:21:49.508  1841  1841 W A       : Can't get WAA status for Mavatar!
+06-03 17:21:49.508  1841  1841 W A       : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.apps.tiktok.dataservice.z.b(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.apps.tiktok.dataservice.at.a(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.apps.tiktok.tracing.ec.a(PG:2)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.aj.a(PG:2)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.ac.apply(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.h.e(PG:2)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.j.run(PG:9)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.d.i(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.d.l(PG:12)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.d.n(PG:2)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.i.f(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.common.util.concurrent.j.run(PG:12)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+06-03 17:21:49.508  1841  1841 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+06-03 17:21:49.508  1841  1841 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+06-03 17:21:49.508  1841  1841 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+06-03 17:21:49.508  1841  1841 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "8ea3a221-749f-47da-b32d-e96704b3d05a"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "77af990b-4cc5-492f-9b97-5ef246684839"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "cb5fe6b9-5c2a-480f-a71b-82968b9fe933"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "bebd9d27-bcb3-4f47-9bc7-70216bba9272"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "4eec6113-399a-4276-8315-1d6caa0c0346"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "ff7957d1-480e-4d2f-8ac4-3db7a9a0c36c"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "abed33ed-c9be-4c2a-9380-ad5ac4d6c357"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "952779b9-3401-4742-ae5a-016059609f65"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "5bc29fee-08e9-41ba-9db3-59e80d9191b8"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "a21598a7-7e48-4528-b1ae-febc9c8a5a15"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "453eccc3-1e16-42ad-b4f2-e698ab1067a6"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "726cac25-6ac3-4b48-94be-7e733e6dc7a0"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "73d570fb-9859-48cf-8049-d1825ba2a1d0"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "f91ad579-d353-43a4-a2ed-60208aae5f2c"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "9fdc7a99-150c-4f57-b9d6-42347710e2c9"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "a84c25c1-6c63-4e7f-bc2c-06a5c09b5d1e"
+06-03 17:21:49.509  1842  2453 W SQLiteLog: (28) double-quoted string literal: "1cd11dcf-7dca-401c-8fdc-2d8b374e072a"
+06-03 17:21:49.527  1841  1841 I Choreographer: Skipped 171 frames!  The application may be doing too much work on its main thread.
+06-03 17:21:49.528  3113  3113 W app_process: Unexpected CPU variant for x86: x86_64.
+06-03 17:21:49.528  3113  3113 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+06-03 17:21:49.542   786   786 I Choreographer: Skipped 41 frames!  The application may be doing too much work on its main thread.
+06-03 17:21:49.557   573   605 W system_server: Long monitor contention with owner binder:573_2 (589) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=1 in void com.android.server.am.BroadcastQueueModernImpl.updateRunningList() for 1.008s
+06-03 17:21:49.571   573  1636 W system_server: Long monitor contention with owner binder:573_2 (589) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=2 in int com.android.server.am.ActivityManagerService.broadcastIntentWithFeature(android.app.IApplicationThread, java.lang.String, android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], java.lang.String[], java.lang.String[], int, android.os.Bundle, boolean, boolean, int) for 912ms
+06-03 17:21:49.580   573  2351 W system_server: Long monitor contention with owner binder:573_2 (589) at int com.android.server.job.JobSchedulerService.getUidProcState(int)(JobSchedulerService.java:2305) waiters=0 in boolean com.android.server.job.JobSchedulerService.cancelJob(int, java.lang.String, int, int, int) for 1.030s
+06-03 17:21:49.614   573  1660 W system_server: Long monitor contention with owner binder:573_2 (589) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=3 in void com.android.server.am.ContentProviderHelper.removeContentProvider(android.os.IBinder, boolean) for 925ms
+06-03 17:21:49.623   573  2492 W system_server: Long monitor contention with owner binder:573_2 (589) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=4 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 423ms
+06-03 17:21:49.635   996   996 D CarrierConfigLoader: Broadcast CARRIER_CONFIG_CHANGED for phone 0, subId=1
+06-03 17:21:49.646  2767  2975 I DialerVoicemailStatusDataMigration: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataMigration.migrate:64 enter
+06-03 17:21:49.656   786   799 W ndroid.systemui: Cleared Reference was only reachable from finalizer (only reported once)
+06-03 17:21:49.671  1841  2267 W A       : Didn't find the session (MAIN_FEED, true)
+06-03 17:21:49.673   786   866 D EGL_emulation: app_time_stats: avg=1046.84ms min=862.36ms max=1231.32ms count=2
+06-03 17:21:49.701   573   588 W AppOps  : Noting op not finished: uid 10123 pkg com.google.android.gms code 113 startTime of in progress event=1780500104980
+06-03 17:21:49.702   573   588 W AppOps  : Noting op not finished: uid 10123 pkg com.google.android.gms code 113 startTime of in progress event=1780500104980
+06-03 17:21:49.753  1784  2203 W GoogleTagManager: Failed to extract the container from the resource file. Resource is a UTF-8 encoded string but doesn't contain a JSON container
+06-03 17:21:49.765  3113  3113 W libc    : Access denied finding property "ro.product.name_for_attestation"
+06-03 17:21:49.765  3113  3113 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+06-03 17:21:49.765  3113  3113 W libc    : Access denied finding property "ro.product.model_for_attestation"
+06-03 17:21:49.769  3113  3113 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+06-03 17:21:49.773  3113  3113 W Monkey  : args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]
+06-03 17:21:49.773  3113  3113 W Monkey  :  arg: "-p"
+06-03 17:21:49.773  3113  3113 W Monkey  :  arg: "owasp.sat.agoat"
+06-03 17:21:49.786  3113  3113 W Monkey  :  arg: "-c"
+06-03 17:21:49.786  3113  3113 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+06-03 17:21:49.786  3113  3113 W Monkey  :  arg: "1"
+06-03 17:21:49.786  3113  3113 W Monkey  : data="owasp.sat.agoat"
+06-03 17:21:49.786  3113  3113 W Monkey  : data="android.intent.category.LAUNCHER"
+06-03 17:21:49.746  3113  3113 W main    : type=1400 audit(0.0:19): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+06-03 17:21:49.746  3113  3113 W main    : type=1400 audit(0.0:20): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+06-03 17:21:49.746  3113  3113 W main    : type=1400 audit(0.0:21): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+06-03 17:21:49.803  1793  3137 I NearbySharing: Create pesudo logger. [CONTEXT service_id=194 ]
+06-03 17:21:49.817   573   593 W Looper  : Slow dispatch took 1340ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=68
+06-03 17:21:49.818   573   593 W Looper  : Slow delivery took 1402ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=68
+06-03 17:21:49.831  1784  2100 D CompatibilityChangeReporter: Compat change id reported: 263076149; UID 10156; state: DISABLED
+06-03 17:21:49.841   573   573 W Looper  : Slow dispatch took 166ms main h=android.app.ActivityThread$H c=android.app.LoadedApk$ServiceDispatcher$RunConnection@f13e60f m=0
+06-03 17:21:49.862   573  1439 I Telecom : CallsManager: updateEmergencyCallNotificationAsync; show=false: CM.UEMCNA@AFE❗
+06-03 17:21:49.864   573  1760 W system_server: Long monitor contention with owner binder:573_1E (2490) at int com.android.server.job.JobSchedulerService.getUidProcState(int)(JobSchedulerService.java:2305) waiters=1 in boolean com.android.server.job.JobSchedulerService.cancelJob(int, java.lang.String, int, int, int) for 163ms
+06-03 17:21:49.924   573  2264 W AppOps  : Noting op not finished: uid 10123 pkg com.google.android.gms code 113 startTime of in progress event=1780500104980
+06-03 17:21:49.967  1841  1890 I earchbox:search: Background concurrent copying GC freed 16988(1121KB) AllocSpace objects, 6(2520KB) LOS objects, 49% free, 10MB/21MB, paused 61us,42us total 2.445s
+06-03 17:21:49.990   573   593 W Looper  : Drained
+06-03 17:21:49.990  1841  1894 I OpenGLRenderer: Davey! duration=3136ms; Flags=0, FrameTimelineVsyncId=5660, IntendedVsync=87648160748, Vsync=90498160292, InputEventId=0, HandleInputStart=90635809686, AnimationStart=90635810813, PerformTraversalsStart=90635994100, DrawStart=90638622789, FrameDeadline=90148160169, FrameInterval=90502819993, FrameStartTime=16666664, SyncQueued=90639168517, SyncStart=90659208486, IssueDrawCommandsStart=90659315920, SwapBuffers=90711762188, FrameCompleted=90805195246, DequeueBufferDuration=7996, QueueBufferDuration=201053, GpuCompleted=90805195246, SwapBuffersCompleted=90789522617, DisplayPresentTime=0, CommandSubmissionCompleted=90711762188, 
+06-03 17:21:49.997  1793  1793 D Backup  : [BackupScheduler] Setting backup scheduler enabled=true due to desired state 1
+06-03 17:21:50.010   573  1946 D SystemServerTiming: getUserSwitchability-0
+06-03 17:21:50.010   573  1946 D SystemServerTiming: TM.isInCall
+06-03 17:21:50.011   573  1946 V SystemServerTiming: TM.isInCall took to complete: 1ms
+06-03 17:21:50.011   573  1946 D SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH
+06-03 17:21:50.011   573  1946 V SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH took to complete: 0ms
+06-03 17:21:50.011   573  1946 D SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED
+06-03 17:21:50.011   573  1946 V SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED took to complete: 0ms
+06-03 17:21:50.011   573  1946 D SystemServerTiming: isUserUnlocked-USER_SYSTEM
+06-03 17:21:50.011   573  1946 V SystemServerTiming: isUserUnlocked-USER_SYSTEM took to complete: 0ms
+06-03 17:21:50.011   573  1946 V SystemServerTiming: getUserSwitchability-0 took to complete: 1ms
+06-03 17:21:50.021  1326  2346 W .gms.persistent: Long monitor contention with owner main (1326) at void czhr.A(android.content.Context, cztp, android.app.PendingIntent, java.lang.String, int, java.lang.String, com.google.android.gms.location.ActivityRecognitionRequest, boolean, boolean, boolean, czht)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17) waiters=0 in void czhr.y(int, boolean, czht) for 198ms
+06-03 17:21:50.108   786   806 I OpenGLRenderer: Davey! duration=1678ms; Flags=0, FrameTimelineVsyncId=6048, IntendedVsync=88981483058, Vsync=89814816358, InputEventId=0, HandleInputStart=89828001553, AnimationStart=89828002468, PerformTraversalsStart=89828685874, DrawStart=89887709711, FrameDeadline=89448149706, FrameInterval=89825477102, FrameStartTime=16666666, SyncQueued=89888092833, SyncStart=89897775123, IssueDrawCommandsStart=89897848528, SwapBuffers=90196181265, FrameCompleted=90669180185, DequeueBufferDuration=11604, QueueBufferDuration=732383, GpuCompleted=90669180185, SwapBuffersCompleted=90649035791, DisplayPresentTime=0, CommandSubmissionCompleted=90196181265, 
+06-03 17:21:50.142   573   588 W system_server: Long monitor contention with owner binder:573_15 (2189) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, android.view.WindowManager$LayoutParams, int, int, int, int, int, int, android.window.ClientWindowFrames, android.util.MergedConfiguration, android.view.SurfaceControl, android.view.InsetsState, android.view.InsetsSourceControl$Array, android.os.Bundle)(WindowManagerService.java:2557) waiters=0 in void com.android.server.wm.WindowManagerService$LocalService.setAccessibilityIdToSurfaceMetadata(android.os.IBinder, int) for 403ms
+06-03 17:21:50.151  1841  1841 W A       : Can't get WAA status for Mavatar!
+06-03 17:21:50.151  1841  1841 W A       : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.apps.tiktok.dataservice.z.b(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.apps.tiktok.dataservice.at.a(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.apps.tiktok.tracing.ec.a(PG:2)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.aj.a(PG:2)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.ac.apply(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.h.e(PG:2)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.j.run(PG:9)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.d.i(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.d.l(PG:12)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.d.n(PG:2)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.i.f(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.common.util.concurrent.j.run(PG:12)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+06-03 17:21:50.151  1841  1841 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+06-03 17:21:50.151  1841  1841 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+06-03 17:21:50.151  1841  1841 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+06-03 17:21:50.151  1841  1841 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+06-03 17:21:50.158  1326  1326 W .gms.persistent: Accessing hidden method Landroid/net/ConnectivityManager;->isNetworkTypeMobile(I)Z (max-target-p, reflection, denied)
+06-03 17:21:50.162  1326  1326 W .gms.persistent: Accessing hidden method Landroid/os/PowerManager;->isLightDeviceIdleMode()Z (max-target-s, reflection, denied)
+06-03 17:21:50.038  1784  1819 I s.youtube.music: Background concurrent copying GC freed 24630(2042KB) AllocSpace objects, 11(1036KB) LOS objects, 49% free, 6994KB/13MB, paused 80us,76us total 1.569s
+06-03 17:21:50.256  1841  1841 I SearchWidgetFlow: GsaWidgetProvider:onReceive(Intent { act=update-widget-intent flg=0x10 cmp=com.google.android.googlequicksearchbox/.SearchWidgetProvider }) started
+06-03 17:21:50.283   573   596 W system_server: Long monitor contention with owner binder:573_15 (2189) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, android.view.WindowManager$LayoutParams, int, int, int, int, int, int, android.window.ClientWindowFrames, android.util.MergedConfiguration, android.view.SurfaceControl, android.view.InsetsState, android.view.InsetsSourceControl$Array, android.os.Bundle)(WindowManagerService.java:2557) waiters=1 in void com.android.server.wm.InputMonitor$UpdateInputWindows.run() for 152ms
+06-03 17:21:50.325   573   605 W ActivityManager: Slow operation: 316ms so far, now at startProcess: done creating new process record
+06-03 17:21:50.325   573   605 W ActivityManager: Slow operation: 316ms so far, now at startProcess: stepping in to startProcess
+06-03 17:21:50.325   573   605 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10143; state: DISABLED
+06-03 17:21:50.326   573   605 W ActivityManager: Slow operation: 318ms so far, now at startProcess: done starting proc!
+06-03 17:21:50.326   573   606 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10143; state: ENABLED
+06-03 17:21:50.332   573  1660 W system_server: Long monitor contention with owner binder:573_1B (2355) at boolean com.android.server.job.JobSchedulerService.isBatteryCharging()(JobSchedulerService.java:4964) waiters=0 in java.util.List com.android.server.job.JobSchedulerService.getPendingJobsInNamespace(int, java.lang.String) for 434ms
+06-03 17:21:50.339  1793  1793 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+06-03 17:21:50.346   573   595 W system_server: Long monitor contention with owner binder:573_15 (2189) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, android.view.WindowManager$LayoutParams, int, int, int, int, int, int, android.window.ClientWindowFrames, android.util.MergedConfiguration, android.view.SurfaceControl, android.view.InsetsState, android.view.InsetsSourceControl$Array, android.os.Bundle)(WindowManagerService.java:2557) waiters=3 in void com.android.server.wm.WindowManagerService.reportFocusChanged(android.os.IBinder, android.os.IBinder) for 235ms
+06-03 17:21:50.349   573  2242 W system_server: Long monitor contention with owner binder:573_1B (2355) at boolean com.android.server.job.JobSchedulerService.isBatteryCharging()(JobSchedulerService.java:4964) waiters=1 in java.util.List com.android.server.job.JobSchedulerService.getPendingJobsInNamespace(int, java.lang.String) for 364ms
+06-03 17:21:50.363   573  2189 W ActivityManager: registerReceiverWithFeature: no app for null
+06-03 17:21:50.368  3113  3113 W System  : No Compatibility callbacks set! Querying change 263076149
+06-03 17:21:50.368  3113  3113 W System  : No Compatibility callbacks set! Querying change 263076149
+06-03 17:21:50.368  3113  3113 W System  : No Compatibility callbacks set! Querying change 263076149
+06-03 17:21:50.380   996   996 D MultiSimSettingController: onSubscriptionsChanged
+06-03 17:21:50.381   996   996 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true
+06-03 17:21:50.381   996   996 D MultiSimSettingController: updateDefaults
+06-03 17:21:50.381   996   996 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true
+06-03 17:21:50.394   996   996 D MultiSimSettingController: updateDefaultValues: change: 0
+06-03 17:21:50.394   996   996 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true
+06-03 17:21:50.394   996   996 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.android.phone
+06-03 17:21:50.395   996   996 I VvmSimStateTracker: android.intent.action.BOOT_COMPLETED
+06-03 17:21:50.400   996   996 D CallNotifier: updatePhoneStateListeners: update CF notifications.
+06-03 17:21:50.400   996   996 I NotificationMgr: updateCfi: subId= 1, visible=N
+06-03 17:21:50.401   996   996 I NotificationMgr: updateMwi(): subId 1 update to false
+06-03 17:21:50.472  2767  2767 I DialerVvmDailyWorker: com.android.dialer.voicemail.service.receivers.VvmDailyWorker.startWork:85 startWork
+06-03 17:21:50.482   573  1512 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10192; state: DISABLED
+06-03 17:21:50.484   996   996 I Telephony: TelecomAccountRegistry: onSubscriptionsChanged - update accounts
+06-03 17:21:50.484   996   996 I Telephony: PstnIncomingCallNotifier: Unregistering: [0]
+06-03 17:21:50.484   996   996 D Telephony: Unregistering: Handler (com.android.internal.telephony.GsmCdmaPhone) {af525ac}
+06-03 17:21:50.484   996   996 I PhoneInterfaceManager: unregisterMmTelCapabilityCallback: 1 is inactive, ignoring unregister.
+06-03 17:21:50.484   996   996 I PhoneInterfaceManager: unregisterImsRegistrationCallback: 1is inactive, ignoring unregister.
+06-03 17:21:50.485   996   996 I Telephony: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+06-03 17:21:50.485   996   996 I Telephony: TelecomAccountRegistry: setupAccounts: Phone with subscription id 1
+06-03 17:21:50.491  1793  1793 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.credential.manager.service.firstparty.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+06-03 17:21:50.491  1793  1793 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.credential.manager.service.firstparty.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+06-03 17:21:50.501   573   707 D WifiService: ACTION_CARRIER_CONFIG_CHANGED, active subId: 1
+06-03 17:21:50.511   996   996 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+06-03 17:21:50.518   573  1512 W ActivityTaskManager: callingPackage for (uid=2000, pid=3113) has no WPC
+06-03 17:21:50.518   573  1512 D CompatibilityChangeReporter: Compat change id reported: 244637991; UID 2000; state: ENABLED
+06-03 17:21:50.520   573   573 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.gSCMFU(a)@AFk🔒
+06-03 17:21:50.521   573  2264 D CompatibilityChangeReporter: Compat change id reported: 183407956; UID 10130; state: ENABLED
+06-03 17:21:50.522  1326  1409 E bwfc    : Phenotype API error. Event # edax@72936720, EventCode: 5 [CONTEXT service_id=51 ]
+06-03 17:21:50.522  1326  1409 E bwfc    : bwdx: 29501: Stale snapshot for com.google.android.dialer.directboot#com.google.android.dialer(change count changed - expected 8  but was 7)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at bwfg.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):16)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at bwff.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+06-03 17:21:50.522  1326  1409 E bwfc    : 	at java.lang.Thread.run(Thread.java:1012)
+06-03 17:21:50.523   996   996 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+06-03 17:21:50.524   996   996 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+06-03 17:21:50.524   996   996 I Telephony:  isRttSupported: false
+06-03 17:21:50.524   996   996 I Telephony:  alwaysAllowWhileRoaming: false
+06-03 17:21:50.524   996   996 I Telephony:  isRoaming: false
+06-03 17:21:50.524   996   996 I Telephony:  isOnWfc: false
+06-03 17:21:50.547   996  1020 I m.android.phone: Background concurrent copying GC freed 73185(3610KB) AllocSpace objects, 5(100KB) LOS objects, 49% free, 3731KB/7463KB, paused 79us,67us total 1.956s
+06-03 17:21:50.564   786   799 I ndroid.systemui: Background young concurrent copying GC freed 88071(4339KB) AllocSpace objects, 10(200KB) LOS objects, 18% free, 18MB/22MB, paused 11.088ms,44us total 1.514s
+06-03 17:21:50.569  2342  2541 W Bugle   : RestoreReceiver: Intent { act=android.telephony.action.CARRIER_CONFIG_CHANGED flg=0x15000010 cmp=com.google.android.apps.messaging/.shared.receiver.RestoreReceiver (has extras) }
+06-03 17:21:50.570  2342  2667 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RestoreReceiver@c18f4a4
+06-03 17:21:50.572   573   604 V PackageManager: [Optimistic Bind] Binding to instant app resolver
+06-03 17:21:50.576   573  1512 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10192; state: DISABLED
+06-03 17:21:50.576   573  1512 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10192; state: DISABLED
+06-03 17:21:50.578   786  1791 I OpenGLRenderer: Davey! duration=960ms; Flags=0, FrameTimelineVsyncId=6156, IntendedVsync=89831483024, Vsync=90514816330, InputEventId=0, HandleInputStart=90610545464, AnimationStart=90610546348, PerformTraversalsStart=90610599690, DrawStart=90613677014, FrameDeadline=90698149656, FrameInterval=90516930421, FrameStartTime=16666666, SyncQueued=90613943130, SyncStart=90913904967, IssueDrawCommandsStart=90914026868, SwapBuffers=91083019050, FrameCompleted=91092297497, DequeueBufferDuration=6603, QueueBufferDuration=3042485, GpuCompleted=91092207308, SwapBuffersCompleted=91092297497, DisplayPresentTime=0, CommandSubmissionCompleted=91083019050, 
+06-03 17:21:50.587  2342  2342 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.apps.messaging
+06-03 17:21:50.603  1841  2952 I SearchWidgetFlow: GsaWidgetSessionController:handleGenericClientEvent
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10192; state: DISABLED
+06-03 17:21:50.607   573  1512 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10192; state: DISABLED
+06-03 17:21:50.613   573  1512 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10192; state: DISABLED
+06-03 17:21:50.613   573  1512 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10192; state: DISABLED
+06-03 17:21:50.613   573  1512 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10192; state: DISABLED
+06-03 17:21:50.613   573  1512 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10192; state: DISABLED
+06-03 17:21:50.613   573  1512 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10192; state: DISABLED
+06-03 17:21:50.621   573  1512 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10192; state: DISABLED
+06-03 17:21:50.623  2342  2403 V ClearcutMetricXmitter: Transmission is done.
+06-03 17:21:50.631   573  1512 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10192; state: ENABLED
+06-03 17:21:50.632  1841  2267 I A       : NGA disabled due to not being eligible.
+06-03 17:21:50.634  1841  2386 I A       : Created StreamSubTree successfully, items 5
+06-03 17:21:50.636   996  1022 W System  : A resource failed to call AbstractCursor.close. 
+06-03 17:21:50.639  1841  2386 I A       : RenderableStreamDataSource#loadData - sessionStatus(SUCCESS)
+06-03 17:21:50.648   573  1512 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10192; state: DISABLED
+06-03 17:21:50.648   573  1512 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10192; state: DISABLED
+06-03 17:21:50.650   573  1512 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10192; state: ENABLED
+06-03 17:21:50.654   996  1022 W System  : A resource failed to call AbstractCursor.close. 
+06-03 17:21:50.663   573  1512 V SplashScreenExceptionList: SplashScreen checking exception for package owasp.sat.agoat (target sdk:33) -> false
+06-03 17:21:50.665   573  1512 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10192; state: ENABLED
+06-03 17:21:50.667  1793  2885 W SQLiteLog: (28) double-quoted string literal: "1780327310667"
+06-03 17:21:50.671  1326  1409 W AsyncOperation: operation=CommitToConfigurationOperationCall, opStatusCode=29501 [CONTEXT service_id=51 ]
+06-03 17:21:50.671  1326  1409 W AsyncOperation: OperationException[Status{statusCode=Stale snapshot for com.google.android.dialer.directboot#com.google.android.dialer(change count changed - expected 8  but was 7), resolution=null}]
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+06-03 17:21:50.671  1326  1409 W AsyncOperation: 	at java.lang.Thread.run(Thread.java:1012)
+06-03 17:21:50.680   996   996 I Telephony: AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with Telecom. subId=1
+06-03 17:21:50.680   573  1760 I Telecom : : registerPhoneAccount: account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AF4🔒
+06-03 17:21:50.681   573  1512 D CompatibilityChangeReporter: Compat change id reported: 194833441; UID 10192; state: ENABLED
+06-03 17:21:50.681   573  1512 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+06-03 17:21:50.682  3113  3113 I Monkey  : Events injected: 1
+06-03 17:21:50.690  3113  3113 I Monkey  : ## Network stats: elapsed time=294ms (0ms mobile, 0ms wifi, 294ms not connected)
+06-03 17:21:50.715   573  1760 I Telecom : PhoneAccountRegistrar: Modify account: [ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}]: TSI.rPA(cap)@AF4🔒
+06-03 17:21:50.716   573  1760 I Telecom : CallsManager: handlePhoneAccountChanged: phoneAccount=[[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AF4🔒
+06-03 17:21:50.718  1326  1401 W BpBinder: Large outgoing transaction of 410572 bytes, interface descriptor , code 4
+06-03 17:21:50.731  3113  3113 I app_process: System.exit called, status: 0
+06-03 17:21:50.731  3113  3113 I AndroidRuntime: VM exiting with result code 0.
+06-03 17:21:50.746   573  1512 I ImeTracker: com.google.android.apps.nexuslauncher:2e730bba: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR
+06-03 17:21:50.747   573  1512 I ImeTracker: com.google.android.apps.nexuslauncher:2e730bba: onCancelled at PHASE_SERVER_SHOULD_HIDE
+06-03 17:21:50.761   786   827 V WindowManagerShell: Transition requested: android.os.BinderProxy@d07e8b0 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=31 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=1 lastActiveTime=91654 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@d63e329} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{d7466ae owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+06-03 17:21:50.783  1549  1549 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+06-03 17:21:50.784  1793  2885 W SQLiteLog: (28) double-quoted string literal: "1"
+06-03 17:21:50.793  1793  3165 I Icing   : Using regular flags by method 2
+06-03 17:21:50.804   786   827 W Looper  : Slow dispatch took 83ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda1@a6cec4f m=0
+06-03 17:21:50.842   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+06-03 17:21:50.844   573   588 D SystemServerTiming: getUserSwitchability-0
+06-03 17:21:50.844   573   588 D SystemServerTiming: TM.isInCall
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: No service published for: ethernet
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.lambda$new$3(Tethering.java:345)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.$r8$lambda$bts3FsOwVdwDhrwMjvAr9kV3Jgs(Tethering.java:0)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$$ExternalSyntheticLambda7.accept(R8$$SyntheticClass:0)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at com.android.networkstack.tethering.util.VersionedBroadcastListener$Receiver.onReceive(VersionedBroadcastListener.java:103)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+06-03 17:21:50.846   879   932 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+06-03 17:21:50.959     0     0 I logd    : logdr: UID=2000 GID=2000 PID=3170 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+06-03 17:21:50.863   573  1760 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@AF4🔒
+06-03 17:21:50.863   573  1760 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@AF4🔒
+06-03 17:21:50.863   996   996 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {af525ac}, hasService=false, callingPackage=com.android.server.telecom
+06-03 17:21:50.863   573   588 V SystemServerTiming: TM.isInCall took to complete: 19ms
+06-03 17:21:50.863   573   588 D SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH
+06-03 17:21:50.864   573   588 V SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH took to complete: 0ms
+06-03 17:21:50.864   573   588 D SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED
+06-03 17:21:50.864   573   588 V SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED took to complete: 1ms
+06-03 17:21:50.864   573   588 D SystemServerTiming: isUserUnlocked-USER_SYSTEM
+06-03 17:21:50.864   573   588 V SystemServerTiming: isUserUnlocked-USER_SYSTEM took to complete: 0ms
+06-03 17:21:50.864   573   588 V SystemServerTiming: getUserSwitchability-0 took to complete: 20ms
+06-03 17:21:50.864   996   996 I Telephony: AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+06-03 17:21:50.864   996   996 I Telephony: PstnIncomingCallNotifier: Registering: [0]
+06-03 17:21:50.864   996   996 D Telephony: Registering: Handler (com.android.internal.telephony.GsmCdmaPhone) {af525ac}
+06-03 17:21:50.864   996   996 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+06-03 17:21:50.865   996   996 W Telephony: registerImsRegistrationCallback: registration failed, no ImsService available. Exception: code: 1

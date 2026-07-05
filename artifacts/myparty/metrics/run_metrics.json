@@ -1,0 +1,197 @@
+{
+  "case_id": "myparty",
+  "started_at": "2026-04-29 22:37:22.148671",
+  "finished_at": "2026-04-29 22:41:09.974013",
+  "duration_seconds": 227.82552922899777,
+  "steps": [
+    {
+      "name": "validate",
+      "started_at": "2026-04-29 22:37:22.148684",
+      "finished_at": "2026-04-29 22:37:22.153087",
+      "duration_seconds": 0.004385838998132385,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "extract_manifest",
+      "started_at": "2026-04-29 22:37:22.153131",
+      "finished_at": "2026-04-29 22:37:35.113604",
+      "duration_seconds": 12.960441139002796,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_manifest_facts",
+      "started_at": "2026-04-29 22:37:35.113616",
+      "finished_at": "2026-04-29 22:37:35.114992",
+      "duration_seconds": 0.0013632519985549152,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_manifest_rules",
+      "started_at": "2026-04-29 22:37:35.114997",
+      "finished_at": "2026-04-29 22:37:35.115980",
+      "duration_seconds": 0.0009765369904926047,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "jadx_decompile",
+      "started_at": "2026-04-29 22:37:35.115984",
+      "finished_at": "2026-04-29 22:38:53.065775",
+      "duration_seconds": 77.94906171999173,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_search",
+      "started_at": "2026-04-29 22:38:53.066491",
+      "finished_at": "2026-04-29 22:39:13.927738",
+      "duration_seconds": 20.860094800009392,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_code_facts",
+      "started_at": "2026-04-29 22:39:13.927748",
+      "finished_at": "2026-04-29 22:39:13.937363",
+      "duration_seconds": 0.009594235001713969,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_code_rules",
+      "started_at": "2026-04-29 22:39:13.937375",
+      "finished_at": "2026-04-29 22:39:13.949580",
+      "duration_seconds": 0.012175035997643135,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_static_bundle",
+      "started_at": "2026-04-29 22:39:13.949597",
+      "finished_at": "2026-04-29 22:39:13.960335",
+      "duration_seconds": 0.010706924003898166,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "manifest_risk_agent",
+      "started_at": "2026-04-29 22:39:13.960353",
+      "finished_at": "2026-04-29 22:39:27.272396",
+      "duration_seconds": 13.312017706004553,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "started_at": "2026-04-29 22:39:27.272407",
+      "finished_at": "2026-04-29 22:39:30.082391",
+      "duration_seconds": 2.809956355995382,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "started_at": "2026-04-29 22:39:30.082396",
+      "finished_at": "2026-04-29 22:40:19.487958",
+      "duration_seconds": 49.405547098998795,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "started_at": "2026-04-29 22:40:19.487966",
+      "finished_at": "2026-04-29 22:41:09.973986",
+      "duration_seconds": 50.48599776699848,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "agents": [
+    {
+      "name": "manifest_risk_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-29 22:39:13.985348",
+      "finished_at": "2026-04-29 22:39:27.272326",
+      "duration_seconds": 13.285503146005794,
+      "success": true,
+      "input_chars": 117383,
+      "output_chars": 2407,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-29 22:39:27.282111",
+      "finished_at": "2026-04-29 22:39:30.082374",
+      "duration_seconds": 2.800198281998746,
+      "success": true,
+      "input_chars": 69536,
+      "output_chars": 2675,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-29 22:39:30.087336",
+      "finished_at": "2026-04-29 22:40:19.487939",
+      "duration_seconds": 49.400550152990036,
+      "success": true,
+      "input_chars": 5827,
+      "output_chars": 1785,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-04-29 22:40:19.488173",
+      "finished_at": "2026-04-29 22:41:09.973963",
+      "duration_seconds": 50.48576937400503,
+      "success": true,
+      "input_chars": 2270,
+      "output_chars": 3265,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "summary": {
+    "status": "completed",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 7,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true
+  }
+}

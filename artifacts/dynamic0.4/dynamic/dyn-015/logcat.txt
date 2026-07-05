@@ -1,0 +1,34 @@
+--------- beginning of main
+04-21 12:37:44.621  8382  8382 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:37:44.626  8382  8382 I AndroidRuntime: Using default boot image
+04-21 12:37:44.626  8382  8382 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:37:44.627  8382  8382 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:37:44.628  8382  8382 I app_process: Using CollectorTypeCC GC.
+04-21 12:37:44.672   951   951 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+04-21 12:37:44.689  8382  8382 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:37:44.699  8382  8382 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:37:44.699  8382  8382 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:37:44.704  8382  8382 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:37:44.704  8382  8382 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:37:44.716  8382  8382 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:37:44.717  8382  8382 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:37:44.717  8382  8382 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:37:44.716  8382  8382 W main    : type=1400 audit(0.0:286): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:44.718  8382  8382 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:37:44.716  8382  8382 W main    : type=1400 audit(0.0:287): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:44.716  8382  8382 W main    : type=1400 audit(0.0:288): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:44.720  8382  8382 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:44.720  8382  8382 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:44.720  8382  8382 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: Writing exception to parcel
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/profiles
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 12:37:44.722  7638  7681 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 12:37:44.723  8382  8382 D AndroidRuntime: Shutting down VM
+--------- beginning of system
+04-21 12:37:44.735   555  1049 D OomAdjuster: Not killing cached processes

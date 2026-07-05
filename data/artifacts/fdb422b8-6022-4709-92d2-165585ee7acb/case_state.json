@@ -1,0 +1,86 @@
+{
+  "case_id": "fdb422b8-6022-4709-92d2-165585ee7acb",
+  "apk_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/uploads/fdb422b8-6022-4709-92d2-165585ee7acb/original.apk",
+  "manifest_json_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/parsed/manifest.json",
+  "facts_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/facts/manifest_facts.json",
+  "findings_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/findings/manifest_findings.json",
+  "analysis_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/static_analysis_reasoning.json",
+  "analysis_raw_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/static_analysis_reasoning_raw.txt",
+  "jadx_output_dir": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/jadx",
+  "code_search_results_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/code_search/code_search_results.json",
+  "code_facts_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/facts/code_search_facts.json",
+  "code_findings_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/findings/code_findings.json",
+  "correlated_findings_path": null,
+  "static_analysis_bundle_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/bundle/static_analysis_bundle.json",
+  "static_report_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/report/static_analysis_report.md",
+  "evidence_registry_path": null,
+  "candidates_path": null,
+  "manifest_reasoning_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/manifest_reasoning.json",
+  "manifest_reasoning_raw_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/manifest_reasoning_raw.txt",
+  "code_reasoning_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/code_reasoning.json",
+  "code_reasoning_raw_path": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/code_reasoning_raw.txt",
+  "metrics_tracker": null,
+  "dynamic_plan_path": null,
+  "dynamic_results_path": null,
+  "dynamic_report_path": null,
+  "device_profile": null,
+  "package_name": null,
+  "status": "completed",
+  "current_step": "markdown_report_agent",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": [],
+      "warnings": [
+        "jadx finished with non-zero exit code 1",
+        "jadx reported decompilation errors but produced partial output",
+        "See full log: /home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/logs/jadx_decompile.log"
+      ]
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 50
+    },
+    {
+      "agent": "manifest_risk_agent",
+      "success": true,
+      "output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/manifest_reasoning.json",
+      "raw_output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/manifest_reasoning_raw.txt",
+      "llm_provider": null,
+      "llm_model": null
+    },
+    {
+      "agent": "code_risk_agent",
+      "success": true,
+      "output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/code_reasoning.json",
+      "raw_output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/code_reasoning_raw.txt",
+      "llm_provider": null,
+      "llm_model": null
+    },
+    {
+      "agent": "risk_fusion_agent",
+      "success": true,
+      "output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/static_analysis_reasoning.json",
+      "raw_output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/analysis/static_analysis_reasoning_raw.txt",
+      "llm_provider": null,
+      "llm_model": null
+    },
+    {
+      "agent": "markdown_report_agent",
+      "success": true,
+      "output": "/home/naibu3/Escritorio/TFM/andro-agent/data/artifacts/fdb422b8-6022-4709-92d2-165585ee7acb/report/static_analysis_report.md",
+      "llm_provider": null,
+      "llm_model": null
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

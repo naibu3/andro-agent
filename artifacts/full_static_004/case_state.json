@@ -1,0 +1,53 @@
+{
+  "case_id": "full_static_004",
+  "apk_path": "samples/AndroGoat.apk",
+  "manifest_json_path": "artifacts/full_static_004/parsed/manifest.json",
+  "facts_path": "artifacts/full_static_004/facts/manifest_facts.json",
+  "findings_path": "artifacts/full_static_004/findings/manifest_findings.json",
+  "analysis_path": "artifacts/full_static_004/analysis/analysis.json",
+  "analysis_raw_path": "artifacts/full_static_004/analysis/analysis_raw.txt",
+  "jadx_output_dir": "artifacts/full_static_004/jadx",
+  "code_search_results_path": "artifacts/full_static_004/code_search/code_search_results.json",
+  "code_facts_path": "artifacts/full_static_004/facts/code_search_facts.json",
+  "code_findings_path": "artifacts/full_static_004/findings/code_findings.json",
+  "correlated_findings_path": null,
+  "static_analysis_bundle_path": "artifacts/full_static_004/bundle/static_analysis_bundle.json",
+  "status": "completed",
+  "current_step": "build_static_bundle",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "agent": "analysis_agent",
+      "success": true,
+      "output": "artifacts/full_static_004/analysis/analysis.json",
+      "raw_output": "artifacts/full_static_004/analysis/analysis_raw.txt"
+    },
+    {
+      "agent": "analysis_agent",
+      "success": true,
+      "output": "artifacts/full_static_004/analysis/analysis.json",
+      "raw_output": "artifacts/full_static_004/analysis/analysis_raw.txt"
+    },
+    {
+      "agent": "analysis_agent",
+      "output": "artifacts/full_static_004/analysis/analysis.json"
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 50
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

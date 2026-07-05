@@ -1,0 +1,46 @@
+--------- beginning of main
+04-21 09:11:49.164  4590  4661 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.libraries.personalization.footprints#com.google.android.googlequicksearchbox
+04-21 09:11:49.166  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.search.soundsearch.user#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.173  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.assistant.invocation.device#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.176  1524  5349 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+04-21 09:11:49.177  1524  5349 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+04-21 09:11:49.178  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.search.soundsearch.device#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.179  1524  5349 I NamespaceManager: Package com.android.media name not found! Using module version.
+04-21 09:11:49.179  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.googleapp.device#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.180  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.gms.icing.mdd#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.180  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.vr.c9#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.180  1616  5840 W Icing   : No valid account for uploading user actions
+04-21 09:11:49.181  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.googleapp.uiuser#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.181  4590  4590 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.search.lens.device#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+04-21 09:11:49.184  1524  5349 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+04-21 09:11:49.184  1524  5349 I NamespaceManager: Package com.android.appsearch name not found! Using module version.
+04-21 09:11:49.184  1524  5349 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+04-21 09:11:49.188  1524  5349 I NamespaceManager: Package com.android.media name not found! Using module version.
+04-21 09:11:49.188  1524  5349 I NamespaceManager: Package 1 name not found! Using module version.
+--------- beginning of system
+04-21 09:11:49.201   555   648 W ActivityTaskManager: callingPackage for (uid=2000, pid=5996) has no WPC
+04-21 09:11:49.209   555   648 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+04-21 09:11:49.209   555   648 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=owasp.sat.agoat/.AccessControl1ViewActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 09:11:49.218   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@fc940f4 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=12 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=3 lastActiveTime=151771 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@b33301d} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{e28292 owasp.sat.agoat.AccessControl1ViewActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+04-21 09:11:49.238   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+04-21 09:11:49.242  1616  5840 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+--------- beginning of kernel
+04-21 09:05:22.814     0     0 I logd    : logdr: UID=2000 GID=2000 PID=5999 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: Failed to set whitelist for augmented autofill service.
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: java.lang.SecurityException: caller is not user's Augmented Autofill Service
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at android.view.autofill.AutofillManager.setAugmentedAutofillWhitelist(AutofillManager.java:2676)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at cjj.c(PG:7)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at cju.g(PG:8)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at ckd.c(PG:18)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at eoz.g(PG:3)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at fde.a(PG:3)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at jen.t(PG:18)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at jen.c(PG:35)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at gfo.run(PG:14)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:307)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at dgq.run(PG:67)
+04-21 09:11:49.253  1834  3650 W AiAiAutofill: 	at java.lang.Thread.run(Thread.java:1012)

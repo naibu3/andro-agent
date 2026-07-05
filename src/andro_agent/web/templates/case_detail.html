@@ -10,9 +10,86 @@
     <h1>{{ case.filename }}</h1>
     <p class="mono">{{ case.id }}</p>
   </div>
-  <span class="badge status-{{ case.status }}">{{ case.status }}</span>
+  <span id="case-status" class="badge status-{{ case.status }}">{{ case.status }}</span>
 </section>
 
+{% if is_pending %}
+<section class="stats-grid">
+  <article class="stat-card">
+    <span>Progress</span>
+    <strong><span id="case-progress">{{ case.progress }}</span>%</strong>
+  </article>
+  <article class="stat-card">
+    <span>Current step</span>
+    <strong id="case-current-step" class="small">{{ case.current_step or "N/A" }}</strong>
+  </article>
+</section>
+
+<section class="panel">
+  <h2>Analysis running</h2>
+  <div class="progress-track" aria-label="Analysis progress">
+    <div id="case-progress-bar" class="progress-bar" style="width: {{ case.progress }}%;"></div>
+  </div>
+  <p class="muted">The analysis is still running. Final results will appear when it completes.</p>
+</section>
+
+<script>
+  const caseId = "{{ case.id }}";
+  const statusEl = document.getElementById("case-status");
+  const stepEl = document.getElementById("case-current-step");
+  const progressEl = document.getElementById("case-progress");
+  const progressBarEl = document.getElementById("case-progress-bar");
+
+  async function pollStatus() {
+    const response = await fetch(`/api/scans/${caseId}/status`, { cache: "no-store" });
+    if (!response.ok) {
+      return;
+    }
+
+    const data = await response.json();
+    statusEl.textContent = data.status;
+    statusEl.className = `badge status-${data.status}`;
+    stepEl.textContent = data.current_step || "N/A";
+    progressEl.textContent = data.progress;
+    progressBarEl.style.width = `${data.progress}%`;
+
+    if (data.status === "completed" || data.status === "failed") {
+      window.location.reload();
+    }
+  }
+
+  setInterval(pollStatus, 3000);
+</script>
+{% elif is_failed %}
+<section class="panel">
+  <h2>Analysis failed</h2>
+
+  <dl class="metadata">
+    <dt>Status</dt>
+    <dd>{{ case.status }}</dd>
+
+    <dt>Error</dt>
+    <dd><pre>{{ case.error_message or "Unknown error" }}</pre></dd>
+  </dl>
+</section>
+{% elif is_non_final %}
+<section class="panel">
+  <h2>Analysis status</h2>
+
+  <dl class="metadata">
+    <dt>Status</dt>
+    <dd>{{ case.status }}</dd>
+
+    <dt>Current step</dt>
+    <dd>{{ case.current_step or "N/A" }}</dd>
+
+    {% if case.error_message %}
+    <dt>Error</dt>
+    <dd><pre>{{ case.error_message }}</pre></dd>
+    {% endif %}
+  </dl>
+</section>
+{% elif is_completed %}
 <section class="stats-grid">
   <article class="stat-card">
     <span>Progress</span>
@@ -58,12 +135,6 @@
     <dt>SHA256</dt>
     <dd class="mono">{{ case.sha256 }}</dd>
 
-    <dt>APK path</dt>
-    <dd class="mono">{{ case.apk_path }}</dd>
-
-    <dt>Artifacts</dt>
-    <dd class="mono">{{ case.artifacts_dir }}</dd>
-
     <dt>Current step</dt>
     <dd>{{ case.current_step or "N/A" }}</dd>
 
@@ -88,7 +159,7 @@
       <h2>Findings</h2>
       <p class="muted">Ordenados por severidad. Los falsos positivos más obvios de namespaces Android y librerías se filtran en la indexación web.</p>
     </div>
-    <a href="/api/scans/{{ case.id }}/findings">JSON</a>
+    <a href="/api/scans/{{ case.id }}/downloads/findings.json">Download JSON</a>
   </div>
 
   {% if category_summary %}
@@ -134,7 +205,10 @@
       <h2>Reporte</h2>
       <p class="muted">Si el reporte del agente no es coherente con los findings, se muestra un reporte determinista generado desde la evidencia.</p>
     </div>
-    <a href="/api/scans/{{ case.id }}/report">Markdown JSON</a>
+    <div class="button-row">
+      <a href="/api/scans/{{ case.id }}/downloads/report.md">Markdown</a>
+      <a href="/api/scans/{{ case.id }}/downloads/report.html">HTML</a>
+    </div>
   </div>
 
   {% if report_html %}
@@ -166,16 +240,20 @@
   {% endif %}
 </section>
 
-<section class="panel debug-panel">
-  <details>
-    <summary>Raw CaseState</summary>
-    <pre>{{ state_pretty }}</pre>
-  </details>
+<section class="panel">
+  <div class="panel-header">
+    <div>
+      <h2>Downloads</h2>
+      <p class="muted">Final result files.</p>
+    </div>
+  </div>
+  <div class="button-row">
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/findings.json">Findings JSON</a>
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/report.md">Report MD</a>
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/report.html">Report HTML</a>
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/bundle.zip">Bundle ZIP</a>
+  </div>
 </section>
 
-{% if case.status in ["queued", "running"] %}
-<script>
-  setTimeout(() => window.location.reload(), 3000);
-</script>
 {% endif %}
 {% endblock %}

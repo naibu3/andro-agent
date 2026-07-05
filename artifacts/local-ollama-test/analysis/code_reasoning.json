@@ -1,0 +1,22 @@
+{
+  "rule_id": "CODE_FILE_OUTPUT_STREAM",
+  "title": "FileOutputStream usage detected",
+  "description": "FileOutputStream usage found in artifacts/local-ollama-test/jadx/sources/androidx/biometric/CryptoObjectUtils.java. Review algorithm choice, mode, and key handling.",
+  "severity": "low",
+  "confidence": "high",
+  "source": "code_rule_engine",
+  "evidence": [
+    {
+      "type": "code.pattern.cipher_instance",
+      "key": "artifacts/local-ollama-test/jadx/sources/androidx/biometric/CryptoObjectUtils.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "crypto",
+        "line_number": 135,
+        "line_text": "Cipher cipher = Cipher.getInstance(\"AES/CBC/PKCS7Padding\");"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "local-agent-test-0.1",
+  "duration_seconds": 31.34181411300233,
+  "steps": 13,
+  "agents": 4,
+  "summary": {
+    "status": "completed",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 7,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "summary": "Android static risk assessment for local-ollama-test-2",
+  "top_risks": [
+    "Dangerous permissions: INTERNET, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, CAMERA, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE",
+    "FileOutputStream usage detected in TypefaceCompatUtil.java"
+  ],
+  "correlations": [
+    "The use of dangerous permissions and the presence of FileOutputStream usage are related to potential security vulnerabilities."
+  ],
+  "vulnerability_candidates": [
+    "Potential exposure to unauthorized internet access, location data collection, camera usage, storage manipulation, and file handling issues.",
+    "Risk of encoded secrets or payloads in TypefaceCompatUtil.java"
+  ],
+  "recommended_next_steps": [
+    "Review the use of dangerous permissions and ensure they are necessary for the app's functionality.",
+    "Investigate the FileOutputStream usage in TypefaceCompatUtil.java to identify any potential security risks."
+  ]
+}

@@ -1,0 +1,919 @@
+[
+  {
+    "type": "manifest.package",
+    "key": "package_name",
+    "value": "owasp.sat.agoat",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.compile_sdk_version",
+    "key": "compile_sdk_version",
+    "value": "34",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.debuggable",
+    "key": "debuggable",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.allow_backup",
+    "key": "allow_backup",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.network_security_config",
+    "key": "network_security_config",
+    "value": "@xml/network_security_config",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.INTERNET",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.WRITE_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.READ_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.CAMERA",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.USE_BIOMETRIC",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.USE_FINGERPRINT",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "owasp.sat.agoat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.QRCodeXSSActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.QRCodeXSSActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.BioMetricAuthActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.BioMetricAuthActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.CloudServicesActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.CloudServicesActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.HardcodeViewActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.HardcodeViewActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.SplashActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.SplashActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "owasp.sat.agoat.SplashActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.MainActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.RootDetectionActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.RootDetectionActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureLoggingActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureLoggingActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.XSSActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.XSSActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.SQLinjectionActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.SQLinjectionActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureStorageSharedPrefs",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureStorageSharedPrefs",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureStorageTempActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureStorageTempActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.AccessControlIssue1Activity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.AccessControlIssue1Activity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.HardCodeActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.HardCodeActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureStorageSQLiteActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureStorageSQLiteActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureStorageSharedPrefs1Activity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureStorageSharedPrefs1Activity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.TrafficActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.TrafficActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.ContentProviderActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.ContentProviderActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.EmulatorDetectionActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.EmulatorDetectionActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureStorageSDCardActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureStorageSDCardActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InputValidationsWebViewURLActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InputValidationsWebViewURLActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InputValidationsOSCMDInjectionMain2Activity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InputValidationsOSCMDInjectionMain2Activity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.BinaryPatchingActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.BinaryPatchingActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.ClipboardActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.ClipboardActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InsecureStorageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InsecureStorageActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.SideChannelDataLeakageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.SideChannelDataLeakageActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.InputValidationsActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.InputValidationsActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.KeyboardCacheActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.KeyboardCacheActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "owasp.sat.agoat.AIChatActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "owasp.sat.agoat.AIChatActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "owasp.sat.agoat.DownloadInvoiceService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "owasp.sat.agoat.DownloadInvoiceService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "owasp.sat.agoat.DownloadInvoiceService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "owasp.sat.agoat.ShowDataReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "owasp.sat.agoat.ShowDataReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "owasp.sat.agoat.ShowDataReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": "android.permission.DUMP",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": 4,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "owasp.sat.agoat.ContentProviderActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "owasp.sat.agoat.ContentProviderActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "owasp.sat.agoat.ContentProviderActivity",
+    "value": "owasp.sat.agoat.provider.userpinsprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "androidx.startup.InitializationProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "androidx.startup.InitializationProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "androidx.startup.InitializationProvider",
+    "value": "owasp.sat.agoat.androidx-startup",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  }
+]

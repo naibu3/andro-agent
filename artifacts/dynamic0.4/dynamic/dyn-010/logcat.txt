@@ -1,0 +1,93 @@
+--------- beginning of main
+04-21 12:37:27.264  8145  8145 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:37:27.269  8145  8145 I AndroidRuntime: Using default boot image
+04-21 12:37:27.269  8145  8145 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:37:27.271  8145  8145 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:37:27.271  8145  8145 I app_process: Using CollectorTypeCC GC.
+04-21 12:37:27.349  8145  8145 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+--------- beginning of system
+04-21 12:37:27.355   555   659 D OomAdjuster: Not killing cached processes
+04-21 12:37:27.362  8145  8145 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:37:27.362  8145  8145 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:37:27.369  8145  8145 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:37:27.369  8145  8145 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:37:27.389  8145  8145 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:37:27.389  8145  8145 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:37:27.389  8145  8145 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:37:27.388  8145  8145 W main    : type=1400 audit(0.0:256): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:27.390  8145  8145 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:37:27.388  8145  8145 W main    : type=1400 audit(0.0:257): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:27.388  8145  8145 W main    : type=1400 audit(0.0:258): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:27.394  8145  8145 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:27.394  8145  8145 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:27.394  8145  8145 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: Writing exception to parcel
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/note
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 12:37:27.396  7638  7678 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 12:37:27.397  8145  8145 D AndroidRuntime: Shutting down VM
+04-21 12:37:27.535  4691  4691 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_EXECUTE_QUEUED_CountryCodeDetectorAction elapsedRealTime: 248871 currentTimeMillis: 1776767847535
+04-21 12:37:27.535  4691  4691 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_EXECUTE_QUEUED_SelfParticipantsRefreshAction elapsedRealTime: 248872 currentTimeMillis: 1776767847535
+04-21 12:37:27.538  4691  5831 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_BACKGROUND_QUEUED_CountryCodeDetectorAction elapsedRealTime: 248874 currentTimeMillis: 1776767847538
+04-21 12:37:27.541  4691  5831 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_BACKGROUND_QUEUED_SelfParticipantsRefreshAction elapsedRealTime: 248877 currentTimeMillis: 1776767847541
+04-21 12:37:27.545  4691  4774 I Bugle   : CountryCodeDetector: updateMainDeviceCountry from default subscription network country. detected country: us
+04-21 12:37:27.548  4691  4774 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_RESPONSE_QUEUED_CountryCodeDetectorAction elapsedRealTime: 248884 currentTimeMillis: 1776767847548
+04-21 12:37:27.552  4691  4774 I BugleDataModel: ParticipantRefresh: ContactContentObserver created
+04-21 12:37:27.553  4691  4774 I BugleDataModel: ParticipantFullRefresh: Start participant refresh. refreshMode: SELF_ONLY
+04-21 12:37:27.557  4691  4774 I BugleDataModel: SelfParticipantsData#refreshSelfParticipantList([1])
+04-21 12:37:27.563  4691  4774 I BugleDataModel: SelfParticipantsData#findSelfParticipantForSim cant find self by serial for sub=1
+04-21 12:37:27.570  4691  4774 I BugleDataModel: SelfParticipantsData: insertSelfParticipant. participantId: 2, selfParticipantId: 2, subId: 1
+04-21 12:37:27.582  4691  4774 I Bugle   : CountryCodeDetector: updateMainDeviceCountry from default subscription network country. detected country: us
+04-21 12:37:27.606  4691  4774 I BugleDataModel: SubscriptionsTracker bindToTrackingMap bound participants: [ParticipantId=1 subId=-1, ParticipantId=2 subId=1]
+04-21 12:37:27.617   555  2551 D ActivityManager: sync unfroze 1660 android.process.acore for 7
+04-21 12:37:27.624  4691  4704 I .apps.messaging: JIT allocated 67KB for compiled code of java.lang.Object zrz.c()
+04-21 12:37:27.625  4691  4704 I .apps.messaging: Compiler allocated 4495KB to compile java.lang.Object zrz.c()
+04-21 12:37:27.685  4691  4774 I BugleDataModel: ParticipantFullRefresh: Number of participants refreshed: 2
+04-21 12:37:27.689  4691  4774 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_RESPONSE_QUEUED_SelfParticipantsRefreshAction elapsedRealTime: 249025 currentTimeMillis: 1776767847689
+04-21 12:37:27.692  4691  4743 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:27.711  1660  1675 D StrictMode: StrictMode policy violation: android.os.strictmode.SqliteObjectLeakedViolation: Finalizing a Cursor that has not been deactivated or closed. database = /data/user/0/com.android.providers.contacts/databases/contacts2.db, table = raw_contacts, query = SELECT contacts_view._id AS _id, contacts_view.display_name AS display_name, contacts_view.photo_thumb_uri AS photo_thumb_uri, data1 AS number, data2 AS type, data3 AS label, contacts_view.lookup AS lookup FROM raw_contacts JOIN view_contacts as contacts_view ON (contacts_view._id = raw_contacts.contact_id) JOIN (SELECT data_id,normalized_number FROM phone_lookup WHERE (phone_lookup.min_match = '7654321')) AS lookup ON lookup.data_id=data._id JOIN data ON data.raw_contact_id=raw_contacts._id WHERE (PHONE_NUMBERS_EQUAL(data.data1, '+15551234567', 0, 7)) ORDER BY  length(lookup.normalized_number) DESC
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at android.os.StrictMode.onSqliteObjectLeaked(StrictMode.java:2222)
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at android.database.sqlite.SQLiteCursor.finalize(SQLiteCursor.java:282)
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:339)
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.processReference(Daemons.java:324)
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:300)
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:145)
+04-21 12:37:27.711  1660  1675 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 12:37:27.712  1660  1675 D StrictMode: StrictMode policy violation: android.os.strictmode.LeakedClosableViolation: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.os.StrictMode$AndroidCloseGuardReporter.report(StrictMode.java:1994)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at dalvik.system.CloseGuard.warnIfOpen(CloseGuard.java:336)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.AbstractCursor.finalize(AbstractCursor.java:531)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.sqlite.SQLiteCursor.finalize(SQLiteCursor.java:291)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:339)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.processReference(Daemons.java:324)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:300)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:145)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 12:37:27.712  1660  1675 D StrictMode: Caused by: java.lang.Throwable: Explicit termination method 'AbstractCursor.close' not called
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.AbstractCursor.<init>(AbstractCursor.java:227)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.AbstractWindowedCursor.<init>(AbstractWindowedCursor.java:39)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.sqlite.SQLiteCursor.<init>(SQLiteCursor.java:98)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.sqlite.SQLiteDirectCursorDriver.query(SQLiteDirectCursorDriver.java:52)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.rawQueryWithFactory(SQLiteDatabase.java:1714)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.database.sqlite.SQLiteQueryBuilder.query(SQLiteQueryBuilder.java:592)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.doQuery(ContactsProvider2.java:7543)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryLocal(ContactsProvider2.java:7249)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryCorpLookupIfNecessary(ContactsProvider2.java:7728)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryLookupEnterprise(ContactsProvider2.java:7867)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryPhoneLookupEnterprise(ContactsProvider2.java:7838)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryLocal(ContactsProvider2.java:7172)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryDirectoryIfNecessary(ContactsProvider2.java:5883)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryInternal(ContactsProvider2.java:5728)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.query(ContactsProvider2.java:5673)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 12:37:27.712  1660  1675 D StrictMode: 	at android.os.Binder.execTransact(Binder.java:1275)

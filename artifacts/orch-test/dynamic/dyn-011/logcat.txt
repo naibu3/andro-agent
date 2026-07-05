@@ -1,0 +1,42 @@
+--------- beginning of main
+05-12 09:17:29.044  5497  5497 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:17:29.048  5497  5497 I AndroidRuntime: Using default boot image
+05-12 09:17:29.048  5497  5497 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:17:29.050  5497  5497 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:17:29.050  5497  5497 I app_process: Using CollectorTypeCC GC.
+05-12 09:17:29.062  1296  3479 D TrafficStats: tagSocket(102) with statsTag=0x20008100, statsUid=-1
+05-12 09:17:29.066  1296  2246 D TrafficStats: tagSocket(102) with statsTag=0x20008100, statsUid=-1
+05-12 09:17:29.069  1296  3481 D TrafficStats: tagSocket(102) with statsTag=0x20008100, statsUid=-1
+05-12 09:17:29.073  1296  3479 D TrafficStats: tagSocket(102) with statsTag=0x20008100, statsUid=-1
+05-12 09:17:29.077   379  5499 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+05-12 09:17:29.077   379  5501 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-12 09:17:29.077   379  5501 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cee8d87e0d0
+05-12 09:17:29.077   379  5501 I resolv  : doQuery: rcode=0, ancount=4, return value=104
+05-12 09:17:29.077   379  5500 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-12 09:17:29.077   379  5500 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cee8d8797b0
+05-12 09:17:29.077   379  5500 I resolv  : doQuery: rcode=0, ancount=4, return value=152
+05-12 09:17:29.115  5497  5497 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:17:29.124  5497  5497 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:17:29.124  5497  5497 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:17:29.129  5497  5497 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:17:29.129  5497  5497 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:17:29.142  5497  5497 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:17:29.142  5497  5497 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:17:29.142  5497  5497 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:17:29.138  5497  5497 W main    : type=1400 audit(0.0:114): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:29.143  5497  5497 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:17:29.142  5497  5497 W main    : type=1400 audit(0.0:115): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:29.142  5497  5497 W main    : type=1400 audit(0.0:116): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:29.145  5497  5497 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:29.145  5497  5497 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:29.145  5497  5497 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: Writing exception to parcel
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/notes
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+05-12 09:17:29.147  3285  3304 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+05-12 09:17:29.148  5497  5497 D AndroidRuntime: Shutting down VM

@@ -1,0 +1,33 @@
+--------- beginning of main
+04-21 12:38:19.127  8858  8858 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:38:19.131  8858  8858 I AndroidRuntime: Using default boot image
+04-21 12:38:19.131  8858  8858 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:38:19.133  8858  8858 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:38:19.133  8858  8858 I app_process: Using CollectorTypeCC GC.
+04-21 12:38:19.195  8858  8858 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:38:19.204  8858  8858 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:38:19.204  8858  8858 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:38:19.209  8858  8858 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:38:19.209  8858  8858 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:38:19.221  8858  8858 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:38:19.221  8858  8858 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:38:19.221  8858  8858 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:38:19.220  8858  8858 W main    : type=1400 audit(0.0:346): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:38:19.222  8858  8858 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:38:19.220  8858  8858 W main    : type=1400 audit(0.0:347): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:38:19.220  8858  8858 W main    : type=1400 audit(0.0:348): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+04-21 12:38:19.224   555  2559 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=8858, uid=2000) that is not exported from UID 10192
+04-21 12:38:19.224  8858  8858 D AndroidRuntime: Shutting down VM
+04-21 12:38:19.528  3127  4288 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.handleEvent:527 OmtpEvent:CONFIG_STATUS_SMS_TIME_OUT PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.532  3127  3127 I DialerRetryPolicy: com.android.voicemail.impl.scheduling.RetryPolicy.onCompleted:118 discarding deferred status [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.534  3127  3127 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.prepareStop:371 no more tasks, stopping service if no task are added in 5000 millis [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.534   555   595 D OomAdjuster: Not killing cached processes
+04-21 12:38:19.536  3127  3127 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_AUTO_RETRY_ACTIVATION
+04-21 12:38:19.537  3127  3127 I DialerTaskReceiver: com.android.voicemail.impl.scheduling.TaskReceiver.onReceive:68 task received [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.538  3127  3127 I DialerTaskReceiver: com.android.voicemail.impl.scheduling.TaskReceiver.onReceive:73 TaskExecutor already running [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.538  3127  3127 I DialerTasks: com.android.voicemail.impl.scheduling.Tasks.createTask:59 Task.createTask create task:com.android.voicemail.impl.ActivationTask [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.539  3127  3127 I DialerRetryPolicy: com.android.voicemail.impl.scheduling.RetryPolicy.onCreate:81 retry #3 for com.android.voicemail.impl.ActivationTask@ac637c6 queued, executing in 5000 [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.545  3127  3127 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.addTask:299 com.android.voicemail.impl.ActivationTask@ac637c6 added [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.545  3127  3127 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.runNextTask:345 minimal wait time:4994 [CONTEXT enable_persistent_logger=true ]
+04-21 12:38:19.546  3127  3127 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.sleep:355 sleep for 4994 millis [CONTEXT enable_persistent_logger=true ]

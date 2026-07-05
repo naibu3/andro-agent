@@ -1,0 +1,206 @@
+--------- beginning of main
+04-21 12:38:29.398  9001  9001 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:38:29.402  9001  9001 I AndroidRuntime: Using default boot image
+04-21 12:38:29.402  9001  9001 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:38:29.404  9001  9001 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:38:29.404  9001  9001 I app_process: Using CollectorTypeCC GC.
+04-21 12:38:29.460  9001  9001 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:38:29.469  9001  9001 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:38:29.469  9001  9001 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:38:29.474  9001  9001 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:38:29.474  9001  9001 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:38:29.486  9001  9001 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:38:29.486  9001  9001 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:38:29.486  9001  9001 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:38:29.487  9001  9001 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:38:29.484  9001  9001 W main    : type=1400 audit(0.0:364): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:38:29.484  9001  9001 W main    : type=1400 audit(0.0:365): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:38:29.484  9001  9001 W main    : type=1400 audit(0.0:366): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+04-21 12:38:29.489   555  2554 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=9001, uid=2000) that is not exported from UID 10192
+04-21 12:38:29.489  9001  9001 D AndroidRuntime: Shutting down VM
+04-21 12:38:29.637   555  2554 D ConnectivityService: requestNetwork for uid/pid:10130/3127 activeRequest: null callbackRequest: 159 [NetworkRequest [ REQUEST id=160, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 12:38:29.643   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=160, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+04-21 12:38:29.643   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=160, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+04-21 12:38:29.643   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=160, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+04-21 12:38:29.644   555   878 D ConnectivityService: NetReassign [160 : null → 100] [c 1] [a 2] [i 3]
+04-21 12:38:29.644   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=160, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+04-21 12:38:29.657  3127  3127 I DialerConstellationSyncWorker: com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker.startWork:66 starting work
+04-21 12:38:29.659  3127  3224 I DialerCountryCodeProvider: com.android.dialer.businessvoice.verifiedcall.impl.i18n.CountryCodeProvider.getSimCountryCodeInternal:85 returning Redacted-2-chars
+04-21 12:38:29.660  3127  3283 I DialerCachedVerifiedNumberProvider: com.android.dialer.businessvoice.verifiedcall.impl.constellation.CachedVerifiedNumberProvider.refreshConstellationInfo:190 Retrieving constellation info and refreshing the cache.
+04-21 12:38:29.666  6335  6335 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+04-21 12:38:29.666  6335  6335 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+04-21 12:38:29.679  6335  6335 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 12:38:29.679  6335  6335 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 12:38:29.680  6335  6335 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-21 12:38:29.681  6335  6433 E constellation: [api_verify_phone_operation] Failed to generate Client Signature
+04-21 12:38:29.681  6335  6433 E constellation: acwp: Stored private key deleted
+04-21 12:38:29.681  6335  6433 E constellation: 	at acos.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+04-21 12:38:29.681  6335  6433 E constellation: 	at acos.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+04-21 12:38:29.681  6335  6433 E constellation: 	at acoa.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):22)
+04-21 12:38:29.681  6335  6433 E constellation: 	at acoa.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):12)
+04-21 12:38:29.681  6335  6433 E constellation: 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+04-21 12:38:29.681  6335  6433 E constellation: 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+04-21 12:38:29.681  6335  6433 E constellation: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 12:38:29.681  6335  6433 E constellation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-21 12:38:29.681  6335  6433 E constellation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+04-21 12:38:29.681  6335  6433 E constellation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 12:38:29.681  6335  6433 E constellation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 12:38:29.681  6335  6433 E constellation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 12:38:29.681  6335  6433 E constellation: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: com.android.dialer.businessvoice.verifiedcall.impl.constellation.VerifiedNumberProvider.lambda$getConstellationResponse$1:155 Failed to get constellation token.
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: nkq: 5004: 
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at nov.au(PG:1)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at nnf.g(PG:2)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at npo.a(Unknown Source:2)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at npy.dm(PG:9)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at ncz.onTransact(PG:4)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+04-21 12:38:29.682  3127  3224 W DialerVerifiedNumberProvider: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 12:38:29.683  3127  3283 W DialerConstellationSyncWorker: com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker.lambda$syncConstellation$2:110 Constellation api request failed, status code: 5004
+04-21 12:38:29.684  3127  3218 I WM-WorkerWrapper: Worker result RETRY for Work [ id=7ce15d98-682e-49e6-8afd-eba4ef32ca17, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, TikTokWorker#com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker } ]
+04-21 12:38:29.709   555   659 D ActivityManager: sync unfroze 4691 com.google.android.apps.messaging for 6
+04-21 12:38:29.713  4691  5296 I BugleRcsEngine: [68] bscf.run: delay time out, reset attempts 2 and process SIM event
+04-21 12:38:29.720   555  2058 D ConnectivityService: requestNetwork for uid/pid:10131/4691 activeRequest: null callbackRequest: 161 [NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 12:38:29.721   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:38:29.721   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:38:29.721   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:38:29.721   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:38:29.721   555   878 D ConnectivityService: NetReassign [162 : null → 100] [c 0] [a 1] [i 0]
+04-21 12:38:29.724  4691  4774 D MddListenableWorkerFactory: createWorker for class: com.google.android.apps.messaging.rcsprovisioning.RcsProvisioningListenableWorker
+04-21 12:38:29.741   555   659 D ActivityManager: sync unfroze 2003 com.google.android.youtube for 6
+04-21 12:38:29.743  4691  5296 W BugleRcsEngine: [68] bscd.a: (Sim): process intent: android.intent.action.SIM_STATE_CHANGED
+04-21 12:38:29.744  4691  4691 I BugleRcsWorker: [seqId=3][workId=a35249fd-57d0-4055-974e-eae387bd754c] RCS provisioning task has started
+04-21 12:38:29.746  4691  5296 I BugleRcsEngine: [68] bscd.o: (Sim): Processing an intent
+04-21 12:38:29.747  4691  5296 I BugleRcsEngine: [68] bscd.z: (Sim): Ignoring duplicate SIM state: LOADED
+04-21 12:38:29.748  4691  5831 I BugleRcsWorker: [seqId=3][workId=a35249fd-57d0-4055-974e-eae387bd754c] Starting StateMachine, trigger is STATE_MACHINE_RETRY
+04-21 12:38:29.749  4691  5831 I BugleRcsEngine: [107] brfq.d: (PEv2-SM-Bugle-215867499): start PEv2, trigger is STATE_MACHINE_RETRY, workerId is a35249fd-57d0-4055-974e-eae387bd754c [null]
+04-21 12:38:29.749  4691  5831 I BugleRcsEngine: [107] broo.g: Created new RcsProvisioningProtoDataStorage for sim redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.750  4691  5831 I BugleRcsEngine: [107] brnl.h: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.750  4691  5831 I BugleRcsEngine: [107] brfq.d: (PEv2-SM-Bugle-215867499): start [null]
+04-21 12:38:29.750  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Enter EnabledState [null]
+04-21 12:38:29.755  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.757  4691  9019 I BugleRcsEngine: [123] brds.c: Sending ProvisioningEvent to Bugle [Send Provisioning Session ID (18)], redacted-pii:[chars:65]
+04-21 12:38:29.757  4691  9019 I BugleRcsEngine: [123] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:223] from source PROVISIONING_EVENT
+04-21 12:38:29.761  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Start a new provisioning session [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.761  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.762  4691  9018 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Send Provisioning Session ID
+04-21 12:38:29.762  4691  9019 I BugleRcsEngine: [123] brjv.b: RcsAvailabilityManager: Calculating Rcs Availability
+04-21 12:38:29.762  4691  4780 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@d93f1e3
+04-21 12:38:29.763  4691  9019 I BugleRcsEngine: [123] brnl.C: Bugle is default SMS app: true
+04-21 12:38:29.763  4691  9019 I BugleRcsEngine: [123] brjv.b: Bugle has minimum required RCS permissions: true
+04-21 12:38:29.763  4691  9019 I BugleRcsEngine: [123] brnl.B: Rcs is enabled from user settings: true
+04-21 12:38:29.763  4691  9019 I BugleRcsEngine: [123] brox.b: Using config server URL from bqas
+04-21 12:38:29.763  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.764  4691  9019 I BugleRcsEngine: [123] brnl.h: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.764  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.766  4691  9019 I BugleRcsEngine: [123] brjv.b: Config state is not ACCEPTED, provisioning still in progress
+04-21 12:38:29.766  4691  9019 I BugleRcsEngine: [123] brjv.b: RcsAvailabilityManager: Rcs Availability still CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+04-21 12:38:29.766  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.766  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): transitionViaMessage, srcState=EnabledState, destState = CheckPreconditionsState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.766  4691  9019 I BugleRcsEngine: [123] brds.c: Sending ProvisioningEvent to Bugle [Update provisioning status (11)], redacted-pii:[chars:85]
+04-21 12:38:29.768  4691  9019 I BugleRcsEngine: [123] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:243] from source PROVISIONING_EVENT
+04-21 12:38:29.769  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): EnabledState: Transition to check preconditions [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.769  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): transitionTo: destState=CheckPreconditionsState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.769  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): onTransitionRequested EnabledState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.769  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Enter CheckPreconditionsState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.770  4691  5831 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Update provisioning status
+04-21 12:38:29.770  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Battery optimization is not required. [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  4780 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@5604c0d
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): transitionViaMessage, srcState=CheckPreconditionsState, destState = ReadyState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): CheckPreconditionsState: Transition to ready [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): transitionTo: destState=ReadyState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): onTransitionRequested CheckPreconditionsState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Exit CheckPreconditionsState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Exit EnabledState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.771  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.772  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Enter InProgressState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.774  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.774  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Enter ReadyState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.778  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.779  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.780   361  9021 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10139 0}
+04-21 12:38:29.782   361  9023 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 12:38:29.784  4691  4742 W BugleRcsEngine: [41] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.784   361  9022 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 12:38:29.787  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): transitionViaMessage, srcState=ReadyState, destState = RequestWithImsiState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.787  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): ReadyState: Transition to request with imsi [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.787  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): transitionTo: destState=RequestWithImsiState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.787  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): onTransitionRequested ReadyState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.787  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Exit ReadyState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.787  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.787  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): Enter RequestWithImsiState [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.789   555  2058 D ActivityManager: sync unfroze 1858 com.google.process.gservices for 7
+04-21 12:38:29.790  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.791  4691  9019 I BugleRcsEngine: [123] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:38:29.791   555  2554 W JobScheduler: Job didn't exist in JobStore: d990a1d #u0a139/24 com.google.android.youtube/androidx.work.impl.background.systemjob.SystemJobService
+04-21 12:38:29.792  4691  9019 I BugleRcsEngine: [123] brox.b: Using config server URL from bqas
+04-21 12:38:29.792  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.793  4691  9019 I BugleRcsEngine: [123] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:38:29.794  4691  9019 I BugleRcsEngine: [123] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:38:29.796  4691  9019 I BugleRcsEngine: [123] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:38:29.796  4691  9019 W BugleRcsEngine: [123] brfq.e: (PEv2-SM-Bugle-215867499): Could not retrieve MSISDN from configuration. Configuration is empty. [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.796  4691  9019 W BugleRcsEngine: [123] brfq.e: (PEv2-SM-Bugle-215867499): Skipping adding Tachyon identity key to request. Null/empty RCS msisdn from configuration for sim ID: 89860318640220133897. [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.796  4691  9019 I BugleRcsEngine: [123] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:38:29.798   555  2554 D ActivityManager: sync unfroze 3383 com.google.android.gms.unstable for 6
+04-21 12:38:29.799  4691  4742 W BugleRcsEngine: [41] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.804  4691  4742 W BugleRcsEngine: [41] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.835  3383  9024 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+04-21 12:38:29.835  3383  9024 W libc    : Access denied finding property "service.adb.tls.port"
+04-21 12:38:29.836   361  9026 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+04-21 12:38:29.832  3383  3383 W binder:3383_7: type=1400 audit(0.0:367): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+04-21 12:38:29.836  3383  9024 D TrafficStats: tagSocket(113) with statsTag=0x1809, statsUid=-1
+04-21 12:38:29.832  3383  3383 W binder:3383_7: type=1400 audit(0.0:368): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+04-21 12:38:29.867  4691  9019 E BugleRcsEngine: [123] brfg.a: DroidGuardLogger: Could not create DroidGuard token creation event
+04-21 12:38:29.867  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): RequestWithImsiState: event Send config request [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.867  4691  9019 I BugleRcsEngine: [123] brfq.d: (PEv2-SM-Bugle-215867499): InProgressState: event Send config request [2716b40e-69b5-44c0-a342-aa790871ac23]
+04-21 12:38:29.868  4691  9019 W BugleRcsEngine: [123] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.868  4691  9027 W BugleRcsEngine: [124] bpxc.w: Unable to send diagnostic log
+04-21 12:38:29.869   361  9028 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+04-21 12:38:29.869   361  9029 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 12:38:29.869   361  9029 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x739427157fd0
+04-21 12:38:29.869   361  9029 I resolv  : doQuery: rcode=0, ancount=1, return value=76
+04-21 12:38:29.869   361  9030 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 12:38:29.870   361  9030 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x739427159bd0
+04-21 12:38:29.870   361  9030 I resolv  : doQuery: rcode=0, ancount=1, return value=64
+04-21 12:38:29.870  4691  9027 D TrafficStats: tagSocket(131) with statsTag=0x1253, statsUid=-1
+04-21 12:38:29.880   361  9022 I resolv  : res_nsend: used send_dg 153 terrno: 0
+04-21 12:38:29.880   361  9023 I resolv  : res_nsend: used send_dg 105 terrno: 0
+04-21 12:38:29.880   361  9022 I resolv  : doQuery: rcode=0, ancount=4, return value=153
+04-21 12:38:29.880   361  9023 I resolv  : doQuery: rcode=0, ancount=4, return value=105
+04-21 12:38:29.976   555   555 I ResourceTimer: GetResourceValue count=10570 pvalues=2000,14000,23000,84000
+04-21 12:38:29.977   555   555 I ResourceTimer: RetrieveAttributes count=18632 pvalues=1000,3000,9000,40000
+04-21 12:38:30.141  2003  2390 W YouTube : Could not register for notifications with InnerTube: 
+04-21 12:38:30.141  2003  2390 W YouTube : aali: xud: Precondition check failed.
+04-21 12:38:30.141  2003  2390 W YouTube : 	at zyd.apply(PG:41)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at xbn.u(PG:15)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at xbn.d(PG:11)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at aald.d(PG:18)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at aepi.g(PG:493)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at aepi.j(PG:335)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at aepi.e(PG:15)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at aezu.l(PG:94)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at vbn.a(PG:272)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at agxf.an(PG:31)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at usn.call(PG:197)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at alkv.call(PG:17)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at alnf.a(PG:3)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at alml.run(PG:21)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at alng.run(PG:5)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at alga.run(PG:50)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at qgg.run(PG:604)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at java.lang.Thread.run(Thread.java:1012)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at qig.run(PG:64)
+04-21 12:38:30.141  2003  2390 W YouTube : Caused by: xud: Precondition check failed.
+04-21 12:38:30.141  2003  2390 W YouTube : 	at aaka.e(PG:24)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at xig.e(PG:41)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at xig.d(PG:2)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at uup.run(PG:347)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at azjk.run(PG:27)
+04-21 12:38:30.141  2003  2390 W YouTube : 	at qgx.run(PG:7)
+04-21 12:38:30.141  2003  2390 W YouTube : 	... 4 more
+04-21 12:38:30.141  2003  2390 W YouTube : Caused by: xes
+04-21 12:38:30.141  2003  2390 W YouTube : 	at uup.run(PG:271)
+04-21 12:38:30.141  2003  2390 W YouTube : 	... 6 more

@@ -1,0 +1,832 @@
+[
+  {
+    "id": "dynamic.dyn-002.exported_activity_accessible",
+    "title": "Exported activity dynamically reachable",
+    "severity": "medium",
+    "confidence": "medium",
+    "category": "dynamic.exported_activity",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "Activity launch attempted for owasp.sat.agoat/owasp.sat.agoat.SplashActivity",
+    "rationale": "The exported activity was launched successfully during dynamic execution. This confirms reachable attack surface and may indicate missing authorization or trust-boundary validation depending on the activity purpose.",
+    "evidence": [
+      {
+        "id": "dynamic-evidence-001",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-002",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-003",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-004",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-005",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-006",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-007",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-008",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-009",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-010",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-011",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-012",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-013",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-014",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-015",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-016",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-017",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-018",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-002",
+      "signal": "activity_launch_attempted",
+      "success": true,
+      "summary": "Activity launch attempted for owasp.sat.agoat/owasp.sat.agoat.SplashActivity",
+      "metadata": {
+        "stdout": "Starting: Intent { cmp=owasp.sat.agoat/.SplashActivity }\n",
+        "stderr": ""
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-003.exported_activity_accessible",
+    "title": "Exported activity dynamically reachable",
+    "severity": "medium",
+    "confidence": "medium",
+    "category": "dynamic.exported_activity",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "Activity launch attempted for owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity",
+    "rationale": "The exported activity was launched successfully during dynamic execution. This confirms reachable attack surface and may indicate missing authorization or trust-boundary validation depending on the activity purpose.",
+    "evidence": [
+      {
+        "id": "dynamic-evidence-001",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-002",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-003",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-004",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-005",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-006",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-007",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-008",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-009",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-010",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-011",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-012",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-013",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-014",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-015",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-016",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-017",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-018",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-003",
+      "signal": "activity_launch_attempted",
+      "success": true,
+      "summary": "Activity launch attempted for owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity",
+      "metadata": {
+        "stdout": "Starting: Intent { cmp=owasp.sat.agoat/.AccessControl1ViewActivity }\n",
+        "stderr": ""
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-004.deeplink_reachable",
+    "title": "Deep link dynamically reachable",
+    "severity": "medium",
+    "confidence": "medium",
+    "category": "dynamic.deep_link",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "Deep link launch attempted for androgoat://vulnapp",
+    "rationale": "The deep link was launched successfully during dynamic execution. This confirms externally reachable navigation surface that should be reviewed for authorization and input validation.",
+    "evidence": [
+      {
+        "id": "dynamic-evidence-001",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-002",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-003",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-004",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-005",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-006",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-007",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-008",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-009",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-010",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-011",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-012",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-013",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-014",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-015",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-016",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-017",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-018",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-004",
+      "signal": "deeplink_launch_attempted",
+      "success": true,
+      "summary": "Deep link launch attempted for androgoat://vulnapp",
+      "metadata": {
+        "stdout": "Starting: Intent { act=android.intent.action.VIEW dat=androgoat://vulnapp/... }\n",
+        "stderr": ""
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-005.provider_unknown_uri",
+    "title": "Content provider authority reachable but URI path unresolved",
+    "severity": "low",
+    "confidence": "medium",
+    "category": "dynamic.content_provider",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "Content provider query attempted for content://owasp.sat.agoat.provider.userpinsprovider",
+    "rationale": "The provider authority responded to the query attempt, but the URI path was not valid. This suggests the authority exists and may require more specific paths for enumeration.",
+    "evidence": [
+      {
+        "id": "dynamic-evidence-001",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-002",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-003",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-004",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-005",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-006",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-007",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-008",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-009",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-010",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-011",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-012",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-013",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-014",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-015",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-016",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-017",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-018",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-005",
+      "signal": "content_provider_query_attempted",
+      "success": true,
+      "summary": "Content provider query attempted for content://owasp.sat.agoat.provider.userpinsprovider",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.provider.userpinsprovider\njava.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:172)\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)\n\tat android.content.ContentProviderProxy.query(ContentProviderNative.java:495)\n\tat com.android.commands.content.Content$QueryCommand.onExecute(Content.java:661)\n\tat com.android.commands.content.Content$Command.execute(Content.java:522)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\n"
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-006.provider_protected",
+    "title": "Content provider blocked unauthorized access",
+    "severity": "info",
+    "confidence": "high",
+    "category": "dynamic.content_provider",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "Content provider permission denial status for content://owasp.sat.agoat.androidx-startup",
+    "rationale": "The content provider denied the external query attempt, which is evidence of access control enforcement.",
+    "evidence": [
+      {
+        "id": "dynamic-evidence-001",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-002",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-003",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-004",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-005",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-006",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-002/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-007",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-008",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-009",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-003/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-010",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-011",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-012",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-004/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-013",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-014",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-015",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-005/ui.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-016",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-017",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dynamic-evidence-018",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic0.3/dynamic/dyn-006/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-006",
+      "signal": "content_provider_permission_denied",
+      "success": true,
+      "summary": "Content provider permission denial status for content://owasp.sat.agoat.androidx-startup",
+      "metadata": {
+        "stdout": "",
+        "stderr": "Error while accessing provider:owasp.sat.agoat.androidx-startup\njava.lang.SecurityException: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=7548, uid=2000) that is not exported from UID 10192\n\tat android.os.Parcel.createExceptionOrNull(Parcel.java:3057)\n\tat android.os.Parcel.createException(Parcel.java:3041)\n\tat android.os.Parcel.readException(Parcel.java:3024)\n\tat android.os.Parcel.readException(Parcel.java:2966)\n\tat android.app.IActivityManager$Stub$Proxy.getContentProviderExternal(IActivityManager.java:7722)\n\tat com.android.commands.content.Content$Command.execute(Content.java:516)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\nCaused by: android.os.RemoteException: Remote stack trace:\n\tat com.android.server.am.ContentProviderHelper.checkAssociationAndPermissionLocked(ContentProviderHelper.java:691)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderImpl(ContentProviderHelper.java:287)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternalUnchecked(ContentProviderHelper.java:162)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternal(ContentProviderHelper.java:156)\n\tat com.android.server.am.ActivityManagerService.getContentProviderExternal(ActivityManagerService.java:6724)\n\n"
+      }
+    }
+  }
+]

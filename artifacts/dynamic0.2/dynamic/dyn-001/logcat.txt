@@ -1,0 +1,309 @@
+--------- beginning of main
+04-21 09:11:32.965  1524  5323 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+04-21 09:11:32.966  1524  5349 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+--------- beginning of system
+04-21 09:11:33.009   555   584 W Looper  : Slow dispatch took 208ms android.fg h=android.os.Handler c=<recycled PooledLambda@1f2d898> m=0
+04-21 09:11:33.025   555   584 W Looper  : Slow delivery took 359ms android.fg h=android.os.Handler c=<recycled PooledLambda@ff4b8f1> m=0
+04-21 09:11:33.037   555   602 W KernelCpuProcStringReader: File not found. It's normal if not implemented: /proc/uid_concurrent_policy_time
+04-21 09:11:33.071  1524  5351 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+04-21 09:11:33.077  1524  5351 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+04-21 09:11:33.079  1524  5351 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+04-21 09:11:33.083  1202  4399 D SettingsSliceProvider: onSlicePinned: content://com.android.settings.slices/action/media_volume
+04-21 09:11:33.084  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.084  1202  4398 D SliceBuilder: Creating slice for: com.android.settings.notification.MediaVolumePreferenceController
+04-21 09:11:33.089   555  1894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1270 android.content.Context.sendBroadcastMultiplePermissions:2476 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3548 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 
+04-21 09:11:33.091  1202  4398 D MediaVolumePreCtrl: The slice doesn't support end item
+04-21 09:11:33.103  1202  4398 D SliceBuilder: Creating slice for: com.android.settings.notification.MediaVolumePreferenceController
+04-21 09:11:33.104   555  1894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3553 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 android.os.Binder.execTransactInternal:1339 
+04-21 09:11:33.104  1202  4398 D MediaVolumePreCtrl: The slice doesn't support end item
+04-21 09:11:33.107  1524  5323 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+04-21 09:11:33.107   555  1894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3562 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 android.os.Binder.execTransactInternal:1339 
+04-21 09:11:33.108   555  1894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:3568 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1728 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:534 android.os.Binder.execTransactInternal:1339 
+04-21 09:11:33.109  1202  4419 D SettingsSliceProvider: content://com.android.settings.slices/action/media_volume loaded from cache
+04-21 09:11:33.111  1192  1192 D ServiceStateProvider: subId=1
+04-21 09:11:33.112  1524  5351 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+04-21 09:11:33.114   361   402 I netd    : tetherGetStats() -> {[]} <1.77ms>
+04-21 09:11:33.119   555  1894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1303 android.content.Context.sendBroadcastMultiplePermissions:2422 android.content.Context.sendBroadcastMultiplePermissions:2410 com.android.server.TelephonyRegistry.broadcastDataConnectionStateChanged:3767 com.android.server.TelephonyRegistry.notifyDataConnectionForSubscriber:2159 
+04-21 09:11:33.120   555   878 I ConnectivityService: Update capabilities for net 101 : +NOT_SUSPENDED
+04-21 09:11:33.121  1192  1192 I Telephony: TelecomAccountTelephonyCallback: onServiceStateChanged: newState=0, mServiceState=0
+04-21 09:11:33.122  1192  1192 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 09:11:33.123  1192  1192 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+04-21 09:11:33.123  1192  1192 I Telephony:  isRttSupported: false
+04-21 09:11:33.123  1192  1192 I Telephony:  alwaysAllowWhileRoaming: false
+04-21 09:11:33.123  1192  1192 I Telephony:  isRoaming: false
+04-21 09:11:33.123  1192  1192 I Telephony:  isOnWfc: false
+04-21 09:11:33.130   555   878 D ConnectivityService: [101 CELLULAR] EVENT_NETWORK_INFO_CHANGED, going from SUSPENDED to CONNECTED
+04-21 09:11:33.138  1202  4399 D VolumeSliceHelper: Unregistering uri broadcast relay: content://com.android.settings.slices/action/media_volume
+04-21 09:11:33.138  1202  1202 D SettingsSliceProvider: Stopping background worker for: content://com.android.settings.slices/action/media_volume
+04-21 09:11:33.197  1202  4398 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.198  1202  4560 D SettingsSliceProvider: content://com.android.settings.slices/action/call_volume loaded from cache
+04-21 09:11:33.198  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.notification.CallVolumePreferenceController
+04-21 09:11:33.205  1202  4399 D VolumeSliceHelper: Unregistering uri broadcast relay: content://com.android.settings.slices/action/call_volume
+04-21 09:11:33.233   180  1083 I keystore2: system/security/keystore2/src/watchdog.rs:319 - Watchdog thread idle -> terminating. Have a great day.
+04-21 09:11:33.282   951  1025 D EGL_emulation: app_time_stats: avg=265.41ms min=8.04ms max=2430.75ms count=11
+04-21 09:11:33.284   951   951 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+04-21 09:11:33.287  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.notification.SeparateRingVolumePreferenceController
+04-21 09:11:33.288  1202  4398 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.288  1202  4658 D SettingsSliceProvider: content://com.android.settings.slices/action/separate_ring_volume loaded from cache
+04-21 09:11:33.293  1202  4399 D VolumeSliceHelper: Unregistering uri broadcast relay: content://com.android.settings.slices/action/separate_ring_volume
+04-21 09:11:33.294   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:11:33.294   951   951 D GlobalActionsDialogLite: Service changed before actions created
+04-21 09:11:33.294   951   951 D GlobalActionsDialogLite: Service changed before actions created
+04-21 09:11:33.294   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:11:33.294   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 09:11:33.297  4691  4785 I BugleJobs: GenericWorkerQueueAction: Rescheduling immediately to continue processing since we didn't yet reach the end.
+04-21 09:11:33.306   555   584 W Looper  : Drained
+04-21 09:11:33.393   935   935 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+04-21 09:11:33.411  1834  3650 W ogle.android.as: Long monitor contention with owner aiai-min-shared-0 (2220) at java.lang.Object erb.b()(PG:2) waiters=0 in java.lang.Object erb.b() for 675ms
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: Failed to set whitelist for augmented autofill service.
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: java.lang.SecurityException: caller is not user's Augmented Autofill Service
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at android.view.autofill.AutofillManager.setAugmentedAutofillWhitelist(AutofillManager.java:2676)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at cjj.c(PG:7)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at cju.g(PG:8)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at cju.i(Unknown Source:3)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at cju.h(PG:2)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at cjv.a(PG:3)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at dgq.run(PG:41)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at dgq.run(PG:69)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:307)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at dgq.run(PG:67)
+04-21 09:11:33.413  1834  2220 W AiAiAutofill: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 09:11:33.415   951   983 I OpenGLRenderer: Davey! duration=1094ms; Flags=0, FrameTimelineVsyncId=20786, IntendedVsync=134750945078, Vsync=134750945078, InputEventId=0, HandleInputStart=134751477852, AnimationStart=134751478596, PerformTraversalsStart=134751478756, DrawStart=134757687064, FrameDeadline=134767611744, FrameInterval=134751473523, FrameStartTime=16666666, SyncQueued=134758400520, SyncStart=134758518188, IssueDrawCommandsStart=134759429586, SwapBuffers=134817654659, FrameCompleted=135845725226, DequeueBufferDuration=14059, QueueBufferDuration=267851, GpuCompleted=135845574442, SwapBuffersCompleted=135845725226, DisplayPresentTime=0, CommandSubmissionCompleted=134817654659, 
+04-21 09:11:33.416   951  1025 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: Failed to set whitelist for augmented autofill service.
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: java.lang.SecurityException: caller is not user's Augmented Autofill Service
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at android.view.autofill.AutofillManager.setAugmentedAutofillWhitelist(AutofillManager.java:2676)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at cjj.c(PG:7)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at cju.g(PG:8)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at cju.i(Unknown Source:3)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at cju.h(PG:2)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at cjv.a(PG:3)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at dgq.run(PG:41)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at dgq.run(PG:69)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:307)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at dgq.run(PG:67)
+04-21 09:11:33.427  1834  2220 W AiAiAutofill: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 09:11:33.432  4691  4691 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_EXECUTE_QUEUED_GenericWorkerQueueAction elapsedRealTime: 135995 currentTimeMillis: 1776755493432
+04-21 09:11:33.432  4691  4792 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_BACKGROUND_QUEUED_GenericWorkerQueueAction elapsedRealTime: 135995 currentTimeMillis: 1776755493432
+04-21 09:11:33.433  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.deviceinfo.hardwareinfo.DeviceModelPreferenceController
+04-21 09:11:33.435  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.deviceinfo.hardwareinfo.DeviceModelPreferenceController
+04-21 09:11:33.437  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.accessibility.MagnificationGesturesPreferenceController
+04-21 09:11:33.438  1202  4398 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.439  1202  3466 D SettingsSliceProvider: content://com.android.settings.slices/action/hardware_info_device_model loaded from cache
+04-21 09:11:33.441  4691  4773 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_RESPONSE_QUEUED_GenericWorkerQueueAction elapsedRealTime: 136004 currentTimeMillis: 1776755493441
+04-21 09:11:33.443  4691  4773 I BugleJobs: GenericWorkerQueueAction: Bailing early, no work found, no failed work found
+04-21 09:11:33.444  4691  4773 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_RESPONSE_QUEUED_GenericWorkerQueueAction elapsedRealTime: 136007 currentTimeMillis: 1776755493444
+04-21 09:11:33.450  1202  4398 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.450  1202  4419 D SettingsSliceProvider: content://com.android.settings.slices/action/screen_magnification_gestures_preference_screen loaded from cache
+04-21 09:11:33.455  1202  4560 D SlicesIndexer: Slices already indexed - returning.
+04-21 09:11:33.457  1202  4560 D SettingsSliceProvider: Built slice (content://com.android.settings.slices/action/screen_magnification_gestures_preference_screen) in: 2
+04-21 09:11:33.457  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.gestures.DoubleTapPowerPreferenceController
+04-21 09:11:33.461  1202  4399 D SliceBuilder: Creating slice for: com.android.settings.gestures.DoubleTapPowerPreferenceController
+04-21 09:11:33.463  1202  4954 D SliceBuilder: Creating slice for: com.android.settings.network.AirplaneModePreferenceController
+04-21 09:11:33.467  1202  4954 D SliceBuilder: Creating slice for: com.android.settings.fuelgauge.batterysaver.BatterySaverButtonPreferenceController
+04-21 09:11:33.468  1202  4954 D SliceBuilder: Creating slice for: com.android.settings.fuelgauge.batterysaver.BatterySaverButtonPreferenceController
+04-21 09:11:33.470  1202  4954 D SliceBuilder: Creating slice for: com.android.settings.network.AirplaneModePreferenceController
+04-21 09:11:33.470   555   568 I system_server: Background young concurrent copying GC freed 793496(22MB) AllocSpace objects, 25(564KB) LOS objects, 30% free, 35MB/50MB, paused 223us,54us total 465.670ms
+04-21 09:11:33.472  5472  5472 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 09:11:33.474  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.475  1202  4954 D SliceBuilder: Creating slice for: com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController
+04-21 09:11:33.480  1202  4954 D SliceBuilder: Creating slice for: com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController
+04-21 09:11:33.480  5472  5472 I AndroidRuntime: Using default boot image
+04-21 09:11:33.480  5472  5472 I AndroidRuntime: Leaving lock profiling enabled
+04-21 09:11:33.482  1202  4658 D SettingsSliceProvider: content://com.android.settings.slices/action/gesture_double_tap_power loaded from cache
+04-21 09:11:33.484  5472  5472 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 09:11:33.485  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.486  5472  5472 I app_process: Using CollectorTypeCC GC.
+04-21 09:11:33.486  1202  3466 D SettingsSliceProvider: content://android.settings.slices/action/airplane_mode loaded from cache
+04-21 09:11:33.486  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.487  1202  4419 D SettingsSliceProvider: content://android.settings.slices/action/battery_saver loaded from cache
+04-21 09:11:33.487  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.488  1202  4560 D SettingsSliceProvider: content://com.android.settings.slices/action/os_firmware_version loaded from cache
+04-21 09:11:33.490  1202  4953 D SliceBuilder: Creating slice for: com.android.settings.notification.AlarmVolumePreferenceController
+04-21 09:11:33.493  1202  4953 D SliceBuilder: Creating slice for: com.android.settings.notification.AlarmVolumePreferenceController
+04-21 09:11:33.496  1202  4953 D SliceBuilder: Creating slice for: com.android.settings.notification.NotificationVolumePreferenceController
+04-21 09:11:33.504  1202  4953 D SliceBuilder: Creating slice for: com.android.settings.notification.NotificationVolumePreferenceController
+04-21 09:11:33.514  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.522  1202  4658 D SettingsSliceProvider: content://com.android.settings.slices/action/alarm_volume loaded from cache
+04-21 09:11:33.527  1202  4399 D VolumeSliceHelper: Unregistering uri broadcast relay: content://com.android.settings.slices/action/alarm_volume
+04-21 09:11:33.536  1202  4399 W ElapsedTimeUtils: getElapsedTime: sSuwFinishedTimeStamp is null
+04-21 09:11:33.544  1202  4399 D VolumeSliceHelper: Unregistering uri broadcast relay: content://com.android.settings.slices/action/notification_volume
+04-21 09:11:33.545  1202  4399 D SliceBroadcastRelay: Unregistering uri broadcast relay: content://com.android.settings.slices/action/volume_slices
+04-21 09:11:33.545   555   915 W BroadcastLoopers: Found previously unknown looper Thread[SliceManagerService,5,main]
+04-21 09:11:33.549  1202  3466 D SlicesIndexer: Slices already indexed - returning.
+04-21 09:11:33.550  1202  3466 D VolumeSliceHelper: Registering uri for broadcast relay: content://com.android.settings.slices/action/notification_volume
+04-21 09:11:33.550  1202  3466 D SliceBroadcastRelay: Registering Uri for broadcast relay: content://com.android.settings.slices/action/volume_slices
+04-21 09:11:33.551  1202  3466 D SettingsSliceProvider: Built slice (content://com.android.settings.slices/action/notification_volume) in: 2
+04-21 09:11:33.666  5472  5472 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 09:11:33.689  5472  5472 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 09:11:33.689  5472  5472 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 09:11:33.690   951   951 D TileServices: Couldn't find tile for ComponentInfo{com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.focusmode.quicksettings.FocusModeTileService}(0)
+04-21 09:11:33.715  5472  5472 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 09:11:33.715  5472  5472 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 09:11:33.733   361  5481 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10139 0}
+04-21 09:11:33.735  1834  1854 I ogle.android.as: Background concurrent copying GC freed 44387(2015KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 6850KB/13MB, paused 87us,62us total 883.823ms
+04-21 09:11:33.750   361  5482 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 09:11:33.751   361  5483 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 09:11:33.758  1742  1824 W ziparchive: Unable to open '/data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk': No such file or directory
+04-21 09:11:33.758  1742  1824 E .apps.wellbeing: Failed to open APK '/data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk': I/O error
+04-21 09:11:33.760  1742  1824 W ResourcesManager: failed to preload asset path '/data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk'
+04-21 09:11:33.760  1742  1824 W ResourcesManager: java.io.IOException: Failed to load asset path /data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.content.res.ApkAssets.nativeLoad(Native Method)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.content.res.ApkAssets.<init>(ApkAssets.java:298)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.content.res.ApkAssets.loadFromPath(ApkAssets.java:147)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ResourcesManager.loadApkAssets(ResourcesManager.java:474)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ResourcesManager.-$$Nest$mloadApkAssets(Unknown Source:0)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ResourcesManager$ApkAssetsSupplier.load(ResourcesManager.java:167)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ResourcesManager.createApkAssetsSupplierNotLocked(ResourcesManager.java:1004)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ResourcesManager.getResources(ResourcesManager.java:1125)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ActivityThread.getTopLevelResources(ActivityThread.java:2597)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ApplicationPackageManager.getResourcesForApplication(ApplicationPackageManager.java:2060)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ApplicationPackageManager.getResourcesForApplication(ApplicationPackageManager.java:2046)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ApplicationPackageManager.getText(ApplicationPackageManager.java:2363)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.content.pm.PackageItemInfo.loadUnsafeLabel(PackageItemInfo.java:222)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.content.pm.PackageItemInfo.loadLabel(PackageItemInfo.java:212)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at android.app.ApplicationPackageManager.getApplicationLabel(ApplicationPackageManager.java:2408)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at crm.f(PG:6)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at cdm.apply(PG:74)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.i.accept(SourceFile:27)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.P0.accept(SourceFile:3)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.a.forEachRemaining(SourceFile:20)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.c.v(SourceFile:21)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.c.C(SourceFile:8)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.I0.e(SourceFile:1)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.c.F(SourceFile:35)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at j$.util.stream.g1.collect(SourceFile:83)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at bsv.a(PG:14)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at jza.a(PG:30)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at jza.a(PG:42)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at lne.a(PG:1)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at lmk.run(PG:4)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at lng.run(PG:1)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at llo.run(PG:3)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at idn.run(PG:5)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at huo.run(PG:51)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 09:11:33.760  1742  1824 W ResourcesManager: 	at idx.run(PG:5)
+04-21 09:11:33.761  1742  1824 W ziparchive: Unable to open '/data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk': No such file or directory
+04-21 09:11:33.761  1742  1824 E .apps.wellbeing: Failed to open APK '/data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk': I/O error
+04-21 09:11:33.761  1742  1824 E ResourcesManager: failed to add asset path '/data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk'
+04-21 09:11:33.761  1742  1824 E ResourcesManager: java.io.IOException: Failed to load asset path /data/app/~~mPvQhuzb3aWA1IFrD5Hp-Q==/owasp.sat.agoat-6Cqet_0LTiENPcxSad_62w==/base.apk
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.content.res.ApkAssets.nativeLoad(Native Method)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.content.res.ApkAssets.<init>(ApkAssets.java:298)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.content.res.ApkAssets.loadFromPath(ApkAssets.java:147)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.loadApkAssets(ResourcesManager.java:474)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.-$$Nest$mloadApkAssets(Unknown Source:0)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager$ApkAssetsSupplier.load(ResourcesManager.java:167)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.createAssetManager(ResourcesManager.java:550)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.createResourcesImpl(ResourcesManager.java:637)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.findOrCreateResourcesImplForKeyLocked(ResourcesManager.java:689)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.createResources(ResourcesManager.java:1035)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ResourcesManager.getResources(ResourcesManager.java:1138)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ActivityThread.getTopLevelResources(ActivityThread.java:2597)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ApplicationPackageManager.getResourcesForApplication(ApplicationPackageManager.java:2060)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ApplicationPackageManager.getResourcesForApplication(ApplicationPackageManager.java:2046)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ApplicationPackageManager.getText(ApplicationPackageManager.java:2363)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.content.pm.PackageItemInfo.loadUnsafeLabel(PackageItemInfo.java:222)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.content.pm.PackageItemInfo.loadLabel(PackageItemInfo.java:212)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at android.app.ApplicationPackageManager.getApplicationLabel(ApplicationPackageManager.java:2408)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at crm.f(PG:6)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at cdm.apply(PG:74)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.i.accept(SourceFile:27)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.P0.accept(SourceFile:3)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.a.forEachRemaining(SourceFile:20)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.c.v(SourceFile:21)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.c.C(SourceFile:8)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.I0.e(SourceFile:1)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.c.F(SourceFile:35)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at j$.util.stream.g1.collect(SourceFile:83)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at bsv.a(PG:14)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at jza.a(PG:30)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at jza.a(PG:42)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at lne.a(PG:1)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at lmk.run(PG:4)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at lng.run(PG:1)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at llo.run(PG:3)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at idn.run(PG:5)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at huo.run(PG:51)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 09:11:33.761  1742  1824 E ResourcesManager: 	at idx.run(PG:5)
+04-21 09:11:33.761  1742  1824 W PackageManager: Failure retrieving resources for owasp.sat.agoat
+04-21 09:11:33.766  5472  5472 W main    : type=1400 audit(0.0:87): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:11:33.769  5472  5472 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 09:11:33.770  5472  5472 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 09:11:33.770  5472  5472 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 09:11:33.766  5472  5472 W main    : type=1400 audit(0.0:88): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:11:33.766  5472  5472 W main    : type=1400 audit(0.0:89): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 09:11:33.777  5472  5472 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+04-21 09:11:33.778  5472  5472 W Monkey  : args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]
+04-21 09:11:33.779  5472  5472 W Monkey  :  arg: "-p"
+04-21 09:11:33.779  5472  5472 W Monkey  :  arg: "owasp.sat.agoat"
+04-21 09:11:33.779  5472  5472 W Monkey  :  arg: "-c"
+04-21 09:11:33.779  5472  5472 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+04-21 09:11:33.779  5472  5472 W Monkey  :  arg: "1"
+04-21 09:11:33.779  5472  5472 W Monkey  : data="owasp.sat.agoat"
+04-21 09:11:33.779  5472  5472 W Monkey  : data="android.intent.category.LAUNCHER"
+04-21 09:11:33.804   555  2243 W ActivityManager: registerReceiverWithFeature: no app for null
+04-21 09:11:33.805  5472  5472 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 09:11:33.805  5472  5472 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 09:11:33.805  5472  5472 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 09:11:33.809  1236  3641 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[NexusLauncherActivity]#10) as ready
+04-21 09:11:33.809  1236  3641 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[NexusLauncherActivity]#11) as ready
+04-21 09:11:33.810   555  2243 W ActivityTaskManager: callingPackage for (uid=2000, pid=5472) has no WPC
+04-21 09:11:33.825   555  2243 V SplashScreenExceptionList: SplashScreen checking exception for package owasp.sat.agoat (target sdk:33) -> false
+04-21 09:11:33.825   555  2243 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10192; state: ENABLED
+04-21 09:11:33.826   555  2243 I ActivityTaskManager: Add Task{850059d #11 type=standard A=10192:owasp.sat.agoat} to hidden list because adding Task{ed0db6f #12 type=standard A=10192:owasp.sat.agoat}
+04-21 09:11:33.828   555  2243 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 09:11:33.828  5472  5472 I Monkey  : Events injected: 1
+04-21 09:11:33.838   555   587 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+04-21 09:11:33.838   555   587 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10192; state: DISABLED
+04-21 09:11:33.838   555   587 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10192; state: DISABLED
+04-21 09:11:33.838   555   587 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10192; state: ENABLED
+04-21 09:11:33.840   555   596 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+04-21 09:11:33.842   951  1004 D SplashScreenView: Build android.window.SplashScreenView{edf1c6d V.E...... ......ID 0,0-0,0}
+04-21 09:11:33.842   951  1004 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-21 09:11:33.842   951  1004 D SplashScreenView: Branding: view: android.view.View{8f680a2 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-21 09:11:33.854   362   362 D Zygote  : Forked child process 5492
+04-21 09:11:33.857   555   596 I ActivityManager: Start proc 5492:owasp.sat.agoat/u0a192 for next-top-activity {owasp.sat.agoat/owasp.sat.agoat.SplashActivity}
+04-21 09:11:33.858  1834  3961 I AiAiEcho: Settings changed for uri: content://settings/secure/device_state_rotation_lock
+04-21 09:11:33.859  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 09:11:33.859  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 09:11:33.859  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 09:11:33.860  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 09:11:33.860  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 09:11:33.860  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 09:11:33.860  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 09:11:33.860  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 09:11:33.863   555  2557 D CoreBackPreview: Window{5b9bf8b u0 Splash Screen owasp.sat.agoat}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@2e1a926, mPriority=0, mIsAnimationCallback=false}
+04-21 09:11:33.864  5472  5472 I Monkey  : ## Network stats: elapsed time=56ms (0ms mobile, 0ms wifi, 56ms not connected)
+04-21 09:11:33.866  1834  3961 I AiAiEcho: Settings changed for uri: content://settings/secure/device_state_rotation_lock
+04-21 09:11:33.867  5472  5472 I app_process: System.exit called, status: 0
+04-21 09:11:33.867  5472  5472 I AndroidRuntime: VM exiting with result code 0.
+04-21 09:11:33.867  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 09:11:33.868  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-21 09:11:33.868   951   951 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-21 09:11:33.869  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 09:11:33.869  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 09:11:33.869  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 09:11:33.869  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 09:11:33.869  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 09:11:33.869  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 09:11:33.869  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 09:11:33.873  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 09:11:33.874  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 09:11:33.875  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-21 09:11:33.878   951   951 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-21 09:11:33.918  5492  5492 I owasp.sat.agoat: Late-enabling -Xcheck:jni
+04-21 09:11:33.951  4256  4266 I gs.intelligence: Background young concurrent copying GC freed 78724(4867KB) AllocSpace objects, 164(4988KB) LOS objects, 57% free, 6596KB/15MB, paused 100us,18us total 170.096ms

@@ -1,0 +1,12 @@
+{
+  "case_id": "full_static_006",
+  "duration_seconds": 106.93936096799735,
+  "steps": 11,
+  "agents": 1,
+  "summary": {
+    "status": "completed",
+    "warnings_count": 1,
+    "errors_count": 0,
+    "tool_history_count": 4
+  }
+}

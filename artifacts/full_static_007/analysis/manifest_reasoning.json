@@ -1,0 +1,31 @@
+{
+  "summary": "Exported MainActivity, SystemJobService, ShareChooserPendingIntent, FirebaseInstanceIdReceiver, DiagnosticsReceiver and ProfileInstallReceiver expose the app to external invocation. CLEAR_TEXT traffic enabled and a large set of dangerous permissions including INTERNET, BILLING, READ/WRITE_EXTERNAL_STORAGE, WAKE_LOCK, Ad ID, and many launcher badge permissions increase attack surface.",
+  "attack_surface": [
+    "Exported activities and services that can be started by other apps",
+    "Exported receivers with no protection allowing arbitrary broadcasts",
+    "Use of CLEAR_TEXT network traffic exposing credentials",
+    "GrantUriPermissions on several FileProviders permitting external read/write",
+    "Wide range of dangerous permissions enabling deep system access"
+  ],
+  "top_risks": [
+    "External apps can invoke MainActivity without authentication",
+    "Broadcast receivers can be triggered maliciously to execute code",
+    "Cleartext network traffic allows credential interception",
+    "FileProviders can be misused to exfiltrate data",
+    "High number of dangerous permissions may facilitate privilege escalation"
+  ],
+  "abuse_hypotheses": [
+    "An attacker could start MainActivity via an intent to cause unintended navigation or data exposure",
+    "Sending a broadcast to ShareChooserPendingIntent could trigger unintended content sharing",
+    "Intercepting FCM messages via FirebaseInstanceIdReceiver could flood device with malicious notifications",
+    "Exploit DiagnosticsReceiver or ProfileInstallReceiver to dump diagnostic data or install malicious profiles",
+    "Using grantUriPermissions to access files on external storage from outside the app"
+  ],
+  "recommended_next_steps": [
+    "Restrict or remove explicit exported components, adding protecting permissions where appropriate",
+    "Disable CLEAR_TEXT traffic or enforce HTTPS only via network_security_config",
+    "Revoke unneeded dangerous permissions and use permission request on runtime",
+    "Review and secure all third‑party library manifests, especially Firebase and Google Play Services",
+    "Consider disabling grantUriPermissions unless required for inter‑app file sharing"
+  ]
+}

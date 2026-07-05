@@ -1,0 +1,27 @@
+--------- beginning of system
+04-21 14:15:18.184   555  1049 W ActivityTaskManager: callingPackage for (uid=2000, pid=9482) has no WPC
+04-21 14:15:18.184   555  1049 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10192; state: DISABLED
+04-21 14:15:18.184   555  1049 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10192; state: DISABLED
+04-21 14:15:18.184   555  1049 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10192; state: DISABLED
+04-21 14:15:18.185   555  1049 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10192; state: DISABLED
+04-21 14:15:18.186   555  1049 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10192; state: ENABLED
+04-21 14:15:18.187   555  1049 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10192; state: DISABLED
+04-21 14:15:18.187   555  1049 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10192; state: DISABLED
+04-21 14:15:18.189   555  1049 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+04-21 14:15:18.190   555  1049 D CompatibilityChangeReporter: Compat change id reported: 194833441; UID 10192; state: ENABLED
+04-21 14:15:18.190   555  1049 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 14:15:18.190   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@a0b7299 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=17 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=2 lastActiveTime=334279 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@f20995e} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{c50213f owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+--------- beginning of main
+04-21 14:15:18.194   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 

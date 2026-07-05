@@ -1,0 +1,41 @@
+package cordova.plugin.consent;
+
+/* loaded from: classes2.dex */
+public final class Generated {
+
+    public final class Actions {
+        public static final String CAN_REQUEST_ADS = "canRequestAds";
+        public static final String GET_CONSENT_STATUS = "getConsentStatus";
+        public static final String GET_FORM_STATUS = "getFormStatus";
+        public static final String LOAD_AND_SHOW_IF_REQUIRED = "loadAndShowIfRequired";
+        public static final String LOAD_FORM = "loadForm";
+        public static final String PRIVACY_OPTIONS_REQUIREMENT_STATUS = "privacyOptionsRequirementStatus";
+        public static final String READY = "ready";
+        public static final String REQUEST_INFO_UPDATE = "requestInfoUpdate";
+        public static final String REQUEST_TRACKING_AUTHORIZATION = "requestTrackingAuthorization";
+        public static final String RESET = "reset";
+        public static final String SHOW_FORM = "showForm";
+        public static final String SHOW_PRIVACY_OPTIONS_FORM = "showPrivacyOptionsForm";
+        public static final String TRACKING_AUTHORIZATION_STATUS = "trackingAuthorizationStatus";
+
+        public Actions() {
+        }
+    }
+
+    public final class Events {
+        public static final String READY = "consent.ready";
+
+        public Events() {
+        }
+    }
+
+    public final class ConsentStatus {
+        public static final int NOT_REQUIRED = 2;
+        public static final int OBTAINED = 3;
+        public static final int REQUIRED = 1;
+        public static final int UNKNOWN = 0;
+
+        public ConsentStatus() {
+        }
+    }
+}

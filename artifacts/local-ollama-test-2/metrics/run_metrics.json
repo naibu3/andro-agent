@@ -1,0 +1,199 @@
+{
+  "case_id": "local-ollama-test-2",
+  "started_at": "2026-06-18 18:26:53.376937",
+  "finished_at": "2026-06-18 18:28:08.753159",
+  "duration_seconds": 75.37622459799991,
+  "steps": [
+    {
+      "name": "validate",
+      "started_at": "2026-06-18 18:26:53.376952",
+      "finished_at": "2026-06-18 18:26:53.380851",
+      "duration_seconds": 0.0038863550000769465,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "extract_manifest",
+      "started_at": "2026-06-18 18:26:53.380885",
+      "finished_at": "2026-06-18 18:27:00.045694",
+      "duration_seconds": 6.664788220999981,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_manifest_facts",
+      "started_at": "2026-06-18 18:27:00.045707",
+      "finished_at": "2026-06-18 18:27:00.046976",
+      "duration_seconds": 0.0012530289998267108,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_manifest_rules",
+      "started_at": "2026-06-18 18:27:00.046984",
+      "finished_at": "2026-06-18 18:27:00.048006",
+      "duration_seconds": 0.0010094689998823014,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "jadx_decompile",
+      "started_at": "2026-06-18 18:27:00.048015",
+      "finished_at": "2026-06-18 18:27:18.249265",
+      "duration_seconds": 18.20123038099996,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_search",
+      "started_at": "2026-06-18 18:27:18.249282",
+      "finished_at": "2026-06-18 18:27:20.638834",
+      "duration_seconds": 2.389532410999891,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_code_facts",
+      "started_at": "2026-06-18 18:27:20.638843",
+      "finished_at": "2026-06-18 18:27:20.639822",
+      "duration_seconds": 0.0009681750000254397,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_code_rules",
+      "started_at": "2026-06-18 18:27:20.639827",
+      "finished_at": "2026-06-18 18:27:20.641265",
+      "duration_seconds": 0.0014285380000274017,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_static_bundle",
+      "started_at": "2026-06-18 18:27:20.641270",
+      "finished_at": "2026-06-18 18:27:20.643390",
+      "duration_seconds": 0.002110528000002887,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "manifest_risk_agent",
+      "started_at": "2026-06-18 18:27:20.643399",
+      "finished_at": "2026-06-18 18:27:40.902157",
+      "duration_seconds": 20.258741463999968,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "started_at": "2026-06-18 18:27:40.902179",
+      "finished_at": "2026-06-18 18:27:56.158506",
+      "duration_seconds": 15.256294414000195,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "started_at": "2026-06-18 18:27:56.158524",
+      "finished_at": "2026-06-18 18:28:02.691593",
+      "duration_seconds": 6.533033228000022,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "started_at": "2026-06-18 18:28:02.691606",
+      "finished_at": "2026-06-18 18:28:08.753104",
+      "duration_seconds": 6.061469961000057,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "agents": [
+    {
+      "name": "manifest_risk_agent",
+      "model": "qwen2.5-coder:3b",
+      "started_at": "2026-06-18 18:27:20.644876",
+      "finished_at": "2026-06-18 18:27:40.900961",
+      "duration_seconds": 20.25604116799991,
+      "success": true,
+      "input_chars": 51242,
+      "output_chars": 1760,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "model": "qwen2.5-coder:3b",
+      "started_at": "2026-06-18 18:27:40.905930",
+      "finished_at": "2026-06-18 18:27:56.158445",
+      "duration_seconds": 15.252460808000023,
+      "success": true,
+      "input_chars": 56625,
+      "output_chars": 780,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "model": "qwen2.5-coder:3b",
+      "started_at": "2026-06-18 18:27:56.161870",
+      "finished_at": "2026-06-18 18:28:02.691552",
+      "duration_seconds": 6.529631239000082,
+      "success": true,
+      "input_chars": 3028,
+      "output_chars": 966,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "model": "qwen2.5-coder:3b",
+      "started_at": "2026-06-18 18:28:02.692002",
+      "finished_at": "2026-06-18 18:28:08.753065",
+      "duration_seconds": 6.061023359000046,
+      "success": true,
+      "input_chars": 1225,
+      "output_chars": 1028,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "summary": {
+    "status": "completed",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 7,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true,
+    "llm_provider": null,
+    "llm_model": null
+  }
+}

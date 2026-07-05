@@ -1,0 +1,142 @@
+{
+  "package_name": "htb.d3vnu11.securenotes",
+  "version_code": null,
+  "version_name": null,
+  "min_sdk": null,
+  "target_sdk": null,
+  "compile_sdk_version": "35",
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.INTERNET",
+    "android.permission.MANAGE_EXTERNAL_STORAGE",
+    "htb.d3vnu11.securenotes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "application": {
+    "debuggable": null,
+    "allow_backup": true,
+    "uses_cleartext_traffic": true,
+    "network_security_config": null,
+    "request_legacy_external_storage": true,
+    "test_only": null,
+    "full_backup_content": "@xml/backup_rules"
+  },
+  "activities": [
+    {
+      "name": "htb.d3vnu11.securenotes.MainActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.MAIN"
+          ],
+          "categories": [
+            "android.intent.category.LAUNCHER"
+          ],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "htb.d3vnu11.securenotes.NoteActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "htb.d3vnu11.securenotes.EditNoteActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "htb.d3vnu11.securenotes.LoginActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "activity_aliases": [],
+  "services": [],
+  "receivers": [
+    {
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "android.permission.DUMP",
+      "enabled": true,
+      "intent_filters": [
+        {
+          "actions": [
+            "androidx.profileinstaller.action.INSTALL_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SKIP_FILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SAVE_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "htb.d3vnu11.securenotes.androidx-startup",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ]
+}

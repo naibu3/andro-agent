@@ -1,0 +1,84 @@
+--------- beginning of main
+04-21 14:15:41.915  9798  9798 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 14:15:41.919  9798  9798 I AndroidRuntime: Using default boot image
+04-21 14:15:41.919  9798  9798 I AndroidRuntime: Leaving lock profiling enabled
+04-21 14:15:41.921  9798  9798 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 14:15:41.921  9798  9798 I app_process: Using CollectorTypeCC GC.
+04-21 14:15:41.982  9798  9798 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 14:15:41.991  9798  9798 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 14:15:41.991  9798  9798 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 14:15:41.995  9798  9798 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 14:15:41.995  9798  9798 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 14:15:42.007  9798  9798 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 14:15:42.007  9798  9798 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 14:15:42.007  9798  9798 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 14:15:42.003  9798  9798 W main    : type=1400 audit(0.0:442): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:15:42.008  9798  9798 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 14:15:42.003  9798  9798 W main    : type=1400 audit(0.0:443): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:15:42.003  9798  9798 W main    : type=1400 audit(0.0:444): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 14:15:42.010  9798  9798 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:15:42.010  9798  9798 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:15:42.010  9798  9798 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: Writing exception to parcel
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/items
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 14:15:42.012  9393  9418 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 14:15:42.013  9798  9798 D AndroidRuntime: Shutting down VM
+04-21 14:15:42.404   555  2058 D ConnectivityService: requestNetwork for uid/pid:10132/1961 activeRequest: null callbackRequest: 163 [NetworkRequest [ REQUEST id=163, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10132 RequestorUid: 10132 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 14:15:42.419   361   402 I netd    : networkSetPermissionForNetwork(101, 0) <12.94ms>
+04-21 14:15:42.430   555   878 D ConnectivityService: NetReassign [163 : null → 101] [c 1] [a 22] [i 3]
+04-21 14:15:42.430   555   878 D ConnectivityService: reportNetworkConnectivity(100, false) by 10132
+04-21 14:15:42.430  1128  2217 D NetworkMonitor/100: Forcing reevaluation for UID 10132. Dns signal count: 0
+04-21 14:15:42.433  1128  9815 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+04-21 14:15:42.433  1128  9814 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+04-21 14:15:42.433  1128  9815 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+04-21 14:15:42.434  1128  9814 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+04-21 14:15:42.435   361  9817 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 14:15:42.435   361  9816 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 14:15:42.437   361  9818 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 14:15:42.437   361  9819 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+04-21 14:15:42.593   361  9819 I resolv  : res_nsend: used send_dg 63 terrno: 0
+04-21 14:15:42.593   361  9816 I resolv  : res_nsend: used send_dg 256 terrno: 0
+04-21 14:15:42.593   361  9818 I resolv  : res_nsend: used send_dg 160 terrno: 0
+04-21 14:15:42.593   361  9817 I resolv  : res_nsend: used send_dg 75 terrno: 0
+04-21 14:15:42.595  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.596  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.598  1128  9815 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 164ms OK 216.58.204.195,2a00:1450:4003:818::2003
+04-21 14:15:42.598  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.598  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.599  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.600  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.600  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.601   361  9820 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+04-21 14:15:42.601  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.602  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.602   361  9821 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 14:15:42.602   361  9822 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 14:15:42.602   361  9822 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7394271586d0
+04-21 14:15:42.602   361  9822 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+04-21 14:15:42.602   361  9821 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x739427157710
+04-21 14:15:42.602   361  9821 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+04-21 14:15:42.603  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.604  1128  9815 D TrafficStats: tagSocket(106) with statsTag=0xffffff81, statsUid=-1
+04-21 14:15:42.604  1128  1128 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.605  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.606  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.607  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.608  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.609  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.609  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.610  1128  1128 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+04-21 14:15:42.611  1128  9814 D NetworkMonitor/100: PROBE_DNS www.google.com 177ms OK 142.251.150.119,142.251.154.119,142.251.155.119,142.251.153.119,142.251.157.119,142.251.151.119,142.251.156.119,142.251.152.119,2001:4860:4826:7700::,2001:4860:482c:7700::,2001:4860:4829:7700::,2001:4860:4828:7700::,2001:4860:482b:7700::,2001:4860:4827:7700::,2001:4860:482a:7700::,2001:4860:482d:7700::
+04-21 14:15:42.611   361  9823 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+04-21 14:15:42.612   361  9824 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 14:15:42.612   361  9824 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7394f715a710
+04-21 14:15:42.612   361  9824 I resolv  : doQuery: rcode=0, ancount=8, return value=256
+04-21 14:15:42.612   361  9825 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 14:15:42.612   361  9825 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x73940715eb70
+04-21 14:15:42.612   361  9825 I resolv  : doQuery: rcode=0, ancount=8, return value=160
+04-21 14:15:42.613  1128  9814 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1

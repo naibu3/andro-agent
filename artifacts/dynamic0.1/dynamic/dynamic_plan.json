@@ -1,0 +1,23 @@
+{
+  "case_id": "dynamic0.1",
+  "package_name": "owasp.sat.agoat",
+  "device_profile": "baseline",
+  "tests": [
+    {
+      "test_id": "dyn-001",
+      "title": "Launch main app entrypoint",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "app_launch",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_app",
+          "parameters": {}
+        }
+      ],
+      "expected_signals": [
+        "app_launch_attempted"
+      ]
+    }
+  ]
+}

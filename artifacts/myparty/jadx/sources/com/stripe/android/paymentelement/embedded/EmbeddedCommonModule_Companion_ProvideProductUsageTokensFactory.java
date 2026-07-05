@@ -1,0 +1,28 @@
+package com.stripe.android.paymentelement.embedded;
+
+import dagger.internal.Factory;
+import dagger.internal.Preconditions;
+import java.util.Set;
+
+/* loaded from: classes5.dex */
+public final class EmbeddedCommonModule_Companion_ProvideProductUsageTokensFactory implements Factory<Set<String>> {
+    @Override // javax.inject.Provider
+    public Set<String> get() {
+        return provideProductUsageTokens();
+    }
+
+    public static EmbeddedCommonModule_Companion_ProvideProductUsageTokensFactory create() {
+        return InstanceHolder.INSTANCE;
+    }
+
+    public static Set<String> provideProductUsageTokens() {
+        return (Set) Preconditions.checkNotNullFromProvides(EmbeddedCommonModule.INSTANCE.provideProductUsageTokens());
+    }
+
+    private static final class InstanceHolder {
+        static final EmbeddedCommonModule_Companion_ProvideProductUsageTokensFactory INSTANCE = new EmbeddedCommonModule_Companion_ProvideProductUsageTokensFactory();
+
+        private InstanceHolder() {
+        }
+    }
+}

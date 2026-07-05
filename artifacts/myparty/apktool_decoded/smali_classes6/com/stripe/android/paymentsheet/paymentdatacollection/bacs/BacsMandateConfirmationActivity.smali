@@ -1,0 +1,358 @@
+.class public final Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;
+.super Landroidx/appcompat/app/AppCompatActivity;
+.source "BacsMandateConfirmationActivity.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nBacsMandateConfirmationActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BacsMandateConfirmationActivity.kt\ncom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n*L\n1#1,95:1\n75#2,13:96\n*S KotlinDebug\n*F\n+ 1 BacsMandateConfirmationActivity.kt\ncom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity\n*L\n30#1:96,13\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0001\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0012\u0010\u000f\u001a\u00020\u00102\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0012H\u0014J\u0008\u0010\u0013\u001a\u00020\u0010H\u0016R\u001b\u0010\u0004\u001a\u00020\u00058BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\t\u001a\u0004\u0008\u0006\u0010\u0007R\u001b\u0010\n\u001a\u00020\u000b8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\t\u001a\u0004\u0008\u000c\u0010\r\u00a8\u0006\u0014"
+    }
+    d2 = {
+        "Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;",
+        "Landroidx/appcompat/app/AppCompatActivity;",
+        "<init>",
+        "()V",
+        "starterArgs",
+        "Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;",
+        "getStarterArgs",
+        "()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;",
+        "starterArgs$delegate",
+        "Lkotlin/Lazy;",
+        "viewModel",
+        "Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;",
+        "getViewModel",
+        "()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;",
+        "viewModel$delegate",
+        "onCreate",
+        "",
+        "savedInstanceState",
+        "Landroid/os/Bundle;",
+        "finish",
+        "paymentsheet_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
+
+
+# instance fields
+.field private final starterArgs$delegate:Lkotlin/Lazy;
+
+.field private final viewModel$delegate:Lkotlin/Lazy;
+
+
+# direct methods
+.method public static synthetic $r8$lambda$3GUhcbE8KG0I3t8Rmq7yDDbDXmk(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+    .locals 0
+
+    invoke-static {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->starterArgs_delegate$lambda$0(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$NMyHnJ1TzxaNu1r3wlJfaLAgtBU(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Landroidx/lifecycle/ViewModelProvider$Factory;
+    .locals 0
+
+    invoke-static {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->viewModel_delegate$lambda$1(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Landroidx/lifecycle/ViewModelProvider$Factory;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic $r8$lambda$nXvy3rHcUVw67RSUfWrbHyByFkU(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;Landroidx/activity/OnBackPressedCallback;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->onCreate$lambda$2(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;Landroidx/activity/OnBackPressedCallback;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 7
+
+    .line 23
+    invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
+
+    .line 24
+    new-instance v0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$$ExternalSyntheticLambda0;
+
+    invoke-direct {v0, p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$$ExternalSyntheticLambda0;-><init>(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)V
+
+    invoke-static {v0}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->starterArgs$delegate:Lkotlin/Lazy;
+
+    .line 30
+    move-object v0, p0
+
+    check-cast v0, Landroidx/activity/ComponentActivity;
+
+    new-instance v1, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$$ExternalSyntheticLambda1;
+
+    invoke-direct {v1, p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$$ExternalSyntheticLambda1;-><init>(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)V
+
+    .line 104
+    new-instance v2, Landroidx/lifecycle/ViewModelLazy;
+
+    const-class v3, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;
+
+    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object v3
+
+    .line 106
+    new-instance v4, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$special$$inlined$viewModels$default$2;
+
+    invoke-direct {v4, v0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$special$$inlined$viewModels$default$2;-><init>(Landroidx/activity/ComponentActivity;)V
+
+    check-cast v4, Lkotlin/jvm/functions/Function0;
+
+    .line 108
+    new-instance v5, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$special$$inlined$viewModels$default$3;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v6, v0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$special$$inlined$viewModels$default$3;-><init>(Lkotlin/jvm/functions/Function0;Landroidx/activity/ComponentActivity;)V
+
+    check-cast v5, Lkotlin/jvm/functions/Function0;
+
+    .line 104
+    invoke-direct {v2, v3, v4, v1, v5}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
+
+    check-cast v2, Lkotlin/Lazy;
+
+    .line 30
+    iput-object v2, p0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->viewModel$delegate:Lkotlin/Lazy;
+
+    return-void
+.end method
+
+.method public static final synthetic access$getViewModel(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;
+    .locals 0
+
+    .line 23
+    invoke-direct {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->getViewModel()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private final getStarterArgs()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+    .locals 1
+
+    .line 24
+    iget-object v0, p0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->starterArgs$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+
+    return-object v0
+.end method
+
+.method private final getViewModel()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;
+    .locals 1
+
+    .line 30
+    iget-object v0, p0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->viewModel$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;
+
+    return-object v0
+.end method
+
+.method private static final onCreate$lambda$2(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;Landroidx/activity/OnBackPressedCallback;)Lkotlin/Unit;
+    .locals 1
+
+    const-string v0, "$this$addCallback"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 41
+    invoke-direct {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->getViewModel()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;
+
+    move-result-object p0
+
+    sget-object p1, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewAction$OnBackPressed;->INSTANCE:Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewAction$OnBackPressed;
+
+    check-cast p1, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewAction;
+
+    invoke-virtual {p0, p1}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel;->handleViewAction(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewAction;)V
+
+    .line 42
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method private static final starterArgs_delegate$lambda$0(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+    .locals 2
+
+    .line 25
+    sget-object v0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;->Companion:Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args$Companion;
+
+    invoke-virtual {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object p0
+
+    const-string v1, "getIntent(...)"
+
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args$Companion;->fromIntent(Landroid/content/Intent;)Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 26
+    const-string v0, "Cannot start Bacs mandate confirmation flow without arguments"
+
+    .line 25
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method private static final viewModel_delegate$lambda$1(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)Landroidx/lifecycle/ViewModelProvider$Factory;
+    .locals 1
+
+    .line 31
+    new-instance v0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel$Factory;
+
+    invoke-direct {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->getStarterArgs()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationViewModel$Factory;-><init>(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;)V
+
+    check-cast v0, Landroidx/lifecycle/ViewModelProvider$Factory;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public finish()V
+    .locals 1
+
+    .line 91
+    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->finish()V
+
+    .line 92
+    move-object v0, p0
+
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/stripe/android/uicore/utils/AnimationConstantsKt;->fadeOut(Landroid/app/Activity;)V
+
+    return-void
+.end method
+
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 6
+
+    .line 36
+    invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 38
+    move-object p1, p0
+
+    check-cast p1, Landroid/app/Activity;
+
+    invoke-static {p1}, Lcom/stripe/android/paymentsheet/utils/EdgeToEdgeKt;->renderEdgeToEdge(Landroid/app/Activity;)V
+
+    .line 40
+    invoke-virtual {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->getOnBackPressedDispatcher()Landroidx/activity/OnBackPressedDispatcher;
+
+    move-result-object v0
+
+    new-instance v3, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$$ExternalSyntheticLambda2;
+
+    invoke-direct {v3, p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$$ExternalSyntheticLambda2;-><init>(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)V
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static/range {v0 .. v5}, Landroidx/activity/OnBackPressedDispatcherKt;->addCallback$default(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/LifecycleOwner;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)Landroidx/activity/OnBackPressedCallback;
+
+    .line 44
+    invoke-direct {p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;->getStarterArgs()Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationContract$Args;->getAppearance()Lcom/stripe/android/paymentsheet/PaymentSheet$Appearance;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/stripe/android/paymentsheet/PaymentSheetConfigurationKtxKt;->parseAppearance(Lcom/stripe/android/paymentsheet/PaymentSheet$Appearance;)V
+
+    .line 46
+    move-object p1, p0
+
+    check-cast p1, Landroidx/activity/ComponentActivity;
+
+    new-instance v0, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$onCreate$2;
+
+    invoke-direct {v0, p0}, Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity$onCreate$2;-><init>(Lcom/stripe/android/paymentsheet/paymentdatacollection/bacs/BacsMandateConfirmationActivity;)V
+
+    const v1, 0x53fac13d
+
+    const/4 v2, 0x1
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v1, v0, v2, v1}, Landroidx/activity/compose/ComponentActivityKt;->setContent$default(Landroidx/activity/ComponentActivity;Landroidx/compose/runtime/CompositionContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)V
+
+    return-void
+.end method

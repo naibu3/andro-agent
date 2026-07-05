@@ -1,0 +1,363 @@
+.class public final Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;
+.super Ljava/lang/Object;
+.source "IDConsentContentViewModel_Factory.java"
+
+
+# instance fields
+.field private final acceptConsentProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/AcceptConsent;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final eventTrackerProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final getOrFetchSyncProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final handleClickableUrlProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final nativeAuthFlowCoordinatorProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final navigationManagerProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/uicore/navigation/NavigationManager;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final presentSheetProvider:Ldagger/internal/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/features/notice/PresentSheet;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/AcceptConsent;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/uicore/navigation/NavigationManager;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/features/notice/PresentSheet;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 56
+    iput-object p1, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->nativeAuthFlowCoordinatorProvider:Ldagger/internal/Provider;
+
+    .line 57
+    iput-object p2, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->acceptConsentProvider:Ldagger/internal/Provider;
+
+    .line 58
+    iput-object p3, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->getOrFetchSyncProvider:Ldagger/internal/Provider;
+
+    .line 59
+    iput-object p4, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->navigationManagerProvider:Ldagger/internal/Provider;
+
+    .line 60
+    iput-object p5, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->eventTrackerProvider:Ldagger/internal/Provider;
+
+    .line 61
+    iput-object p6, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->handleClickableUrlProvider:Ldagger/internal/Provider;
+
+    .line 62
+    iput-object p7, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->presentSheetProvider:Ldagger/internal/Provider;
+
+    return-void
+.end method
+
+.method public static create(Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;)Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/AcceptConsent;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/uicore/navigation/NavigationManager;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;",
+            ">;",
+            "Ldagger/internal/Provider<",
+            "Lcom/stripe/android/financialconnections/features/notice/PresentSheet;",
+            ">;)",
+            "Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;"
+        }
+    .end annotation
+
+    .line 88
+    new-instance v0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    move-object v7, p6
+
+    invoke-direct/range {v0 .. v7}, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;-><init>(Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;)V
+
+    return-object v0
+.end method
+
+.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/AcceptConsent;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/uicore/navigation/NavigationManager;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;",
+            ">;",
+            "Ljavax/inject/Provider<",
+            "Lcom/stripe/android/financialconnections/features/notice/PresentSheet;",
+            ">;)",
+            "Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;"
+        }
+    .end annotation
+
+    .line 77
+    new-instance v0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;
+
+    invoke-static {p0}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v1
+
+    invoke-static {p1}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v2
+
+    invoke-static {p2}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v3
+
+    invoke-static {p3}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v4
+
+    invoke-static {p4}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v5
+
+    invoke-static {p5}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v6
+
+    invoke-static {p6}, Ldagger/internal/Providers;->asDaggerProvider(Ljavax/inject/Provider;)Ldagger/internal/Provider;
+
+    move-result-object v7
+
+    invoke-direct/range {v0 .. v7}, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;-><init>(Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;)V
+
+    return-object v0
+.end method
+
+.method public static newInstance(Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentState;Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;Lcom/stripe/android/financialconnections/domain/AcceptConsent;Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;Lcom/stripe/android/uicore/navigation/NavigationManager;Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;Lcom/stripe/android/financialconnections/features/notice/PresentSheet;)Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel;
+    .locals 9
+
+    .line 96
+    new-instance v0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    move-object v7, p6
+
+    move-object/from16 v8, p7
+
+    invoke-direct/range {v0 .. v8}, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel;-><init>(Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentState;Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;Lcom/stripe/android/financialconnections/domain/AcceptConsent;Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;Lcom/stripe/android/uicore/navigation/NavigationManager;Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;Lcom/stripe/android/financialconnections/features/notice/PresentSheet;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public get(Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentState;)Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel;
+    .locals 9
+
+    .line 66
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->nativeAuthFlowCoordinatorProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;
+
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->acceptConsentProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Lcom/stripe/android/financialconnections/domain/AcceptConsent;
+
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->getOrFetchSyncProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;
+
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->navigationManagerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Lcom/stripe/android/uicore/navigation/NavigationManager;
+
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->eventTrackerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;
+
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->handleClickableUrlProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;
+
+    iget-object v0, p0, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->presentSheetProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v0}, Ldagger/internal/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v8, v0
+
+    check-cast v8, Lcom/stripe/android/financialconnections/features/notice/PresentSheet;
+
+    move-object v1, p1
+
+    invoke-static/range {v1 .. v8}, Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel_Factory;->newInstance(Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentState;Lcom/stripe/android/financialconnections/domain/NativeAuthFlowCoordinator;Lcom/stripe/android/financialconnections/domain/AcceptConsent;Lcom/stripe/android/financialconnections/domain/GetOrFetchSync;Lcom/stripe/android/uicore/navigation/NavigationManager;Lcom/stripe/android/financialconnections/analytics/FinancialConnectionsAnalyticsTracker;Lcom/stripe/android/financialconnections/ui/HandleClickableUrl;Lcom/stripe/android/financialconnections/features/notice/PresentSheet;)Lcom/stripe/android/financialconnections/features/streamlinedconsent/IDConsentContentViewModel;
+
+    move-result-object p1
+
+    return-object p1
+.end method

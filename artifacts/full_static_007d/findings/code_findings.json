@@ -1,0 +1,439 @@
+[
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/u.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 168,
+          "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/i.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 70,
+          "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/i.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 111,
+          "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/Z/i.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 123,
+          "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 54,
+          "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 113,
+          "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 143,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 54,
+          "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_SHAREDPREFERENCES_USAGE",
+    "title": "SharedPreferences usage detected",
+    "description": "SharedPreferences access found in artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java. Review storage of sensitive data.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 89,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_FILE_OUTPUT_STREAM",
+    "title": "FileOutputStream usage detected",
+    "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/Z/u.java. Review file output location and sensitivity.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 158,
+          "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_FILE_OUTPUT_STREAM",
+    "title": "FileOutputStream usage detected",
+    "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/T/f.java. Review file output location and sensitivity.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 159,
+          "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_FILE_OUTPUT_STREAM",
+    "title": "FileOutputStream usage detected",
+    "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/T/f.java. Review file output location and sensitivity.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/full_static_007d/jadx/sources/T/f.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 1027,
+          "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_FILE_OUTPUT_STREAM",
+    "title": "FileOutputStream usage detected",
+    "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/T/j.java. Review file output location and sensitivity.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/full_static_007d/jadx/sources/T/j.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 51,
+          "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_FILE_OUTPUT_STREAM",
+    "title": "FileOutputStream usage detected",
+    "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/C0/f.java. Review file output location and sensitivity.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 273,
+          "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_FILE_OUTPUT_STREAM",
+    "title": "FileOutputStream usage detected",
+    "description": "FileOutputStream usage found in artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java. Review file output location and sensitivity.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 191,
+          "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_BASE64_DECODE",
+    "title": "Base64 decode usage detected",
+    "description": "Base64 decoding found in artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java. Review for encoded secrets, payloads, or obfuscation.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.base64_decode",
+        "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "encoding",
+          "line_number": 144,
+          "line_text": "arrayList2.add(Base64.decode(str, 0));"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_BASE64_DECODE",
+    "title": "Base64 decode usage detected",
+    "description": "Base64 decoding found in artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java. Review for encoded secrets, payloads, or obfuscation.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.base64_decode",
+        "key": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "encoding",
+          "line_number": 153,
+          "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_CIPHER_USAGE",
+    "title": "Cryptographic API usage detected",
+    "description": "Cipher.getInstance found in artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java. Review algorithm choice, mode, and key handling.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.cipher_instance",
+        "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "crypto",
+          "line_number": 69,
+          "line_text": "cipher = Cipher.getInstance(strConcat);"
+        }
+      }
+    ],
+    "metadata": {}
+  },
+  {
+    "rule_id": "CODE_CIPHER_USAGE",
+    "title": "Cryptographic API usage detected",
+    "description": "Cipher.getInstance found in artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java. Review algorithm choice, mode, and key handling.",
+    "severity": "low",
+    "confidence": "high",
+    "source": "code_rule_engine",
+    "evidence": [
+      {
+        "type": "code.pattern.cipher_instance",
+        "key": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "crypto",
+          "line_number": 87,
+          "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+        }
+      }
+    ],
+    "metadata": {}
+  }
+]

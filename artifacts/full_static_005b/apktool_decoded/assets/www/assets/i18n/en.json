@@ -1,0 +1,498 @@
+{
+  "OPCIONES_MENU": {
+    "INICIO": "Home",
+    "CAMBIAR_IDIOMA": "Change Language",
+    "CERRAR_SESION": "Log out",
+    "CERRAR": "Close",
+    "CONELSISTEMA": "With the system of ",
+    "ZONA_USUARIOS": "User area",
+    "MIS_DATOS": "My data",
+    "CONFIGURACION_ANUNCIOS": "Advertisement setup",
+    "SALIR": "Exit"
+  },
+
+  "MENU": {
+    "INICIO": "Home",
+    "COMPARTIR_APP": "Share APP",
+    "NOTICIAS": "Latest News",
+    "PROXIMOS_PARTIDOS": "Next games",
+    "BUSCADOR": "Search",
+    "MIS_EQUIPOS": "My Teams",
+    "MIS_JUGADORES": "My players",
+    "AVISO_LEGAL": "Legal notice",
+    "AVISO_LEGAL_CONDICIONES": "Legal notice and conditions of use",
+    "POLITICA_PRIVACIDAD": "Privacy policy",
+    "CONFIGURACION": "Setup"
+  },
+
+  "BOTONES": {
+    "OK": "OK",
+    "CANCELAR": "CANCEL",
+    "SI": "YES",
+    "NO": "NO",
+    "ACEPTAR": "OK",
+    "SIGUIENTE": "NEXT",
+    "FINALIZAR": "FINISH",
+    "ANADIR": "ADD",
+    "ACCEDER": "ACCESS",
+    "ENTRAR": "LOGIN",
+    "CERRAR_SESION": "LOG OUT",
+    "PDF": "PDF",
+    "EXCEL": "EXCEL",
+    "VER_VIDEO": "Watch video",
+    "VER_DIRECTO": "Watch live",
+    "TODOS":"ALL",
+    "INICIO":"Home",
+    "CERRAR":"Close"
+  },
+
+  "PESTANAS": {
+    "EQUIPOS":"TEAMS",
+    "MEDIAS":"AVG",
+    "PARTIDOS":"GAMES",
+    "CLASIFICACION":"STANDINGS",
+    "JUGADORES":"PLAYERS",
+    "EST_EQUIPO":"GAME STATS",
+    "EST_JUGADOR":"PLAYER STATS",
+    "MEJORES_JUGADORES":"BEST PLAYERS"
+  },
+
+  "FILTRO": {
+    "POR_JORNADAS":"By rounds",
+    "VER_ENTRE_FECHAS":"See between dates",
+    "JORNADA":"Round"
+  },
+
+
+  "CIFRAS": {
+    "EQUIPO":"TEAM",
+    "JUGADORES":"PLAYERS",
+    "JUGADOR":"PLAYER",
+    "PART":"G",
+    "PJ":"GP",
+    "PG":"W",
+    "PPP":"PPG",
+    "PTS":"PTS",
+    "PPC":"PPA",
+    "PP":"L",
+    "PT":"PT",
+    "MPP":"MPG",
+    "M":"MIN",
+    "TL":"FT",
+    "POR_TL":"FT%",
+    "T2":"2FG",
+    "POR_T2":"2FG%",
+    "T3":"3FG",
+    "POR_T3":"3FG%",
+    "RD":"DR",
+    "RO":"OR",
+    "RT":"REB",
+    "AST":"AST",
+    "PD":"TO",
+    "RB":"RB",
+    "TAP":"BL",
+    "FP":"PF",
+    "VAL":"VAL",
+    "MEDIA":"AVG",
+    "TOTAL":"TOTAL",
+    "BONUS":"BONUS",
+    "F":"PF",
+    "TM":"TO",
+    "AS":"AST",
+    "TC_2P":"2P",
+    "TC_3P":"3P",
+    "REBOTES":"RB",
+    "FAL":"PF",
+    "MIN":"Min",
+    "MIN_MAYUS":"MIN",
+    "A_I":"A/I",
+    "POR":"%",
+    "DEF":"Def.",
+    "OFE":"Ofe.",
+    "TOT":"Tot.",
+    "REC":"STL",
+    "PER":"TO",
+    "COM":"Com.",
+    "REC_2":"Rec.",
+    "TC":"TC",
+    "DOSP":"2P",
+    "TRESP":"3P",
+    "FC":"FC",
+    "DIAS":"days",
+    "TOT_MAYUS":"TOT.",
+    "MED":"AVG.",
+    "ANOTADOS":"MADE",
+    "INTENTOS":"SHOTS"
+  },
+
+  "INICIO": {
+    "MIS_EQUIPOS": "My Teams",
+    "MIS_JUGADORES": "My Players",
+    "LICENCIA": "Do you have license in the Federation or are you in any club?",
+    "ACCEDE_LICENCIA": "Access your license and teams with your data to our App",
+    "MI_CLUB": "Teams of my club",
+    "FRASE_PUBLICIDAD_1": "Do you want to see your App",
+    "FRASE_PUBLICIDAD_1_2": "without ads",
+    "FRASE_PUBLICIDAD_1_3": " ?",
+    "FRASE_PUBLICIDAD_2": "SUBSCRIBE AND ",
+    "FRASE_PUBLICIDAD_2_2": "BECOME PREMIUM",
+    "ULTIMA_NOTICIA": "Latest News",
+    "CANAL_SALUD": "Health Channel",
+    "VER_ESTADISTICAS": "View tournament stats",
+    "VER_NOTICIA": "View new"
+  },
+
+  "NOTICIAS": {
+    "ULTIMAS_NOTICIAS": "Latest News"
+  },
+
+  "SELECCION_EQUIPO": {
+    "BIENVENIDO": "Welcome to the App",
+    "APP": "FAB",
+    "APP_CAB": "CAB",
+    "FEDERACIONES": "Federations",
+    "COMPETICIONES": "Competitions",
+    "COMPETENCIAS": "Competitions",
+    "EQUIPO": "Team",
+    "JUGADOR": "Player",
+    "CATEGORIA": "Category",
+    "CLUB": "Club",
+    "PRIMER_PASO": "This is the first time you use this App, so you have to choose one team to continue.",
+    "ESCOGER_COMPETICION": "The first step is to choose a competition",
+    "ANADIR_NUEVO": "Add one new",
+    "ASISTENTE_EQUIPO": "Follow the wizard to add new teams to your favorites and follow all their results and stats:",
+    "ASISTENTE_JUGADOR": "Follow the wizard to add new players to your favorites and follow all their stats:",
+    "ESCOJA_INICIO": "Choose a category and a club:",
+    "ESCOJA_EQUIPO": "Choose a category, a club and a team:",
+    "ESCOJA_JUGADOR": "Choose a category and a club:",
+    "ESCOGER_CATEGORIA_DELEGACION": "Now you must choose a category and a club from the federation of",
+    "PARA_SEGUIR": "to follow:"
+  },
+
+  "LOGIN": {
+    "TITULO":"Do you have license in the Federation or are you in any club?",
+    "TEXTO":"Now you can access to your license and add all your teams accesing with your data.",
+    "PERFIL":"Profile:",
+    "TIPO_PERFIL": {
+      "DIRECTOR_DEPORTIVO": "General Manager",
+      "RESPONSABLE": "Manager",
+      "JUGADOR_ENTRENADOR": "Player, coach of delegate",
+      "ARBITRO": "Referee"
+    },
+    "USUARIO":"User:",
+    "CLAVE":"Password:",
+    "BIENVENIDO":"Welcome:",
+    "TEXTO_LOGIN_1":"Now all the teams will be added automatically to the home screem of the App.",
+    "TEXTO_LOGIN_2":"We will son add more improvements to our app."
+  },
+
+  "BUSCADOR": {
+    "BUSCADOR": "Search",
+    "PARTIDOS_BUSCADOR": "Games",
+    "EQUIPOS_BUSCADOR": "Teams",
+    "JUGADORES_BUSCADOR": "Players",
+    "CLUBES_BUSCADOR": "Clubs",
+    "CATEGORIAS_BUSCADOR": "Categories",
+    "TEXTO_BUSCADOR": "Search ...",
+    "TEXTO_NOMBRE": "Name ...",
+    "TEXTO_APELLIDOS": "Last Name ...",
+    "BUSCAR": "SEARCH",
+    "ANADIR_EQUIPO": "Add team",
+    "ANADIR_JUGADOR": "Add player"
+  },
+
+  "ESTADOS_PARTIDO": {
+    "TERMINADO":"Ended",
+    "NO_COMENZADO":"Not started",
+    "EN_VIVO":"Live",
+    "ESTADISTICAS":"Stats",
+    "PROXIMOS":"Next"
+  },
+
+  "ESTADOS_EQUIPO": {
+    "PUNTOS":"Points",
+    "VALORACION":"Performance",
+    "REBOTES":"Rebounds",
+    "ASISTENCIAS":"Assists",
+    "TAPONES":"Blocks",
+    "ROBOS":"Steals",
+    "TL":"FT",
+    "DOS_P":"2FG",
+    "TRES_P":"3FG"
+  },
+
+  "PARTIDO": {
+
+    "JUGADOR":"PLAYER",
+    "FALTAS":"FOULTS",
+    "NO_DATOS":"We don´t still have data for this game",
+    "ENCUENTRO":"The game may not have started, may have been suspended or may be delayed for any reason",
+    "DISCULPAS":"Sorry for the inconvenience.",
+    "TU_HORARIO":"On your schedule:",
+    "PESTANAS": {
+      "ENTRENADOR":"Coach",
+      "EN_VIVO":"Live",
+      "ESTADISTICAS":"Stats",
+      "MEJORES_JUGADORES":"Best players",
+      "MAPA_TIRO":"Shoot Map",
+      "COMPARATIVA":"Comparison",
+      "VIDEOS":"Videos"
+    },
+
+    "ENTRENADOR": {
+      "PERIODO_ACTUAL":"Currer period:",
+      "EQUIPO_LOCAL":"Home",
+      "EQUIPO_VISITANTE":"Away",
+      "FALTA_EQUIPO":"Team faults",
+      "FALTAS_EQUIPO_LOCAL":"HOME FAULTS",
+      "FALTAS_EQUIPO_VISITANTE":"AWAY FAULTS",
+      "EN_PISTA":"On Court",
+      "BANQUILLO":"Bench"
+    },
+
+    "EN_VIVO": {
+      "BUSCADOR":"Search by name, action or number",
+      "JUGADORES_CAMPO":"Players in the court",
+      "AHORA_EN_PISTA":"NOW IN THE COURT:",
+      "BANQUILLO":"Bench"
+    },
+
+    "ACCIONES_PARTIDO":{
+      "INICIO-PARTIDO": "BEGIN GAME",
+      "FINAL-PARTIDO": "END GAME",
+      "INICIO-PERIODO": "BEGIN PERIODO ",
+      "FINAL-PERIODO": "END PERIOD ",
+      "CAMBIO-JUGADOR-ENTRA":"IN ",
+      "CAMBIO-JUGADOR-SALE":"OUT ",
+      "FLECHA-ALTERNANCIA-IZQUIERDA":"ARROW LEFT",
+      "FLECHA-ALTERNANCIA-DERECHA":"ARROW RIGHT",
+      "FLECHA-ALTERNANCIA-LOCAL":"ARROW HOME",
+      "FLECHA-ALTERNANCIA-VISITANTE":"ARROW AWAY",
+      "CANASTA-1P":"FREE THROW IN",
+      "CANASTA-2P":"2 POINTER",
+      "CANASTA-3P":"3 POINTER",
+      "TIRO1-FALLADO":"MISSED FREE THROW",
+      "TIRO2-FALLADO":"MISSED 2 POINTER",
+      "TIRO3-FALLADO":"MISSED 3 POINTER",
+      "1-TIRO-LIBRE":"1 FREE THROW FOR ",
+      "2-TIROS-LIBRES":"2 FREE THROWS FOR ",
+      "3-TIROS-LIBRES":"3 FREE THROWS FOR ",
+      "TIROS-LIBRE-VACIO":"BLANK FREE THROW ",
+      "TAPON-COMETIDO":"BLOCK",
+      "TAPON-RECIBIDO":"BLOCK A",
+      "FALTA-COMETIDA":"FOUL",
+      "FALTA-RECIBIDA":"FOUL DRAWN",
+      "PERDIDA":"TURNOVER",
+      "RECUPERACION":"STEAL",
+      "ASISTENCIA":"ASSIST",
+      "REBOTE-DEFENSIVO":"OFF REBOUND ",
+      "REBOTE-OFENSIVO":"DEF REBOUND ",
+      "TIEMPO-MUERTO-SOLICITADO":"TIME OUT",
+      "TIEMPO-MUERTO-CANCELADO":"TIME OUT CANCELLED",
+      "TANTIDEPORTIVA":"UNSPORTSMANLIKE FOUL",
+      "TECNICA":"TECHNICAL FOUL",
+      "TECNICA-E":"TECHNICAL FOUL-E (ALINEACIÓN ILEGAL)",
+      "TBANQUILLO-B":"BENCH TECHNICAL FOUL (B)",
+      "TBANQUILLO-C":"BENCH TECHNICAL FOUL (C)",
+      "TDESCALIFICANTE":"DISQUALIFYING",
+      "DESCALIFICANTE-ACOMPANANTE":"DISQUALIFYING COMPANION",
+      "TDESCALIFICANTE-ENOPARTICIPA":"DISQUALIFYING DON´T PARTICIPATES",
+      "TDESCALIFICANTE-EPARTICIPA":"DISQUALIFYING PARTICIPATES",
+      "DESCALIFICANTE-ACOMPANANTE-ENOPARTICIPA":"DISQUALIFYING COMPANION DON´T PARTICIPATES",
+      "DESCALIFICANTE-ACOMPANANTE-EPARTICIPA":"DISQUALIFYING COMPANION PARTICIPATES",
+      "TDESCALIFICANTE-E":"DISQUALIFYING CONFRONTATION"
+    },
+
+    "ESTADISTICAS": {
+      "ENTRENADOR":"Coach:",
+      "NOMBRE":"Name"
+    },
+
+    "MEJORES_JUGADORES": {
+      "VALORACION":"Performance",
+      "PUNTOS":"Points",
+      "REBOTES":"Rebounds",
+      "ASISTENCIAS":"Assists",
+      "TAPONES":"Blocks",
+      "RECUPERACIONES":"Steals"
+    },
+
+    "MAPA_TIRO": {
+      "MAPA_TIRO":"Shoot Map",
+      "ZONA_TIRO":"Shoot area",
+      "TODOS":"All",
+      "ACIERTOS_TIROS":"SUCCESS IN THROWS",
+      "TIROS_2P":"2P SHOOTS",
+      "TIROS_3P":"3P SHOOTS",
+      "TIROS_LIBRES":"F.THROW"
+    },
+
+    "COMPARATIVA": {
+      "PUNTOS_MINUTOS":"DIFFERENCE OF POINTS / MINUTS PER GAME",
+      "REBOTES":"REBOUNDS",
+      "ASISTENCIAS":"ASSISTS",
+      "TAPONES":"BLOCKS",
+      "RECUPERACIONES":"STEALS"
+    }
+  },
+
+  "INFO_JUGADORES": {
+    "LEYENDA_1":"Average player per game.",
+    "LEYENDA_2":"Average per game of all players.",
+    "MINUTOS":"MINUTS",
+    "PUNTOS":"POINTS",
+    "TIROS_LIBRES_ANOTADOS":"FREE THROWS IN",
+    "TIROS_LIBRES":"FREE THROWS",
+    "POR_TIROS_LIBRES":"% FREE THROWS",
+    "TIROS_DOS_ANOTADOS":"2 POINTERS MADE",
+    "TIROS_DOS":"2 POINTERS",
+    "POR_TIROS_DOS":"% 2 POINTERS",
+    "TRIPLES_ANOTADOS":"3 POINTERS MADE",
+    "TRIPLES":"3 POINTERS",
+    "POR_TIROS_TRIPLES":"% 3 POINTERS",
+    "TIROS_CAMPO_ANOTADOS":"FIELD GAME MADE",
+    "TIROS_CAMPO":"FIELD GAME",
+    "POR_TIROS_CAMPO":"% FIELD GAME",
+    "REBOTES_DEFENSIVOS":"DEF. REBOUNDS",
+    "REBOTES_OFENSIVOS":"OFF. REBOUNDS",
+    "REBOTES":"REBOUNDS",
+    "ASISTENCIAS":"ASSISTS",
+    "PERDIDAS":"TURNOVERS",
+    "RECUPERACIONES":"STEALS",
+    "TAPONES_COMETIDOS":"BLOCKS",
+    "TAPONES_RECIBIDOS":"BLOCKS DRAWN",
+    "FALTAS_COMETIDAS":"FOULS",
+    "FALTAS_RECIBIDAS":"FOULS DRAWN",
+    "VALORACION":"PERFORMANCE",
+    "ESTADISTICAS": {
+      "DORSAL" : "NUMBER",
+      "ESTADISTICAS_PARTIDO" : "GAME STATS"
+    }
+  },
+
+  "ZONA_USUARIOS": {
+    "ZONA_USUARIOS" : "User Area",
+    "DATOS_PERSONALES" : "Personal Data:",
+    "FALTAN_DATOS" : "Missing user data to display.",
+    "DISCULPAS" : "Sorry for the inconvenience.",
+    "RESPONSABLE" : "A new area has been enabled at the botton of the home screen with all the teams you are responsible for.",
+    "DIRECTOR_DEPORTIVO" : "A new area has been enabled at the botton of the home screen with all the teams of the club.",
+    "LICENCIAS" : "Available licenses:",
+    "ESTADO_LICENCIA": {
+      "TIPO": "Type:",
+      "EQUIPO": "Team:",
+      "CLUB": "Club:",
+      "CAT": "Cat.:"
+    },
+    "NO_DATOS": "No license data available.",
+    "COMPETICION": "You may play in a competition or category for which we currently don´t have data.",
+    "MOLESTIAS": "Sorry for the inconvenience."
+  },
+
+  "CONFIGURACION": {
+    "CONFIGURACION": "Setup",
+    "ENLACES_APP": "App direct links",
+    "MOSTRAR_ENLACES": "Show direct links on the side.",
+    "IDENTIFICADOR": "Device ID:",
+    "ULTIMAS_ACTUALIZACIONES": "Last updates:",
+    "VERSIONAPP": "Version",
+    "CORRECCION_ERRORES": "Bug fixes",
+    "ACTUALIZACION_APP": "App Update",
+    "CAMBIAR_IDIOMA": "Change language",
+    "IDIOMA_ACTUAL": "Current language",
+    "SUSCRIPCIONES": "Suscriptions",
+    "APP_SIN_PUBLICIDAD": "Ad-free app",
+    "TEXTO_1_SIN_PUBLICIDAD": "You currently don´t have an active subscription to enjoy our app without advertising.",
+    "TEXTO_2_SIN_PUBLICIDAD": "If you want to access all sections of our app without advertising, you can choose a subscription model from the following list: ",
+    "ESTADO_SUSCRIPCION": "Subscription state",
+    "ESTADO_ACTUAL": "You currently have an active subscription.",
+    "PLAN_ANUAL": "ANNUAL PLAN",
+    "PLAN_MENSUAL": "MONTHLY PLAN",
+    "PLAN_SEMANAL": "WEEKLY PLAN",
+    "SUSCRIBIRSE": "Subscribe",
+    "FECHA_EXPIRACION": "Expiration date: ",
+    "ANULAR_SUSCRIPCION": "Unsubscribe",
+
+    "TITULO_PLAN_ANUAL": "Annual Premium",
+    "TITULO_PLAN_MENSUAL": "Monthly Premium",
+    "DESCRIPCION_PLAN_ANUAL": "Enjoy all the information and sections of our app without ads for one year.",
+    "DESCRIPCION_PLAN_MENSUAL": "Enjoy all the information and sections of our app without ads for a month.",
+
+    "TITULO_PLAN_ANUAL_VIDEOS": "Annual Premium Videos",
+    "TITULO_PLAN_MENSUAL_VIDEOS": "Monthly Premium Videos",
+    "DESCRIPCION_PLAN_ANUAL_VIDEOS": "An annual subscription to our ad-free app lets you view match details and videos as they are recorded, and share the action and live streams of the matches.",
+    "DESCRIPCION_PLAN_MENSUAL_VIDEOS": "Monthly subscription to our ad-free app, with which you can view match data and videos as they are recorded, and share the plays and their live video from the matches.",
+
+    "RESTAURAR_COMPRAS": "RESTORE PURCHASES",
+    "MAS_INFORMACION": "Do you need more information?",
+    "VISITA_NUESTRO": "To know more details about our app, you can visit our",
+    "TERMINOS_USO": "Terms and conditions of use",
+    "O_NUESTRO": "or our",
+    "AVISO_LEGAL": "Legal notice and Privacy Policy",
+    "SUSCRIPCION_IOS_1": "The purchased subscription will be charged to you iTunes account.",
+    "SUSCRIPCION_IOS_2": "Your subscription will automatically renew unless auto-renewal is turned off at least 24 hours before the end of the current period. You can access your iTunes account settings to manage your subscription.",
+    "CAMBIOS": {
+      "LINEA_1": "Compatibility with the latest versions of IOS and Android.",
+      "LINEA_2": "The app is now multi-lingual and you can change it in the settings section.",
+      "LINEA_3": "Improvements and changes to the interface for better access to information.",
+      "LINEA_4": "Corrections to the functionality of some information tabs.",
+      "LINEA_5": "Now, if you access to our app with a different time zone on your device, you'll be able to see the day and time of the matches corresponding to your time zone."
+    }
+  },
+
+  "AVISO_LEGAL": {
+    "AVISO_LEGAL" : "Legal Notice"
+  },
+
+  "PROXIMOS_PARTIDOS": {
+    "PROXIMOS_PARTIDOS" : "Next games"
+  },
+
+  "ERRORES": {
+    "NO_HAY_DATOS" : "No data",
+    "DISCULPEN" : "Sorry for the inconvenience"
+  },
+
+  "TEXTOS_GENERALES": {
+    "TITULO_MODAL": "FAB",
+    "MENSAJE_COMPARTIR_MODAL": "The 'Afición FAB' app is sure to be of your interest.: data from the Andalucía Basketball Federation, stats, stadings, results, live...",
+    "CERRAR_APP": "Do you want to close the Afición FAB? APP",
+    "CERRAR_APP_GENERAL": "Close App",
+    "MENSAJE_CERRAR_APP": "Do you want to exit the app?",
+    "COMPARTIR_APP": "The 'Afición FAB' app is sure to be of your interest.: data from the Andalucía Basketball Federation, stats, stadings, results, live...",
+    "DIAS": {
+      "LUNES" : "Monday",
+      "MARTES" : "Tuesday",
+      "MIERCOLES" : "Wednesday",
+      "JUEVES" : "Thurday",
+      "VIERNES" : "Friday",
+      "SABADO" : "Saturday",
+      "DOMINGO" : "Sunday"
+    }
+  },
+
+  "ALERTAS": {
+    "CANCELAR_SUSCRIPCION": "Cancel subscription",
+    "MSG_CANCELAR_SUSCRIPCION_APPLE": "Are you sure you want to cancel your subscription? You will be redirected to the iTunes Store.",
+    "MSG_CANCELAR_SUSCRIPCION_ANDROID": "Are you sure you want to cancel your subscription? You will be redirected to the Google Play.",
+    "SUSCRIPCION_REALIZADA": "Subscription completed",
+    "MSG_SUSCRITO_CORRECTAMENTE": "You have successfully subscribe to our app",
+    "SELECCION_DE_FEDERACION": "Select federation",
+    "MSG_SELECCION_DE_FEDERACION": "You must select a federation to be able to display competitions and its data",
+    "CERRAR_APP": "¿Close App?",
+    "QUIERES_BORRAR_EL_JUGADOR": "Do you want to delete the player?",
+    "QUIERES_BORRAR_EL_EQUIPO": "Do you want to delete de team?",
+    "QUIERES_BORRAR_EL_PARTIDO": "Do you want to delete the game",
+    "SUSCRIPCION_RESTAURADA": "Restore subscriptions",
+    "MSG_SUSCRIPCION_RESTAURADA": "Your information has been successfully restored.",
+    "SUSCRIPCION_VACIA": "Subscription notice",
+    "MSG_SUSCRIPCION_VACIA": "You don´t have any active subscription at this time."
+  },
+  "TOAST": {
+    "FALTAN_DATOS_POR_RELLENAR": "Missing data to fill in.",
+    "NO_HAY_DATOS_DISPONIBLES_ACTUALMENTE": "No data currently available",
+    "USUARIO_O_CONTRASENA_INCORRECTOS": "Incorrect username or password.",
+    "NO_SE_HA_CERRADO_LA_SESION_CORRECTAMENTE": "The session haven´t been logged out out correctly."
+  }
+}
+

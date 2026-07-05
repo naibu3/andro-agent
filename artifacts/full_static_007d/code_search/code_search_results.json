@@ -1,0 +1,135 @@
+[
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+    "line_number": 158,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file2);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/Z/u.java",
+    "line_number": 168,
+    "line_text": "SharedPreferences sharedPreferences = this.f732a.getSharedPreferences(\"ServerConfig\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "line_number": 70,
+    "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "line_number": 111,
+    "line_text": "SharedPreferences.Editor editorEdit = this.f703a.getSharedPreferences(\"CloudNotesPrefs\", 0).edit();"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/Z/i.java",
+    "line_number": 123,
+    "line_text": "SharedPreferences sharedPreferences = this.f703a.getSharedPreferences(\"ServerConfig\", 0);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/T/f.java",
+    "line_number": 159,
+    "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(new File(file, \"profileinstaller_profileWrittenFor_lastUpdateTime.dat\")));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/T/f.java",
+    "line_number": 1027,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(bVar.f626d);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/T/j.java",
+    "line_number": 51,
+    "line_text": "DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/C0/f.java",
+    "line_number": 273,
+    "line_text": "fileOutputStream = new FileOutputStream(file, false);"
+  },
+  {
+    "pattern_name": "base64_decode",
+    "category": "encoding",
+    "file_path": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+    "line_number": 144,
+    "line_text": "arrayList2.add(Base64.decode(str, 0));"
+  },
+  {
+    "pattern_name": "base64_decode",
+    "category": "encoding",
+    "file_path": "artifacts/full_static_007d/jadx/sources/z/AbstractC0257b.java",
+    "line_number": 153,
+    "line_text": "arrayList3.add(Base64.decode(str2, 0));"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "line_number": 54,
+    "line_text": "if (getSharedPreferences(SERVER_CONFIG_PREFS, 0).getString(KEY_SERVER_IP, BuildConfig.FLAVOR).isEmpty()) {"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "line_number": 113,
+    "line_text": "SharedPreferences.Editor editorEdit = getSharedPreferences(SERVER_CONFIG_PREFS, 0).edit();"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/MainActivity.java",
+    "line_number": 143,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(SERVER_CONFIG_PREFS, 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+    "line_number": 54,
+    "line_text": "SharedPreferences.Editor editorEdit = loginActivity.getSharedPreferences(\"ServerConfig\", 0).edit();"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/htb/d3vnu11/securenotes/LoginActivity.java",
+    "line_number": 89,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"ServerConfig\", 0);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007d/jadx/sources/org/conscrypt/FileClientSessionCache.java",
+    "line_number": 191,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(file);"
+  },
+  {
+    "pattern_name": "cipher_instance",
+    "category": "crypto",
+    "file_path": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+    "line_number": 69,
+    "line_text": "cipher = Cipher.getInstance(strConcat);"
+  },
+  {
+    "pattern_name": "cipher_instance",
+    "category": "crypto",
+    "file_path": "artifacts/full_static_007d/jadx/sources/org/conscrypt/CryptoUpcalls.java",
+    "line_number": 87,
+    "line_text": "cipher = Cipher.getInstance(strConcat, it.next());"
+  }
+]

@@ -1,0 +1,352 @@
+[
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/okio/Okio__JvmOkioKt.java",
+    "line_number": 58,
+    "line_text": "return Okio.sink(new FileOutputStream(sink, append));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/okio/Okio__JvmOkioKt.java",
+    "line_number": 70,
+    "line_text": "return Okio.sink(new FileOutputStream(appendingSink, true));"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/com/google/android/material/search/SearchBar.java",
+    "line_number": 49,
+    "line_text": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/com/google/android/material/color/ColorResourcesLoaderCreator.java",
+    "line_number": 36,
+    "line_text": "OutputStream pipeWriter = new FileOutputStream(arscFile);"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/com/google/android/material/chip/ChipDrawable.java",
+    "line_number": 53,
+    "line_text": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/com/google/android/material/chip/Chip.java",
+    "line_number": 58,
+    "line_text": "private static final String NAMESPACE_ANDROID = \"http://schemas.android.com/apk/res/android\";"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__UtilsKt.java",
+    "line_number": 204,
+    "line_text": "fileInputStream = new FileOutputStream(target);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 73,
+    "line_text": "return new OutputStreamWriter(new FileOutputStream($this$writer_u24default), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 79,
+    "line_text": "return new OutputStreamWriter(new FileOutputStream($this$writer), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 91,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter_u24default), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 98,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 108,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter_u24default), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 115,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 174,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream($this$writeBytes);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 187,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream($this$appendBytes, true);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 298,
+    "line_text": "return new FileOutputStream($this$outputStream);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/multidex/MultiDexExtractor.java",
+    "line_number": 270,
+    "line_text": "return context.getSharedPreferences(PREFS_FILE, 4);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/multidex/MultiDexExtractor.java",
+    "line_number": 299,
+    "line_text": "ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(tmp)));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/print/PrintHelper.java",
+    "line_number": 388,
+    "line_text": "pdfDocument.writeTo(new FileOutputStream(fileDescriptor.getFileDescriptor()));"
+  },
+  {
+    "pattern_name": "cipher_instance",
+    "category": "crypto",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/biometric/CryptoObjectUtils.java",
+    "line_number": 135,
+    "line_text": "Cipher cipher = Cipher.getInstance(\"AES/CBC/PKCS7Padding\");"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/profileinstaller/DeviceProfileWriter.java",
+    "line_number": 237,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(this.mCurProfile);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/profileinstaller/ProfileInstaller.java",
+    "line_number": 193,
+    "line_text": "DataOutputStream os = new DataOutputStream(new FileOutputStream(skipFile));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/profileinstaller/ProfileVerifier.java",
+    "line_number": 206,
+    "line_text": "DataOutputStream dos = new DataOutputStream(new FileOutputStream(file));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/util/AtomicFile.java",
+    "line_number": 39,
+    "line_text": "return new FileOutputStream(this.mNewName);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/util/AtomicFile.java",
+    "line_number": 46,
+    "line_text": "return new FileOutputStream(this.mNewName);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/app/AppLaunchChecker.java",
+    "line_number": 15,
+    "line_text": "return context.getSharedPreferences(SHARED_PREFS_NAME, 0).getBoolean(KEY_STARTED_FROM_LAUNCHER, false);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/app/AppLaunchChecker.java",
+    "line_number": 20,
+    "line_text": "SharedPreferences sp = activity.getSharedPreferences(SHARED_PREFS_NAME, 0);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/graphics/TypefaceCompatUtil.java",
+    "line_number": 117,
+    "line_text": "os = new FileOutputStream(file, false);"
+  },
+  {
+    "pattern_name": "base64_decode",
+    "category": "encoding",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/content/res/FontResourcesParserCompat.java",
+    "line_number": 223,
+    "line_text": "result.add(Base64.decode(item, 0));"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/content/res/TypedArrayUtils.java",
+    "line_number": 14,
+    "line_text": "private static final String NAMESPACE = \"http://schemas.android.com/apk/res/android\";"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/androidx/core/content/pm/ShortcutXmlParser.java",
+    "line_number": 98,
+    "line_text": "String value = parser.getAttributeValue(\"http://schemas.android.com/apk/res/android\", attribute);"
+  },
+  {
+    "pattern_name": "runtime_exec",
+    "category": "command_execution",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/RootDetectionActivity.java",
+    "line_number": 72,
+    "line_text": "Runtime.getRuntime().exec(new String[]{\"su\", \"ls /data/data/\"});"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java",
+    "line_number": 31,
+    "line_text": "sQLiteDatabase.execSQL(\"CREATE TABLE IF NOT EXISTS users (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, username VARCHAR, password VARCHAR)\");"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java",
+    "line_number": 57,
+    "line_text": "sQLiteDatabase.execSQL(qry);"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/TrafficActivity.java",
+    "line_number": 37,
+    "line_text": "private String httpurl = \"http://demo.testfire.net\";"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+    "line_number": 55,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+    "line_number": 60,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+    "line_number": 68,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+    "line_number": 25,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"score\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+    "line_number": 85,
+    "line_text": "SharedPreferences sharedPreference = getSharedPreferences(\"score\", 0);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+    "line_number": 95,
+    "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"score\", 0);"
+  },
+  {
+    "pattern_name": "sql_rawQuery",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/SQLinjectionActivity.java",
+    "line_number": 48,
+    "line_text": "Cursor qryResult = sQLiteDatabase != null ? sQLiteDatabase.rawQuery(qry, null) : null;"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "line_number": 80,
+    "line_text": "db.execSQL(ContentProviderActivity.DROP_TBL_QRY);"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "line_number": 81,
+    "line_text": "db.execSQL(ContentProviderActivity.CREATE_TBL_QRY);"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "line_number": 82,
+    "line_text": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('AndroGoat', 'AndroGoat');\");"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "line_number": 83,
+    "line_text": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('root', 'toor');\");"
+  },
+  {
+    "pattern_name": "sql_execSQL",
+    "category": "sql",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "line_number": 84,
+    "line_text": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('Admin', 'Admin');\");"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs.java",
+    "line_number": 40,
+    "line_text": "SharedPreferences sharedPreference = this$0.getSharedPreferences(\"users\", 0);"
+  },
+  {
+    "pattern_name": "runtime_exec",
+    "category": "command_execution",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InputValidationsOSCMDInjectionMain2Activity.java",
+    "line_number": 39,
+    "line_text": "Process p = Runtime.getRuntime().exec(ip1);"
+  },
+  {
+    "pattern_name": "webview_loadUrl",
+    "category": "webview",
+    "file_path": "artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InputValidationsWebViewURLActivity.java",
+    "line_number": 43,
+    "line_text": "$webView.loadUrl(url);"
+  }
+]

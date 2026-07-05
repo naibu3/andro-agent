@@ -1,0 +1,22 @@
+{
+  "rule_id": "CODE_FILE_OUTPUT_STREAM",
+  "title": "FileOutputStream usage detected",
+  "description": "FileOutputStream usage found in artifacts/local-ollama-test-2/jadx/sources/androidx/core/graphics/TypefaceCompatUtil.java. Review for encoded secrets, payloads, or obfuscation.",
+  "severity": "low",
+  "confidence": "high",
+  "source": "code_rule_engine",
+  "evidence": [
+    {
+      "type": "code.pattern.file_output_stream",
+      "key": "artifacts/local-ollama-test-2/jadx/sources/androidx/core/graphics/TypefaceCompatUtil.java",
+      "value": true,
+      "source": "code_search",
+      "confidence": "high",
+      "metadata": {
+        "category": "storage",
+        "line_number": 117,
+        "line_text": "os = new FileOutputStream(file, false);"
+      }
+    }
+  ]
+}

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import markdown
 from fastapi import APIRouter, BackgroundTasks, File, HTTPException, Request, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
@@ -10,15 +9,13 @@ from fastapi.templating import Jinja2Templates
 from andro_agent.web.db import CaseRepository
 from andro_agent.web.routes.api_scans import create_scan
 from andro_agent.web.services.result_service import (
-    build_fallback_report_markdown,
     category_summary,
     extract_artifacts,
     extract_package_name_from_state,
+    final_report_markdown,
     load_case_state,
-    read_text_if_exists,
-    safe_json_pretty,
+    render_report_html,
     severity_summary,
-    should_use_fallback_report,
 )
 
 
@@ -113,29 +110,53 @@ def case_detail(request: Request, case_id: str):
     if not case:
         raise HTTPException(status_code=404, detail="Case not found")
 
+    if case["status"] in {"queued", "running"}:
+        return templates.TemplateResponse(
+            request,
+            "case_detail.html",
+            {
+                "case": case,
+                "is_pending": True,
+                "is_failed": False,
+                "is_completed": False,
+                "is_non_final": False,
+            },
+        )
+
+    if case["status"] == "failed":
+        return templates.TemplateResponse(
+            request,
+            "case_detail.html",
+            {
+                "case": case,
+                "is_pending": False,
+                "is_failed": True,
+                "is_completed": False,
+                "is_non_final": False,
+            },
+        )
+
+    if case["status"] != "completed":
+        return templates.TemplateResponse(
+            request,
+            "case_detail.html",
+            {
+                "case": case,
+                "is_pending": False,
+                "is_failed": False,
+                "is_completed": False,
+                "is_non_final": True,
+            },
+        )
+
     state = load_case_state(Path(case["artifacts_dir"]).parent, case_id)
     findings = case_repo.list_findings(case_id)
 
     if not case.get("package_name"):
         case["package_name"] = extract_package_name_from_state(state)
 
-    report_md = read_text_if_exists(state.get("static_report_path"))
-
-    if should_use_fallback_report(report_md, findings):
-        report_md = build_fallback_report_markdown(
-            case=case,
-            state=state,
-            findings=findings,
-        )
-
-    report_html = (
-        markdown.markdown(
-            report_md,
-            extensions=["tables", "fenced_code", "toc"],
-        )
-        if report_md
-        else ""
-    )
+    report_md = final_report_markdown(case=case, state=state, findings=findings)
+    report_html = render_report_html(report_md)
 
     artifacts_dir = Path(case["artifacts_dir"])
 
@@ -144,8 +165,11 @@ def case_detail(request: Request, case_id: str):
         "case_detail.html",
         {
             "case": case,
+            "is_pending": False,
+            "is_failed": False,
+            "is_completed": True,
+            "is_non_final": False,
             "state": state,
-            "state_pretty": safe_json_pretty(state),
             "findings": findings,
             "severity_summary": severity_summary(findings),
             "category_summary": category_summary(findings),

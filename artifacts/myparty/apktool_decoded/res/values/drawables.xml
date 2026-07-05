@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="material_ic_keyboard_arrow_next_black_24dp">@drawable/material_ic_keyboard_arrow_right_black_24dp</item>
+    <item type="drawable" name="material_ic_keyboard_arrow_previous_black_24dp">@drawable/material_ic_keyboard_arrow_left_black_24dp</item>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_amex_ref">@drawable/stripe_ic_paymentsheet_card_amex_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_cartes_bancaires_ref">@drawable/stripe_ic_paymentsheet_card_cartes_bancaires_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_dinersclub_ref">@drawable/stripe_ic_paymentsheet_card_dinersclub_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_discover_ref">@drawable/stripe_ic_paymentsheet_card_discover_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_jcb_ref">@drawable/stripe_ic_paymentsheet_card_jcb_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_mastercard_ref">@drawable/stripe_ic_paymentsheet_card_mastercard_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_unionpay_ref">@drawable/stripe_ic_paymentsheet_card_unionpay_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_unknown_ref">@drawable/stripe_ic_paymentsheet_card_unknown_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_card_visa_ref">@drawable/stripe_ic_paymentsheet_card_visa_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_link_ref">@drawable/stripe_ic_paymentsheet_link_day</item>
+    <item type="drawable" name="stripe_ic_paymentsheet_sepa_ref">@drawable/stripe_ic_paymentsheet_sepa_day</item>
+</resources>

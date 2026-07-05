@@ -1,0 +1,247 @@
+[
+  {
+    "type": "manifest.package",
+    "key": "package_name",
+    "value": "id.blackbear.vulnapk",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.compile_sdk_version",
+    "key": "compile_sdk_version",
+    "value": "33",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.debuggable",
+    "key": "debuggable",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.allow_backup",
+    "key": "allow_backup",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.uses_cleartext_traffic",
+    "key": "uses_cleartext_traffic",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.full_backup_content",
+    "key": "full_backup_content",
+    "value": "@xml/backup_rules",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.WRITE_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.READ_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.INTERNET",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "id.blackbear.vulnapk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "id.blackbear.vulnapk.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "id.blackbear.vulnapk.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "id.blackbear.vulnapk.MainActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "id.blackbear.vulnapk.InsecureStorageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "id.blackbear.vulnapk.InsecureStorageActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "id.blackbear.vulnapk.InsecureCryptoActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "id.blackbear.vulnapk.InsecureCryptoActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "id.blackbear.vulnapk.VulnWeb",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "id.blackbear.vulnapk.VulnWeb",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "id.blackbear.vulnapk.SettingsActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "id.blackbear.vulnapk.SettingsActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "id.blackbear.vulnapk.RootActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "id.blackbear.vulnapk.RootActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "androidx.startup.InitializationProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "androidx.startup.InitializationProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "androidx.startup.InitializationProvider",
+    "value": "id.blackbear.vulnapk.androidx-startup",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  }
+]

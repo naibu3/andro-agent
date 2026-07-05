@@ -1,0 +1,18 @@
+{
+  "case_id": "local-ollama-test-2",
+  "duration_seconds": 75.37622459799991,
+  "steps": 13,
+  "agents": 4,
+  "summary": {
+    "status": "completed",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 7,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true,
+    "llm_provider": null,
+    "llm_model": null
+  }
+}

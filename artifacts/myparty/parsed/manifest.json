@@ -1,0 +1,1204 @@
+{
+  "package_name": "app.myparty.houses",
+  "version_code": null,
+  "version_name": null,
+  "min_sdk": null,
+  "target_sdk": null,
+  "compile_sdk_version": "36",
+  "permissions": [
+    "android.permission.CAMERA",
+    "android.permission.INTERNET",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.google.android.gms.permission.AD_ID",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.USE_BIOMETRIC",
+    "android.permission.USE_FINGERPRINT",
+    "android.permission.WAKE_LOCK",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
+    "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "app.myparty.houses.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "com.sec.android.provider.badge.permission.READ",
+    "com.sec.android.provider.badge.permission.WRITE",
+    "com.htc.launcher.permission.READ_SETTINGS",
+    "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "com.sonyericsson.home.permission.BROADCAST_BADGE",
+    "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+    "com.anddoes.launcher.permission.UPDATE_COUNT",
+    "com.majeur.launcher.permission.UPDATE_BADGE",
+    "com.huawei.android.launcher.permission.CHANGE_BADGE",
+    "com.huawei.android.launcher.permission.READ_SETTINGS",
+    "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "android.permission.READ_APP_BADGE",
+    "com.oppo.launcher.permission.READ_SETTINGS",
+    "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "me.everything.badger.permission.BADGE_COUNT_READ",
+    "me.everything.badger.permission.BADGE_COUNT_WRITE",
+    "com.android.vending.CHECK_LICENSE"
+  ],
+  "application": {
+    "debuggable": null,
+    "allow_backup": true,
+    "uses_cleartext_traffic": null,
+    "network_security_config": null,
+    "request_legacy_external_storage": null,
+    "test_only": null,
+    "full_backup_content": "@xml/secure_store_backup_rules"
+  },
+  "activities": [
+    {
+      "name": "app.myparty.houses.MainActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.MAIN"
+          ],
+          "categories": [
+            "android.intent.category.LAUNCHER"
+          ],
+          "data": []
+        },
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "myparty",
+              "host": null,
+              "port": null,
+              "path": null,
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        },
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.BROWSABLE",
+            "android.intent.category.DEFAULT"
+          ],
+          "data": [
+            {
+              "scheme": "myparty",
+              "host": null,
+              "port": null,
+              "path": null,
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.facebook.FacebookActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.facebook.CustomTabActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "@string/fb_login_protocol_scheme",
+              "host": null,
+              "port": null,
+              "path": null,
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        },
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "fbconnect",
+              "host": "cct.app.myparty.houses",
+              "port": null,
+              "path": null,
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.reactnativestripesdk.CustomPaymentMethodActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "stripe-auth",
+              "host": "link-accounts",
+              "port": null,
+              "path": null,
+              "pathPrefix": "/app.myparty.houses/authentication_return",
+              "pathPattern": null,
+              "mimeType": null
+            },
+            {
+              "scheme": "stripe-auth",
+              "host": "link-native-accounts",
+              "port": null,
+              "path": null,
+              "pathPrefix": "/app.myparty.houses/authentication_return",
+              "pathPattern": null,
+              "mimeType": null
+            },
+            {
+              "scheme": "stripe-auth",
+              "host": "link-accounts",
+              "port": null,
+              "path": "/app.myparty.houses/success",
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            },
+            {
+              "scheme": "stripe-auth",
+              "host": "link-accounts",
+              "port": null,
+              "path": "/app.myparty.houses/cancel",
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            },
+            {
+              "scheme": "stripe-auth",
+              "host": "native-redirect",
+              "port": null,
+              "path": null,
+              "pathPrefix": "/app.myparty.houses",
+              "pathPattern": null,
+              "mimeType": null
+            },
+            {
+              "scheme": "stripe",
+              "host": "auth-redirect",
+              "port": null,
+              "path": null,
+              "pathPrefix": "/app.myparty.houses",
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.financialconnections.FinancialConnectionsSheetActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "expo.modules.notifications.service.NotificationForwarderActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "expo.modules.imagepicker.ExpoCropImageActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.canhub.cropper.CropImageActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.PaymentSheetActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.PaymentOptionsActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.customersheet.CustomerSheetActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.addresselement.AddressElementActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.addresselement.AutocompleteActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.ui.SepaMandateActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.ExternalPaymentMethodProxyActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentelement.confirmation.cpms.CustomPaymentMethodProxyActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentsheet.paymentdatacollection.cvcrecollection.CvcRecollectionActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentelement.embedded.form.FormActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.paymentelement.embedded.manage.ManageActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.link.LinkActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.link.LinkForegroundActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.link.LinkRedirectHandlerActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "link-popup",
+              "host": "complete",
+              "port": null,
+              "path": "/app.myparty.houses",
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.shoppay.ShopPayActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.challenge.PassiveChallengeActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.ui.core.cardscan.CardScanActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.view.PaymentAuthWebViewActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.view.PaymentRelayActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.payments.StripeBrowserLauncherActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "stripesdk",
+              "host": "payment_return_url",
+              "port": null,
+              "path": "/app.myparty.houses",
+              "pathPrefix": null,
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.googlepaylauncher.GooglePayLauncherActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "stripe",
+              "host": "financial-connections-lite",
+              "port": null,
+              "path": null,
+              "pathPrefix": "/app.myparty.houses/auth_redirect",
+              "pathPattern": null,
+              "mimeType": null
+            }
+          ]
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.stripe.android.stripe3ds2.views.ChallengeActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.facebook.CustomTabMainActivity",
+      "exported": false,
+      "exported_source": "inferred_default_false",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.mlkit.vision.codescanner.internal.GmsBarcodeScanningDelegateActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.pairip.licensecheck.LicenseActivity",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "activity_aliases": [],
+  "services": [
+    {
+      "name": "expo.modules.notifications.service.ExpoFirebaseMessagingService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.firebase.MESSAGING_EVENT"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.gms.metadata.ModuleDependencies",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.android.gms.metadata.MODULE_DEPENDENCIES"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.camera.core.impl.MetadataHolderService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": false,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.messaging.FirebaseMessagingService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.firebase.MESSAGING_EVENT"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.components.ComponentDiscoveryService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "receivers": [
+    {
+      "name": "expo.modules.notifications.service.NotificationsService",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": true,
+      "intent_filters": [
+        {
+          "actions": [
+            "expo.modules.notifications.NOTIFICATION_EVENT",
+            "android.intent.action.BOOT_COMPLETED",
+            "android.intent.action.REBOOT",
+            "android.intent.action.QUICKBOOT_POWERON",
+            "com.htc.intent.action.QUICKBOOT_POWERON",
+            "android.intent.action.MY_PACKAGE_REPLACED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "com.google.android.c2dm.permission.SEND",
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.google.android.c2dm.intent.RECEIVE"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.facebook.CurrentAccessTokenExpirationBroadcastReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [
+        {
+          "actions": [
+            "com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": "android.permission.DUMP",
+      "enabled": true,
+      "intent_filters": [
+        {
+          "actions": [
+            "androidx.profileinstaller.action.INSTALL_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SKIP_FILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SAVE_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": null,
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.ImagePickerFileProvider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "com.canhub.cropper.CropFileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.cropper.fileprovider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "expo.modules.clipboard.ClipboardFileProvider",
+      "exported": true,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.ClipboardFileProvider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.mlkitinitprovider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "expo.modules.filesystem.FileSystemFileProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.FileSystemFileProvider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": true
+    },
+    {
+      "name": "com.google.firebase.provider.FirebaseInitProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.firebaseinitprovider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.androidx-startup",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.facebook.internal.FacebookInitProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.FacebookInitProvider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    },
+    {
+      "name": "com.pairip.licensecheck.LicenseContentProvider",
+      "exported": false,
+      "exported_source": "explicit",
+      "permission": null,
+      "enabled": null,
+      "intent_filters": [],
+      "authorities": "app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider",
+      "read_permission": null,
+      "write_permission": null,
+      "grant_uri_permissions": null
+    }
+  ]
+}

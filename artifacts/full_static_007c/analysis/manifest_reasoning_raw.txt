@@ -1,0 +1,1 @@
+{"summary":"6 exported components, 8 dangerous permissions, 13 findings","attack_surface":["Exported activities Accessible

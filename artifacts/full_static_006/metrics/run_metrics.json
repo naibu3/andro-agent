@@ -1,0 +1,132 @@
+{
+  "case_id": "full_static_006",
+  "started_at": "2026-04-05 10:10:52.348526",
+  "finished_at": "2026-04-05 10:12:39.287889",
+  "duration_seconds": 106.93936096799735,
+  "steps": [
+    {
+      "name": "validate",
+      "started_at": "2026-04-05 10:10:52.348543",
+      "finished_at": "2026-04-05 10:10:52.357361",
+      "duration_seconds": 0.008797033995506354,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "extract_manifest",
+      "started_at": "2026-04-05 10:10:52.357412",
+      "finished_at": "2026-04-05 10:11:09.245266",
+      "duration_seconds": 16.88782425300451,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_manifest_facts",
+      "started_at": "2026-04-05 10:11:09.245282",
+      "finished_at": "2026-04-05 10:11:09.247393",
+      "duration_seconds": 0.0020921280010952614,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_manifest_rules",
+      "started_at": "2026-04-05 10:11:09.247402",
+      "finished_at": "2026-04-05 10:11:09.249705",
+      "duration_seconds": 0.0022797580022597685,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "jadx_decompile",
+      "started_at": "2026-04-05 10:11:09.249720",
+      "finished_at": "2026-04-05 10:12:14.637789",
+      "duration_seconds": 65.3880301570025,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_search",
+      "started_at": "2026-04-05 10:12:14.637807",
+      "finished_at": "2026-04-05 10:12:21.046813",
+      "duration_seconds": 6.40897525499895,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_code_facts",
+      "started_at": "2026-04-05 10:12:21.046828",
+      "finished_at": "2026-04-05 10:12:21.052476",
+      "duration_seconds": 0.005618172996037174,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_code_rules",
+      "started_at": "2026-04-05 10:12:21.052491",
+      "finished_at": "2026-04-05 10:12:21.060194",
+      "duration_seconds": 0.007673230997170322,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_static_bundle",
+      "started_at": "2026-04-05 10:12:21.060209",
+      "finished_at": "2026-04-05 10:12:21.074306",
+      "duration_seconds": 0.014050480000150856,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "analysis_agent",
+      "started_at": "2026-04-05 10:12:21.074332",
+      "finished_at": "2026-04-05 10:12:39.281946",
+      "duration_seconds": 18.20757059900643,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_agent",
+      "started_at": "2026-04-05 10:12:39.281955",
+      "finished_at": "2026-04-05 10:12:39.282224",
+      "duration_seconds": 0.00024200399639084935,
+      "success": false,
+      "warnings": [],
+      "errors": [
+        "'MarkdownReportAgent' object has no attribute 'build_prompt'"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "name": "analysis_agent",
+      "model": null,
+      "started_at": "2026-04-05 10:12:21.075956",
+      "finished_at": "2026-04-05 10:12:39.281898",
+      "duration_seconds": 18.20587544900627,
+      "success": true,
+      "input_chars": null,
+      "output_chars": 260,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "summary": {
+    "status": "completed",
+    "warnings_count": 1,
+    "errors_count": 0,
+    "tool_history_count": 4
+  }
+}

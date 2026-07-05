@@ -1,0 +1,150 @@
+--------- beginning of main
+05-12 09:17:23.428  5410  5410 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:17:23.433  5410  5410 I AndroidRuntime: Using default boot image
+05-12 09:17:23.433  5410  5410 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:17:23.435  5410  5410 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:17:23.435  5410  5410 I app_process: Using CollectorTypeCC GC.
+05-12 09:17:23.495  5410  5410 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:17:23.505  5410  5410 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:17:23.505  5410  5410 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:17:23.510  5410  5410 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:17:23.510  5410  5410 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:17:23.523  5410  5410 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:17:23.523  5410  5410 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:17:23.523  5410  5410 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:17:23.522  5410  5410 W main    : type=1400 audit(0.0:103): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:23.524  5410  5410 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:17:23.522  5410  5410 W main    : type=1400 audit(0.0:104): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:23.522  5410  5410 W main    : type=1400 audit(0.0:105): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:23.526  5410  5410 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:23.526  5410  5410 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:23.526  5410  5410 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: Writing exception to parcel
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/note
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+05-12 09:17:23.527  3285  3314 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+05-12 09:17:23.528  5410  5410 D AndroidRuntime: Shutting down VM
+--------- beginning of system
+05-12 09:17:23.548   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:114 - ### Keystore Watchdog report - BEGIN ###
+05-12 09:17:23.548   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:123 - When extracting from a bug report, please include this header
+05-12 09:17:23.548   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:124 - and all 2 records below.
+05-12 09:17:23.548   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:154 - ThreadId(5) IKeystoreSecurityLevel::generateKey Pending: 10.003093319s Overdue 5.003093623s: SecurityLevel r#TRUSTED_ENVIRONMENT
+05-12 09:17:23.548   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:164 - ThreadId(5) Calling get_rkpd_attestation_key() Pending: 10.003045671s Overdue 9.503045858s
+05-12 09:17:23.548   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:175 - ### Keystore Watchdog report - END ###
+05-12 09:17:23.576   571   659 D ActivityManager: freezing 3654 com.google.android.rkpdapp
+05-12 09:17:23.577   571  2509 I RemoteProvisionSysSvc: Requesting cancellation for client 82031264
+05-12 09:17:23.578   199   208 W keystore2: system/security/keystore2/src/remote_provisioning.rs:102 - Error occurred: system/security/keystore2/src/rkpd_client.rs:214: Waiting for RKPD key timed out: Elapsed(())
+05-12 09:17:23.578   199   208 W keystore2: 
+05-12 09:17:23.578   199   208 W keystore2: Caused by:
+05-12 09:17:23.578   199   208 W keystore2:     Error::Rc(r#OUT_OF_KEYS_TRANSIENT_ERROR)
+05-12 09:17:23.578   571  2509 I RegistrationProxy: Attempting to cancel getKeyAsync for 220200537
+05-12 09:17:23.579   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:114 - ### Keystore Watchdog report - BEGIN ###
+05-12 09:17:23.579   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:123 - When extracting from a bug report, please include this header
+05-12 09:17:23.579   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:124 - and all 1 records below.
+05-12 09:17:23.579   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:154 - ThreadId(5) IKeystoreSecurityLevel::generateKey Pending: 10.034074496s Overdue 5.034074966s: SecurityLevel r#TRUSTED_ENVIRONMENT
+05-12 09:17:23.579   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:175 - ### Keystore Watchdog report - END ###
+05-12 09:17:23.616   379  5425 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+05-12 09:17:23.616  2938  3617 D TrafficStats: tagSocket(119) with statsTag=0x1809, statsUid=-1
+05-12 09:17:23.617  2938  3617 D TrafficStats: tagSocket(119) with statsTag=0x1809, statsUid=-1
+05-12 09:17:23.618  2938  3617 D TrafficStats: tagSocket(119) with statsTag=0x1809, statsUid=-1
+05-12 09:17:23.641  1514  5426 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+05-12 09:17:23.647   571  2178 D CompatibilityChangeReporter: Compat change id reported: 182734110; UID 10123; state: ENABLED
+05-12 09:17:23.753  2938  3617 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+05-12 09:17:23.753  2938  3617 W libc    : Access denied finding property "service.adb.tls.port"
+05-12 09:17:23.750  2938  2938 W binder:2938_5: type=1400 audit(0.0:106): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+05-12 09:17:23.750  2938  2938 W binder:2938_5: type=1400 audit(0.0:107): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+05-12 09:17:23.757  2938  3617 W SystemServiceRegistry: No service published for: persistent_data_block
+05-12 09:17:23.805   783   783 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-12 09:17:24.045   571  2509 I RemoteProvisionSysSvc: getRegistration(android.hardware.security.keymint.IRemotelyProvisionedComponent/default)
+05-12 09:17:24.046   571  2509 D ActivityManager: sync unfroze 3654 com.google.android.rkpdapp for 6
+05-12 09:17:24.046  3654  3676 I RkpdRegistrationBinder: cancelGetKey(122834764)
+05-12 09:17:24.047  3654  3772 I RkpdRegistrationBinder: getKey was interrupted
+05-12 09:17:24.047   571   571 I RemoteProvisionSysSvc: Operation cancelled for client 82031264
+05-12 09:17:24.047   199   207 W keystore2: system/security/keystore2/src/rkpd_client.rs:163 - IGetKeyCallback cancelled
+05-12 09:17:24.047   199   207 E keystore2: system/security/keystore2/src/rkpd_client.rs:63 - SafeSender::send() failed
+05-12 09:17:24.047   571   571 I RegistrationProxy: onServiceConnected: com.android.rkpdapp.service.RemoteProvisioningService
+05-12 09:17:24.048   571  2051 I RegistrationProxy: IGetRegistrationCallback.onSuccess
+05-12 09:17:24.049   571  2178 I RemoteProvisionSysSvc: Fetching key 10123 for client 143014213
+05-12 09:17:24.049   571  2178 I RegistrationProxy: getKeyAsync operation started with callback 116889754
+05-12 09:17:24.050  3654  3771 I RkpdRegistrationBinder: Key requested for : android.hardware.security.keymint.IRemotelyProvisionedComponent/default, clientUid: 1017, keyId: 10123, callback: 89444098
+--------- beginning of kernel
+05-12 09:17:24.088     0     0 I servicemanager: Found android.hardware.security.keymint.IRemotelyProvisionedComponent/default in device VINTF manifest.
+05-12 09:17:24.050  3654  3771 I RkpdRegistrationBinder: No key assigned, looking for an available key with expiry of 2026-05-15T07:17:24.050735Z
+05-12 09:17:24.051  3654  3771 I RkpdRegistrationBinder: No key assigned, looking for an available key with expiry of 2026-05-12T08:17:24.050171Z
+05-12 09:17:24.051  3654  3771 I RkpdRegistrationBinder: No keys are available, kicking off provisioning
+05-12 09:17:24.051   571  2178 I RegistrationProxy: Provisioning required before keys are available for android.security.rkp.service.RegistrationProxy$2@6f7989a
+05-12 09:17:24.051  3654  3771 V RkpdServerInterface: Requesting data from server. Attempt 1
+05-12 09:17:24.052   379  5429 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10173 0}
+05-12 09:17:24.052   379  5430 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+05-12 09:17:24.052   379  5431 I resolv  : res_nmkquery: (QUERY, IN, A)
+05-12 09:17:24.052   379  5431 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cedad875f90
+05-12 09:17:24.052   379  5431 I resolv  : doQuery: rcode=0, ancount=13, return value=259
+05-12 09:17:24.052   379  5430 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7cedcd8737f0
+05-12 09:17:24.052   379  5430 I resolv  : doQuery: rcode=0, ancount=4, return value=163
+05-12 09:17:24.053  3654  3771 D TrafficStats: tagSocket(6) with statsTag=0x0, statsUid=-1
+05-12 09:17:24.127  3654  3771 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+05-12 09:17:24.184   571   601 D ActivityManager: sync unfroze 2820 com.google.android.apps.wallpaper for 3
+05-12 09:17:24.197  1765  1765 I BgTaskExecutorImpl: Starting EXCLUSIVE background task FETCH_CONFIGS_FROM_PHENOTYPE.
+05-12 09:17:24.205  1296  3418 E NetworkScheduler.ATC: Error finding compatible intent-filter to handle SERVICE_ACTION_EXECUTE_TASK for com.google.android.gms/.chimera.GmsInternalBoundBrokerService [CONTEXT service_id=218 ]
+05-12 09:17:24.205  1296  3418 E NetworkScheduler.TED: Invalid service definition provided: null [CONTEXT service_id=218 ]
+05-12 09:17:24.206  1296  3481 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.chimera.GmsInternalBoundBrokerService finished executing. cause:4 result: 10 elapsed_millis: 4 uptime_millis: 4 exec_start_elapsed_seconds: 104 [CONTEXT service_id=218 ]
+05-12 09:17:24.207  2820  5435 W DiskBasedLogger: Disk-based log buffer doesn't exist, so there's nothing to clean up.
+05-12 09:17:24.216  1765  3339 I A       : Using proto config with mendel
+05-12 09:17:24.216  1765  3339 I A       : Using proto config with mendel
+05-12 09:17:24.216  1765  3339 I A       : Using proto config with mendel
+05-12 09:17:24.216  1765  3339 I A       : Merging legacy hotword config map with new proto.
+05-12 09:17:24.217  1765  3339 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+05-12 09:17:24.217  1765  3339 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+05-12 09:17:24.217  1765  3339 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+05-12 09:17:24.217  1765  3339 I A       : Skipping. Expected model: 2 Found: 1
+05-12 09:17:24.217  1765  3339 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+05-12 09:17:24.217  1765  3339 I A       : Using proto config with mendel
+05-12 09:17:24.218  1765  3339 I A       : Using proto config with mendel
+05-12 09:17:24.218  1765  3339 I A       : Using proto config with mendel
+05-12 09:17:24.220  1765  3339 I MicroDetectionState: Should stop hotword detection immediately - true
+05-12 09:17:24.227  3654  3771 V RkpdServerInterface: Requesting data from server. Attempt 2
+05-12 09:17:24.228  3654  3771 D TrafficStats: tagSocket(6) with statsTag=0x0, statsUid=-1
+05-12 09:17:24.266  1296  4498 W BpBinder: Large outgoing transaction of 336468 bytes, interface descriptor , code 4
+05-12 09:17:24.279  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_birthdaydoodle_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_call_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_canvas_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_chkpkg_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_crashtest_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_dining_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_doodle_notifications_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_imageviewer_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_ipa_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_jslocation_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_localintent_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_messaging_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_nativesrp_activity_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_nativesrp_presenter_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_nowcontent_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_recents_activity_jar__name to integer.
+05-12 09:17:24.280  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_save_jar__name to integer.
+05-12 09:17:24.281  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_searchresults_activity_jar__name to integer.
+05-12 09:17:24.281  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_test_jar__name to integer.
+05-12 09:17:24.281  1765  2255 W A       : Can't format flag AndroidGsaVelourJars__velour_weather_jar__name to integer.
+05-12 09:17:24.281  1765  2255 W A       : Can't format flag bindle_flags__bloblobber_blob to integer.
+05-12 09:17:24.281  1765  2255 W A       : Can't format flag bindle_flags__velour_jar to integer.
+05-12 09:17:24.294  1765  2320 I FedAssExpListener: Fed-ass not supported for signed out users.
+05-12 09:17:24.294  1765  2342 I A       : NGA disabled due to not being eligible.
+05-12 09:17:24.294  1765  2320 I FedAssExpListener: Successfully processed experiments changed.
+05-12 09:17:24.295  1765  2343 I OpaEligibilityChecker: send OpaEligibilityChange broadcast to CommonBroadcastReceiver
+05-12 09:17:24.297  1765  2369 I BistoSettingsListener: listener created
+05-12 09:17:24.298  1765  3339 W SearchServiceCore: Abort, client detached.
+05-12 09:17:24.298  1765  3339 W SearchServiceCore: Abort, client detached.
+05-12 09:17:24.299  3654  3771 E RkpdServerInterface: Failed to complete request from server.java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+05-12 09:17:24.305  1514  1731 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=agsa_icing_connection serviceId=33
+05-12 09:17:24.307  1514  2606 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=agsa_icing_connection serviceId=32
+05-12 09:17:24.312  1765  3339 W SearchServiceCore: Abort, client detached.
+05-12 09:17:24.318   571  2178 W JobScheduler: Job didn't exist in JobStore: 9136b2e #u0a132/-43 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+05-12 09:17:24.328  1514  2606 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+05-12 09:17:24.331  1514  1743 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+05-12 09:17:24.334  1514  1743 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+05-12 09:17:24.336  1514  1743 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0

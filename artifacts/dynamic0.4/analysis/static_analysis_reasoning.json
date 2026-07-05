@@ -1,0 +1,8 @@
+{
+  "summary": "Model response could not be parsed as JSON.",
+  "top_risks": [],
+  "correlations": [],
+  "vulnerability_candidates": [],
+  "recommended_next_steps": [],
+  "raw_response": "{\"summary\":\"Static analysis reveals multiple code-level weaknesses—including SQL injection via raw queries, insecure WebView URL loading, executable command injection, cleartext HTTP traffic, and unchecked file writes—within a package that exposes six components and requests eight dangerous permissions, thereby expanding the attack surface.\",\"top_risks\":[\"SQL injection via rawQuery/execSQL\",\"WebView URL loading from untrusted source\",\"Command execution (Runtime.exec)\",\"Hard‑coded HTTP URLs (clear‑text traffic)\",\"Unauthenticated file writes to arbitrary paths\"],\"correlations\":[\"Exported components combined with rawQuery could let external apps trigger SQL injection\",\"Dangerous permissions (WRITE_EXTERNAL_STORAGE, ACCESS_NETWORK_STATE) facilitate file writes and network exploitation\",\"Exported broadcast receivers may trigger Runtime.exec via malicious intent extras\",\"Component exposure increases reach for WebView loading untrusted URLs\",\"Permission combinations lack enforceable checks, amplifying credential leakage risk\"],\"vulnerability_candidates\":[\"artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java\",\"artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java\",\"artifacts/dynamic0.4/jadx/sources/owasp/sat/agoat"
+}

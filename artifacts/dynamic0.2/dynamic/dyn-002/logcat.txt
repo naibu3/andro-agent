@@ -1,0 +1,47 @@
+--------- beginning of system
+04-21 09:11:44.851   555  2248 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 09:11:44.851   555  2248 D PackageManager: Clear ephemeral installer activity
+--------- beginning of main
+04-21 09:11:44.857  1524  5594 I NearbySharing: Can't stop advertising FastInitiation. Not advertising. [CONTEXT service_id=194 ]
+04-21 09:11:44.857  1524  5594 I NearbySharing: Stopping Fast Init advertisement because we're not scanning in the foreground. [CONTEXT service_id=194 ]
+04-21 09:11:44.858  2108  5846 D DownloadManager: [2] Finished with status SUCCESS
+04-21 09:11:44.864   555  2545 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10117; state: ENABLED
+04-21 09:11:44.866  1616  1616 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.ocr.service.internal.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalApiService }
+04-21 09:11:44.866  1616  1616 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.ocr.service.internal.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalApiService }
+04-21 09:11:44.869  1742  1913 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.libraries.consentverifier#com.google.android.apps.wellbeing
+04-21 09:11:44.883   555   573 W ActivityTaskManager: callingPackage for (uid=2000, pid=5874) has no WPC
+04-21 09:11:44.889   555   573 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+04-21 09:11:44.890   555   573 D CompatibilityChangeReporter: Compat change id reported: 194833441; UID 10192; state: ENABLED
+04-21 09:11:44.890   555   573 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 09:11:44.895   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@8a75f71 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=12 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=2 lastActiveTime=147452 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@be4156} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{76e35d7 owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+04-21 09:11:44.900  1616  5344 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+04-21 09:11:44.900  1616  5344 I Auth    : [SupervisedAccountIntentOperation] This operation is disabled
+04-21 09:11:44.926  1616  5558 W SQLiteLog: (28) double-quoted string literal: "owasp.sat.agoat"
+04-21 09:11:44.928  1952  2600 W YouTubeMusic: Invalid playback type; streaming data is not playable
+04-21 09:11:44.928  4256  4256 W CardCollectorJobService: refreshJob, cancel job.
+04-21 09:11:44.928  4256  4256 W BatteryWidgetPhenotypeCommitListener: Phenotype flag updated = true
+04-21 09:11:44.928  1524  5594 I NearbySharing: Stopping advertising because Nearby Sharing is disabled. [CONTEXT service_id=194 ]
+04-21 09:11:44.935  1524  5594 I NearbySharing: Failed to scan for fast initiation because we're already scanning with isHighPowerAllowed=false. [CONTEXT service_id=194 ]
+04-21 09:11:44.935  1524  5594 I NearbySharing: Dismissing HUN as there's no device nearby. [CONTEXT service_id=194 ]
+04-21 09:11:44.935  1524  5594 I NearbySharing: Cancelling in use notification [CONTEXT service_id=194 ]
+04-21 09:11:44.936  1524  5594 I NearbySharing: Bluetooth is enabled [CONTEXT service_id=194 ]
+04-21 09:11:44.938   420   420 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: Failed to set whitelist for augmented autofill service.
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: java.lang.SecurityException: caller is not user's Augmented Autofill Service
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at android.view.autofill.AutofillManager.setAugmentedAutofillWhitelist(AutofillManager.java:2676)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at cjj.c(PG:7)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at cju.g(PG:8)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at ckd.c(PG:18)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at eoz.g(PG:3)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at fde.a(PG:3)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at jen.t(PG:18)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at jen.c(PG:35)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at gfo.run(PG:14)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:307)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at dgq.run(PG:67)
+04-21 09:11:44.942  1834  3650 W AiAiAutofill: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 09:11:44.945  1742  1913 W TimedProcessReaper: Scheduling killing of process to refresh configuration

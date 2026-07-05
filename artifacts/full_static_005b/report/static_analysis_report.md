@@ -1,0 +1,1 @@
+This endpoint's maximum context length is 131072 tokens. However, you requested about 182722 tokens (181698 of text input, 1024 in the output). Please reduce the length of either one, or use the context-compression plugin to compress your prompt automatically.

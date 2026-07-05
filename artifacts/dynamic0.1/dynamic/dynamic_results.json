@@ -1,0 +1,24 @@
+{
+  "case_id": "dynamic0.1",
+  "package_name": "owasp.sat.agoat",
+  "device_profile": "baseline",
+  "tests_executed": 1,
+  "observations": [
+    {
+      "test_id": "dyn-001",
+      "signal": "app_launch_attempted",
+      "success": true,
+      "summary": "Main launcher intent executed",
+      "metadata": {
+        "stdout": "  bash arg: -p\n  bash arg: owasp.sat.agoat\n  bash arg: -c\n  bash arg: android.intent.category.LAUNCHER\n  bash arg: 1\nEvents injected: 1\n## Network stats: elapsed time=254ms (0ms mobile, 0ms wifi, 254ms not connected)\n",
+        "stderr": "args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]\n arg: \"-p\"\n arg: \"owasp.sat.agoat\"\n arg: \"-c\"\n arg: \"android.intent.category.LAUNCHER\"\n arg: \"1\"\ndata=\"owasp.sat.agoat\"\ndata=\"android.intent.category.LAUNCHER\"\n"
+      }
+    }
+  ],
+  "artifacts": [
+    "artifacts/dynamic0.1/dynamic/dyn-001/logcat.txt",
+    "artifacts/dynamic0.1/dynamic/dyn-001/screen.png",
+    "artifacts/dynamic0.1/dynamic/dyn-001/ui.xml"
+  ],
+  "errors": []
+}

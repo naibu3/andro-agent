@@ -1,0 +1,49 @@
+{
+  "case_id": "full_static_005b",
+  "apk_path": "samples/base.apk",
+  "manifest_json_path": "artifacts/full_static_005b/parsed/manifest.json",
+  "facts_path": "artifacts/full_static_005b/facts/manifest_facts.json",
+  "findings_path": "artifacts/full_static_005b/findings/manifest_findings.json",
+  "analysis_path": "artifacts/full_static_005b/analysis/static_analysis_reasoning.json",
+  "analysis_raw_path": "artifacts/full_static_005b/analysis/static_analysis_reasoning_raw.txt",
+  "jadx_output_dir": "artifacts/full_static_005b/jadx",
+  "code_search_results_path": "artifacts/full_static_005b/code_search/code_search_results.json",
+  "code_facts_path": "artifacts/full_static_005b/facts/code_search_facts.json",
+  "code_findings_path": "artifacts/full_static_005b/findings/code_findings.json",
+  "correlated_findings_path": null,
+  "static_analysis_bundle_path": "artifacts/full_static_005b/bundle/static_analysis_bundle.json",
+  "static_report_path": "artifacts/full_static_005b/report/static_analysis_report.md",
+  "status": "completed",
+  "current_step": "markdown_report_agent",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 285
+    },
+    {
+      "agent": "analysis_agent",
+      "success": true,
+      "output": "artifacts/full_static_005b/analysis/static_analysis_reasoning.json",
+      "raw_output": "artifacts/full_static_005b/analysis/static_analysis_reasoning_raw.txt"
+    },
+    {
+      "agent": "markdown_report_agent",
+      "success": true,
+      "output": "artifacts/full_static_005b/report/static_analysis_report.md"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

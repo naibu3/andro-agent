@@ -1,0 +1,135 @@
+--------- beginning of main
+04-21 12:37:09.962  7890  7890 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:37:09.966  7890  7890 I AndroidRuntime: Using default boot image
+04-21 12:37:09.966  7890  7890 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:37:09.968  7890  7890 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:37:09.969  7890  7890 I app_process: Using CollectorTypeCC GC.
+04-21 12:37:10.030  7890  7890 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:37:10.038  7890  7890 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:37:10.038  7890  7890 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:37:10.043  7890  7890 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:37:10.043  7890  7890 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:37:10.055  7890  7890 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:37:10.055  7890  7890 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:37:10.055  7890  7890 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:37:10.056  7890  7890 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:37:10.052  7890  7890 W main    : type=1400 audit(0.0:224): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:10.052  7890  7890 W main    : type=1400 audit(0.0:225): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:10.052  7890  7890 W main    : type=1400 audit(0.0:226): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:10.059  7890  7890 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:10.059  7890  7890 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:10.059  7890  7890 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: Writing exception to parcel
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 12:37:10.061  7638  7681 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 12:37:10.062  7890  7890 D AndroidRuntime: Shutting down VM
+04-21 12:37:10.173  1961  6701 I A       : Writing metadata key: _sync_timestamp_micros, corpus: GDD_APA_HEAD_SUGGEST
+04-21 12:37:10.173  1961  6701 I A       : Writing metadata key: _sync_token, corpus: GDD_APA_HEAD_SUGGEST
+04-21 12:37:10.196  1961  6701 I A       : Writing metadata key: _sync_timestamp_micros, corpus: GDD_APA_SMART_ACTION_MODELS
+04-21 12:37:10.196  1961  6701 I A       : Writing metadata key: _sync_token, corpus: GDD_APA_SMART_ACTION_MODELS
+04-21 12:37:10.203  1961  6704 I A       : Writing metadata key: _sync_timestamp_micros, corpus: GDD_APA_BISTO
+04-21 12:37:10.203  1961  6704 I A       : Writing metadata key: _sync_token, corpus: GDD_APA_BISTO
+04-21 12:37:10.204  1961  2463 W A       : onTaskDone() callback not found; batchId=1
+04-21 12:37:10.204  1961  6701 I BgTaskExecutorImpl: Starting NONEXCLUSIVE background task MDD_CELLULAR_CHARGING_TASK.
+04-21 12:37:10.204  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 12:37:10.206  1961  2274 I A       : Scheduling a pending sync for corpus: GDD_APA_BISTO
+04-21 12:37:10.206  1961  2275 W A       : Corpus: GDD_APA_LIGHTWEIGHT_TOKENS is disabled
+04-21 12:37:10.206  1961  2460 I A       : Starting batch sync for corpora: [1004]
+04-21 12:37:10.206  1961  2273 I A       : Scheduling a pending sync for corpus: GDD_APA_HEAD_SUGGEST
+04-21 12:37:10.206  1961  2463 I A       : Starting batch sync for corpora: [1014]
+04-21 12:37:10.207  1961  2275 I A       : Scheduling a pending sync for corpus: GDD_APA_SMART_ACTION_MODELS
+04-21 12:37:10.207  1961  2460 I A       : Starting batch sync for corpora: [1015]
+04-21 12:37:10.216  1961  6701 I DeviceCapHelper: Adding surface identity to the device capabilities for surface OPA_AGSA.
+04-21 12:37:10.219  1961  6701 I A       : The GellerConfig is not present, defaulting isUploadEnabled for corpus GDD_APA_BISTO to true.
+04-21 12:37:10.219  1961  2229 I DeviceCapHelper: Adding surface identity to the device capabilities for surface OPA_AGSA.
+04-21 12:37:10.219  1961  2463 I A       : There are 0 elements to be updated on the server for corpus GDD_APA_BISTO.
+04-21 12:37:10.220  1961  2463 I A       : There are 0 elements to delete from the server for corpus GDD_APA_BISTO.
+04-21 12:37:10.220  1961  6704 I DeviceCapHelper: Adding surface identity to the device capabilities for surface OPA_AGSA.
+04-21 12:37:10.220  1961  6701 I A       : The syncToken for corpus GDD_APA_BISTO is Ei4I1uKr+9/+kwPiPiIKIDFjNDU1MmI1MzFjOTVlZjEzNWEzMmYzMGYxYzIyY2I0.
+04-21 12:37:10.221  1961  6701 D TrafficStats: tagSocket(179) with statsTag=0x0, statsUid=-1
+04-21 12:37:10.222  1961  2229 I A       : The GellerConfig is not present, defaulting isUploadEnabled for corpus GDD_APA_SMART_ACTION_MODELS to true.
+04-21 12:37:10.222  1961  2463 I A       : There are 0 elements to be updated on the server for corpus GDD_APA_SMART_ACTION_MODELS.
+04-21 12:37:10.222  1961  2463 I A       : There are 0 elements to delete from the server for corpus GDD_APA_SMART_ACTION_MODELS.
+04-21 12:37:10.222  1961  2229 I A       : The GellerConfig is not present, defaulting isUploadEnabled for corpus GDD_APA_HEAD_SUGGEST to true.
+04-21 12:37:10.222  1961  6704 I A       : The syncToken for corpus GDD_APA_SMART_ACTION_MODELS is EgkIt4Ws+9/+kwM=.
+04-21 12:37:10.222  1961  2460 I A       : There are 0 elements to be updated on the server for corpus GDD_APA_HEAD_SUGGEST.
+04-21 12:37:10.222  1961  2460 I A       : There are 0 elements to delete from the server for corpus GDD_APA_HEAD_SUGGEST.
+04-21 12:37:10.223  1961  6704 I A       : The syncToken for corpus GDD_APA_HEAD_SUGGEST is EgkIptOr+9/+kwM=.
+04-21 12:37:10.223  1961  6704 D TrafficStats: tagSocket(185) with statsTag=0x0, statsUid=-1
+04-21 12:37:10.223  1961  2229 D TrafficStats: tagSocket(190) with statsTag=0x0, statsUid=-1
+04-21 12:37:10.396  1961  2460 W NamedFutures: Timeout future task has been cancelled: 60000 milliseconds
+04-21 12:37:10.397  1961  1961 E A       : Task 255 failed or timed out. Client 8626345934977779 disconnecting from SearchService!
+04-21 12:37:10.397  1961  1961 E A       : java.util.concurrent.CancellationException: Task was cancelled.
+04-21 12:37:10.397  1961  1961 E A       : 	at com.google.common.util.concurrent.d.s(PG:3)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.google.common.util.concurrent.d.get(PG:4)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.google.common.util.concurrent.eb.a(PG:1)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.google.common.util.concurrent.ci.r(PG:2)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.google.common.util.concurrent.cb.run(PG:4)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.ba.run(PG:1)
+04-21 12:37:10.397  1961  1961 E A       : 	at android.os.Handler.handleCallback(Handler.java:958)
+04-21 12:37:10.397  1961  1961 E A       : 	at android.os.Handler.dispatchMessage(Handler.java:99)
+04-21 12:37:10.397  1961  1961 E A       : 	at android.os.Looper.loopOnce(Looper.java:205)
+04-21 12:37:10.397  1961  1961 E A       : 	at android.os.Looper.loop(Looper.java:294)
+04-21 12:37:10.397  1961  1961 E A       : 	at android.app.ActivityThread.main(ActivityThread.java:8177)
+04-21 12:37:10.397  1961  1961 E A       : 	at java.lang.reflect.Method.invoke(Native Method)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)
+04-21 12:37:10.397  1961  1961 E A       : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+04-21 12:37:10.397  1961  3260 W SearchServiceCore: Abort, client detached.
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: PERIODIC background task MDD_WIFI_CHARGING_TASK was cancelled.
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: java.util.concurrent.CancellationException: Task was cancelled.
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.d.s(PG:3)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.d.get(PG:4)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.eb.a(PG:1)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.ci.r(PG:2)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.cb.run(PG:4)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.cf.b(PG:1)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.ci.run(PG:1)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.android.libraries.i.ae.run(PG:1)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.android.libraries.i.i.run(PG:2)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at com.google.android.libraries.i.p.run(PG:4)
+04-21 12:37:10.404  1961  6704 E BgTaskExecutorImpl: 	at java.lang.Thread.run(Thread.java:1012)
+--------- beginning of system
+04-21 12:37:10.405   555  2102 D OomAdjuster: Not killing cached processes
+04-21 12:37:10.432  1961  2886 I A       : Writing metadata key: _sync_timestamp_micros, corpus: GDD_APA_HEAD_SUGGEST
+04-21 12:37:10.433  1961  2886 I A       : Writing metadata key: _sync_token, corpus: GDD_APA_HEAD_SUGGEST
+04-21 12:37:10.433  1961  2886 I A       : Writing metadata key: _sync_timestamp_micros, corpus: GDD_APA_BISTO
+04-21 12:37:10.434  1961  2886 I A       : Writing metadata key: _sync_token, corpus: GDD_APA_BISTO
+04-21 12:37:10.447  1961  2886 I A       : Writing metadata key: _sync_timestamp_micros, corpus: GDD_APA_SMART_ACTION_MODELS
+04-21 12:37:10.447  1961  2886 I A       : Writing metadata key: _sync_token, corpus: GDD_APA_SMART_ACTION_MODELS
+04-21 12:37:10.448  1961  2463 W A       : onTaskDone() callback not found; batchId=2
+04-21 12:37:10.448  1961  6704 I BgTaskExecutorImpl: Starting NONEXCLUSIVE background task MDD_CELLULAR_CHARGING_TASK.
+04-21 12:37:10.449  1961  2273 W A       : Corpus: GDD_APA_LIGHTWEIGHT_TOKENS is disabled
+04-21 12:37:10.449  1961  2274 I A       : Scheduling a pending sync for corpus: GDD_APA_SMART_ACTION_MODELS
+04-21 12:37:10.449  1961  2249 I A       : Scheduling a pending sync for corpus: GDD_APA_BISTO
+04-21 12:37:10.450  1961  2463 I A       : Starting batch sync for corpora: [1015]
+04-21 12:37:10.451  1961  2460 I A       : Starting batch sync for corpora: [1004]
+04-21 12:37:10.452  1961  2273 I A       : Scheduling a pending sync for corpus: GDD_APA_HEAD_SUGGEST
+04-21 12:37:10.453  1961  2460 I A       : Starting batch sync for corpora: [1014]
+04-21 12:37:10.460  1961  2732 I DeviceCapHelper: Adding surface identity to the device capabilities for surface OPA_AGSA.
+04-21 12:37:10.461  1961  6704 I DeviceCapHelper: Adding surface identity to the device capabilities for surface OPA_AGSA.
+04-21 12:37:10.464  1961  2886 I DeviceCapHelper: Adding surface identity to the device capabilities for surface OPA_AGSA.
+04-21 12:37:10.469  1961  2886 I A       : The GellerConfig is not present, defaulting isUploadEnabled for corpus GDD_APA_SMART_ACTION_MODELS to true.
+04-21 12:37:10.470  1961  2463 I A       : There are 0 elements to be updated on the server for corpus GDD_APA_SMART_ACTION_MODELS.
+04-21 12:37:10.470  1961  2463 I A       : There are 0 elements to delete from the server for corpus GDD_APA_SMART_ACTION_MODELS.
+04-21 12:37:10.470  1961  6704 I A       : The syncToken for corpus GDD_APA_SMART_ACTION_MODELS is EgkIg/e8+9/+kwM=.
+04-21 12:37:10.470  1961  2886 I A       : The GellerConfig is not present, defaulting isUploadEnabled for corpus GDD_APA_HEAD_SUGGEST to true.
+04-21 12:37:10.470  1961  2460 I A       : There are 0 elements to be updated on the server for corpus GDD_APA_HEAD_SUGGEST.
+04-21 12:37:10.470  1961  2460 I A       : There are 0 elements to delete from the server for corpus GDD_APA_HEAD_SUGGEST.
+04-21 12:37:10.470  1961  6704 I A       : The syncToken for corpus GDD_APA_HEAD_SUGGEST is EgkIgvu7+9/+kwM=.
+04-21 12:37:10.470  1961  2886 I A       : The GellerConfig is not present, defaulting isUploadEnabled for corpus GDD_APA_BISTO to true.
+04-21 12:37:10.471  1961  2463 I A       : There are 0 elements to be updated on the server for corpus GDD_APA_BISTO.
+04-21 12:37:10.471  1961  2463 I A       : There are 0 elements to delete from the server for corpus GDD_APA_BISTO.
+04-21 12:37:10.471  1961  6704 D TrafficStats: tagSocket(179) with statsTag=0x0, statsUid=-1
+04-21 12:37:10.472  1961  2732 D TrafficStats: tagSocket(185) with statsTag=0x0, statsUid=-1
+04-21 12:37:10.472  1961  2886 I A       : The syncToken for corpus GDD_APA_BISTO is Ei4I1uKr+9/+kwPiPiIKIDFjNDU1MmI1MzFjOTVlZjEzNWEzMmYzMGYxYzIyY2I0.
+04-21 12:37:10.473  1961  2886 D TrafficStats: tagSocket(190) with statsTag=0x0, statsUid=-1
+--------- beginning of kernel
+04-21 09:42:50.672     0     0 I logd    : logdr: UID=2000 GID=2000 PID=7906 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns

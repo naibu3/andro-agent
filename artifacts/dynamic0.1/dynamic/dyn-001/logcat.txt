@@ -1,0 +1,907 @@
+--------- beginning of main
+04-21 01:11:39.724  1192  1192 W FeatureConnection: getRegistrationTech: ImsRegistration is null
+04-21 01:11:39.732  1885  2252 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:39.734  1885  2252 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:39.739  1128  2367 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=1564ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Mon, 20 Apr 2026 23:11:40 GMT], X-Android-Received-Millis=[1776726699738], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1776726699718]}
+04-21 01:11:39.745  2622  2622 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+04-21 01:11:39.746  2622  2622 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+04-21 01:11:39.757  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 01:11:39.759  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 01:11:39.759  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 01:11:39.762  2281  2583 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10154; state: ENABLED
+04-21 01:11:39.763  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 01:11:39.767  1524  1643 W bwft    : Succeeded but not registered: com.google.android.libraries.search.googleapp.device#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:39.772  1128  2365 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=2133ms
+04-21 01:11:39.776  1752  1908 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: TRAINING_CACHE_STORAGE_MAINTENANCE_TASK (id=380288759). Success.
+04-21 01:11:39.778  2003  2385 W YouTube : ECatcher disabled: level: WARNING, category: logging, message: Failed to commit to snapshot for Mendel package com.youtube.mainapp.android
+04-21 01:11:39.778  2003  2385 W YouTube : oqq: 29503: 
+04-21 01:11:39.778  2003  2385 W YouTube : 	at ovt.bb(PG:13)
+04-21 01:11:39.778  2003  2385 W YouTube : 	at ovt.bf(PG:11)
+04-21 01:11:39.778  2003  2385 W YouTube : 	at ovt.be(PG:2)
+04-21 01:11:39.778  2003  2385 W YouTube : 	at ppl.dispatchTransaction(PG:574)
+04-21 01:11:39.778  2003  2385 W YouTube : 	at fuq.onTransact(PG:13)
+04-21 01:11:39.778  2003  2385 W YouTube : 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+04-21 01:11:39.778  2003  2385 W YouTube : 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 01:11:39.778  1752  2740 I SuperpacksManagerImpl: SuperpacksManagerImpl.initializeInternal():528 Switched background task scheduler: false
+04-21 01:11:39.779  1885  1885 W Morris.CarModeRcvr: Activity Recognition permission is not granted.
+04-21 01:11:39.781  1752  2740 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: superpacks-gc-task (id=-1481937176). Success.
+04-21 01:11:39.782   555  2558 W system_server: Long monitor contention with owner binder:555_1A (2551) at com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean)(PackageManagerService.java:1195) waiters=9 in com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean) for 103ms
+04-21 01:11:39.782  1752  1908 I LauncherIconVisibilityInitializerBase: LauncherIconVisibilityInitializerBase.lambda$doUpdate$1():69 doUpdate() : Visible = false
+04-21 01:11:39.788  1834  2125 I AiAiNowPlaying: Initial refresh of the FA controller
+04-21 01:11:39.789   555  2555 I ActivityManager: Broadcasting: Intent { act=com.android.emulator.multidisplay.START flg=0x400000 cmp=com.android.emulator.multidisplay/.MultiDisplayServiceReceiver }
+04-21 01:11:39.789   555  1028 W system_server: Long monitor contention with owner ActivityManager (595) at void com.android.server.am.BroadcastQueueModernImpl.checkPendingColdStartValidity()(BroadcastQueueModernImpl.java:551) waiters=2 in android.content.Intent com.android.server.am.ActivityManagerService.registerReceiverWithFeature(android.app.IApplicationThread, java.lang.String, java.lang.String, java.lang.String, android.content.IIntentReceiver, android.content.IntentFilter, java.lang.String, int, int) for 138ms
+--------- beginning of system
+04-21 01:11:39.791   555   555 W Looper  : Slow dispatch took 143ms main h=android.app.ActivityThread$H c=android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0@a42549e m=0
+04-21 01:11:39.791  1834  1869 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10128; state: ENABLED
+04-21 01:11:39.792  1834  1869 I AiAiEcho: Settings changed for uri: content://settings/secure/com.google.android.systemui.assist.uihints.NGA_IS_ASSISTANT
+04-21 01:11:39.800  1236  1300 I AiAiSuggestUi: Connecting to system intelligence module.
+04-21 01:11:39.809   555  1894 D WallpaperManagerService: WPMS.saveSettingsLocked-0
+04-21 01:11:39.813  1961  2769 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:39.827   555  2058 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:39.827   555  2058 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:39.829   555  2084 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:39.829   555  2084 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:39.833   555  2556 E IPCThreadState: binder thread pool (31 threads) starved for 154 ms
+04-21 01:11:39.836  1752  2733 I ContactsDataManager: ContactsDataManager.onContentChanged():156 onContentChanged()
+04-21 01:11:39.837  1961  2775 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:39.851   555  2555 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 1000; state: DISABLED
+04-21 01:11:39.868  1928  1928 V ActivityThread: getPackageInfo() caused update to cached ApplicationInfo for package com.android.emulator.multidisplay
+04-21 01:11:39.870   555  2554 D ConnectivityService: requestNetwork for uid/pid:10139/2003 activeRequest: null callbackRequest: 58 [NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10139 RequestorUid: 10139 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 01:11:39.882  1752  2740 I SP      : Creating database superpacks.db, version 17
+04-21 01:11:39.885  1752  2061 I SpeechPackManager: SpeechPackManager.lambda$registerManifest$4():461 registerManifest() : Fetching hash 758538843
+04-21 01:11:39.885  1752  2740 I SP      : Registering gboard-small-speech-packs.758538843, url: https://dl.google.com/android/voice/gboard/terse/superpacks-manifest-20191212.json, constraints: m:b:*:*, flags: *, requested: 758538843, current: -1
+04-21 01:11:39.886  1128  2730 D NetworkMonitor/101: checkAndRenewResourceConfig: update captive portal https urls to [https://www.google.com/generate_204]
+04-21 01:11:39.887  1128  2730 D NetworkMonitor/101: checkAndRenewResourceConfig: update captive portal http urls to [http://connectivitycheck.gstatic.com/generate_204]
+04-21 01:11:39.887  1128  2730 D NetworkMonitor/101: checkAndRenewResourceConfig: update captive portal fallback urls to[http://www.google.com/gen_204, http://play.googleapis.com/generate_204]
+04-21 01:11:39.887  1128  2730 D NetworkMonitor: Starting on network 101 with capport HTTPS URL [https://www.google.com/generate_204] and HTTP URL [http://connectivitycheck.gstatic.com/generate_204]
+04-21 01:11:39.890  1752  2740 I SP      : Requesting download of URL https://dl.google.com/android/voice/gboard/terse/superpacks-manifest-20191212.json to gboard-small-speech-packs-758538843.fetched (constraints: m:b:u:l)
+04-21 01:11:39.891   555   585 W Looper  : Drained
+04-21 01:11:39.893  1752  2733 I EmailDataManager: EmailDataManager.onContentChanged():116 onContentChanged()
+04-21 01:11:39.899  1885  2525 I AmbBrdcstRcvrServClient: Not starting TngAmbientAssistant.
+04-21 01:11:39.900  1885  2525 I AmbBrdcstRcvrServClient: connecting to AmbBroadcastReceiver
+04-21 01:11:39.902   555   619 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10192; state: DISABLED
+04-21 01:11:39.902   555   619 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10192; state: DISABLED
+04-21 01:11:39.905  1961  1961 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.dm': No such file or directory
+04-21 01:11:39.905  1961  1961 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.dm': No such file or directory
+04-21 01:11:39.905  1885  1885 I GsaVoiceInteractionSrv: Registering AppOpsListener
+04-21 01:11:39.910  1192  1192 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+04-21 01:11:39.910  1192  1192 D ImsExternalCallTracker: refreshCallPullState
+04-21 01:11:39.910  1192  1192 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+04-21 01:11:39.910  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.910  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+04-21 01:11:39.910  1192  1192 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+04-21 01:11:39.910  1192  1192 D ImsExternalCallTracker: refreshCallPullState
+04-21 01:11:39.910  1192  1192 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+04-21 01:11:39.910  1752  1752 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-21 01:11:39.910  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=false_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+04-21 01:11:39.911  1752  1923 I NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():98 onNetworkLost: networkState = NO_CONNECTION, isAirplaneModeOn = false
+04-21 01:11:39.912  1752  1752 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+04-21 01:11:39.912  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.913  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.913  1885  2525 I AmbBrdcstRcvrServClient: enable ambient assistant: false, isWidgetInstalled: false, BlueChipSmartspaceEnabled: false
+04-21 01:11:39.913  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.913  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.913  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.914  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+04-21 01:11:39.914  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.915  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.915  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.915  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.916  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.916  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.916  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.917  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.917  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.917  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.917  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.917  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.918  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.918   555  2555 I ActivityManager: Enqueued broadcast Intent { act=com.android.emulator.multidisplay.START flg=0x400000 cmp=com.android.emulator.multidisplay/.MultiDisplayServiceReceiver }: 0
+04-21 01:11:39.918  1752  1752 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.920   555   878 D ConnectivityService: NetReassign [59 : null → 100] [c 0] [a 36] [i 12]
+04-21 01:11:39.920  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.onCreateInputView():1768 onCreateInputView()
+04-21 01:11:39.921  1885  2525 I BrdcstRcvrMsgr: sendMessage(): received broadcast id:1 with action:pss_action_startup
+04-21 01:11:39.924   555  2057 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=0 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 575ms
+04-21 01:11:39.927  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.930  1752  1908 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:39.932  1236  1236 D DeviceSearchAlg: search timeout = %d200
+04-21 01:11:39.936  1752  1752 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-21 01:11:39.936  1236  1236 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-21 01:11:39.936  1236  1236 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+04-21 01:11:39.940   555  1124 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=1 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 585ms
+04-21 01:11:39.945  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.947  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+04-21 01:11:39.947  1752  1752 I AndroidIME: KeyboardViewManager.updateKeyboardBackgroundFrameVisibility():357 Set background frame visibility. old:8, new:8
+04-21 01:11:39.947  1752  1752 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-21 01:11:39.948  1752  1752 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-21 01:11:39.948   555  2557 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=2 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 494ms
+04-21 01:11:39.949  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=false_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+04-21 01:11:39.955  1834  2110 I SP.AiAi : Registering spelling_correction.22110320, url: https://www.gstatic.com/nasa/apps/pack_spelling_checker_11032022/22110320/2/en-us/superpacks_manifest.zip, constraints: W:*:I:*, flags: *, requested: 22110320, current: -1
+04-21 01:11:39.957   555   878 I ConnectivityService: Update score for net 100 : +EVER_EVALUATED
+04-21 01:11:39.957   555   878 D ConnectivityService: [100 WIFI] validation passed
+04-21 01:11:39.957   555   878 I ConnectivityService: Update capabilities for net 100 : +VALIDATED
+04-21 01:11:39.957  1752  1923 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+04-21 01:11:39.957  1752  1923 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+04-21 01:11:39.959  1961  2275 I OpaEligibilityChecker: send OpaEligibilityChange broadcast to CommonBroadcastReceiver
+04-21 01:11:39.959   555   878 I ConnectivityService: Update score for net 100 : +EVER_VALIDATED+IS_VALIDATED
+04-21 01:11:39.960  1752  1923 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 3 ms : RunTime = 0 ms
+04-21 01:11:39.960  1192  1404 D com.android.ons.ONSProfileActivator: Internet connection available
+04-21 01:11:39.961   555  2545 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=3 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 420ms
+04-21 01:11:39.962   555   878 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 2]
+04-21 01:11:39.964  1752  1752 I AccessPointsListHolderController: AccessPointsListHolderController.removeAccessPoint():226 The access point split is not added
+04-21 01:11:39.967  1752  1923 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214028 -> 0_resource_name_obfuscated : WaitTime = 2 ms : RunTime = 7 ms
+04-21 01:11:39.970  1752  1908 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:39.972   555  1125 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=4 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 400ms
+04-21 01:11:39.973  1192  1192 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+04-21 01:11:39.973  1192  1192 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+04-21 01:11:39.976  1192  1192 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+04-21 01:11:39.977  1192  1192 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+04-21 01:11:39.977  1192  1192 I Telephony:  isRttSupported: false
+04-21 01:11:39.977  1192  1192 I Telephony:  alwaysAllowWhileRoaming: false
+04-21 01:11:39.977  1192  1192 I Telephony:  isRoaming: false
+04-21 01:11:39.977  1192  1192 I Telephony:  isOnWfc: false
+04-21 01:11:39.979  1885  1885 I GsaVoiceInteractionSrv: hotwordHelper registerDeviceConnectedListener
+04-21 01:11:40.009   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10139 RequestorUid: 10139 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+04-21 01:11:40.009   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10139 RequestorUid: 10139 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+04-21 01:11:40.009   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10139 RequestorUid: 10139 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+04-21 01:11:40.009   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=59, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10139 RequestorUid: 10139 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+04-21 01:11:40.010   951   951 I NoBackGesture: Config changed: newConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.101 fontWeightAdjustment=0} lastReportedConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.101 fontWeightAdjustment=0}
+04-21 01:11:40.010   555  1036 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=5 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 438ms
+04-21 01:11:40.010   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 01:11:40.010  1752  1923 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214023 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 33 ms
+04-21 01:11:40.012  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.assistant.platform.ondevice.fulfillment.server.pop.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.012  1752  1908 W InputMethodEntryManager: InputMethodEntryManager.getEnabledMultilingualSecondaryLanguages():2072 getEnabledMultilingualSecondaryLanguages is called before initialized
+04-21 01:11:40.013  1752  1908 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.013  1752  1908 W InputMethodEntryManager: InputMethodEntryManager.getSupportedMultilingualLanguages():2014 getSupportedMultilingualLanguages is called before initialized
+04-21 01:11:40.013  1752  1908 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-21 01:11:40.015  1752  1752 I AccessPointsListHolderController: AccessPointsListHolderController.removeAccessPoint():226 The access point translate is not added
+04-21 01:11:40.016  1752  1752 I DictionarySuperpacksManager: DictionarySuperpacksManager$1.onEnabledInputMethodEntriesChanged():61 onEnabledInputMethodEntriesChanged
+04-21 01:11:40.017  1752  1752 I InputMethodEntryManager: InputMethodEntryManager$5.onSuccess():845 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}, LanguageTagVariantTuple{languageTag=zz, variant=qwerty}], resetImplicitlyEnabledEntries=false
+04-21 01:11:40.017  1752  1752 I InputMethodEntryManager: InputMethodEntryManager.changeEnabledInputMethodEntries():1684 Change enabled input method entries, useSystemLanguage=true, old=en-US:qwerty, new=en-US:qwerty
+04-21 01:11:40.017  1752  1752 I MetricsProcessorProviderManager: MetricsProcessorProviderManager.onClearcutAdapterReady():108 onClearcutAdapterReady
+04-21 01:11:40.019  1752  1923 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():122 onReceive() : Action = android.net.conn.CONNECTIVITY_CHANGE
+04-21 01:11:40.027   361  2805 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10145 0}
+04-21 01:11:40.034  1752  1923 I DeviceStatusMonitor: DeviceStatusMonitor.notifyIfNetworkChanged():179 notifyIfNetworkChanged: newState = NON_METERED, airplaneModeOn = false, notifyAnyway = false
+04-21 01:11:40.036  1752  1923 I NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():93 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+04-21 01:11:40.036  1752  1923 I LatinImeEntryActivation: LatinImeActivationContentObserver.activeLanguagesHaveChanged():68 Active entries changed: [] -> {en-US}
+04-21 01:11:40.037   361  2807 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 01:11:40.039   361  2806 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 01:11:40.039   555  1015 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=6 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 466ms
+04-21 01:11:40.042  1752  1923 I SuperDelight: SuperDelightManager.syncBundledLanguageModels():734 syncBundledLanguageModels(): clearing bundled_delight selection
+04-21 01:11:40.042  1752  1923 I LmManager: LmManager.asyncUpdateEnabledLanguageModels():90 asyncUpdateEnabledLanguageModels()
+04-21 01:11:40.042  1752  1923 I SuperDelight: SuperDelightManager.initializeDelightSuperpacks():340 initializeDelightSuperpacks()
+04-21 01:11:40.042  1752  1923 I SuperDelight: SuperDelightManager.getDelightMetadataUriAndVersion():1011 getDelightMetadataUriAndVersion(): Phenotype : 2022101700 : https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json
+04-21 01:11:40.044   951   951 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+04-21 01:11:40.062   555   937 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=7 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 486ms
+04-21 01:11:40.072   555  1894 V WallpaperManagerService: WPMS.saveSettingsLocked-0 took to complete: 263ms
+04-21 01:11:40.088  1752  1923 I SuperDelight: SuperDelightAppsSuperpacksManager.initializeDelightAppsSuperpacks():92 initializeDelightAppsSuperpacks()
+04-21 01:11:40.088  1752  1923 I SuperDelight: SuperDelightManager.initializeOverridesSuperpacks():402 initializeOverridesSuperpacks()
+04-21 01:11:40.090  1752  1923 I SuperDelight: SuperDelightManager.initializeBundledDelightSuperpacks():376 initializeBundledDelightSuperpacks()
+04-21 01:11:40.090  1752  1923 I SuperDelight: SuperDelightManager.lambda$registerAndUpgradeSuperpacks$5():476 SuperDelightManager#registerAndUpgradeSuperpacks(delight): current -1, required 2022101700
+04-21 01:11:40.106  1752  1923 I SuperDelight: SuperDelightManager.lambda$syncOverridesLanguageModels$14():689 SuperDelightManager#syncOverridesLanguageModels(): Superpack delight_overrides not found or negative version provided
+04-21 01:11:40.107  1752  2740 I SP      : Registering bundled_delight.2022101700, url: null, constraints: *:*:*:*, flags: *, requested: 2022101700, current: -1
+04-21 01:11:40.107  1752  2740 I SP      : Registering delight.2022101700, url: https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json, constraints: m:*:*:*, flags: *, requested: 2022101700, current: -1
+04-21 01:11:40.116  1752  1923 I SuperDelight: SuperDelightManager$2.onSuccess():635 delight_overrides sync success, adding to data file manager
+04-21 01:11:40.118   555   648 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=8 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 540ms
+04-21 01:11:40.123  2563  2563 V GraphicsEnvironment: Currently set values for:
+04-21 01:11:40.123  2563  2563 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+04-21 01:11:40.123  2563  2563 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+04-21 01:11:40.123  2754  2754 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 01:11:40.124  2563  2563 V GraphicsEnvironment: ANGLE GameManagerService for com.android.localtransport: false
+04-21 01:11:40.124  2563  2563 V GraphicsEnvironment: com.android.localtransport is not listed in per-application setting
+04-21 01:11:40.124  2563  2563 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+04-21 01:11:40.128  1752  1923 I SuperDelight: SuperDelightResourceMetadataFetcher$FetchManifestFromResourcesTask.execute():137 FetchManifestFromResourceTask#execute(): packManifest bundled_delight-2022101700
+04-21 01:11:40.132  1524  1662 W bwft    : Succeeded but not registered: com.google.android.inputmethod.latin#com.google.android.inputmethod.latin [CONTEXT service_id=51 ]
+04-21 01:11:40.133  1752  2701 E PhenotypeModule: PhenotypeModule.handlePhenotypeConfigurationUpdates():268 Get empty configurations.
+04-21 01:11:40.134  1192  1192 I Telephony: AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***] with Telecom. subId=1
+04-21 01:11:40.134  1752  2701 I PhenotypeModule: PhenotypeModule.lambda$fetchAndUpdate$2():220 fetchAndUpdate() : Success, hasFlags=false, fetchStatus=2026-04-21 01:11:39{reason=1, isFullFetch=true, success=true, isEmpty=true, isDelta=false, fetchedFlagsCount=0, deletedFlagsCount=0, updatedFlagsCount=0, totalTime=786}
+04-21 01:11:40.134   555   573 I Telecom : : registerPhoneAccount: account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AFM🔒
+04-21 01:11:40.135   555   573 I Telecom : PhoneAccountRegistrar: Modify account: [ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}]: TSI.rPA(cap)@AFM🔒
+04-21 01:11:40.136   555   573 I Telecom : CallsManager: handlePhoneAccountChanged: phoneAccount=[[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: ***]: TSI.rPA(cap)@AFM🔒
+04-21 01:11:40.138   555   572 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=9 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 498ms
+04-21 01:11:40.144  2754  2754 I AndroidRuntime: Using default boot image
+04-21 01:11:40.145  2754  2754 I AndroidRuntime: Leaving lock profiling enabled
+04-21 01:11:40.151  2754  2754 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 01:11:40.152  2754  2754 I app_process: Using CollectorTypeCC GC.
+04-21 01:11:40.154   555  1036 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 1000. pid: 2563
+04-21 01:11:40.156   555   649 W system_server: Long monitor contention with owner binder:555_20 (2559) at boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int)(OverlayManagerService.java:718) waiters=10 in boolean com.android.server.om.OverlayManagerService$1.setEnabledExclusiveInCategory(java.lang.String, int) for 487ms
+04-21 01:11:40.173   555   573 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@AFM🔒
+04-21 01:11:40.173   555   573 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@AFM🔒
+04-21 01:11:40.174  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 01:11:40.174  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 01:11:40.174  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 01:11:40.174  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 01:11:40.175  1834  1834 V ActivityThread: getPackageInfo() caused update to cached ApplicationInfo for package com.google.android.as
+04-21 01:11:40.177  1834  1834 I AiAiOverview: Created AiAiContentSuggestionsService.
+04-21 01:11:40.179  1961  2722 E MendelPackageState: Failed to fetch after encountering old config
+04-21 01:11:40.179  1961  2722 E MendelPackageState: java.util.concurrent.ExecutionException: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.device%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.device%23com.google.android.googlequicksearchbox
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.d.s(PG:6)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.d.get(PG:4)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.eb.a(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.ci.r(PG:2)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.apps.tiktok.experiments.phenotype.cf.b(PG:44)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.apps.tiktok.experiments.phenotype.cb.call(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.apps.tiktok.tracing.ek.call(PG:2)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.dy.a(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.cv.run(PG:4)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.dz.run(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.i.ae.run(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.i.i.run(PG:2)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.i.p.run(PG:4)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: Caused by: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.device%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.device%23com.google.android.googlequicksearchbox
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.storage.a.a.v.m(PG:5)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.storage.a.h.c.m(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.storage.a.i.g(PG:3)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.storage.protostore.dq.c(PG:12)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.android.libraries.storage.protostore.di.apply(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.apps.tiktok.tracing.eo.apply(PG:2)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.h.e(PG:2)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.j.run(PG:9)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.dn.run(PG:1)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.common.util.concurrent.do.run(PG:4)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	at com.google.apps.tiktok.experiments.phenotype.cf.b(PG:16)
+04-21 01:11:40.179  1961  2722 E MendelPackageState: 	... 11 more
+04-21 01:11:40.180   555  1015 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 10156. pid: 1952
+04-21 01:11:40.181  1192  1192 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {b8f1e52}, hasService=false, callingPackage=com.android.server.telecom
+04-21 01:11:40.183  1524  1654 E bwfc    : Phenotype API error. Event # edax@72bb6fe9, EventCode: 5 [CONTEXT service_id=51 ]
+04-21 01:11:40.183  1524  1654 E bwfc    : bwdx: 29500: Empty (package not registered?) or malformed snapshot token for null: 
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at bwfg.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):10)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at bwff.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 01:11:40.183  1524  1654 E bwfc    : 	at java.lang.Thread.run(Thread.java:1012)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: operation=CommitToConfigurationOperationCall, opStatusCode=29500 [CONTEXT service_id=51 ]
+04-21 01:11:40.184  1524  1654 W AsyncOperation: OperationException[Status{statusCode=Empty (package not registered?) or malformed snapshot token for null: , resolution=null}]
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-21 01:11:40.184  1524  1654 W AsyncOperation: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 01:11:40.186  1752  2740 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json to delight-2022101700.fetched (constraints: m:b:u:l)
+04-21 01:11:40.194  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 01:11:40.194  1834  1948 I AiAiEcho: Predicting[0]: 
+04-21 01:11:40.194  1834  1948 I AiAiEcho: EchoTargets: 
+04-21 01:11:40.194  1834  1948 I AiAiEcho: Filtered by AiAi flag check: 
+04-21 01:11:40.194  1834  1948 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+04-21 01:11:40.201  1834  2110 I SP.AiAi : Scheduling job with delay of 0s for {m:b:u:l, bg}, 1 candidates
+04-21 01:11:40.206  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 01:11:40.215   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:40.257  1192  1192 W FeatureConnection: getRegistrationTech: ImsRegistration is null
+04-21 01:11:40.258   361  2807 I resolv  : res_nsend: used send_dg 47 terrno: 0
+04-21 01:11:40.258   361  2807 I resolv  : doQuery: rcode=0, ancount=1, return value=47
+04-21 01:11:40.259   361  2806 I resolv  : res_nsend: used send_dg 59 terrno: 0
+04-21 01:11:40.259   361  2806 I resolv  : doQuery: rcode=0, ancount=1, return value=59
+04-21 01:11:40.266  1752  2801 D TrafficStats: tagSocket(88) with statsTag=0xffffffff, statsUid=-1
+04-21 01:11:40.268  1834  1948 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-21 01:11:40.274   555   584 I ActivityTaskManager: Config changes=80000000 {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.106 fontWeightAdjustment=0}
+04-21 01:11:40.276  2627  2627 D nativeloader: Configuring clns-shared-6 for other apk /system/app/KeyChain/KeyChain.apk. target_sdk_version=34, uses_libraries=, library_path=/system/app/KeyChain/lib/x86_64:/system/app/KeyChain/KeyChain.apk!/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.keychain:/system/app/KeyChain:/system/lib64:/system_ext/lib64
+04-21 01:11:40.286   555   584 V ActivityTaskManager: Sending to IME proc com.google.android.inputmethod.latin new config {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.129 fontWeightAdjustment=0}
+04-21 01:11:40.299  1752  2740 I SP      : Successfully got manifest for bundled_delight-manifest: manifests:bundled_delight-2022101700
+04-21 01:11:40.304   555   584 I WindowManager: Override config changes=80000000 {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.106 fontWeightAdjustment=0} for displayId=0
+04-21 01:11:40.305   555   584 W ActivityTaskManager: Current config: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.106 fontWeightAdjustment=0} unchanged for IME proc com.google.android.inputmethod.latin
+04-21 01:11:40.307  1752  2740 I SuperDelight: SuperDelightBundledMetadataParser.addSystemLms():200 system lm dir /system/usr/share/ime/google/d3_lms does not exist or is not readable
+04-21 01:11:40.308  1752  2740 I SuperDelight: SuperDelightBundledMetadataParser.parse():190 SuperDelightBundledMetadataParser#parse(): manifest parsed with 1 packs
+04-21 01:11:40.309   555   584 W ActivityTaskManager: Current config: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.106 fontWeightAdjustment=0} unchanged for IME proc com.google.android.inputmethod.latin
+04-21 01:11:40.310   555  2547 W system_server: Long monitor contention with owner android.fg (584) at void com.android.server.am.ActivityManagerService.scheduleApplicationInfoChanged(java.util.List, int)(ActivityManagerService.java:19335) waiters=0 in void com.android.server.am.ActivityManagerService.addPackageDependency(java.lang.String) for 383ms
+04-21 01:11:40.310   555  2102 W system_server: Long monitor contention with owner binder:555_19 (2547) at void com.android.server.am.ActivityManagerService.addPackageDependency(java.lang.String)(ActivityManagerService.java:3885) waiters=0 in void com.android.server.am.ContentProviderHelper.removeContentProvider(android.os.IBinder, boolean) for 382ms
+04-21 01:11:40.311   555  1126 W system_server: Long monitor contention with owner binder:555_19 (2547) at void com.android.server.am.ActivityManagerService.addPackageDependency(java.lang.String)(ActivityManagerService.java:3885) waiters=1 in android.content.Intent com.android.server.am.ActivityManagerService.registerReceiverWithFeature(android.app.IApplicationThread, java.lang.String, java.lang.String, java.lang.String, android.content.IIntentReceiver, android.content.IntentFilter, java.lang.String, int, int) for 365ms
+04-21 01:11:40.312   555  2554 W system_server: Long monitor contention with owner binder:555_19 (2547) at android.content.Intent com.android.server.am.ActivityManagerService.registerReceiverWithFeature(android.app.IApplicationThread, java.lang.String, java.lang.String, java.lang.String, android.content.IIntentReceiver, android.content.IntentFilter, java.lang.String, int, int)(ActivityManagerService.java:13940) waiters=7 in int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int) for 336ms
+04-21 01:11:40.325  1752  1923 I SuperDelight: SuperDelightManager.lambda$syncBundledLanguageModels$16():774 SuperDelightManager#syncBundledLanguageModels(): Syncing for version 2022101700
+04-21 01:11:40.326  1752  2740 I SuperDelight: SuperDelightBundledSlicingStrategy.getSlices():39 BundledSlicing#getSlices() : Locale = [en_US]
+04-21 01:11:40.326  1752  2740 I SuperDelight: SuperDelightBundledSlicingStrategy.getSlices():65 BundledSlicing#getSlices(): result {slices=[bundled_delight:main_en_us_2022051700_2], last batch=true, sync metadata=false}
+04-21 01:11:40.326  1752  2740 I SP      : Syncing bundled_delight (2022101700) with slices: [main_en_us_2022051700_2], metadata: false
+04-21 01:11:40.337   951   993 V WindowManagerShell: Display changed: 0
+04-21 01:11:40.348  1885  2252 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:40.376   555   555 W Looper  : Slow dispatch took 130ms main h=android.app.PropertyInvalidatedCache$AutoCorker$1 c=null m=0
+04-21 01:11:40.385   555   878 D ConnectivityService: Setting DNS servers for network 100 to [/10.0.2.3]
+04-21 01:11:40.385   555   878 D DnsManager: sendDnsConfigurationForNetwork(100, [10.0.2.3], [], 1800, 25, 8, 64, 0, 0, , [10.0.2.3])
+04-21 01:11:40.386   361   402 I resolv  : setDoh: No suitable DoH server found
+04-21 01:11:40.386   361   402 I netd    : DnsResolverService::setResolverConfiguration(100, [10.0.2.3], [], 1800, 25, 8, 64, 0, 0, "", [10.0.2.3]) -> (0) (0.4ms)
+04-21 01:11:40.386   361   402 I netd    : setResolverConfiguration(ResolverParamsParcel{netId: 100, sampleValiditySeconds: 1800, successThreshold: 25, minSamples: 8, maxSamples: 64, baseTimeoutMsec: 0, retryCount: 0, servers: [10.0.2.3], domains: [], tlsName: , tlsServers: [10.0.2.3], tlsFingerprints: [], caCertificate: , tlsConnectTimeoutMs: 0, resolverOptions: (null), transportTypes: [1]}) <0.56ms>
+04-21 01:11:40.390  1752  1752 I MetricsProcessorProviderManager: MetricsProcessorProviderManager.onClearcutAdapterReady():111 Stop caching metrics after clearcut and available modules ready.
+04-21 01:11:40.392  1752  1752 I MetricsManager: MetricsManager.maybeStopCaching():446 Stop caching metrics.
+04-21 01:11:40.393  2754  2754 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 01:11:40.395  1834  2186 I AiAiFedAss: [AiAi Ekho] *** enabled *** [mode=FEDERATION, population=aiai/ekho]
+04-21 01:11:40.402  1961  2722 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:40.409  1524  1643 W bwft    : Succeeded but not registered: com.google.android.libraries.search.googleapp.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.411  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.lens.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.412  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.gsa.pcp.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.412  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.podcasts_android.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.413  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.pronunciationlearning#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.418  1961  2274 I A       : NGA disabled due to not being eligible.
+04-21 01:11:40.418  1961  2274 I A       : Nga state changed to NgaStateDetails{state=DISABLED, isSpecialExperience=false}
+04-21 01:11:40.424  1834  2392 I AiAiEcho: Cross device timer feature not enabled, not displaying timers
+04-21 01:11:40.426  1236  1236 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+04-21 01:11:40.428  2754  2754 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 01:11:40.428  2754  2754 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 01:11:40.428  1952  2553 D nativeloader: Configuring clns-8 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand
+04-21 01:11:40.430  1952  2553 D nativeloader: Configuring clns-9 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand
+04-21 01:11:40.431  1952  2553 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+04-21 01:11:40.431  1952  2553 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+04-21 01:11:40.435  1952  2553 D nativeloader: Configuring product-clns-10 for unbundled product apk /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk. target_sdk_version=33, uses_libraries=, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/product/lib64:/system/product/lib64
+04-21 01:11:40.439  2754  2754 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 01:11:40.439  2754  2754 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 01:11:40.440  1524  1643 W bwft    : Succeeded but not registered: com.google.ar.sceneviewer.android.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.449   555  2545 D CompatibilityChangeReporter: Compat change id reported: 261072174; UID 10123; state: DISABLED
+04-21 01:11:40.452  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.soundsearch.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.453  1524  1643 W bwft    : Succeeded but not registered: com.google.android.libraries.search.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.454  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.webglide.user#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.483  1952  2553 I DynamiteModule: Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:231004600
+04-21 01:11:40.490  1952  2553 I DynamiteModule: Selected remote version of com.google.android.gms.ads.dynamite, version >= 231004600
+04-21 01:11:40.517  2754  2754 W main    : type=1400 audit(0.0:15): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of kernel
+04-21 01:10:22.550     0     0 W audit   : audit_lost=1 audit_rate_limit=5 audit_backlog_limit=64
+04-21 01:10:22.550     0     0 E audit   : rate limit exceeded
+04-21 01:11:40.522  2754  2754 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 01:11:40.522  2754  2754 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 01:11:40.522   361  2838 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10139 0}
+04-21 01:11:40.523  2754  2754 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 01:11:40.523   361  2841 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 01:11:40.525  2754  2754 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+04-21 01:11:40.526  2754  2754 W Monkey  : args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]
+04-21 01:11:40.526  2754  2754 W Monkey  :  arg: "-p"
+04-21 01:11:40.526  2754  2754 W Monkey  :  arg: "owasp.sat.agoat"
+04-21 01:11:40.526  2754  2754 W Monkey  :  arg: "-c"
+04-21 01:11:40.526  2754  2754 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+04-21 01:11:40.526  2754  2754 W Monkey  :  arg: "1"
+04-21 01:11:40.526  2754  2754 W Monkey  : data="owasp.sat.agoat"
+04-21 01:11:40.526  2754  2754 W Monkey  : data="android.intent.category.LAUNCHER"
+04-21 01:11:40.526   951   993 W Looper  : Slow delivery took 79ms wmshell.main h=android.os.Handler c=com.android.wm.shell.common.ExecutorUtils$$ExternalSyntheticLambda0@1ec3031 m=0
+04-21 01:11:40.517  2754  2754 W main    : type=1400 audit(0.0:16): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 01:11:40.529  1742  1823 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=aab9a4f6-a995-4381-b58d-3ccf6e8f902a, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, TikTokWorker#com.google.android.apps.wellbeing.winddown.impl.WindDownBedtimeSynchronizerWorker } ]
+04-21 01:11:40.533   361  2840 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 01:11:40.537  1952  1952 W YTPL.mediasession: MediaSession created
+04-21 01:11:40.540   555   584 W Looper  : Slow dispatch took 616ms android.fg h=android.os.Handler c=com.android.server.om.OverlayManagerService$$ExternalSyntheticLambda0@786316 m=0
+04-21 01:11:40.542  1752  1923 I SuperDelight: SuperDelightResourceLmFetcher$ResourceFetchCancellableTask.execute():99 ResourceFetchCancellableTask#fetch(): packManifest main_en_us_2022051700_2
+04-21 01:11:40.543   555   587 W BLASTSyncEngine: Sync group 6 timeout
+04-21 01:11:40.543   555   587 I BLASTSyncEngine: Unfinished container: ActivityRecord{8292a4b u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t7}
+04-21 01:11:40.543   555   587 I BLASTSyncEngine: Unfinished container: Task{56c0c28 #7 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity}
+04-21 01:11:40.547   555   555 W Looper  : Slow dispatch took 171ms main h=android.app.ActivityThread$H c=null m=156
+04-21 01:11:40.548   555  2102 D CompatibilityChangeReporter: Compat change id reported: 154726397; UID 10123; state: DISABLED
+04-21 01:11:40.548   555  2102 D CompatibilityChangeReporter: Compat change id reported: 154726397; UID 10123; state: ENABLED
+04-21 01:11:40.548  1157  1157 D AvrcpBrowsablePlayerConnector: Received a message: msg.what=2
+04-21 01:11:40.550  1157  1157 V AvrcpBrowsablePlayerConnector: Timed out waiting for players
+04-21 01:11:40.551  1157  1157 I AvrcpBrowsablePlayerConnector: Successfully connected to 0 browsable players.
+04-21 01:11:40.551  1157  1157 I MediaPlayerList: init: Browsable Player list size is 0
+04-21 01:11:40.552   555   584 I GnssNetworkConnectivityHandler: updateNetworkState, state=CLOSED, connected=true, network=100, capabilities=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /10.0.2.16, Security type: 0, Supplicant state: COMPLETED, Wi-Fi standard: 1, RSSI: -50, Link speed: 1Mbps, Tx Link speed: 1Mbps, Max Supported Tx Link speed: 11Mbps, Rx Link speed: -1Mbps, Max Supported Rx Link speed: 11Mbps, Frequency: 2447MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>> SignalStrength: -50 AdminUids: [10159] SSID: "AndroidWifi" UnderlyingNetworks: Null], availableNetworkCount: 1
+04-21 01:11:40.552   555   878 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendStickyBroadcast:1626 android.net.connectivity.com.android.server.ConnectivityService.sendStickyBroadcast:3278 android.net.connectivity.com.android.server.ConnectivityService.sendGeneralBroadcast:3248 android.net.connectivity.com.android.server.ConnectivityService.sendInetConditionBroadcast:3225 android.net.connectivity.com.android.server.ConnectivityService.updateInetCondition:9807 
+04-21 01:11:40.553   555   871 W LastMileLogger: Failed to stop event tracing: /sys/kernel/debug/tracing/instances/wifi/tracing_on: open failed: ENOENT (No such file or directory)
+04-21 01:11:40.556   555   584 W Looper  : Slow delivery took 580ms android.fg h=android.net.ConnectivityManager$CallbackHandler c=null m=2
+04-21 01:11:40.557  1928  1928 V MultiDispActionReceiver: starting service using intent null
+04-21 01:11:40.564  2627  2627 V GraphicsEnvironment: Currently set values for:
+04-21 01:11:40.564  2627  2627 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+04-21 01:11:40.564  2627  2627 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+04-21 01:11:40.566  2627  2627 V GraphicsEnvironment: ANGLE GameManagerService for com.android.keychain: false
+04-21 01:11:40.566  2627  2627 V GraphicsEnvironment: com.android.keychain is not listed in per-application setting
+04-21 01:11:40.566  2627  2627 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+04-21 01:11:40.566  1524  1524 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.clearcut.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+04-21 01:11:40.566  1524  1524 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.clearcut.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+04-21 01:11:40.569   361  2839 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10139 0}
+04-21 01:11:40.571   951   993 V WindowManagerShell: onTransitionReady android.os.BinderProxy@f6a0124: {id=6 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@256a333} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=7)/@0xe533684 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@10f36f0} m=CLOSE f=NONE leash=Surface(name=Task=5)/@0x2229e6d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 01:11:40.571   951   993 V WindowManagerShell: Playing animation for (#6)android.os.BinderProxy@f6a0124@0
+04-21 01:11:40.571   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@3d7b469
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@e05feee
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@64e3f8f
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@e48d21c
+04-21 01:11:40.572   951   993 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@2ae2e25
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@bd71bfa
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@27945ab
+04-21 01:11:40.572   951   993 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=6 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@256a333} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=7)/@0xe533684 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@10f36f0} m=CLOSE f=NONE leash=Surface(name=Task=5)/@0x2229e6d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 01:11:40.572   951   993 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@e1ef408, appThread = android.app.IApplicationThread$Stub$Proxy@7b887a1, debugName = LauncherToDream }}
+04-21 01:11:40.572   951   993 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@a6afdc6, appThread = android.app.IApplicationThread$Stub$Proxy@6049187, debugName = QuickstepLaunchHome }}
+04-21 01:11:40.572   951   993 V WindowManagerShell:  Delegate animation for #6 to null
+04-21 01:11:40.572   951   993 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@9b348b4
+04-21 01:11:40.572   951   993 V WindowManagerShell: start default transition animation, info = {id=6 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@256a333} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=7)/@0xe533684 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{android.window.IWindowContainerToken$Stub$Proxy@10f36f0} m=CLOSE f=NONE leash=Surface(name=Task=5)/@0x2229e6d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 01:11:40.574   361  2847 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 01:11:40.575   951   993 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@8963c20 animAttr=0xb type=CLOSE isEntrance=false
+04-21 01:11:40.579  1928  1928 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.emulator.multidisplay.MultiDisplayServiceReceiver.onReceive:34 android.app.ActivityThread.handleReceiver:4449 
+04-21 01:11:40.581   555   555 W Looper  : Slow delivery took 276ms main h=android.app.ActivityThread$H c=null m=156
+04-21 01:11:40.583   555   587 I DisplayDeviceRepository: Display device changed: DisplayDeviceInfo{"Built-in Screen": uniqueId="local:4619827259835644672", 1080 x 2400, modeId 1, renderFrameRate 60.000004, defaultModeId 1, supportedModes [{id=1, width=1080, height=2400, fps=60.000004, alternativeRefreshRates=[], supportedHdrTypes=[]}], colorMode 0, supportedColorModes [0], hdrCapabilities HdrCapabilities{mSupportedHdrTypes=[], mMaxLuminance=500.0, mMaxAverageLuminance=500.0, mMinLuminance=0.0}, allmSupported false, gameContentTypeSupported false, density 420, 420.0 x 420.0 dpi, appVsyncOff 1000000, presDeadline 16666666, cutout DisplayCutout{insets=Rect(0, 128 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(492, 0 - 610, 128), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.625} cutoutSpec={M 507,64 a 33,33 0 1 0 66,0 33,33 0 1 0 -66,0 Z @left} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}, touch INTERNAL, rotation 0, type INTERNAL, address {port=0, model=0x401cec6a7a2b7b}, deviceProductInfo DeviceProductInfo{name=EMU_display_0, manufacturerPnpId=GGL, productId=1, modelYear=null, manufactureDate=ManufactureDate{week=27, year=2006}, connectionToSinkType=0}, state ON, committedState ON, frameRateOverride , brightnessMinimum 0.0, brightnessMaximum 1.0, brightnessDefault 0.39763778, hdrSdrRatio NaN, roundedCorners RoundedCorners{[RoundedCorner{position=TopLeft, radius=28, center=Point(28, 28)}, RoundedCorner{position=TopRight, radius=28, center=Point(1052, 28)}, RoundedCorner{position=BottomRight, radius=28, center=Point(1052, 2372)}, RoundedCorner{position=BottomLeft, radius=28, center=Point(28, 2372)}]}, FLAG_ALLOWED_TO_BE_DEFAULT_DISPLAY, FLAG_ROTATES_WITH_CONTENT, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_TRUSTED, installOrientation 0, displayShape DisplayShape{ spec=-1893857183 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}}
+04-21 01:11:40.583   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:40.584  1192  1192 D CarrierSvcBindHelper: Received android.intent.action.USER_UNLOCKED
+04-21 01:11:40.584  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 01:11:40.584  1192  1192 D CarrierSvcBindHelper: onPackageModified: com.android.stk
+04-21 01:11:40.584  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 01:11:40.588   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:40.588   555  2556 I MediaSessionStack: addSession to bottom of stack | record: com.google.android.apps.youtube.music/YouTube playerlib (userId=0)
+04-21 01:11:40.589  1192  1192 D IntentBroadcaster: Rebroadcasting intent android.intent.action.SIM_STATE_CHANGED LOADED for slotId 0
+04-21 01:11:40.589   555  2102 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:40.589   555  2102 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:40.590   555  1028 D WifiMemoryStoreImpl: Set cluster G11c02592c730495f for W4438a146ea9f3e44: SUCCESS
+04-21 01:11:40.590   555   555 W Looper  : Drained
+04-21 01:11:40.591  1157  1157 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 0
+04-21 01:11:40.591  1157  1157 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 0
+04-21 01:11:40.591  1157  1157 D AvrcpTargetJni: sendPlayerSettingsNative
+04-21 01:11:40.591  1157  1157 I bt_stack: [INFO:avrcp_service.cc(551)] virtual void bluetooth::avrcp::AvrcpService::SendPlayerSettingsChanged(std::vector<PlayerAttribute>, std::vector<uint8_t>)
+04-21 01:11:40.591  1157  1157 I bt_stack: [INFO:avrcp_service.cc(565)] attribute=PlayerAttribute::REPEAT : value=PlayerRepeatValue::OFF
+04-21 01:11:40.591  1157  1157 I bt_stack: attribute=PlayerAttribute::SHUFFLE : value=PlayerShuffleValue::OFF
+04-21 01:11:40.591  1157  1157 I bt_stack: 
+04-21 01:11:40.603  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.assistant.device#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:40.631   361  2848 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 01:11:40.683   555   587 I ActivityTaskManager: Config changes=20000400 {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.149 fontWeightAdjustment=0}
+04-21 01:11:40.688   555  2057 D CompatibilityChangeReporter: Compat change id reported: 261072174; UID 10169; state: DISABLED
+04-21 01:11:40.695  1752  1752 W putmethod.latin: Long monitor contention with owner GoogleApiHandler (2702) at boolean ftg.d(ftf, android.content.ServiceConnection)(PG:13) waiters=0 in void fth.onServiceConnected(android.content.ComponentName, android.os.IBinder) for 302ms
+04-21 01:11:40.696  1752  1752 I Choreographer: Skipped 44 frames!  The application may be doing too much work on its main thread.
+04-21 01:11:40.704   555   555 I TransportConnection: LocalTransportService#0: Notifying [TransportManager.registerTransport()] transport = BackupTransportClient
+04-21 01:11:40.712  1752  1752 I HardKeyTracker: HardKeyTracker.registerKeySequence():62 Register key sequence hox{callback=eac@cd7f6f8, lastModifier=0, keyCodes=[57, 57], actions=[1, 0]}
+04-21 01:11:40.712  1752  1752 I HardKeyTracker: HardKeyTracker.registerKeySequence():62 Register key sequence hox{callback=eac@c2be537, lastModifier=0, keyCodes=[58, 58], actions=[1, 0]}
+04-21 01:11:40.712  1752  1752 I DictionarySuperpacksManager: DictionarySuperpacksManager$1.onEnabledInputMethodEntriesChanged():61 onEnabledInputMethodEntriesChanged
+04-21 01:11:40.712  1752  1752 I NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():93 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+04-21 01:11:40.713  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.715  1752  1752 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+04-21 01:11:40.715  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.715  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.715  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.716  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.716  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.716  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+04-21 01:11:40.720   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:40.721   951   993 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@71a5202 animAttr=0xa type=CLOSE isEntrance=true
+04-21 01:11:40.722  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.724  1752  1752 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.106 fontWeightAdjustment=0}
+04-21 01:11:40.724  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 80000000
+04-21 01:11:40.725  2622  2622 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-x86_64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvndksupport.so:libvulkan.so
+04-21 01:11:40.725  2622  2622 D nativeloader: Configuring product-clns-7 for unbundled product apk /product/app/PrebuiltGmail/PrebuiltGmail.apk. target_sdk_version=33, uses_libraries=, library_path=/product/app/PrebuiltGmail/lib/x86_64:/product/app/PrebuiltGmail/PrebuiltGmail.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gm:/product/lib64:/system/product/lib64
+04-21 01:11:40.725  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.725  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+04-21 01:11:40.726  1752  1752 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-21 01:11:40.726  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=false_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+04-21 01:11:40.729  1752  1752 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c]
+04-21 01:11:40.730  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.730  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.730  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.730  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.730  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.730  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c_port
+04-21 01:11:40.732  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.732   951   993 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@9b348b4
+04-21 01:11:40.738  2622  2622 D nativeloader: InitVndkspLibrariesProduct: android.hardware.common-V2-ndk.so:android.hardware.common.fmq-V1-ndk.so:android.hardware.graphics.allocator-V2-ndk.so:android.hardware.graphics.common-V4-ndk.so:android.hardware.graphics.common@1.0.so:android.hardware.graphics.common@1.1.so:android.hardware.graphics.common@1.2.so:android.hardware.graphics.composer3-V1-ndk.so:android.hardware.graphics.mapper@2.0.so:android.hardware.graphics.mapper@2.1.so:android.hardware.graphics.mapper@3.0.so:android.hardware.graphics.mapper@4.0.so:android.hardware.renderscript@1.0.so:android.hidl.memory.token@1.0.so:android.hidl.memory@1.0-impl.so:android.hidl.memory@1.0.so:android.hidl.safe_union@1.0.so:libRSCpuRef.so:libRSDriver.so:libRS_internal.so:libbase.so:libbcinfo.so:libblas.so:libc++.so:libcompiler_rt.so:libcutils.so:libdmabufheap.so:libgralloctypes.so:libhardware.so:libhidlbase.so:libhidlmemory.so:libion.so:libjsoncpp.so:liblzma.so:libprocessgroup.so:libunwindstack.so:libutils.so:libutilscallstack.so:libz.so
+04-21 01:11:40.744   394   394 I android.hardware.power-service.example: Power isModeSupported: 6
+04-21 01:11:40.746  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:40.746  1752  1752 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-21 01:11:40.751   951   993 W Looper  : Slow dispatch took 180ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0@f42b16f m=0
+04-21 01:11:40.760   361  2847 I resolv  : res_nsend: used send_dg 153 terrno: 0
+04-21 01:11:40.760   361  2841 I resolv  : res_nsend: used send_dg 275 terrno: 0
+04-21 01:11:40.760   361  2848 I resolv  : res_nsend: used send_dg 105 terrno: 0
+04-21 01:11:40.760   361  2848 I resolv  : doQuery: rcode=0, ancount=4, return value=105
+04-21 01:11:40.760   361  2840 I resolv  : res_nsend: used send_dg 179 terrno: 0
+04-21 01:11:40.761   361  2840 I resolv  : doQuery: rcode=0, ancount=5, return value=179
+04-21 01:11:40.761   361  2847 I resolv  : doQuery: rcode=0, ancount=4, return value=153
+04-21 01:11:40.761   361  2841 I resolv  : doQuery: rcode=0, ancount=14, return value=275
+04-21 01:11:40.769   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:40.770   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:40.779  1752  1752 W StyleResolver: StyleResolver.resolveValue():233 Invalid variable: color_silk_surface_background
+04-21 01:11:40.779   555   878 W system_server: Long monitor contention with owner binder:555_18 (2545) at com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean)(PackageManagerService.java:1195) waiters=8 in com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean) for 177ms
+04-21 01:11:40.780   555  2102 W system_server: Long monitor contention with owner binder:555_18 (2545) at com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean)(PackageManagerService.java:1195) waiters=9 in com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean) for 177ms
+04-21 01:11:40.780  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, true)
+04-21 01:11:40.780  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-21 01:11:40.783  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-21 01:11:40.783  1752  1752 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: KeyboardDefManager$LoadKeyboardDefTask$1.onFailure():188 Task to load keyboard def was canceled.
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: java.util.concurrent.CancellationException: Task was cancelled.
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at mrp.s(PG:3)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at mrp.get(PG:4)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at mgr.Q(PG:1)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at mfu.V(PG:2)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at mtg.run(PG:4)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at android.os.Handler.handleCallback(Handler.java:958)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at android.os.Looper.loopOnce(Looper.java:205)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at android.os.Looper.loop(Looper.java:294)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at android.app.ActivityThread.main(ActivityThread.java:8177)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at java.lang.reflect.Method.invoke(Native Method)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)
+04-21 01:11:40.784  1752  1752 I KeyboardDefManager: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+04-21 01:11:40.789  2622  2622 V GraphicsEnvironment: Currently set values for:
+04-21 01:11:40.789  2622  2622 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+04-21 01:11:40.789  2622  2622 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+04-21 01:11:40.789  2622  2622 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.gm: false
+04-21 01:11:40.789  2622  2622 V GraphicsEnvironment: com.google.android.gm is not listed in per-application setting
+04-21 01:11:40.789  2622  2622 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+04-21 01:11:40.808  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 01:11:40.808  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+04-21 01:11:40.808  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+04-21 01:11:40.809  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 01:11:40.809  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+04-21 01:11:40.809  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+04-21 01:11:40.812  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+04-21 01:11:40.812  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+04-21 01:11:40.813   555   878 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 1]
+04-21 01:11:40.856  1236  1301 I GridSizeMigrationUtil: Migration is needed. destDeviceState: DeviceGridState{mGridSizeString='4,5', mNumHotseat=4, mDeviceType=0, mDbFile=launcher_4_by_5.db}, srcDeviceState: DeviceGridState{mGridSizeString='', mNumHotseat=-1, mDeviceType=0, mDbFile=}
+04-21 01:11:40.856  1236  1301 E LauncherProvider: migrateGridIfNeeded - target db is same as current: launcher_4_by_5.db
+04-21 01:11:40.856  1236  1301 D LoaderTask: loadWorkspace: resetting launcher database
+04-21 01:11:40.859   555  2057 D WifiMemoryStoreImpl: Set cluster G11c02592c730495f for W11c02592c730495f: SUCCESS
+04-21 01:11:40.889  1192  2849 D MmsSmsDatabaseHelper: onCreate: Creating all SMS-MMS tables.
+04-21 01:11:40.892   555   871 D WifiConfigStore: Writing to stores completed in 312 ms.
+04-21 01:11:40.897  1752  2061 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.dm': No such file or directory
+04-21 01:11:40.897  1752  2061 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.dm': No such file or directory
+04-21 01:11:40.959  1752  2061 I DynamiteModule: Considering local module com.google.android.gms.cronet_dynamite:0 and remote module com.google.android.gms.cronet_dynamite:2411
+04-21 01:11:40.959  1752  2061 I DynamiteModule: Selected remote version of com.google.android.gms.cronet_dynamite, version >= 2411
+04-21 01:11:40.996  1952  2580 E AwarenessClientProvider: Account associated with identity was null
+04-21 01:11:41.008  1524  1654 W bwft    : Succeeded but not registered: assistant_auto_tng_libraries_device#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: Exception while syncing fences
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Account associated with identity was null
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at apxf.o(PG:6)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at apxf.get(PG:4)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at aqbe.a(PG:1)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at apzq.q(PG:2)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at mko.run(PG:1)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at snd.run(PG:1)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at smj.run(PG:2)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at java.lang.Thread.run(Thread.java:1012)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at snu.run(PG:5)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: Caused by: java.lang.IllegalStateException: Account associated with identity was null
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at mjv.a(PG:3)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at aose.a(PG:3)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at apxh.c(PG:2)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	at apxj.run(PG:9)
+04-21 01:11:41.035  1952  2580 E AwarenessRouterSyncMgr: 	... 6 more
+04-21 01:11:41.055  1826  2374 D CompatibilityChangeReporter: Compat change id reported: 263076149; UID 10176; state: ENABLED
+04-21 01:11:41.066   555   568 I system_server: Background concurrent copying GC freed 194935(10MB) AllocSpace objects, 22(792KB) LOS objects, 49% free, 24MB/48MB, paused 136us,79us total 1.718s
+04-21 01:11:41.073  1192  2849 D MmsSmsDatabaseHelper: clearMmsParts: removing all attachments from: /data/user_de/0/com.android.providers.telephony/app_parts
+04-21 01:11:41.124   555   587 W ActivityTaskManager: Current config: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.149 fontWeightAdjustment=0} unchanged for IME proc com.google.android.inputmethod.latin
+04-21 01:11:41.128   555   587 I WindowManager: Override config changes=20000400 {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.149 fontWeightAdjustment=0} for displayId=0
+04-21 01:11:41.147   555   659 W system_server: Long monitor contention with owner ActivityManager (595) at void com.android.server.am.ActivityManagerService$MainHandler.handleMessage(android.os.Message)(ActivityManagerService.java:1846) waiters=0 in void com.android.server.am.ProcessList.updateLruProcessLocked(com.android.server.am.ProcessRecord, boolean, com.android.server.am.ProcessRecord) for 407ms
+04-21 01:11:41.148   555  1124 D CompatibilityChangeReporter: Compat change id reported: 183164979; UID 10168; state: ENABLED
+04-21 01:11:41.152   555   648 W system_server: Long monitor contention with owner appscheduling.default (659) at int com.android.server.job.JobSchedulerService.getUidProcState(int)(JobSchedulerService.java:2305) waiters=0 in int com.android.server.job.JobSchedulerService.scheduleAsPackage(android.app.job.JobInfo, android.app.job.JobWorkItem, int, java.lang.String, int, java.lang.String, java.lang.String) for 765ms
+04-21 01:11:41.154   555   659 W BroadcastLoopers: Found previously unknown looper Thread[appscheduling.default,5,main]
+04-21 01:11:41.167   555  2540 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:41.167   555  2540 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:41.170   555  1876 D BackupTransportManager: [UserID:0] Transport com.android.localtransport/.LocalTransportService registered
+04-21 01:11:41.170   555  1876 D BackupManagerService: [UserID:0] Transport com.android.localtransport/.LocalTransport registered 5872ms after first request (delay = 3000ms)
+04-21 01:11:41.172   555   587 V ActivityTaskManager: Sending to IME proc com.google.android.inputmethod.latin new config {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.188 fontWeightAdjustment=0}
+04-21 01:11:41.178   555   587 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+04-21 01:11:41.179   555   937 W system_server: Long monitor contention with owner android.display (587) at android.content.res.Configuration com.android.server.wm.ActivityTaskManagerService.getGlobalConfigurationForPid(int)(ActivityTaskManagerService.java:1133) waiters=0 in int com.android.server.wm.ActivityTaskManagerService$LocalService.getTaskToShowPermissionDialogOn(java.lang.String, int) for 452ms
+04-21 01:11:41.180   954  1155 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+04-21 01:11:41.181   555   572 W system_server: Long monitor contention with owner android.display (587) at android.content.res.Configuration com.android.server.wm.ActivityTaskManagerService.getGlobalConfigurationForPid(int)(ActivityTaskManagerService.java:1133) waiters=1 in void com.android.server.wm.WindowManagerService.setInsetsWindow(com.android.server.wm.Session, android.view.IWindow, int, android.graphics.Rect, android.graphics.Rect, android.graphics.Region) for 448ms
+04-21 01:11:41.201   555   937 E IPCThreadState: binder thread pool (31 threads) starved for 307 ms
+04-21 01:11:41.208   555  2556 W ActivityManager: registerReceiverWithFeature: no app for null
+04-21 01:11:41.218  2754  2754 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 01:11:41.218  2754  2754 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 01:11:41.218  2754  2754 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 01:11:41.221  1752  1921 I SuperDelight: SuperDelightUnpacker$UnpackCancellableTask.execute():102 UnpackCancellableTask#execute(): fst-decompress /data/user/0/com.google.android.inputmethod.latin/files/superpacks/bundled_delight/main_en_us_2022051700_2.staged
+04-21 01:11:41.227   555  2551 W system_server: Long monitor contention with owner binder:555_19 (2547) at android.content.ComponentName com.android.server.am.ActivityManagerService.startService(android.app.IApplicationThread, android.content.Intent, java.lang.String, boolean, java.lang.String, java.lang.String, int, boolean, int, java.lang.String, java.lang.String)(ActivityManagerService.java:13195) waiters=2 in android.app.ContentProviderHolder com.android.server.am.ContentProviderHelper.getContentProviderImpl(android.app.IApplicationThread, java.lang.String, android.os.IBinder, int, java.lang.String, java.lang.String, boolean, int) for 1.270s
+04-21 01:11:41.228   951  1417 W ndroid.systemui: Long monitor contention with owner DefaultDispatcher-worker-11 (1412) at boolean com.android.systemui.log.LogcatEchoTrackerDebug.isTagLoggable(java.lang.String, com.android.systemui.log.LogLevel)(go/retraceme 19693c2b0a8439b7183751b64d60893829dbf56dc1e08e0669fc0cfc55754948:20) waiters=0 in boolean com.android.systemui.log.LogcatEchoTrackerDebug.isBufferLoggable(java.lang.String, com.android.systemui.log.LogLevel) for 396ms
+04-21 01:11:41.228   555   584 W Looper  : Slow dispatch took 672ms android.fg h=android.os.Handler c=com.android.server.om.OverlayManagerService$$ExternalSyntheticLambda0@c2a670f m=0
+04-21 01:11:41.229   555   573 D CompatibilityChangeReporter: Compat change id reported: 271850009; UID 10156; state: DISABLED
+04-21 01:11:41.233   555  2551 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 1000. pid: 2627
+04-21 01:11:41.243   951   993 W Looper  : Slow dispatch took 492ms wmshell.main h=android.os.Handler c=android.media.session.MediaSessionManager$SessionsChangedWrapper$1$$ExternalSyntheticLambda0@17b130a m=0
+04-21 01:11:41.243   951   993 V WindowManagerShell: Transition requested: android.os.BinderProxy@4f0577b TransitionRequestInfo { type = CHANGE, triggerTask = null, remoteTransition = null, displayChange = DisplayChange { displayId = 0, startAbsBounds = Rect(0, 0 - 1080, 2400), endAbsBounds = Rect(0, 0 - 1080, 2400), startRotation = -1, endRotation = -1, physicalDisplayChanged = false } }
+04-21 01:11:41.246  1236  1301 D ActivityThread: Loading provider com.google.android.apps.nexuslauncher.settings: com.android.launcher3.LauncherProvider
+04-21 01:11:41.250   555   584 I GnssLocationProvider: WakeLock acquired by handleDownloadPsdsData()
+04-21 01:11:41.255   555  2879 E GnssPsdsDownloader: No Long-Term PSDS servers were specified in the GnssConfiguration
+04-21 01:11:41.259  1752  1752 I ShortcutsDataManager: AbstractContentDataManager.startImportContentTask():234 startImportContentTask()
+04-21 01:11:41.268  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.270  1752  1752 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.149 fontWeightAdjustment=0}
+04-21 01:11:41.271  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 20000400
+04-21 01:11:41.271  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.271  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+04-21 01:11:41.271  1752  1752 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-21 01:11:41.271  1752  1752 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=false_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+04-21 01:11:41.272   951   993 V WindowManagerShell: Display changed: 0
+04-21 01:11:41.273   951   993 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#6)android.os.BinderProxy@f6a0124@0
+04-21 01:11:41.276  1752  1752 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c]
+04-21 01:11:41.277  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.277  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.277  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.277  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.277  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.277  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c_port
+04-21 01:11:41.278   555   587 D DisplayManagerService: Ignore redundant display event 0/2 to 10159/1986
+04-21 01:11:41.280  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.283  1752  2061 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+04-21 01:11:41.283  1752  2061 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+04-21 01:11:41.290   951   993 V WindowManagerShell: Track 0 became idle
+04-21 01:11:41.296   555   584 V WindowManager: Sent Transition #6 createdAt=04-21 01:11:35.470 via request=TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=5 displayId=0 isRunning=false baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10800100 cmp=com.android.settings/.FallbackHome } baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{com.android.settings/com.android.settings.FallbackHome} numActivities=0 lastActiveTime=73594 supportsMultiWindow=false resizeMode=0 isResizeable=false minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{a04b6e7 Task{9243e4d #5 type=home A=1000:com.android.settings.FallbackHome}}} topActivityType=2 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+04-21 01:11:41.296   555   584 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+04-21 01:11:41.296   555   584 V WindowManager:     info={id=6 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{1667294 Task{56c0c28 #7 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity}}} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=7)/@0x90e6333 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0},{WCT{RemoteToken{a04b6e7 Task{9243e4d #5 type=home A=1000:com.android.settings.FallbackHome}}} m=CLOSE f=NONE leash=Surface(name=Task=5)/@0xe0f9aa2 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+04-21 01:11:41.298   555   584 I ActivityManager: Broadcast completed: result=0
+04-21 01:11:41.302   555   884 D CompatibilityChangeReporter: Compat change id reported: 151105954; UID 1000; state: ENABLED
+04-21 01:11:41.302   555   884 E AppOps  : attributionTag VCN not declared in manifest of android
+04-21 01:11:41.308  1752  1752 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-21 01:11:41.308  1752  1752 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-21 01:11:41.309  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, true)
+04-21 01:11:41.309  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-21 01:11:41.310  1752  1752 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-21 01:11:41.310  1752  1752 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+04-21 01:11:41.310   555   920 I SdkSandboxManager: No SDKs used. Skipping SDK data reconcilation for CallingInfo{mUid=10192, mPackageName='owasp.sat.agoat, mAppProcessToken='null'}
+04-21 01:11:41.311  1928  1928 D MultiDisplayService: Creating service
+04-21 01:11:41.312  1236  1301 D LoaderTask: loadWorkspace: loading default favorites
+04-21 01:11:41.313  1236  1301 D LauncherProvider: loading default workspace
+04-21 01:11:41.321   555   584 V WindowManager: Finish Transition #6: created at 04-21 01:11:35.470 collect-started=0.052ms request-sent=2.302ms started=18.112ms ready=2151.291ms sent=5080.076ms finished=5804.611ms
+04-21 01:11:41.332   555   585 W Looper  : Slow dispatch took 104ms android.ui h=android.os.Handler c=android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate$$ExternalSyntheticLambda0@ee416fb m=0
+04-21 01:11:41.338  1752  2780 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.doInBackground():248 doInBackground()
+04-21 01:11:41.338  1752  2780 I PersonalDictionaryDataHandler: PersonalDictionaryDataHandler.beginProcess():111 LanguageTags = [en-US]
+04-21 01:11:41.354  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (max-target-q,core-platform-api, reflection, denied)
+04-21 01:11:41.354  1752  2801 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (max-target-q, reflection, denied)
+04-21 01:11:41.363  1961  1961 W earchbox:search: Verification of int afz.b(android.content.Context, java.lang.String, boolean) took 125.591ms (4291.69 bytecodes/s) (17384B approximate peak alloc)
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 0
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 1
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 2
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 3
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 4
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 5
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 6
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 7
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 8
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 9
+04-21 01:11:41.365  1928  1928 D MultiDisplayService: Creating display 10
+04-21 01:11:41.381   555   670 I RoleService: Granting default roles...
+04-21 01:11:41.381   555  1125 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10192; state: DISABLED
+04-21 01:11:41.382   555  1125 W ActivityTaskManager: callingPackage for (uid=2000, pid=2754) has no WPC
+04-21 01:11:41.383  1752  2740 I SP      : Registering emoticon_content_description.2022081613, url: https://www.gstatic.com/android/keyboard/emoticon_content_desc/202208161305/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2022081613, current: -1
+04-21 01:11:41.383   555  1125 D CompatibilityChangeReporter: Compat change id reported: 244637991; UID 2000; state: ENABLED
+04-21 01:11:41.386   555  1876 D CompatibilityChangeReporter: Compat change id reported: 261072174; UID 10123; state: ENABLED
+04-21 01:11:41.387  1157  1157 I BrowsedPlayerWrapper: onConnected: com.google.android.apps.youtube.music is connected
+04-21 01:11:41.387  1157  1157 D AvrcpBrowsablePlayerConnector: Browse player callback called: package=com.google.android.apps.youtube.music : status=0
+04-21 01:11:41.387  1157  1157 D AvrcpBrowsablePlayerConnector: Received a message: msg.what=1
+04-21 01:11:41.387  1157  1157 I AvrcpBrowsablePlayerConnector: Checking root contents for com.google.android.apps.youtube.music
+04-21 01:11:41.389   555   595 I ActivityManager: Test idle failed due to 77cd39a 555:system/1000 runnable at -2m0s179ms because CONTAINS_FOREGROUND
+04-21 01:11:41.389   555  2545 W system_server: Long monitor contention with owner backup-0 (1876) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=10 in android.content.Intent com.android.server.am.ActivityManagerService.registerReceiverWithFeature(android.app.IApplicationThread, java.lang.String, java.lang.String, java.lang.String, android.content.IIntentReceiver, android.content.IntentFilter, java.lang.String, int, int) for 119ms
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10192; state: DISABLED
+04-21 01:11:41.396   555  1125 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10192; state: DISABLED
+04-21 01:11:41.398   555  2057 W system_server: Long monitor contention with owner backup-0 (1876) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=13 in android.content.Intent com.android.server.am.ActivityManagerService.registerReceiverWithFeature(android.app.IApplicationThread, java.lang.String, java.lang.String, java.lang.String, android.content.IIntentReceiver, android.content.IntentFilter, java.lang.String, int, int) for 109ms
+04-21 01:11:41.401   555  1125 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10192; state: ENABLED
+04-21 01:11:41.418   555  1125 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10192; state: DISABLED
+04-21 01:11:41.418   555  1125 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10192; state: DISABLED
+04-21 01:11:41.419   555  1125 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10192; state: ENABLED
+04-21 01:11:41.419   555  1125 V SplashScreenExceptionList: SplashScreen checking exception for package owasp.sat.agoat (target sdk:33) -> false
+04-21 01:11:41.421  1192  1192 D CarrierSvcBindHelper: onPackageModified: com.google.android.permissioncontroller
+04-21 01:11:41.421  1192  1489 D ImsResolver: maybeAddedImsService, packageName: com.android.stk
+04-21 01:11:41.421  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 01:11:41.423   555  1125 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10192; state: ENABLED
+04-21 01:11:41.432  1961  1961 I CastDynamiteModuleImpl: vk created by ClassLoader dalvik.system.DelegateLastClassLoader[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.apk!/lib/x86_64, /data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]].
+04-21 01:11:41.435  1192  1489 D ImsResolver: maybeAddedImsService, packageName: com.google.android.permissioncontroller
+04-21 01:11:41.436  1192  1192 D CarrierSvcBindHelper: onPackageModified: com.google.android.bluetooth
+04-21 01:11:41.436  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 01:11:41.452   951   993 W Looper  : Drained
+04-21 01:11:41.453  1752  1908 I OnDevicePackDownloadModule: OnDevicePackDownloadModule.onCreate():59 onCreate()
+04-21 01:11:41.460  1961  1961 I ExoPlayerImpl: Init b6adf98 [AndroidXMedia3/1.0.0-alpha03] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+04-21 01:11:41.465   555   901 W JobServiceContext: Sending onNetworkChanged for a job that isn't started. JobStatus{c47a732 #u0a132/-183 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService u=0 s=10132 TIME=-1s874ms:-1s874ms NET IDLE READY}
+04-21 01:11:41.465   555   901 W JobServiceContext: Sending onNetworkChanged for a job that isn't started. JobStatus{8dff139 #u0a128/16392 com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiPersistentDownloadJobService u=0 s=10128 TIME=-3s701ms:none NET PERSISTED READY}
+04-21 01:11:41.465   555   901 W JobServiceContext: Sending onNetworkChanged for a job that isn't started. JobStatus{1f6356c #u0a128/16384 com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiPersistentDownloadJobService u=0 s=10128 TIME=-4s353ms:none NET PERSISTED READY}
+04-21 01:11:41.466  1834  2110 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+04-21 01:11:41.468   555  1028 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:41.468   555  1028 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:41.475  1660  1660 D nativeloader: Configuring clns-shared-8 for other apk /system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk. target_sdk_version=34, uses_libraries=, library_path=/system/priv-app/UserDictionaryProvider/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.providers.userdictionary:/system/priv-app/UserDictionaryProvider:/system/lib64:/system_ext/lib64
+04-21 01:11:41.484   555  1125 D CompatibilityChangeReporter: Compat change id reported: 194833441; UID 10192; state: ENABLED
+04-21 01:11:41.484   555  1125 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+04-21 01:11:41.485  2754  2754 I Monkey  : Events injected: 1
+04-21 01:11:41.487  1192  1489 D ImsResolver: maybeAddedImsService, packageName: com.google.android.bluetooth
+04-21 01:11:41.487  1192  1192 D CarrierSvcBindHelper: onPackageModified: com.google.android.apps.wellbeing
+04-21 01:11:41.488  1192  1192 D CarrierSvcBindHelper: No carrier app for: 0
+04-21 01:11:41.493  1961  2758 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:41.495  1236  1236 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10169; state: DISABLED
+04-21 01:11:41.496  1236  1236 W OpenGLRenderer: Unknown dataspace 0
+04-21 01:11:41.498   951  1004 D SplashScreenView: Build android.window.SplashScreenView{68f3d61 V.E...... ......ID 0,0-0,0}
+04-21 01:11:41.498   951  1004 D SplashScreenView: Icon: view: android.widget.ImageView{9b6e086 V.ED..... ......I. 0,0-0,0 #10204f0 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@8ea9d47 size: 504
+04-21 01:11:41.498   951  1004 D SplashScreenView: Branding: view: android.view.View{3bac974 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-21 01:11:41.504   555  2559 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10169; state: DISABLED
+04-21 01:11:41.505   555  2559 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10169; state: DISABLED
+04-21 01:11:41.505   555   584 I ServiceWatcher: [network] chose new implementation 10123/com.google.android.gms/com.google.android.location.network.NetworkLocationService@2
+04-21 01:11:41.506   555   584 W Looper  : Drained
+04-21 01:11:41.506   555   584 I ServiceWatcher: [fused] chose new implementation 10123/com.google.android.gms/com.google.android.location.fused.FusedLocationService@1
+04-21 01:11:41.506   555   584 I ServiceWatcher: [GeocoderProxy] chose new implementation 10123/com.google.android.gms/.location.geocode.GeocodeService@2
+04-21 01:11:41.506   555   584 I ServiceWatcher: [HardwareActivityRecognitionProxy] chose new implementation 10123/com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService@1
+04-21 01:11:41.506   555   584 I ServiceWatcher: [GeofenceProxy] chose new implementation 10123/com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService@1
+04-21 01:11:41.506   555   584 I ServiceWatcher: [RealLocationTimeZoneProviderProxy] chose new implementation 10123/com.google.android.gms/.geotimezone.GeoTimeZoneService@1
+04-21 01:11:41.510  1752  2061 D nativeloader: Configuring clns-7 for other apk . target_sdk_version=33, uses_libraries=ALL, library_path=/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk!/lib/x86_64:/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+04-21 01:11:41.511  1236  1236 D b/254119092: TaskbarManager#mComponentCallbacks.onConfigurationChanged: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.67 fontWeightAdjustment=0}
+04-21 01:11:41.511  1236  1236 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+04-21 01:11:41.511  1236  1236 D b/254119092: ComponentCallbacks#onConfigurationChanged() configDiffForRecreate={CONFIG_SCREEN_SIZE, CONFIG_WINDOW_CONFIGURATION}
+04-21 01:11:41.511  1236  1236 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: No service published for: ethernet
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+04-21 01:11:41.512  1128  1152 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+04-21 01:11:41.512  1236  1236 D b/254119092: destroyExistingTaskbar: null
+04-21 01:11:41.512  1236  1236 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+04-21 01:11:41.512  1236  1236 D b/254119092: recreateTaskbar: isTaskbarEnabled=false [dp != null (i.e. mUserUnlocked)]=false FLAG_HIDE_NAVBAR_WINDOW=false dp.isTaskbarPresent=null
+04-21 01:11:41.512  1236  1236 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+04-21 01:11:41.512  1236  1236 D b/254119092: DisplayController#onConfigurationChanged: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.67 fontWeightAdjustment=0}
+04-21 01:11:41.520   954  1155 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+04-21 01:11:41.520   954  1155 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+04-21 01:11:41.524   361  2903 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10145 0}
+04-21 01:11:41.525  1952  2553 W s.youtube.music: Verification of java.lang.Object et.writeReplace() took 360.598ms (27.73 bytecodes/s) (1512B approximate peak alloc)
+04-21 01:11:41.527   954  1155 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+04-21 01:11:41.531  1752  2740 I SP      : Scheduling job with delay of 0s for {W:b:u:l, bg}, 1 candidates
+04-21 01:11:41.532   361  2904 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 01:11:41.539   555  2558 D CompatibilityChangeReporter: Compat change id reported: 271850009; UID 10145; state: DISABLED
+04-21 01:11:41.539   361  2905 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-21 01:11:41.550  1752  2061 I cr_CronetLibraryLoader: Cronet version: 113.0.5672.51, arch: x86_64
+04-21 01:11:41.578   555  2062 D CoreBackPreview: Window{9b0ab86 u0 Splash Screen owasp.sat.agoat}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@23c3d3f, mPriority=0, mIsAnimationCallback=false}
+04-21 01:11:41.585   555  2062 D ConnectivityService: requestNetwork for uid/pid:10145/1752 activeRequest: null callbackRequest: 61 [NetworkRequest [ REQUEST id=62, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 10145 RequestorPkg: com.google.android.inputmethod.latin UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 01:11:41.586   555   878 D ConnectivityService: NetReassign [62 : null → 100] [c 0] [a 0] [i 1]
+04-21 01:11:41.586   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=62, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 10145 RequestorPkg: com.google.android.inputmethod.latin UnderlyingNetworks: Null] ]
+04-21 01:11:41.586   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=62, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 10145 RequestorPkg: com.google.android.inputmethod.latin UnderlyingNetworks: Null] ]
+04-21 01:11:41.586   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=62, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 10145 RequestorPkg: com.google.android.inputmethod.latin UnderlyingNetworks: Null] ]
+04-21 01:11:41.586   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=62, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 10145 RequestorPkg: com.google.android.inputmethod.latin UnderlyingNetworks: Null] ]
+04-21 01:11:41.612   555  1124 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10156; state: DISABLED
+04-21 01:11:41.646  2754  2754 I Monkey  : ## Network stats: elapsed time=254ms (0ms mobile, 0ms wifi, 254ms not connected)
+04-21 01:11:41.647  2754  2754 I app_process: System.exit called, status: 0
+04-21 01:11:41.647  2754  2754 I AndroidRuntime: VM exiting with result code 0.
+04-21 01:11:41.652  1236  1236 E DisplayController: Unexpected normalizedDisplayInfo found, invalidating cache: CachedDisplayInfo{size=Point(1080, 2400), cutout=Rect(0, 128 - 0, 0), rotation=0}
+04-21 01:11:41.655  1236  1236 E DisplayController: (Invalid Cache) perDisplayBounds - CachedDisplayInfo{size=Point(1080, 2400), cutout=Rect(0, 0 - 0, 0), rotation=0}: [WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 63 - 0, 63), availableSize=Point(1080, 2274), rotationHint=0}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(0, 63 - 0, 63), availableSize=Point(2400, 954), rotationHint=1}, WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 63 - 0, 63), availableSize=Point(1080, 2274), rotationHint=2}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(0, 63 - 0, 63), availableSize=Point(2400, 954), rotationHint=3}]
+04-21 01:11:41.655   555  2551 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:41.655   555  2551 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:41.658  1928  2887 I android_emulator_multidisplay_JNI: multidisplay pipe connected!!!
+04-21 01:11:41.658  1616  1616 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService pkg=com.google.android.gms }
+04-21 01:11:41.658  1616  1616 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService pkg=com.google.android.gms }
+04-21 01:11:41.661  1928  2887 V MultiDisplayService: run(): array= [1, 0, 1080, 2400, 0, 0]
+04-21 01:11:41.662  1928  2887 D MultiDisplayService: received 1
+04-21 01:11:41.662  1928  2887 D MultiDisplayService: received 0
+04-21 01:11:41.662  1928  2887 D MultiDisplayService: received 1080
+04-21 01:11:41.662  1928  2887 D MultiDisplayService: received 2400
+04-21 01:11:41.662  1928  2887 D MultiDisplayService: received 0
+04-21 01:11:41.662  1928  2887 D MultiDisplayService: received 0
+04-21 01:11:41.662  1928  2887 E MultiDisplayService: invalid parameters for add/modify display
+04-21 01:11:41.662   555   878 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 0]
+04-21 01:11:41.664  1752  2061 W putmethod.latin: Verification of void j$.util.concurrent.ConcurrentHashMap.a(long, int) took 113.411ms (3632.79 bytecodes/s) (10048B approximate peak alloc)
+04-21 01:11:41.674  1952  2553 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.dm': No such file or directory
+04-21 01:11:41.674  1952  2553 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.dm': No such file or directory
+04-21 01:11:41.677   555   595 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10125; state: DISABLED
+04-21 01:11:41.677   555   595 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10125; state: DISABLED
+04-21 01:11:41.677   555   595 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10125; state: DISABLED
+04-21 01:11:41.677   555   595 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10125; state: ENABLED
+04-21 01:11:41.679   555   587 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+04-21 01:11:41.680   555   587 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10192; state: DISABLED
+04-21 01:11:41.680   555   587 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10192; state: DISABLED
+04-21 01:11:41.680   555   587 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10192; state: ENABLED
+04-21 01:11:41.683   555   596 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10125; state: ENABLED
+04-21 01:11:41.686   555   680 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+04-21 01:11:41.689  1752  1908 W LatinCommonMetricsProcessor: LatinCommonMetricsProcessor.processInputMethodEntryChanged():2170 The new entry is equal to the old entry
+04-21 01:11:41.692  1961  2885 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+04-21 01:11:41.695  1524  2024 W .gms.persistent: Long monitor contention with owner highpool[1] (1643) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:600) waiters=0 in android.os.Message android.os.MessageQueue.next() for 345ms
+04-21 01:11:41.696  1524  1654 W bwft    : Succeeded but not registered: com.google.android.libraries.search.assistant.invocation.device#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:41.699   555   573 D ConnectivityService: requestNetwork for uid/pid:1000/555 asUid: 10156 activeRequest: null callbackRequest: 64 [NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 01:11:41.699  1834  2125 I AiAiAdaptiveAudio: AdaptiveAudioInitializerImpl#initialize(): enter
+04-21 01:11:41.700   555   555 W Looper  : Slow dispatch took 397ms main h=android.app.ActivityThread$H c=android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0@cd9c59 m=0
+04-21 01:11:41.700   555   555 W Looper  : Slow delivery took 402ms main h=android.os.Handler c=android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0@304e01e m=0
+04-21 01:11:41.704   555  2558 D ConnectivityService: requestNetwork for uid/pid:1000/555 asUid: 10145 activeRequest: null callbackRequest: 66 [NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 01:11:41.704  1834  2110 I SP.AiAi : Scheduling job with delay of 0s for {W:b:u:l, bg}, 2 candidates
+04-21 01:11:41.707   555  2554 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:41.707   555  2554 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:41.709  1952  2553 D DynamitePackage: Instantiated singleton DynamitePackage.
+04-21 01:11:41.709  1952  2553 D DynamitePackage: Instantiating com.google.android.gms.ads.adshield.ChimeraAdShieldCreatorImpl
+04-21 01:11:41.712   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 10189
+04-21 01:11:41.713   555   555 D TransparencyService: Not an update. Skipping...
+04-21 01:11:41.716   555   878 D ConnectivityService: NetReassign [65 : null → 100] [c 0] [a 1] [i 0]
+04-21 01:11:41.716   555   878 D ConnectivityService: NetReassign [67 : null → 100] [c 0] [a 0] [i 0]
+04-21 01:11:41.717   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10145 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+04-21 01:11:41.717   555   555 V BackupManagerConstants: getFullBackupIntervalMilliseconds(...) returns 86400000
+04-21 01:11:41.717   555   584 W Looper  : Slow dispatch took 207ms android.fg h=android.os.Handler c=com.android.server.servicewatcher.ServiceWatcherImpl$$ExternalSyntheticLambda0@a4467a6 m=0
+04-21 01:11:41.718   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 10168
+04-21 01:11:41.719   555   555 V BackupManagerConstants: getFullBackupRequiredNetworkType(...) returns 2
+04-21 01:11:41.719   555   555 V BackupManagerConstants: getFullBackupRequireCharging(...) returns true
+04-21 01:11:41.719   555   555 D CompatibilityChangeReporter: Compat change id reported: 271850009; UID 1000; state: ENABLED
+04-21 01:11:41.719   555   555 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 1000; state: ENABLED
+04-21 01:11:41.719   555   555 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 1000; state: ENABLED
+04-21 01:11:41.720   555   584 W Looper  : Slow delivery took 211ms android.fg h=android.os.Handler c=com.android.server.servicewatcher.ServiceWatcherImpl$$ExternalSyntheticLambda0@a86c57e m=0
+04-21 01:11:41.730  1834  2110 I SP.AiAi : Scheduling: download registered, 0 started, 0 paused, 4 scheduled, 4 pending: manifests:webref-2-en-us-19071200 * {m:b:u:l, bg}, manifests:kg_collections_table-21051103 * {W:b:u:l, bg}, manifests:actions-ranking-table-211005 * {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}
+04-21 01:11:41.735   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 10105
+04-21 01:11:41.735   555  2062 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+04-21 01:11:41.735   555  2062 D PackageManager: Clear ephemeral installer activity
+04-21 01:11:41.735   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 10119
+04-21 01:11:41.735   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 1002
+04-21 01:11:41.736  1834  2125 I AiAiAdaptiveAudio: AdaptiveAudio config updated, new config=AdaptiveAudioConfig{shouldEnableAdaptiveAudio=false, shouldBypassQprCheck=false, shouldLimitCalibration=true, shouldShowDebugNotification=false, userSettingDefaultValue=false, crashOnError=true, shouldShowPromoNotification=false, useSilenceDetectorStateBugFix=false}
+04-21 01:11:41.736   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 10182
+04-21 01:11:41.737   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 1001
+04-21 01:11:41.737   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 1000
+04-21 01:11:41.737   954   984 I PermissionControllerServiceImpl: Updating user sensitive for uid 10192
+04-21 01:11:41.739  1236  1236 D b/283944974: possibleMaximumWindowMetrics: [WindowMetrics:{bounds=Rect(0, 0 - 1080, 2400), windowInsets=WindowInsets{
+04-21 01:11:41.739  1236  1236 D b/283944974:     statusBars=Insets{left=0, top=63, right=0, bottom=0} max=Insets{left=0, top=63, right=0, bottom=0} vis=true
+04-21 01:11:41.739  1236  1236 D b/283944974:     navigationBars=Insets{left=0, top=0, right=0, bottom=63} max=Insets{left=0, top=0, right=0, bottom=63} vis=true
+04-21 01:11:41.739  1236  1236 D b/283944974:     captionBar=null max=null vis=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     ime=Insets{left=0, top=0, right=0, bottom=0} max=null vis=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     systemGestures=Insets{left=0, top=160, right=0, bottom=126} max=Insets{left=0, top=160, right=0, bottom=126} vis=true
+04-21 01:11:41.739  1236  1236 D b/283944974:     mandatorySystemGestures=Insets{left=0, top=160, right=0, bottom=126} max=Insets{left=0, top=160, right=0, bottom=126} vis=true
+04-21 01:11:41.739  1236  1236 D b/283944974:     tappableElement=Insets{left=0, top=63, right=0, bottom=0} max=Insets{left=0, top=63, right=0, bottom=0} vis=true
+04-21 01:11:41.739  1236  1236 D b/283944974:     displayCutout=Insets{left=0, top=128, right=0, bottom=0} max=Insets{left=0, top=128, right=0, bottom=0} vis=true
+04-21 01:11:41.739  1236  1236 D b/283944974:     windowDecor=null max=null vis=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     systemOverlays=null max=null vis=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     cutout=DisplayCutout{insets=Rect(0, 128 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(492, 0 - 610, 128), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.625} cutoutSpec={M 507,64 a 33,33 0 1 0 66,0 33,33 0 1 0 -66,0 Z @left} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}
+04-21 01:11:41.739  1236  1236 D b/283944974:     roundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=28, center=Point(28, 28)}, RoundedCorner{position=TopRight, radius=28, center=Point(1052, 28)}, RoundedCorner{position=BottomRight, radius=28, center=Point(1052, 2372)}, RoundedCorner{position=BottomLeft, radius=28, center=Point(28, 2372)}]}
+04-21 01:11:41.739  1236  1236 D b/283944974:     privacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(827, 0 - 1043, 63) rotation=0}
+04-21 01:11:41.739  1236  1236 D b/283944974:     displayShape=DisplayShape{ spec=-1893857183 displayWidth=1080 displayHeight=2400 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}
+04-21 01:11:41.739  1236  1236 D b/283944974:     suppressScrimTypes=navigationBars
+04-21 01:11:41.739  1236  1236 D b/283944974:     compatInsetsTypes=statusBars navigationBars captionBar systemOverlays
+04-21 01:11:41.739  1236  1236 D b/283944974:     compatIgnoreVisibility=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     systemWindowInsetsConsumed=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     stableInsetsConsumed=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     displayCutoutConsumed=false
+04-21 01:11:41.739  1236  1236 D b/283944974:     }, density=2.625}]
+04-21 01:11:41.742  1236  1236 W DisplayController: (CHANGE_SUPPORTED_BOUNDS) perDisplayBounds - CachedDisplayInfo{size=Point(1080, 2400), cutout=Rect(0, 128 - 0, 0), rotation=0}: [WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 128 - 0, 63), availableSize=Point(1080, 2209), rotationHint=0}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(128, 63 - 0, 63), availableSize=Point(2272, 954), rotationHint=1}, WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 63 - 0, 128), availableSize=Point(1080, 2209), rotationHint=2}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(0, 63 - 128, 63), availableSize=Point(2272, 954), rotationHint=3}]
+04-21 01:11:41.745  1524  1524 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.gmscompliance.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+04-21 01:11:41.745  1524  1524 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.gmscompliance.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+04-21 01:11:41.763   951   951 D TileServices: Couldn't find tile for ComponentInfo{com.google.android.apps.wellbeing/com.google.android.apps.wellbeing.screen.ui.GrayscaleTileService}(0)
+04-21 01:11:41.765   362   362 D Zygote  : Forked child process 2918
+04-21 01:11:41.766   951   951 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+04-21 01:11:41.767   951   951 I Choreographer: Skipped 159 frames!  The application may be doing too much work on its main thread.
+04-21 01:11:41.768   555   596 W ActivityManager: Slow operation: 94ms so far, now at startProcess: returned from zygote!
+04-21 01:11:41.769   555   596 W ActivityManager: Slow operation: 95ms so far, now at startProcess: done updating battery stats
+04-21 01:11:41.769   555   596 W ActivityManager: Slow operation: 95ms so far, now at startProcess: building log message
+04-21 01:11:41.769   555   596 I ActivityManager: Start proc 2918:com.google.android.partnersetup/u0a125 for broadcast {com.google.android.partnersetup/com.google.android.partnersetup.PhoneStateReceiver}
+04-21 01:11:41.769   555   596 W ActivityManager: Slow operation: 95ms so far, now at startProcess: starting to update pids map
+04-21 01:11:41.769   555   596 W ActivityManager: Slow operation: 95ms so far, now at startProcess: done updating pids map
+04-21 01:11:41.769   555   596 W ActivityManager: Slow operation: 90ms so far, now at startProcess: asking zygote to start proc
+04-21 01:11:41.769   555   596 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+04-21 01:11:41.770  2622  2871 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10142; state: ENABLED
+04-21 01:11:41.773  2003  2383 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10139; state: ENABLED
+04-21 01:11:41.787  1952  2925 W ContextImpl: Failed to ensure /data/user/0/com.google.android.gms/shared_prefs: mkdir failed: EACCES (Permission denied)
+04-21 01:11:41.795   362   362 D Zygote  : Forked child process 2930
+04-21 01:11:41.800   555   596 W ActivityManager: Slow operation: 121ms so far, now at startProcess: returned from zygote!
+04-21 01:11:41.800   555   596 W ActivityManager: Slow operation: 121ms so far, now at startProcess: done updating battery stats
+04-21 01:11:41.800   555   596 W ActivityManager: Slow operation: 121ms so far, now at startProcess: building log message
+04-21 01:11:41.800   555   596 I ActivityManager: Start proc 2930:owasp.sat.agoat/u0a192 for next-top-activity {owasp.sat.agoat/owasp.sat.agoat.SplashActivity}
+04-21 01:11:41.800   555   596 W ActivityManager: Slow operation: 121ms so far, now at startProcess: starting to update pids map
+04-21 01:11:41.800   555   596 W ActivityManager: Slow operation: 121ms so far, now at startProcess: done updating pids map
+04-21 01:11:41.801  1157  1157 I BrowsedPlayerWrapper: onConnected: com.google.android.apps.youtube.music is connected
+04-21 01:11:41.801  1157  1157 I BrowsedPlayerWrapper: getFolderItems: Connected to browsable player: com.google.android.apps.youtube.music
+04-21 01:11:41.824   555   555 W Looper  : Drained
+04-21 01:10:23.873     0     0 I logd    : logdr: UID=2000 GID=2000 PID=2914 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+04-21 01:11:41.854  2622  2622 D CompatibilityChangeReporter: Compat change id reported: 3400644; UID 10142; state: DISABLED
+04-21 01:11:41.861  1616  1631 I PeopleChimeraService: onService. callbacks = avsz@bb58774, request = com.google.android.gms.common.internal.GetServiceRequest@348349d
+04-21 01:11:41.864  1236  2360 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-21 01:11:41.868  1236  2360 E FrameEvents: updateAcquireFence: Did not find frame.
+04-21 01:11:41.882  1524  1643 W bwft    : Succeeded but not registered: com.google.android.apps.search.assistant.device#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+04-21 01:11:41.894   555  1028 D OomAdjuster: Not killing cached processes
+04-21 01:11:41.906   951   951 V ActivityThread: getPackageInfo() caused update to cached ApplicationInfo for package android

@@ -1,0 +1,63 @@
+--------- beginning of system
+05-12 09:17:01.295   571   659 D ActivityManager: freezing 3802 com.google.android.partnersetup
+--------- beginning of main
+05-12 09:17:01.310  5077  5077 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+05-12 09:17:01.314  5077  5077 I AndroidRuntime: Using default boot image
+05-12 09:17:01.314  5077  5077 I AndroidRuntime: Leaving lock profiling enabled
+05-12 09:17:01.316  5077  5077 I app_process: Core platform API reporting enabled, enforcing=false
+05-12 09:17:01.316  5077  5077 I app_process: Using CollectorTypeCC GC.
+05-12 09:17:01.378  5077  5077 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+05-12 09:17:01.387  5077  5077 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+05-12 09:17:01.387  5077  5077 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+05-12 09:17:01.392  5077  5077 W app_process: Unexpected CPU variant for x86: x86_64.
+05-12 09:17:01.392  5077  5077 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+05-12 09:17:01.405  5077  5077 W libc    : Access denied finding property "ro.product.name_for_attestation"
+05-12 09:17:01.405  5077  5077 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+05-12 09:17:01.405  5077  5077 W libc    : Access denied finding property "ro.product.model_for_attestation"
+05-12 09:17:01.402  5077  5077 W main    : type=1400 audit(0.0:61): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:01.406  5077  5077 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+05-12 09:17:01.402  5077  5077 W main    : type=1400 audit(0.0:62): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:01.402  5077  5077 W main    : type=1400 audit(0.0:63): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+05-12 09:17:01.410  5077  5077 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:01.410  5077  5077 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:01.410  5077  5077 W System  : No Compatibility callbacks set! Querying change 263076149
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: Writing exception to parcel
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/config
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+05-12 09:17:01.412  3285  3304 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+05-12 09:17:01.413  5077  5077 D AndroidRuntime: Shutting down VM
+05-12 09:17:01.426  2118  3616 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10130; state: ENABLED
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:114 - ### Keystore Watchdog report - BEGIN ###
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:123 - When extracting from a bug report, please include this header
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:124 - and all 4 records below.
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:154 - ThreadId(10) IKeystoreSecurityLevel::generateKey Pending: 9.306069315s Overdue 4.306069685s: SecurityLevel r#TRUSTED_ENVIRONMENT
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:164 - ThreadId(10) Calling get_rkpd_attestation_key() Pending: 9.306039431s Overdue 8.806039761s
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:154 - ThreadId(5) IKeystoreSecurityLevel::generateKey Pending: 9.001787454s Overdue 4.001787997s: SecurityLevel r#TRUSTED_ENVIRONMENT
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:164 - ThreadId(5) Calling get_rkpd_attestation_key() Pending: 9.001763636s Overdue 8.501763876s
+05-12 09:17:01.598   199  3051 W keystore2: system/security/keystore2/src/watchdog.rs:175 - ### Keystore Watchdog report - END ###
+05-12 09:17:01.763   783   783 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+05-12 09:17:01.907   571   659 D ActivityManager: freezing 4794 com.google.android.webview
+05-12 09:17:02.020  1296  3480 D TrafficStats: tagSocket(103) with statsTag=0x24000609, statsUid=10128
+05-12 09:17:02.043  1296  3480 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+05-12 09:17:02.043  1296  3480 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+05-12 09:17:02.043  1296  3480 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+05-12 09:17:02.091   571   659 D ActivityManager: freezing 2118 com.google.android.dialer
+05-12 09:17:02.100  1296  3458 D TrafficStats: tagSocket(103) with statsTag=0x24000609, statsUid=10128
+05-12 09:17:02.114  1296  3458 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+05-12 09:17:02.114  1296  3458 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+05-12 09:17:02.114  1296  3458 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+05-12 09:17:02.181  1296  3478 D TrafficStats: tagSocket(103) with statsTag=0x24000609, statsUid=10128
+05-12 09:17:02.182   571   659 D ActivityManager: freezing 4731 com.google.android.soundpicker
+05-12 09:17:02.198  1296  3478 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+05-12 09:17:02.198  1296  3478 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+05-12 09:17:02.198  1296  3478 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+05-12 09:17:02.240   571   659 D ActivityManager: freezing 1773 com.google.android.youtube
+05-12 09:17:02.248  1296  3480 D TrafficStats: tagSocket(103) with statsTag=0x24000609, statsUid=10128
+05-12 09:17:02.263  1296  3480 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+05-12 09:17:02.263  1296  3480 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+05-12 09:17:02.263  1296  3480 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)

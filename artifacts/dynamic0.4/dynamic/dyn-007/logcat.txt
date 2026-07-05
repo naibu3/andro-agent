@@ -1,0 +1,131 @@
+--------- beginning of main
+04-21 12:37:16.840  7985  7985 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:37:16.845  7985  7985 I AndroidRuntime: Using default boot image
+04-21 12:37:16.845  7985  7985 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:37:16.847  7985  7985 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:37:16.847  7985  7985 I app_process: Using CollectorTypeCC GC.
+04-21 12:37:16.906  7985  7985 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:37:16.915  7985  7985 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:37:16.915  7985  7985 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:37:16.920  7985  7985 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:37:16.920  7985  7985 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:37:16.934  7985  7985 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:37:16.934  7985  7985 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:37:16.934  7985  7985 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:37:16.932  7985  7985 W main    : type=1400 audit(0.0:236): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:16.935  7985  7985 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:37:16.932  7985  7985 W main    : type=1400 audit(0.0:237): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:16.932  7985  7985 W main    : type=1400 audit(0.0:238): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:16.937  7985  7985 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:16.937  7985  7985 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:16.937  7985  7985 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: Writing exception to parcel
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/data
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 12:37:16.939  7638  7671 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 12:37:16.941  7985  7985 D AndroidRuntime: Shutting down VM
+--------- beginning of system
+04-21 12:37:17.276   555   669 D ActivityManager: freezing 1660 android.process.acore
+04-21 12:37:17.574   555   648 D ConnectivityService: requestNetwork for uid/pid:10131/4691 activeRequest: null callbackRequest: 151 [NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-21 12:37:17.579   555   878 D ConnectivityService: NetReassign [152 : null → 100] [c 1] [a 1] [i 2]
+04-21 12:37:17.579   555   871 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:37:17.579   555   871 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:37:17.580   555   871 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:37:17.580   555   871 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+04-21 12:37:17.584  4691  5728 D MddListenableWorkerFactory: createWorker for class: com.google.android.apps.messaging.rcsprovisioning.RcsProvisioningListenableWorker
+04-21 12:37:17.589  4691  4691 I BugleRcsWorker: [seqId=2][workId=c19c4b11-b5b4-4b21-ac7a-90cd05dbf934] RCS provisioning task has started
+04-21 12:37:17.594  4691  4774 I BugleRcsWorker: [seqId=2][workId=c19c4b11-b5b4-4b21-ac7a-90cd05dbf934] Starting StateMachine, trigger is STATE_MACHINE_RETRY
+04-21 12:37:17.594  4691  4774 I BugleRcsEngine: [46] brfq.d: (PEv2-SM-Bugle-118553502): start PEv2, trigger is STATE_MACHINE_RETRY, workerId is c19c4b11-b5b4-4b21-ac7a-90cd05dbf934 [null]
+04-21 12:37:17.594  4691  4774 I BugleRcsEngine: [46] broo.g: Created new RcsProvisioningProtoDataStorage for sim redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.595  4691  4774 I BugleRcsEngine: [46] brnl.h: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.595  4691  4774 I BugleRcsEngine: [46] brfq.d: (PEv2-SM-Bugle-118553502): start [null]
+04-21 12:37:17.595  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Enter EnabledState [null]
+04-21 12:37:17.597  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.599  4691  8000 I BugleRcsEngine: [119] brds.c: Sending ProvisioningEvent to Bugle [Send Provisioning Session ID (18)], redacted-pii:[chars:65]
+04-21 12:37:17.599  4691  8000 I BugleRcsEngine: [119] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:223] from source PROVISIONING_EVENT
+04-21 12:37:17.601  4691  4742 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:17.602  4691  4742 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:17.604  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Start a new provisioning session [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.604  4691  5728 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Send Provisioning Session ID
+04-21 12:37:17.605  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.605  4691  8000 I BugleRcsEngine: [119] brjv.b: RcsAvailabilityManager: Calculating Rcs Availability
+04-21 12:37:17.605  4691  4780 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@b1db5a
+04-21 12:37:17.606  4691  8000 I BugleRcsEngine: [119] brnl.C: Bugle is default SMS app: true
+04-21 12:37:17.606  4691  8000 I BugleRcsEngine: [119] brjv.b: Bugle has minimum required RCS permissions: true
+04-21 12:37:17.606  4691  8000 I BugleRcsEngine: [119] brnl.B: Rcs is enabled from user settings: true
+04-21 12:37:17.606  4691  8000 I BugleRcsEngine: [119] brox.b: Using config server URL from bqas
+04-21 12:37:17.606  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.608  4691  8000 I BugleRcsEngine: [119] brnl.h: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.609  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.609  4691  4744 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:17.611  4691  8000 I BugleRcsEngine: [119] brjv.b: Config state is not ACCEPTED, provisioning still in progress
+04-21 12:37:17.611  4691  8000 I BugleRcsEngine: [119] brjv.b: RcsAvailabilityManager: Rcs Availability still CARRIER_SETUP_PENDING (Carrier RCS is not set up)
+04-21 12:37:17.613  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.614  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): transitionViaMessage, srcState=EnabledState, destState = CheckPreconditionsState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.614  4691  8000 I BugleRcsEngine: [119] brds.c: Sending ProvisioningEvent to Bugle [Update provisioning status (11)], redacted-pii:[chars:85]
+04-21 12:37:17.614  4691  8000 I BugleRcsEngine: [119] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent com.google.android.ims.provisioning.engine.provisioningEventAction to Bugle with extras redacted-pii:[chars:243] from source PROVISIONING_EVENT
+04-21 12:37:17.615  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): EnabledState: Transition to check preconditions [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.615  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): transitionTo: destState=CheckPreconditionsState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.615  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): onTransitionRequested EnabledState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.615  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Enter CheckPreconditionsState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.616   951   951 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+04-21 12:37:17.617  4691  4742 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:17.618  4691  4742 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:17.618  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.619  4691  5824 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Update provisioning status
+04-21 12:37:17.619  4691  4780 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@871216b
+04-21 12:37:17.619  4691  8000 I BugleRcsEngine: [119] brnl.h: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.619  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Battery optimization is not required. [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.621  4691  4743 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+04-21 12:37:17.622  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.622  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): transitionViaMessage, srcState=CheckPreconditionsState, destState = ReadyState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.622  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): CheckPreconditionsState: Transition to ready [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.623  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): transitionTo: destState=ReadyState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.623  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): onTransitionRequested CheckPreconditionsState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.623  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Exit CheckPreconditionsState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.623  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Exit EnabledState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.623  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.624  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Enter InProgressState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.626  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.626  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Enter ReadyState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.628  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.628  4691  4744 W BugleRcsEngine: [43] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.628  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.630  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): transitionViaMessage, srcState=ReadyState, destState = RequestWithImsiState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.630  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): ReadyState: Transition to request with imsi [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.630  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): transitionTo: destState=RequestWithImsiState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.630  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): onTransitionRequested ReadyState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.630  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Exit ReadyState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.630  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.630  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): Enter RequestWithImsiState [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.631  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.632  4691  8000 I BugleRcsEngine: [119] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:37:17.633  4691  8000 I BugleRcsEngine: [119] brox.b: Using config server URL from bqas
+04-21 12:37:17.633  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.633  4691  8000 I BugleRcsEngine: [119] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:37:17.634  4691  4744 W BugleRcsEngine: [43] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.636  4691  8000 I BugleRcsEngine: [119] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:37:17.637  4691  8000 I BugleRcsEngine: [119] brnl.e: No RCS Configuration was found in Bugle for simID: redacted-pii:sim_id[chars:20,last3:897]
+04-21 12:37:17.637  4691  8000 W BugleRcsEngine: [119] brfq.e: (PEv2-SM-Bugle-118553502): Could not retrieve MSISDN from configuration. Configuration is empty. [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.637  4691  8000 W BugleRcsEngine: [119] brfq.e: (PEv2-SM-Bugle-118553502): Skipping adding Tachyon identity key to request. Null/empty RCS msisdn from configuration for sim ID: 89860318640220133897. [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.637  4691  8000 I BugleRcsEngine: [119] brnl.A: ProvisioningConsent from user settings: false
+04-21 12:37:17.639  4691  4744 W BugleRcsEngine: [43] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.662  3383  3418 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+04-21 12:37:17.662  3383  3418 W libc    : Access denied finding property "service.adb.tls.port"
+04-21 12:37:17.663   361  8002 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+04-21 12:37:17.660  3383  3383 W binder:3383_3: type=1400 audit(0.0:239): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+04-21 12:37:17.663  3383  3418 D TrafficStats: tagSocket(113) with statsTag=0x1809, statsUid=-1
+04-21 12:37:17.660  3383  3383 W binder:3383_3: type=1400 audit(0.0:240): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+04-21 12:37:17.692  4691  8000 E BugleRcsEngine: [119] brfg.a: DroidGuardLogger: Could not create DroidGuard token creation event
+04-21 12:37:17.692  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): RequestWithImsiState: event Send config request [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.693  4691  8000 I BugleRcsEngine: [119] brfq.d: (PEv2-SM-Bugle-118553502): InProgressState: event Send config request [04c9a496-481a-4b1d-9596-966e84f486d3]
+04-21 12:37:17.693  4691  8000 W BugleRcsEngine: [119] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.694  4691  8003 W BugleRcsEngine: [120] bpxc.w: Unable to send diagnostic log
+04-21 12:37:17.694   361  8004 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+04-21 12:37:17.695   361  8005 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-21 12:37:17.695   361  8006 I resolv  : res_nmkquery: (QUERY, IN, A)

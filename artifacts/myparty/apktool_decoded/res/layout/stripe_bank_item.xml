@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/stripe_list_row_height" android:paddingStart="16.0dip" android:paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="start|center" android:id="@id/icon" android:layout_width="@dimen/stripe_masked_card_icon_width" android:layout_height="wrap_content" app:srcCompat="@drawable/stripe_ic_bank_generic" />
+    <androidx.appcompat.widget.AppCompatTextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" android:layout_gravity="start|center" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/check_icon" android:layout_width="@dimen/stripe_masked_card_icon_width" android:layout_height="wrap_content" app:srcCompat="@drawable/stripe_ic_checkmark" />
+</LinearLayout>

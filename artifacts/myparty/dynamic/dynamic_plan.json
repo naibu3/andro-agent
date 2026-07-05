@@ -1,0 +1,2525 @@
+{
+  "case_id": "myparty",
+  "package_name": "app.myparty.houses",
+  "device_profile": "baseline",
+  "tests": [
+    {
+      "test_id": "dyn-001",
+      "title": "Launch main app entrypoint",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "app_launch",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_app",
+          "parameters": {}
+        }
+      ],
+      "expected_signals": [
+        "app_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-002",
+      "title": "Launch exported activity app.myparty.houses/app.myparty.houses.MainActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/app.myparty.houses.MainActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-003",
+      "title": "Launch exported activity app.myparty.houses/com.facebook.CustomTabActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/com.facebook.CustomTabActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-004",
+      "title": "Launch exported activity app.myparty.houses/com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-005",
+      "title": "Launch exported activity app.myparty.houses/com.canhub.cropper.CropImageActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/com.canhub.cropper.CropImageActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-006",
+      "title": "Launch exported activity app.myparty.houses/com.stripe.android.link.LinkRedirectHandlerActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/com.stripe.android.link.LinkRedirectHandlerActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-007",
+      "title": "Launch exported activity app.myparty.houses/com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-008",
+      "title": "Launch exported activity app.myparty.houses/com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "exported_activity",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "launch_activity",
+          "parameters": {
+            "component": "app.myparty.houses/com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity"
+          }
+        }
+      ],
+      "expected_signals": [
+        "activity_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-009",
+      "title": "Open deep link myparty://",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "myparty://"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-010",
+      "title": "Open deep link @string/fb_login_protocol_scheme://",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "@string/fb_login_protocol_scheme://"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-011",
+      "title": "Open deep link fbconnect://cct.app.myparty.houses",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "fbconnect://cct.app.myparty.houses"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-012",
+      "title": "Open deep link stripe-auth://link-accounts/app.myparty.houses/authentication_return",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe-auth://link-accounts/app.myparty.houses/authentication_return"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-013",
+      "title": "Open deep link stripe-auth://link-native-accounts/app.myparty.houses/authentication_return",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe-auth://link-native-accounts/app.myparty.houses/authentication_return"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-014",
+      "title": "Open deep link stripe-auth://link-accounts/app.myparty.houses/success",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe-auth://link-accounts/app.myparty.houses/success"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-015",
+      "title": "Open deep link stripe-auth://link-accounts/app.myparty.houses/cancel",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe-auth://link-accounts/app.myparty.houses/cancel"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-016",
+      "title": "Open deep link stripe-auth://native-redirect/app.myparty.houses",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe-auth://native-redirect/app.myparty.houses"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-017",
+      "title": "Open deep link stripe://auth-redirect/app.myparty.houses",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe://auth-redirect/app.myparty.houses"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-018",
+      "title": "Open deep link link-popup://complete/app.myparty.houses",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "link-popup://complete/app.myparty.houses"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-019",
+      "title": "Open deep link stripesdk://payment_return_url/app.myparty.houses",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripesdk://payment_return_url/app.myparty.houses"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-020",
+      "title": "Open deep link stripe://financial-connections-lite/app.myparty.houses/auth_redirect",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "deep_link",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "open_deeplink",
+          "parameters": {
+            "url": "stripe://financial-connections-lite/app.myparty.houses/auth_redirect"
+          }
+        }
+      ],
+      "expected_signals": [
+        "deeplink_launch_attempted"
+      ]
+    },
+    {
+      "test_id": "dyn-021",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-022",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-023",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-024",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-025",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-026",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-027",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-028",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-029",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-030",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-031",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-032",
+      "title": "Query content provider content://app.myparty.houses.ImagePickerFileProvider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ImagePickerFileProvider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-033",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-034",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-035",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-036",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-037",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-038",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-039",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-040",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-041",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-042",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-043",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-044",
+      "title": "Query content provider content://app.myparty.houses.cropper.fileprovider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.cropper.fileprovider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-045",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-046",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-047",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-048",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-049",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-050",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-051",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-052",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-053",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-054",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-055",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-056",
+      "title": "Query content provider content://app.myparty.houses.ClipboardFileProvider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.ClipboardFileProvider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-057",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-058",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-059",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-060",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-061",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-062",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-063",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-064",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-065",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-066",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-067",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-068",
+      "title": "Query content provider content://app.myparty.houses.mlkitinitprovider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.mlkitinitprovider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-069",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-070",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-071",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-072",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-073",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-074",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-075",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-076",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-077",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-078",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-079",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-080",
+      "title": "Query content provider content://app.myparty.houses.FileSystemFileProvider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FileSystemFileProvider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-081",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-082",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-083",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-084",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-085",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-086",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-087",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-088",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-089",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-090",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-091",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-092",
+      "title": "Query content provider content://app.myparty.houses.firebaseinitprovider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.firebaseinitprovider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-093",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-094",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-095",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-096",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-097",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-098",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-099",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-100",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-101",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-102",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-103",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-104",
+      "title": "Query content provider content://app.myparty.houses.androidx-startup/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.androidx-startup/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-105",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-106",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-107",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-108",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-109",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-110",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-111",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-112",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-113",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-114",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-115",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-116",
+      "title": "Query content provider content://app.myparty.houses.FacebookInitProvider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.FacebookInitProvider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-117",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-118",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/config",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/config"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-119",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/data",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/data"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-120",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/item",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/item"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-121",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/items",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/items"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-122",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/note",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/note"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-123",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/notes",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/notes"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-124",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/pin",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/pin"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-125",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/pins",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/pins"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-126",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/profile",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/profile"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-127",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/profiles",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/profiles"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    },
+    {
+      "test_id": "dyn-128",
+      "title": "Query content provider content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/record",
+      "masvs_control_group": "MASVS-PLATFORM",
+      "category": "content_provider",
+      "priority": "high",
+      "actions": [
+        {
+          "action": "query_content_provider",
+          "parameters": {
+            "uri": "content://app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider/record"
+          }
+        }
+      ],
+      "expected_signals": [
+        "content_provider_query_attempted",
+        "content_provider_rows_detected",
+        "content_provider_permission_denied"
+      ]
+    }
+  ]
+}

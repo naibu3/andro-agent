@@ -1,0 +1,50 @@
+--------- beginning of main
+04-21 12:37:37.674  8288  8288 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:37:37.679  8288  8288 I AndroidRuntime: Using default boot image
+04-21 12:37:37.680  8288  8288 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:37:37.682  8288  8288 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:37:37.682  8288  8288 I app_process: Using CollectorTypeCC GC.
+04-21 12:37:37.708  1961  6704 D t       : Starting download: https://dl.google.com/mdi-serving/agsa-apa-smart-action-models/1129/265b5ad4cc2df325212297efbc5c8dd52681b24a
+04-21 12:37:37.708  1961  6704 V t       : Is http uri, downloading (uri: https://dl.google.com/mdi-serving/agsa-apa-smart-action-models/1129/265b5ad4cc2df325212297efbc5c8dd52681b24a)
+04-21 12:37:37.756   935   935 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS 
+04-21 12:37:37.761  8288  8288 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:37:37.771  8288  8288 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:37:37.771  8288  8288 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:37:37.777  8288  8288 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:37:37.777  8288  8288 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:37:37.790  1961  6704 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1776755101952
+04-21 12:37:37.793  8288  8288 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:37:37.792  8288  8288 W main    : type=1400 audit(0.0:274): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:37.793  8288  8288 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:37:37.794  8288  8288 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:37:37.795  8288  8288 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:37:37.792  8288  8288 W main    : type=1400 audit(0.0:275): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:37.792  8288  8288 W main    : type=1400 audit(0.0:276): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:37:37.799  8288  8288 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:37.799  8288  8288 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:37.799  8288  8288 W System  : No Compatibility callbacks set! Querying change 263076149
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: Writing exception to parcel
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/pins
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+04-21 12:37:37.801  7638  7671 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+04-21 12:37:37.802  8288  8288 D AndroidRuntime: Shutting down VM
+04-21 12:37:37.849  1961  2229 D t       : Starting download: https://dl.google.com/mdi-serving/agsa-apa-smart-action-models/1129/262d6f61914ff6e28557d9adfcb3632975ddf9d2
+04-21 12:37:37.849  1961  2229 V t       : Is http uri, downloading (uri: https://dl.google.com/mdi-serving/agsa-apa-smart-action-models/1129/262d6f61914ff6e28557d9adfcb3632975ddf9d2)
+04-21 12:37:37.926  1961  2229 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1776755101953
+04-21 12:37:38.170   361   402 I netd    : tetherGetStats() -> {[]} <1.50ms>
+04-21 12:37:38.180   361   402 I netd    : bandwidthSetGlobalAlert(2097152) <0.30ms>
+04-21 12:37:38.184   361   402 I netd    : bandwidthRemoveInterfaceQuota(eth0) <1.02ms>
+04-21 12:37:38.184   361   402 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.61ms>
+04-21 12:37:38.188   361   402 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.51ms>
+04-21 12:37:38.189   361   402 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.42ms>
+04-21 12:37:38.191   555   949 D NetworkStatsObservers: Unregistering RequestInfo from pid/uid:555/1000(android) for DataUsageRequest [ requestId=24, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3445419 ] accessLevel:3
+04-21 12:37:38.191   555   869 D NetworkStatsObservers: Registering observer for RequestInfo from pid/uid:555/1000(android) for DataUsageRequest [ requestId=25, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3421229 ] accessLevel:3
+04-21 12:37:38.209   361   402 I netd    : tetherGetStats() -> {[]} <0.39ms>
+04-21 12:37:38.385  1961  2463 I A       : NGA Sync: MDD Task: MDD.WIFI.CHARGING.PERIODIC.TASK done.
+04-21 12:37:38.385  1961  2463 I A       : NGA Sync: isNgaSyncEnabled: false; enableFileGroupPopulator: false; requiresMddAssets: false
+04-21 12:37:38.386  1961  2274 I A       : Refresh account policy.

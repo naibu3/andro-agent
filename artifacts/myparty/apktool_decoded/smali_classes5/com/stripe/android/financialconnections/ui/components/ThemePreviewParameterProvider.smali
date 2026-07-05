@@ -1,0 +1,61 @@
+.class public final Lcom/stripe/android/financialconnections/ui/components/ThemePreviewParameterProvider;
+.super Landroidx/compose/ui/tooling/preview/datasource/CollectionPreviewParameterProvider;
+.source "Button.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/compose/ui/tooling/preview/datasource/CollectionPreviewParameterProvider<",
+        "Lcom/stripe/android/financialconnections/ui/theme/Theme;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0005"
+    }
+    d2 = {
+        "Lcom/stripe/android/financialconnections/ui/components/ThemePreviewParameterProvider;",
+        "Landroidx/compose/ui/tooling/preview/datasource/CollectionPreviewParameterProvider;",
+        "Lcom/stripe/android/financialconnections/ui/theme/Theme;",
+        "<init>",
+        "()V",
+        "financial-connections_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 225
+    invoke-static {}, Lcom/stripe/android/financialconnections/ui/theme/Theme;->getEntries()Lkotlin/enums/EnumEntries;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-direct {p0, v0}, Landroidx/compose/ui/tooling/preview/datasource/CollectionPreviewParameterProvider;-><init>(Ljava/util/Collection;)V
+
+    return-void
+.end method

@@ -1,0 +1,17 @@
+{
+  "parsed": {
+    "summary": "The application exposes multiple components (activities, services, receivers, and providers) without protecting permissions and has debug and backup settings that could increase the surface for attacks. This configuration presents potential data leakage, unauthorized access, and vulnerability exploitation avenues.",
+    "key_risks": [
+      "Exported components without permissions may be invoked by malicious apps, enabling arbitrary code execution or data exposure.",
+      "Application is debuggable and allows backups, potentially exposing private data to attackers or facilitating reverse engineering.",
+      "External receivers and providers exposed without protection can be abused for privilege escalation or data extraction.",
+      "none"
+    ],
+    "next_steps": [
+      "Restrict or remove exported components; add appropriate <intent-filter> permissions or change exported flag to false when feasible.",
+      "Set android:debuggable=\"false\" and disable android:allowBackup unless required; consider using encryption for backup data.",
+      "Review and secure all exported receivers and content providers, ensuring they enforce permissions or are not exposed externally."
+    ]
+  },
+  "raw": "{\"summary\":\"The application exposes multiple components (activities, services, receivers, and providers) without protecting permissions and has debug and backup settings that could increase the surface for attacks. This configuration presents potential data leakage, unauthorized access, and vulnerability exploitation avenues.\",\"key_risks\":[\"Exported components without permissions may be invoked by malicious apps, enabling arbitrary code execution or data exposure.\",\"Application is debuggable and allows backups, potentially exposing private data to attackers or facilitating reverse engineering.\",\"External receivers and providers exposed without protection can be abused for privilege escalation or data extraction.\",\"none\"],\"next_steps\":[\"Restrict or remove exported components; add appropriate <intent-filter> permissions or change exported flag to false when feasible.\",\"Set android:debuggable=\\\"false\\\" and disable android:allowBackup unless required; consider using encryption for backup data.\",\"Review and secure all exported receivers and content providers, ensuring they enforce permissions or are not exposed externally.\"]}"
+}

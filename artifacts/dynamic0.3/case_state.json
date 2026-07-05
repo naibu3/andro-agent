@@ -1,0 +1,126 @@
+{
+  "case_id": "dynamic0.3",
+  "apk_path": "/home/naibu3/Escritorio/TFM/andro-agent/samples/AndroGoat.apk",
+  "manifest_json_path": "artifacts/dynamic0.3/parsed/manifest.json",
+  "facts_path": "artifacts/dynamic0.3/facts/manifest_facts.json",
+  "findings_path": "artifacts/dynamic0.3/findings/manifest_findings.json",
+  "analysis_path": "artifacts/dynamic0.3/analysis/static_analysis_reasoning.json",
+  "analysis_raw_path": "artifacts/dynamic0.3/analysis/static_analysis_reasoning_raw.txt",
+  "jadx_output_dir": "artifacts/dynamic0.3/jadx",
+  "code_search_results_path": "artifacts/dynamic0.3/code_search/code_search_results.json",
+  "code_facts_path": "artifacts/dynamic0.3/facts/code_search_facts.json",
+  "code_findings_path": "artifacts/dynamic0.3/findings/code_findings.json",
+  "correlated_findings_path": null,
+  "static_analysis_bundle_path": "artifacts/dynamic0.3/bundle/static_analysis_bundle.json",
+  "static_report_path": "artifacts/dynamic0.3/report/static_analysis_report.md",
+  "evidence_registry_path": null,
+  "candidates_path": null,
+  "manifest_reasoning_path": "artifacts/dynamic0.3/analysis/manifest_reasoning.json",
+  "manifest_reasoning_raw_path": "artifacts/dynamic0.3/analysis/manifest_reasoning_raw.txt",
+  "code_reasoning_path": "artifacts/dynamic0.3/analysis/code_reasoning.json",
+  "code_reasoning_raw_path": "artifacts/dynamic0.3/analysis/code_reasoning_raw.txt",
+  "metrics_tracker": null,
+  "dynamic_plan_path": "artifacts/dynamic0.3/dynamic/dynamic_plan.json",
+  "dynamic_results_path": "artifacts/dynamic0.3/dynamic/dynamic_results.json",
+  "dynamic_report_path": "artifacts/dynamic0.3/dynamic/dynamic_findings.json",
+  "device_profile": "baseline",
+  "package_name": "owasp.sat.agoat",
+  "status": "dynamic_completed",
+  "current_step": "dynamic_pipeline",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 50
+    },
+    {
+      "agent": "manifest_risk_agent",
+      "success": true,
+      "output": "artifacts/dynamic0.3/analysis/manifest_reasoning.json",
+      "raw_output": "artifacts/dynamic0.3/analysis/manifest_reasoning_raw.txt"
+    },
+    {
+      "agent": "code_risk_agent",
+      "success": true,
+      "output": "artifacts/dynamic0.3/analysis/code_reasoning.json",
+      "raw_output": "artifacts/dynamic0.3/analysis/code_reasoning_raw.txt"
+    },
+    {
+      "agent": "risk_fusion_agent",
+      "success": true,
+      "output": "artifacts/dynamic0.3/analysis/static_analysis_reasoning.json",
+      "raw_output": "artifacts/dynamic0.3/analysis/static_analysis_reasoning_raw.txt"
+    },
+    {
+      "agent": "markdown_report_agent",
+      "success": true,
+      "output": "artifacts/dynamic0.3/report/static_analysis_report.md"
+    },
+    {
+      "tool": "adb.install",
+      "returncode": 0,
+      "stdout": "Performing Streamed Install\nSuccess\n",
+      "stderr": ""
+    },
+    {
+      "tool": "adb.launch_app",
+      "test_id": "dyn-001",
+      "returncode": 0,
+      "stdout": "  bash arg: -p\n  bash arg: owasp.sat.agoat\n  bash arg: -c\n  bash arg: android.intent.category.LAUNCHER\n  bash arg: 1\nEvents injected: 1\n## Network stats: elapsed time=196ms (0ms mobile, 0ms wifi, 196ms not connected)\n",
+      "stderr": "args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]\n arg: \"-p\"\n arg: \"owasp.sat.agoat\"\n arg: \"-c\"\n arg: \"android.intent.category.LAUNCHER\"\n arg: \"1\"\ndata=\"owasp.sat.agoat\"\ndata=\"android.intent.category.LAUNCHER\"\n"
+    },
+    {
+      "tool": "adb.launch_activity",
+      "test_id": "dyn-002",
+      "component": "owasp.sat.agoat/owasp.sat.agoat.SplashActivity",
+      "returncode": 0,
+      "stdout": "Starting: Intent { cmp=owasp.sat.agoat/.SplashActivity }\n",
+      "stderr": ""
+    },
+    {
+      "tool": "adb.launch_activity",
+      "test_id": "dyn-003",
+      "component": "owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity",
+      "returncode": 0,
+      "stdout": "Starting: Intent { cmp=owasp.sat.agoat/.AccessControl1ViewActivity }\n",
+      "stderr": ""
+    },
+    {
+      "tool": "adb.open_deeplink",
+      "test_id": "dyn-004",
+      "url": "androgoat://vulnapp",
+      "returncode": 0,
+      "stdout": "Starting: Intent { act=android.intent.action.VIEW dat=androgoat://vulnapp/... }\n",
+      "stderr": ""
+    },
+    {
+      "tool": "adb.query_content_provider",
+      "test_id": "dyn-005",
+      "uri": "content://owasp.sat.agoat.provider.userpinsprovider",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Error while accessing provider:owasp.sat.agoat.provider.userpinsprovider\njava.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:172)\n\tat android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)\n\tat android.content.ContentProviderProxy.query(ContentProviderNative.java:495)\n\tat com.android.commands.content.Content$QueryCommand.onExecute(Content.java:661)\n\tat com.android.commands.content.Content$Command.execute(Content.java:522)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\n"
+    },
+    {
+      "tool": "adb.query_content_provider",
+      "test_id": "dyn-006",
+      "uri": "content://owasp.sat.agoat.androidx-startup",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Error while accessing provider:owasp.sat.agoat.androidx-startup\njava.lang.SecurityException: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=7548, uid=2000) that is not exported from UID 10192\n\tat android.os.Parcel.createExceptionOrNull(Parcel.java:3057)\n\tat android.os.Parcel.createException(Parcel.java:3041)\n\tat android.os.Parcel.readException(Parcel.java:3024)\n\tat android.os.Parcel.readException(Parcel.java:2966)\n\tat android.app.IActivityManager$Stub$Proxy.getContentProviderExternal(IActivityManager.java:7722)\n\tat com.android.commands.content.Content$Command.execute(Content.java:516)\n\tat com.android.commands.content.Content.main(Content.java:735)\n\tat com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)\n\tat com.android.internal.os.RuntimeInit.main(RuntimeInit.java:359)\nCaused by: android.os.RemoteException: Remote stack trace:\n\tat com.android.server.am.ContentProviderHelper.checkAssociationAndPermissionLocked(ContentProviderHelper.java:691)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderImpl(ContentProviderHelper.java:287)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternalUnchecked(ContentProviderHelper.java:162)\n\tat com.android.server.am.ContentProviderHelper.getContentProviderExternal(ContentProviderHelper.java:156)\n\tat com.android.server.am.ActivityManagerService.getContentProviderExternal(ActivityManagerService.java:6724)\n\n"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

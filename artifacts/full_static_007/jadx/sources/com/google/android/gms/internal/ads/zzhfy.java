@@ -1,0 +1,40 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@23.2.0 */
+/* loaded from: classes2.dex */
+public enum zzhfy implements zzhbs {
+    SOURCE_UNSPECIFIED(0),
+    CLIENT_GENERATION(1);
+
+    private static final zzhbt zzc = new zzhbt() { // from class: com.google.android.gms.internal.ads.zzhfw
+        @Override // com.google.android.gms.internal.ads.zzhbt
+        public final /* synthetic */ zzhbs zza(int i) {
+            return zzhfy.zzb(i);
+        }
+    };
+    private final int zze;
+
+    zzhfy(int i) {
+        this.zze = i;
+    }
+
+    public static zzhfy zzb(int i) {
+        if (i == 0) {
+            return SOURCE_UNSPECIFIED;
+        }
+        if (i != 1) {
+            return null;
+        }
+        return CLIENT_GENERATION;
+    }
+
+    @Override // java.lang.Enum
+    public final String toString() {
+        return Integer.toString(this.zze);
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzhbs
+    public final int zza() {
+        return this.zze;
+    }
+}

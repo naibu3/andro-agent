@@ -1,0 +1,2093 @@
+[
+  {
+    "type": "manifest.package",
+    "key": "package_name",
+    "value": "app.myparty.houses",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.compile_sdk_version",
+    "key": "compile_sdk_version",
+    "value": "36",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.allow_backup",
+    "key": "allow_backup",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.application.full_backup_content",
+    "key": "full_backup_content",
+    "value": "@xml/secure_store_backup_rules",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.CAMERA",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.INTERNET",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.READ_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.RECORD_AUDIO",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.SYSTEM_ALERT_WINDOW",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.VIBRATE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.WRITE_EXTERNAL_STORAGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.google.android.gms.permission.AD_ID",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.RECEIVE_BOOT_COMPLETED",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.POST_NOTIFICATIONS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_NETWORK_STATE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.USE_BIOMETRIC",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.USE_FINGERPRINT",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.WAKE_LOCK",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.google.android.c2dm.permission.RECEIVE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_AD_ID",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.ACCESS_ADSERVICES_TOPICS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "app.myparty.houses.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sec.android.provider.badge.permission.READ",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sec.android.provider.badge.permission.WRITE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.htc.launcher.permission.READ_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.htc.launcher.permission.UPDATE_SHORTCUT",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sonyericsson.home.permission.BROADCAST_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.anddoes.launcher.permission.UPDATE_COUNT",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.majeur.launcher.permission.UPDATE_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.huawei.android.launcher.permission.CHANGE_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.huawei.android.launcher.permission.READ_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "android.permission.READ_APP_BADGE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.oppo.launcher.permission.READ_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.oppo.launcher.permission.WRITE_SETTINGS",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "me.everything.badger.permission.BADGE_COUNT_READ",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "me.everything.badger.permission.BADGE_COUNT_WRITE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.permission",
+    "key": "com.android.vending.CHECK_LICENSE",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "app.myparty.houses.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "app.myparty.houses.MainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "app.myparty.houses.MainActivity",
+    "value": 3,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.facebook.FacebookActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.facebook.FacebookActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.facebook.CustomTabActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.facebook.CustomTabActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "com.facebook.CustomTabActivity",
+    "value": 2,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.reactnativestripesdk.CustomPaymentMethodActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.reactnativestripesdk.CustomPaymentMethodActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.financialconnections.FinancialConnectionsSheetActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "expo.modules.notifications.service.NotificationForwarderActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "expo.modules.notifications.service.NotificationForwarderActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "expo.modules.imagepicker.ExpoCropImageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "expo.modules.imagepicker.ExpoCropImageActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.canhub.cropper.CropImageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.canhub.cropper.CropImageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.PaymentSheetActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.PaymentSheetActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.PaymentOptionsActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.PaymentOptionsActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.customersheet.CustomerSheetActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.customersheet.CustomerSheetActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.addresselement.AddressElementActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.addresselement.AddressElementActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.addresselement.AutocompleteActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.addresselement.AutocompleteActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.ui.SepaMandateActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.ui.SepaMandateActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.ExternalPaymentMethodProxyActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.ExternalPaymentMethodProxyActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentelement.confirmation.cpms.CustomPaymentMethodProxyActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentelement.confirmation.cpms.CustomPaymentMethodProxyActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentsheet.paymentdatacollection.cvcrecollection.CvcRecollectionActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentsheet.paymentdatacollection.cvcrecollection.CvcRecollectionActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentelement.embedded.form.FormActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentelement.embedded.form.FormActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.paymentelement.embedded.manage.ManageActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.paymentelement.embedded.manage.ManageActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.link.LinkActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.link.LinkActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.link.LinkForegroundActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.link.LinkForegroundActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.link.LinkRedirectHandlerActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.link.LinkRedirectHandlerActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "com.stripe.android.link.LinkRedirectHandlerActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.shoppay.ShopPayActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.shoppay.ShopPayActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.challenge.PassiveChallengeActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.challenge.PassiveChallengeActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.ui.core.cardscan.CardScanActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.ui.core.cardscan.CardScanActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.view.PaymentAuthWebViewActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.view.PaymentAuthWebViewActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.view.PaymentRelayActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.view.PaymentRelayActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.payments.StripeBrowserLauncherActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.payments.StripeBrowserLauncherActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "com.stripe.android.payments.StripeBrowserProxyReturnActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.googlepaylauncher.GooglePayLauncherActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.googlepaylauncher.GooglePayLauncherActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.intent_filters_count",
+    "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteRedirectActivity",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.financialconnections.lite.FinancialConnectionsSheetLiteActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.stripe.android.stripe3ds2.views.ChallengeActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.stripe.android.stripe3ds2.views.ChallengeActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.facebook.CustomTabMainActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.facebook.CustomTabMainActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "inferred_default_false"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.mlkit.vision.codescanner.internal.GmsBarcodeScanningDelegateActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.mlkit.vision.codescanner.internal.GmsBarcodeScanningDelegateActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.android.gms.common.api.GoogleApiActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.android.gms.common.api.GoogleApiActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.activity.present",
+    "key": "com.pairip.licensecheck.LicenseActivity",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity"
+    }
+  },
+  {
+    "type": "manifest.component.activity.exported",
+    "key": "com.pairip.licensecheck.LicenseActivity",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "activity",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "expo.modules.notifications.service.ExpoFirebaseMessagingService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "expo.modules.notifications.service.ExpoFirebaseMessagingService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.intent_filters_count",
+    "key": "expo.modules.notifications.service.ExpoFirebaseMessagingService",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.android.gms.metadata.ModuleDependencies",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.android.gms.metadata.ModuleDependencies",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "com.google.android.gms.metadata.ModuleDependencies",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.intent_filters_count",
+    "key": "com.google.android.gms.metadata.ModuleDependencies",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "androidx.camera.core.impl.MetadataHolderService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "androidx.camera.core.impl.MetadataHolderService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.enabled",
+    "key": "androidx.camera.core.impl.MetadataHolderService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.firebase.messaging.FirebaseMessagingService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.firebase.messaging.FirebaseMessagingService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.intent_filters_count",
+    "key": "com.google.firebase.messaging.FirebaseMessagingService",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.firebase.components.ComponentDiscoveryService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.firebase.components.ComponentDiscoveryService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.present",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.service.exported",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.service.permission",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+    "value": "android.permission.BIND_JOB_SERVICE",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "service"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "expo.modules.notifications.service.NotificationsService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "expo.modules.notifications.service.NotificationsService",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "expo.modules.notifications.service.NotificationsService",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "expo.modules.notifications.service.NotificationsService",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": "com.google.android.c2dm.permission.SEND",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "com.facebook.CurrentAccessTokenExpirationBroadcastReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "com.facebook.CurrentAccessTokenExpirationBroadcastReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "com.facebook.CurrentAccessTokenExpirationBroadcastReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver",
+    "value": 1,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.permission",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": "android.permission.DUMP",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.enabled",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.intent_filters_count",
+    "key": "androidx.profileinstaller.ProfileInstallReceiver",
+    "value": 4,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.present",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver"
+    }
+  },
+  {
+    "type": "manifest.component.receiver.exported",
+    "key": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "receiver",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider",
+    "value": "app.myparty.houses.ImagePickerFileProvider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "expo.modules.imagepicker.fileprovider.ImagePickerFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.canhub.cropper.CropFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.canhub.cropper.CropFileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.canhub.cropper.CropFileProvider",
+    "value": "app.myparty.houses.cropper.fileprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "com.canhub.cropper.CropFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "expo.modules.clipboard.ClipboardFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "expo.modules.clipboard.ClipboardFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "expo.modules.clipboard.ClipboardFileProvider",
+    "value": "app.myparty.houses.ClipboardFileProvider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.google.mlkit.common.internal.MlKitInitProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.google.mlkit.common.internal.MlKitInitProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.google.mlkit.common.internal.MlKitInitProvider",
+    "value": "app.myparty.houses.mlkitinitprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "expo.modules.filesystem.FileSystemFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "expo.modules.filesystem.FileSystemFileProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "expo.modules.filesystem.FileSystemFileProvider",
+    "value": "app.myparty.houses.FileSystemFileProvider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.grant_uri_permissions",
+    "key": "expo.modules.filesystem.FileSystemFileProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.google.firebase.provider.FirebaseInitProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.google.firebase.provider.FirebaseInitProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.google.firebase.provider.FirebaseInitProvider",
+    "value": "app.myparty.houses.firebaseinitprovider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "androidx.startup.InitializationProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "androidx.startup.InitializationProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "androidx.startup.InitializationProvider",
+    "value": "app.myparty.houses.androidx-startup",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.facebook.internal.FacebookInitProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.facebook.internal.FacebookInitProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.facebook.internal.FacebookInitProvider",
+    "value": "app.myparty.houses.FacebookInitProvider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  },
+  {
+    "type": "manifest.component.provider.present",
+    "key": "com.pairip.licensecheck.LicenseContentProvider",
+    "value": true,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider"
+    }
+  },
+  {
+    "type": "manifest.component.provider.exported",
+    "key": "com.pairip.licensecheck.LicenseContentProvider",
+    "value": false,
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {
+      "component_type": "provider",
+      "exported_source": "explicit"
+    }
+  },
+  {
+    "type": "manifest.component.provider.authorities",
+    "key": "com.pairip.licensecheck.LicenseContentProvider",
+    "value": "app.myparty.houses.com.pairip.licensecheck.LicenseContentProvider",
+    "source": "manifest",
+    "confidence": "high",
+    "metadata": {}
+  }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/google/android/material/search/SearchBar.java",
+    "line_number": 47,
+    "line_text": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/google/android/material/color/ColorResourcesLoaderCreator.java",
+    "line_number": 32,
+    "line_text": "OutputStream pipeWriter = new FileOutputStream(arscFile);"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/google/android/material/chip/ChipDrawable.java",
+    "line_number": 52,
+    "line_text": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/google/android/material/chip/Chip.java",
+    "line_number": 56,
+    "line_text": "private static final String NAMESPACE_ANDROID = \"http://schemas.android.com/apk/res/android\";"
+  },
+  {
+    "pattern_name": "runtime_exec",
+    "category": "command_execution",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/scottyab/rootbeer/RootBeer.java",
+    "line_number": 118,
+    "line_text": "InputStream inputstream = Runtime.getRuntime().exec(\"getprop\").getInputStream();"
+  },
+  {
+    "pattern_name": "runtime_exec",
+    "category": "command_execution",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/scottyab/rootbeer/RootBeer.java",
+    "line_number": 132,
+    "line_text": "InputStream inputstream = Runtime.getRuntime().exec(\"mount\").getInputStream();"
+  },
+  {
+    "pattern_name": "runtime_exec",
+    "category": "command_execution",
+    "file_path": "artifacts/full_static_007b/jadx/sources/com/scottyab/rootbeer/RootBeer.java",
+    "line_number": 245,
+    "line_text": "process = Runtime.getRuntime().exec(new String[]{\"which\", \"su\"});"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__UtilsKt.java",
+    "line_number": 204,
+    "line_text": "fileInputStream = new FileOutputStream(target);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 74,
+    "line_text": "return new OutputStreamWriter(new FileOutputStream($this$writer_u24default), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 80,
+    "line_text": "return new OutputStreamWriter(new FileOutputStream($this$writer), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 92,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter_u24default), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 99,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 109,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter_u24default), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 116,
+    "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter), charset);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 175,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream($this$writeBytes);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 188,
+    "line_text": "FileOutputStream fileOutputStream = new FileOutputStream($this$appendBytes, true);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "line_number": 299,
+    "line_text": "return new FileOutputStream($this$outputStream);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/print/PrintHelper.java",
+    "line_number": 357,
+    "line_text": "pdfDocument.writeTo(new FileOutputStream(fileDescriptor.getFileDescriptor()));"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/util/AtomicFile.java",
+    "line_number": 39,
+    "line_text": "return new FileOutputStream(this.mNewName);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/util/AtomicFile.java",
+    "line_number": 46,
+    "line_text": "return new FileOutputStream(this.mNewName);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/app/AppLaunchChecker.java",
+    "line_number": 15,
+    "line_text": "return context.getSharedPreferences(SHARED_PREFS_NAME, 0).getBoolean(KEY_STARTED_FROM_LAUNCHER, false);"
+  },
+  {
+    "pattern_name": "sharedprefs_write",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/app/AppLaunchChecker.java",
+    "line_number": 20,
+    "line_text": "SharedPreferences sp = activity.getSharedPreferences(SHARED_PREFS_NAME, 0);"
+  },
+  {
+    "pattern_name": "file_output_stream",
+    "category": "storage",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/graphics/TypefaceCompatUtil.java",
+    "line_number": 116,
+    "line_text": "os = new FileOutputStream(file, false);"
+  },
+  {
+    "pattern_name": "base64_decode",
+    "category": "encoding",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/content/res/FontResourcesParserCompat.java",
+    "line_number": 215,
+    "line_text": "result.add(Base64.decode(item, 0));"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/content/res/TypedArrayUtils.java",
+    "line_number": 14,
+    "line_text": "private static final String NAMESPACE = \"http://schemas.android.com/apk/res/android\";"
+  },
+  {
+    "pattern_name": "hardcoded_http",
+    "category": "network",
+    "file_path": "artifacts/full_static_007b/jadx/sources/androidx/core/content/pm/ShortcutXmlParser.java",
+    "line_number": 98,
+    "line_text": "String value = parser.getAttributeValue(\"http://schemas.android.com/apk/res/android\", attribute);"
+  },
+  {
+    "pattern_name": "webview_loadUrl",
+    "category": "webview",
+    "file_path": "artifacts/full_static_007b/jadx/sources/id/blackbear/vulnapk/VulnWeb.java",
+    "line_number": 42,
+    "line_text": "this.webView.loadUrl(String.valueOf(content));"
+  },
+  {
+    "pattern_name": "cipher_instance",
+    "category": "crypto",
+    "file_path": "artifacts/full_static_007b/jadx/sources/id/blackbear/vulnapk/CryptoUtil.java",
+    "line_number": 15,
+    "line_text": "Cipher cipher = Cipher.getInstance(\"AES/ECB/PKCS5Padding\");"
+  }
+]

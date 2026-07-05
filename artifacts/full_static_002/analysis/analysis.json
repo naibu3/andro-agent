@@ -1,0 +1,11 @@
+{
+  "parsed": {
+    "summary": "The application exposes several components (activities, services, receivers, a content provider) that are exported without protecting permissions, thereby allowing any external app to invoke them. Additionally, the app is marked debuggable and allows backup restoration, which can further aid unintended access or data leakage. These findings raise significant risks of unauthorized control, data exposure, and potential injection attacks if the exported endpoints handle input insecurely.",
+    "key_risks": [
+      "External apps can invoke exported components without authorization, enabling unauthorized actions or data extraction.",
+      "Debuggable flag allows local debugging tools to inspect or modify the running app, facilitating reverse engineering or runtime exploitation.",
+      "Allowing backup restoration may expose sensitive local data to backup services or attackers who can trigger restores."
+    ]
+  },
+  "raw": "{\"summary\":\"The application exposes several components (activities, services, receivers, a content provider) that are exported without protecting permissions, thereby allowing any external app to invoke them. Additionally, the app is marked debuggable and allows backup restoration, which can further aid unintended access or data leakage. These findings raise significant risks of unauthorized control, data exposure, and potential injection attacks if the exported endpoints handle input insecurely.\",\"key_risks\":[\"External apps can invoke exported components without authorization, enabling unauthorized actions or data extraction.\",\"Debuggable flag allows local debugging tools to inspect or modify the running app, facilitating reverse engineering or runtime exploitation.\",\"Allowing backup restoration may expose sensitive local data to backup services or attackers who can trigger restores.\"]}"
+}

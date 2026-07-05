@@ -1,0 +1,24 @@
+--------- beginning of main
+04-21 12:38:01.895  8618  8618 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+04-21 12:38:01.899  8618  8618 I AndroidRuntime: Using default boot image
+04-21 12:38:01.899  8618  8618 I AndroidRuntime: Leaving lock profiling enabled
+04-21 12:38:01.901  8618  8618 I app_process: Core platform API reporting enabled, enforcing=false
+04-21 12:38:01.901  8618  8618 I app_process: Using CollectorTypeCC GC.
+04-21 12:38:01.962  8618  8618 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+04-21 12:38:01.971  8618  8618 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+04-21 12:38:01.971  8618  8618 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+04-21 12:38:01.976  8618  8618 W app_process: Unexpected CPU variant for x86: x86_64.
+04-21 12:38:01.976  8618  8618 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+04-21 12:38:01.988  8618  8618 W libc    : Access denied finding property "ro.product.name_for_attestation"
+04-21 12:38:01.988  8618  8618 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+04-21 12:38:01.988  8618  8618 W libc    : Access denied finding property "ro.product.model_for_attestation"
+04-21 12:38:01.988  8618  8618 W main    : type=1400 audit(0.0:316): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:38:01.989  8618  8618 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+04-21 12:38:01.988  8618  8618 W main    : type=1400 audit(0.0:317): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+04-21 12:38:01.988  8618  8618 W main    : type=1400 audit(0.0:318): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+04-21 12:38:01.991   555  2058 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=8618, uid=2000) that is not exported from UID 10192
+04-21 12:38:01.992  8618  8618 D AndroidRuntime: Shutting down VM
+04-21 12:38:02.022  6335  8633 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+04-21 12:38:02.034   951   951 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-21 12:38:02.722   951   951 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled

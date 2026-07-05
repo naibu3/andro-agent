@@ -1,0 +1,16 @@
+{
+  "parsed": {
+    "summary": "The APK exposes several high‑risk configuration and component design issues: the debug flag is enabled, backups are allowed, and multiple components (activities, a service, a receiver, and a provider) are exported without protecting permissions. These weaknesses open avenues for unauthorized code execution, data leakage and potential misuse of sensitive data.",
+    "key_risks": [
+      "Unprotected exported components enable external apps to invoke UI/logic, potentially leaking data or executing privileged actions.",
+      "Debuggable set to true exposes internal state and debugging interfaces, facilitating reverse engineering and runtime attacks.",
+      "allowBackup enabled may allow sensitive application data to be backed up and restored by malicious parties."
+    ],
+    "next_steps": [
+      "Disable android:debuggable or conditionally set it only for development builds.",
+      "Add appropriate protecting permissions or set exported=\"false\" for all unnecessary exported components.",
+      "Disable allowBackup or ensure all stored data is encrypted before backup."
+    ]
+  },
+  "raw": "{\"summary\":\"The APK exposes several high‑risk configuration and component design issues: the debug flag is enabled, backups are allowed, and multiple components (activities, a service, a receiver, and a provider) are exported without protecting permissions. These weaknesses open avenues for unauthorized code execution, data leakage and potential misuse of sensitive data.\",\"key_risks\":[\"Unprotected exported components enable external apps to invoke UI/logic, potentially leaking data or executing privileged actions.\",\"Debuggable set to true exposes internal state and debugging interfaces, facilitating reverse engineering and runtime attacks.\",\"allowBackup enabled may allow sensitive application data to be backed up and restored by malicious parties.\"],\"next_steps\":[\"Disable android:debuggable or conditionally set it only for development builds.\",\"Add appropriate protecting permissions or set exported=\\\"false\\\" for all unnecessary exported components.\",\"Disable allowBackup or ensure all stored data is encrypted before backup.\"]}"
+}
