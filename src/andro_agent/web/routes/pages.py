@@ -9,11 +9,14 @@ from fastapi.templating import Jinja2Templates
 from andro_agent.web.db import CaseRepository
 from andro_agent.web.routes.api_scans import create_scan
 from andro_agent.web.services.result_service import (
+    attach_evidence_to_web_findings,
     category_summary,
+    collect_findings_from_state,
     extract_artifacts,
     extract_package_name_from_state,
     final_report_markdown,
     load_case_state,
+    load_evidence_for_case,
     render_report_html,
     severity_summary,
 )
@@ -151,11 +154,24 @@ def case_detail(request: Request, case_id: str):
 
     state = load_case_state(Path(case["artifacts_dir"]).parent, case_id)
     findings = case_repo.list_findings(case_id)
+    canonical_findings = collect_findings_from_state(state)
+
+    for index, finding in enumerate(findings):
+        if index < len(canonical_findings):
+            finding["evidence_ids"] = canonical_findings[index].get("evidence_ids", [])
+
+    evidence = load_evidence_for_case(state)
+    findings = attach_evidence_to_web_findings(findings, evidence)
 
     if not case.get("package_name"):
         case["package_name"] = extract_package_name_from_state(state)
 
-    report_md = final_report_markdown(case=case, state=state, findings=findings)
+    report_md = final_report_markdown(
+        case=case,
+        state=state,
+        findings=findings,
+        evidence=evidence,
+    )
     report_html = render_report_html(report_md)
 
     artifacts_dir = Path(case["artifacts_dir"])
@@ -171,6 +187,8 @@ def case_detail(request: Request, case_id: str):
             "is_non_final": False,
             "state": state,
             "findings": findings,
+            "evidence": evidence,
+            "evidence_count": len(evidence),
             "severity_summary": severity_summary(findings),
             "category_summary": category_summary(findings),
             "report_html": report_html,

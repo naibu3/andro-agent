@@ -143,6 +143,9 @@
 
     <dt>Updated</dt>
     <dd>{{ case.updated_at }}</dd>
+
+    <dt>Evidence items</dt>
+    <dd>{{ evidence_count }}</dd>
   </dl>
 
   {% if case.error_message %}
@@ -187,10 +190,30 @@
           <span>{{ finding.category or "uncategorized" }}</span>
         </div>
 
+        {% if finding.linked_evidence %}
+        <details>
+          <summary>Evidence</summary>
+          {% for evidence_item in finding.linked_evidence %}
+          <dl class="metadata">
+            {% for field in ["evidence_id", "evidence_type", "source_tool", "artifact_path", "selector", "snippet", "command"] %}
+              {% if evidence_item.get(field) %}
+              <dt>{{ field }}</dt>
+              <dd><pre>{{ evidence_item.get(field) }}</pre></dd>
+              {% endif %}
+            {% endfor %}
+          </dl>
+          {% endfor %}
+        </details>
+        {% elif finding.evidence %}
         <details>
           <summary>Evidencia</summary>
           <pre>{{ finding.evidence_pretty }}</pre>
         </details>
+        {% endif %}
+
+        {% if finding.missing_evidence_ids %}
+        <p class="muted">Evidence metadata missing for: {{ finding.missing_evidence_ids | join(", ") }}</p>
+        {% endif %}
       </article>
       {% endfor %}
     </div>

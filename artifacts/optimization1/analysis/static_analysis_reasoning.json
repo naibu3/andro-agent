@@ -1,0 +1,8 @@
+{
+  "summary": "Model response could not be parsed as JSON.",
+  "top_risks": [],
+  "correlations": [],
+  "vulnerability_candidates": [],
+  "recommended_next_steps": [],
+  "raw_response": "{\"summary\":\"The combined static analysis highlights a high-risk Android application with multiple exported components lacking protective permissions, vulnerable runtime command execution, unsanitized SQL, and insecure storage backed by debuggable and allowBackup enabled settings. These overlapping attack surfaces enable attackers to exploit the app’s components to execute arbitrary shell commands, inject SQL, exfiltrate sensitive data, and persist malicious files.\",\"top_risks\":[\"Exported components without protection enabling arbitrary code execution\",\"Unfiltered Runtime.exec usage allowing shell command execution\",\"Unparameterized SQL queries exposing SQL injection\",\"Debuggable=true and allowBackup=true exposing sensitive data via SharedPreferences\",\"Exposed ContentProvider exposing data without permission\"],\"correlations\":[\"Exported component activation can trigger Runtime.exec calls\",\"Debuggable/allowBackup facilitate extraction of data written by unsecured SharedPreferences\",\"Unparameterized SQL can be leveraged by attackers who gain write access through dangerous permissions\",\"ContentProvider expose allows direct read/write to insecure files created by unprotected FileOutputStreams\",\"WebView in exported activity can load untrusted URLs, creating XSS/vector channels\"],\"vulnerability_candidates\":[\"artifacts/optimization1/jadx/sources/owasp/sat/agoat/RootDetectionActivity.java\",\"artifacts/optimization1/jadx/sources/"
+}

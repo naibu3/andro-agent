@@ -6,8 +6,9 @@ from andro_agent.pipelines.static_pipeline import StaticAnalysisPipeline
 from andro_agent.validators.apk import APKValidationError, validate_apk
 from andro_agent.web.db import CaseRepository
 from andro_agent.web.services.result_service import (
-    collect_findings_from_state,
+    collect_findings_and_evidence_from_state,
     extract_package_name_from_state,
+    write_evidence_json_if_possible,
 )
 
 
@@ -45,7 +46,8 @@ def run_static_scan(case_id: str) -> None:
 
         state_dict = state.model_dump(mode="json")
 
-        findings = collect_findings_from_state(state_dict)
+        findings, evidence = collect_findings_and_evidence_from_state(state_dict)
+        write_evidence_json_if_possible(state=state_dict, evidence=evidence)
         case_repo.replace_findings(case_id, findings)
 
         package_name = state.package_name or extract_package_name_from_state(state_dict)

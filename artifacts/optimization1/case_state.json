@@ -1,0 +1,73 @@
+{
+  "case_id": "optimization1",
+  "apk_path": "samples/AndroGoat.apk",
+  "manifest_json_path": "artifacts/optimization1/parsed/manifest.json",
+  "facts_path": "artifacts/optimization1/facts/manifest_facts.json",
+  "findings_path": "artifacts/optimization1/findings/manifest_findings.json",
+  "analysis_path": "artifacts/optimization1/analysis/static_analysis_reasoning.json",
+  "analysis_raw_path": "artifacts/optimization1/analysis/static_analysis_reasoning_raw.txt",
+  "jadx_output_dir": "artifacts/optimization1/jadx",
+  "code_search_results_path": "artifacts/optimization1/code_search/code_search_results.json",
+  "code_facts_path": "artifacts/optimization1/facts/code_search_facts.json",
+  "code_findings_path": "artifacts/optimization1/findings/code_findings.json",
+  "correlated_findings_path": null,
+  "static_analysis_bundle_path": "artifacts/optimization1/bundle/static_analysis_bundle.json",
+  "static_report_path": "artifacts/optimization1/report/static_analysis_report.md",
+  "evidence_registry_path": null,
+  "candidates_path": null,
+  "manifest_reasoning_path": "artifacts/optimization1/analysis/manifest_reasoning.json",
+  "manifest_reasoning_raw_path": "artifacts/optimization1/analysis/manifest_reasoning_raw.txt",
+  "code_reasoning_path": "artifacts/optimization1/analysis/code_reasoning.json",
+  "code_reasoning_raw_path": "artifacts/optimization1/analysis/code_reasoning_raw.txt",
+  "metrics_tracker": null,
+  "dynamic_plan_path": null,
+  "dynamic_results_path": null,
+  "dynamic_report_path": null,
+  "device_profile": null,
+  "package_name": null,
+  "status": "completed",
+  "current_step": "markdown_report_agent",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 50
+    },
+    {
+      "agent": "manifest_risk_agent",
+      "success": true,
+      "output": "artifacts/optimization1/analysis/manifest_reasoning.json",
+      "raw_output": "artifacts/optimization1/analysis/manifest_reasoning_raw.txt"
+    },
+    {
+      "agent": "code_risk_agent",
+      "success": true,
+      "output": "artifacts/optimization1/analysis/code_reasoning.json",
+      "raw_output": "artifacts/optimization1/analysis/code_reasoning_raw.txt"
+    },
+    {
+      "agent": "risk_fusion_agent",
+      "success": true,
+      "output": "artifacts/optimization1/analysis/static_analysis_reasoning.json",
+      "raw_output": "artifacts/optimization1/analysis/static_analysis_reasoning_raw.txt"
+    },
+    {
+      "agent": "markdown_report_agent",
+      "success": true,
+      "output": "artifacts/optimization1/report/static_analysis_report.md"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

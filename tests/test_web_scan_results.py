@@ -10,6 +10,12 @@ from fastapi import HTTPException
 from starlette.requests import Request
 from starlette.routing import Match
 
+from andro_agent.web.services.result_service import (
+    attach_evidence_to_web_findings,
+    collect_findings_and_evidence_from_state,
+    load_evidence_for_case,
+)
+
 
 @pytest.fixture()
 def web_context(tmp_path, monkeypatch):
@@ -119,6 +125,23 @@ def make_completed_case(
         "static_report_path": str(report_path),
     }
     (case_dir / "case_state.json").write_text(json.dumps(state), encoding="utf-8")
+    (case_dir / "findings").mkdir(parents=True, exist_ok=True)
+    (case_dir / "findings" / "manifest_findings.json").write_text(
+        json.dumps(
+            [
+                {
+                    "rule_id": "EXPORTED_ACTIVITY",
+                    "summary": "Activity is exported.",
+                    "severity": "high",
+                    "category": "attack_surface",
+                    "evidence": [{"relative_path": "AndroidManifest.xml"}],
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    state["findings_path"] = str(case_dir / "findings" / "manifest_findings.json")
+    (case_dir / "case_state.json").write_text(json.dumps(state), encoding="utf-8")
 
     web_context["repo"].replace_findings(
         case_id,
@@ -135,6 +158,57 @@ def make_completed_case(
     )
 
     return case_dir
+
+
+def evidence_state(tmp_path, case_id: str = "evidence-case"):
+    case_dir = tmp_path / case_id
+    findings_path = case_dir / "findings" / "findings.json"
+    findings_path.parent.mkdir(parents=True)
+    findings_path.write_text("[]", encoding="utf-8")
+    return case_dir, {"case_id": case_id, "findings_path": str(findings_path)}
+
+
+def test_load_evidence_for_case_returns_empty_when_missing(tmp_path):
+    _, state = evidence_state(tmp_path)
+
+    assert load_evidence_for_case(state) == []
+
+
+def test_load_evidence_for_case_loads_valid_json(tmp_path):
+    case_dir, state = evidence_state(tmp_path)
+    evidence = [{"evidence_id": "EVID-1", "evidence_type": "manifest"}]
+    evidence_dir = case_dir / "evidence"
+    evidence_dir.mkdir()
+    (evidence_dir / "evidence.json").write_text(json.dumps(evidence), encoding="utf-8")
+
+    assert load_evidence_for_case(state) == evidence
+
+
+def test_load_evidence_for_case_returns_empty_for_invalid_json(tmp_path, caplog):
+    case_dir, state = evidence_state(tmp_path)
+    evidence_dir = case_dir / "evidence"
+    evidence_dir.mkdir()
+    (evidence_dir / "evidence.json").write_text("{invalid", encoding="utf-8")
+
+    assert load_evidence_for_case(state) == []
+    assert "Could not parse evidence JSON" in caplog.text
+
+
+def test_attach_evidence_to_web_findings_links_and_records_missing_ids():
+    findings = [
+        {
+            "title": "Finding",
+            "evidence_ids": ["EVID-1", "EVID-MISSING"],
+            "evidence": ["legacy"],
+        }
+    ]
+    evidence = [{"evidence_id": "EVID-1", "snippet": "exported=true"}]
+
+    attached = attach_evidence_to_web_findings(findings, evidence)
+
+    assert attached[0]["linked_evidence"] == evidence
+    assert attached[0]["missing_evidence_ids"] == ["EVID-MISSING"]
+    assert attached[0]["evidence"] == ["legacy"]
 
 
 def test_running_detail_hides_final_sections(web_context):
@@ -207,13 +281,53 @@ def test_completed_detail_shows_results_and_downloads(web_context):
     assert "Findings" in body
     assert "Exported activity" in body
     assert "Reporte" in body
-    assert "Final report" in body
+    assert "Android Security Analysis Report" in body
     assert "Artifacts" in body
     assert "Downloads" in body
     assert "/api/scans/completed-case/downloads/findings.json" in body
     assert "/api/scans/completed-case/downloads/report.md" in body
     assert "/api/scans/completed-case/downloads/report.html" in body
     assert "/api/scans/completed-case/downloads/bundle.zip" in body
+
+
+def test_completed_detail_renders_linked_evidence(web_context):
+    case_dir = make_completed_case(web_context, "linked-evidence-case")
+    state = json.loads((case_dir / "case_state.json").read_text(encoding="utf-8"))
+    _, evidence = collect_findings_and_evidence_from_state(state)
+    evidence[0].update(
+        {
+            "source_tool": "manifest",
+            "selector": "activity:MainActivity",
+            "snippet": "android:exported=true",
+            "command": "inspect manifest",
+        }
+    )
+    evidence_dir = case_dir / "evidence"
+    evidence_dir.mkdir()
+    (evidence_dir / "evidence.json").write_text(json.dumps(evidence), encoding="utf-8")
+
+    body = render_case_detail(web_context, "linked-evidence-case")
+
+    assert "Evidence items" in body
+    assert evidence[0]["evidence_id"] in body
+    assert "android:exported=true" in body
+    assert "inspect manifest" in body
+
+
+@pytest.mark.parametrize("status", ["running", "failed"])
+def test_non_completed_detail_does_not_render_evidence(web_context, status):
+    case_dir = create_case(web_context, f"{status}-evidence-case", status)
+    evidence_dir = case_dir / "evidence"
+    evidence_dir.mkdir()
+    (evidence_dir / "evidence.json").write_text(
+        json.dumps([{"evidence_id": "EVID-SHOULD-NOT-RENDER"}]),
+        encoding="utf-8",
+    )
+
+    body = render_case_detail(web_context, f"{status}-evidence-case")
+
+    assert "EVID-SHOULD-NOT-RENDER" not in body
+    assert "Evidence items" not in body
 
 
 def test_status_endpoint_is_minimal(web_context):
@@ -230,6 +344,7 @@ def test_status_endpoint_is_minimal(web_context):
     }
     body = json.dumps(response)
     assert "findings" not in body
+    assert "evidence" not in body
     assert "report" not in body
     assert "artifacts" not in body
     assert "CaseState" not in body
@@ -302,8 +417,14 @@ def test_download_endpoints_work_after_completion(web_context):
     report_html = web_context["api"].download_report_html("download-case")
     bundle = web_context["api"].download_bundle("download-case")
 
-    assert json.loads(Path(findings.path).read_text(encoding="utf-8"))[0]["title"] == "Exported activity"
-    assert "# Final report" in Path(report_md.path).read_text(encoding="utf-8")
+    downloaded_findings = json.loads(Path(findings.path).read_text(encoding="utf-8"))
+
+    assert downloaded_findings[0]["title"] == "EXPORTED_ACTIVITY"
+    assert downloaded_findings[0]["evidence_ids"]
+    report_markdown = Path(report_md.path).read_text(encoding="utf-8")
+
+    assert "# Android Security Analysis Report" in report_markdown
+    assert downloaded_findings[0]["evidence_ids"][0] in report_markdown
     assert "<h1" in Path(report_html.path).read_text(encoding="utf-8")
     assert bundle.media_type == "application/zip"
     assert bundle.path.name == "bundle.zip"
@@ -323,6 +444,8 @@ def test_bundle_contains_safe_files_and_excludes_uploaded_apk(web_context):
     assert "findings.json" in names
     assert "report.md" in names
     assert "report.html" in names
+    assert "evidence/evidence.json" in names
+    assert "artifacts/evidence/evidence.json" not in names
     assert "artifacts/facts/manifest.json" in names
     assert "artifacts/logs/run.log" in names
     assert "artifacts/uploaded.apk" not in names
@@ -334,6 +457,15 @@ def test_bundle_contains_safe_files_and_excludes_uploaded_apk(web_context):
     assert "artifacts/.pytest_cache/state.json" not in names
     assert "artifacts/__pycache__/cached.json" not in names
     assert "artifacts/debug.tmp" not in names
+
+
+def test_findings_download_contains_generated_evidence_ids(web_context):
+    make_completed_case(web_context, "download-evidence-case")
+
+    response = web_context["api"].download_findings("download-evidence-case")
+    findings = json.loads(Path(response.path).read_text(encoding="utf-8"))
+
+    assert findings[0]["evidence_ids"]
 
 
 def test_bundle_excludes_symlinks_outside_case_dir(web_context, tmp_path):
@@ -363,7 +495,7 @@ def test_report_html_escapes_raw_html(web_context):
 
     assert "<script" not in html.lower()
     assert "<img" not in html.lower()
-    assert "&lt;script&gt;" in html
+    assert "Android Security Analysis Report" in html
 
 
 def test_bundle_regenerates_on_each_download(web_context):

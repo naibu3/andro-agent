@@ -1,12 +1,20 @@
 from __future__ import annotations
 
 import json
+import logging
 import re
 import zipfile
 from collections import Counter
 from html import escape
 from pathlib import Path
 from typing import Any
+
+from andro_agent.domain.adapters.security_evidence import attach_evidence_to_finding_dicts
+from andro_agent.domain.adapters.security_findings import (
+    canonicalize_finding,
+    finding_to_web_dict,
+)
+from andro_agent.web.services.report_rendering import render_structured_report_markdown
 
 
 IGNORED_HTTP_PREFIXES = (
@@ -37,6 +45,8 @@ SEVERITY_ORDER = {
     "info": 4,
     "unknown": 5,
 }
+
+logger = logging.getLogger(__name__)
 
 
 def read_json(path: Path) -> Any:
@@ -77,6 +87,74 @@ def load_case_state(artifacts_dir: str | Path, case_id: str) -> dict[str, Any]:
         return {}
 
     return read_json_if_exists(state_path, {})
+
+
+def load_evidence_for_case(state: dict[str, Any]) -> list[dict[str, Any]]:
+    case_dir = _safe_case_artifacts_dir(state)
+
+    if not case_dir:
+        return []
+
+    evidence_path = case_dir / "evidence" / "evidence.json"
+
+    if not evidence_path.exists():
+        return []
+
+    try:
+        evidence = read_json(evidence_path)
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        logger.warning(
+            "Could not parse evidence JSON for case %s: %s",
+            state.get("case_id"),
+            exc,
+        )
+        return []
+
+    if not isinstance(evidence, list):
+        logger.warning(
+            "Evidence JSON for case %s does not contain a list",
+            state.get("case_id"),
+        )
+        return []
+
+    return [item for item in evidence if isinstance(item, dict)]
+
+
+def evidence_lookup_by_id(
+    evidence: list[dict[str, Any]],
+) -> dict[str, dict[str, Any]]:
+    return {
+        str(item["evidence_id"]): item
+        for item in evidence
+        if item.get("evidence_id")
+    }
+
+
+def attach_evidence_to_web_findings(
+    findings: list[dict[str, Any]],
+    evidence: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    evidence_by_id = evidence_lookup_by_id(evidence)
+    attached: list[dict[str, Any]] = []
+
+    for finding in findings:
+        item = dict(finding)
+        evidence_ids = item.get("evidence_ids")
+        requested_ids = evidence_ids if isinstance(evidence_ids, list) else []
+        normalized_ids = [str(evidence_id) for evidence_id in requested_ids]
+        item["linked_evidence"] = [
+            evidence_by_id[evidence_id]
+            for evidence_id in normalized_ids
+            if evidence_id in evidence_by_id
+        ]
+        item["missing_evidence_ids"] = [
+            evidence_id
+            for evidence_id in normalized_ids
+            if evidence_id not in evidence_by_id
+        ]
+        attached.append(item)
+
+    return attached
 
 
 def extract_package_name_from_state(state: dict[str, Any]) -> str | None:
@@ -246,8 +324,22 @@ def final_report_markdown(
     case: dict[str, Any],
     state: dict[str, Any],
     findings: list[dict[str, Any]],
+    evidence: list[dict[str, Any]] | None = None,
 ) -> str:
     report_md = read_text_if_exists(state.get("static_report_path"))
+    structured_findings, structured_evidence = _structured_report_inputs(
+        state=state,
+        fallback_findings=findings,
+        fallback_evidence=evidence,
+    )
+
+    if structured_findings and structured_evidence:
+        return render_structured_report_markdown(
+            case=case,
+            state=state,
+            findings=structured_findings,
+            evidence=structured_evidence,
+        )
 
     if should_use_fallback_report(report_md, findings):
         report_md = build_fallback_report_markdown(
@@ -272,22 +364,37 @@ def write_final_download_files(
     findings_path = downloads_dir / "findings.json"
     report_md_path = downloads_dir / "report.md"
     report_html_path = downloads_dir / "report.html"
+    download_findings, evidence = _collect_findings_and_evidence_for_downloads(
+        state=state,
+        fallback_findings=findings,
+    )
 
-    report_md = final_report_markdown(case=case, state=state, findings=findings)
+    report_md = final_report_markdown(
+        case=case,
+        state=state,
+        findings=download_findings,
+        evidence=evidence,
+    )
     report_html = render_report_html(report_md)
+    evidence_path = write_evidence_json_if_possible(state=state, evidence=evidence)
 
     findings_path.write_text(
-        json.dumps(findings, indent=2, ensure_ascii=False, default=str),
+        json.dumps(download_findings, indent=2, ensure_ascii=False, default=str),
         encoding="utf-8",
     )
     report_md_path.write_text(report_md, encoding="utf-8")
     report_html_path.write_text(report_html, encoding="utf-8")
 
-    return {
+    paths = {
         "findings": findings_path,
         "report_md": report_md_path,
         "report_html": report_html_path,
     }
+
+    if evidence_path:
+        paths["evidence"] = evidence_path
+
+    return paths
 
 
 def build_download_bundle(
@@ -311,6 +418,9 @@ def build_download_bundle(
         bundle.write(paths["report_md"], "report.md")
         bundle.write(paths["report_html"], "report.html")
 
+        if paths.get("evidence"):
+            bundle.write(paths["evidence"], "evidence/evidence.json")
+
         for artifact_path in safe_final_artifacts(case_dir):
             if artifact_path in paths.values():
                 continue
@@ -323,6 +433,9 @@ def build_download_bundle(
                 continue
 
             if relative.startswith("downloads/"):
+                continue
+
+            if relative == "evidence/evidence.json":
                 continue
 
             bundle.write(resolved_artifact, f"artifacts/{relative}")
@@ -345,8 +458,9 @@ def normalize_findings(
         return []
 
     normalized: list[dict[str, Any]] = []
+    case_id = str((state or {}).get("case_id") or "unknown")
 
-    for item in values:
+    for index, item in enumerate(values):
         if not isinstance(item, dict):
             continue
 
@@ -354,8 +468,14 @@ def normalize_findings(
 
         finding.setdefault("source", source)
         finding.setdefault("severity", finding.get("level", "info"))
-        finding.setdefault("title", finding.get("rule_id", finding.get("id", "Finding")))
-        finding.setdefault("description", finding.get("summary", ""))
+
+        if not any(finding.get(key) for key in ("title", "name", "issue", "check")):
+            finding["title"] = finding.get("rule_id", finding.get("id", "Finding"))
+
+        if not any(
+            finding.get(key) for key in ("description", "details", "message", "rationale")
+        ):
+            finding["description"] = finding.get("summary", "")
 
         finding["severity"] = str(finding.get("severity") or "info").lower()
         finding["source"] = str(finding.get("source") or source)
@@ -368,41 +488,150 @@ def normalize_findings(
             state=state,
         )
 
-        if is_noise_finding(finding):
+        canonical = canonicalize_finding(finding, case_id=case_id, source=source, index=index)
+        web_finding = finding_to_web_dict(canonical)
+
+        if is_noise_finding(web_finding):
             continue
 
-        finding["evidence_pretty"] = json.dumps(
-            finding["evidence"],
-            indent=2,
-            ensure_ascii=False,
-            default=str,
-        )
-
-        normalized.append(finding)
+        normalized.append(web_finding)
 
     return normalized
 
 
+def normalize_findings_with_evidence(
+    raw: Any,
+    source: str,
+    *,
+    state: dict[str, Any] | None = None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    findings = normalize_findings(raw, source, state=state)
+    case_id = str((state or {}).get("case_id") or "unknown")
+    return attach_evidence_to_finding_dicts(findings, case_id=case_id, source=source)
+
+
 def collect_findings_from_state(state: dict[str, Any]) -> list[dict[str, Any]]:
-    manifest_findings = normalize_findings(
+    return collect_findings_and_evidence_from_state(state)[0]
+
+
+def collect_findings_and_evidence_from_state(
+    state: dict[str, Any],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    manifest_findings, manifest_evidence = normalize_findings_with_evidence(
         read_json_if_exists(state.get("findings_path"), []),
         "manifest",
         state=state,
     )
-    code_findings = normalize_findings(
+    code_findings, code_evidence = normalize_findings_with_evidence(
         read_json_if_exists(state.get("code_findings_path"), []),
         "code",
         state=state,
     )
-    correlated_findings = normalize_findings(
+    correlated_findings, correlated_evidence = normalize_findings_with_evidence(
         read_json_if_exists(state.get("correlated_findings_path"), []),
         "correlation",
         state=state,
     )
 
     findings = manifest_findings + code_findings + correlated_findings
+    evidence = manifest_evidence + code_evidence + correlated_evidence
 
-    return sorted_findings(deduplicate_findings(findings))
+    return sorted_findings(deduplicate_findings(findings)), deduplicate_evidence(evidence)
+
+
+def _collect_findings_and_evidence_for_downloads(
+    *,
+    state: dict[str, Any],
+    fallback_findings: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    if not state:
+        return fallback_findings, []
+
+    findings, evidence = collect_findings_and_evidence_from_state(state)
+    return (findings or fallback_findings), evidence
+
+
+def _structured_report_inputs(
+    *,
+    state: dict[str, Any],
+    fallback_findings: list[dict[str, Any]],
+    fallback_evidence: list[dict[str, Any]] | None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    if fallback_findings and fallback_evidence:
+        return fallback_findings, fallback_evidence
+
+    evidence_path = _safe_case_artifacts_dir(state)
+    if evidence_path:
+        existing_evidence = read_json_if_exists(evidence_path / "evidence" / "evidence.json", [])
+        if fallback_findings and isinstance(existing_evidence, list) and existing_evidence:
+            return fallback_findings, existing_evidence
+
+    if state:
+        findings, evidence = collect_findings_and_evidence_from_state(state)
+        if findings and evidence:
+            return findings, evidence
+
+    return fallback_findings, fallback_evidence or []
+
+
+def deduplicate_evidence(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for item in evidence:
+        evidence_id = str(item.get("evidence_id") or "")
+
+        if not evidence_id or evidence_id in seen:
+            continue
+
+        seen.add(evidence_id)
+        result.append(item)
+
+    return result
+
+
+def write_evidence_json_if_possible(
+    *,
+    state: dict[str, Any],
+    evidence: list[dict[str, Any]],
+) -> Path | None:
+    if not evidence:
+        return None
+
+    case_dir = _safe_case_artifacts_dir(state)
+
+    if not case_dir:
+        return None
+
+    try:
+        evidence_dir = case_dir / "evidence"
+        evidence_dir.mkdir(parents=True, exist_ok=True)
+        evidence_path = evidence_dir / "evidence.json"
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2, ensure_ascii=False, default=str),
+            encoding="utf-8",
+        )
+        return evidence_path
+    except OSError as exc:
+        logger.warning("Could not write evidence JSON for case %s: %s", state.get("case_id"), exc)
+        return None
+
+
+def _safe_case_artifacts_dir(state: dict[str, Any]) -> Path | None:
+    case_id = state.get("case_id")
+
+    if not isinstance(case_id, str) or not case_id.strip():
+        return None
+
+    case_dir = infer_case_artifacts_dir(state)
+
+    if not case_dir:
+        return None
+
+    if case_dir.name != case_id:
+        return None
+
+    return case_dir
 
 
 def deduplicate_findings(findings: list[dict[str, Any]]) -> list[dict[str, Any]]:
