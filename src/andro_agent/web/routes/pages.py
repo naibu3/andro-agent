@@ -153,15 +153,11 @@ def case_detail(request: Request, case_id: str):
         )
 
     state = load_case_state(Path(case["artifacts_dir"]).parent, case_id)
-    findings = case_repo.list_findings(case_id)
     canonical_findings = collect_findings_from_state(state)
-
-    for index, finding in enumerate(findings):
-        if index < len(canonical_findings):
-            finding["evidence_ids"] = canonical_findings[index].get("evidence_ids", [])
-
+    db_findings = case_repo.list_findings(case_id)
+    display_findings = canonical_findings if canonical_findings else db_findings
     evidence = load_evidence_for_case(state)
-    findings = attach_evidence_to_web_findings(findings, evidence)
+    display_findings = attach_evidence_to_web_findings(display_findings, evidence)
 
     if not case.get("package_name"):
         case["package_name"] = extract_package_name_from_state(state)
@@ -169,7 +165,7 @@ def case_detail(request: Request, case_id: str):
     report_md = final_report_markdown(
         case=case,
         state=state,
-        findings=findings,
+        findings=display_findings,
         evidence=evidence,
     )
     report_html = render_report_html(report_md)
@@ -186,11 +182,11 @@ def case_detail(request: Request, case_id: str):
             "is_completed": True,
             "is_non_final": False,
             "state": state,
-            "findings": findings,
+            "findings": display_findings,
             "evidence": evidence,
             "evidence_count": len(evidence),
-            "severity_summary": severity_summary(findings),
-            "category_summary": category_summary(findings),
+            "severity_summary": severity_summary(display_findings),
+            "category_summary": category_summary(display_findings),
             "report_html": report_html,
             "artifacts": extract_artifacts(artifacts_dir),
         },

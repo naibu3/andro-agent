@@ -98,6 +98,9 @@ def render_structured_report_markdown(
 ) -> str:
     evidence_by_id = evidence_lookup_by_id(evidence)
     package_name = case.get("package_name") or state.get("package_name") or "N/A"
+    analysis_profile = (
+        state.get("analysis_profile") or case.get("analysis_profile") or "N/A"
+    )
     severity_counts = Counter(str(finding.get("severity") or "info").lower() for finding in findings)
 
     lines = [
@@ -109,6 +112,7 @@ def render_structured_report_markdown(
         f"- Package name: `{package_name}`",
         f"- APK filename: `{case.get('filename') or 'N/A'}`",
         f"- SHA256: `{case.get('sha256') or 'N/A'}`",
+        f"- Analysis profile: `{analysis_profile}`",
         f"- Total findings: **{len(findings)}**",
         f"- Critical: **{severity_counts.get('critical', 0)}**",
         f"- High: **{severity_counts.get('high', 0)}**",

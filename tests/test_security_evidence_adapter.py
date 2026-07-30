@@ -407,4 +407,6 @@ def test_bundle_includes_evidence_once(tmp_path):
         names = set(bundle.namelist())
 
     assert "evidence/evidence.json" in names
+    assert "artifacts/artifacts.json" in names
     assert "artifacts/evidence/evidence.json" not in names
+    assert "artifacts/artifacts/artifacts.json" not in names

@@ -9,6 +9,10 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
+from andro_agent.domain.adapters.security_artifacts import (
+    artifacts_to_web_dicts,
+    scan_case_artifacts,
+)
 from andro_agent.domain.adapters.security_evidence import attach_evidence_to_finding_dicts
 from andro_agent.domain.adapters.security_findings import (
     canonicalize_finding,
@@ -384,6 +388,10 @@ def write_final_download_files(
     )
     report_md_path.write_text(report_md, encoding="utf-8")
     report_html_path.write_text(report_html, encoding="utf-8")
+    artifacts_path = write_artifacts_json_if_possible(
+        case_dir=case_dir,
+        case_id=str(case.get("id") or state.get("case_id") or ""),
+    )
 
     paths = {
         "findings": findings_path,
@@ -393,6 +401,8 @@ def write_final_download_files(
 
     if evidence_path:
         paths["evidence"] = evidence_path
+    if artifacts_path:
+        paths["artifacts"] = artifacts_path
 
     return paths
 
@@ -420,6 +430,8 @@ def build_download_bundle(
 
         if paths.get("evidence"):
             bundle.write(paths["evidence"], "evidence/evidence.json")
+        if paths.get("artifacts"):
+            bundle.write(paths["artifacts"], "artifacts/artifacts.json")
 
         for artifact_path in safe_final_artifacts(case_dir):
             if artifact_path in paths.values():
@@ -614,6 +626,34 @@ def write_evidence_json_if_possible(
         return evidence_path
     except OSError as exc:
         logger.warning("Could not write evidence JSON for case %s: %s", state.get("case_id"), exc)
+        return None
+
+
+def write_artifacts_json_if_possible(
+    *,
+    case_dir: Path,
+    case_id: str,
+) -> Path | None:
+    if not case_id or not case_dir.is_dir() or case_dir.is_symlink():
+        return None
+
+    try:
+        artifacts = scan_case_artifacts(case_dir, case_id=case_id)
+        artifacts_dir = case_dir / "artifacts"
+        artifacts_dir.mkdir(parents=True, exist_ok=True)
+        artifacts_path = artifacts_dir / "artifacts.json"
+        artifacts_path.write_text(
+            json.dumps(
+                artifacts_to_web_dicts(artifacts),
+                indent=2,
+                ensure_ascii=False,
+                default=str,
+            ),
+            encoding="utf-8",
+        )
+        return artifacts_path
+    except (OSError, ValueError) as exc:
+        logger.warning("Could not write artifact registry for case %s: %s", case_id, exc)
         return None
 
 
@@ -882,6 +922,9 @@ def build_fallback_report_markdown(
     summary = severity_summary(findings)
     categories = category_summary(findings)
     package_name = case.get("package_name") or extract_package_name_from_state(state) or "N/A"
+    analysis_profile = (
+        state.get("analysis_profile") or case.get("analysis_profile") or "N/A"
+    )
 
     high_priority = [
         finding
@@ -902,6 +945,7 @@ def build_fallback_report_markdown(
         "",
         f"Se analizaron los artefactos estáticos del APK **{case.get('filename', 'N/A')}**.",
         f"Package detectado: `{package_name}`.",
+        f"Perfil de análisis: `{analysis_profile}`.",
         "",
         "El análisis identificó findings de seguridad que deben priorizarse según severidad y evidencia.",
         "",

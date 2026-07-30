@@ -66,6 +66,7 @@ def build_static_analysis_bundle(state: CaseState, artifacts_dir: Path) -> Path:
 
         "metadata": {
             "tools": ["apktool", "jadx", "code_search"],
+            "analysis_profile": state.analysis_profile,
             "generated_at": datetime.utcnow().isoformat(),
             "version": "1.0"
         }

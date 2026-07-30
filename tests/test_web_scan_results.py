@@ -45,6 +45,10 @@ def web_context(tmp_path, monkeypatch):
 
 
 def render_case_detail(web_context, case_id: str) -> str:
+    return case_detail_response(web_context, case_id).body.decode("utf-8")
+
+
+def case_detail_response(web_context, case_id: str):
     request = Request(
         {
             "type": "http",
@@ -53,8 +57,7 @@ def render_case_detail(web_context, case_id: str) -> str:
             "headers": [],
         }
     )
-    response = web_context["pages"].case_detail(request, case_id)
-    return response.body.decode("utf-8")
+    return web_context["pages"].case_detail(request, case_id)
 
 
 def create_case(web_context, case_id: str, status: str):
@@ -279,7 +282,7 @@ def test_completed_detail_shows_results_and_downloads(web_context):
     body = render_case_detail(web_context, "completed-case")
 
     assert "Findings" in body
-    assert "Exported activity" in body
+    assert "EXPORTED_ACTIVITY" in body
     assert "Reporte" in body
     assert "Android Security Analysis Report" in body
     assert "Artifacts" in body
@@ -288,6 +291,100 @@ def test_completed_detail_shows_results_and_downloads(web_context):
     assert "/api/scans/completed-case/downloads/report.md" in body
     assert "/api/scans/completed-case/downloads/report.html" in body
     assert "/api/scans/completed-case/downloads/bundle.zip" in body
+
+
+def test_completed_detail_prefers_canonical_findings(web_context):
+    make_completed_case(web_context, "canonical-case")
+
+    response = case_detail_response(web_context, "canonical-case")
+
+    assert [finding["title"] for finding in response.context["findings"]] == [
+        "EXPORTED_ACTIVITY"
+    ]
+    assert "Exported activity" not in response.body.decode("utf-8")
+
+
+def test_completed_detail_does_not_copy_canonical_evidence_ids_to_db_findings(
+    web_context, monkeypatch
+):
+    make_completed_case(web_context, "no-index-merge-case")
+    db_finding = {
+        "title": "Unrelated DB finding",
+        "description": "Not the canonical finding.",
+        "severity": "low",
+        "category": "other",
+        "source": "database",
+    }
+    monkeypatch.setattr(
+        web_context["pages"].case_repo,
+        "list_findings",
+        lambda case_id: [db_finding],
+    )
+
+    response = case_detail_response(web_context, "no-index-merge-case")
+
+    assert "evidence_ids" not in db_finding
+    assert response.context["findings"][0]["title"] == "EXPORTED_ACTIVITY"
+    assert response.context["findings"][0]["evidence_ids"]
+
+
+def test_completed_detail_falls_back_to_db_findings(web_context):
+    case_dir = make_completed_case(web_context, "db-fallback-case")
+    state = json.loads((case_dir / "case_state.json").read_text(encoding="utf-8"))
+    Path(state["findings_path"]).write_text("[]", encoding="utf-8")
+
+    response = case_detail_response(web_context, "db-fallback-case")
+
+    assert [finding["title"] for finding in response.context["findings"]] == [
+        "Exported activity"
+    ]
+
+
+def test_completed_detail_severity_summary_uses_displayed_findings(web_context):
+    make_completed_case(web_context, "display-summary-case")
+    web_context["repo"].replace_findings(
+        "display-summary-case",
+        [
+            {
+                "title": "Critical DB-only finding",
+                "description": "Must not affect the displayed summary.",
+                "severity": "critical",
+                "category": "other",
+                "source": "database",
+            }
+        ],
+    )
+
+    response = case_detail_response(web_context, "display-summary-case")
+
+    assert response.context["severity_summary"] == {
+        "critical": 0,
+        "high": 1,
+        "medium": 0,
+        "low": 0,
+        "info": 0,
+        "total": 1,
+    }
+
+
+def test_completed_detail_category_summary_uses_displayed_findings(web_context):
+    make_completed_case(web_context, "display-category-case")
+    web_context["repo"].replace_findings(
+        "display-category-case",
+        [
+            {
+                "title": "DB-only category",
+                "description": "Must not affect the displayed summary.",
+                "severity": "low",
+                "category": "database_only",
+                "source": "database",
+            }
+        ],
+    )
+
+    response = case_detail_response(web_context, "display-category-case")
+
+    assert response.context["category_summary"] == {"attack_surface": 1}
 
 
 def test_completed_detail_renders_linked_evidence(web_context):
@@ -424,6 +521,7 @@ def test_download_endpoints_work_after_completion(web_context):
     report_markdown = Path(report_md.path).read_text(encoding="utf-8")
 
     assert "# Android Security Analysis Report" in report_markdown
+    assert "Analysis profile: `static_basic`" in report_markdown
     assert downloaded_findings[0]["evidence_ids"][0] in report_markdown
     assert "<h1" in Path(report_html.path).read_text(encoding="utf-8")
     assert bundle.media_type == "application/zip"

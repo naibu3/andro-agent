@@ -10,6 +10,7 @@ from typing import Any
 class CaseState(BaseModel):
     case_id: str
     apk_path: Path
+    analysis_profile: str = "full"
 
     # Outputs
     manifest_json_path: Path | None = None

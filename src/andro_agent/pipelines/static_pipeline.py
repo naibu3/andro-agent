@@ -5,6 +5,11 @@ import logging
 
 from pathlib import Path
 
+from andro_agent.core.analysis_profiles import (
+    AnalysisProfile,
+    get_analysis_profile_config,
+    is_static_llm_configured,
+)
 from andro_agent.core.state import CaseState
 from andro_agent.facts.manifest_facts import build_manifest_facts
 from andro_agent.models import (
@@ -53,8 +58,13 @@ logger = logging.getLogger(__name__)
 
 class StaticAnalysisPipeline:
 
-    def __init__(self, artifacts_dir: Path = Path("artifacts")) -> None:
+    def __init__(
+        self,
+        artifacts_dir: Path = Path("artifacts"),
+        profile: AnalysisProfile | str = AnalysisProfile.FULL,
+    ) -> None:
         self.artifacts_dir = artifacts_dir
+        self.profile_config = get_analysis_profile_config(profile)
 
 
     def _run_step(self, tracker: MetricsTracker, name: str, func, state: CaseState) -> None:
@@ -68,10 +78,15 @@ class StaticAnalysisPipeline:
 
 
     def run(self, apk_path: Path, case_id: str) -> CaseState:
-        state = CaseState(case_id=case_id, apk_path=apk_path)
+        state = CaseState(
+            case_id=case_id,
+            apk_path=apk_path,
+            analysis_profile=self.profile_config.profile.value,
+        )
         tracker = MetricsTracker(case_id, self.artifacts_dir)
 
         try:
+            self.profile_config.validate()
             self._run_step(tracker, "validate", self._step_validate, state)
             self._run_step(tracker, "extract_manifest", self._step_extract_manifest, state)
             self._run_step(tracker, "build_manifest_facts", self._step_build_facts, state)
@@ -82,41 +97,42 @@ class StaticAnalysisPipeline:
             self._run_step(tracker, "apply_code_rules", self._step_apply_code_rules, state)
             self._run_step(tracker, "build_static_bundle", self._step_build_static_bundle, state)
 
-            try:
-                tracker.start_step("manifest_risk_agent")
-                self._step_manifest_risk_agent(state, tracker)
-                tracker.end_step(success=True)
-            except Exception as exc:
-                tracker.end_step(success=False, errors=[str(exc)])
-                logger.exception("[%s] manifest_risk_agent failed", state.case_id)
-                state.warnings.append(f"manifest_risk_agent failed: {exc}")
+            if self.profile_config.use_llm_reasoning:
+                self._run_optional_agent_step(
+                    tracker, "manifest_risk_agent", self._step_manifest_risk_agent, state
+                )
+                self._run_optional_agent_step(
+                    tracker, "code_risk_agent", self._step_code_risk_agent, state
+                )
+                self._run_optional_agent_step(
+                    tracker, "risk_fusion_agent", self._step_risk_fusion_agent, state
+                )
 
-            try:
-                tracker.start_step("code_risk_agent")
-                self._step_code_risk_agent(state, tracker)
-                tracker.end_step(success=True)
-            except Exception as exc:
-                tracker.end_step(success=False, errors=[str(exc)])
-                logger.exception("[%s] code_risk_agent failed", state.case_id)
-                state.warnings.append(f"code_risk_agent failed: {exc}")
-
-            try:
-                tracker.start_step("risk_fusion_agent")
-                self._step_risk_fusion_agent(state, tracker)
-                tracker.end_step(success=True)
-            except Exception as exc:
-                tracker.end_step(success=False, errors=[str(exc)])
-                logger.exception("[%s] risk_fusion_agent failed", state.case_id)
-                state.warnings.append(f"risk_fusion_agent failed: {exc}")
-
-            try:
-                tracker.start_step("markdown_report_agent")
-                self._step_markdown_report_agent(state, tracker)
-                tracker.end_step(success=True)
-            except Exception as exc:
-                tracker.end_step(success=False, errors=[str(exc)])
-                logger.exception("[%s] markdown_report_agent failed", state.case_id)
-                state.warnings.append(f"markdown_report_agent failed: {exc}")
+            if self.profile_config.compact_llm_report:
+                self._run_step(
+                    tracker,
+                    "deterministic_report",
+                    self._step_deterministic_report,
+                    state,
+                )
+                if is_static_llm_configured():
+                    self._run_optional_agent_step(
+                        tracker,
+                        "compact_markdown_report_agent",
+                        self._step_compact_markdown_report_agent,
+                        state,
+                    )
+            elif self.profile_config.use_llm_report:
+                self._run_optional_agent_step(
+                    tracker, "markdown_report_agent", self._step_markdown_report_agent, state
+                )
+            else:
+                self._run_step(
+                    tracker,
+                    "deterministic_report",
+                    self._step_deterministic_report,
+                    state,
+                )
 
             state.status = "completed"
 
@@ -128,6 +144,7 @@ class StaticAnalysisPipeline:
             tracker.set_summary(
                 {
                     "status": state.status,
+                    "analysis_profile": state.analysis_profile,
                     "warnings_count": len(state.warnings),
                     "errors_count": len(state.errors),
                     "tool_history_count": len(state.tool_history),
@@ -141,6 +158,22 @@ class StaticAnalysisPipeline:
             state.save(self.artifacts_dir)
 
         return state
+
+    def _run_optional_agent_step(
+        self,
+        tracker: MetricsTracker,
+        name: str,
+        func,
+        state: CaseState,
+    ) -> None:
+        try:
+            tracker.start_step(name)
+            func(state, tracker)
+            tracker.end_step(success=True)
+        except Exception as exc:
+            tracker.end_step(success=False, errors=[str(exc)])
+            logger.exception("[%s] %s failed", state.case_id, name)
+            state.warnings.append(f"{name} failed: {exc}")
 
     # -------------------------
     # Steps
@@ -388,6 +421,69 @@ class StaticAnalysisPipeline:
 
         state.static_analysis_bundle_path = bundle_path
 
+    def _step_deterministic_report(self, state: CaseState) -> None:
+        state.current_step = "deterministic_report"
+        manifest_findings = self._load_findings(state.findings_path)
+        code_findings = self._load_findings(state.code_findings_path)
+        findings = manifest_findings + code_findings
+        severity_counts: dict[str, int] = {}
+
+        for finding in findings:
+            severity = str(finding.get("severity") or "info").lower()
+            severity_counts[severity] = severity_counts.get(severity, 0) + 1
+
+        lines = [
+            "# Static Analysis Report",
+            "",
+            "## Analysis summary",
+            "",
+            f"- Case ID: `{state.case_id}`",
+            f"- Analysis profile: `{state.analysis_profile}`",
+            f"- Total deterministic findings: **{len(findings)}**",
+            f"- Critical: **{severity_counts.get('critical', 0)}**",
+            f"- High: **{severity_counts.get('high', 0)}**",
+            f"- Medium: **{severity_counts.get('medium', 0)}**",
+            f"- Low: **{severity_counts.get('low', 0)}**",
+            "",
+            "## Methodology",
+            "",
+            "Manifest and code findings were produced by deterministic extraction and rules.",
+            "",
+            "## Findings",
+            "",
+        ]
+
+        if findings:
+            for finding in findings:
+                title = finding.get("title") or finding.get("rule_id") or "Finding"
+                severity = str(finding.get("severity") or "info").upper()
+                description = finding.get("description") or finding.get("summary") or ""
+                lines.extend([f"### [{severity}] {title}", "", str(description), ""])
+        else:
+            lines.append("No deterministic findings were identified.")
+
+        report_dir = self.artifacts_dir / state.case_id / "report"
+        report_dir.mkdir(parents=True, exist_ok=True)
+        report_path = report_dir / "static_analysis_report.md"
+        report_path.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
+        state.static_report_path = report_path
+
+    @staticmethod
+    def _load_findings(path: Path | None) -> list[dict]:
+        if not path or not path.exists():
+            return []
+
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return []
+
+        if isinstance(data, dict):
+            data = data.get("findings", [])
+        if not isinstance(data, list):
+            return []
+        return [item for item in data if isinstance(item, dict)]
+
     def _step_markdown_report_agent(self, state: CaseState, tracker: MetricsTracker) -> None:
         state.current_step = "markdown_report_agent"
         logger.info("[%s] Step: markdown_report_agent", state.case_id)
@@ -408,7 +504,12 @@ class StaticAnalysisPipeline:
             report_dir.mkdir(parents=True, exist_ok=True)
 
             report_path = report_dir / "static_analysis_report.md"
-            report_path.write_text(result["markdown"], encoding="utf-8")
+            report_text = (
+                f"{result['markdown'].rstrip()}\n\n"
+                "## Analysis metadata\n\n"
+                f"- Profile: `{state.analysis_profile}`\n"
+            )
+            report_path.write_text(report_text, encoding="utf-8")
 
             state.static_report_path = report_path
 
@@ -426,6 +527,45 @@ class StaticAnalysisPipeline:
                 usage=result.get("usage"),
             )
 
+        except Exception as exc:
+            tracker.end_agent(output_text="", success=False, errors=[str(exc)])
+            raise
+
+    def _step_compact_markdown_report_agent(
+        self,
+        state: CaseState,
+        tracker: MetricsTracker,
+    ) -> None:
+        state.current_step = "compact_markdown_report_agent"
+        if not state.static_report_path or not state.static_report_path.exists():
+            raise RuntimeError("Deterministic report not available")
+
+        agent = MarkdownReportAgent()
+        deterministic_report = state.static_report_path.read_text(encoding="utf-8")
+        prompt = (
+            "Summarize this deterministic Android security report concisely. "
+            "Preserve finding counts and do not add unsupported claims.\n\n"
+            f"{deterministic_report[:12000]}"
+        )
+        tracker.start_agent(
+            name="compact_markdown_report_agent",
+            model=agent.model_id,
+            input_text=prompt,
+        )
+
+        try:
+            result = agent.run_with_prompt(prompt)
+            report_text = (
+                f"{result['markdown'].rstrip()}\n\n"
+                "## Analysis metadata\n\n"
+                f"- Profile: `{state.analysis_profile}`\n"
+            )
+            state.static_report_path.write_text(report_text, encoding="utf-8")
+            tracker.end_agent(
+                output_text=result["markdown"],
+                success=True,
+                usage=result.get("usage"),
+            )
         except Exception as exc:
             tracker.end_agent(output_text="", success=False, errors=[str(exc)])
             raise

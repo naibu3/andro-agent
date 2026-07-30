@@ -44,6 +44,7 @@ from dotenv import load_dotenv
 from andro_agent.dynamic.setup import run_dynamic_setup
 from andro_agent.tools.android.android_sdk_tool import AndroidSDKError
 
+from andro_agent.core.analysis_profiles import AnalysisProfile
 from andro_agent.core.state import CaseState
 from andro_agent.pipelines.dynamic_pipeline import DynamicAnalysisPipeline
 from andro_agent.validators.apk import APKValidationError, validate_apk
@@ -443,11 +444,16 @@ def run_analysis(
         "--artifacts-dir",
         help="Base artifacts directory.",
     ),
+    profile: AnalysisProfile = typer.Option(
+        AnalysisProfile.FULL,
+        "--profile",
+        help="Analysis profile: no-llm, fast, full, or llm.",
+    ),
 ) -> None:
     """
     Run full static analysis pipeline.
     """
-    pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir)
+    pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir, profile=profile)
 
     state = pipeline.run(apk_path=apk_path, case_id=case_id)
 
@@ -463,6 +469,7 @@ def run_analysis(
 
     table.add_row("Case ID", state.case_id)
     table.add_row("Status", state.status)
+    table.add_row("Profile", state.analysis_profile)
     table.add_row("Manifest JSON", str(state.manifest_json_path))
     table.add_row("Facts JSON", str(state.facts_path))
     table.add_row("Findings JSON", str(state.findings_path))
