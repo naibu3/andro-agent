@@ -19,7 +19,6 @@ from andro_agent.web.services.scan_service import run_static_scan
 from andro_agent.web.services.upload_service import save_uploaded_apk
 from andro_agent.web.settings import ARTIFACTS_DIR
 
-
 router = APIRouter(prefix="/api/scans", tags=["scans"])
 case_repo = CaseRepository()
 
@@ -28,8 +27,10 @@ case_repo = CaseRepository()
 async def create_scan(
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
-    analysis_profile: str = "static_basic",
+    analysis_profile: str = "no-llm",
 ) -> dict[str, str]:
+    if analysis_profile not in {"no-llm", "fast", "full"}:
+        raise HTTPException(status_code=400, detail="Unsupported analysis profile")
     case_id = str(uuid4())
     apk_path, digest = await save_uploaded_apk(file, case_id)
     artifacts_dir = ARTIFACTS_DIR / case_id
@@ -183,6 +184,20 @@ def download_report_markdown(case_id: str) -> FileResponse:
     )
 
 
+@router.get("/{case_id}/downloads/canonical_findings.json")
+def download_canonical_findings(case_id: str) -> FileResponse:
+    _, case_dir, _, _ = get_completed_download_context(case_id)
+    return _optional_download(
+        case_dir, Path("findings/canonical_findings.json"), "application/json"
+    )
+
+
+@router.get("/{case_id}/downloads/evidence.json")
+def download_evidence(case_id: str) -> FileResponse:
+    _, case_dir, _, _ = get_completed_download_context(case_id)
+    return _optional_download(case_dir, Path("evidence/evidence.json"), "application/json")
+
+
 @router.get("/{case_id}/downloads/report.html")
 def download_report_html(case_id: str) -> FileResponse:
     case, case_dir, state, findings = get_completed_download_context(case_id)
@@ -241,3 +256,14 @@ def get_completed_download_context(case_id: str) -> tuple[dict, Path, dict, list
         case["package_name"] = extract_package_name_from_state(state)
 
     return case, case_dir, state, findings
+
+
+def _optional_download(case_dir: Path, relative_path: Path, media_type: str) -> FileResponse:
+    path = (case_dir / relative_path).resolve()
+    try:
+        path.relative_to(case_dir.resolve())
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail="Unsafe artifact path") from exc
+    if not path.is_file() or path.is_symlink():
+        raise HTTPException(status_code=404, detail="Artifact not available")
+    return FileResponse(path, media_type=media_type, filename=relative_path.name)

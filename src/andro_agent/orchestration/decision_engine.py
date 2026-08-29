@@ -65,13 +65,39 @@ class DecisionEngine:
                 task_observations=result.observations,
                 recent_findings=[],
             )
-            agent_tasks = self.agent.decide_followups(
-                current_task=task,
-                evidence_context=context,
-            )
-            followups.extend(validate_agent_tasks(agent_tasks))
+            try:
+                agent_tasks = self.agent.decide_followups(
+                    current_task=task,
+                    evidence_context=context,
+                )
+                validated = validate_agent_tasks(agent_tasks)
+                followups.extend(validated)
+                self._record_agentic_decision(state, task, len(validated), None)
+            except Exception as exc:  # noqa: BLE001 - dynamic MVP must preserve the basic run
+                self._record_agentic_decision(state, task, 0, str(exc))
 
         return followups
+
+    @staticmethod
+    def _record_agentic_decision(
+        state: Any, task: DynamicTask, followups: int, error: str | None
+    ) -> None:
+        if not isinstance(state, dict):
+            return
+        case_state = state.get("case_state")
+        if case_state is None:
+            return
+        case_state.tool_history.append(
+            {
+                "tool": "dynamic.agentic_decision",
+                "task_id": task.task_id,
+                "followups": followups,
+                "success": error is None,
+                "error": error,
+            }
+        )
+        if error:
+            case_state.warnings.append(f"Dynamic agentic decision failed: {error}")
 
     def _deterministic_followups(
         self,

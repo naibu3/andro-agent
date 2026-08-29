@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from pathlib import Path
 import inspect
 import json
+from contextlib import suppress
+from pathlib import Path
 
 from andro_agent.core.state import CaseState
-from andro_agent.dynamic.planning.plan_from_static import build_dynamic_plan_from_static_bundle
 from andro_agent.domain.models.dynamic import (
     DynamicAction,
     DynamicExecutionResult,
@@ -13,24 +13,25 @@ from andro_agent.domain.models.dynamic import (
     DynamicPlan,
     DynamicTest,
 )
-from andro_agent.tools.android.adb_tool import ADBTool
-from andro_agent.tools.android.emulator_tool import EmulatorTool
-from andro_agent.tools.logcat_tool import LogcatTool
-from andro_agent.tools.package_resolver import resolve_package_name
-from andro_agent.dynamic.findings.findings_builder import build_dynamic_findings
-from andro_agent.dynamic.analyzers.ui_analyzer import analyze_ui_dump
-from andro_agent.dynamic.analyzers.ui_diff import compare_ui_dumps
 from andro_agent.dynamic.analyzers.network_analyzer import (
     build_network_observations,
     build_network_summary_from_event_log,
 )
-from andro_agent.tools.network.mitmproxy_tool import MitmproxyTool
-from andro_agent.tools.android.android_cert_tool import AndroidCertTool
-
-from andro_agent.orchestration.task_models import DynamicTask, TaskExecutionResult
-from andro_agent.orchestration.task_router import TaskRouter
+from andro_agent.dynamic.analyzers.ui_analyzer import analyze_ui_dump
+from andro_agent.dynamic.analyzers.ui_diff import compare_ui_dumps
+from andro_agent.dynamic.findings.findings_builder import build_dynamic_findings
+from andro_agent.dynamic.planning.plan_from_static import build_dynamic_plan_from_static_bundle
+from andro_agent.metrics import MetricsTracker
 from andro_agent.orchestration.decision_engine import DecisionEngine
 from andro_agent.orchestration.dynamic_orchestrator import DynamicOrchestrator
+from andro_agent.orchestration.task_models import DynamicTask, TaskExecutionResult
+from andro_agent.orchestration.task_router import TaskRouter
+from andro_agent.tools.android.adb_tool import ADBTool
+from andro_agent.tools.android.android_cert_tool import AndroidCertTool
+from andro_agent.tools.android.emulator_tool import EmulatorTool
+from andro_agent.tools.logcat_tool import LogcatTool
+from andro_agent.tools.network.mitmproxy_tool import MitmproxyTool
+from andro_agent.tools.package_resolver import resolve_package_name
 
 
 class DynamicAnalysisPipeline:
@@ -48,11 +49,22 @@ class DynamicAnalysisPipeline:
         self.llm_provider = llm_provider
         self.llm_model = llm_model
 
-        self.emulator = EmulatorTool(sdk_root=sdk_root)
-        self.adb = ADBTool(sdk_root=sdk_root)
-        self.logcat = LogcatTool(sdk_root=sdk_root)
-        self.mitmproxy = MitmproxyTool()
-        self.android_cert_tool = AndroidCertTool(sdk_root=sdk_root)
+        self._initialization_error: str | None = None
+        try:
+            self.emulator = EmulatorTool(sdk_root=sdk_root)
+            self.adb = ADBTool(sdk_root=sdk_root)
+            self.logcat = LogcatTool(sdk_root=sdk_root)
+            self.android_cert_tool = AndroidCertTool(sdk_root=sdk_root)
+        except Exception as exc:  # noqa: BLE001 - defer environment failure so run can persist it
+            self._initialization_error = str(exc)
+            self.emulator = None
+            self.adb = None
+            self.logcat = None
+            self.android_cert_tool = None
+        try:
+            self.mitmproxy = MitmproxyTool()
+        except (FileNotFoundError, RuntimeError):
+            self.mitmproxy = None
 
         self.router = TaskRouter()
         self.decision_engine = self._build_decision_engine(
@@ -183,13 +195,140 @@ class DynamicAnalysisPipeline:
         llm_provider: str | None = None,
         llm_model: str | None = None,
     ) -> CaseState:
+        tracker = MetricsTracker(case_id, self.artifacts_dir)
+        tracker.start_step("dynamic_pipeline")
+        state: CaseState | None = None
+        termination_reason = "completed"
+        try:
+            state = self._run_impl(
+                case_id=case_id,
+                apk_path=apk_path,
+                avd_name=avd_name,
+                package_override=package_override,
+                show_avd=show_avd,
+                agentic_decisions=agentic_decisions,
+                llm_provider=llm_provider,
+                llm_model=llm_model,
+            )
+            tracker.end_step(success=True)
+        except Exception as exc:  # noqa: BLE001 - persist a controlled dynamic failure
+            termination_reason = self._dynamic_failure_reason(exc)
+            tracker.end_step(success=False, errors=[str(exc)])
+            if self.emulator is not None:
+                with suppress(Exception):
+                    self.emulator.stop()
+            if self.mitmproxy is not None:
+                with suppress(Exception):
+                    self.mitmproxy.stop()
+            try:
+                state = CaseState.load(case_id, base_dir=self.artifacts_dir)
+            except (FileNotFoundError, ValueError):
+                state = CaseState(case_id=case_id, apk_path=apk_path)
+            state.status = "dynamic_failed"
+            state.current_step = termination_reason
+            state.errors.append(str(exc))
+
+        assert state is not None
+        dynamic_dir = self.artifacts_dir / case_id / "dynamic"
+        dynamic_dir.mkdir(parents=True, exist_ok=True)
+        if state.dynamic_results_path is None:
+            failure_results = dynamic_dir / "dynamic_results.json"
+            failure_results.write_text(
+                json.dumps(
+                    {
+                        "case_id": case_id,
+                        "package_name": state.package_name,
+                        "observations": [],
+                        "artifacts": [],
+                        "errors": list(state.errors),
+                    },
+                    indent=2,
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            state.dynamic_results_path = failure_results
+        observations_count = self._dynamic_observations_count(state.dynamic_results_path)
+        decisions = [
+            item for item in state.tool_history if item.get("tool") == "dynamic.agentic_decision"
+        ]
+        trace = {
+            "case_id": case_id,
+            "dynamic_ran": True,
+            "dynamic_status": state.status,
+            "dynamic_agentic_ran": agentic_decisions,
+            "experimental": agentic_decisions,
+            "llm_provider": llm_provider or self.llm_provider,
+            "llm_model": llm_model or self.llm_model,
+            "decisions": decisions,
+            "observations_count": observations_count,
+            "termination_reason": termination_reason,
+            "errors": list(state.errors),
+            "warnings": list(state.warnings),
+        }
+        (dynamic_dir / "dynamic_trace.json").write_text(
+            json.dumps(trace, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        if agentic_decisions:
+            (dynamic_dir / "dynamic_agentic_trace.json").write_text(
+                json.dumps(trace, indent=2, ensure_ascii=False), encoding="utf-8"
+            )
+        tracker.set_summary(
+            {
+                "status": state.status,
+                "analysis_profile": state.analysis_profile,
+                "warnings_count": len(state.warnings),
+                "errors_count": len(state.errors),
+                "llm_provider": llm_provider or self.llm_provider,
+                "llm_model": llm_model or self.llm_model,
+                "manifest_findings_count": self._json_list_count(state.findings_path),
+                "code_findings_count": self._json_list_count(state.code_findings_path),
+                "canonical_findings_count": self._json_list_count(state.correlated_findings_path),
+                "evidence_items_count": self._json_list_count(state.evidence_registry_path),
+                "agentic_mode": "single" if agentic_decisions else "none",
+                "agentic_strategy_runtime": "dynamic_decision_loop"
+                if agentic_decisions
+                else "none",
+                "agentic_budget": None,
+                "static_investigation_ran": False,
+                "static_investigation_tool_calls": 0,
+                "llm_hypotheses_count": 0,
+                "llm_candidate_findings_count": 0,
+                "llm_candidate_findings_with_evidence_count": 0,
+                "static_investigation_termination_reason": None,
+                "dynamic_ran": True,
+                "dynamic_status": state.status,
+                "dynamic_observations_count": observations_count,
+                "dynamic_agentic_ran": agentic_decisions,
+                "dynamic_agentic_decisions_count": len(decisions),
+                "dynamic_termination_reason": termination_reason,
+            }
+        )
+        tracker.finalize()
+        state.save(self.artifacts_dir)
+        return state
+
+    def _run_impl(
+        self,
+        case_id: str,
+        apk_path: Path,
+        avd_name: str,
+        package_override: str | None = None,
+        show_avd: bool = False,
+        agentic_decisions: bool = False,
+        llm_provider: str | None = None,
+        llm_model: str | None = None,
+    ) -> CaseState:
+        if self._initialization_error:
+            raise RuntimeError(f"Emulator environment unavailable: {self._initialization_error}")
+        assert self.emulator is not None
+        assert self.adb is not None
+        assert self.logcat is not None
+        assert self.android_cert_tool is not None
         effective_llm_provider = llm_provider or self.llm_provider
         effective_llm_model = llm_model or self.llm_model
 
-        if (
-            effective_llm_provider != self.llm_provider
-            or effective_llm_model != self.llm_model
-        ):
+        if effective_llm_provider != self.llm_provider or effective_llm_model != self.llm_model:
             self.llm_provider = effective_llm_provider
             self.llm_model = effective_llm_model
             self.decision_engine = self._build_decision_engine(
@@ -244,10 +383,12 @@ class DynamicAnalysisPipeline:
         mitm_event_log_path = network_dir / "mitmdump.log"
         mitm_flows_path = network_dir / "flows.mitm"
 
-        http_proxy = self.mitmproxy.start(
-            flows_path=mitm_flows_path,
-            event_log_path=mitm_event_log_path,
-        )
+        http_proxy = None
+        if self.mitmproxy is not None:
+            http_proxy = self.mitmproxy.start(
+                flows_path=mitm_flows_path,
+                event_log_path=mitm_event_log_path,
+            )
 
         self.emulator.start(
             avd_name=avd_name,
@@ -256,8 +397,12 @@ class DynamicAnalysisPipeline:
             http_proxy=http_proxy,
         )
 
-        mitm_ca_path = self.android_cert_tool.resolve_mitmproxy_ca_path()
-        self.android_cert_tool.install_mitmproxy_ca_as_system(mitm_ca_path)
+        if self.mitmproxy is not None:
+            try:
+                mitm_ca_path = self.android_cert_tool.resolve_mitmproxy_ca_path()
+                self.android_cert_tool.install_mitmproxy_ca_as_system(mitm_ca_path)
+            except (FileNotFoundError, RuntimeError, TimeoutError) as exc:
+                state.warnings.append(f"Optional mitmproxy CA setup unavailable: {exc}")
 
         try:
             install = self.adb.install_apk(apk_path)
@@ -355,7 +500,42 @@ class DynamicAnalysisPipeline:
 
         finally:
             self.emulator.stop()
-            self.mitmproxy.stop()
+            if self.mitmproxy is not None:
+                self.mitmproxy.stop()
+
+    @staticmethod
+    def _dynamic_failure_reason(exc: Exception) -> str:
+        message = str(exc).casefold()
+        if "install" in message:
+            return "install_failed"
+        if "package" in message:
+            return "package_resolution_failed"
+        if "launch" in message or "activity" in message:
+            return "launch_failed"
+        if any(value in message for value in ("emulator", "adb", "device", "avd")):
+            return "emulator_unavailable"
+        return "dynamic_error"
+
+    @staticmethod
+    def _dynamic_observations_count(path: Path | None) -> int:
+        if not path or not path.is_file():
+            return 0
+        try:
+            value = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return 0
+        observations = value.get("observations", []) if isinstance(value, dict) else []
+        return len(observations) if isinstance(observations, list) else 0
+
+    @staticmethod
+    def _json_list_count(path: Path | None) -> int:
+        if not path or not path.is_file():
+            return 0
+        try:
+            value = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return 0
+        return len(value) if isinstance(value, list) else 0
 
     def _build_plan(self, state: CaseState, package_name: str) -> DynamicPlan:
         bundle_path = state.static_analysis_bundle_path
@@ -678,7 +858,9 @@ class DynamicAnalysisPipeline:
         stdout_lower = (proc.stdout or "").lower()
         stderr_lower = (proc.stderr or "").lower()
         rows_detected = "row:" in stdout_lower
-        permission_denied = "permission denial" in stderr_lower or "permission denial" in stdout_lower
+        permission_denied = (
+            "permission denial" in stderr_lower or "permission denial" in stdout_lower
+        )
 
         observations = [
             {
@@ -1021,7 +1203,9 @@ class DynamicAnalysisPipeline:
                 stderr_lower = (proc.stderr or "").lower()
                 success = proc.returncode == 0
                 rows_detected = "row:" in stdout_lower
-                permission_denied = "permission denial" in stderr_lower or "permission denial" in stdout_lower
+                permission_denied = (
+                    "permission denial" in stderr_lower or "permission denial" in stdout_lower
+                )
 
                 observations.append(
                     DynamicObservation(

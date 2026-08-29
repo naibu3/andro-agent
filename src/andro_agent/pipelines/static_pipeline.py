@@ -2,70 +2,77 @@ from __future__ import annotations
 
 import json
 import logging
-
+from dataclasses import replace
 from pathlib import Path
+from typing import Any
 
+from andro_agent.agentic import AgenticBudgetPreset, AgenticMode, AgenticRuntimeConfig
+from andro_agent.agents.analysis_agent import AnalysisAgent
+from andro_agent.agents.code_risk_agent import CodeRiskAgent
+from andro_agent.agents.manifest_risk_agent import ManifestRiskAgent
+from andro_agent.agents.markdown_report_agent import MarkdownReportAgent
+from andro_agent.agents.risk_fusion_agent import RiskFusionAgent
+from andro_agent.agents.static_investigation_agent import StaticInvestigationAgent
+from andro_agent.bundle.static_bundle import build_static_analysis_bundle
 from andro_agent.core.analysis_profiles import (
     AnalysisProfile,
     get_analysis_profile_config,
     is_static_llm_configured,
 )
 from andro_agent.core.state import CaseState
+from andro_agent.facts.code_search_facts import build_code_search_facts
 from andro_agent.facts.manifest_facts import build_manifest_facts
+from andro_agent.metrics import MetricsTracker
 from andro_agent.models import (
+    ApplyCodeRulesInput,
     ApplyManifestRulesInput,
-    BuildManifestFactsInput,
-    ExtractManifestInput,
-)
-from andro_agent.rules.manifest_rules import apply_manifest_rules
-from andro_agent.tools.extract_manifest import ExtractManifestTool
-from andro_agent.validators.apk import APKValidationError, validate_apk
-
-from andro_agent.agents.analysis_agent import AnalysisAgent
-
-from andro_agent.models import (
-    ApplyManifestRulesInput,
+    BuildCodeSearchFactsInput,
     BuildManifestFactsInput,
     CodeSearchInput,
     ExtractManifestInput,
     JadxDecompileInput,
-    BuildCodeSearchFactsInput,
-    ApplyCodeRulesInput,
 )
-from andro_agent.tools.code_search import CodeSearchTool
-from andro_agent.tools.reverse.jadx_tool import JadxDecompileTool
-
-from andro_agent.facts.code_search_facts import build_code_search_facts
 from andro_agent.rules.code_rules import apply_code_rules
-
-from andro_agent.bundle.static_bundle import build_static_analysis_bundle
-
-from andro_agent.agents.markdown_report_agent import MarkdownReportAgent
-
-from andro_agent.metrics import MetricsTracker
-
-from andro_agent.agents.manifest_risk_agent import ManifestRiskAgent
-from andro_agent.agents.code_risk_agent import CodeRiskAgent
-from andro_agent.agents.risk_fusion_agent import RiskFusionAgent
-from andro_agent.agents.markdown_report_agent import MarkdownReportAgent
-from andro_agent.metrics import MetricsTracker
-
-import json
-
-import logging
+from andro_agent.rules.manifest_rules import apply_manifest_rules
+from andro_agent.tools.code_search import CodeSearchTool
+from andro_agent.tools.extract_manifest import ExtractManifestTool
+from andro_agent.tools.reverse.jadx_tool import JadxDecompileTool
+from andro_agent.validators.apk import validate_apk
+from andro_agent.web.services.result_service import export_canonical_findings_and_evidence
 
 logger = logging.getLogger(__name__)
 
-class StaticAnalysisPipeline:
 
+class StaticAnalysisPipeline:
     def __init__(
         self,
         artifacts_dir: Path = Path("artifacts"),
         profile: AnalysisProfile | str = AnalysisProfile.FULL,
+        agentic_mode: AgenticMode | str | None = None,
+        agentic_budget: AgenticBudgetPreset | str = AgenticBudgetPreset.BALANCED,
+        llm_provider: str | None = None,
+        llm_model: str | None = None,
+        agentic_config: AgenticRuntimeConfig | None = None,
     ) -> None:
         self.artifacts_dir = artifacts_dir
         self.profile_config = get_analysis_profile_config(profile)
-
+        default_mode = (
+            AgenticMode.SINGLE
+            if self.profile_config.profile in {AnalysisProfile.FULL, AnalysisProfile.LLM}
+            else AgenticMode.NONE
+        )
+        config = agentic_config or AgenticRuntimeConfig(
+            mode=agentic_mode or default_mode,
+            budget_preset=agentic_budget,
+            provider=llm_provider,
+            model=llm_model,
+        )
+        if (
+            self.profile_config.profile is AnalysisProfile.NO_LLM
+            and config.mode is not AgenticMode.NONE
+        ):
+            config = replace(config, mode=AgenticMode.NONE)
+        self.agentic_config = config
 
     def _run_step(self, tracker: MetricsTracker, name: str, func, state: CaseState) -> None:
         tracker.start_step(name)
@@ -76,12 +83,19 @@ class StaticAnalysisPipeline:
             tracker.end_step(success=False, errors=[str(exc)])
             raise
 
-
     def run(self, apk_path: Path, case_id: str) -> CaseState:
         state = CaseState(
             case_id=case_id,
             apk_path=apk_path,
             analysis_profile=self.profile_config.profile.value,
+            agentic_mode=self.agentic_config.mode.value,
+            agentic_strategy_runtime=self.agentic_config.strategy_runtime,
+            agentic_budget=self.agentic_config.budget_preset.value,
+            agentic_enabled_tools=sorted(self.agentic_config.enabled_tools),
+            agentic_max_questions=self.agentic_config.max_questions,
+            agentic_max_tool_calls=self.agentic_config.max_tool_calls,
+            llm_provider=self.agentic_config.provider,
+            llm_model=self.agentic_config.model,
         )
         tracker = MetricsTracker(case_id, self.artifacts_dir)
 
@@ -126,6 +140,13 @@ class StaticAnalysisPipeline:
                 self._run_optional_agent_step(
                     tracker, "markdown_report_agent", self._step_markdown_report_agent, state
                 )
+                if state.static_report_path is None:
+                    self._run_step(
+                        tracker,
+                        "deterministic_report_fallback",
+                        self._step_deterministic_report,
+                        state,
+                    )
             else:
                 self._run_step(
                     tracker,
@@ -134,6 +155,22 @@ class StaticAnalysisPipeline:
                     state,
                 )
 
+            canonical_path, evidence_path = export_canonical_findings_and_evidence(
+                state=state.model_dump(mode="json"),
+                output_dir=self.artifacts_dir / state.case_id,
+            )
+            state.correlated_findings_path = canonical_path
+            state.evidence_registry_path = evidence_path
+
+            if self.agentic_config.mode is not AgenticMode.NONE:
+                self._run_optional_agent_step(
+                    tracker,
+                    "static_investigation_agent",
+                    self._step_static_investigation_agent,
+                    state,
+                )
+                self._append_static_investigation_report(state)
+
             state.status = "completed"
 
         except Exception as exc:
@@ -141,6 +178,13 @@ class StaticAnalysisPipeline:
             state.status = "failed"
 
         finally:
+            if (
+                self.agentic_config.mode is not AgenticMode.NONE
+                and state.static_investigation_trace_path is None
+                and any("configuration" in error.lower() for error in state.errors)
+            ):
+                self._write_disabled_static_investigation(state, state.errors[-1])
+            investigation_metrics = self._static_investigation_metrics(state)
             tracker.set_summary(
                 {
                     "status": state.status,
@@ -152,6 +196,19 @@ class StaticAnalysisPipeline:
                     "has_code_reasoning": state.code_reasoning_path is not None,
                     "has_fused_reasoning": state.analysis_path is not None,
                     "has_markdown_report": state.static_report_path is not None,
+                    "manifest_findings_count": len(self._load_findings(state.findings_path)),
+                    "code_findings_count": len(self._load_findings(state.code_findings_path)),
+                    "canonical_findings_count": len(
+                        self._load_findings(state.correlated_findings_path)
+                    ),
+                    "evidence_items_count": len(self._load_findings(state.evidence_registry_path)),
+                    "dynamic_ran": False,
+                    "dynamic_status": None,
+                    "dynamic_observations_count": 0,
+                    "dynamic_agentic_ran": False,
+                    "dynamic_agentic_decisions_count": 0,
+                    "dynamic_termination_reason": None,
+                    **investigation_metrics,
                 }
             )
             tracker.finalize()
@@ -340,7 +397,6 @@ class StaticAnalysisPipeline:
 
         state.jadx_output_dir = result.output_dir
 
-
     def _step_code_search(self, state: CaseState) -> None:
         state.current_step = "code_search"
         logger.info("[%s] Step: code_search", state.case_id)
@@ -391,7 +447,6 @@ class StaticAnalysisPipeline:
             raise RuntimeError("build_code_search_facts failed")
 
         state.code_facts_path = result.facts_path
-
 
     def _step_apply_code_rules(self, state: CaseState) -> None:
         state.current_step = "apply_code_rules"
@@ -569,6 +624,183 @@ class StaticAnalysisPipeline:
         except Exception as exc:
             tracker.end_agent(output_text="", success=False, errors=[str(exc)])
             raise
+
+    def _step_static_investigation_agent(
+        self,
+        state: CaseState,
+        tracker: MetricsTracker,
+    ) -> None:
+        state.current_step = "static_investigation_agent"
+        agent = StaticInvestigationAgent(
+            case_dir=self.artifacts_dir / state.case_id,
+            profile=state.analysis_profile,
+            runtime_config=self.agentic_config,
+        )
+        tracker.start_agent(
+            name="static_investigation_agent",
+            model=agent.model_id,
+            input_text="bounded static investigation",
+        )
+        try:
+            result = agent.run()
+            paths = result["paths"]
+            state.static_investigation_trace_path = paths["trace"]
+            state.llm_hypotheses_path = paths["hypotheses"]
+            state.llm_candidate_findings_path = paths["candidates"]
+            trace = result["trace"]
+            state.tool_history.append(
+                {
+                    "agent": "static_investigation_agent",
+                    "success": trace["termination_reason"] == "completed",
+                    "termination_reason": trace["termination_reason"],
+                    "tool_calls": len(trace["tool_calls"]),
+                    "output": str(paths["trace"]),
+                }
+            )
+            if trace["termination_reason"] in {"llm_error", "tool_error"}:
+                state.warnings.append(
+                    "static_investigation_agent ended with "
+                    f"{trace['termination_reason']}: {'; '.join(trace['errors'])}"
+                )
+            elif trace["termination_reason"] == "disabled":
+                state.warnings.append(
+                    "static_investigation_agent disabled: "
+                    + ("; ".join(trace["errors"]) or "LLM configuration unavailable")
+                )
+            tracker.end_agent(
+                output_text=json.dumps(
+                    {
+                        "termination_reason": trace["termination_reason"],
+                        "hypotheses": len(result["hypotheses"]),
+                        "candidates": len(result["candidates"]),
+                    }
+                ),
+                success=trace["termination_reason"] not in {"llm_error", "tool_error"},
+                usage=result.get("usage"),
+            )
+        except Exception as exc:
+            tracker.end_agent(output_text="", success=False, errors=[str(exc)])
+            raise
+
+    def _write_disabled_static_investigation(self, state: CaseState, reason: str) -> None:
+        result = StaticInvestigationAgent(
+            case_dir=self.artifacts_dir / state.case_id,
+            profile=state.analysis_profile,
+            runtime_config=self.agentic_config,
+        ).write_disabled_outputs(reason)
+        state.static_investigation_trace_path = result["paths"]["trace"]
+        state.llm_hypotheses_path = result["paths"]["hypotheses"]
+        state.llm_candidate_findings_path = result["paths"]["candidates"]
+
+    @staticmethod
+    def _static_investigation_metrics(state: CaseState) -> dict[str, Any]:
+        trace = {}
+        if state.static_investigation_trace_path and state.static_investigation_trace_path.exists():
+            try:
+                trace = json.loads(
+                    state.static_investigation_trace_path.read_text(encoding="utf-8")
+                )
+            except (OSError, json.JSONDecodeError):
+                trace = {}
+        hypotheses = StaticAnalysisPipeline._load_findings(state.llm_hypotheses_path)
+        candidates = StaticAnalysisPipeline._load_findings(state.llm_candidate_findings_path)
+        termination = trace.get("termination_reason") or "disabled"
+        return {
+            "agentic_mode": trace.get("agentic_mode", state.agentic_mode),
+            "agentic_strategy_runtime": trace.get(
+                "agentic_strategy_runtime", state.agentic_strategy_runtime
+            ),
+            "agentic_budget": trace.get("agentic_budget", state.agentic_budget),
+            "llm_provider": trace.get("llm_provider", state.llm_provider),
+            "llm_model": trace.get("llm_model", state.llm_model),
+            "enabled_tools": trace.get("enabled_tools", state.agentic_enabled_tools),
+            "max_questions": trace.get("budget", {}).get(
+                "max_questions", state.agentic_max_questions
+            ),
+            "max_tool_calls": trace.get("budget", {}).get(
+                "max_tool_calls", state.agentic_max_tool_calls
+            ),
+            "static_investigation_ran": termination != "disabled",
+            "static_investigation_tool_calls": len(trace.get("tool_calls", [])),
+            "llm_hypotheses_count": len(hypotheses),
+            "llm_candidate_findings_count": len(candidates),
+            "llm_candidate_findings_with_evidence_count": sum(
+                bool(candidate.get("evidence_ids")) for candidate in candidates
+            ),
+            "static_investigation_termination_reason": termination,
+        }
+
+    @staticmethod
+    def _append_static_investigation_report(state: CaseState) -> None:
+        if not state.static_report_path or not state.static_report_path.exists():
+            return
+        candidates = StaticAnalysisPipeline._load_findings(state.llm_candidate_findings_path)
+        hypotheses = StaticAnalysisPipeline._load_findings(state.llm_hypotheses_path)
+        if not candidates and not hypotheses:
+            return
+
+        lines: list[str] = []
+        if candidates:
+            lines.extend(
+                [
+                    "## LLM static investigation candidates",
+                    "",
+                    (
+                        "These candidates were proposed by the static investigation agent and "
+                        "should be manually reviewed. They are kept separate from deterministic "
+                        "findings."
+                    ),
+                    "",
+                ]
+            )
+            for candidate in candidates:
+                metadata = (
+                    candidate.get("metadata") if isinstance(candidate.get("metadata"), dict) else {}
+                )
+                evidence_ids = (
+                    ", ".join(f"`{value}`" for value in candidate.get("evidence_ids", [])) or "none"
+                )
+                lines.extend(
+                    [
+                        (
+                            f"### [{str(candidate.get('severity') or 'unknown').upper()}] "
+                            f"{candidate.get('title') or 'Untitled candidate'}"
+                        ),
+                        "",
+                        f"- Confidence: `{candidate.get('confidence') or 'unknown'}`",
+                        f"- Evidence IDs: {evidence_ids}",
+                        "",
+                        str(candidate.get("description") or ""),
+                        "",
+                        "Why it may not have been detected by deterministic rules: "
+                        + str(metadata.get("why_not_already_detected") or "Not provided."),
+                        "",
+                        "Remediation: " + str(candidate.get("remediation") or "Not provided."),
+                        "",
+                    ]
+                )
+        elif hypotheses:
+            lines.extend(
+                [
+                    "## LLM investigation hypotheses",
+                    "",
+                    "These are investigation hypotheses, not confirmed or candidate findings.",
+                    "",
+                ]
+            )
+            for hypothesis in hypotheses:
+                lines.extend(
+                    [
+                        f"### {hypothesis.get('title') or 'Untitled hypothesis'}",
+                        "",
+                        str(hypothesis.get("rationale") or ""),
+                        "",
+                    ]
+                )
+        current = state.static_report_path.read_text(encoding="utf-8").rstrip()
+        state.static_report_path.write_text(
+            current + "\n\n" + "\n".join(lines).rstrip() + "\n", encoding="utf-8"
+        )
 
     def _step_manifest_risk_agent(self, state: CaseState, tracker: MetricsTracker) -> None:
         state.current_step = "manifest_risk_agent"

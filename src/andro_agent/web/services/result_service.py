@@ -551,6 +551,75 @@ def collect_findings_and_evidence_from_state(
     return sorted_findings(deduplicate_findings(findings)), deduplicate_evidence(evidence)
 
 
+def export_canonical_findings_and_evidence(
+    *,
+    state: dict[str, Any],
+    output_dir: Path | None = None,
+) -> tuple[Path | None, Path | None]:
+    case_id = state.get("case_id")
+    case_dir = output_dir or _safe_case_artifacts_dir(state)
+    if (
+        not isinstance(case_id, str)
+        or not case_id.strip()
+        or case_dir is None
+        or case_dir.name != case_id
+        or case_dir.is_symlink()
+    ):
+        logger.warning("Could not determine a safe canonical export directory for case %s", case_id)
+        return None, None
+
+    findings_dir = case_dir / "findings"
+    manifest_path = Path(state.get("findings_path") or findings_dir / "manifest_findings.json")
+    code_path = Path(state.get("code_findings_path") or findings_dir / "code_findings.json")
+    if not manifest_path.is_file() and not code_path.is_file():
+        logger.warning("No legacy static findings were available for canonical export in case %s", case_id)
+        return None, None
+
+    try:
+        canonical_findings: list[dict[str, Any]] = []
+        evidence: list[dict[str, Any]] = []
+        for source, path in (("manifest", manifest_path), ("code", code_path)):
+            raw = read_json_if_exists(path, [])
+            values = raw.get("findings", []) if isinstance(raw, dict) else raw
+            if not isinstance(values, list):
+                continue
+
+            source_findings = [
+                finding_to_web_dict(
+                    canonicalize_finding(item, case_id=case_id, source=source, index=index)
+                )
+                for index, item in enumerate(values)
+                if isinstance(item, dict)
+            ]
+            linked_findings, source_evidence = attach_evidence_to_finding_dicts(
+                source_findings,
+                case_id=case_id,
+                source=source,
+                case_dir=case_dir,
+            )
+            canonical_findings.extend(linked_findings)
+            evidence.extend(source_evidence)
+
+        evidence = deduplicate_evidence(evidence)
+        findings_dir.mkdir(parents=True, exist_ok=True)
+        evidence_dir = case_dir / "evidence"
+        evidence_dir.mkdir(parents=True, exist_ok=True)
+        canonical_path = findings_dir / "canonical_findings.json"
+        evidence_path = evidence_dir / "evidence.json"
+        canonical_path.write_text(
+            json.dumps(canonical_findings, indent=2, ensure_ascii=False, default=str),
+            encoding="utf-8",
+        )
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2, ensure_ascii=False, default=str),
+            encoding="utf-8",
+        )
+        return canonical_path, evidence_path
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError, TypeError) as exc:
+        logger.warning("Could not export canonical findings for case %s: %s", case_id, exc)
+        return None, None
+
+
 def _collect_findings_and_evidence_for_downloads(
     *,
     state: dict[str, Any],

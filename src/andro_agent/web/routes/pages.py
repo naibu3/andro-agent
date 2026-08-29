@@ -17,14 +17,12 @@ from andro_agent.web.services.result_service import (
     final_report_markdown,
     load_case_state,
     load_evidence_for_case,
+    read_json_if_exists,
     render_report_html,
     severity_summary,
 )
 
-
-templates = Jinja2Templates(
-    directory=str(Path(__file__).resolve().parent.parent / "templates")
-)
+templates = Jinja2Templates(directory=str(Path(__file__).resolve().parent.parent / "templates"))
 
 router = APIRouter()
 case_repo = CaseRepository()
@@ -70,7 +68,7 @@ async def upload_form(
     request: Request,
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
-    analysis_profile: str = "static_basic",
+    analysis_profile: str = "no-llm",
 ):
     try:
         result = await create_scan(
@@ -171,6 +169,12 @@ def case_detail(request: Request, case_id: str):
     report_html = render_report_html(report_md)
 
     artifacts_dir = Path(case["artifacts_dir"])
+    hypotheses = read_json_if_exists(state.get("llm_hypotheses_path"), [])
+    llm_candidates = read_json_if_exists(state.get("llm_candidate_findings_path"), [])
+    dynamic_results = read_json_if_exists(state.get("dynamic_results_path"), {})
+    dynamic_observations = (
+        dynamic_results.get("observations", []) if isinstance(dynamic_results, dict) else []
+    )
 
     return templates.TemplateResponse(
         request,
@@ -189,5 +193,12 @@ def case_detail(request: Request, case_id: str):
             "category_summary": category_summary(display_findings),
             "report_html": report_html,
             "artifacts": extract_artifacts(artifacts_dir),
+            "hypotheses": hypotheses if isinstance(hypotheses, list) else [],
+            "llm_candidates": llm_candidates if isinstance(llm_candidates, list) else [],
+            "dynamic_observations": dynamic_observations,
+            "download_availability": {
+                "canonical": (artifacts_dir / "findings/canonical_findings.json").is_file(),
+                "evidence": (artifacts_dir / "evidence/evidence.json").is_file(),
+            },
         },
     )

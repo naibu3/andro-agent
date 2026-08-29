@@ -3,10 +3,10 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from pathlib import Path
 from typing import Any
 
 from andro_agent.domain.models.security import Evidence, EvidenceType
-
 
 PATH_LINE_PATTERN = re.compile(r"^(?P<path>[^:\s][^:]*\.[A-Za-z0-9_]+):(?P<line>\d+)$")
 
@@ -38,26 +38,37 @@ def canonicalize_evidence(
     source: str,
     finding_id: str,
     index: int,
+    case_dir: Path | None = None,
 ) -> Evidence:
-    artifact_path = _artifact_path(raw_evidence)
+    artifact_path = _relative_artifact_path(_artifact_path(raw_evidence), case_dir)
     selector = _selector(raw_evidence)
     snippet = _snippet(raw_evidence, artifact_path=artifact_path)
     command = _command(raw_evidence)
+    legacy_type = _dict_string(raw_evidence, "type")
+    metadata = {
+        "raw_evidence": raw_evidence,
+        "finding_id": finding_id,
+        "source": source,
+    }
+    if legacy_type:
+        metadata["legacy_type"] = legacy_type
+    legacy_source = _dict_string(raw_evidence, "source")
+    if legacy_source and legacy_source != source:
+        metadata["legacy_source"] = legacy_source
+    legacy_confidence = _dict_string(raw_evidence, "confidence")
+    if legacy_confidence:
+        metadata["legacy_confidence"] = legacy_confidence
 
     return Evidence(
         evidence_id=evidence_id_for(case_id, source, finding_id, index, raw_evidence),
         case_id=case_id,
-        evidence_type=_evidence_type(source, artifact_path),
+        evidence_type=_evidence_type(source, artifact_path, legacy_type),
         source_tool=source,
         artifact_path=artifact_path,
         selector=selector,
         snippet=snippet,
         command=command,
-        metadata={
-            "raw_evidence": raw_evidence,
-            "finding_id": finding_id,
-            "source": source,
-        },
+        metadata=metadata,
     )
 
 
@@ -67,6 +78,7 @@ def canonicalize_evidences(
     case_id: str,
     source: str,
     finding_id: str,
+    case_dir: Path | None = None,
 ) -> list[Evidence]:
     return [
         canonicalize_evidence(
@@ -75,6 +87,7 @@ def canonicalize_evidences(
             source=source,
             finding_id=finding_id,
             index=index,
+            case_dir=case_dir,
         )
         for index, raw_evidence in enumerate(raw_evidences)
     ]
@@ -95,6 +108,7 @@ def attach_evidence_to_finding_dicts(
     *,
     case_id: str,
     source: str,
+    case_dir: Path | None = None,
 ) -> tuple[list[dict], list[dict]]:
     updated_findings: list[dict] = []
     evidence_by_id: dict[str, Evidence] = {}
@@ -111,6 +125,7 @@ def attach_evidence_to_finding_dicts(
             case_id=case_id,
             source=str(updated.get("source") or source),
             finding_id=finding_id,
+            case_dir=case_dir,
         ):
             evidence_by_id.setdefault(evidence.evidence_id, evidence)
             generated_ids.append(evidence.evidence_id)
@@ -145,6 +160,10 @@ def _artifact_path(raw_evidence: Any) -> str | None:
             if value:
                 return value
 
+        key = _stringify(raw_evidence.get("key"))
+        if key and _looks_like_path(key):
+            return key
+
     if isinstance(raw_evidence, str):
         match = PATH_LINE_PATTERN.match(raw_evidence.strip())
         if match:
@@ -162,7 +181,13 @@ def _selector(raw_evidence: Any) -> str | None:
         if selector:
             return selector
 
-        line = _stringify(raw_evidence.get("line"))
+        key = _stringify(raw_evidence.get("key"))
+        if key and not _looks_like_path(key):
+            return key
+
+        metadata = raw_evidence.get("metadata")
+        metadata = metadata if isinstance(metadata, dict) else {}
+        line = _stringify(raw_evidence.get("line") or metadata.get("line_number"))
         if line:
             return f"line:{line}"
 
@@ -180,6 +205,17 @@ def _snippet(raw_evidence: Any, *, artifact_path: str | None) -> str | None:
             value = _stringify(raw_evidence.get(key))
             if value:
                 return value
+
+        metadata = raw_evidence.get("metadata")
+        metadata = metadata if isinstance(metadata, dict) else {}
+        line_text = _stringify(metadata.get("line_text"))
+        if line_text:
+            return line_text
+
+        key = _stringify(raw_evidence.get("key"))
+        value = _stringify(raw_evidence.get("value"))
+        if key and value:
+            return f"{key}={value}"
 
     if isinstance(raw_evidence, str) and not artifact_path:
         return raw_evidence
@@ -202,17 +238,29 @@ def _command(raw_evidence: Any) -> str | None:
     return None
 
 
-def _evidence_type(source: str, artifact_path: str | None) -> EvidenceType:
+def _evidence_type(
+    source: str, artifact_path: str | None, legacy_type: str | None = None
+) -> EvidenceType:
     lowered_source = source.lower()
     lowered_path = (artifact_path or "").lower()
+    lowered_type = (legacy_type or "").lower()
 
     if ".smali" in lowered_path:
         return EvidenceType.SMALI
 
-    if lowered_source == "manifest" or "androidmanifest.xml" in lowered_path:
+    if (
+        lowered_source == "manifest"
+        or "manifest" in lowered_type
+        or "androidmanifest.xml" in lowered_path
+    ):
         return EvidenceType.MANIFEST
 
-    if lowered_source == "code" or lowered_path.endswith((".java", ".kt")):
+    if (
+        lowered_source == "code"
+        or "code" in lowered_type
+        or "pattern" in lowered_type
+        or lowered_path.endswith((".java", ".kt"))
+    ):
         return EvidenceType.SOURCE
 
     if lowered_source == "dynamic":
@@ -260,6 +308,39 @@ def _dedupe(values: list[str]) -> list[str]:
 def _looks_like_path(value: str) -> bool:
     stripped = value.strip()
     return "/" in stripped or "\\" in stripped or bool(re.search(r"\.[A-Za-z0-9_]+$", stripped))
+
+
+def _relative_artifact_path(artifact_path: str | None, case_dir: Path | None) -> str | None:
+    if not artifact_path or case_dir is None:
+        return artifact_path
+
+    path = Path(artifact_path)
+    try:
+        if path.is_absolute():
+            return path.resolve().relative_to(case_dir.resolve()).as_posix()
+
+        resolved = (Path.cwd() / path).resolve()
+        try:
+            return resolved.relative_to(case_dir.resolve()).as_posix()
+        except ValueError:
+            pass
+
+        parts = path.parts
+        if case_dir.name in parts:
+            case_index = parts.index(case_dir.name)
+            relative = Path(*parts[case_index + 1 :])
+            if relative.parts:
+                return relative.as_posix()
+    except (OSError, ValueError):
+        pass
+
+    return artifact_path
+
+
+def _dict_string(raw_evidence: Any, key: str) -> str | None:
+    if not isinstance(raw_evidence, dict):
+        return None
+    return _stringify(raw_evidence.get(key))
 
 
 def _stringify(value: Any) -> str | None:

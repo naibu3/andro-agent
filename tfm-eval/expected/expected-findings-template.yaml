@@ -1,0 +1,17 @@
+app:
+  name: example
+  apk: tfm-eval/apks/example.apk
+  source: ""
+
+expected_findings:
+  - id: EXPECTED-001
+    title: Cleartext traffic enabled
+    category: network
+    severity: medium
+    masvs_refs:
+      - MASVS-NETWORK
+    cwe_refs:
+      - CWE-319
+    evidence_keywords:
+      - usesCleartextTraffic
+    notes: ""

@@ -90,6 +90,29 @@
   </dl>
 </section>
 {% elif is_completed %}
+<section class="panel">
+  <h2>Agentic results</h2>
+  {% if llm_candidates %}
+    {% for candidate in llm_candidates %}
+    <p><strong>{{ candidate.title }}</strong> — {{ candidate.severity }}: {{ candidate.description }}</p>
+    {% endfor %}
+  {% elif hypotheses %}
+    {% for hypothesis in hypotheses %}
+    <p><strong>{{ hypothesis.title }}</strong>: {{ hypothesis.rationale }}</p>
+    {% endfor %}
+  {% else %}
+    <p class="muted">Not available.</p>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <h2>Dynamic observations</h2>
+  {% if dynamic_observations %}
+    <pre>{{ dynamic_observations | tojson(indent=2) }}</pre>
+  {% else %}
+    <p class="muted">Not available.</p>
+  {% endif %}
+</section>
 <section class="stats-grid">
   <article class="stat-card">
     <span>Progress</span>
@@ -272,6 +295,12 @@
   </div>
   <div class="button-row">
     <a class="button" href="/api/scans/{{ case.id }}/downloads/findings.json">Findings JSON</a>
+    {% if download_availability.canonical %}
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/canonical_findings.json">Canonical findings</a>
+    {% else %}<span class="muted">Canonical findings: not available</span>{% endif %}
+    {% if download_availability.evidence %}
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/evidence.json">Evidence JSON</a>
+    {% else %}<span class="muted">Evidence: not available</span>{% endif %}
     <a class="button" href="/api/scans/{{ case.id }}/downloads/report.md">Report MD</a>
     <a class="button" href="/api/scans/{{ case.id }}/downloads/report.html">Report HTML</a>
     <a class="button" href="/api/scans/{{ case.id }}/downloads/bundle.zip">Bundle ZIP</a>

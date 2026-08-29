@@ -1,55 +1,38 @@
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import typer
+import uvicorn
+from dotenv import load_dotenv
+from rich import box
 from rich.console import Console
 from rich.table import Table
 
-from andro_agent.utils.logging import setup_logging
-
-from andro_agent.models import ExtractManifestInput
-from andro_agent.tools.extract_manifest import ExtractManifestTool
-from andro_agent.validators.apk import APKValidationError, validate_apk
-
-from rich import box
-from andro_agent.facts.manifest_facts import build_manifest_facts
-from andro_agent.models import BuildManifestFactsInput, ExtractManifestInput
-
-from andro_agent.models import (
-    ApplyManifestRulesInput,
-    BuildManifestFactsInput,
-    ExtractManifestInput,
-)
-from andro_agent.rules.manifest_rules import apply_manifest_rules
-
-from andro_agent.pipelines.static_pipeline import StaticAnalysisPipeline
-
-from andro_agent.models import CodeSearchInput, JadxDecompileInput
-from andro_agent.tools.code_search import CodeSearchTool
-from andro_agent.tools.reverse.jadx_tool import JadxDecompileTool
-
-from andro_agent.facts.code_search_facts import build_code_search_facts
-from andro_agent.models import (
-    ApplyCodeRulesInput,
-    BuildCodeSearchFactsInput,
-    CodeSearchInput,
-    JadxDecompileInput,
-)
-from andro_agent.rules.code_rules import apply_code_rules
-
-from dotenv import load_dotenv
-
-from andro_agent.dynamic.setup import run_dynamic_setup
-from andro_agent.tools.android.android_sdk_tool import AndroidSDKError
-
+from andro_agent.agentic import AgenticBudgetPreset, AgenticMode
 from andro_agent.core.analysis_profiles import AnalysisProfile
 from andro_agent.core.state import CaseState
+from andro_agent.dynamic.setup import run_dynamic_setup
+from andro_agent.facts.code_search_facts import build_code_search_facts
+from andro_agent.facts.manifest_facts import build_manifest_facts
+from andro_agent.models import (
+    ApplyCodeRulesInput,
+    ApplyManifestRulesInput,
+    BuildCodeSearchFactsInput,
+    BuildManifestFactsInput,
+    CodeSearchInput,
+    ExtractManifestInput,
+    JadxDecompileInput,
+)
 from andro_agent.pipelines.dynamic_pipeline import DynamicAnalysisPipeline
+from andro_agent.pipelines.static_pipeline import StaticAnalysisPipeline
+from andro_agent.rules.code_rules import apply_code_rules
+from andro_agent.rules.manifest_rules import apply_manifest_rules
+from andro_agent.tools.code_search import CodeSearchTool
+from andro_agent.tools.extract_manifest import ExtractManifestTool
+from andro_agent.tools.reverse.jadx_tool import JadxDecompileTool
+from andro_agent.utils.logging import setup_logging
 from andro_agent.validators.apk import APKValidationError, validate_apk
-
-import uvicorn
 
 load_dotenv()
 
@@ -76,13 +59,14 @@ app.add_typer(dynamic_app, name="dynamic")
 
 console = Console()
 
+
 @app.command("init-dirs")
 def init_dirs(
     base_dir: Path = typer.Option(
         Path("."),
         "--base-dir",
         help="Base directory where project folders will be created.",
-    )
+    ),
 ) -> None:
     """
     Create the base directories used by the project.
@@ -109,9 +93,7 @@ def init_dirs(
 
 
 @app.command("validate")
-def validate(
-    apk_path: Path = typer.Argument(..., help="Path to the APK file.")
-) -> None:
+def validate(apk_path: Path = typer.Argument(..., help="Path to the APK file.")) -> None:
     """
     Validate APK input.
     """
@@ -121,6 +103,7 @@ def validate(
     except APKValidationError as exc:
         console.print(f"[red]Validation error:[/red] {exc}")
         raise typer.Exit(code=1)
+
 
 @app.command("inspect")
 def inspect(
@@ -201,6 +184,7 @@ def inspect(
     console.print("[green]APK inspection completed.[/green]")
     console.print(table)
 
+
 @manifest_app.command("extract")
 def manifest_extract(
     apk_path: Path = typer.Argument(..., help="Path to the APK file."),
@@ -241,6 +225,7 @@ def manifest_extract(
     console.print("[green]Manifest extracted successfully.[/green]")
     console.print(table)
 
+
 @facts_app.command("build-manifest")
 def build_manifest_facts_cmd(
     manifest_json_path: Path = typer.Argument(..., help="Path to parsed manifest JSON."),
@@ -278,6 +263,7 @@ def build_manifest_facts_cmd(
     console.print("[green]Manifest facts built successfully.[/green]")
     console.print(table)
 
+
 @rules_app.command("manifest")
 def apply_manifest_rules_cmd(
     facts_json_path: Path = typer.Argument(..., help="Path to manifest facts JSON."),
@@ -314,6 +300,7 @@ def apply_manifest_rules_cmd(
 
     console.print("[green]Manifest rules applied successfully.[/green]")
     console.print(table)
+
 
 code_app = typer.Typer(help="Code analysis commands")
 app.add_typer(code_app, name="code")
@@ -379,6 +366,7 @@ def code_search_cmd(
     console.print("[green]Code search completed successfully.[/green]")
     console.print(table)
 
+
 @facts_app.command("build-code-search")
 def build_code_search_facts_cmd(
     code_search_results_path: Path = typer.Argument(..., help="Path to code search results JSON."),
@@ -406,6 +394,7 @@ def build_code_search_facts_cmd(
     table.add_row("Total facts", str(len(result.facts)))
     console.print("[green]Code search facts built successfully.[/green]")
     console.print(table)
+
 
 @rules_app.command("code")
 def apply_code_rules_cmd(
@@ -435,6 +424,7 @@ def apply_code_rules_cmd(
     console.print("[green]Code rules applied successfully.[/green]")
     console.print(table)
 
+
 @app.command("run")
 def run_analysis(
     apk_path: Path = typer.Argument(..., help="Path to the APK file."),
@@ -447,13 +437,37 @@ def run_analysis(
     profile: AnalysisProfile = typer.Option(
         AnalysisProfile.FULL,
         "--profile",
+        "--analysis-profile",
         help="Analysis profile: no-llm, fast, full, or llm.",
+    ),
+    agentic_mode: AgenticMode | None = typer.Option(
+        None,
+        "--agentic-mode",
+        help="Static investigation mode: none, single, planner-executor, or multi-phase.",
+    ),
+    agentic_budget: AgenticBudgetPreset = typer.Option(
+        AgenticBudgetPreset.BALANCED,
+        "--agentic-budget",
+        help="Static investigation budget: conservative, balanced, or deep.",
+    ),
+    llm_provider: str | None = typer.Option(
+        None, "--llm-provider", help="LLM provider override, such as openrouter or ollama."
+    ),
+    llm_model: str | None = typer.Option(
+        None, "--llm-model", help="LLM model identifier override."
     ),
 ) -> None:
     """
     Run full static analysis pipeline.
     """
-    pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir, profile=profile)
+    pipeline = StaticAnalysisPipeline(
+        artifacts_dir=artifacts_dir,
+        profile=profile,
+        agentic_mode=agentic_mode,
+        agentic_budget=agentic_budget,
+        llm_provider=llm_provider,
+        llm_model=llm_model,
+    )
 
     state = pipeline.run(apk_path=apk_path, case_id=case_id)
 
@@ -491,6 +505,7 @@ def run_analysis(
     console.print("[green]Pipeline completed successfully.[/green]")
     console.print(table)
 
+
 @dynamic_app.command("run")
 def dynamic_run(
     case_id: str = typer.Option(..., "--case-id", help="Existing case identifier."),
@@ -512,6 +527,11 @@ def dynamic_run(
         "--agentic-decisions",
         help="Allow the dynamic decision agent to propose follow-up tasks.",
     ),
+    agentic_mode: AgenticMode = typer.Option(
+        AgenticMode.NONE,
+        "--agentic-mode",
+        help="Dynamic agentic mode: none or single (experimental).",
+    ),
     llm_provider: str | None = typer.Option(
         None,
         "--llm-provider",
@@ -523,7 +543,13 @@ def dynamic_run(
         help="Model id to use for agentic dynamic decisions.",
     ),
 ) -> None:
-    
+    if agentic_mode not in {AgenticMode.NONE, AgenticMode.SINGLE}:
+        raise typer.BadParameter(
+            "Dynamic execution currently supports only agentic modes 'none' and 'single'.",
+            param_hint="--agentic-mode",
+        )
+    dynamic_agentic = agentic_decisions or agentic_mode is AgenticMode.SINGLE
+
     try:
         validated_apk = validate_apk(apk_path)
     except APKValidationError as exc:
@@ -548,14 +574,18 @@ def dynamic_run(
     state.save(artifacts_dir)
 
     try:
-        pipeline = DynamicAnalysisPipeline(artifacts_dir=artifacts_dir)
+        pipeline = DynamicAnalysisPipeline(
+            artifacts_dir=artifacts_dir,
+            llm_provider=llm_provider,
+            llm_model=llm_model,
+        )
         state = pipeline.run(
             case_id=case_id,
             apk_path=validated_apk,
             avd_name=avd_name,
             package_override=package_name,
             show_avd=show_avd,
-            agentic_decisions=agentic_decisions,
+            agentic_decisions=dynamic_agentic,
             llm_provider=llm_provider,
             llm_model=llm_model,
         )
@@ -566,10 +596,19 @@ def dynamic_run(
         console.print(f"[red]Dynamic execution error:[/red] {exc}")
         raise typer.Exit(code=1)
 
+    if state.status != "dynamic_completed":
+        console.print("[red]Dynamic analysis failed.[/red]")
+        for error in state.errors:
+            console.print(f"[red]- {error}[/red]")
+        raise typer.Exit(code=1)
+
+    if dynamic_agentic:
+        console.print("[yellow]Dynamic agentic decisions are experimental.[/yellow]")
     console.print("[green]Dynamic analysis completed.[/green]")
     console.print(f"Resolved package: {state.package_name}")
     console.print(f"Plan: {state.dynamic_plan_path}")
     console.print(f"Results: {state.dynamic_results_path}")
+
 
 @dynamic_app.command("setup")
 def dynamic_setup(
@@ -659,6 +698,7 @@ def dynamic_setup(
 
     console.print("[green]Dynamic environment is ready.[/green]")
 
+
 @app.command("web")
 def web(
     host: str = typer.Option("127.0.0.1", "--host", help="Bind host."),
@@ -666,7 +706,6 @@ def web(
     reload: bool = typer.Option(False, "--reload", help="Enable development reload."),
 ) -> None:
     """Start the web dashboard."""
-    
 
     uvicorn.run(
         "andro_agent.web.app:app",
@@ -674,6 +713,7 @@ def web(
         port=port,
         reload=reload,
     )
+
 
 @app.callback()
 def main(

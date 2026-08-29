@@ -5,12 +5,20 @@ from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel, Field
-from typing import Any
+
 
 class CaseState(BaseModel):
     case_id: str
     apk_path: Path
     analysis_profile: str = "full"
+    agentic_mode: str = "none"
+    agentic_strategy_runtime: str = "none"
+    agentic_budget: str = "balanced"
+    agentic_enabled_tools: list[str] = Field(default_factory=list)
+    agentic_max_questions: int = 0
+    agentic_max_tool_calls: int = 0
+    llm_provider: str | None = None
+    llm_model: str | None = None
 
     # Outputs
     manifest_json_path: Path | None = None
@@ -25,6 +33,9 @@ class CaseState(BaseModel):
     correlated_findings_path: Path | None = None
     static_analysis_bundle_path: Path | None = None
     static_report_path: Path | None = None
+    static_investigation_trace_path: Path | None = None
+    llm_hypotheses_path: Path | None = None
+    llm_candidate_findings_path: Path | None = None
 
     evidence_registry_path: Path | None = None
     candidates_path: Path | None = None
@@ -64,7 +75,7 @@ class CaseState(BaseModel):
         return path
 
     @classmethod
-    def load(cls, case_id: str, base_dir: Path = Path("artifacts")) -> "CaseState":
+    def load(cls, case_id: str, base_dir: Path = Path("artifacts")) -> CaseState:
         path = base_dir / case_id / "case_state.json"
         data = json.loads(path.read_text(encoding="utf-8"))
         return cls.model_validate(data)

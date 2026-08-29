@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 from andro_agent.domain.adapters.security_evidence import (
     attach_evidence_to_finding_dicts,
     canonicalize_evidence,
@@ -10,10 +12,11 @@ from andro_agent.web.services.result_service import (
     build_download_bundle,
     collect_findings_and_evidence_from_state,
     collect_findings_from_state,
+    export_canonical_findings_and_evidence,
     normalize_findings,
     normalize_findings_with_evidence,
-    write_final_download_files,
     write_evidence_json_if_possible,
+    write_final_download_files,
 )
 
 
@@ -130,6 +133,64 @@ def test_arbitrary_dict_evidence_is_preserved_in_metadata():
     assert evidence.metadata["raw_evidence"] == raw
     assert evidence.metadata["finding_id"] == "finding-1"
     assert evidence.metadata["source"] == "manifest"
+
+
+def test_legacy_code_evidence_maps_path_line_text_and_metadata(tmp_path):
+    case_dir = tmp_path / "artifacts" / "case-1"
+    source_path = case_dir / "jadx" / "sources" / "MainActivity.java"
+    raw = {
+        "type": "code.pattern.webview_loadUrl",
+        "key": str(source_path),
+        "value": True,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {"line_number": 43, "line_text": "$webView.loadUrl(url);"},
+    }
+
+    evidence = canonicalize_evidence(
+        raw,
+        case_id="case-1",
+        source="code",
+        finding_id="finding-1",
+        index=0,
+        case_dir=case_dir,
+    )
+
+    assert evidence.artifact_path == "jadx/sources/MainActivity.java"
+    assert evidence.selector == "line:43"
+    assert evidence.snippet == "$webView.loadUrl(url);"
+    assert evidence.evidence_type == EvidenceType.SOURCE
+    assert evidence.metadata["raw_evidence"] == raw
+    assert evidence.metadata["legacy_type"] == "code.pattern.webview_loadUrl"
+    assert evidence.metadata["legacy_source"] == "code_search"
+    assert evidence.metadata["legacy_confidence"] == "high"
+
+
+def test_legacy_manifest_key_and_value_produce_useful_evidence():
+    raw = {
+        "type": "manifest.application.debuggable",
+        "key": "debuggable",
+        "value": True,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {},
+    }
+
+    evidence = canonicalize_evidence(
+        raw,
+        case_id="case-1",
+        source="manifest",
+        finding_id="finding-1",
+        index=0,
+    )
+
+    assert evidence.artifact_path is None
+    assert evidence.selector == "debuggable"
+    assert evidence.snippet == "debuggable=True"
+    assert evidence.evidence_type == EvidenceType.MANIFEST
+    assert evidence.metadata["raw_evidence"] == raw
+    assert evidence.metadata["legacy_type"] == "manifest.application.debuggable"
+    assert evidence.metadata["legacy_confidence"] == "high"
 
 
 def test_attach_evidence_to_finding_dicts_adds_evidence_ids():
@@ -303,6 +364,88 @@ def test_collect_findings_from_state_remains_list_of_dicts(tmp_path):
 
     assert isinstance(findings, list)
     assert isinstance(findings[0], dict)
+
+
+def test_export_canonical_findings_and_evidence_preserves_legacy_files(tmp_path):
+    case_dir = tmp_path / "artifacts" / "case-1"
+    findings_dir = case_dir / "findings"
+    findings_dir.mkdir(parents=True)
+    manifest_path = findings_dir / "manifest_findings.json"
+    code_path = findings_dir / "code_findings.json"
+    manifest_payload = json.dumps(
+        [
+            {
+                "rule_id": "MANIFEST_DEBUGGABLE",
+                "title": "Debuggable application",
+                "severity": "high",
+                "evidence": [
+                    {
+                        "type": "manifest.application.debuggable",
+                        "key": "debuggable",
+                        "value": True,
+                        "source": "manifest",
+                        "confidence": "high",
+                        "metadata": {},
+                    }
+                ],
+            }
+        ]
+    )
+    code_payload = json.dumps(
+        [
+            {
+                "rule_id": "CODE_WEBVIEW_LOAD_URL",
+                "title": "WebView URL loading",
+                "severity": "medium",
+                "evidence": [
+                    {
+                        "type": "code.pattern.webview_loadUrl",
+                        "key": str(case_dir / "jadx/sources/MainActivity.java"),
+                        "value": True,
+                        "source": "code_search",
+                        "confidence": "high",
+                        "metadata": {"line_number": 43, "line_text": "loadUrl(url);"},
+                    }
+                ],
+            }
+        ]
+    )
+    manifest_path.write_text(manifest_payload, encoding="utf-8")
+    code_path.write_text(code_payload, encoding="utf-8")
+
+    canonical_path, evidence_path = export_canonical_findings_and_evidence(
+        state={
+            "case_id": "case-1",
+            "findings_path": str(manifest_path),
+            "code_findings_path": str(code_path),
+        },
+        output_dir=case_dir,
+    )
+
+    assert canonical_path == findings_dir / "canonical_findings.json"
+    assert evidence_path == case_dir / "evidence" / "evidence.json"
+    canonical = json.loads(canonical_path.read_text(encoding="utf-8"))
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+    assert len(canonical) == 2
+    assert all(finding["finding_id"] for finding in canonical)
+    assert all(finding["evidence_ids"] for finding in canonical)
+    assert all(item["evidence_id"].startswith("EVID-") for item in evidence)
+    assert canonical[0]["evidence"]
+    assert canonical[0]["metadata"]["raw_finding"]
+    assert manifest_path.read_text(encoding="utf-8") == manifest_payload
+    assert code_path.read_text(encoding="utf-8") == code_payload
+
+
+def test_export_canonical_findings_handles_missing_files(tmp_path):
+    case_dir = tmp_path / "artifacts" / "case-1"
+    case_dir.mkdir(parents=True)
+
+    paths = export_canonical_findings_and_evidence(
+        state={"case_id": "case-1"},
+        output_dir=case_dir,
+    )
+
+    assert paths == (None, None)
 
 
 def test_write_evidence_json_if_possible_writes_valid_json(tmp_path):

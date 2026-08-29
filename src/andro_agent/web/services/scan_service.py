@@ -41,7 +41,8 @@ def run_static_scan(case_id: str) -> None:
             progress=15,
         )
 
-        pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir)
+        profile = case.get("analysis_profile") or "no-llm"
+        pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir, profile=profile)
         state = pipeline.run(apk_path=apk_path, case_id=case_id)
 
         state_dict = state.model_dump(mode="json")

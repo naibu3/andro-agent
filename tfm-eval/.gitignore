@@ -1,0 +1,14 @@
+apks/*
+runs/*
+artifacts/*
+reports/*
+
+!apks/.gitkeep
+!runs/.gitkeep
+!artifacts/.gitkeep
+!reports/.gitkeep
+!README.md
+!.gitignore
+!notes/**
+!expected/**
+!scripts/**

@@ -60,7 +60,9 @@ class MetricsTracker:
     # -----------------------------
     # AGENT TRACKING
     # -----------------------------
-    def start_agent(self, name: str, model: str | None = None, input_text: str | None = None) -> None:
+    def start_agent(
+        self, name: str, model: str | None = None, input_text: str | None = None
+    ) -> None:
         self._current_agent = AgentMetric(
             name=name,
             model=model,
@@ -143,7 +145,13 @@ class MetricsTracker:
             "duration_seconds": self.run_metrics.duration_seconds,
             "steps": len(self.run_metrics.steps),
             "agents": len(self.run_metrics.agents),
+            "agents_count": len(self.run_metrics.agents),
+            "prompt_tokens": sum(agent.input_tokens or 0 for agent in self.run_metrics.agents)
+            or None,
+            "completion_tokens": sum(agent.output_tokens or 0 for agent in self.run_metrics.agents)
+            or None,
             "summary": self.run_metrics.summary,
+            **self.run_metrics.summary,
         }
 
         summary_path.write_text(
