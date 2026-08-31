@@ -66,6 +66,10 @@ class LLMJSONParseError(RuntimeError):
         super().__init__(message)
 
 
+class LLMProviderError(RuntimeError):
+    pass
+
+
 @dataclass(frozen=True)
 class StaticInvestigationBudget:
     max_questions: int = 5
@@ -117,7 +121,9 @@ class StaticInvestigationAgent:
         hypotheses: list[dict[str, Any]] = []
         candidates: list[dict[str, Any]] = []
         try:
-            self._ensure_model()
+            metadata = get_llm_metadata(model_id=self.model_id, provider=self.provider)
+            self.provider = metadata["provider"]
+            self.model_id = metadata["model"]
             trace["llm_provider"] = self.provider
             trace["llm_model"] = self.model_id
             self._set_phase(trace, "context_building")
@@ -128,6 +134,8 @@ class StaticInvestigationAgent:
                 plan = self._call_model(self._planning_prompt(context), phase="question_planning")
                 questions = self._normalize_questions(plan.get("questions"))
                 trace["question_planning_source"] = "llm"
+            except LLMProviderError:
+                raise
             except LLMJSONParseError as exc:
                 trace["question_planning_error"] = exc.reason
                 trace["errors"].append(f"question_planning: {exc}")
@@ -176,14 +184,24 @@ class StaticInvestigationAgent:
             if trace["termination_reason"] != "budget_exhausted":
                 trace["termination_reason"] = "completed"
         except LLMJSONParseError as exc:
-            trace["termination_reason"] = "invalid_json"
+            trace["termination_reason"] = exc.reason
             trace["failed_phase"] = trace["current_phase"]
+            trace["errors"].append(str(exc))
+        except LLMProviderError as exc:
+            trace["termination_reason"] = "llm_error"
+            trace["failed_phase"] = trace["current_phase"]
+            if trace["current_phase"] == "question_planning":
+                trace["question_planning_error"] = "llm_error"
+            elif trace["current_phase"] == "final_synthesis":
+                trace["final_synthesis_error"] = "llm_error"
             trace["errors"].append(str(exc))
         except RuntimeError as exc:
             message = str(exc)
             lowered = message.lower()
             trace["termination_reason"] = (
-                "disabled"
+                "llm_error"
+                if "api key" in lowered and "not configured" in lowered
+                else "disabled"
                 if "not configured" in lowered
                 else "invalid_json"
                 if "valid json" in lowered or "json object" in lowered
@@ -395,15 +413,28 @@ class StaticInvestigationAgent:
         )
 
     def _call_model(self, prompt: str, *, phase: str) -> dict[str, Any]:
-        if self.model_client is not None:
-            raw = self.model_client.complete_json(prompt)
-        else:
-            self._ensure_model()
-            response = self._agno_agent.run(prompt)
-            usage = getattr(response, "usage", None)
-            if usage:
-                self._usage.append(self._usage_dict(usage))
-            raw = getattr(response, "content", response)
+        try:
+            if self.model_client is not None:
+                raw = self.model_client.complete_json(prompt)
+            else:
+                self._ensure_model()
+                response = self._agno_agent.run(prompt)
+                status = getattr(response, "status", None)
+                status_value = getattr(status, "value", status)
+                if str(status_value).upper() == "ERROR":
+                    raise LLMProviderError("LLM provider request failed with status ERROR.")
+                usage = getattr(response, "usage", None)
+                if usage:
+                    self._usage.append(self._usage_dict(usage))
+                raw = getattr(response, "content", response)
+        except LLMProviderError:
+            raise
+        except Exception as exc:
+            if isinstance(exc, RuntimeError) and "api key" in str(exc).lower():
+                raise LLMProviderError(str(exc)) from exc
+            if isinstance(exc, RuntimeError) and "not configured" in str(exc).lower():
+                raise
+            raise LLMProviderError(f"LLM provider request failed: {exc}") from exc
         self._write_raw_response(phase, raw)
         value = self._parse_json(raw)
         if not isinstance(value, dict):
@@ -433,6 +464,8 @@ class StaticInvestigationAgent:
             if questions:
                 trace["question_planning_source"] = "llm"
             return questions
+        except LLMProviderError:
+            raise
         except (LLMJSONParseError, RuntimeError, TypeError) as exc:
             trace["errors"].append(f"question_planning repair: {exc}")
             return []

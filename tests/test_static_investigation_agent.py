@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -12,6 +13,7 @@ from andro_agent.agents.static_investigation_agent import (
     StaticInvestigationBudget,
 )
 from andro_agent.core.state import CaseState
+from andro_agent.metrics.tracker import MetricsTracker
 from andro_agent.pipelines.static_pipeline import StaticAnalysisPipeline
 
 
@@ -403,6 +405,150 @@ def test_invalid_question_plan_uses_deterministic_fallback(tmp_path: Path) -> No
     assert any(call["tool"] == "get_evidence" for call in result["trace"]["tool_calls"])
 
 
+def test_provider_connection_failure_is_llm_error(tmp_path: Path) -> None:
+    case_dir = investigation_case(tmp_path)
+
+    class FailingProvider:
+        def complete_json(self, prompt: str) -> object:
+            raise ConnectionError("provider unavailable")
+
+    result = StaticInvestigationAgent(
+        case_dir=case_dir,
+        profile="full",
+        model_client=FailingProvider(),
+    ).run()
+
+    trace = result["trace"]
+    assert trace["termination_reason"] == "llm_error"
+    assert trace["failed_phase"] == "question_planning"
+    assert trace["question_planning_error"] == "llm_error"
+    assert trace["repair_attempts"] == []
+    assert "provider unavailable" in trace["errors"][0]
+
+
+@pytest.mark.parametrize(
+    ("provider", "model", "setting_names", "env_names", "message"),
+    [
+        (
+            "openai",
+            "gpt-5.5",
+            ("openai_api_key",),
+            ("OPENAI_API_KEY",),
+            "OpenAI API key is not configured. Set OPENAI_API_KEY.",
+        ),
+        (
+            "deepseek",
+            "deepseek-v4-flash",
+            ("deepseek_api_key",),
+            ("DEEPSEEK_API_KEY",),
+            "Deepseek API key is not configured. Set DEEPSEEK_API_KEY.",
+        ),
+        (
+            "kimi",
+            "kimi-k2.5",
+            ("moonshot_api_key", "kimi_api_key"),
+            ("MOONSHOT_API_KEY", "KIMI_API_KEY"),
+            "Kimi API key is not configured. Set MOONSHOT_API_KEY or KIMI_API_KEY.",
+        ),
+    ],
+)
+def test_missing_native_provider_key_is_llm_error_in_question_planning(
+    tmp_path: Path, monkeypatch, provider, model, setting_names, env_names, message
+) -> None:
+    from andro_agent.core import llm
+
+    for name in setting_names:
+        monkeypatch.setattr(llm.settings, name, None)
+    for name in env_names:
+        monkeypatch.delenv(name, raising=False)
+    result = StaticInvestigationAgent(
+        case_dir=investigation_case(tmp_path),
+        profile="full",
+        provider=provider,
+        model_id=model,
+    ).run()
+
+    trace = result["trace"]
+    assert trace["termination_reason"] == "llm_error"
+    assert trace["failed_phase"] == "question_planning"
+    assert trace["repair_attempts"] == []
+    assert trace["errors"] == [message]
+    assert result["hypotheses"] == []
+    assert result["candidates"] == []
+
+
+@pytest.mark.parametrize(
+    ("provider", "model"),
+    [
+        ("openai", "gpt-5.5"),
+        ("deepseek", "deepseek-v4-flash"),
+        ("kimi", "kimi-k2.5"),
+    ],
+)
+def test_mocked_native_provider_response_is_compatible_with_static_investigation(
+    tmp_path: Path, provider, model
+) -> None:
+    responses = [
+        {"questions": []},
+        {"hypotheses": [], "candidate_findings": []},
+    ]
+
+    class FakeOpenAIAgent:
+        def run(self, prompt: str):
+            return SimpleNamespace(status="COMPLETED", content=responses.pop(0), usage=None)
+
+    agent = StaticInvestigationAgent(
+        case_dir=investigation_case(tmp_path),
+        profile="full",
+        provider=provider,
+        model_id=model,
+    )
+    agent._agno_agent = FakeOpenAIAgent()
+
+    trace = agent.run()["trace"]
+
+    assert trace["termination_reason"] == "completed"
+    assert trace["llm_provider"] == provider
+    assert trace["llm_model"] == model
+
+
+def test_provider_key_is_not_written_to_static_investigation_artifacts(
+    tmp_path: Path, monkeypatch
+) -> None:
+    secret = "sk-test-SECRET-123"
+    monkeypatch.setenv("DEEPSEEK_API_KEY", secret)
+    case_dir = investigation_case(tmp_path)
+    model = FakeModelClient(
+        [{"questions": []}, {"hypotheses": [], "candidate_findings": []}]
+    )
+
+    StaticInvestigationAgent(
+        case_dir=case_dir,
+        profile="full",
+        provider="deepseek",
+        model_id="deepseek-v4-flash",
+        model_client=model,
+    ).run()
+
+    for path in case_dir.rglob("*"):
+        if path.is_file():
+            assert secret not in path.read_text(encoding="utf-8", errors="ignore")
+
+
+def test_metrics_summary_has_backward_compatible_aliases(tmp_path: Path) -> None:
+    tracker = MetricsTracker(case_id="metrics-aliases", artifacts_dir=tmp_path)
+    tracker.set_summary({"canonical_findings_count": 3, "evidence_items_count": 4})
+
+    tracker.finalize()
+
+    summary = json.loads(
+        (tmp_path / "metrics-aliases/metrics/run_metrics_summary.json").read_text()
+    )
+    assert summary["total_duration_seconds"] == summary["duration_seconds"]
+    assert summary["findings_count"] == summary["canonical_findings_count"] == 3
+    assert summary["evidence_count"] == summary["evidence_items_count"] == 4
+
+
 def test_raw_phase_files_and_question_planning_repair_success(tmp_path: Path) -> None:
     case_dir = investigation_case(tmp_path)
     repaired_plan = {
@@ -493,13 +639,13 @@ def test_empty_final_synthesis_is_safe_and_preserves_deterministic_findings(tmp_
     assert canonical.read_bytes() == before
 
 
-def test_empty_final_synthesis_repair_still_terminates_as_invalid_json(tmp_path: Path) -> None:
+def test_empty_final_synthesis_repair_terminates_as_empty_response(tmp_path: Path) -> None:
     case_dir = investigation_case(tmp_path)
     model = FakeModelClient([{"questions": []}, "", ""])
 
     result = StaticInvestigationAgent(case_dir=case_dir, profile="full", model_client=model).run()
 
-    assert result["trace"]["termination_reason"] == "invalid_json"
+    assert result["trace"]["termination_reason"] == "empty_response"
     assert result["trace"]["failed_phase"] == "final_synthesis"
     assert result["trace"]["repair_attempts"][-1] == {
         "phase": "final_synthesis",

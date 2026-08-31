@@ -100,7 +100,7 @@ class StaticAnalysisPipeline:
         tracker = MetricsTracker(case_id, self.artifacts_dir)
 
         try:
-            self.profile_config.validate()
+            self.profile_config.validate(self.agentic_config.provider)
             self._run_step(tracker, "validate", self._step_validate, state)
             self._run_step(tracker, "extract_manifest", self._step_extract_manifest, state)
             self._run_step(tracker, "build_manifest_facts", self._step_build_facts, state)
@@ -129,7 +129,7 @@ class StaticAnalysisPipeline:
                     self._step_deterministic_report,
                     state,
                 )
-                if is_static_llm_configured():
+                if is_static_llm_configured(self.agentic_config.provider):
                     self._run_optional_agent_step(
                         tracker,
                         "compact_markdown_report_agent",
@@ -544,7 +544,10 @@ class StaticAnalysisPipeline:
         state.current_step = "markdown_report_agent"
         logger.info("[%s] Step: markdown_report_agent", state.case_id)
 
-        agent = MarkdownReportAgent()
+        agent = MarkdownReportAgent(
+            model_id=state.llm_model,
+            provider=state.llm_provider,
+        )
         prompt = agent.build_prompt(state)
 
         tracker.start_agent(
@@ -596,7 +599,10 @@ class StaticAnalysisPipeline:
         if not state.static_report_path or not state.static_report_path.exists():
             raise RuntimeError("Deterministic report not available")
 
-        agent = MarkdownReportAgent()
+        agent = MarkdownReportAgent(
+            model_id=state.llm_model,
+            provider=state.llm_provider,
+        )
         deterministic_report = state.static_report_path.read_text(encoding="utf-8")
         prompt = (
             "Summarize this deterministic Android security report concisely. "
@@ -813,7 +819,7 @@ class StaticAnalysisPipeline:
         state.current_step = "manifest_risk_agent"
         logger.info("[%s] Step: manifest_risk_agent", state.case_id)
 
-        agent = ManifestRiskAgent()
+        agent = ManifestRiskAgent(model_id=state.llm_model, provider=state.llm_provider)
         prompt = agent.build_prompt(state)
 
         tracker.start_agent(
@@ -863,7 +869,7 @@ class StaticAnalysisPipeline:
         state.current_step = "code_risk_agent"
         logger.info("[%s] Step: code_risk_agent", state.case_id)
 
-        agent = CodeRiskAgent()
+        agent = CodeRiskAgent(model_id=state.llm_model, provider=state.llm_provider)
         prompt = agent.build_prompt(state)
 
         tracker.start_agent(
@@ -913,7 +919,7 @@ class StaticAnalysisPipeline:
         state.current_step = "risk_fusion_agent"
         logger.info("[%s] Step: risk_fusion_agent", state.case_id)
 
-        agent = RiskFusionAgent()
+        agent = RiskFusionAgent(model_id=state.llm_model, provider=state.llm_provider)
         prompt = agent.build_prompt(state)
 
         tracker.start_agent(

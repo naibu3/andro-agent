@@ -5,27 +5,21 @@ import logging
 import re
 from typing import Any
 
-from andro_agent.core.config import settings
+from andro_agent.core.llm import build_llm_model, get_llm_metadata
 from andro_agent.core.state import CaseState
 
 logger = logging.getLogger(__name__)
 
 
 class ManifestRiskAgent:
-    def __init__(self, model_id: str | None = None):
-        if not settings.openrouter_api_key:
-            raise RuntimeError("OPENROUTER_API_KEY not configured")
-
-        self.model_id = model_id or settings.openrouter_model_id
+    def __init__(self, model_id: str | None = None, provider: str | None = None):
+        metadata = get_llm_metadata(model_id=model_id, provider=provider)
+        self.model_id = metadata["model"]
 
         from agno.agent import Agent
-        from agno.models.openrouter import OpenRouter
 
         self.agent = Agent(
-            model=OpenRouter(
-                id=self.model_id,
-                api_key=settings.openrouter_api_key,
-            ),
+            model=build_llm_model(model_id=self.model_id, provider=metadata["provider"]),
             description="Android manifest security analyst.",
             instructions=self._build_instructions(),
             expected_output=(

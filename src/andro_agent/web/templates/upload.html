@@ -46,12 +46,18 @@
 
     <label class="field">
       <span>LLM provider</span>
-      <input type="text" name="llm_provider" placeholder="openrouter">
+      <select name="llm_provider">
+        <option value="openrouter">OpenRouter</option>
+        <option value="openai">OpenAI</option>
+        <option value="deepseek">DeepSeek</option>
+        <option value="kimi">Kimi/Moonshot</option>
+        <option value="ollama">Ollama/local</option>
+      </select>
     </label>
 
     <label class="field">
       <span>LLM model</span>
-      <input type="text" name="llm_model" placeholder="openrouter/free">
+      <input type="text" name="llm_model" placeholder="e.g. gpt-5.5, deepseek-v4-flash, or kimi-k2.5">
     </label>
 
     <button class="button" type="submit">Start scan</button>

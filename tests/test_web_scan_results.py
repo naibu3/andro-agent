@@ -226,6 +226,50 @@ def test_multipart_full_scan_persists_llm_configuration(web_context):
     assert case["llm_model"] == "openrouter/free"
 
 
+@pytest.mark.parametrize(
+    ("provider", "model", "env_name"),
+    [
+        ("openai", "gpt-5.5", "OPENAI_API_KEY"),
+        ("deepseek", "deepseek-v4-flash", "DEEPSEEK_API_KEY"),
+        ("kimi", "kimi-k2.5", "MOONSHOT_API_KEY"),
+    ],
+)
+def test_multipart_full_scan_persists_native_metadata_without_secret(
+    web_context, monkeypatch, caplog, provider, model, env_name
+):
+    secret = "sk-test-SECRET-123"
+    monkeypatch.setenv(env_name, secret)
+    api = web_context["api"]
+    result = asyncio.run(
+        api.create_scan(
+            background_tasks=BackgroundTasks(),
+            file=MultipartUpload(),
+            analysis_profile="full",
+            agentic_mode="single",
+            agentic_budget="deep",
+            llm_provider=provider,
+            llm_model=model,
+        )
+    )
+
+    case = web_context["repo"].get_case(result["case_id"])
+    assert case["llm_provider"] == provider
+    assert case["llm_model"] == model
+    assert secret not in json.dumps(case)
+    assert secret.encode() not in (web_context["uploads_dir"].parent / "andro_agent.db").read_bytes()
+    assert secret not in caplog.text
+
+
+def test_upload_form_lists_native_providers(web_context):
+    request = Request({"type": "http", "method": "GET", "path": "/upload", "headers": []})
+
+    body = web_context["pages"].upload_page(request).body.decode("utf-8")
+
+    assert 'option value="openai"' in body
+    assert 'option value="deepseek"' in body
+    assert 'option value="kimi"' in body
+
+
 def test_multipart_no_llm_scan_clears_llm_configuration(web_context):
     api = web_context["api"]
     result = asyncio.run(

@@ -143,6 +143,7 @@ class MetricsTracker:
         summary = {
             "case_id": self.run_metrics.case_id,
             "duration_seconds": self.run_metrics.duration_seconds,
+            "total_duration_seconds": self.run_metrics.duration_seconds,
             "steps": len(self.run_metrics.steps),
             "agents": len(self.run_metrics.agents),
             "agents_count": len(self.run_metrics.agents),
@@ -153,6 +154,8 @@ class MetricsTracker:
             "summary": self.run_metrics.summary,
             **self.run_metrics.summary,
         }
+        summary["findings_count"] = summary.get("canonical_findings_count")
+        summary["evidence_count"] = summary.get("evidence_items_count")
 
         summary_path.write_text(
             json.dumps(summary, indent=2, default=str),

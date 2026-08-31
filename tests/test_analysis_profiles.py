@@ -172,6 +172,46 @@ def test_cli_passes_agentic_and_model_options(monkeypatch):
     assert selected["llm_model"] == "model-x"
 
 
+@pytest.mark.parametrize(
+    ("provider", "model"),
+    [
+        ("openai", "gpt-5.5"),
+        ("deepseek", "deepseek-v4-flash"),
+        ("kimi", "kimi-k2.5"),
+    ],
+)
+def test_cli_accepts_native_provider(monkeypatch, provider, model):
+    selected = {}
+
+    class FakePipeline:
+        def __init__(self, **kwargs):
+            selected.update(kwargs)
+
+        def run(self, *, apk_path, case_id):
+            return CaseState(case_id=case_id, apk_path=apk_path, status="completed")
+
+    monkeypatch.setattr(cli, "StaticAnalysisPipeline", FakePipeline)
+    result = runner.invoke(
+        cli.app,
+        [
+            "run",
+            "app.apk",
+            "--case-id",
+            f"{provider}-case",
+            "--analysis-profile",
+            "full",
+            "--llm-provider",
+            provider,
+            "--llm-model",
+            model,
+        ],
+    )
+
+    assert result.exit_code == 0
+    assert selected["llm_provider"] == provider
+    assert selected["llm_model"] == model
+
+
 def test_no_llm_profile_skips_all_llm_steps(tmp_path, monkeypatch):
     pipeline = StaticAnalysisPipeline(
         artifacts_dir=tmp_path,
@@ -235,7 +275,7 @@ def test_fast_profile_uses_only_compact_llm_report_when_configured(tmp_path, mon
     llm_steps = []
     monkeypatch.setattr(
         "andro_agent.pipelines.static_pipeline.is_static_llm_configured",
-        lambda: True,
+        lambda provider=None: True,
     )
     monkeypatch.setattr(
         pipeline,

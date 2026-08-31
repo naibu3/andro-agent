@@ -78,6 +78,46 @@ def test_dynamic_launch_failure_has_useful_error(tmp_path, monkeypatch):
     assert result["launch"]["error"] == "launch activity failed"
 
 
+def test_successful_launch_without_resolved_activity_adds_warning(tmp_path):
+    case_id = "launch-without-activity"
+    dynamic_dir = tmp_path / case_id / "dynamic"
+    dynamic_dir.mkdir(parents=True)
+    results_path = dynamic_dir / "existing_results.json"
+    results_path.write_text(
+        json.dumps(
+            {
+                "observations": [
+                    {
+                        "signal": "app_launch_attempted",
+                        "success": True,
+                        "metadata": {},
+                    }
+                ]
+            }
+        )
+    )
+    state = CaseState(
+        case_id=case_id,
+        apk_path=Path("app.apk"),
+        status="dynamic_completed",
+        dynamic_results_path=results_path,
+    )
+    pipeline = DynamicAnalysisPipeline(artifacts_dir=tmp_path)
+
+    result = pipeline._write_runtime_summary(
+        case_id=case_id,
+        state=state,
+        dynamic_dir=dynamic_dir,
+        termination_reason="completed",
+    )
+
+    assert result["launch"]["success"] is True
+    assert result["launch"]["activity"] is None
+    assert result["warnings"] == [
+        "Launch succeeded but launch activity could not be resolved."
+    ]
+
+
 def test_dynamic_agentic_llm_failure_becomes_warning():
     class FailingAgent:
         def decide_followups(self, **kwargs):

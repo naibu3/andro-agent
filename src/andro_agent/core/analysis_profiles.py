@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
 
-from andro_agent.core.config import settings
+from andro_agent.core.llm import is_llm_provider_configured, normalize_llm_provider
 
 
 class AnalysisProfile(str, Enum):
@@ -21,10 +21,11 @@ class AnalysisProfileConfig:
     compact_llm_report: bool = False
     require_llm: bool = False
 
-    def validate(self) -> None:
-        if self.require_llm and not settings.openrouter_api_key:
+    def validate(self, provider: str | None = None) -> None:
+        if self.require_llm and not is_llm_provider_configured(provider):
+            selected = normalize_llm_provider(provider)
             raise RuntimeError(
-                "The llm analysis profile requires OPENROUTER_API_KEY configuration."
+                f"The llm analysis profile requires configuration for provider {selected!r}."
             )
 
 
@@ -61,5 +62,5 @@ def get_analysis_profile_config(
     return PROFILE_CONFIGS[selected]
 
 
-def is_static_llm_configured() -> bool:
-    return bool(settings.openrouter_api_key)
+def is_static_llm_configured(provider: str | None = None) -> bool:
+    return is_llm_provider_configured(provider)

@@ -378,6 +378,18 @@ class DynamicAnalysisPipeline:
             (item.get("details", {}).get("component") for item in launch_observations if isinstance(item.get("details"), dict)),
             None,
         )
+        if launch_activity is None:
+            launch_activity = next(
+                (
+                    item.get("component")
+                    for item in state.tool_history
+                    if item.get("tool") == "adb.launch_activity" and item.get("component")
+                ),
+                None,
+            )
+        unresolved_launch_warning = "Launch succeeded but launch activity could not be resolved."
+        if launch_success and launch_activity is None and unresolved_launch_warning not in state.warnings:
+            state.warnings.append(unresolved_launch_warning)
         runtime = {
             "package_name": state.package_name,
             "launch_activity": launch_activity,

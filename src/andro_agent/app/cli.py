@@ -451,7 +451,9 @@ def run_analysis(
         help="Static investigation budget: conservative, balanced, or deep.",
     ),
     llm_provider: str | None = typer.Option(
-        None, "--llm-provider", help="LLM provider override, such as openrouter or ollama."
+        None,
+        "--llm-provider",
+        help="LLM provider override: openai, deepseek, kimi, openrouter, or ollama.",
     ),
     llm_model: str | None = typer.Option(
         None, "--llm-model", help="LLM model identifier override."
@@ -535,7 +537,10 @@ def dynamic_run(
     llm_provider: str | None = typer.Option(
         None,
         "--llm-provider",
-        help="LLM provider to use for agentic dynamic decisions: openrouter or ollama.",
+        help=(
+            "LLM provider to use for agentic dynamic decisions: "
+            "openai, deepseek, kimi, openrouter, or ollama."
+        ),
     ),
     llm_model: str | None = typer.Option(
         None,
@@ -561,7 +566,10 @@ def dynamic_run(
         False, "--api-allow-private", help="Allow private, local, and emulator-only hosts."
     ),
     dynamic_timeout: int = typer.Option(
-        180, "--dynamic-timeout", min=1, help="Maximum emulator boot wait in seconds."
+        180,
+        "--dynamic-timeout",
+        min=1,
+        help="Maximum emulator boot wait in seconds; does not bound total dynamic analysis duration.",
     ),
 ) -> None:
     if agentic_mode not in {AgenticMode.NONE, AgenticMode.SINGLE}:
