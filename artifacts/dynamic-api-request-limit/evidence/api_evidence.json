@@ -1,0 +1,30 @@
+[
+  {
+    "evidence_id": "EVID-API-28B23E0E5EA5",
+    "evidence_type": "api",
+    "source_tool": "api_probe",
+    "artifact_path": "dynamic/api_requests.json",
+    "url": "http://127.0.0.1:8888",
+    "selector": "http://127.0.0.1:8888",
+    "snippet": "API candidate uses cleartext HTTP",
+    "metadata": {
+      "status_code": null,
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "request_id": null
+    }
+  },
+  {
+    "evidence_id": "EVID-API-8DE04C92E372",
+    "evidence_type": "api",
+    "source_tool": "api_probe",
+    "artifact_path": "dynamic/api_requests.json",
+    "url": "http://127.0.0.1:8888/openapi.json",
+    "selector": "GET /openapi.json",
+    "snippet": "GET /openapi.json returned 200 application/json",
+    "metadata": {
+      "status_code": 200,
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "request_id": "API-REQ-77AAD995E5C4"
+    }
+  }
+]

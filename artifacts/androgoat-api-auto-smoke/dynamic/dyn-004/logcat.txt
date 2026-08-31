@@ -1,0 +1,23 @@
+--------- beginning of main
+08-31 19:23:31.474  1318  2963 E bwel    : Phenotype registration failed [CONTEXT service_id=51 ]
+08-31 19:23:31.474  1318  2963 E bwel    : java.util.concurrent.TimeoutException: Timed out waiting for Task
+08-31 19:23:31.474  1318  2963 E bwel    : 	at cfsz.o(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at bwel.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):12)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at com.google.android.gms.phenotype.sync.HeterodyneSyncTaskChimeraService.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at com.google.android.gms.phenotype.sync.HeterodyneSyncTaskChimeraService.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):10)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at avzs.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:23:31.474  1318  2963 E bwel    : 	at java.lang.Thread.run(Thread.java:1012)
+--------- beginning of system
+08-31 19:23:31.512   552  1947 W ActivityTaskManager: callingPackage for (uid=2000, pid=4588) has no WPC
+08-31 19:23:31.525   552  1947 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+08-31 19:23:31.525   552  1947 I ActivityTaskManager: START u0 {act=android.intent.action.VIEW dat=androgoat://vulnapp/... flg=0x10000000 cmp=owasp.sat.agoat/.AccessControl1ViewActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+08-31 19:23:31.526   772   816 V WindowManagerShell: Transition requested: android.os.BinderProxy@8f810e1 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=25 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.AccessControl1ViewActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=4 lastActiveTime=98870 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@5c9ee06} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{c245cc7 owasp.sat.agoat.AccessControl1ViewActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+08-31 19:23:31.583   418   418 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+--------- beginning of kernel
+08-31 19:23:31.655     0     0 I logd    : logdr: UID=2000 GID=2000 PID=4591 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns

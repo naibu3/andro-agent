@@ -1,0 +1,75 @@
+--------- beginning of main
+08-31 19:23:12.593  1318  2201 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode. [CONTEXT service_id=54 ]
+--------- beginning of system
+08-31 19:23:12.595   552   629 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10125; state: ENABLED
+08-31 19:23:12.595   357  3898 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+08-31 19:23:12.596   357  3899 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+08-31 19:23:12.599   357  3530 I resolv  : res_nsend: used send_dg 45 terrno: 0
+08-31 19:23:12.599   357  3530 I resolv  : doQuery: rcode=0, ancount=1, return value=45
+08-31 19:23:12.600   357  3529 I resolv  : res_nsend: used send_dg 85 terrno: 0
+08-31 19:23:12.600   357  3529 I resolv  : doQuery: rcode=0, ancount=2, return value=85
+08-31 19:23:12.591  3185  3185 W binder:3185_5: type=1400 audit(0.0:28): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:23:12.602  3386  3386 I DialerFlags: com.android.dialer.phenotype.Flags.lambda$registerDialerDirectbootMendelConfigPackage$1:142 directboot-aware phenotype register status: true
+08-31 19:23:12.603   357  3900 I resolv  : res_nmkquery: (QUERY, IN, A)
+08-31 19:23:12.603  3185  3588 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-31 19:23:12.605  2127  2428 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+08-31 19:23:12.599  3185  3185 W binder:3185_2: type=1400 audit(0.0:29): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:23:12.607  3185  3256 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-31 19:23:12.603  3185  3185 W binder:3185_2: type=1400 audit(0.0:30): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:23:12.610  3185  3256 W libc    : Access denied finding property "service.adb.tls.port"
+08-31 19:23:12.607  3185  3185 W binder:3185_5: type=1400 audit(0.0:31): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:23:12.621   772   781 I ndroid.systemui: Background young concurrent copying GC freed 237431(13MB) AllocSpace objects, 7(140KB) LOS objects, 36% free, 20MB/31MB, paused 707us,99us total 657.442ms
+08-31 19:23:12.626  3185  3588 W libc    : Access denied finding property "service.adb.tls.port"
+08-31 19:23:12.635   552  1847 W ActivityManager: Slow operation: 65ms so far, now at finishAttachApplicationInner: after dispatching broadcasts
+08-31 19:23:12.655  2453  2628 I BugleJobs: GenericWorkerQueueAction: Bailing early, no work found, no failed work found
+08-31 19:23:12.663  2453  3619 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+08-31 19:23:12.664  2453  3619 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+08-31 19:23:12.664  2453  2628 I BugleDataModel: ActionExecutorImpl: Timestamp for ACTION_RESPONSE_QUEUED_GenericWorkerQueueAction elapsedRealTime: 80011 currentTimeMillis: 1788196992664
+08-31 19:23:12.667  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+08-31 19:23:12.669  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+08-31 19:23:12.669  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+08-31 19:23:12.669  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+08-31 19:23:12.670  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+08-31 19:23:12.670  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+08-31 19:23:12.671  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+08-31 19:23:12.671  2127  2428 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+08-31 19:23:12.672   552  1850 W ActivityTaskManager: callingPackage for (uid=2000, pid=3903) has no WPC
+08-31 19:23:12.673   552  1850 D CompatibilityChangeReporter: Compat change id reported: 244637991; UID 2000; state: ENABLED
+08-31 19:23:12.677   552  1850 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10192; state: ENABLED
+08-31 19:23:12.696   552  1850 E Transition: Trying to add a ready-group twice: Display{#0 state=ON size=1080x2400 ROTATION_0}
+08-31 19:23:12.697   772   816 V WindowManagerShell: Transition requested: android.os.BinderProxy@40c8bba TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=25 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.MainActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=2 lastActiveTime=80041 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@7c65a6b} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{8c349c8 owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+08-31 19:23:12.710   552  1850 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+08-31 19:23:12.712   357  3900 I resolv  : res_nsend: used send_dg 183 terrno: 0
+08-31 19:23:12.712   357  3900 I resolv  : doQuery: rcode=0, ancount=8, return value=183
+08-31 19:23:12.712   357  3687 I resolv  : res_nsend: used send_dg 164 terrno: 0
+08-31 19:23:12.713   357  3687 I resolv  : doQuery: rcode=0, ancount=8, return value=164
+08-31 19:23:12.713   357  3686 I resolv  : res_nsend: used send_dg 260 terrno: 0
+08-31 19:23:12.713   357  3686 I resolv  : doQuery: rcode=0, ancount=8, return value=260
+08-31 19:23:12.713   357  3681 I resolv  : res_nsend: used send_dg 268 terrno: 0
+08-31 19:23:12.713   357  3681 I resolv  : doQuery: rcode=0, ancount=8, return value=268
+08-31 19:23:12.714   985   985 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1220 android.content.ContextWrapper.sendBroadcast:504 android.content.ContextWrapper.sendBroadcast:504 com.android.settings.fuelgauge.batteryusage.BootBroadcastReceiver.lambda$onReceive$0:82 com.android.settings.fuelgauge.batteryusage.BootBroadcastReceiver.$r8$lambda$RK7G89ihuESwx6JxUTZsyZ4H0f8:0 
+08-31 19:23:12.716   357  3682 I resolv  : res_nsend: used send_dg 172 terrno: 0
+08-31 19:23:12.716   357  3682 I resolv  : doQuery: rcode=0, ancount=8, return value=172
+08-31 19:23:12.713   357  3604 I resolv  : res_nsend: used send_dg 99 terrno: 0
+08-31 19:23:12.719   357  3604 I resolv  : doQuery: rcode=0, ancount=0, return value=99
+08-31 19:23:12.718   357  3899 I resolv  : res_nsend: used send_dg 279 terrno: 0
+08-31 19:23:12.719   357  3899 I resolv  : doQuery: rcode=0, ancount=8, return value=279
+08-31 19:23:12.713   357  3605 I resolv  : res_nsend: used send_dg 58 terrno: 0
+08-31 19:23:12.726   357  3605 I resolv  : doQuery: rcode=0, ancount=1, return value=58
+08-31 19:23:12.747  1733  3337 D TrafficStats: tagSocket(110) with statsTag=0xffffffff, statsUid=-1
+08-31 19:23:12.755   418   418 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+08-31 19:23:12.775  3185  3185 W binder:3185_4: type=1400 audit(0.0:32): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:23:12.781  3185  3533 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-31 19:23:12.781  3185  3533 W libc    : Access denied finding property "service.adb.tls.port"
+08-31 19:23:12.775  3185  3185 W binder:3185_4: type=1400 audit(0.0:33): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:23:12.808   472  3745 D CCodecBufferChannel: [c2.android.vorbis.decoder#959] buffers after EOS ignored (0 us)
+08-31 19:23:12.808   472  3745 D CCodecBufferChannel: [c2.android.vorbis.decoder#959] buffers after EOS ignored (0 us)
+08-31 19:23:12.809   472  3745 D CCodecBufferChannel: [c2.android.vorbis.decoder#959] buffers after EOS ignored (0 us)
+08-31 19:23:12.809   472  3738 D AudioTrack: stop(15): called with 82980 frames delivered
+08-31 19:23:12.887   415   518 D AudioFlinger: mixer(0x7380de9be930) throttle end: throttle time(22)
+--------- beginning of kernel
+08-31 19:23:12.967     0     0 I logd    : logdr: UID=2000 GID=2000 PID=3911 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+08-31 19:23:12.913  2453  2717 I Bugle   : BroadcastReceiverAsyncWorkTracker: Ending foreground service on async work complete for broadcast of com.google.android.apps.messaging.receiver.PhoneBootAndPackageReplacedReceiver@d0b4f1c
+08-31 19:23:12.918  2453  3002 I BugleRcsProvisioning: RcsProvisioningEventReceiver: Received ProvisioningEvent: Send Provisioning Session ID
+08-31 19:23:12.920  2453  2716 I Bugle   : BroadcastReceiverAsyncWorkTracker: Ending foreground service on async work complete for broadcast of com.google.android.apps.messaging.shared.receiver.RcsProvisioningEventReceiver@66835a0
+08-31 19:23:12.925  1809  1809 I OpaEligibilityChecker: send OpaEligibilityChange broadcast to CommonBroadcastReceiver

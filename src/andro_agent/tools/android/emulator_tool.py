@@ -19,6 +19,7 @@ class EmulatorTool:
         no_window: bool = True,
         wipe_data: bool = False,
         http_proxy: str | None = None,
+        boot_timeout: int = 180,
     ) -> None:
         
         cmd = [
@@ -42,7 +43,7 @@ class EmulatorTool:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
-        self.wait_for_boot()
+        self.wait_for_boot(timeout=boot_timeout)
 
     def wait_for_package_service(self, timeout: int = 120) -> None:
         start = time.time()

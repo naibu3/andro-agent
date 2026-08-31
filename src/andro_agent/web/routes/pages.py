@@ -194,9 +194,25 @@ def case_detail(request: Request, case_id: str):
     artifacts_dir = Path(case["artifacts_dir"])
     hypotheses = read_json_if_exists(state.get("llm_hypotheses_path"), [])
     llm_candidates = read_json_if_exists(state.get("llm_candidate_findings_path"), [])
-    dynamic_results = read_json_if_exists(state.get("dynamic_results_path"), {})
+    dynamic_results = read_json_if_exists(
+        state.get("dynamic_results_path") or artifacts_dir / "dynamic/dynamic_results.json", {}
+    )
     dynamic_observations = (
         dynamic_results.get("observations", []) if isinstance(dynamic_results, dict) else []
+    )
+    api_discovery = read_json_if_exists(
+        state.get("api_discovery_path") or artifacts_dir / "dynamic/api_discovery.json", {}
+    )
+    api_observations = read_json_if_exists(
+        state.get("api_observations_path") or artifacts_dir / "dynamic/api_observations.json", {}
+    )
+    api_requests = read_json_if_exists(
+        state.get("api_requests_path") or artifacts_dir / "dynamic/api_requests.json", {}
+    )
+    api_findings = read_json_if_exists(
+        state.get("api_candidate_findings_path")
+        or artifacts_dir / "findings/api_candidate_findings.json",
+        [],
     )
 
     return templates.TemplateResponse(
@@ -220,9 +236,24 @@ def case_detail(request: Request, case_id: str):
             "hypotheses": hypotheses if isinstance(hypotheses, list) else [],
             "llm_candidates": llm_candidates if isinstance(llm_candidates, list) else [],
             "dynamic_observations": dynamic_observations,
+            "dynamic_results": dynamic_results if isinstance(dynamic_results, dict) else {},
+            "api_discovery": api_discovery if isinstance(api_discovery, dict) else {},
+            "api_observations": api_observations if isinstance(api_observations, dict) else {},
+            "api_requests": api_requests if isinstance(api_requests, dict) else {},
+            "api_findings": api_findings if isinstance(api_findings, list) else [],
             "download_availability": {
                 "canonical": (artifacts_dir / "findings/canonical_findings.json").is_file(),
                 "evidence": (artifacts_dir / "evidence/evidence.json").is_file(),
+                "dynamic": [
+                    name for name, relative in (
+                        ("dynamic_results.json", "dynamic/dynamic_results.json"),
+                        ("runtime_observations.json", "dynamic/runtime_observations.json"),
+                        ("api_discovery.json", "dynamic/api_discovery.json"),
+                        ("api_observations.json", "dynamic/api_observations.json"),
+                        ("api_requests.json", "dynamic/api_requests.json"),
+                        ("api_candidate_findings.json", "findings/api_candidate_findings.json"),
+                    ) if (artifacts_dir / relative).is_file()
+                ],
             },
         },
     )

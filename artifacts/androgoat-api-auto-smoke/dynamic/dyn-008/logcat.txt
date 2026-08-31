@@ -1,0 +1,59 @@
+--------- beginning of main
+08-31 19:24:01.122  3185  3304 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+08-31 19:24:01.125  3185  3304 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+08-31 19:24:01.126  3185  3304 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+08-31 19:24:01.181  5440  5440 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+--------- beginning of system
+08-31 19:24:01.186   552   639 D ActivityManager: freezing 4929 com.google.android.googlequicksearchbox
+08-31 19:24:01.190  5440  5440 I AndroidRuntime: Using default boot image
+08-31 19:24:01.190  5440  5440 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:24:01.194  5440  5440 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:24:01.194  5440  5440 I app_process: Using CollectorTypeCC GC.
+08-31 19:24:01.345  5440  5440 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:24:01.354   552   639 D ActivityManager: freezing 1985 com.google.android.projection.gearhead:shared
+08-31 19:24:01.365  5440  5440 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:24:01.366  5440  5440 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:24:01.378  5440  5440 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:24:01.378  5440  5440 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:24:01.408  5440  5440 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:24:01.408  5440  5440 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:24:01.408  5440  5440 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:24:01.403  5440  5440 W main    : type=1400 audit(0.0:365): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:01.410  5440  5440 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:24:01.403  5440  5440 W main    : type=1400 audit(0.0:366): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:01.403  5440  5440 W main    : type=1400 audit(0.0:367): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:01.415  5440  5440 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:01.415  5440  5440 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:01.415  5440  5440 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: Writing exception to parcel
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/item
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+08-31 19:24:01.419  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+08-31 19:24:01.421  5440  5440 D AndroidRuntime: Shutting down VM
+08-31 19:24:01.517  1441  3157 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10145; state: ENABLED
+08-31 19:24:01.530   552   844 I RemoteProvisionSysSvc: getRegistration(android.hardware.security.keymint.IRemotelyProvisionedComponent/default)
+08-31 19:24:01.532   552   552 I RegistrationProxy: onServiceConnected: com.android.rkpdapp.service.RemoteProvisioningService
+--------- beginning of kernel
+08-31 19:24:01.600     0     0 I servicemanager: Found android.hardware.security.keymint.IRemotelyProvisionedComponent/default in device VINTF manifest.
+08-31 19:24:01.534   552   844 I RegistrationProxy: IGetRegistrationCallback.onSuccess
+08-31 19:24:01.536   552   568 I RemoteProvisionSysSvc: Fetching key 10123 for client 104379568
+08-31 19:24:01.536   552   568 I RegistrationProxy: getKeyAsync operation started with callback 223526697
+08-31 19:24:01.536  3988  4145 I RkpdRegistrationBinder: Key requested for : android.hardware.security.keymint.IRemotelyProvisionedComponent/default, clientUid: 1017, keyId: 10123, callback: 154803537
+08-31 19:24:01.537  3988  4145 I RkpdRegistrationBinder: Key successfully assigned to client
+08-31 19:24:01.537   552   552 I RemoteProvisionSysSvc: Successfully fetched key for client 104379568
+08-31 19:24:01.565   552   639 D ActivityManager: freezing 1852 com.google.android.youtube
+08-31 19:24:01.571  3185  3304 W SystemServiceRegistry: No service published for: persistent_data_block
+08-31 19:24:01.578  3185  3304 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-31 19:24:01.645     0     0 W audit   : audit_lost=242 audit_rate_limit=5 audit_backlog_limit=64
+08-31 19:24:01.645     0     0 E audit   : rate limit exceeded
+08-31 19:24:01.579  3185  3304 W libc    : Access denied finding property "service.adb.tls.port"
+08-31 19:24:01.600   552   639 D ActivityManager: freezing 2842 com.google.android.contacts
+08-31 19:24:01.601   552   639 D ActivityManager: freezing 2886 com.google.android.gm
+08-31 19:24:01.760  3185  3304 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+08-31 19:24:01.761  3185  3304 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+08-31 19:24:01.762  3185  3304 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1

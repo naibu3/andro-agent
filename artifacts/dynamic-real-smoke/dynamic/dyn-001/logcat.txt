@@ -1,0 +1,364 @@
+--------- beginning of main
+08-31 19:36:45.857  1202  3336 W SystemServiceRegistry: No service published for: contexthub
+08-31 19:36:45.859  3511  3511 V GraphicsEnvironment: Currently set values for:
+08-31 19:36:45.859  3511  3511 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+08-31 19:36:45.859  3511  3511 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+08-31 19:36:45.859  3511  3511 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.packageinstaller: false
+08-31 19:36:45.859  3511  3511 V GraphicsEnvironment: com.google.android.packageinstaller is not listed in per-application setting
+08-31 19:36:45.859  3511  3511 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+08-31 19:36:45.872  1565  1589 I hbox:interactor: Background concurrent copying GC freed 170086(10MB) AllocSpace objects, 3(60KB) LOS objects, 49% free, 3384KB/6768KB, paused 180us,16us total 104.709ms
+08-31 19:36:45.880  1202  3336 I NearbyFastPair: NearbyAppHelper: Not supports because contextHubManager is null [CONTEXT service_id=265 ]
+08-31 19:36:45.880  1202  3336 I NearbyDiscovery: OffloadFastPairScanner: Nano app version obtained, version = -1, total time = 187. [CONTEXT service_id=265 ]
+08-31 19:36:45.886  1730  3563 I A       : [Upload] Connected
+08-31 19:36:45.889  1730  3563 I NetworkRecognitionRnr: Using pair HTTP connection
+08-31 19:36:45.890  3383  3566 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+08-31 19:36:45.891  1730  2450 I A       : [Upload] Connected
+08-31 19:36:45.899  1202  2449 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+08-31 19:36:45.924  1730  1758 I earchbox:search: JIT allocated 93KB for compiled code of java.lang.Object com.google.android.apps.gsa.binaries.velvet.app.amm.c()
+08-31 19:36:45.924  1730  1758 I earchbox:search: Compiler allocated 5209KB to compile java.lang.Object com.google.android.apps.gsa.binaries.velvet.app.amm.c()
+08-31 19:36:45.947  1730  1730 I A       : Intent { act=android.intent.action.BOOT_COMPLETED flg=0x89000010 cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.platform.contexttrigger.impl.ContextTriggerBroadcastReceiver_Receiver (has extras) }
+08-31 19:36:45.955  1730  1730 E A       : onError
+08-31 19:36:45.955  1730  1730 E A       : com.google.android.apps.gsa.shared.speech.a.m: errorCode: 65561, engine: 2
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.staticplugins.dc.a.e.a(PG:3)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.s3.n.hh(PG:1)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.cd.g.a.f.e(PG:2)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+08-31 19:36:45.955  1730  1730 E A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+08-31 19:36:45.955  1730  1730 E A       : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+08-31 19:36:45.955  1730  1730 E A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:36:45.955  1730  1730 E A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:36:45.955  1730  1730 E A       : 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+08-31 19:36:45.955  1730  1730 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.o: errorCode: 65586, engine: 2
+08-31 19:36:45.955  1730  1730 E A       : 	... 15 more
+08-31 19:36:45.955  1730  1730 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.k: errorCode: 401, engine: 2
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.assistant.shared.n.h.a(PG:5)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.s3.producers.j.hE(PG:2)
+08-31 19:36:45.955  1730  1730 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:16)
+08-31 19:36:45.955  1730  1730 E A       : 	... 12 more
+08-31 19:36:45.963  1730  2886 W SearchServiceCore: Abort, client detached.
+08-31 19:36:45.968  1730  2229 W A       : No value provided for the places model index flag.
+08-31 19:36:45.978  3445  3579 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.dm': No such file or directory
+08-31 19:36:45.978  3445  3579 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000002/DynamiteLoader.dm': No such file or directory
+08-31 19:36:45.985  1202  3298 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x5000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+08-31 19:36:46.014  1730  1758 I earchbox:search: JIT allocated 62KB for compiled code of java.lang.Object com.google.android.apps.gsa.binaries.velvet.app.ala.d()
+08-31 19:36:46.034  1202  3336 I NearbyDiscovery: FastPair: HeadsetPieceImage, grant permission files:0 [CONTEXT service_id=265 ]
+08-31 19:36:46.035  3383  3566 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+08-31 19:36:46.044  1202  3483 W .gms.persistent: Long monitor contention with owner binder:1202_5 (1623) at void cvdh.d()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2) waiters=0 in cvdh cvdh.a(android.content.ContentResolver, android.net.Uri, java.lang.Runnable) for 456ms
+08-31 19:36:46.074  2918  2944 W SystemServiceRegistry: No service published for: persistent_data_block
+--------- beginning of system
+08-31 19:36:46.080   545   559 D CompatibilityChangeReporter: Compat change id reported: 149924527; UID 10123; state: ENABLED
+08-31 19:36:46.081   545   559 D CompatibilityChangeReporter: Compat change id reported: 132649864; UID 10123; state: DISABLED
+08-31 19:36:46.081   545   575 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10125; state: DISABLED
+08-31 19:36:46.085   545   575 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10125; state: DISABLED
+08-31 19:36:46.085   545   575 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10125; state: DISABLED
+08-31 19:36:46.085   545   575 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10125; state: ENABLED
+08-31 19:36:46.088   545   576 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10125; state: ENABLED
+08-31 19:36:46.091   545   583 W system_server: Long monitor contention with owner ActivityManager (575) at void com.android.server.am.BroadcastQueueModernImpl.checkPendingColdStartValidity()(BroadcastQueueModernImpl.java:559) waiters=0 in boolean com.android.server.am.ActivityManagerService$LocalService.isProfileOwner(int) for 127ms
+08-31 19:36:46.098   356   356 D Zygote  : Forked child process 3602
+08-31 19:36:46.104  1202  3063 I GCoreUlr: WorldUpdater:com.google.android.location.internal.server.ACTION_RESTARTED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+08-31 19:36:46.109  1202  3063 I GCoreUlr: Unbound from all signal providers.
+08-31 19:36:46.115   545   576 W ActivityManager: Slow operation: 75ms so far, now at startProcess: returned from zygote!
+08-31 19:36:46.116   545   576 W ActivityManager: Slow operation: 76ms so far, now at startProcess: done updating battery stats
+08-31 19:36:46.117   545   576 W ActivityManager: Slow operation: 76ms so far, now at startProcess: building log message
+08-31 19:36:46.117   545   576 I ActivityManager: Start proc 3602:com.google.android.partnersetup/u0a125 for broadcast {com.google.android.partnersetup/com.google.android.partnersetup.GooglePartnerSetup}
+08-31 19:36:46.117   545   576 W ActivityManager: Slow operation: 77ms so far, now at startProcess: starting to update pids map
+08-31 19:36:46.117   545   576 W ActivityManager: Slow operation: 77ms so far, now at startProcess: done updating pids map
+08-31 19:36:46.119  1202  3063 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+08-31 19:36:46.126  1202  3063 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+08-31 19:36:46.153   419   585 D PermissionCache: checking android.permission.DUMP for uid=10123 => granted (317 us)
+08-31 19:36:46.161   545  2370 W system_server: Long monitor contention with owner binder:545_15 (2109) at int com.android.server.job.JobSchedulerService.getUidProcState(int)(JobSchedulerService.java:2305) waiters=2 in java.util.List com.android.server.job.JobSchedulerService.getPendingJobsInNamespace(int, java.lang.String) for 131ms
+08-31 19:36:46.161  1730  1730 W A       : Failed to sync device settings.
+08-31 19:36:46.161  1730  1730 I A       : Retrying to sync device settings.
+08-31 19:36:46.170  1730  1730 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.googlequicksearchbox
+08-31 19:36:46.171  1730  1730 I o       : processValidityUpdateForAllData
+08-31 19:36:46.184   545   875 W JobScheduler: Job didn't exist in JobStore: 90ae843 #u0a132/-353 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+08-31 19:36:46.193   545  2406 D CompatibilityChangeReporter: Compat change id reported: 171306433; UID 10132; state: ENABLED
+08-31 19:36:46.193   545  2406 D CompatibilityChangeReporter: Compat change id reported: 218533173; UID 10132; state: DISABLED
+08-31 19:36:46.193   545  2406 D CompatibilityChangeReporter: Compat change id reported: 226439802; UID 10132; state: DISABLED
+08-31 19:36:46.208  3602  3602 I id.partnersetup: Using CollectorTypeCC GC.
+08-31 19:36:46.209  3602  3602 W id.partnersetup: Unexpected CPU variant for x86: x86_64.
+08-31 19:36:46.209  3602  3602 W id.partnersetup: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:36:46.210  1620  1665 I gle.android.gms: Background concurrent copying GC freed 59028(2685KB) AllocSpace objects, 98(3420KB) LOS objects, 49% free, 7626KB/14MB, paused 18us,20us total 360.354ms
+08-31 19:36:46.216   545  2109 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 10142. pid: 3445
+08-31 19:36:46.217  3445  3445 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10142; state: ENABLED
+08-31 19:36:46.217  3445  3445 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10142; state: DISABLED
+08-31 19:36:46.219  3383  3566 D nativeloader: Configuring clns-8 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+08-31 19:36:46.221  3383  3566 D nativeloader: Configuring clns-9 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+08-31 19:36:46.221  3383  3566 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+08-31 19:36:46.221  3383  3566 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+08-31 19:36:46.224  3383  3566 D nativeloader: Configuring product-clns-10 for unbundled product apk /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk. target_sdk_version=33, uses_libraries=, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms:/product/lib64:/system/product/lib64
+08-31 19:36:46.226  1202  3336 I NearbyDiscovery: FastPairController: Set event stream listener [CONTEXT service_id=265 ]
+08-31 19:36:46.226  1202  3336 I NearbyDiscovery: FastPairController: Initialize event stream [CONTEXT service_id=265 ]
+08-31 19:36:46.237  3383  3566 V NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 295 native methods...
+08-31 19:36:46.241   545  2109 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10142; state: DISABLED
+08-31 19:36:46.241   545  2109 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10142; state: ENABLED
+08-31 19:36:46.246  3602  3602 E id.partnersetup: Not starting debugger since process cannot load the jdwp agent.
+08-31 19:36:46.253  3383  3566 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+08-31 19:36:46.254  3445  3567 I org.webrtc.Logging: CrashStartupListener: Checking conference crashes for 0 account(s).
+08-31 19:36:46.265  3586  3586 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:36:46.274  3445  3579 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+08-31 19:36:46.274  3445  3579 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+08-31 19:36:46.275   545   566 D ColorDisplayService: GlobalSaturationTintController Animation cancelled: false to matrix: 
+08-31 19:36:46.275   545   566 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 min matrix coefficients: 
+08-31 19:36:46.275   545   566 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 max matrix coefficients: 
+08-31 19:36:46.275   545   566 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+08-31 19:36:46.276  2918  2944 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+08-31 19:36:46.282  3586  3586 I AndroidRuntime: Using default boot image
+08-31 19:36:46.282  3586  3586 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:36:46.284  2918  2944 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+08-31 19:36:46.285  1202  3063 I GCoreUlr: Unbound from all signal providers.
+08-31 19:36:46.289  3586  3586 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:36:46.289  3586  3586 I app_process: Using CollectorTypeCC GC.
+08-31 19:36:46.290  2918  2944 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+08-31 19:36:46.290  3445  3445 W kch     : AccountUtils: For b/73513912, load account content://com.google.android.gm.sapi/account.-2137146394 from MailAppProvider. Is account valid result: 1. [CONTEXT android_log_tag="AccountUtils" ]
+08-31 19:36:46.291  3445  3445 W kch     : AccountUtils: For b/73513912, load account content://com.google.android.gm.email.provider/account.-437561172?suppress_combined%3Dtrue from MailAppProvider. Is account valid result: 1. [CONTEXT android_log_tag="AccountUtils" ]
+08-31 19:36:46.292  3445  3445 W kch     : [Gmail] PhenotypeManagerImpl: Account is null, skip calling setAccount.
+08-31 19:36:46.292  3445  3445 V ActivityThread: getPackageInfo() caused update to cached ApplicationInfo for package com.google.android.gm
+08-31 19:36:46.300   901   901 I SafetyLabelChangedBroadcastReceiver: received broadcast packageName: owasp.sat.agoat, current user: UserHandle{0}, packageChangeEvent: NEW_INSTALL, intent user: UserHandle{0}
+08-31 19:36:46.304  1620  2445 I GmsDebugLogger: [73] 1801
+08-31 19:36:46.308   545  1718 D CompatibilityChangeReporter: Compat change id reported: 261072174; UID 10123; state: ENABLED
+08-31 19:36:46.309   545   621 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10125; state: ENABLED
+08-31 19:36:46.309  1620  2445 W ZappDownloader: No successful module downloads for requested features [tflite_dynamite].
+08-31 19:36:46.309  1620  2445 I GmsDebugLogger: [30] [TfliteDynamiteDynamite.integ:262730502100800]
+08-31 19:36:46.340  1202  2917 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+08-31 19:36:46.340  1202  2917 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at cadb.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+08-31 19:36:46.340  1202  2917 I SemanticLocation: 	... 14 more
+08-31 19:36:46.350   545  1718 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10125; state: DISABLED
+08-31 19:36:46.354   545  1718 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10125; state: DISABLED
+08-31 19:36:46.366  3445  3573 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10142; state: ENABLED
+08-31 19:36:46.413  3383  3451 D CompatibilityChangeReporter: Compat change id reported: 263076149; UID 10154; state: ENABLED
+08-31 19:36:46.424   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.445   901   901 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10182; state: ENABLED
+08-31 19:36:46.446  1620  2445 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+08-31 19:36:46.446  1620  2445 I GmsDebugLogger: [83] 1 [tflite_dynamite]
+08-31 19:36:46.451   901   901 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10182; state: ENABLED
+08-31 19:36:46.452   545  2585 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10182; state: ENABLED
+08-31 19:36:46.452   545  2585 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10182; state: ENABLED
+08-31 19:36:46.457  3602  3602 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10125; state: ENABLED
+08-31 19:36:46.457  3602  3602 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10125; state: DISABLED
+08-31 19:36:46.457  3383  3383 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.contacts
+08-31 19:36:46.459   545  2585 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10125; state: ENABLED
+08-31 19:36:46.460  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.462   545   575 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10124; state: DISABLED
+08-31 19:36:46.462   545   575 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10124; state: DISABLED
+08-31 19:36:46.462   545   575 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10124; state: ENABLED
+08-31 19:36:46.465   545   576 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10124; state: ENABLED
+08-31 19:36:46.465  3586  3586 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:36:46.473   356   356 D Zygote  : Forked child process 3634
+08-31 19:36:46.476   545   576 I ActivityManager: Start proc 3634:com.google.android.projection.gearhead:shared/u0a124 for broadcast {com.google.android.projection.gearhead/com.google.android.apps.auto.components.app.fzero.FzeroReceiver}
+08-31 19:36:46.481  3602  3602 D nativeloader: Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PartnerSetupPrebuilt/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.partnersetup
+08-31 19:36:46.481  3634  3634 I gearhead:shared: Using CollectorTypeCC GC.
+08-31 19:36:46.483  3634  3634 W gearhead:shared: Unexpected CPU variant for x86: x86_64.
+08-31 19:36:46.483  3634  3634 W gearhead:shared: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:36:46.492   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.493  3586  3586 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:36:46.494  3586  3586 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:36:46.503  3586  3586 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:36:46.503  3586  3586 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:36:46.504  3602  3602 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-x86_64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvndksupport.so:libvulkan.so
+08-31 19:36:46.504  3602  3602 D nativeloader: Configuring product-clns-7 for unbundled product apk /product/priv-app/PartnerSetupPrebuilt/PartnerSetupPrebuilt.apk. target_sdk_version=33, uses_libraries=, library_path=/product/priv-app/PartnerSetupPrebuilt/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.partnersetup:/product/lib64:/system/product/lib64
+08-31 19:36:46.507   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.509   901   901 I HibernationPolicy: scheduleHibernationJob with frequency 1296000000ms and threshold 7776000000ms
+08-31 19:36:46.509  3602  3602 D nativeloader: InitVndkspLibrariesProduct: android.hardware.common-V2-ndk.so:android.hardware.common.fmq-V1-ndk.so:android.hardware.graphics.allocator-V2-ndk.so:android.hardware.graphics.common-V4-ndk.so:android.hardware.graphics.common@1.0.so:android.hardware.graphics.common@1.1.so:android.hardware.graphics.common@1.2.so:android.hardware.graphics.composer3-V1-ndk.so:android.hardware.graphics.mapper@2.0.so:android.hardware.graphics.mapper@2.1.so:android.hardware.graphics.mapper@3.0.so:android.hardware.graphics.mapper@4.0.so:android.hardware.renderscript@1.0.so:android.hidl.memory.token@1.0.so:android.hidl.memory@1.0-impl.so:android.hidl.memory@1.0.so:android.hidl.safe_union@1.0.so:libRSCpuRef.so:libRSDriver.so:libRS_internal.so:libbase.so:libbcinfo.so:libblas.so:libc++.so:libcompiler_rt.so:libcutils.so:libdmabufheap.so:libgralloctypes.so:libhardware.so:libhidlbase.so:libhidlmemory.so:libion.so:libjsoncpp.so:liblzma.so:libprocessgroup.so:libunwindstack.so:libutils.so:libutilscallstack.so:libz.so
+08-31 19:36:46.513   901   901 I HibernationPolicy: user 0 is a profileowner. Running hibernation job.
+08-31 19:36:46.514   901   901 I HibernationPolicy: Job already scheduled.
+08-31 19:36:46.515  3602  3602 V GraphicsEnvironment: Currently set values for:
+08-31 19:36:46.515  3602  3602 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+08-31 19:36:46.515  3602  3602 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+08-31 19:36:46.515  3602  3602 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.partnersetup: false
+08-31 19:36:46.515  3602  3602 V GraphicsEnvironment: com.google.android.partnersetup is not listed in per-application setting
+08-31 19:36:46.515  3602  3602 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+08-31 19:36:46.543  3586  3586 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:36:46.544  3586  3586 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:36:46.544  3586  3586 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:36:46.537  3586  3586 W main    : type=1400 audit(0.0:18): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:36:46.541  3586  3586 W main    : type=1400 audit(0.0:19): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:36:46.546  3586  3586 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+08-31 19:36:46.547  3586  3586 W Monkey  : args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]
+08-31 19:36:46.541  3586  3586 W main    : type=1400 audit(0.0:20): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:36:46.547  3586  3586 W Monkey  :  arg: "-p"
+08-31 19:36:46.547  3586  3586 W Monkey  :  arg: "owasp.sat.agoat"
+08-31 19:36:46.547  3586  3586 W Monkey  :  arg: "-c"
+08-31 19:36:46.547  3586  3586 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+08-31 19:36:46.547  3586  3586 W Monkey  :  arg: "1"
+08-31 19:36:46.547  3586  3586 W Monkey  : data="owasp.sat.agoat"
+08-31 19:36:46.547  3586  3586 W Monkey  : data="android.intent.category.LAUNCHER"
+08-31 19:36:46.556  1202  3336 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+08-31 19:36:46.557  1202  3336 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+08-31 19:36:46.558  1202  3336 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+08-31 19:36:46.559  1202  3336 I NearbyDiscovery: OffloadFastPairScanner: Skipping start scanning, scanning not allowed now. [CONTEXT service_id=265 ]
+08-31 19:36:46.560  1202  3336 I NearbyDiscovery: FastPairHandler: Received action android.net.conn.CONNECTIVITY_CHANGE [CONTEXT service_id=265 ]
+08-31 19:36:46.562  1620  2464 W Icing   : Package com.google.android.googlequicksearchbox targets Android P and isn't allowed to use AppDataSearch indexing API
+08-31 19:36:46.568  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.578   545   559 W ActivityManager: registerReceiverWithFeature: no app for null
+08-31 19:36:46.583  3586  3586 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:36:46.583  3586  3586 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:36:46.583  3586  3586 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:36:46.599   545  1858 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 10125. pid: 3602
+08-31 19:36:46.603   432   446 I adbd    : jdwp connection from 3634
+08-31 19:36:46.604   545   559 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10192; state: DISABLED
+08-31 19:36:46.609   545   559 W ActivityTaskManager: callingPackage for (uid=2000, pid=3586) has no WPC
+08-31 19:36:46.609   545   559 D CompatibilityChangeReporter: Compat change id reported: 244637991; UID 2000; state: ENABLED
+08-31 19:36:46.616   545   559 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10192; state: DISABLED
+08-31 19:36:46.616   545   559 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10192; state: DISABLED
+08-31 19:36:46.616   545   559 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10192; state: DISABLED
+08-31 19:36:46.616   545   559 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10192; state: DISABLED
+08-31 19:36:46.616   545   559 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10192; state: DISABLED
+08-31 19:36:46.616   545   559 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10192; state: DISABLED
+08-31 19:36:46.617   545   559 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10192; state: DISABLED
+08-31 19:36:46.626   468  3474 D CCodecBufferChannel: [c2.android.vorbis.decoder#967] buffers after EOS ignored (0 us)
+08-31 19:36:46.627   468  3474 D CCodecBufferChannel: [c2.android.vorbis.decoder#967] buffers after EOS ignored (0 us)
+08-31 19:36:46.628   545   559 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10192; state: DISABLED
+08-31 19:36:46.629   545   559 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10192; state: DISABLED
+08-31 19:36:46.629   545   559 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10192; state: DISABLED
+08-31 19:36:46.631   545   559 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10192; state: DISABLED
+08-31 19:36:46.631   545   559 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10192; state: DISABLED
+08-31 19:36:46.632   545   559 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10192; state: DISABLED
+08-31 19:36:46.632   545   559 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10192; state: DISABLED
+08-31 19:36:46.632   545   559 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10192; state: DISABLED
+08-31 19:36:46.633   545   559 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10192; state: DISABLED
+08-31 19:36:46.635   545   559 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10192; state: ENABLED
+08-31 19:36:46.637   545  2365 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10125; state: DISABLED
+08-31 19:36:46.639  3602  3602 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10125; state: ENABLED
+08-31 19:36:46.639  3602  3602 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10125; state: DISABLED
+08-31 19:36:46.641   545  2365 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10125; state: DISABLED
+08-31 19:36:46.641   545  2365 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10125; state: ENABLED
+08-31 19:36:46.644   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.644  1620  1620 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.wallet.service.BIND pkg=com.google.android.gms }
+08-31 19:36:46.644  1620  1620 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.wallet.service.BIND pkg=com.google.android.gms }
+08-31 19:36:46.659   545   559 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10192; state: DISABLED
+08-31 19:36:46.660  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.660   545   559 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10192; state: DISABLED
+08-31 19:36:46.662  1620  2464 W Icing   : Package com.google.android.gm targets Android P and isn't allowed to use AppDataSearch indexing API
+08-31 19:36:46.666  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.679  3445  3567 D CompatibilityChangeReporter: Compat change id reported: 263076149; UID 10142; state: DISABLED
+08-31 19:36:46.683  3445  3567 I org.webrtc.Logging: EffectsMiniBenchmarkWorkerFactory: Received worker class com.google.android.libraries.hub.workmanager.HubListenableWorker
+08-31 19:36:46.690   545   559 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10192; state: ENABLED
+08-31 19:36:46.694  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.694  3445  3445 W kch     : [Gmail] ExchangeUpgradeReceiver: ExchangeUpgradeReceiver: action=android.intent.action.BOOT_COMPLETED data=null [CONTEXT android_log_tag="EasBundling" ]
+08-31 19:36:46.701  3445  3445 W kch     : [Gmail] ExchangeUpgradeUtils: ExchangeUpgradeUtils: isExchangeLegacy=false [CONTEXT android_log_tag="EasBundling" ]
+08-31 19:36:46.705  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.717  1202  3298 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+08-31 19:36:46.717   901  1187 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10182; state: ENABLED
+08-31 19:36:46.719   545  1861 D CompatibilityChangeReporter: Compat change id reported: 271850009; UID 10142; state: DISABLED
+08-31 19:36:46.720   545  2585 D SafetySourceDataValidator: No cert check requested for package com.google.android.permissioncontroller
+08-31 19:36:46.726   545  1857 D SafetySourceDataValidator: No cert check requested for package com.google.android.permissioncontroller
+08-31 19:36:46.731  3445  3445 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gm
+08-31 19:36:46.766   545   559 V SplashScreenExceptionList: SplashScreen checking exception for package owasp.sat.agoat (target sdk:33) -> false
+08-31 19:36:46.767   545   559 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10192; state: ENABLED
+08-31 19:36:46.774   756   806 V WindowManagerShell: Transition requested: android.os.BinderProxy@c05123d TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=33 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity } baseActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} topActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} origActivity=null realActivity=ComponentInfo{owasp.sat.agoat/owasp.sat.agoat.SplashActivity} numActivities=1 lastActiveTime=38953 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@1e58a32} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{551852c owasp.sat.agoat.SplashActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+08-31 19:36:46.784   545   559 D CompatibilityChangeReporter: Compat change id reported: 194833441; UID 10192; state: ENABLED
+08-31 19:36:46.784   545   559 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=owasp.sat.agoat/.SplashActivity} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+08-31 19:36:46.785   545   567 W system_server: Long monitor contention with owner binder:545_2 (559) at int com.android.server.wm.ActivityStarter.execute()(ActivityStarter.java:786) waiters=1 in void com.android.server.wm.WindowAnimator.lambda$new$1(long) for 143ms
+08-31 19:36:46.786  3586  3586 I Monkey  : Events injected: 1
+08-31 19:36:46.795   756   824 D SplashScreenView: Build android.window.SplashScreenView{d8e40d7 V.E...... ......ID 0,0-0,0}
+08-31 19:36:46.795   756   824 D SplashScreenView: Icon: view: android.widget.ImageView{a9d4dc4 V.ED..... ......I. 0,0-0,0 #10204f0 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@c4404ad size: 504
+08-31 19:36:46.795   756   824 D SplashScreenView: Branding: view: android.view.View{d30e3e2 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+08-31 19:36:46.802   545   566 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10192; state: DISABLED
+08-31 19:36:46.803   545   566 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10192; state: DISABLED
+08-31 19:36:46.803   545   566 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10192; state: DISABLED
+08-31 19:36:46.803   545   566 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10192; state: ENABLED
+08-31 19:36:46.804   545  2406 D CoreBackPreview: Window{1ab52ec u0 Splash Screen owasp.sat.agoat}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@34718bb, mPriority=0, mIsAnimationCallback=false}
+08-31 19:36:46.805   545   576 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10192; state: ENABLED
+08-31 19:36:46.809  1202  1202 W Nearby  : Bind call too late - someone already tried to get: interface dtvj [CONTEXT service_id=49 ]
+08-31 19:36:46.811   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.811   545  1857 D SafetySourceDataValidator: No cert check requested for package com.google.android.permissioncontroller
+08-31 19:36:46.813   419   419 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+08-31 19:36:46.816  1202  1202 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.semanticlocation.service.START_ODLH pkg=com.google.android.gms }
+08-31 19:36:46.816  1202  1202 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.semanticlocation.service.START_ODLH pkg=com.google.android.gms }
+08-31 19:36:46.818   901   901 V SafetyCenterBackgroundR: Scheduling a periodic background refresh with , interval=86400000requires charging=true
+08-31 19:36:46.826   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.826   901  1185 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10182; state: ENABLED
+08-31 19:36:46.830   901   901 D SafetyLabelChangesJobService: Received broadcast with intent action 'android.intent.action.BOOT_COMPLETED'
+08-31 19:36:46.831   901   901 I SafetyLabelChangesJobService: Detect updates job scheduled successfully.
+08-31 19:36:46.831   901   901 I SafetyLabelChangesJobService: Not scheduling notification job: already scheduled.
+08-31 19:36:46.831   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.833   901   901 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.permissioncontroller
+08-31 19:36:46.833   901   901 D PermissionStorageTimeChangeReceiver: systemTimeSnapshot set to 1788197806833
+08-31 19:36:46.834   901   901 D PermissionStorageTimeChangeReceiver: realtimeSnapshot set to 39016
+08-31 19:36:46.836   545  2370 D SafetySourceDataValidator: No cert check requested for package com.google.android.permissioncontroller
+08-31 19:36:46.851   756   806 W Looper  : Slow delivery took 47ms wmshell.main h=android.os.Handler c=null m=17
+08-31 19:36:46.852  1202  1202 I GCoreUlr: Unbound from all signal providers.
+08-31 19:36:46.852  1202  1202 I GCoreUlr: Stopping handler for UlrDispSvcFast
+08-31 19:36:46.858  1620  2901 I PeopleChimeraService: onService. callbacks = avsz@5c78703, request = com.google.android.gms.common.internal.GetServiceRequest@699680
+08-31 19:36:46.858   545   621 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10192; state: ENABLED
+08-31 19:36:46.858   545   621 D CompatibilityChangeReporter: Compat change id reported: 265195908; UID 10124; state: ENABLED
+08-31 19:36:46.868   545   875 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10124; state: DISABLED
+08-31 19:36:46.868   545   875 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10124; state: DISABLED
+08-31 19:36:46.869  1202  3297 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+08-31 19:36:46.869  1202  3296 I FontLog : Package owasp.sat.agoat has no metadata [CONTEXT service_id=132 ]
+08-31 19:36:46.871  1202  3296 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+08-31 19:36:46.873   545  2370 D SafetySourceDataValidator: No cert check requested for package com.google.android.permissioncontroller
+08-31 19:36:46.878  1202  1246 W GLSUser : [DeviceKeyStore] Cannot load key: Device key file not found.
+08-31 19:36:46.878  3586  3586 I Monkey  : ## Network stats: elapsed time=278ms (0ms mobile, 0ms wifi, 278ms not connected)
+08-31 19:36:46.884   413   509 D AudioFlinger: mixer(0x71da91e55930) throttle end: throttle time(11)
+08-31 19:36:46.886  1202  1202 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.tapandpay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+08-31 19:36:46.886  1202  1202 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.tapandpay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+08-31 19:36:46.887   468  3472 D AudioTrack: stop(15): called with 82980 frames delivered
+08-31 19:36:46.894  3634  3634 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10124; state: ENABLED
+08-31 19:36:46.894  3634  3634 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10124; state: ENABLED
+08-31 19:36:46.896   756   806 W Looper  : Drained
+08-31 19:36:46.897   356   356 D Zygote  : Forked child process 3681
+08-31 19:36:46.901   545   576 W ActivityManager: Slow operation: 110ms so far, now at startProcess: returned from zygote!
+08-31 19:36:46.901   545   576 W ActivityManager: Slow operation: 111ms so far, now at startProcess: done updating battery stats
+08-31 19:36:46.901   545   576 W ActivityManager: Slow operation: 111ms so far, now at startProcess: building log message
+08-31 19:36:46.901   545   576 I ActivityManager: Start proc 3681:owasp.sat.agoat/u0a192 for next-top-activity {owasp.sat.agoat/owasp.sat.agoat.SplashActivity}
+08-31 19:36:46.901   545   576 W ActivityManager: Slow operation: 111ms so far, now at startProcess: starting to update pids map
+08-31 19:36:46.902   545   576 W ActivityManager: Slow operation: 111ms so far, now at startProcess: done updating pids map
+08-31 19:36:46.903  3586  3586 I app_process: System.exit called, status: 0
+08-31 19:36:46.904  3586  3586 I AndroidRuntime: VM exiting with result code 0.
+08-31 19:36:46.904   545  2572 D CompatibilityChangeReporter: Compat change id reported: 170503758; UID 10124; state: ENABLED
+08-31 19:36:46.905   545   575 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10117; state: DISABLED
+08-31 19:36:46.905   545   575 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10117; state: DISABLED
+08-31 19:36:46.905   545   575 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10117; state: DISABLED
+08-31 19:36:46.905   545   575 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10117; state: ENABLED
+08-31 19:36:46.905   545   576 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10117; state: ENABLED
+08-31 19:36:46.923  1620  1620 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+08-31 19:36:46.923  1620  1620 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+08-31 19:36:46.928  3634  3634 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+08-31 19:36:46.928  3634  3634 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+08-31 19:36:46.931  1202  3134 I ProximityAuth: [RecentAppsMediator] Package added: (user=UserHandle{0}) owasp.sat.agoat
+08-31 19:36:46.934  3681  3681 I owasp.sat.agoat: Late-enabling -Xcheck:jni
+08-31 19:36:46.948  3634  3634 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-x86_64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvndksupport.so:libvulkan.so
+08-31 19:36:46.948  3634  3634 D nativeloader: Configuring product-clns-6 for unbundled product apk /product/priv-app/AndroidAutoStubPrebuilt/AndroidAutoStubPrebuilt.apk. target_sdk_version=34, uses_libraries=, library_path=/product/priv-app/AndroidAutoStubPrebuilt/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.projection.gearhead:/product/lib64:/system/product/lib64
+08-31 19:36:46.949  3634  3634 D nativeloader: InitVndkspLibrariesProduct: android.hardware.common-V2-ndk.so:android.hardware.common.fmq-V1-ndk.so:android.hardware.graphics.allocator-V2-ndk.so:android.hardware.graphics.common-V4-ndk.so:android.hardware.graphics.common@1.0.so:android.hardware.graphics.common@1.1.so:android.hardware.graphics.common@1.2.so:android.hardware.graphics.composer3-V1-ndk.so:android.hardware.graphics.mapper@2.0.so:android.hardware.graphics.mapper@2.1.so:android.hardware.graphics.mapper@3.0.so:android.hardware.graphics.mapper@4.0.so:android.hardware.renderscript@1.0.so:android.hidl.memory.token@1.0.so:android.hidl.memory@1.0-impl.so:android.hidl.memory@1.0.so:android.hidl.safe_union@1.0.so:libRSCpuRef.so:libRSDriver.so:libRS_internal.so:libbase.so:libbcinfo.so:libblas.so:libc++.so:libcompiler_rt.so:libcutils.so:libdmabufheap.so:libgralloctypes.so:libhardware.so:libhidlbase.so:libhidlmemory.so:libion.so:libjsoncpp.so:liblzma.so:libprocessgroup.so:libunwindstack.so:libutils.so:libutilscallstack.so:libz.so
+08-31 19:36:46.957  3634  3634 V GraphicsEnvironment: Currently set values for:
+08-31 19:36:46.957  3634  3634 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+08-31 19:36:46.957  3634  3634 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+08-31 19:36:46.959  3634  3634 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.projection.gearhead: false
+08-31 19:36:46.959  3634  3634 V GraphicsEnvironment: com.google.android.projection.gearhead is not listed in per-application setting
+08-31 19:36:46.959  3634  3634 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+08-31 19:36:46.963  1202  1246 W GLSUser : [DeviceKeyStore] Cannot load key: Device key file not found.
+08-31 19:36:46.964  1202  3483 I NearbyMessages: OfflineCache: old scanner cache is not enabled [CONTEXT service_id=62 ]
+--------- beginning of kernel
+08-31 19:36:47.915     0     0 I logd    : logdr: UID=2000 GID=2000 PID=3690 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+08-31 19:36:46.976   413   509 D AudioFlinger: mixer(0x71da91e55930) throttle end: throttle time(2)

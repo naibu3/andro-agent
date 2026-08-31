@@ -1,0 +1,62 @@
+{
+  "enabled": true,
+  "mode": "off",
+  "manual_base_url": "http://127.0.0.1:8888",
+  "candidates_count": 1,
+  "selected_candidates_count": 1,
+  "candidates": [
+    {
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "scheme": "http",
+      "host": "127.0.0.1",
+      "port": 8888,
+      "base_url": "http://127.0.0.1:8888",
+      "path_prefix": null,
+      "confidence": "high",
+      "source_types": [
+        "manual_override"
+      ],
+      "sources": [
+        {
+          "type": "manual",
+          "artifact_path": null,
+          "selector": null,
+          "snippet": "http://127.0.0.1:8888"
+        }
+      ],
+      "reason": "manual_override",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    }
+  ],
+  "selected_candidates": [
+    {
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "scheme": "http",
+      "host": "127.0.0.1",
+      "port": 8888,
+      "base_url": "http://127.0.0.1:8888",
+      "path_prefix": null,
+      "confidence": "high",
+      "source_types": [
+        "manual_override"
+      ],
+      "sources": [
+        {
+          "type": "manual",
+          "artifact_path": null,
+          "selector": null,
+          "snippet": "http://127.0.0.1:8888"
+        }
+      ],
+      "reason": "manual_override",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    }
+  ],
+  "skipped_candidates": [],
+  "errors": [],
+  "warnings": []
+}

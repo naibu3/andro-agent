@@ -1,0 +1,26 @@
+{
+  "case_id": "dynamic-api-no-static-artifacts",
+  "package_name": "owasp.sat.agoat",
+  "observations": [],
+  "artifacts": [],
+  "errors": [
+    "Emulator did not boot in time"
+  ],
+  "status": "failed",
+  "install": {
+    "attempted": false,
+    "success": false,
+    "error": null
+  },
+  "launch": {
+    "attempted": false,
+    "success": false,
+    "activity": null,
+    "error": null
+  },
+  "runtime_observations_path": "artifacts/dynamic-api-no-static-artifacts/dynamic/runtime_observations.json",
+  "api_discovery_path": "artifacts/dynamic-api-no-static-artifacts/dynamic/api_discovery.json",
+  "api_observations_path": null,
+  "api_candidate_findings_path": null,
+  "warnings": []
+}

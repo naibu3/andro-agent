@@ -1,0 +1,182 @@
+--------- beginning of main
+08-31 19:24:14.193  5582  5582 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:24:14.205  5582  5582 I AndroidRuntime: Using default boot image
+08-31 19:24:14.206  5582  5582 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:24:14.209  5582  5582 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:24:14.210  5582  5582 I app_process: Using CollectorTypeCC GC.
+08-31 19:24:14.342  5582  5582 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:24:14.360  5582  5582 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:24:14.360  5582  5582 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+--------- beginning of system
+08-31 19:24:14.371   552   586 D ActivityManager: sync unfroze 2663 com.google.android.apps.wallpaper for 3
+08-31 19:24:14.375  5582  5582 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:24:14.375  5582  5582 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:24:14.439   552   629 D ActivityManager: sync unfroze 3386 com.google.android.dialer for 6
+08-31 19:24:14.440  5582  5582 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:24:14.441  5582  5582 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:24:14.441  5582  5582 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:24:14.435  5582  5582 W main    : type=1400 audit(0.0:385): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:14.444  5582  5582 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:24:14.435  5582  5582 W main    : type=1400 audit(0.0:386): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:14.435  5582  5582 W main    : type=1400 audit(0.0:387): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:14.458  2663  5599 W DiskBasedLogger: Disk-based log buffer doesn't exist, so there's nothing to clean up.
+08-31 19:24:14.464  5582  5582 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:14.464  5582  5582 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:14.464  5582  5582 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:14.467   552   629 D CompatibilityChangeReporter: Compat change id reported: 271850009; UID 10132; state: DISABLED
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: Writing exception to parcel
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/note
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+08-31 19:24:14.471  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+08-31 19:24:14.474  5582  5582 D AndroidRuntime: Shutting down VM
+08-31 19:24:14.478  1809  1809 I BgTaskExecutorImpl: Starting EXCLUSIVE background task UPLOAD_ASSISTANT_DEVICE_SETTINGS.
+08-31 19:24:14.485  1741  5577 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: vision.ocr:-1
+08-31 19:24:14.494  1318  1414 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 141 [CONTEXT service_id=218 ]
+08-31 19:24:14.506  1809  2318 I NetworkRecognitionRnr: Using pair HTTP connection
+08-31 19:24:14.507  1318  5468 V NFC     : this device does not have NFC support
+08-31 19:24:14.508  1809  4033 W LocationOracle: getBestLocation(): no location is available
+08-31 19:24:14.520  1809  4035 I A       : [Upload] Connected
+08-31 19:24:14.525   552  1662 D ConnectivityService: requestNetwork for uid/pid:10130/3386 activeRequest: null callbackRequest: 148 [NetworkRequest [ REQUEST id=149, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+08-31 19:24:14.533  1318  5468 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+08-31 19:24:14.533  1318  5468 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:152)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at cdoy.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at avzs.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.533  1318  5468 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:24:14.539  1318  4739 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:4 result: 3 elapsed_millis: 64 uptime_millis: 64 exec_start_elapsed_seconds: 141 [CONTEXT service_id=218 ]
+08-31 19:24:14.553  1809  1809 E A       : onError
+08-31 19:24:14.553  1809  1809 E A       : com.google.android.apps.gsa.shared.speech.a.m: errorCode: 65561, engine: 2
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.staticplugins.dc.a.e.a(PG:3)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.n.hh(PG:1)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.cd.g.a.f.e(PG:2)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+08-31 19:24:14.553  1809  1809 E A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+08-31 19:24:14.553  1809  1809 E A       : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+08-31 19:24:14.553  1809  1809 E A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:24:14.553  1809  1809 E A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:24:14.553  1809  1809 E A       : 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+08-31 19:24:14.553  1809  1809 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.o: errorCode: 65586, engine: 2
+08-31 19:24:14.553  1809  1809 E A       : 	... 15 more
+08-31 19:24:14.553  1809  1809 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.k: errorCode: 401, engine: 2
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.assistant.shared.n.h.a(PG:5)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.producers.j.hE(PG:2)
+08-31 19:24:14.553  1809  1809 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:16)
+08-31 19:24:14.553  1809  1809 E A       : 	... 12 more
+08-31 19:24:14.555   552   697 D ConnectivityService: NetReassign [149 : null → 100] [c 2] [a 13] [i 12]
+08-31 19:24:14.557  1809  4035 I NetworkRecognitionRnr: Using pair HTTP connection
+08-31 19:24:14.558  1809  4033 I A       : [Upload] Connected
+08-31 19:24:14.560  1809  2336 W CronetNetworkRqstWrppr: Upload request without a content type.
+08-31 19:24:14.560   552   689 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=149, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+08-31 19:24:14.563  1809  1809 W A       : Failed to sync device settings.
+08-31 19:24:14.563  1809  1809 I A       : Retrying to sync device settings.
+08-31 19:24:14.563   552   689 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=149, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+08-31 19:24:14.566   552   689 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=149, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+08-31 19:24:14.568   552   689 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=149, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10130 RequestorUid: 10130 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+08-31 19:24:14.573  1741  5577 I ChimeraConfigurator: Detected pending changes for urgent request: [vision.ocr]. Pending module sets: container:2318189190800+mlkit.ocr.common,tflite_dynamite:2627305025100800+tflite_dynamite,vision_ocr:2316024025100000+vision.ocr
+08-31 19:24:14.591   552  1947 W JobScheduler: Job didn't exist in JobStore: 3933243 #u0a132/-353 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+08-31 19:24:14.593  1809  3080 W SearchServiceCore: Abort, client detached.
+08-31 19:24:14.611  1741  5577 I GmsDebugLogger: [73] 1801
+08-31 19:24:14.626  1741  5577 W ZappDownloader: No successful module downloads for requested features [vision.ocr].
+08-31 19:24:14.626  1741  5577 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[TfliteDynamiteDynamite.integ:262730502100800],[MlkitOcrCommon.optional:231818100800]
+08-31 19:24:14.637   772   772 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+08-31 19:24:14.640  1741  5577 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+08-31 19:24:14.640  1741  5577 I ChimeraConfigurator: Update complete: success
+08-31 19:24:14.643  1318  1414 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:5 exec_start_elapsed_seconds: 141 [CONTEXT service_id=218 ]
+08-31 19:24:14.656  1741  5577 I GmsModuleFndr: Beginning GMS chimera module scan
+08-31 19:24:14.660  1741  5577 I ModuleSetMgr: Computing pending module set with APKs: [[AdsFdrDynamite.integ:231004600100000], [Cronetdynamite:231818190800], [Dynamiteloader:231818190000], [Dynamitemodulesa:231818190000], [Dynamitemodulesc:231818190000], [Googlecertificates:231818190000], [Mapsdynamite:231818190000], [Measurementdynamite:231818190000]]
+08-31 19:24:14.689  3386  3435 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 176]" ]
+08-31 19:24:14.705  1741  5577 I ModuleSetMgr: Pending container module APKs: []
+08-31 19:24:14.705  1741  5577 I ModuleSetMgr: Pending non-container module APKs: []
+08-31 19:24:14.710  3386  3439 I DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$execute$6:166 Beginning VVM action: SYNC with retryCount: 0 [CONTEXT enable_persistent_logger=true ]
+08-31 19:24:14.711   552   619 D ActivityManager: sync unfroze 3185 com.google.android.gms.unstable for 6
+08-31 19:24:14.720  3386  3435 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_SYNC_STARTED
+08-31 19:24:14.725  1741  5577 W PackageParser: Unknown element under <manifest>: queries at /data/user_de/0/com.google.android.gms/app_chimera/m/00000000/AdsDynamite.apk Binary XML file line #15
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$executeWorkOnCarrierService$14:301 Could not complete vvm work
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: java.lang.IllegalStateException: VvmStatusSms should be present at this point but is absent.
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at jnd.get(PG:32)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at java.util.Optional.orElseThrow(Optional.java:404)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at cuc.call(PG:105)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at svs.call(PG:7)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at swe.a(Unknown Source:2)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at sxh.run(PG:3)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at ocg.run(PG:1)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at oca.run(PG:19)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at oca.run(PG:32)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:24:14.732  3386  3435 W DialerVvmExecutorImpl: 	at ocj.run(PG:6)
+08-31 19:24:14.733  3386  3435 W DialerVvmExecutorImpl: com.android.dialer.voicemail.service.impl.scheduler.VvmExecutorImpl.lambda$executeWorkOnCarrierService$15:326 Could not complete vvm work with action: SYNC. Error: [GeneralFailureReason: FAILED_FUTURE, RestFailureReason: REST_UNSPECIFIED, OmtpFailureReason: OMTP_UNSPECIFIED] [CONTEXT enable_persistent_logger=true ]
+08-31 19:24:14.761  1741  5577 W PackageParser: Unknown element under <manifest>: queries at /data/user_de/0/com.google.android.gms/app_chimera/m/00000004/DynamiteModulesC.apk Binary XML file line #15
+08-31 19:24:14.762  3386  3432 I WM-WorkerWrapper: Worker result FAILURE for Work [ id=c9d61ecf-2589-4faa-b1c4-fc05b2ae653e, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, 1, SYNC, TikTokWorker#com.android.dialer.voicemail.service.impl.VvmTaskWorker } ]
+08-31 19:24:14.771  3386  3432 I WM-WorkerWrapper: Worker result FAILURE for Work [ id=3624a9ea-ebf9-4529-a633-ac5100c62bd1, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, 1, SYNC, TikTokWorker#com.android.dialer.voicemail.service.impl.VvmTaskWorker } ]
+08-31 19:24:14.797  1741  5577 I ChimeraConfigurator: Checking 1 listeners. All downloaded: false
+08-31 19:24:14.798  1741  5577 I GmsDebugLogger: [83] 1 [vision.ocr]
+08-31 19:24:14.805  1741  5576 W Vision  : Request for optional module download of ocr failed. Request again.
+08-31 19:24:14.806  1741  5576 W Vision  : Would have logged:
+08-31 19:24:14.806  1741  5576 W Vision  : # dsae@37884fe7
+08-31 19:24:14.807  1741  5576 I Vision  : Schedule retrying download ocr at 142154 with backoff 40 seconds
+08-31 19:24:14.829   357  5606 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+08-31 19:24:14.830  3185  3533 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+08-31 19:24:14.860  3185  3533 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-31 19:24:14.861  3185  3533 W libc    : Access denied finding property "service.adb.tls.port"
+08-31 19:24:14.855  3185  3185 W binder:3185_4: type=1400 audit(0.0:388): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:24:14.855  3185  3185 W binder:3185_4: type=1400 audit(0.0:389): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:24:14.881  1318  4726 W GmsUrlRequestImpl: Content-Type header is overwritten.
+08-31 19:24:14.888  1318  4042 D TrafficStats: tagSocket(122) with statsTag=0x401, statsUid=10123
+08-31 19:24:14.954  1318  4726 W GLSUser : [AppCertManager] Exception while requesting key: 
+08-31 19:24:14.954  1318  4726 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at otz.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at otu.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at lzq.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:24:14.954  1318  4726 W GLSUser : Caused by: avvw: Parse Proto Exception.
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	... 6 more
+08-31 19:24:14.954  1318  4726 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+08-31 19:24:14.954  1318  4726 W GLSUser : 	... 9 more
+08-31 19:24:14.956  1318  4739 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 338 uptime_millis: 338 exec_start_elapsed_seconds: 141 [CONTEXT service_id=218 ]
+08-31 19:24:15.354   552   639 D ActivityManager: freezing 1984 com.google.android.settings.intelligence

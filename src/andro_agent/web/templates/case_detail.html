@@ -107,10 +107,40 @@
 
 <section class="panel">
   <h2>Dynamic observations</h2>
-  {% if dynamic_observations %}
-    <pre>{{ dynamic_observations | tojson(indent=2) }}</pre>
+  {% if not dynamic_results %}
+    <p class="muted">Dynamic analysis was not run.</p>
   {% else %}
-    <p class="muted">Not available.</p>
+    <p>Status: <strong>{{ dynamic_results.status or "unknown" }}</strong></p>
+    <p>Package: {{ dynamic_results.package_name or "N/A" }}</p>
+    <p>Install: {{ "succeeded" if dynamic_results.install.success else ("failed" if dynamic_results.install.attempted else "not attempted") }}</p>
+    <p>Launch: {{ "succeeded" if dynamic_results.launch.success else ("failed" if dynamic_results.launch.attempted else "not attempted") }}</p>
+    {% if dynamic_results.launch.activity %}<p>Launch activity: {{ dynamic_results.launch.activity }}</p>{% endif %}
+    <p>Observations: {{ dynamic_observations | length }}</p>
+    {% if dynamic_results.errors %}<p class="muted">Errors: {{ dynamic_results.errors | join("; ") }}</p>{% endif %}
+  {% endif %}
+</section>
+
+<section class="panel">
+  <h2>API discovery and safe probing</h2>
+  {% if not api_discovery %}
+    <p class="muted">API discovery not configured.</p>
+  {% elif api_discovery.candidates_count == 0 %}
+    <p class="muted">No API candidates discovered.</p>
+  {% else %}
+    <p>Selected candidates: {{ api_discovery.selected_candidates_count }} / {{ api_discovery.candidates_count }}</p>
+    {% for candidate in api_discovery.selected_candidates %}
+      <p><strong>{{ candidate.base_url }}</strong> — {{ candidate.confidence }} — {{ candidate.reason }}</p>
+      <p class="muted">Sources: {{ candidate.source_types | join(", ") }}</p>
+    {% endfor %}
+  {% endif %}
+  {% if api_observations %}
+    <p>Probe mode: {{ api_observations.mode }}</p>
+    <p>Requests: {{ api_observations.requests_count }}</p>
+    <p>Findings: {{ api_findings | length }}</p>
+    <p>Errors: {{ api_requests.errors_count or 0 }}</p>
+    {% for finding in api_findings %}
+      <p><strong>{{ finding.title }}</strong> — {{ finding.severity }}: {{ finding.affected_endpoint }}</p>
+    {% endfor %}
   {% endif %}
 </section>
 <section class="stats-grid">
@@ -337,6 +367,9 @@
     <a class="button" href="/api/scans/{{ case.id }}/downloads/report.md">Report MD</a>
     <a class="button" href="/api/scans/{{ case.id }}/downloads/report.html">Report HTML</a>
     <a class="button" href="/api/scans/{{ case.id }}/downloads/bundle.zip">Bundle ZIP</a>
+    {% for artifact_name in download_availability.dynamic %}
+    <a class="button" href="/api/scans/{{ case.id }}/downloads/dynamic/{{ artifact_name }}">{{ artifact_name }}</a>
+    {% endfor %}
   </div>
 </section>
 

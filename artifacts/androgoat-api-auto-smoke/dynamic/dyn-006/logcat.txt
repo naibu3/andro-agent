@@ -1,0 +1,58 @@
+--------- beginning of main
+08-31 19:23:45.824  4832  4832 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:23:45.833  4832  4832 I AndroidRuntime: Using default boot image
+08-31 19:23:45.833  4832  4832 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:23:45.836  4832  4832 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:23:45.836  4832  4832 I app_process: Using CollectorTypeCC GC.
+08-31 19:23:45.947   357  4834 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10149 0}
+08-31 19:23:45.948   357  4835 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+08-31 19:23:45.948   357  4836 I resolv  : res_nmkquery: (QUERY, IN, A)
+08-31 19:23:45.953  4832  4832 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:23:45.973  4832  4832 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:23:45.974  4832  4832 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:23:45.985  4832  4832 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:23:45.985  4832  4832 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:23:45.987   357  4835 I resolv  : res_nsend: used send_dg 151 terrno: 0
+08-31 19:23:45.987   357  4836 I resolv  : res_nsend: used send_dg 55 terrno: 0
+08-31 19:23:45.987   357  4835 I resolv  : doQuery: rcode=0, ancount=4, return value=151
+08-31 19:23:45.987   357  4836 I resolv  : doQuery: rcode=0, ancount=1, return value=55
+08-31 19:23:46.017  4832  4832 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:23:46.017  4832  4832 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:23:46.017  4832  4832 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:23:46.011  4832  4832 W main    : type=1400 audit(0.0:67): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:23:46.011  4832  4832 W main    : type=1400 audit(0.0:68): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:23:46.011  4832  4832 W main    : type=1400 audit(0.0:69): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:23:46.051  4832  4832 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:23:46.054  4832  4832 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:23:46.054  4832  4832 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:23:46.054  4832  4832 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: Writing exception to parcel
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/config
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+08-31 19:23:46.056  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+08-31 19:23:46.058  4832  4832 D AndroidRuntime: Shutting down VM
+--------- beginning of system
+08-31 19:23:46.103   552   639 D ActivityManager: freezing 1985 com.google.android.projection.gearhead:shared
+08-31 19:23:46.222  1318  4726 I NearbySharing: FastInitiation warming period has ended [CONTEXT service_id=194 ]
+08-31 19:23:46.419   357  4850 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10149 0}
+08-31 19:23:46.420   357  4852 I resolv  : res_nmkquery: (QUERY, IN, A)
+08-31 19:23:46.420   357  4851 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+08-31 19:23:46.453   357  4852 I resolv  : res_nsend: used send_dg 52 terrno: 0
+08-31 19:23:46.453   357  4851 I resolv  : res_nsend: used send_dg 64 terrno: 0
+08-31 19:23:46.453   357  4852 I resolv  : doQuery: rcode=0, ancount=1, return value=52
+08-31 19:23:46.453   357  4851 I resolv  : doQuery: rcode=0, ancount=1, return value=64
+08-31 19:23:46.565   772   772 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+08-31 19:23:46.839   552   626 W BatteryExternalStatsWorker: error reading Bluetooth stats: 11
+08-31 19:23:46.920   552   626 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 90000; state: DISABLED
+08-31 19:23:46.920   552   587 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10149; state: ENABLED
+08-31 19:23:46.922   552   587 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10149; state: DISABLED
+08-31 19:23:46.922   552   587 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10149; state: DISABLED
+08-31 19:23:46.922   552   587 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10149; state: DISABLED
+08-31 19:23:46.922   552   587 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10149; state: ENABLED
+08-31 19:23:46.923   358   358 W Zygote  : forkRepeatedly terminated due to non-simple command
+08-31 19:23:46.923   358   358 D Zygote  : mbuffer starts with 15, nice name is com.android.chrome_zygote, mEnd = 415, mNext = 199, mLinesLeft = 6, mFd = 6

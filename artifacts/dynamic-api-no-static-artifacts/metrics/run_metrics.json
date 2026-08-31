@@ -1,0 +1,62 @@
+{
+  "case_id": "dynamic-api-no-static-artifacts",
+  "started_at": "2026-08-31 16:50:30.327014",
+  "finished_at": "2026-08-31 16:50:43.358005",
+  "duration_seconds": 13.030991502004326,
+  "steps": [
+    {
+      "name": "dynamic_pipeline",
+      "started_at": "2026-08-31 16:50:30.327035",
+      "finished_at": "2026-08-31 16:50:43.345373",
+      "duration_seconds": 13.018311072999495,
+      "success": false,
+      "warnings": [],
+      "errors": [
+        "Emulator did not boot in time"
+      ]
+    }
+  ],
+  "agents": [],
+  "summary": {
+    "status": "dynamic_failed",
+    "analysis_profile": "full",
+    "warnings_count": 0,
+    "errors_count": 1,
+    "llm_provider": null,
+    "llm_model": null,
+    "manifest_findings_count": 0,
+    "code_findings_count": 0,
+    "canonical_findings_count": 0,
+    "evidence_items_count": 0,
+    "agentic_mode": "none",
+    "agentic_strategy_runtime": "none",
+    "agentic_budget": null,
+    "static_investigation_ran": false,
+    "static_investigation_tool_calls": 0,
+    "llm_hypotheses_count": 0,
+    "llm_candidate_findings_count": 0,
+    "llm_candidate_findings_with_evidence_count": 0,
+    "static_investigation_termination_reason": null,
+    "dynamic_ran": true,
+    "dynamic_status": "dynamic_failed",
+    "dynamic_observations_count": 0,
+    "dynamic_agentic_ran": false,
+    "dynamic_agentic_decisions_count": 0,
+    "dynamic_termination_reason": "emulator_unavailable",
+    "dynamic_install_attempted": false,
+    "dynamic_install_success": false,
+    "dynamic_launch_attempted": false,
+    "dynamic_launch_success": false,
+    "dynamic_errors_count": 1,
+    "dynamic_warnings_count": 0,
+    "api_discovery_enabled": true,
+    "api_discovery_mode": "static",
+    "api_candidates_count": 0,
+    "api_selected_candidates_count": 0,
+    "api_probe_enabled": false,
+    "api_probe_mode": "off",
+    "api_probe_requests_count": 0,
+    "api_probe_findings_count": 0,
+    "api_probe_errors_count": 0
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "enabled": true,
+  "mode": "auto",
+  "manual_base_url": null,
+  "candidates_count": 9,
+  "selected_candidates_count": 5,
+  "candidates": [
+    {
+      "candidate_id": "API-CAND-F4B228473F2E",
+      "scheme": "https",
+      "host": "api.init.peoplemoduleinitintentoperation",
+      "port": null,
+      "base_url": "https://api.init.peoplemoduleinitintentoperation",
+      "path_prefix": null,
+      "confidence": "medium",
+      "source_types": [
+        "host_literal"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-005/logcat.txt",
+          "selector": "line:381",
+          "snippet": "2)\n08-31 19:23:39.297  1741  2466 W PeoplePU: \tat com.google.android.gms.people.api.init.PeopleModuleInitIntentOperation.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)\n08-31 19:23:39.297  1741  2466 W PeoplePU: \tat zdm.onHandleIntent(:com.google.android.gms@23"
+        }
+      ],
+      "reason": "API-looking host name",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-E1AB280DE2E0",
+      "scheme": "https",
+      "host": "android.googleapis.com",
+      "port": null,
+      "base_url": "https://android.googleapis.com/checkin",
+      "path_prefix": "/checkin",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-005/logcat.txt",
+          "selector": "line:461",
+          "snippet": "1  3125 I Checkin : [CheckinRequestProcessor] Default Task : Checkin Succeeded: https://android.googleapis.com/checkin (fragment #1).\n08-31 19:23:39.570  1741  4648 I GmsSyncPolicyEngine: Periodic sync 3 disabled by policy, cancelled.\n08-31 19:23:39.572   552  1385 D Compatibilit"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-5CCC805A4E67",
+      "scheme": "https",
+      "host": "dl.google.com",
+      "port": null,
+      "base_url": "https://dl.google.com/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip",
+      "path_prefix": "/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/logcat.txt",
+          "selector": "line:804",
+          "snippet": "pdated file group for group 'langpack-domain_en-US_3008_zipfile' from location: https://dl.google.com/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip\n08-31 19:22:58.348  1564  1707 I lpi     : #getPendingPackages\n08-31 19:22:58.373   552   639 D ActivityManager: freezing 1148"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-1C8332A7C883",
+      "scheme": "https",
+      "host": "github.com",
+      "port": null,
+      "base_url": "https://github.com/satishpatnayak/AndroGoat",
+      "path_prefix": "/satishpatnayak/AndroGoat",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/ui.xml",
+          "selector": "line:1",
+          "snippet": "ds=\"[39,1904][1041,2030]\" /><node index=\"11\" text=\"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)  \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"tr"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-002/ui_before.xml",
+          "selector": "line:1",
+          "snippet": "ds=\"[39,1904][1041,2030]\" /><node index=\"11\" text=\"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)  \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"tr"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-003/ui_before.xml",
+          "selector": "line:1",
+          "snippet": "ds=\"[39,1904][1041,2030]\" /><node index=\"11\" text=\"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)  \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"tr"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_findings.json",
+          "selector": "line:228",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_results.json",
+          "selector": "line:50",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_results.json",
+          "selector": "line:148",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:48",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:146",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:3606",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:3704",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-6E05B2051AE7",
+      "scheme": "https",
+      "host": "storage.googleapis.com",
+      "port": null,
+      "base_url": "https://storage.googleapis.com/captions/captions_i18n_v0_20210623_manifest.json",
+      "path_prefix": "/captions/captions_i18n_v0_20210623_manifest.json",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/logcat.txt",
+          "selector": "line:783",
+          "snippet": "1564  1960 I SP.AiAi : Registering captions_i18n_v0_background.20210623, url: https://storage.googleapis.com/captions/captions_i18n_v0_20210623_manifest.json, constraints: W:b:u:l, flags: bg, requested: 20210623, current: 20210623\n08-31 19:22:58.274  1564  2701 I AiAiCaptions:"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-0EC54195EE4B",
+      "scheme": "https",
+      "host": "twitter.com",
+      "port": null,
+      "base_url": "https://twitter.com/satish_patnayak",
+      "path_prefix": "/satish_patnayak",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/ui.xml",
+          "selector": "line:1",
+          "snippet": "e\" bounds=\"[39,2137][1041,2231]\" /><node index=\"13\" text=\"Follow me on Twitter (https://twitter.com/satish_patnayak) \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focus"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-002/ui_before.xml",
+          "selector": "line:1",
+          "snippet": "e\" bounds=\"[39,2137][1041,2231]\" /><node index=\"13\" text=\"Follow me on Twitter (https://twitter.com/satish_patnayak) \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focus"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-003/ui_before.xml",
+          "selector": "line:1",
+          "snippet": "e\" bounds=\"[39,2137][1041,2231]\" /><node index=\"13\" text=\"Follow me on Twitter (https://twitter.com/satish_patnayak) \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focus"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_findings.json",
+          "selector": "line:230",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_results.json",
+          "selector": "line:52",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_results.json",
+          "selector": "line:150",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:50",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:148",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:3608",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:3706",
+          "snippet": "k/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback please satishkumarpatnayak@live.com\",\n          \"HARDCODE ISSUES\",\n          \"INPUT VALIDATIONS\",\n          \"INSECURE"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": false,
+      "skip_reason": "max_hosts_exceeded"
+    },
+    {
+      "candidate_id": "API-CAND-2D2306949FAF",
+      "scheme": "https",
+      "host": "www.gstatic.com",
+      "port": null,
+      "base_url": "https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data",
+      "path_prefix": "/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/logcat.txt",
+          "selector": "line:36",
+          "snippet": "MicroDataManager: Location for model with model type: 2 and locale: en-US, is : https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data\n08-31 19:22:53.962  1809  2335 I MicroModelsUtil: #getHotwordModel [locale: en-US, modelType: 2]\n0"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/logcat.txt",
+          "selector": "line:656",
+          "snippet": "s null: true, hotwordModel is null: false , sourceLocationOfCurrentHotwordModel https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data\n08-31 19:22:56.772  1809  3080 I A       : Using proto config with mendel\n08-31 19:22:56.775  1809"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-003/logcat.txt",
+          "selector": "line:17",
+          "snippet": "lator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.\n08-31 19:23:23.423   985  1017 D PrefCtrlListHelper: Could not find Co"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-003/logcat.txt",
+          "selector": "line:20",
+          "snippet": "lator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.\n08-31 19:23:23.430  1809  2325 I HotwordModelPopulator: Updated file g"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-003/logcat.txt",
+          "selector": "line:21",
+          "snippet": "lator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.\n08-31 19:23:23.431  1809  3080 W SearchServiceCore: Abort, client deta"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": false,
+      "skip_reason": "max_hosts_exceeded"
+    },
+    {
+      "candidate_id": "API-CAND-C98172F9A09B",
+      "scheme": "http",
+      "host": "schemas.android.com",
+      "port": null,
+      "base_url": "http://schemas.android.com/apk/res-auto",
+      "path_prefix": "/apk/res-auto",
+      "confidence": "low",
+      "source_types": [
+        "url_literal"
+      ],
+      "sources": [
+        {
+          "type": "code",
+          "artifact_path": "jadx/sources/com/google/android/material/chip/ChipDrawable.java",
+          "selector": "line:53",
+          "snippet": "int MAX_CHIP_ICON_HEIGHT = 24;\n    private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";\n    private int alpha;\n    private boolean checkable;\n    private Drawable checkedIcon;\n    private ColorStateList checkedIconTint;\n    private boolean checke"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": false,
+      "skip_reason": "framework_schema_url"
+    },
+    {
+      "candidate_id": "API-CAND-C46DE5B108B0",
+      "scheme": "http",
+      "host": "schemas.android.com",
+      "port": null,
+      "base_url": "http://schemas.android.com/apk/res/android",
+      "path_prefix": "/apk/res/android",
+      "confidence": "low",
+      "source_types": [
+        "url_literal"
+      ],
+      "sources": [
+        {
+          "type": "code",
+          "artifact_path": "jadx/sources/androidx/core/content/pm/ShortcutXmlParser.java",
+          "selector": "line:98",
+          "snippet": "er parser, String attribute) {\n        String value = parser.getAttributeValue(\"http://schemas.android.com/apk/res/android\", attribute);\n        if (value == null) {\n            return parser.getAttributeValue(null, attribute);\n        }\n        return value;\n    }\n}"
+        },
+        {
+          "type": "code",
+          "artifact_path": "jadx/sources/androidx/core/content/res/TypedArrayUtils.java",
+          "selector": "line:14",
+          "snippet": "*/\npublic class TypedArrayUtils {\n    private static final String NAMESPACE = \"http://schemas.android.com/apk/res/android\";\n\n    public static boolean hasAttribute(XmlPullParser parser, String attrName) {\n        return parser.getAttributeValue(NAMESPACE, attrName) != null;"
+        },
+        {
+          "type": "code",
+          "artifact_path": "jadx/sources/com/google/android/material/chip/Chip.java",
+          "selector": "line:58",
+          "snippet": "MIN_TOUCH_TARGET_DP = 48;\n    private static final String NAMESPACE_ANDROID = \"http://schemas.android.com/apk/res/android\";\n    private static final String RADIO_BUTTON_ACCESSIBILITY_CLASS_NAME = \"android.widget.RadioButton\";\n    private static final String TAG = \"Chip\";\n    pri"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": false,
+      "skip_reason": "framework_schema_url"
+    }
+  ],
+  "selected_candidates": [
+    {
+      "candidate_id": "API-CAND-F4B228473F2E",
+      "scheme": "https",
+      "host": "api.init.peoplemoduleinitintentoperation",
+      "port": null,
+      "base_url": "https://api.init.peoplemoduleinitintentoperation",
+      "path_prefix": null,
+      "confidence": "medium",
+      "source_types": [
+        "host_literal"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-005/logcat.txt",
+          "selector": "line:381",
+          "snippet": "2)\n08-31 19:23:39.297  1741  2466 W PeoplePU: \tat com.google.android.gms.people.api.init.PeopleModuleInitIntentOperation.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)\n08-31 19:23:39.297  1741  2466 W PeoplePU: \tat zdm.onHandleIntent(:com.google.android.gms@23"
+        }
+      ],
+      "reason": "API-looking host name",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-E1AB280DE2E0",
+      "scheme": "https",
+      "host": "android.googleapis.com",
+      "port": null,
+      "base_url": "https://android.googleapis.com/checkin",
+      "path_prefix": "/checkin",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-005/logcat.txt",
+          "selector": "line:461",
+          "snippet": "1  3125 I Checkin : [CheckinRequestProcessor] Default Task : Checkin Succeeded: https://android.googleapis.com/checkin (fragment #1).\n08-31 19:23:39.570  1741  4648 I GmsSyncPolicyEngine: Periodic sync 3 disabled by policy, cancelled.\n08-31 19:23:39.572   552  1385 D Compatibilit"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-5CCC805A4E67",
+      "scheme": "https",
+      "host": "dl.google.com",
+      "port": null,
+      "base_url": "https://dl.google.com/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip",
+      "path_prefix": "/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/logcat.txt",
+          "selector": "line:804",
+          "snippet": "pdated file group for group 'langpack-domain_en-US_3008_zipfile' from location: https://dl.google.com/android/voice/soda/en-US/v3008/soda-en-US-v3008.zip\n08-31 19:22:58.348  1564  1707 I lpi     : #getPendingPackages\n08-31 19:22:58.373   552   639 D ActivityManager: freezing 1148"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-1C8332A7C883",
+      "scheme": "https",
+      "host": "github.com",
+      "port": null,
+      "base_url": "https://github.com/satishpatnayak/AndroGoat",
+      "path_prefix": "/satishpatnayak/AndroGoat",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/ui.xml",
+          "selector": "line:1",
+          "snippet": "ds=\"[39,1904][1041,2030]\" /><node index=\"11\" text=\"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)  \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"tr"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-002/ui_before.xml",
+          "selector": "line:1",
+          "snippet": "ds=\"[39,1904][1041,2030]\" /><node index=\"11\" text=\"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)  \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"tr"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-003/ui_before.xml",
+          "selector": "line:1",
+          "snippet": "ds=\"[39,1904][1041,2030]\" /><node index=\"11\" text=\"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)  \" resource-id=\"\" class=\"android.widget.TextView\" package=\"owasp.sat.agoat\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"tr"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_findings.json",
+          "selector": "line:228",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_results.json",
+          "selector": "line:50",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dynamic_results.json",
+          "selector": "line:148",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:48",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:146",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:3606",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        },
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/runtime_observations.json",
+          "selector": "line:3704",
+          "snippet": ",\n          \"BIOMETRIC AUTHENTICATION\",\n          \"Code is Available at Github (https://github.com/satishpatnayak/AndroGoat)\",\n          \"EMULATOR DETECTION\",\n          \"Follow me on Twitter (https://twitter.com/satish_patnayak)\",\n          \"For any suggestions and feedback pleas"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    },
+    {
+      "candidate_id": "API-CAND-6E05B2051AE7",
+      "scheme": "https",
+      "host": "storage.googleapis.com",
+      "port": null,
+      "base_url": "https://storage.googleapis.com/captions/captions_i18n_v0_20210623_manifest.json",
+      "path_prefix": "/captions/captions_i18n_v0_20210623_manifest.json",
+      "confidence": "low",
+      "source_types": [
+        "logcat"
+      ],
+      "sources": [
+        {
+          "type": "logcat",
+          "artifact_path": "dynamic/dyn-001/logcat.txt",
+          "selector": "line:783",
+          "snippet": "1564  1960 I SP.AiAi : Registering captions_i18n_v0_background.20210623, url: https://storage.googleapis.com/captions/captions_i18n_v0_20210623_manifest.json, constraints: W:b:u:l, flags: bg, requested: 20210623, current: 20210623\n08-31 19:22:58.274  1564  2701 I AiAiCaptions:"
+        }
+      ],
+      "reason": "URL literal",
+      "third_party": false,
+      "selected": true,
+      "skip_reason": null
+    }
+  ],
+  "skipped_candidates": [
+    {
+      "base_url": "https://twitter.com/satish_patnayak",
+      "reason": "max_hosts_exceeded"
+    },
+    {
+      "base_url": "https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data",
+      "reason": "max_hosts_exceeded"
+    },
+    {
+      "base_url": "http://schemas.android.com/apk/res-auto",
+      "reason": "framework_schema_url"
+    },
+    {
+      "base_url": "http://schemas.android.com/apk/res/android",
+      "reason": "framework_schema_url"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,57 @@
+{
+  "requests": [
+    {
+      "request_id": "API-REQ-EB0FB9055A6D",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "HEAD",
+      "url": "http://127.0.0.1:8888",
+      "status_code": 200,
+      "elapsed_ms": 15,
+      "content_type": "text/html; charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8"
+      },
+      "body_sample": "",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-711D92F77DF5",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "OPTIONS",
+      "url": "http://127.0.0.1:8888",
+      "status_code": 501,
+      "elapsed_ms": 12,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 501</p>\n        <p>Message: Unsupported method ('OPTIONS').</p>\n        <p>Error code explanation: 501 - Server does not support this operation.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-77AAD995E5C4",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/openapi.json",
+      "status_code": 200,
+      "elapsed_ms": 12,
+      "content_type": "application/json",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "body_sample": "{\n  \"openapi\": \"3.0.0\",\n  \"info\": {\"title\": \"Mock API\", \"version\": \"1.0\"},\n  \"paths\": {\n    \"/health\": {\"get\": {}},\n    \"/users\": {\"post\": {}},\n    \"/admin\": {\"delete\": {}}\n  }\n}\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    }
+  ],
+  "requests_count": 3,
+  "errors_count": 0
+}

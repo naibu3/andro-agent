@@ -214,6 +214,23 @@ def download_evidence(case_id: str) -> FileResponse:
     return _optional_download(case_dir, Path("evidence/evidence.json"), "application/json")
 
 
+@router.get("/{case_id}/downloads/dynamic/{artifact_name}")
+def download_dynamic_artifact(case_id: str, artifact_name: str) -> FileResponse:
+    _, case_dir, _, _ = get_completed_download_context(case_id)
+    allowed = {
+        "dynamic_results.json": Path("dynamic/dynamic_results.json"),
+        "runtime_observations.json": Path("dynamic/runtime_observations.json"),
+        "api_discovery.json": Path("dynamic/api_discovery.json"),
+        "api_observations.json": Path("dynamic/api_observations.json"),
+        "api_requests.json": Path("dynamic/api_requests.json"),
+        "api_candidate_findings.json": Path("findings/api_candidate_findings.json"),
+    }
+    relative_path = allowed.get(artifact_name)
+    if relative_path is None:
+        raise HTTPException(status_code=404, detail="Artifact not available")
+    return _optional_download(case_dir, relative_path, "application/json")
+
+
 @router.get("/{case_id}/downloads/report.html")
 def download_report_html(case_id: str) -> FileResponse:
     case, case_dir, state, findings = get_completed_download_context(case_id)

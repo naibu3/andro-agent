@@ -1,0 +1,229 @@
+[
+  {
+    "id": "dynamic.dyn-001.crash_detected",
+    "title": "Potential crash detected during dynamic execution",
+    "severity": "high",
+    "confidence": "medium",
+    "category": "dynamic.crash",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "Potential application crash detected in logcat",
+    "rationale": "Logcat shows crash indicators triggered during dynamic execution. This may indicate insufficient input validation, unsafe assumptions, or denial-of-service potential.",
+    "evidence": [
+      {
+        "id": "dyn-001-evidence-0",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui_before.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-1",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-2",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-3",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-001",
+      "signal": "crash_detected_in_logcat",
+      "success": true,
+      "summary": "Potential application crash detected in logcat",
+      "metadata": {
+        "log_path": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/logcat.txt",
+        "matched_markers": [
+          "androidruntime"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-001.ui_target_package_visible",
+    "title": "Target package UI reached during dynamic execution",
+    "severity": "info",
+    "confidence": "high",
+    "category": "dynamic.ui",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "UI dump contains nodes from target package",
+    "rationale": "The UI dump shows elements belonging to the target package, which increases confidence that the intended screen was reached.",
+    "evidence": [
+      {
+        "id": "dyn-001-evidence-0",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui_before.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-1",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-2",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-3",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-001",
+      "signal": "ui_package_matches_target",
+      "success": true,
+      "summary": "UI dump contains nodes from target package",
+      "metadata": {
+        "ui_path": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "packages": [
+          "owasp.sat.agoat"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-001.ui_changed_after_action",
+    "title": "UI changed after dynamic action",
+    "severity": "info",
+    "confidence": "high",
+    "category": "dynamic.ui_transition",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "UI changed after dynamic action",
+    "rationale": "The UI state changed after the dynamic action, which increases confidence that the tested path caused a real navigation or screen transition.",
+    "evidence": [
+      {
+        "id": "dyn-001-evidence-0",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui_before.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-1",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-2",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-3",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-001",
+      "signal": "ui_changed_after_action",
+      "success": true,
+      "summary": "UI changed after dynamic action",
+      "metadata": {
+        "before_ui": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui_before.xml",
+        "after_ui": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "text_changed": true,
+        "package_changed": false,
+        "resource_changed": true,
+        "class_changed": true
+      }
+    }
+  },
+  {
+    "id": "dynamic.dyn-001.ui_new_text_detected",
+    "title": "New UI text appeared after action",
+    "severity": "info",
+    "confidence": "medium",
+    "category": "dynamic.ui_transition",
+    "masvs_control_group": "MASVS-PLATFORM",
+    "summary": "New visible text detected after action",
+    "rationale": "The set of visible texts changed after the dynamic action, which suggests that a new view or state was reached.",
+    "evidence": [
+      {
+        "id": "dyn-001-evidence-0",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui_before.xml",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-1",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/logcat.txt",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-2",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/screen.png",
+        "source": "dynamic_pipeline"
+      },
+      {
+        "id": "dyn-001-evidence-3",
+        "category": "artifact",
+        "subtype": "dynamic_artifact",
+        "kind": "artifact",
+        "value": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "source": "dynamic_pipeline"
+      }
+    ],
+    "raw_observation": {
+      "test_id": "dyn-001",
+      "signal": "ui_text_diff_detected",
+      "success": true,
+      "summary": "New visible text detected after action",
+      "metadata": {
+        "before_ui": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui_before.xml",
+        "after_ui": "artifacts/dynamic-no-api-compat/dynamic/dyn-001/ui.xml",
+        "new_texts": [
+          "by Satish Patnayak"
+        ]
+      }
+    }
+  }
+]

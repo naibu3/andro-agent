@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "mode": "safe",
+  "base_candidates_count": 1,
+  "probed_hosts_count": 1,
+  "requests_count": 3,
+  "observations": [
+    {
+      "type": "api_docs_exposed",
+      "severity_hint": "low",
+      "confidence": "medium",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "url": "http://127.0.0.1:8888/openapi.json",
+      "method": "GET",
+      "status_code": 200,
+      "evidence_id": "EVID-API-8DE04C92E372",
+      "details": {}
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

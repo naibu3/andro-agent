@@ -1,0 +1,149 @@
+{
+  "case_id": "dynamic-real-smoke",
+  "package_name": "owasp.sat.agoat",
+  "device_profile": "baseline",
+  "tests_executed": 1,
+  "observations": [
+    {
+      "test_id": "dyn-001",
+      "signal": "app_launch_attempted",
+      "success": true,
+      "summary": "Main launcher intent executed",
+      "metadata": {
+        "stdout": "  bash arg: -p\n  bash arg: owasp.sat.agoat\n  bash arg: -c\n  bash arg: android.intent.category.LAUNCHER\n  bash arg: 1\nEvents injected: 1\n## Network stats: elapsed time=278ms (0ms mobile, 0ms wifi, 278ms not connected)\n",
+        "stderr": "args: [-p, owasp.sat.agoat, -c, android.intent.category.LAUNCHER, 1]\n arg: \"-p\"\n arg: \"owasp.sat.agoat\"\n arg: \"-c\"\n arg: \"android.intent.category.LAUNCHER\"\n arg: \"1\"\ndata=\"owasp.sat.agoat\"\ndata=\"android.intent.category.LAUNCHER\"\n"
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "crash_detected_in_logcat",
+      "success": true,
+      "summary": "Potential application crash detected in logcat",
+      "metadata": {
+        "log_path": "artifacts/dynamic-real-smoke/dynamic/dyn-001/logcat.txt",
+        "matched_markers": [
+          "androidruntime"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_dump_available",
+      "success": true,
+      "summary": "UI dump captured successfully",
+      "metadata": {
+        "ui_path": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml"
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_text_detected",
+      "success": true,
+      "summary": "Visible text detected in UI dump",
+      "metadata": {
+        "ui_path": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+        "texts": [
+          "by Satish Patnayak"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_package_matches_target",
+      "success": true,
+      "summary": "UI dump contains nodes from target package",
+      "metadata": {
+        "ui_path": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+        "packages": [
+          "owasp.sat.agoat"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_resource_ids_detected",
+      "success": true,
+      "summary": "Resource identifiers detected in UI dump",
+      "metadata": {
+        "ui_path": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+        "resource_ids": [
+          "owasp.sat.agoat:id/decor_content_parent",
+          "android:id/content",
+          "owasp.sat.agoat:id/imageView",
+          "android:id/navigationBarBackground"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_classes_detected",
+      "success": true,
+      "summary": "UI classes detected in UI dump",
+      "metadata": {
+        "ui_path": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+        "classes": [
+          "android.view.View",
+          "android.view.ViewGroup",
+          "android.widget.FrameLayout",
+          "android.widget.ImageView",
+          "android.widget.LinearLayout",
+          "android.widget.TextView"
+        ]
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_changed_after_action",
+      "success": true,
+      "summary": "UI changed after dynamic action",
+      "metadata": {
+        "before_ui": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui_before.xml",
+        "after_ui": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+        "text_changed": true,
+        "package_changed": true,
+        "resource_changed": true,
+        "class_changed": true
+      }
+    },
+    {
+      "test_id": "dyn-001",
+      "signal": "ui_text_diff_detected",
+      "success": true,
+      "summary": "New visible text detected after action",
+      "metadata": {
+        "before_ui": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui_before.xml",
+        "after_ui": "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+        "new_texts": [
+          "by Satish Patnayak"
+        ]
+      }
+    }
+  ],
+  "artifacts": [
+    "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui_before.xml",
+    "artifacts/dynamic-real-smoke/dynamic/dyn-001/logcat.txt",
+    "artifacts/dynamic-real-smoke/dynamic/dyn-001/screen.png",
+    "artifacts/dynamic-real-smoke/dynamic/dyn-001/ui.xml",
+    "artifacts/dynamic-real-smoke/dynamic/network/mitmdump.log",
+    "artifacts/dynamic-real-smoke/dynamic/network/flows.mitm",
+    "artifacts/dynamic-real-smoke/dynamic/network/network_summary.json"
+  ],
+  "errors": [],
+  "status": "completed",
+  "install": {
+    "attempted": true,
+    "success": true,
+    "error": null
+  },
+  "launch": {
+    "attempted": true,
+    "success": true,
+    "activity": null,
+    "error": null
+  },
+  "runtime_observations_path": "artifacts/dynamic-real-smoke/dynamic/runtime_observations.json",
+  "api_discovery_path": null,
+  "api_observations_path": null,
+  "api_candidate_findings_path": null,
+  "warnings": []
+}

@@ -1,0 +1,23 @@
+--------- beginning of main
+08-31 19:25:51.977  6627  6627 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:25:51.984  6627  6627 I AndroidRuntime: Using default boot image
+08-31 19:25:51.984  6627  6627 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:25:51.987  6627  6627 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:25:51.987  6627  6627 I app_process: Using CollectorTypeCC GC.
+08-31 19:25:52.084  6627  6627 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:25:52.098  6627  6627 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:25:52.098  6627  6627 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:25:52.105  6627  6627 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:25:52.105  6627  6627 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:25:52.125  6627  6627 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:25:52.125  6627  6627 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:25:52.125  6627  6627 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:25:52.126  6627  6627 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:25:52.119  6627  6627 W main    : type=1400 audit(0.0:524): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:52.119  6627  6627 W main    : type=1400 audit(0.0:525): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+08-31 19:25:52.129   552  1662 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6627, uid=2000) that is not exported from UID 10192
+08-31 19:25:52.119  6627  6627 W main    : type=1400 audit(0.0:526): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:52.130  6627  6627 D AndroidRuntime: Shutting down VM
+08-31 19:25:52.833   552  1662 D OomAdjuster: Not killing cached processes
+08-31 19:25:52.839  1741  6642 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]

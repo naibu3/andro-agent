@@ -1,0 +1,74 @@
+--------- beginning of main
+08-31 19:25:39.710  6495  6495 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:25:39.716  6495  6495 I AndroidRuntime: Using default boot image
+08-31 19:25:39.716  6495  6495 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:25:39.719  6495  6495 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:25:39.720  6495  6495 I app_process: Using CollectorTypeCC GC.
+08-31 19:25:39.808  6495  6495 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:25:39.822  6495  6495 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:25:39.822  6495  6495 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:25:39.830  6495  6495 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:25:39.830  6495  6495 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:25:39.859  6495  6495 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:25:39.859  6495  6495 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:25:39.859  6495  6495 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:25:39.855  6495  6495 W main    : type=1400 audit(0.0:506): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:39.861  6495  6495 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:25:39.855  6495  6495 W main    : type=1400 audit(0.0:507): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:39.855  6495  6495 W main    : type=1400 audit(0.0:508): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+08-31 19:25:39.863   552   844 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6495, uid=2000) that is not exported from UID 10192
+08-31 19:25:39.864  6495  6495 D AndroidRuntime: Shutting down VM
+08-31 19:25:40.118   552   586 D OomAdjuster: Not killing cached processes
+08-31 19:25:40.126  1809  1809 I BgTaskExecutorImpl: Starting EXCLUSIVE background task UPLOAD_ASSISTANT_DEVICE_SETTINGS.
+08-31 19:25:40.136   552   844 W ProcessStats: Tracking association SourceState{31fac2 com.google.android.gms.persistent/10123 ImpBg #4490} whose proc state 6 is better than process ProcessState{44adeda com.google.android.gms/10123 pkg=com.google.android.gms} proc state 14 (5 skipped)
+08-31 19:25:40.146  1318  6324 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ads.jams.NegotiationService started execution. cause:4 exec_start_elapsed_seconds: 227 [CONTEXT service_id=218 ]
+08-31 19:25:40.159  1318  4739 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ads.jams.NegotiationService finished executing. cause:4 result: 1 elapsed_millis: 23 uptime_millis: 23 exec_start_elapsed_seconds: 227 [CONTEXT service_id=218 ]
+08-31 19:25:40.159  1809  3080 I A       : Using proto config with mendel
+08-31 19:25:40.159  1809  3080 I A       : Using proto config with mendel
+08-31 19:25:40.160  1809  6377 I NetworkRecognitionRnr: Using pair HTTP connection
+08-31 19:25:40.162  1809  3080 I A       : Using proto config with mendel
+08-31 19:25:40.162  1809  3080 I A       : Merging legacy hotword config map with new proto.
+08-31 19:25:40.162  1809  3080 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+08-31 19:25:40.163  1809  3080 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+08-31 19:25:40.163  1809  3080 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+08-31 19:25:40.163  1809  3080 I A       : Skipping. Expected model: 2 Found: 1
+08-31 19:25:40.163  1809  3080 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+08-31 19:25:40.163  1809  4034 W LocationOracle: getBestLocation(): no location is available
+08-31 19:25:40.165  1809  3080 I A       : Using proto config with mendel
+08-31 19:25:40.166  1809  3080 I A       : Using proto config with mendel
+08-31 19:25:40.167  1809  3080 I A       : Using proto config with mendel
+08-31 19:25:40.168  1809  4034 I A       : [Upload] Connected
+08-31 19:25:40.170  1809  3080 I MicroDetectionState: Should stop hotword detection immediately - true
+08-31 19:25:40.172  1809  1809 E A       : onError
+08-31 19:25:40.172  1809  1809 E A       : com.google.android.apps.gsa.shared.speech.a.m: errorCode: 65561, engine: 2
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.staticplugins.dc.a.e.a(PG:3)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.n.hh(PG:1)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.cd.g.a.f.e(PG:2)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+08-31 19:25:40.172  1809  1809 E A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+08-31 19:25:40.172  1809  1809 E A       : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+08-31 19:25:40.172  1809  1809 E A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:25:40.172  1809  1809 E A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:25:40.172  1809  1809 E A       : 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+08-31 19:25:40.172  1809  1809 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.o: errorCode: 65586, engine: 2
+08-31 19:25:40.172  1809  1809 E A       : 	... 15 more
+08-31 19:25:40.172  1809  1809 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.k: errorCode: 401, engine: 2
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.assistant.shared.n.h.a(PG:5)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.s3.producers.j.hE(PG:2)
+08-31 19:25:40.172  1809  1809 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:16)
+08-31 19:25:40.172  1809  1809 E A       : 	... 12 more
+08-31 19:25:40.172  1809  4034 I NetworkRecognitionRnr: Using pair HTTP connection
+08-31 19:25:40.174  1809  4035 I A       : [Upload] Connected
+08-31 19:25:40.175  1809  1809 W A       : Failed to sync device settings.
+08-31 19:25:40.175  1809  1809 I A       : Retrying to sync device settings.
+08-31 19:25:40.177  1809  2346 W A       : Failed to get connectivityLock in 4000 ms
+08-31 19:25:40.177  1809  2346 W CronetNetworkRqstWrppr: Upload request without a content type.
+08-31 19:25:40.182   552   619 W JobScheduler: Job didn't exist in JobStore: 290f12c #u0a132/-353 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService

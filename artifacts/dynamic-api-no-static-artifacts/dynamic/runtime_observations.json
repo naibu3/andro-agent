@@ -1,0 +1,12 @@
+{
+  "package_name": "owasp.sat.agoat",
+  "launch_activity": null,
+  "observations": [],
+  "logcat_hints": [],
+  "network_hints": [],
+  "ui_hints": [],
+  "errors": [
+    "Emulator did not boot in time"
+  ],
+  "warnings": []
+}

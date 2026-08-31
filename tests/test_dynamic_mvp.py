@@ -30,6 +30,52 @@ def test_dynamic_pipeline_persists_controlled_emulator_failure(tmp_path, monkeyp
     assert metrics["dynamic_ran"] is True
     assert metrics["dynamic_status"] == "dynamic_failed"
     assert metrics["dynamic_termination_reason"] == "emulator_unavailable"
+    assert metrics["dynamic_install_attempted"] is False
+    assert metrics["dynamic_launch_attempted"] is False
+    assert metrics["dynamic_errors_count"] == 1
+    assert metrics["api_discovery_enabled"] is False
+    assert metrics["api_probe_enabled"] is False
+    assert (tmp_path / case_id / "dynamic/runtime_observations.json").is_file()
+    assert not (tmp_path / case_id / "dynamic/api_discovery.json").exists()
+    assert not (tmp_path / case_id / "dynamic/api_requests.json").exists()
+
+
+def test_dynamic_install_failure_has_stable_failed_result(tmp_path, monkeypatch):
+    case_id = "install-failure"
+    CaseState(case_id=case_id, apk_path=Path("app.apk")).save(tmp_path)
+    pipeline = DynamicAnalysisPipeline(artifacts_dir=tmp_path)
+    monkeypatch.setattr(
+        pipeline,
+        "_run_impl",
+        lambda **kwargs: (_ for _ in ()).throw(RuntimeError("install_apk failed: denied")),
+    )
+
+    state = pipeline.run(case_id=case_id, apk_path=Path("app.apk"), avd_name="test")
+    result = json.loads(state.dynamic_results_path.read_text())
+
+    assert state.status == "dynamic_failed"
+    assert result["status"] == "failed"
+    assert result["install"]["attempted"] is True
+    assert result["install"]["success"] is False
+    assert "install_apk failed" in result["install"]["error"]
+
+
+def test_dynamic_launch_failure_has_useful_error(tmp_path, monkeypatch):
+    case_id = "launch-failure"
+    CaseState(case_id=case_id, apk_path=Path("app.apk")).save(tmp_path)
+    pipeline = DynamicAnalysisPipeline(artifacts_dir=tmp_path)
+    monkeypatch.setattr(
+        pipeline,
+        "_run_impl",
+        lambda **kwargs: (_ for _ in ()).throw(RuntimeError("launch activity failed")),
+    )
+
+    state = pipeline.run(case_id=case_id, apk_path=Path("app.apk"), avd_name="test")
+    result = json.loads(state.dynamic_results_path.read_text())
+
+    assert result["launch"]["attempted"] is True
+    assert result["launch"]["success"] is False
+    assert result["launch"]["error"] == "launch activity failed"
 
 
 def test_dynamic_agentic_llm_failure_becomes_warning():

@@ -50,6 +50,12 @@ class CaseState(BaseModel):
 
     dynamic_plan_path: Path | None = None
     dynamic_results_path: Path | None = None
+    runtime_observations_path: Path | None = None
+    api_discovery_path: Path | None = None
+    api_observations_path: Path | None = None
+    api_requests_path: Path | None = None
+    api_candidate_findings_path: Path | None = None
+    api_evidence_path: Path | None = None
     dynamic_report_path: Path | None = None
 
     device_profile: str | None = None

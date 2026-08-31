@@ -1,0 +1,92 @@
+--------- beginning of main
+08-31 19:25:14.928  6222  6222 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:25:14.935  6222  6222 I AndroidRuntime: Using default boot image
+08-31 19:25:14.935  6222  6222 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:25:14.938  6222  6222 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:25:14.939  6222  6222 I app_process: Using CollectorTypeCC GC.
+08-31 19:25:15.046  6222  6222 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:25:15.060  6222  6222 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:25:15.060  6222  6222 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:25:15.069  6222  6222 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:25:15.069  6222  6222 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:25:15.091  6222  6222 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:25:15.091  6222  6222 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:25:15.091  6222  6222 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:25:15.087  6222  6222 W main    : type=1400 audit(0.0:468): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:15.093  6222  6222 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:25:15.087  6222  6222 W main    : type=1400 audit(0.0:469): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:15.087  6222  6222 W main    : type=1400 audit(0.0:470): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+--------- beginning of system
+08-31 19:25:15.096   552   871 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6222, uid=2000) that is not exported from UID 10192
+08-31 19:25:15.097  6222  6222 D AndroidRuntime: Shutting down VM
+08-31 19:25:15.563  1318  4739 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 202 [CONTEXT service_id=218 ]
+08-31 19:25:15.565  1318  4739 V NFC     : this device does not have NFC support
+08-31 19:25:15.566  1318  4739 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+08-31 19:25:15.566  1318  4739 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:152)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at cdoy.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at avzs.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.566  1318  4739 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:25:15.570  1318  5773 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:4 result: 3 elapsed_millis: 17 uptime_millis: 17 exec_start_elapsed_seconds: 202 [CONTEXT service_id=218 ]
+08-31 19:25:15.591  1318  4739 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:5 exec_start_elapsed_seconds: 202 [CONTEXT service_id=218 ]
+08-31 19:25:15.611   552   567 D ActivityManager: sync unfroze 3185 com.google.android.gms.unstable for 6
+08-31 19:25:15.613   552   567 W ProcessStats: Tracking association SourceState{4658490 com.google.android.gms.persistent/10123 BFgs #4411} whose proc state 4 is better than process ProcessState{15788c3 com.google.android.gms.unstable/10123 pkg=com.google.android.gms} proc state 14 (5 skipped)
+08-31 19:25:15.674   357  6239 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+08-31 19:25:15.675  3185  3588 D TrafficStats: tagSocket(112) with statsTag=0x1809, statsUid=-1
+08-31 19:25:15.694  3185  3588 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-31 19:25:15.694  3185  3588 W libc    : Access denied finding property "service.adb.tls.port"
+08-31 19:25:15.687  3185  3185 W binder:3185_5: type=1400 audit(0.0:471): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:25:15.687  3185  3185 W binder:3185_5: type=1400 audit(0.0:472): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-31 19:25:15.702  1318  1419 W GmsUrlRequestImpl: Content-Type header is overwritten.
+08-31 19:25:15.704   357  6240 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10123 0}
+08-31 19:25:15.705   357  6241 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+08-31 19:25:15.705   357  6242 I resolv  : res_nmkquery: (QUERY, IN, A)
+08-31 19:25:15.705   357  6241 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7addec88c690
+08-31 19:25:15.705   357  6241 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+08-31 19:25:15.705   357  6242 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7adeac896870
+08-31 19:25:15.706   357  6242 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+08-31 19:25:15.708  1318  4042 D TrafficStats: tagSocket(109) with statsTag=0x401, statsUid=10123
+08-31 19:25:15.824   772   772 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+08-31 19:25:15.826  1318  1419 W GLSUser : [AppCertManager] Exception while requesting key: 
+08-31 19:25:15.826  1318  1419 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at otz.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at otu.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at lzq.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+08-31 19:25:15.826  1318  1419 W GLSUser : Caused by: avvw: Parse Proto Exception.
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	... 6 more
+08-31 19:25:15.826  1318  1419 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+08-31 19:25:15.826  1318  1419 W GLSUser : 	... 9 more
+08-31 19:25:15.829  1318  5773 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 245 uptime_millis: 245 exec_start_elapsed_seconds: 202 [CONTEXT service_id=218 ]

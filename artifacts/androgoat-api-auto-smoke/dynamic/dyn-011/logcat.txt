@@ -1,0 +1,37 @@
+--------- beginning of system
+08-31 19:24:20.910   552   586 D OomAdjuster: Not killing cached processes
+--------- beginning of main
+08-31 19:24:20.965  5659  5659 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:24:20.971  5659  5659 I AndroidRuntime: Using default boot image
+08-31 19:24:20.971  5659  5659 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:24:20.974  5659  5659 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:24:20.975  5659  5659 I app_process: Using CollectorTypeCC GC.
+08-31 19:24:21.088  5659  5659 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:24:21.102  5659  5659 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:24:21.102  5659  5659 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:24:21.111  5659  5659 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:24:21.111  5659  5659 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:24:21.123  1809  1809 I BgTaskExecutorImpl: Starting NONEXCLUSIVE background task DOODLE_SCHEDULE_SYNC_TASK.
+08-31 19:24:21.127  1809  3080 W SearchServiceCore: Abort, client detached.
+08-31 19:24:21.130   552   844 W JobScheduler: Job didn't exist in JobStore: 35adfb1 #u0a132/-1000026 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+08-31 19:24:21.141  5659  5659 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:24:21.141  5659  5659 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:24:21.141  5659  5659 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:24:21.135  5659  5659 W main    : type=1400 audit(0.0:396): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:21.144  5659  5659 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:24:21.135  5659  5659 W main    : type=1400 audit(0.0:397): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:21.135  5659  5659 W main    : type=1400 audit(0.0:398): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:24:21.151  5659  5659 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:21.152  5659  5659 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:21.152  5659  5659 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: Writing exception to parcel
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/notes
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+08-31 19:24:21.155  3309  3338 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+08-31 19:24:21.158  5659  5659 D AndroidRuntime: Shutting down VM
+08-31 19:24:21.654   772   772 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled

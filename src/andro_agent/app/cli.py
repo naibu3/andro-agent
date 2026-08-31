@@ -542,6 +542,27 @@ def dynamic_run(
         "--llm-model",
         help="Model id to use for agentic dynamic decisions.",
     ),
+    api_discovery: str = typer.Option(
+        "off", "--api-discovery", help="API discovery mode: off, static, dynamic, or auto."
+    ),
+    api_probe: str = typer.Option(
+        "off", "--api-probe", help="API probing mode: off or safe."
+    ),
+    api_base_url: str | None = typer.Option(
+        None, "--api-base-url", help="Manual API base URL candidate."
+    ),
+    api_max_hosts: int = typer.Option(5, "--api-max-hosts", min=1),
+    api_max_requests: int = typer.Option(30, "--api-max-requests", min=1),
+    api_timeout: float = typer.Option(5.0, "--api-timeout", min=0.1),
+    api_allow_host: list[str] | None = typer.Option(
+        None, "--api-allow-host", help="Allowed API host; repeat for multiple hosts."
+    ),
+    api_allow_private: bool = typer.Option(
+        False, "--api-allow-private", help="Allow private, local, and emulator-only hosts."
+    ),
+    dynamic_timeout: int = typer.Option(
+        180, "--dynamic-timeout", min=1, help="Maximum emulator boot wait in seconds."
+    ),
 ) -> None:
     if agentic_mode not in {AgenticMode.NONE, AgenticMode.SINGLE}:
         raise typer.BadParameter(
@@ -549,6 +570,10 @@ def dynamic_run(
             param_hint="--agentic-mode",
         )
     dynamic_agentic = agentic_decisions or agentic_mode is AgenticMode.SINGLE
+    if api_discovery not in {"off", "static", "dynamic", "auto"}:
+        raise typer.BadParameter("Expected off, static, dynamic, or auto.", param_hint="--api-discovery")
+    if api_probe not in {"off", "safe"}:
+        raise typer.BadParameter("Expected off or safe.", param_hint="--api-probe")
 
     try:
         validated_apk = validate_apk(apk_path)
@@ -578,6 +603,14 @@ def dynamic_run(
             artifacts_dir=artifacts_dir,
             llm_provider=llm_provider,
             llm_model=llm_model,
+            api_discovery=api_discovery,
+            api_probe=api_probe,
+            api_base_url=api_base_url,
+            api_max_hosts=api_max_hosts,
+            api_max_requests=api_max_requests,
+            api_timeout=api_timeout,
+            api_allow_hosts=tuple(api_allow_host or ()),
+            api_allow_private=api_allow_private,
         )
         state = pipeline.run(
             case_id=case_id,
@@ -588,6 +621,7 @@ def dynamic_run(
             agentic_decisions=dynamic_agentic,
             llm_provider=llm_provider,
             llm_model=llm_model,
+            dynamic_timeout=dynamic_timeout,
         )
     except FileNotFoundError as exc:
         console.print(f"[red]Environment error:[/red] {exc}")
@@ -596,7 +630,7 @@ def dynamic_run(
         console.print(f"[red]Dynamic execution error:[/red] {exc}")
         raise typer.Exit(code=1)
 
-    if state.status != "dynamic_completed":
+    if state.status not in {"dynamic_completed", "dynamic_partial"}:
         console.print("[red]Dynamic analysis failed.[/red]")
         for error in state.errors:
             console.print(f"[red]- {error}[/red]")
@@ -604,7 +638,10 @@ def dynamic_run(
 
     if dynamic_agentic:
         console.print("[yellow]Dynamic agentic decisions are experimental.[/yellow]")
-    console.print("[green]Dynamic analysis completed.[/green]")
+    if state.status == "dynamic_partial":
+        console.print("[yellow]Dynamic analysis completed with partial results.[/yellow]")
+    else:
+        console.print("[green]Dynamic analysis completed.[/green]")
     console.print(f"Resolved package: {state.package_name}")
     console.print(f"Plan: {state.dynamic_plan_path}")
     console.print(f"Results: {state.dynamic_results_path}")

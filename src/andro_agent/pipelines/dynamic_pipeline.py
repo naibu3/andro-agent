@@ -19,6 +19,8 @@ from andro_agent.dynamic.analyzers.network_analyzer import (
 )
 from andro_agent.dynamic.analyzers.ui_analyzer import analyze_ui_dump
 from andro_agent.dynamic.analyzers.ui_diff import compare_ui_dumps
+from andro_agent.dynamic.api_discovery import ApiDiscovery, ApiDiscoveryConfig
+from andro_agent.dynamic.api_probe import ApiProbe, ApiProbeConfig
 from andro_agent.dynamic.findings.findings_builder import build_dynamic_findings
 from andro_agent.dynamic.planning.plan_from_static import build_dynamic_plan_from_static_bundle
 from andro_agent.metrics import MetricsTracker
@@ -42,12 +44,28 @@ class DynamicAnalysisPipeline:
         show_avd: bool = False,
         llm_provider: str | None = None,
         llm_model: str | None = None,
+        api_discovery: str = "off",
+        api_probe: str = "off",
+        api_base_url: str | None = None,
+        api_max_hosts: int = 5,
+        api_max_requests: int = 30,
+        api_timeout: float = 5.0,
+        api_allow_hosts: tuple[str, ...] = (),
+        api_allow_private: bool = False,
     ) -> None:
         self.artifacts_dir = artifacts_dir
         self.sdk_root = sdk_root
         self.show_avd = show_avd
         self.llm_provider = llm_provider
         self.llm_model = llm_model
+        self.api_discovery_config = ApiDiscoveryConfig(
+            mode=api_discovery, manual_base_url=api_base_url, max_hosts=api_max_hosts,
+            allow_hosts=api_allow_hosts, allow_private=api_allow_private,
+        )
+        self.api_probe_config = ApiProbeConfig(
+            mode=api_probe, max_requests=api_max_requests, timeout=api_timeout,
+            allow_hosts=api_allow_hosts, allow_private=api_allow_private,
+        )
 
         self._initialization_error: str | None = None
         try:
@@ -194,6 +212,7 @@ class DynamicAnalysisPipeline:
         agentic_decisions: bool = False,
         llm_provider: str | None = None,
         llm_model: str | None = None,
+        dynamic_timeout: int = 180,
     ) -> CaseState:
         tracker = MetricsTracker(case_id, self.artifacts_dir)
         tracker.start_step("dynamic_pipeline")
@@ -209,7 +228,10 @@ class DynamicAnalysisPipeline:
                 agentic_decisions=agentic_decisions,
                 llm_provider=llm_provider,
                 llm_model=llm_model,
+                dynamic_timeout=dynamic_timeout,
             )
+            if state.status == "dynamic_partial":
+                termination_reason = "partial"
             tracker.end_step(success=True)
         except Exception as exc:  # noqa: BLE001 - persist a controlled dynamic failure
             termination_reason = self._dynamic_failure_reason(exc)
@@ -248,6 +270,11 @@ class DynamicAnalysisPipeline:
                 encoding="utf-8",
             )
             state.dynamic_results_path = failure_results
+        runtime_summary = self._write_runtime_summary(
+            case_id=case_id, state=state, dynamic_dir=dynamic_dir,
+            termination_reason=termination_reason,
+        )
+        api_summary = self._run_api_stages(state=state, dynamic_dir=dynamic_dir)
         observations_count = self._dynamic_observations_count(state.dynamic_results_path)
         decisions = [
             item for item in state.tool_history if item.get("tool") == "dynamic.agentic_decision"
@@ -302,11 +329,117 @@ class DynamicAnalysisPipeline:
                 "dynamic_agentic_ran": agentic_decisions,
                 "dynamic_agentic_decisions_count": len(decisions),
                 "dynamic_termination_reason": termination_reason,
+                "dynamic_install_attempted": runtime_summary["install"]["attempted"],
+                "dynamic_install_success": runtime_summary["install"]["success"],
+                "dynamic_launch_attempted": runtime_summary["launch"]["attempted"],
+                "dynamic_launch_success": runtime_summary["launch"]["success"],
+                "dynamic_errors_count": len(runtime_summary["errors"]),
+                "dynamic_warnings_count": len(runtime_summary["warnings"]),
+                "api_discovery_enabled": api_summary["discovery"]["enabled"],
+                "api_discovery_mode": api_summary["discovery"]["mode"],
+                "api_candidates_count": api_summary["discovery"]["candidates_count"],
+                "api_selected_candidates_count": api_summary["discovery"]["selected_candidates_count"],
+                "api_probe_enabled": api_summary["observations"]["enabled"],
+                "api_probe_mode": api_summary["observations"]["mode"],
+                "api_probe_requests_count": api_summary["requests"]["requests_count"],
+                "api_probe_findings_count": len(api_summary["findings"]),
+                "api_probe_errors_count": api_summary["requests"]["errors_count"],
             }
         )
         tracker.finalize()
         state.save(self.artifacts_dir)
         return state
+
+    def _write_runtime_summary(
+        self, *, case_id: str, state: CaseState, dynamic_dir: Path, termination_reason: str
+    ) -> dict:
+        existing: dict = {}
+        if state.dynamic_results_path and state.dynamic_results_path.is_file():
+            try:
+                value = json.loads(state.dynamic_results_path.read_text(encoding="utf-8"))
+                existing = value if isinstance(value, dict) else {}
+            except (OSError, json.JSONDecodeError):
+                existing = {}
+        observations = existing.get("observations", [])
+        observations = observations if isinstance(observations, list) else []
+        install_entry = next(
+            (item for item in state.tool_history if item.get("tool") == "adb.install"), None
+        )
+        install_attempted = install_entry is not None or termination_reason == "install_failed"
+        install_success = bool(install_entry and install_entry.get("returncode") == 0)
+        launch_observations = [
+            item for item in observations
+            if item.get("signal") in {"app_launch_attempted", "activity_launch_attempted"}
+            or item.get("type") in {"app_launch_attempted", "activity_launch_attempted"}
+        ]
+        launch_attempted = bool(launch_observations) or termination_reason == "launch_failed"
+        launch_success = any(item.get("success") is True for item in launch_observations)
+        launch_activity = next(
+            (item.get("details", {}).get("component") for item in launch_observations if isinstance(item.get("details"), dict)),
+            None,
+        )
+        runtime = {
+            "package_name": state.package_name,
+            "launch_activity": launch_activity,
+            "observations": observations,
+            "logcat_hints": [],
+            "network_hints": [item for item in observations if "network" in str(item.get("signal", item.get("type", ""))).lower()],
+            "ui_hints": [item for item in observations if "ui" in str(item.get("signal", item.get("type", ""))).lower()],
+            "errors": list(state.errors), "warnings": list(state.warnings),
+        }
+        runtime_path = dynamic_dir / "runtime_observations.json"
+        runtime_path.write_text(json.dumps(runtime, indent=2, ensure_ascii=False), encoding="utf-8")
+        state.runtime_observations_path = runtime_path
+        status = "completed" if state.status == "dynamic_completed" else "failed" if not observations else "partial"
+        summary = {
+            **existing, "case_id": case_id, "status": status, "package_name": state.package_name,
+            "install": {"attempted": install_attempted, "success": install_success,
+                        "error": next((error for error in state.errors if "install" in error.lower()), None)},
+            "launch": {"attempted": launch_attempted, "success": launch_success,
+                       "activity": launch_activity,
+                       "error": next((error for error in state.errors if "launch" in error.lower() or "activity" in error.lower()), None)},
+            "runtime_observations_path": str(runtime_path), "api_discovery_path": None,
+            "api_observations_path": None, "api_candidate_findings_path": None,
+            "errors": list(state.errors), "warnings": list(state.warnings),
+        }
+        results_path = dynamic_dir / "dynamic_results.json"
+        results_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+        state.dynamic_results_path = results_path
+        return summary
+
+    def _run_api_stages(self, *, state: CaseState, dynamic_dir: Path) -> dict:
+        case_dir = dynamic_dir.parent
+        discovery = ApiDiscovery(case_dir, self.api_discovery_config).discover()
+        disabled_probe = ApiProbe(self.api_probe_config).probe(discovery)
+        if discovery["enabled"]:
+            path = dynamic_dir / "api_discovery.json"
+            path.write_text(json.dumps(discovery, indent=2, ensure_ascii=False), encoding="utf-8")
+            state.api_discovery_path = path
+        if self.api_probe_config.mode != "off":
+            requests_path = dynamic_dir / "api_requests.json"
+            observations_path = dynamic_dir / "api_observations.json"
+            findings_path = case_dir / "findings" / "api_candidate_findings.json"
+            evidence_path = case_dir / "evidence" / "api_evidence.json"
+            findings_path.parent.mkdir(parents=True, exist_ok=True)
+            evidence_path.parent.mkdir(parents=True, exist_ok=True)
+            for path, value in (
+                (requests_path, disabled_probe["requests"]),
+                (observations_path, disabled_probe["observations"]),
+                (findings_path, disabled_probe["findings"]),
+                (evidence_path, disabled_probe["evidence"]),
+            ):
+                path.write_text(json.dumps(value, indent=2, ensure_ascii=False), encoding="utf-8")
+            state.api_requests_path, state.api_observations_path = requests_path, observations_path
+            state.api_candidate_findings_path, state.api_evidence_path = findings_path, evidence_path
+        if state.dynamic_results_path and state.dynamic_results_path.is_file():
+            results = json.loads(state.dynamic_results_path.read_text(encoding="utf-8"))
+            results.update({
+                "api_discovery_path": str(state.api_discovery_path) if state.api_discovery_path else None,
+                "api_observations_path": str(state.api_observations_path) if state.api_observations_path else None,
+                "api_candidate_findings_path": str(state.api_candidate_findings_path) if state.api_candidate_findings_path else None,
+            })
+            state.dynamic_results_path.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+        return {"discovery": discovery, **disabled_probe}
 
     def _run_impl(
         self,
@@ -318,6 +451,7 @@ class DynamicAnalysisPipeline:
         agentic_decisions: bool = False,
         llm_provider: str | None = None,
         llm_model: str | None = None,
+        dynamic_timeout: int = 180,
     ) -> CaseState:
         if self._initialization_error:
             raise RuntimeError(f"Emulator environment unavailable: {self._initialization_error}")
@@ -395,6 +529,7 @@ class DynamicAnalysisPipeline:
             no_window=not show_avd,
             wipe_data=False,
             http_proxy=http_proxy,
+            boot_timeout=dynamic_timeout,
         )
 
         if self.mitmproxy is not None:
@@ -442,6 +577,21 @@ class DynamicAnalysisPipeline:
             observations = [DynamicObservation(**obs) for obs in raw_observations]
             artifacts.extend(orchestrator_artifacts)
             errors.extend(orchestrator_errors)
+            failed_launch = next(
+                (
+                    observation for observation in raw_observations
+                    if observation.get("signal")
+                    in {"app_launch_attempted", "activity_launch_attempted"}
+                    and observation.get("success") is False
+                ),
+                None,
+            )
+            if failed_launch:
+                metadata = failed_launch.get("metadata", {})
+                detail = metadata.get("stderr") if isinstance(metadata, dict) else None
+                errors.append(
+                    f"App launch failed: {detail or 'ADB launch command returned an error'}"
+                )
 
             network_summary = build_network_summary_from_event_log(mitm_event_log_path)
             network_summary_path = network_dir / "network_summary.json"
@@ -494,7 +644,8 @@ class DynamicAnalysisPipeline:
             state.dynamic_results_path = results_path
             state.dynamic_report_path = findings_path
 
-            state.status = "dynamic_completed"
+            state.errors.extend(error for error in errors if error not in state.errors)
+            state.status = "dynamic_partial" if errors else "dynamic_completed"
             state.save(self.artifacts_dir)
             return state
 

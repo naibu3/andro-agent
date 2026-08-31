@@ -1,0 +1,66 @@
+--------- beginning of main
+08-31 19:23:54.593   975   975 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=121940 mSleepTimeMs=0 mIdleTimeMs=121929 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+08-31 19:23:54.667  5252  5252 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:23:54.673  5252  5252 I AndroidRuntime: Using default boot image
+08-31 19:23:54.673  5252  5252 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:23:54.677  5252  5252 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:23:54.677  5252  5252 I app_process: Using CollectorTypeCC GC.
+08-31 19:23:54.757  5252  5252 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:23:54.769  5252  5252 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:23:54.769  5252  5252 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:23:54.776  5252  5252 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:23:54.776  5252  5252 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:23:54.803  5252  5252 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:23:54.803  5252  5252 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:23:54.803  5252  5252 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:23:54.799  5252  5252 W main    : type=1400 audit(0.0:325): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:23:54.806  5252  5252 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:23:54.799  5252  5252 W main    : type=1400 audit(0.0:326): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:23:54.799  5252  5252 W main    : type=1400 audit(0.0:327): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:23:54.811  5252  5252 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:23:54.811  5252  5252 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:23:54.811  5252  5252 W System  : No Compatibility callbacks set! Querying change 263076149
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: Writing exception to parcel
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: java.lang.IllegalArgumentException: AndroGoat UserPinsProvider(query): Unknown URI content://owasp.sat.agoat.provider.userpinsprovider/data
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at owasp.sat.agoat.ContentProviderActivity.query(ContentProviderActivity.kt:84)
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1596)
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+08-31 19:23:54.814  3309  3457 E DatabaseUtils: 	at android.os.Binder.execTransact(Binder.java:1275)
+08-31 19:23:54.818  5252  5252 D AndroidRuntime: Shutting down VM
+--------- beginning of system
+08-31 19:23:54.919   552   568 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 90007; state: DISABLED
+08-31 19:23:54.920   552   587 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10149; state: ENABLED
+08-31 19:23:54.926  4863  4863 D Zygote  : Forked child process 5267
+08-31 19:23:54.929  5267  5267 I ocessService0:7: Using CollectorTypeCC GC.
+08-31 19:23:54.930  5267  5267 W ocessService0:7: Unexpected CPU variant for x86: x86_64.
+08-31 19:23:54.930  5267  5267 W ocessService0:7: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:23:54.933  5267  5267 E ocessService0:7: Not starting debugger since process cannot load the jdwp agent.
+08-31 19:23:54.951   552   587 I ActivityManager: Start proc 5267:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:7/u0ai7 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:7}
+08-31 19:23:54.956   552   568 D OomAdjuster: Not killing cached processes
+08-31 19:23:54.958  5267  5267 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90007; state: ENABLED
+08-31 19:23:54.958  5267  5267 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 90007; state: ENABLED
+08-31 19:23:54.966  5267  5267 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+08-31 19:23:54.967  5267  5267 I cr_SplitCompatApp: Launched version=113.0.5672.136 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:7 isIsolated=true
+08-31 19:23:54.968  5267  5267 W SystemServiceRegistry: No service published for: uimode
+08-31 19:23:54.969   552   568 I ActivityManager: Flag disabled. Ignoring finishAttachApplication from uid: 90007. pid: 5267
+08-31 19:23:54.970  5267  5267 W SystemServiceRegistry: No service published for: virtualdevice
+08-31 19:23:54.970  5267  5267 I cr_ChildProcessService: Creating new ChildProcessService pid=5267
+08-31 19:23:54.980  5267  5281 I cr_LibraryLoader: Successfully loaded native library
+08-31 19:23:54.980  5267  5281 I cr_CachingUmaRecorder: Flushed 10 samples from 10 histograms.
+08-31 19:23:54.983  5267  5267 W ThreadPoolForeg: type=1400 audit(0.0:328): avc:  denied  { setattr } for  name="sets.json" dev="dm-40" ino=344715 scontext=u:r:isolated_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c149,c256,c512,c768 tclass=file permissive=0
+08-31 19:23:54.987  5267  5267 W ThreadPoolForeg: type=1400 audit(0.0:329): avc:  denied  { setattr } for  name="manifest.json" dev="dm-40" ino=344716 scontext=u:r:isolated_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c149,c256,c512,c768 tclass=file permissive=0
+--------- beginning of kernel
+08-31 19:23:55.058     0     0 W audit   : audit_lost=229 audit_rate_limit=5 audit_backlog_limit=64
+08-31 19:23:55.059     0     0 E audit   : rate limit exceeded
+08-31 19:23:54.995  5267  5281 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+08-31 19:23:54.999   552   568 I ActivityManager: Killing 5267:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:7/u0a149i-8993 (adj 0): isolated not needed
+08-31 19:23:55.002   552   588 I libprocessgroup: Successfully killed process cgroup uid 90007 pid 5267 in 0ms
+08-31 19:23:55.003  4863  4863 I Zygote  : Process 5267 exited cleanly (0)
+08-31 19:23:55.003   552   574 D DisplayManagerService: Drop pending events for gone uid 90007
+08-31 19:23:55.193   357   408 I netd    : tetherGetStats() -> {[]} <2.03ms>
+08-31 19:23:55.199   357   408 I netd    : bandwidthSetGlobalAlert(2097152) <0.21ms>
+08-31 19:23:55.203   357   408 I netd    : bandwidthRemoveInterfaceQuota(eth0) <1.20ms>
+08-31 19:23:55.204   357   408 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.75ms>

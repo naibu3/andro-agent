@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "mode": "static",
+  "manual_base_url": null,
+  "candidates_count": 0,
+  "selected_candidates_count": 0,
+  "candidates": [],
+  "selected_candidates": [],
+  "skipped_candidates": [],
+  "errors": [],
+  "warnings": [
+    "Static API discovery requested but no static artifacts were found."
+  ]
+}

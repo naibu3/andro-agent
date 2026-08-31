@@ -357,6 +357,80 @@ def test_completed_case_detail_does_not_show_stale_current_step(web_context):
     assert "<dd>completed</dd>" in body
 
 
+def test_web_detail_reports_api_discovery_not_configured(web_context):
+    make_completed_case(web_context, case_id="api-off-case")
+
+    body = render_case_detail(web_context, "api-off-case")
+
+    assert "API discovery not configured." in body
+
+
+def test_web_detail_reports_no_api_candidates(web_context):
+    case_dir = make_completed_case(web_context, case_id="api-empty-case")
+    path = case_dir / "dynamic/api_discovery.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps({"enabled": True, "mode": "auto", "candidates_count": 0,
+                    "selected_candidates_count": 0, "selected_candidates": []}),
+        encoding="utf-8",
+    )
+
+    body = render_case_detail(web_context, "api-empty-case")
+
+    assert "No API candidates discovered." in body
+
+
+def test_web_detail_renders_api_candidates_and_probe_summary(web_context):
+    case_dir = make_completed_case(web_context, case_id="api-probed-case")
+    dynamic_dir = case_dir / "dynamic"
+    dynamic_dir.mkdir(parents=True, exist_ok=True)
+    (dynamic_dir / "api_discovery.json").write_text(
+        json.dumps({"enabled": True, "mode": "auto", "candidates_count": 1,
+                    "selected_candidates_count": 1, "selected_candidates": [{
+                        "base_url": "https://api.example.com/v1", "confidence": "high",
+                        "reason": "Retrofit baseUrl literal", "source_types": ["retrofit"]}]}),
+        encoding="utf-8",
+    )
+    (dynamic_dir / "api_observations.json").write_text(
+        json.dumps({"enabled": True, "mode": "safe", "requests_count": 7,
+                    "observations": [], "errors": [], "warnings": []}), encoding="utf-8"
+    )
+    (dynamic_dir / "api_requests.json").write_text(
+        json.dumps({"requests": [], "requests_count": 7, "errors_count": 1}), encoding="utf-8"
+    )
+
+    body = render_case_detail(web_context, "api-probed-case")
+
+    assert "https://api.example.com/v1" in body
+    assert "Retrofit baseUrl literal" in body
+    assert "Probe mode: safe" in body
+    assert "Requests: 7" in body
+    assert "Errors: 1" in body
+
+
+def test_web_detail_renders_api_candidate_findings(web_context):
+    case_dir = make_completed_case(web_context, case_id="api-findings-case")
+    discovery_path = case_dir / "dynamic/api_discovery.json"
+    discovery_path.parent.mkdir(parents=True, exist_ok=True)
+    discovery_path.write_text(
+        json.dumps({"enabled": True, "mode": "auto", "candidates_count": 1,
+                    "selected_candidates_count": 1, "selected_candidates": []}), encoding="utf-8"
+    )
+    findings_path = case_dir / "findings/api_candidate_findings.json"
+    findings_path.write_text(
+        json.dumps([{"title": "API documentation endpoint exposed", "severity": "low",
+                     "affected_endpoint": "https://api.example.com/openapi.json"}]), encoding="utf-8"
+    )
+    (case_dir / "dynamic/api_observations.json").write_text(
+        json.dumps({"enabled": True, "mode": "safe", "requests_count": 1}), encoding="utf-8"
+    )
+
+    body = render_case_detail(web_context, "api-findings-case")
+
+    assert "API documentation endpoint exposed" in body
+    assert "https://api.example.com/openapi.json" in body
+
+
 def test_load_evidence_for_case_loads_valid_json(tmp_path):
     case_dir, state = evidence_state(tmp_path)
     evidence = [{"evidence_id": "EVID-1", "evidence_type": "manifest"}]

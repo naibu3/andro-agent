@@ -1,0 +1,34 @@
+--------- beginning of main
+08-31 19:25:06.978  1741  6154 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: vision.ocr:-1
+--------- beginning of system
+08-31 19:25:07.044   552  1879 D OomAdjuster: Not killing cached processes
+08-31 19:25:07.085  1741  6154 I ChimeraConfigurator: Detected pending changes for urgent request: [vision.ocr]. Pending module sets: container:2318189190800+mlkit.ocr.common,tflite_dynamite:2627305025100800+tflite_dynamite,vision_ocr:2316024025100000+vision.ocr
+08-31 19:25:07.154  1741  6154 I GmsDebugLogger: [73] 1801
+08-31 19:25:07.157  1741  6154 W ZappDownloader: No successful module downloads for requested features [vision.ocr].
+08-31 19:25:07.157  1741  6154 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[TfliteDynamiteDynamite.integ:262730502100800],[MlkitOcrCommon.optional:231818100800]
+08-31 19:25:07.205  1741  6154 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+08-31 19:25:07.205  1741  6154 I GmsDebugLogger: [83] 1 [vision.ocr]
+08-31 19:25:07.223  1741  6152 W Vision  : Request for optional module download of ocr failed. Request again.
+08-31 19:25:07.223  1741  6152 W Vision  : Would have logged:
+08-31 19:25:07.223  1741  6152 W Vision  : # dsae@37884fe7
+08-31 19:25:07.223  1741  6152 I Vision  : Schedule retrying download ocr at 194570 with backoff 80 seconds
+08-31 19:25:07.296  6156  6156 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+08-31 19:25:07.310  6156  6156 I AndroidRuntime: Using default boot image
+08-31 19:25:07.310  6156  6156 I AndroidRuntime: Leaving lock profiling enabled
+08-31 19:25:07.320  6156  6156 I app_process: Core platform API reporting enabled, enforcing=false
+08-31 19:25:07.322  6156  6156 I app_process: Using CollectorTypeCC GC.
+08-31 19:25:07.523  6156  6156 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+08-31 19:25:07.548  6156  6156 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+08-31 19:25:07.548  6156  6156 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt72l.dat
+08-31 19:25:07.560  6156  6156 W app_process: Unexpected CPU variant for x86: x86_64.
+08-31 19:25:07.560  6156  6156 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+08-31 19:25:07.603  6156  6156 W libc    : Access denied finding property "ro.product.name_for_attestation"
+08-31 19:25:07.604  6156  6156 W libc    : Access denied finding property "ro.product.brand_for_attestation"
+08-31 19:25:07.604  6156  6156 W libc    : Access denied finding property "ro.product.model_for_attestation"
+08-31 19:25:07.606  6156  6156 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+08-31 19:25:07.599  6156  6156 W main    : type=1400 audit(0.0:459): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:07.611   552   844 W ContentProviderHelper: Permission Denial: opening provider androidx.startup.InitializationProvider from (null) (pid=6156, uid=2000) that is not exported from UID 10192
+08-31 19:25:07.599  6156  6156 W main    : type=1400 audit(0.0:460): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:07.616  6156  6156 D AndroidRuntime: Shutting down VM
+08-31 19:25:07.599  6156  6156 W main    : type=1400 audit(0.0:461): avc:  denied  { read } for  name="u:object_r:build_attestation_prop:s0" dev="tmpfs" ino=86 scontext=u:r:shell:s0 tcontext=u:object_r:build_attestation_prop:s0 tclass=file permissive=0
+08-31 19:25:08.322   552   639 D ActivityManager: freezing 1984 com.google.android.settings.intelligence

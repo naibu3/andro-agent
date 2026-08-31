@@ -1,0 +1,38 @@
+[
+  {
+    "finding_id": "API_CLEARTEXT_HTTP",
+    "title": "API endpoint uses cleartext HTTP",
+    "description": "A discovered API candidate uses HTTP instead of HTTPS.",
+    "severity": "medium",
+    "confidence": "high",
+    "status": "dynamic_candidate",
+    "category": "network",
+    "affected_endpoint": "http://127.0.0.1:8888",
+    "evidence_ids": [
+      "EVID-API-28B23E0E5EA5"
+    ],
+    "remediation": "Review and restrict the exposed API behavior as appropriate for production.",
+    "metadata": {
+      "source": "api_probe",
+      "candidate_id": "API-CAND-529C4ADB33A1"
+    }
+  },
+  {
+    "finding_id": "API_DOCS_EXPOSED",
+    "title": "API documentation endpoint exposed",
+    "description": "A discovered API host exposes an API documentation endpoint.",
+    "severity": "low",
+    "confidence": "medium",
+    "status": "dynamic_candidate",
+    "category": "api_exposure",
+    "affected_endpoint": "http://127.0.0.1:8888/openapi.json",
+    "evidence_ids": [
+      "EVID-API-8DE04C92E372"
+    ],
+    "remediation": "Review and restrict the exposed API behavior as appropriate for production.",
+    "metadata": {
+      "source": "api_probe",
+      "candidate_id": "API-CAND-529C4ADB33A1"
+    }
+  }
+]

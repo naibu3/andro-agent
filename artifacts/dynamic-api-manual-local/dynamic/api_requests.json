@@ -1,0 +1,240 @@
+{
+  "requests": [
+    {
+      "request_id": "API-REQ-EB0FB9055A6D",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "HEAD",
+      "url": "http://127.0.0.1:8888",
+      "status_code": 200,
+      "elapsed_ms": 19,
+      "content_type": "text/html; charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8"
+      },
+      "body_sample": "",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-711D92F77DF5",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "OPTIONS",
+      "url": "http://127.0.0.1:8888",
+      "status_code": 501,
+      "elapsed_ms": 10,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 501</p>\n        <p>Message: Unsupported method ('OPTIONS').</p>\n        <p>Error code explanation: 501 - Server does not support this operation.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-77AAD995E5C4",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/openapi.json",
+      "status_code": 200,
+      "elapsed_ms": 13,
+      "content_type": "application/json",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "body_sample": "{\n  \"openapi\": \"3.0.0\",\n  \"info\": {\"title\": \"Mock API\", \"version\": \"1.0\"},\n  \"paths\": {\n    \"/health\": {\"get\": {}},\n    \"/users\": {\"post\": {}},\n    \"/admin\": {\"delete\": {}}\n  }\n}\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-4D5FAD4E27D7",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:8888/admin",
+      "status_code": null,
+      "elapsed_ms": null,
+      "content_type": null,
+      "response_headers": {},
+      "body_sample": "",
+      "body_truncated": false,
+      "error": null,
+      "skipped": true,
+      "skip_reason": "mutating_method_skipped"
+    },
+    {
+      "request_id": "API-REQ-600041B241D5",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "POST",
+      "url": "http://127.0.0.1:8888/users",
+      "status_code": null,
+      "elapsed_ms": null,
+      "content_type": null,
+      "response_headers": {},
+      "body_sample": "",
+      "body_truncated": false,
+      "error": null,
+      "skipped": true,
+      "skip_reason": "mutating_method_skipped"
+    },
+    {
+      "request_id": "API-REQ-F81BAC0765F4",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/swagger.json",
+      "status_code": 404,
+      "elapsed_ms": 13,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-172AB047FA28",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/swagger",
+      "status_code": 404,
+      "elapsed_ms": 12,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-E5914ED22511",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/docs",
+      "status_code": 404,
+      "elapsed_ms": 11,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-82080A871B12",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/api-docs",
+      "status_code": 404,
+      "elapsed_ms": 14,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-78A0AD8C787A",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/api",
+      "status_code": 404,
+      "elapsed_ms": 11,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-C4AEE87714AD",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/api/v1",
+      "status_code": 404,
+      "elapsed_ms": 10,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-6FA01489E4DC",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/v1",
+      "status_code": 404,
+      "elapsed_ms": 12,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-00AE4372DEED",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/graphql",
+      "status_code": 404,
+      "elapsed_ms": 13,
+      "content_type": "text/html;charset=utf-8",
+      "response_headers": {
+        "content-type": "text/html;charset=utf-8"
+      },
+      "body_sample": "<!DOCTYPE HTML>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error response</title>\n    </head>\n    <body>\n        <h1>Error response</h1>\n        <p>Error code: 404</p>\n        <p>Message: File not found.</p>\n        <p>Error code explanation: 404 - Nothing matches the given URI.</p>\n    </body>\n</html>\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    },
+    {
+      "request_id": "API-REQ-34BCF6A0F3DD",
+      "candidate_id": "API-CAND-529C4ADB33A1",
+      "method": "GET",
+      "url": "http://127.0.0.1:8888/health",
+      "status_code": 200,
+      "elapsed_ms": 10,
+      "content_type": "application/octet-stream",
+      "response_headers": {
+        "content-type": "application/octet-stream"
+      },
+      "body_sample": "{\"status\":\"ok\"}\n",
+      "body_truncated": false,
+      "error": null,
+      "skipped": false,
+      "skip_reason": null
+    }
+  ],
+  "requests_count": 14,
+  "errors_count": 0
+}

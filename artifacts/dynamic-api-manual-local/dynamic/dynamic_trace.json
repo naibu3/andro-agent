@@ -1,0 +1,14 @@
+{
+  "case_id": "dynamic-api-manual-local",
+  "dynamic_ran": true,
+  "dynamic_status": "dynamic_completed",
+  "dynamic_agentic_ran": false,
+  "experimental": false,
+  "llm_provider": null,
+  "llm_model": null,
+  "decisions": [],
+  "observations_count": 9,
+  "termination_reason": "completed",
+  "errors": [],
+  "warnings": []
+}
