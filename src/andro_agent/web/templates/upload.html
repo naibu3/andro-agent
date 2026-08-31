@@ -27,6 +27,33 @@
       </select>
     </label>
 
+    <label class="field">
+      <span>Agentic mode</span>
+      <select name="agentic_mode">
+        <option value="none">None</option>
+        <option value="single">Single agent</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Agentic budget</span>
+      <select name="agentic_budget">
+        <option value="conservative">Conservative</option>
+        <option value="balanced" selected>Balanced</option>
+        <option value="deep">Deep</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>LLM provider</span>
+      <input type="text" name="llm_provider" placeholder="openrouter">
+    </label>
+
+    <label class="field">
+      <span>LLM model</span>
+      <input type="text" name="llm_model" placeholder="openrouter/free">
+    </label>
+
     <button class="button" type="submit">Start scan</button>
   </form>
 </section>

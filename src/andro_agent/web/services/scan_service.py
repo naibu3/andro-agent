@@ -42,7 +42,18 @@ def run_static_scan(case_id: str) -> None:
         )
 
         profile = case.get("analysis_profile") or "no-llm"
-        pipeline = StaticAnalysisPipeline(artifacts_dir=artifacts_dir, profile=profile)
+        agentic_mode = case.get("agentic_mode") or "none"
+        agentic_budget = case.get("agentic_budget") or "balanced"
+        llm_provider = case.get("llm_provider")
+        llm_model = case.get("llm_model")
+        pipeline = StaticAnalysisPipeline(
+            artifacts_dir=artifacts_dir,
+            profile=profile,
+            agentic_mode=agentic_mode,
+            agentic_budget=agentic_budget,
+            llm_provider=llm_provider,
+            llm_model=llm_model,
+        )
         state = pipeline.run(apk_path=apk_path, case_id=case_id)
 
         state_dict = state.model_dump(mode="json")
@@ -58,7 +69,9 @@ def run_static_scan(case_id: str) -> None:
         case_repo.update_status(
             case_id,
             final_status,
-            current_step=state.current_step or final_status,
+            current_step=(
+                "completed" if final_status == "completed" else state.current_step or final_status
+            ),
             progress=100,
             error_message="\n".join(state.errors) if state.errors else None,
             package_name=package_name,

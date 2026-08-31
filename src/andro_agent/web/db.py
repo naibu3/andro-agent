@@ -38,6 +38,10 @@ def init_db(db_path: Path = DB_PATH) -> None:
                 sha256 TEXT NOT NULL,
                 status TEXT NOT NULL,
                 analysis_profile TEXT NOT NULL,
+                agentic_mode TEXT NOT NULL DEFAULT 'none',
+                agentic_budget TEXT NOT NULL DEFAULT 'balanced',
+                llm_provider TEXT,
+                llm_model TEXT,
                 apk_path TEXT NOT NULL,
                 artifacts_dir TEXT NOT NULL,
                 current_step TEXT,
@@ -48,6 +52,18 @@ def init_db(db_path: Path = DB_PATH) -> None:
             )
             """
         )
+
+        existing_columns = {
+            row["name"] for row in conn.execute("PRAGMA table_info(cases)").fetchall()
+        }
+        for name, definition in (
+            ("agentic_mode", "TEXT NOT NULL DEFAULT 'none'"),
+            ("agentic_budget", "TEXT NOT NULL DEFAULT 'balanced'"),
+            ("llm_provider", "TEXT"),
+            ("llm_model", "TEXT"),
+        ):
+            if name not in existing_columns:
+                conn.execute(f"ALTER TABLE cases ADD COLUMN {name} {definition}")
 
         conn.execute(
             """
@@ -93,6 +109,10 @@ class CaseRepository:
         apk_path: Path,
         artifacts_dir: Path,
         analysis_profile: str,
+        agentic_mode: str = "none",
+        agentic_budget: str = "balanced",
+        llm_provider: str | None = None,
+        llm_model: str | None = None,
     ) -> None:
         now = utc_now()
 
@@ -101,10 +121,11 @@ class CaseRepository:
                 """
                 INSERT INTO cases (
                     id, filename, sha256, status, analysis_profile,
+                    agentic_mode, agentic_budget, llm_provider, llm_model,
                     apk_path, artifacts_dir, current_step, progress,
                     created_at, updated_at
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     case_id,
@@ -112,6 +133,10 @@ class CaseRepository:
                     sha256,
                     "queued",
                     analysis_profile,
+                    agentic_mode,
+                    agentic_budget,
+                    llm_provider,
+                    llm_model,
                     str(apk_path),
                     str(artifacts_dir),
                     "queued",

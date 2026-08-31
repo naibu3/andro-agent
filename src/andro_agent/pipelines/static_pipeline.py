@@ -172,6 +172,7 @@ class StaticAnalysisPipeline:
                 self._append_static_investigation_report(state)
 
             state.status = "completed"
+            state.current_step = "completed"
 
         except Exception as exc:
             state.errors.append(str(exc))
@@ -648,6 +649,8 @@ class StaticAnalysisPipeline:
             state.llm_hypotheses_path = paths["hypotheses"]
             state.llm_candidate_findings_path = paths["candidates"]
             trace = result["trace"]
+            state.llm_provider = trace.get("llm_provider") or state.llm_provider
+            state.llm_model = trace.get("llm_model") or state.llm_model
             state.tool_history.append(
                 {
                     "agent": "static_investigation_agent",
@@ -722,12 +725,16 @@ class StaticAnalysisPipeline:
             ),
             "static_investigation_ran": termination != "disabled",
             "static_investigation_tool_calls": len(trace.get("tool_calls", [])),
+            "static_investigation_max_tool_calls": trace.get("budget", {}).get(
+                "max_tool_calls", state.agentic_max_tool_calls
+            ),
             "llm_hypotheses_count": len(hypotheses),
             "llm_candidate_findings_count": len(candidates),
             "llm_candidate_findings_with_evidence_count": sum(
                 bool(candidate.get("evidence_ids")) for candidate in candidates
             ),
             "static_investigation_termination_reason": termination,
+            "static_investigation_failed_phase": trace.get("failed_phase"),
         }
 
     @staticmethod

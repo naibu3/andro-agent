@@ -1,12 +1,14 @@
 from __future__ import annotations
 
+import asyncio
 import importlib
 import json
 import zipfile
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
-from fastapi import HTTPException
+from fastapi import BackgroundTasks, HTTPException
 from starlette.requests import Request
 from starlette.routing import Match
 
@@ -15,6 +17,16 @@ from andro_agent.web.services.result_service import (
     collect_findings_and_evidence_from_state,
     load_evidence_for_case,
 )
+
+
+class MultipartUpload:
+    filename = "app.apk"
+
+    async def read(self, size):
+        if hasattr(self, "consumed"):
+            return b""
+        self.consumed = True
+        return b"apk"
 
 
 @pytest.fixture()
@@ -60,7 +72,17 @@ def case_detail_response(web_context, case_id: str):
     return web_context["pages"].case_detail(request, case_id)
 
 
-def create_case(web_context, case_id: str, status: str):
+def create_case(
+    web_context,
+    case_id: str,
+    status: str,
+    *,
+    analysis_profile: str = "static_basic",
+    agentic_mode: str = "none",
+    agentic_budget: str = "balanced",
+    llm_provider: str | None = None,
+    llm_model: str | None = None,
+):
     repo = web_context["repo"]
     uploads_dir = web_context["uploads_dir"]
     artifacts_root = web_context["artifacts_dir"]
@@ -78,7 +100,11 @@ def create_case(web_context, case_id: str, status: str):
         sha256="a" * 64,
         apk_path=apk_path,
         artifacts_dir=case_dir,
-        analysis_profile="static_basic",
+        analysis_profile=analysis_profile,
+        agentic_mode=agentic_mode,
+        agentic_budget=agentic_budget,
+        llm_provider=llm_provider,
+        llm_model=llm_model,
     )
     repo.update_status(
         case_id,
@@ -96,8 +122,9 @@ def make_completed_case(
     web_context,
     case_id: str = "completed-case",
     report_text: str = "# Final report\n\nConfirmed issue.",
+    **case_config,
 ):
-    case_dir = create_case(web_context, case_id, "completed")
+    case_dir = create_case(web_context, case_id, "completed", **case_config)
     report_path = case_dir / "reports" / "static_report.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(report_text, encoding="utf-8")
@@ -175,6 +202,143 @@ def test_load_evidence_for_case_returns_empty_when_missing(tmp_path):
     _, state = evidence_state(tmp_path)
 
     assert load_evidence_for_case(state) == []
+
+
+def test_multipart_full_scan_persists_llm_configuration(web_context):
+    api = web_context["api"]
+    result = asyncio.run(
+        api.create_scan(
+            background_tasks=BackgroundTasks(),
+            file=MultipartUpload(),
+            analysis_profile="full",
+            agentic_mode="single",
+            agentic_budget="balanced",
+            llm_provider="openrouter",
+            llm_model="openrouter/free",
+        )
+    )
+
+    case = web_context["repo"].get_case(result["case_id"])
+    assert case["analysis_profile"] == "full"
+    assert case["agentic_mode"] == "single"
+    assert case["agentic_budget"] == "balanced"
+    assert case["llm_provider"] == "openrouter"
+    assert case["llm_model"] == "openrouter/free"
+
+
+def test_multipart_no_llm_scan_clears_llm_configuration(web_context):
+    api = web_context["api"]
+    result = asyncio.run(
+        api.create_scan(
+            background_tasks=BackgroundTasks(),
+            file=MultipartUpload(),
+            analysis_profile="no-llm",
+            agentic_mode="single",
+            agentic_budget="deep",
+            llm_provider="openrouter",
+            llm_model="openrouter/free",
+        )
+    )
+
+    case = web_context["repo"].get_case(result["case_id"])
+    assert case["analysis_profile"] == "no-llm"
+    assert case["agentic_mode"] == "none"
+    assert case["llm_provider"] is None
+    assert case["llm_model"] is None
+
+
+def test_scan_service_propagates_llm_configuration(tmp_path, monkeypatch):
+    import andro_agent.web.services.scan_service as scan_service
+
+    captured = {}
+    status_updates = []
+    case = {
+        "id": "full-case",
+        "apk_path": str(tmp_path / "app.apk"),
+        "artifacts_dir": str(tmp_path / "artifacts" / "full-case"),
+        "analysis_profile": "full",
+        "agentic_mode": "single",
+        "agentic_budget": "balanced",
+        "llm_provider": "openrouter",
+        "llm_model": "openrouter/free",
+    }
+
+    class FakeRepository:
+        def get_case(self, case_id):
+            return case
+
+        def update_status(self, *args, **kwargs):
+            status_updates.append((args, kwargs))
+
+        def replace_findings(self, *args, **kwargs):
+            pass
+
+    class FakePipeline:
+        def __init__(self, **kwargs):
+            captured.update(kwargs)
+
+        def run(self, **kwargs):
+            return SimpleNamespace(
+                status="completed",
+                current_step="output_writing",
+                errors=[],
+                package_name="com.example.app",
+                model_dump=lambda **options: {},
+            )
+
+    monkeypatch.setattr(scan_service, "case_repo", FakeRepository())
+    monkeypatch.setattr(scan_service, "validate_apk", lambda path: path)
+    monkeypatch.setattr(scan_service, "StaticAnalysisPipeline", FakePipeline)
+    monkeypatch.setattr(
+        scan_service, "collect_findings_and_evidence_from_state", lambda state: ([], [])
+    )
+    monkeypatch.setattr(scan_service, "write_evidence_json_if_possible", lambda **kwargs: None)
+
+    scan_service.run_static_scan("full-case")
+
+    assert captured == {
+        "artifacts_dir": tmp_path / "artifacts",
+        "profile": "full",
+        "agentic_mode": "single",
+        "agentic_budget": "balanced",
+        "llm_provider": "openrouter",
+        "llm_model": "openrouter/free",
+    }
+    assert status_updates[-1][1]["current_step"] == "completed"
+
+
+def test_full_case_detail_displays_llm_configuration(web_context):
+    case_dir = make_completed_case(
+        web_context,
+        case_id="full-config-case",
+        analysis_profile="full",
+        agentic_mode="single",
+        agentic_budget="balanced",
+    )
+    state_path = case_dir / "case_state.json"
+    state = json.loads(state_path.read_text(encoding="utf-8"))
+    state.update({"llm_provider": "openrouter", "llm_model": "openai/gpt-oss-20b"})
+    state_path.write_text(json.dumps(state), encoding="utf-8")
+
+    body = render_case_detail(web_context, "full-config-case")
+
+    assert "Analysis profile" in body
+    assert "full" in body
+    assert "LLM provider/model" in body
+    assert "openrouter / openai/gpt-oss-20b" in body
+    assert "Agentic mode" in body
+    assert "single" in body
+    assert "Agentic budget" in body
+    assert "balanced" in body
+
+
+def test_completed_case_detail_does_not_show_stale_current_step(web_context):
+    make_completed_case(web_context, case_id="completed-step-case")
+
+    body = render_case_detail(web_context, "completed-step-case")
+
+    assert "completed_step" not in body
+    assert "<dd>completed</dd>" in body
 
 
 def test_load_evidence_for_case_loads_valid_json(tmp_path):

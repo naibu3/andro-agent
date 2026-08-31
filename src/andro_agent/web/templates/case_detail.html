@@ -159,7 +159,21 @@
     <dd class="mono">{{ case.sha256 }}</dd>
 
     <dt>Current step</dt>
-    <dd>{{ case.current_step or "N/A" }}</dd>
+    <dd>{{ "completed" if case.status == "completed" else (case.current_step or "N/A") }}</dd>
+
+    <dt>Analysis profile</dt>
+    <dd>{{ case.analysis_profile }}</dd>
+
+    {% if case.llm_provider or case.llm_model %}
+    <dt>LLM provider/model</dt>
+    <dd>{{ case.llm_provider or "N/A" }} / {{ case.llm_model or "N/A" }}</dd>
+    {% endif %}
+
+    <dt>Agentic mode</dt>
+    <dd>{{ case.agentic_mode }}</dd>
+
+    <dt>Agentic budget</dt>
+    <dd>{{ case.agentic_budget }}</dd>
 
     <dt>Created</dt>
     <dd>{{ case.created_at }}</dd>

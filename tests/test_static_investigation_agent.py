@@ -583,12 +583,77 @@ def test_metrics_and_report_include_static_investigation_results(tmp_path: Path)
         "max_tool_calls": 0,
         "static_investigation_ran": True,
         "static_investigation_tool_calls": 1,
+        "static_investigation_max_tool_calls": 0,
         "llm_hypotheses_count": 1,
         "llm_candidate_findings_count": 1,
         "llm_candidate_findings_with_evidence_count": 1,
         "static_investigation_termination_reason": "completed",
+        "static_investigation_failed_phase": None,
     }
     report = state.static_report_path.read_text(encoding="utf-8")
     assert "## LLM static investigation candidates" in report
     assert "should be manually reviewed" in report
     assert "`EVID-1`" in report
+
+
+def test_metrics_include_static_investigation_failed_phase(tmp_path: Path) -> None:
+    case_dir = investigation_case(tmp_path)
+    state = CaseState(
+        case_id="case-full",
+        apk_path=Path("app.apk"),
+        analysis_profile="full",
+        static_investigation_trace_path=case_dir / "analysis" / "static_investigation_trace.json",
+        llm_hypotheses_path=case_dir / "analysis" / "llm_hypotheses.json",
+        llm_candidate_findings_path=case_dir / "findings" / "llm_candidate_findings.json",
+    )
+    write_json(
+        state.static_investigation_trace_path,
+        {
+            "static_investigation_ran": True,
+            "termination_reason": "invalid_json",
+            "failed_phase": "final_synthesis",
+            "tool_calls": [{}, {}, {}],
+        },
+    )
+    write_json(state.llm_hypotheses_path, [])
+    write_json(state.llm_candidate_findings_path, [])
+
+    metrics = StaticAnalysisPipeline._static_investigation_metrics(state)
+
+    assert metrics["static_investigation_ran"] is True
+    assert metrics["static_investigation_termination_reason"] == "invalid_json"
+    assert metrics["static_investigation_failed_phase"] == "final_synthesis"
+    assert metrics["static_investigation_tool_calls"] == 3
+    assert metrics["llm_hypotheses_count"] == 0
+    assert metrics["llm_candidate_findings_count"] == 0
+
+
+def test_deep_budget_tool_call_limit_is_explicit_in_metrics(tmp_path: Path) -> None:
+    case_dir = investigation_case(tmp_path)
+    state = CaseState(
+        case_id="case-full",
+        apk_path=Path("app.apk"),
+        analysis_profile="full",
+        agentic_max_tool_calls=40,
+        static_investigation_trace_path=case_dir / "analysis" / "static_investigation_trace.json",
+        llm_hypotheses_path=case_dir / "analysis" / "llm_hypotheses.json",
+        llm_candidate_findings_path=case_dir / "findings" / "llm_candidate_findings.json",
+    )
+    write_json(
+        state.static_investigation_trace_path,
+        {
+            "termination_reason": "completed",
+            "budget": {"max_tool_calls": 40},
+            "tool_calls": [{}] * 23,
+        },
+    )
+    write_json(state.llm_hypotheses_path, [])
+    write_json(state.llm_candidate_findings_path, [])
+
+    metrics = StaticAnalysisPipeline._static_investigation_metrics(state)
+
+    assert metrics["static_investigation_tool_calls"] == 23
+    assert metrics["static_investigation_max_tool_calls"] == 40
+    assert metrics["static_investigation_tool_calls"] <= metrics[
+        "static_investigation_max_tool_calls"
+    ]

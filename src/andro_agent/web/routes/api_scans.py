@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from uuid import uuid4
 
-from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile
+from fastapi import APIRouter, BackgroundTasks, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse, JSONResponse
 
 from andro_agent.web.db import CaseRepository
@@ -27,10 +27,22 @@ case_repo = CaseRepository()
 async def create_scan(
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
-    analysis_profile: str = "no-llm",
+    analysis_profile: str = Form("no-llm"),
+    agentic_mode: str = Form("none"),
+    agentic_budget: str = Form("balanced"),
+    llm_provider: str | None = Form(None),
+    llm_model: str | None = Form(None),
 ) -> dict[str, str]:
     if analysis_profile not in {"no-llm", "fast", "full"}:
         raise HTTPException(status_code=400, detail="Unsupported analysis profile")
+    if agentic_mode not in {"none", "single"}:
+        raise HTTPException(status_code=400, detail="Unsupported agentic mode")
+    if agentic_budget not in {"conservative", "balanced", "deep"}:
+        raise HTTPException(status_code=400, detail="Unsupported agentic budget")
+    if analysis_profile == "no-llm":
+        agentic_mode = "none"
+        llm_provider = None
+        llm_model = None
     case_id = str(uuid4())
     apk_path, digest = await save_uploaded_apk(file, case_id)
     artifacts_dir = ARTIFACTS_DIR / case_id
@@ -42,6 +54,10 @@ async def create_scan(
         apk_path=apk_path,
         artifacts_dir=artifacts_dir,
         analysis_profile=analysis_profile,
+        agentic_mode=agentic_mode,
+        agentic_budget=agentic_budget,
+        llm_provider=llm_provider,
+        llm_model=llm_model,
     )
 
     background_tasks.add_task(run_static_scan, case_id)

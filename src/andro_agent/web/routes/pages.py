@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from fastapi import APIRouter, BackgroundTasks, File, HTTPException, Request, UploadFile
+from fastapi import APIRouter, BackgroundTasks, File, Form, HTTPException, Request, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
@@ -68,13 +68,21 @@ async def upload_form(
     request: Request,
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
-    analysis_profile: str = "no-llm",
+    analysis_profile: str = Form("no-llm"),
+    agentic_mode: str = Form("none"),
+    agentic_budget: str = Form("balanced"),
+    llm_provider: str | None = Form(None),
+    llm_model: str | None = Form(None),
 ):
     try:
         result = await create_scan(
             background_tasks=background_tasks,
             file=file,
             analysis_profile=analysis_profile,
+            agentic_mode=agentic_mode,
+            agentic_budget=agentic_budget,
+            llm_provider=llm_provider,
+            llm_model=llm_model,
         )
 
     except Exception as exc:
@@ -151,6 +159,12 @@ def case_detail(request: Request, case_id: str):
         )
 
     state = load_case_state(Path(case["artifacts_dir"]).parent, case_id)
+    case["llm_provider"] = case.get("llm_provider") or state.get("llm_provider")
+    case["llm_model"] = case.get("llm_model") or state.get("llm_model")
+    case["agentic_mode"] = case.get("agentic_mode") or state.get("agentic_mode") or "none"
+    case["agentic_budget"] = (
+        case.get("agentic_budget") or state.get("agentic_budget") or "balanced"
+    )
     canonical_findings = collect_findings_from_state(state)
     db_findings = case_repo.list_findings(case_id)
     display_findings = canonical_findings if canonical_findings else db_findings
