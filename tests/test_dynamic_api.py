@@ -132,6 +132,59 @@ def test_tracking_only_fallback_behavior_is_unchanged(tmp_path):
     assert not result["warnings"]
 
 
+def test_android_checkin_infrastructure_url_is_not_selected(tmp_path):
+    case = tmp_path / "case"
+    write_source(case, "jadx/sources/Runtime.txt", '"https://android.googleapis.com/checkin"')
+
+    result = ApiDiscovery(case, ApiDiscoveryConfig(mode="static")).discover()
+
+    assert result["selected_candidates_count"] == 0
+    assert result["candidates"][0]["skip_reason"] == "third_party_infrastructure_url"
+
+
+def test_storage_download_url_is_not_selected(tmp_path):
+    case = tmp_path / "case"
+    write_source(
+        case,
+        "jadx/sources/Runtime.txt",
+        '"https://storage.googleapis.com/public-assets/app-update.zip"',
+    )
+
+    result = ApiDiscovery(case, ApiDiscoveryConfig(mode="static")).discover()
+
+    assert result["selected_candidates_count"] == 0
+    assert result["candidates"][0]["skip_reason"] == "third_party_infrastructure_url"
+
+
+def test_github_documentation_url_is_not_selected(tmp_path):
+    case = tmp_path / "case"
+    write_source(case, "jadx/sources/About.java", '"https://github.com/example/mobile-app"')
+
+    result = ApiDiscovery(case, ApiDiscoveryConfig(mode="static")).discover()
+
+    assert result["selected_candidates_count"] == 0
+    assert result["candidates"][0]["skip_reason"] == "non_backend_documentation_url"
+
+
+def test_malformed_host_literal_is_skipped(tmp_path):
+    case = tmp_path / "case"
+    write_source(
+        case,
+        "jadx/sources/Runtime.txt",
+        '"api.init.peoplemoduleinitintentoperation"',
+    )
+
+    result = ApiDiscovery(case, ApiDiscoveryConfig(mode="static")).discover()
+
+    assert result["selected_candidates_count"] == 0
+    assert result["skipped_candidates"] == [
+        {
+            "base_url": "https://api.init.peoplemoduleinitintentoperation",
+            "reason": "malformed_or_unsupported_url",
+        }
+    ]
+
+
 def discovery_for(url="https://api.example.com"):
     return ApiDiscovery(
         __import__("pathlib").Path("."), ApiDiscoveryConfig(mode="off", manual_base_url=url)

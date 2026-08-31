@@ -23,6 +23,29 @@ NON_BACKEND_SCHEMA_HOSTS = (
     "maven.apache.org",
     "gradle.org",
 )
+INFRASTRUCTURE_HOSTS = (
+    "android.googleapis.com",
+    "storage.googleapis.com",
+    "dl.google.com",
+    "gstatic.com",
+    "googleusercontent.com",
+    "githubusercontent.com",
+)
+DOCUMENTATION_SOCIAL_HOSTS = (
+    "github.com",
+    "twitter.com",
+    "x.com",
+    "facebook.com",
+    "linkedin.com",
+)
+INFRASTRUCTURE_PATH_MARKERS = ("/checkin", "/update", "/download", "/storage", "/captions")
+LOW_VALUE_SKIP_REASONS = {
+    "framework_schema_url",
+    "non_backend_schema_url",
+    "third_party_infrastructure_url",
+    "non_backend_documentation_url",
+    "malformed_or_unsupported_url",
+}
 SOURCE_SUFFIXES = {".java", ".kt", ".xml", ".json", ".txt", ".smali"}
 
 
@@ -99,11 +122,16 @@ class ApiDiscovery:
                 continue
             candidate["selected"] = True
             selected_count += 1
-        schema_skip_reasons = {"framework_schema_url", "non_backend_schema_url"}
-        if candidates and not selected_count and all(
-            candidate.get("skip_reason") in schema_skip_reasons for candidate in candidates
-        ):
-            warnings.append("Only framework/schema URLs were discovered; no backend API candidates selected.")
+        if not selected_count:
+            skip_reasons = {item.get("reason") for item in skipped}
+            schema_skip_reasons = {"framework_schema_url", "non_backend_schema_url"}
+            if skip_reasons and skip_reasons <= schema_skip_reasons:
+                warnings.append("Only framework/schema URLs were discovered; no backend API candidates selected.")
+            elif skip_reasons and skip_reasons <= LOW_VALUE_SKIP_REASONS:
+                warnings.append(
+                    "Only infrastructure/documentation or malformed URLs were discovered; "
+                    "no backend API candidates selected."
+                )
         return self._result(candidates, skipped, errors, warnings)
 
     def _result(
@@ -184,21 +212,32 @@ class ApiDiscovery:
         if parsed.scheme not in {"http", "https"} or not parsed.hostname:
             return None, "malformed_or_unsupported_url"
         host = parsed.hostname.lower().rstrip(".")
+        source_type = raw["source_type"]
+        if not self._valid_host(host, source_type):
+            return None, "malformed_or_unsupported_url"
         if self.config.allow_hosts and host not in {item.lower() for item in self.config.allow_hosts}:
             return None, "host_not_allowlisted"
         if not self.config.allow_private and self._private(host):
             return None, "private_or_local_host"
         path = parsed.path.rstrip("/")
         path_prefix = path if path and path != "/" else ""
-        port = parsed.port
+        try:
+            port = parsed.port
+        except ValueError:
+            return None, "malformed_or_unsupported_url"
         authority = host + (f":{port}" if port else "")
         base_url = f"{parsed.scheme}://{authority}{path_prefix}"
-        source_type = raw["source_type"]
         confidence = "high" if source_type in {"retrofit", "manual_override"} else "medium" if any(token in path.lower() for token in API_PATHS) or source_type == "host_literal" else "low"
-        third_party = any(marker in host for marker in TRACKING_MARKERS)
-        skip_reason = self._schema_skip_reason(host)
-        if skip_reason is None and third_party:
+        tracking = any(marker in host for marker in TRACKING_MARKERS)
+        skip_reason = None if source_type == "manual_override" else self._non_backend_skip_reason(
+            host, path, source_type
+        )
+        if skip_reason is None and tracking and source_type != "manual_override":
             skip_reason = "third_party_tracking_domain"
+        third_party = tracking or skip_reason in {
+            "third_party_infrastructure_url",
+            "non_backend_documentation_url",
+        }
         digest = hashlib.sha256(base_url.encode()).hexdigest()[:12].upper()
         return ({"candidate_id": f"API-CAND-{digest}", "scheme": parsed.scheme, "host": host,
                  "port": port, "base_url": base_url, "path_prefix": path_prefix or None,
@@ -215,6 +254,41 @@ class ApiDiscovery:
         if any(host == domain or host.endswith(f".{domain}") for domain in NON_BACKEND_SCHEMA_HOSTS):
             return "non_backend_schema_url"
         return None
+
+    @classmethod
+    def _non_backend_skip_reason(cls, host: str, path: str, source_type: str) -> str | None:
+        schema_reason = cls._schema_skip_reason(host)
+        if schema_reason:
+            return schema_reason
+        if any(host == domain or host.endswith(f".{domain}") for domain in INFRASTRUCTURE_HOSTS):
+            return "third_party_infrastructure_url"
+        if host.endswith(".googleapis.com") and any(
+            marker in path.lower() for marker in INFRASTRUCTURE_PATH_MARKERS
+        ):
+            return "third_party_infrastructure_url"
+        if any(host == domain or host.endswith(f".{domain}") for domain in DOCUMENTATION_SOCIAL_HOSTS):
+            if source_type == "retrofit" and any(marker in path.lower() for marker in API_PATHS):
+                return None
+            return "non_backend_documentation_url"
+        return None
+
+    @staticmethod
+    def _valid_host(host: str, source_type: str) -> bool:
+        if len(host) > 253 or ".." in host:
+            return False
+        labels = host.split(".")
+        if len(labels) < 2 or any(
+            not label
+            or len(label) > 63
+            or not re.fullmatch(r"[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", label)
+            for label in labels
+        ):
+            return False
+        if source_type == "host_literal" and (
+            not labels[-1].isalpha() or not 2 <= len(labels[-1]) <= 24
+        ):
+            return False
+        return True
 
     @staticmethod
     def _private(host: str) -> bool:
