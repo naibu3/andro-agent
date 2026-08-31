@@ -208,5 +208,5 @@ __marimo__/
 
 
 # CUSTOM
-artifacts/*
-reports/*
+./artifacts/*
+./reports/*
