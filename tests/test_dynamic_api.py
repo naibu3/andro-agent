@@ -156,6 +156,23 @@ def test_storage_download_url_is_not_selected(tmp_path):
     assert result["candidates"][0]["skip_reason"] == "third_party_infrastructure_url"
 
 
+def test_google_account_scope_and_connectivity_urls_are_not_selected(tmp_path):
+    case = tmp_path / "case"
+    write_source(
+        case,
+        "jadx/sources/Runtime.txt",
+        '"https://www.googleapis.com/auth/userinfo.email" '
+        '"http://play.googleapis.com/generate_204"',
+    )
+
+    result = ApiDiscovery(case, ApiDiscoveryConfig(mode="static")).discover()
+
+    assert result["selected_candidates_count"] == 0
+    assert {item["skip_reason"] for item in result["candidates"]} == {
+        "third_party_infrastructure_url"
+    }
+
+
 def test_github_documentation_url_is_not_selected(tmp_path):
     case = tmp_path / "case"
     write_source(case, "jadx/sources/About.java", '"https://github.com/example/mobile-app"')

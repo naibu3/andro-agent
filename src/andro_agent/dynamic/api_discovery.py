@@ -38,7 +38,15 @@ DOCUMENTATION_SOCIAL_HOSTS = (
     "facebook.com",
     "linkedin.com",
 )
-INFRASTRUCTURE_PATH_MARKERS = ("/checkin", "/update", "/download", "/storage", "/captions")
+INFRASTRUCTURE_PATH_MARKERS = (
+    "/checkin",
+    "/update",
+    "/download",
+    "/storage",
+    "/captions",
+    "/auth/",
+    "/generate_204",
+)
 LOW_VALUE_SKIP_REASONS = {
     "framework_schema_url",
     "non_backend_schema_url",
