@@ -1,0 +1,1923 @@
+[
+  {
+    "evidence_id": "EVID-9E537562B16E",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": null,
+    "selector": "debuggable",
+    "snippet": "debuggable=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.481150Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.application.debuggable",
+        "key": "debuggable",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      },
+      "finding_id": "MANIFEST_DEBUGGABLE_ENABLED",
+      "source": "manifest",
+      "legacy_type": "manifest.application.debuggable",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-B37123C1F14A",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": null,
+    "selector": "allow_backup",
+    "snippet": "allow_backup=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.481316Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.application.allow_backup",
+        "key": "allow_backup",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {}
+      },
+      "finding_id": "MANIFEST_ALLOW_BACKUP_ENABLED",
+      "source": "manifest",
+      "legacy_type": "manifest.application.allow_backup",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-847C827CFD05",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.SplashActivity",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.SplashActivity=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.481797Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.SplashActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_ACTIVITY",
+      "source": "manifest",
+      "legacy_type": "manifest.component.activity.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-17A88FD93164",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.SplashActivity",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.SplashActivity=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.481900Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.SplashActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+      "source": "manifest",
+      "legacy_type": "manifest.component.activity.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C4717658DF8D",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.AccessControl1ViewActivity",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.AccessControl1ViewActivity=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.481995Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_ACTIVITY",
+      "source": "manifest",
+      "legacy_type": "manifest.component.activity.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-B171F6FC9582",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.AccessControl1ViewActivity",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.AccessControl1ViewActivity=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482084Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.activity.exported",
+        "key": "owasp.sat.agoat.AccessControl1ViewActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "activity",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION",
+      "source": "manifest",
+      "legacy_type": "manifest.component.activity.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-E7159BE9FED7",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.DownloadInvoiceService",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.DownloadInvoiceService=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482173Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.service.exported",
+        "key": "owasp.sat.agoat.DownloadInvoiceService",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "service",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_SERVICE",
+      "source": "manifest",
+      "legacy_type": "manifest.component.service.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-5342E365EFCB",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.DownloadInvoiceService",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.DownloadInvoiceService=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482261Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.service.exported",
+        "key": "owasp.sat.agoat.DownloadInvoiceService",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "service",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_SERVICE_NO_PERMISSION",
+      "source": "manifest",
+      "legacy_type": "manifest.component.service.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-0A2A3B852D39",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.ShowDataReceiver",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.ShowDataReceiver=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482349Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.receiver.exported",
+        "key": "owasp.sat.agoat.ShowDataReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_RECEIVER",
+      "source": "manifest",
+      "legacy_type": "manifest.component.receiver.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-65DBB0A45DDB",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.ShowDataReceiver",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.ShowDataReceiver=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482446Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.receiver.exported",
+        "key": "owasp.sat.agoat.ShowDataReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_RECEIVER_NO_PERMISSION",
+      "source": "manifest",
+      "legacy_type": "manifest.component.receiver.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-D49F6E3DF1DF",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "androidx.profileinstaller.ProfileInstallReceiver",
+    "selector": null,
+    "snippet": "androidx.profileinstaller.ProfileInstallReceiver=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482534Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.receiver.exported",
+        "key": "androidx.profileinstaller.ProfileInstallReceiver",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "receiver",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_RECEIVER",
+      "source": "manifest",
+      "legacy_type": "manifest.component.receiver.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C9E4A3231586",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.ContentProviderActivity",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.ContentProviderActivity=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482637Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.provider.exported",
+        "key": "owasp.sat.agoat.ContentProviderActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "provider",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_PROVIDER",
+      "source": "manifest",
+      "legacy_type": "manifest.component.provider.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-12282840D302",
+    "case_id": "androgoat-full",
+    "evidence_type": "manifest",
+    "source_tool": "manifest",
+    "artifact_path": "owasp.sat.agoat.ContentProviderActivity",
+    "selector": null,
+    "snippet": "owasp.sat.agoat.ContentProviderActivity=True",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.482728Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "manifest.component.provider.exported",
+        "key": "owasp.sat.agoat.ContentProviderActivity",
+        "value": true,
+        "source": "manifest",
+        "confidence": "high",
+        "metadata": {
+          "component_type": "provider",
+          "exported_source": "explicit"
+        }
+      },
+      "finding_id": "MANIFEST_EXPORTED_PROVIDER_NO_PERMISSION",
+      "source": "manifest",
+      "legacy_type": "manifest.component.provider.exported",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C630DF190290",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InputValidationsWebViewURLActivity.java",
+    "selector": "line:43",
+    "snippet": "$webView.loadUrl(url);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.488403Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.webview_loadUrl",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InputValidationsWebViewURLActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "webview",
+          "line_number": 43,
+          "line_text": "$webView.loadUrl(url);"
+        }
+      },
+      "finding_id": "CODE_WEBVIEW_LOADURL",
+      "source": "code",
+      "legacy_type": "code.pattern.webview_loadUrl",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-385003138952",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/SQLinjectionActivity.java",
+    "selector": "line:48",
+    "snippet": "Cursor qryResult = sQLiteDatabase != null ? sQLiteDatabase.rawQuery(qry, null) : null;",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.488523Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_rawQuery",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/SQLinjectionActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 48,
+          "line_text": "Cursor qryResult = sQLiteDatabase != null ? sQLiteDatabase.rawQuery(qry, null) : null;"
+        }
+      },
+      "finding_id": "CODE_SQL_RAWQUERY",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_rawQuery",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C8ED25F14246",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java",
+    "selector": "line:31",
+    "snippet": "sQLiteDatabase.execSQL(\"CREATE TABLE IF NOT EXISTS users (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, username VARCHAR, password VARCHAR)\");",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.488629Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 31,
+          "line_text": "sQLiteDatabase.execSQL(\"CREATE TABLE IF NOT EXISTS users (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, username VARCHAR, password VARCHAR)\");"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-B8B1BC1D2EC1",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java",
+    "selector": "line:57",
+    "snippet": "sQLiteDatabase.execSQL(qry);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.488732Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InsecureStorageSQLiteActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 57,
+          "line_text": "sQLiteDatabase.execSQL(qry);"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-9A90891CCFEC",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "selector": "line:80",
+    "snippet": "db.execSQL(ContentProviderActivity.DROP_TBL_QRY);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.488831Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 80,
+          "line_text": "db.execSQL(ContentProviderActivity.DROP_TBL_QRY);"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-29E2F89DA80C",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "selector": "line:81",
+    "snippet": "db.execSQL(ContentProviderActivity.CREATE_TBL_QRY);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.488924Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 81,
+          "line_text": "db.execSQL(ContentProviderActivity.CREATE_TBL_QRY);"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-F8E1F03C159D",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "selector": "line:82",
+    "snippet": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('AndroGoat', 'AndroGoat');\");",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489018Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 82,
+          "line_text": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('AndroGoat', 'AndroGoat');\");"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-866D745889AD",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "selector": "line:83",
+    "snippet": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('root', 'toor');\");",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489113Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 83,
+          "line_text": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('root', 'toor');\");"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-04634ECFF88B",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+    "selector": "line:84",
+    "snippet": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('Admin', 'Admin');\");",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489206Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sql_execSQL",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/ContentProviderActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "sql",
+          "line_number": 84,
+          "line_text": "db.execSQL(\"INSERT INTO user_pins (username, pin) VALUES ('Admin', 'Admin');\");"
+        }
+      },
+      "finding_id": "CODE_SQL_EXECSQL",
+      "source": "code",
+      "legacy_type": "code.pattern.sql_execSQL",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-24F3347CDA38",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/com/google/android/material/search/SearchBar.java",
+    "selector": "line:49",
+    "snippet": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489342Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.hardcoded_http",
+        "key": "artifacts/androgoat-full/jadx/sources/com/google/android/material/search/SearchBar.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "network",
+          "line_number": 49,
+          "line_text": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";"
+        }
+      },
+      "finding_id": "CODE_HARDCODED_HTTP",
+      "source": "code",
+      "legacy_type": "code.pattern.hardcoded_http",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-E76C61205931",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/com/google/android/material/chip/ChipDrawable.java",
+    "selector": "line:53",
+    "snippet": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489459Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.hardcoded_http",
+        "key": "artifacts/androgoat-full/jadx/sources/com/google/android/material/chip/ChipDrawable.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "network",
+          "line_number": 53,
+          "line_text": "private static final String NAMESPACE_APP = \"http://schemas.android.com/apk/res-auto\";"
+        }
+      },
+      "finding_id": "CODE_HARDCODED_HTTP",
+      "source": "code",
+      "legacy_type": "code.pattern.hardcoded_http",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-9113CB75363A",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/com/google/android/material/chip/Chip.java",
+    "selector": "line:58",
+    "snippet": "private static final String NAMESPACE_ANDROID = \"http://schemas.android.com/apk/res/android\";",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489563Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.hardcoded_http",
+        "key": "artifacts/androgoat-full/jadx/sources/com/google/android/material/chip/Chip.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "network",
+          "line_number": 58,
+          "line_text": "private static final String NAMESPACE_ANDROID = \"http://schemas.android.com/apk/res/android\";"
+        }
+      },
+      "finding_id": "CODE_HARDCODED_HTTP",
+      "source": "code",
+      "legacy_type": "code.pattern.hardcoded_http",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-E103C7572CBE",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/content/res/TypedArrayUtils.java",
+    "selector": "line:14",
+    "snippet": "private static final String NAMESPACE = \"http://schemas.android.com/apk/res/android\";",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489667Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.hardcoded_http",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/content/res/TypedArrayUtils.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "network",
+          "line_number": 14,
+          "line_text": "private static final String NAMESPACE = \"http://schemas.android.com/apk/res/android\";"
+        }
+      },
+      "finding_id": "CODE_HARDCODED_HTTP",
+      "source": "code",
+      "legacy_type": "code.pattern.hardcoded_http",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-9D1737B1F835",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/content/pm/ShortcutXmlParser.java",
+    "selector": "line:98",
+    "snippet": "String value = parser.getAttributeValue(\"http://schemas.android.com/apk/res/android\", attribute);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489767Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.hardcoded_http",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/content/pm/ShortcutXmlParser.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "network",
+          "line_number": 98,
+          "line_text": "String value = parser.getAttributeValue(\"http://schemas.android.com/apk/res/android\", attribute);"
+        }
+      },
+      "finding_id": "CODE_HARDCODED_HTTP",
+      "source": "code",
+      "legacy_type": "code.pattern.hardcoded_http",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-579A0691E18C",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/TrafficActivity.java",
+    "selector": "line:37",
+    "snippet": "private String httpurl = \"http://demo.testfire.net\";",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489862Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.hardcoded_http",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/TrafficActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "network",
+          "line_number": 37,
+          "line_text": "private String httpurl = \"http://demo.testfire.net\";"
+        }
+      },
+      "finding_id": "CODE_HARDCODED_HTTP",
+      "source": "code",
+      "legacy_type": "code.pattern.hardcoded_http",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-BFD30B31C3FE",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/RootDetectionActivity.java",
+    "selector": "line:72",
+    "snippet": "Runtime.getRuntime().exec(new String[]{\"su\", \"ls /data/data/\"});",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.489973Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.runtime_exec",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/RootDetectionActivity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "command_execution",
+          "line_number": 72,
+          "line_text": "Runtime.getRuntime().exec(new String[]{\"su\", \"ls /data/data/\"});"
+        }
+      },
+      "finding_id": "CODE_RUNTIME_EXEC",
+      "source": "code",
+      "legacy_type": "code.pattern.runtime_exec",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-3F2AD89FFC6C",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InputValidationsOSCMDInjectionMain2Activity.java",
+    "selector": "line:39",
+    "snippet": "Process p = Runtime.getRuntime().exec(ip1);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490079Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.runtime_exec",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InputValidationsOSCMDInjectionMain2Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "command_execution",
+          "line_number": 39,
+          "line_text": "Process p = Runtime.getRuntime().exec(ip1);"
+        }
+      },
+      "finding_id": "CODE_RUNTIME_EXEC",
+      "source": "code",
+      "legacy_type": "code.pattern.runtime_exec",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-A6F3B7E222E1",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/multidex/MultiDexExtractor.java",
+    "selector": "line:270",
+    "snippet": "return context.getSharedPreferences(PREFS_FILE, 4);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490171Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/multidex/MultiDexExtractor.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 270,
+          "line_text": "return context.getSharedPreferences(PREFS_FILE, 4);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-E99D21C375B8",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/app/AppLaunchChecker.java",
+    "selector": "line:15",
+    "snippet": "return context.getSharedPreferences(SHARED_PREFS_NAME, 0).getBoolean(KEY_STARTED_FROM_LAUNCHER, false);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490266Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/app/AppLaunchChecker.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 15,
+          "line_text": "return context.getSharedPreferences(SHARED_PREFS_NAME, 0).getBoolean(KEY_STARTED_FROM_LAUNCHER, false);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-9FB9591CCDA3",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/app/AppLaunchChecker.java",
+    "selector": "line:20",
+    "snippet": "SharedPreferences sp = activity.getSharedPreferences(SHARED_PREFS_NAME, 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490359Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/app/AppLaunchChecker.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 20,
+          "line_text": "SharedPreferences sp = activity.getSharedPreferences(SHARED_PREFS_NAME, 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-FE129E1D0940",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+    "selector": "line:55",
+    "snippet": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490452Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 55,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-1344C54D5F89",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+    "selector": "line:60",
+    "snippet": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490547Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 60,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-4B243BFF2A7A",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+    "selector": "line:68",
+    "snippet": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490641Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/AccessControlIssue1Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 68,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"pinDetails\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-EE004F68EE3F",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+    "selector": "line:25",
+    "snippet": "SharedPreferences sharedPreferences = getSharedPreferences(\"score\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490733Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 25,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"score\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-26D86AAD7297",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+    "selector": "line:85",
+    "snippet": "SharedPreferences sharedPreference = getSharedPreferences(\"score\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490825Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 85,
+          "line_text": "SharedPreferences sharedPreference = getSharedPreferences(\"score\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-B73E34F60A82",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+    "selector": "line:95",
+    "snippet": "SharedPreferences sharedPreferences = getSharedPreferences(\"score\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.490916Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs1Activity.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 95,
+          "line_text": "SharedPreferences sharedPreferences = getSharedPreferences(\"score\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-3111EBB8860A",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs.java",
+    "selector": "line:40",
+    "snippet": "SharedPreferences sharedPreference = this$0.getSharedPreferences(\"users\", 0);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491009Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.sharedprefs_write",
+        "key": "artifacts/androgoat-full/jadx/sources/owasp/sat/agoat/InsecureStorageSharedPrefs.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 40,
+          "line_text": "SharedPreferences sharedPreference = this$0.getSharedPreferences(\"users\", 0);"
+        }
+      },
+      "finding_id": "CODE_SHAREDPREFERENCES_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.sharedprefs_write",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-13DFC6F3362B",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/okio/Okio__JvmOkioKt.java",
+    "selector": "line:58",
+    "snippet": "return Okio.sink(new FileOutputStream(sink, append));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491098Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/okio/Okio__JvmOkioKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 58,
+          "line_text": "return Okio.sink(new FileOutputStream(sink, append));"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C1308AFDE424",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/okio/Okio__JvmOkioKt.java",
+    "selector": "line:70",
+    "snippet": "return Okio.sink(new FileOutputStream(appendingSink, true));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491183Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/okio/Okio__JvmOkioKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 70,
+          "line_text": "return Okio.sink(new FileOutputStream(appendingSink, true));"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-4645913B036F",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/com/google/android/material/color/ColorResourcesLoaderCreator.java",
+    "selector": "line:36",
+    "snippet": "OutputStream pipeWriter = new FileOutputStream(arscFile);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491285Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/com/google/android/material/color/ColorResourcesLoaderCreator.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 36,
+          "line_text": "OutputStream pipeWriter = new FileOutputStream(arscFile);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-0AADBC6C43D4",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__UtilsKt.java",
+    "selector": "line:204",
+    "snippet": "fileInputStream = new FileOutputStream(target);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491394Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__UtilsKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 204,
+          "line_text": "fileInputStream = new FileOutputStream(target);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C3447C4A02EE",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:73",
+    "snippet": "return new OutputStreamWriter(new FileOutputStream($this$writer_u24default), charset);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491492Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 73,
+          "line_text": "return new OutputStreamWriter(new FileOutputStream($this$writer_u24default), charset);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-61093A588BBB",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:79",
+    "snippet": "return new OutputStreamWriter(new FileOutputStream($this$writer), charset);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491583Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 79,
+          "line_text": "return new OutputStreamWriter(new FileOutputStream($this$writer), charset);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-D7F9DD3AAF7E",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:91",
+    "snippet": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter_u24default), charset);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491671Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 91,
+          "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter_u24default), charset);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-8ACD62EB2007",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:98",
+    "snippet": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter), charset);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491758Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 98,
+          "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$bufferedWriter), charset);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-047DCC145EEC",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:108",
+    "snippet": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter_u24default), charset);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491846Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 108,
+          "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter_u24default), charset);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-5CD22B00748C",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:115",
+    "snippet": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter), charset);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.491934Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 115,
+          "line_text": "Writer outputStreamWriter = new OutputStreamWriter(new FileOutputStream($this$printWriter), charset);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-FB0728A16AAA",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:174",
+    "snippet": "FileOutputStream fileOutputStream = new FileOutputStream($this$writeBytes);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492022Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 174,
+          "line_text": "FileOutputStream fileOutputStream = new FileOutputStream($this$writeBytes);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-B7F86B959546",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:187",
+    "snippet": "FileOutputStream fileOutputStream = new FileOutputStream($this$appendBytes, true);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492121Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 187,
+          "line_text": "FileOutputStream fileOutputStream = new FileOutputStream($this$appendBytes, true);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-0AF4D878F7E7",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+    "selector": "line:298",
+    "snippet": "return new FileOutputStream($this$outputStream);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492219Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/kotlin/io/FilesKt__FileReadWriteKt.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 298,
+          "line_text": "return new FileOutputStream($this$outputStream);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-37C2E5AFC559",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/multidex/MultiDexExtractor.java",
+    "selector": "line:299",
+    "snippet": "ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(tmp)));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492317Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/multidex/MultiDexExtractor.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 299,
+          "line_text": "ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(tmp)));"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-0A0839FB0958",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/print/PrintHelper.java",
+    "selector": "line:388",
+    "snippet": "pdfDocument.writeTo(new FileOutputStream(fileDescriptor.getFileDescriptor()));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492408Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/print/PrintHelper.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 388,
+          "line_text": "pdfDocument.writeTo(new FileOutputStream(fileDescriptor.getFileDescriptor()));"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-DF2B805CD6CF",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/profileinstaller/DeviceProfileWriter.java",
+    "selector": "line:237",
+    "snippet": "FileOutputStream fileOutputStream = new FileOutputStream(this.mCurProfile);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492501Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/profileinstaller/DeviceProfileWriter.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 237,
+          "line_text": "FileOutputStream fileOutputStream = new FileOutputStream(this.mCurProfile);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-584768A72882",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/profileinstaller/ProfileInstaller.java",
+    "selector": "line:193",
+    "snippet": "DataOutputStream os = new DataOutputStream(new FileOutputStream(skipFile));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492595Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/profileinstaller/ProfileInstaller.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 193,
+          "line_text": "DataOutputStream os = new DataOutputStream(new FileOutputStream(skipFile));"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-F78E80F6E22A",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/profileinstaller/ProfileVerifier.java",
+    "selector": "line:206",
+    "snippet": "DataOutputStream dos = new DataOutputStream(new FileOutputStream(file));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492686Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/profileinstaller/ProfileVerifier.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 206,
+          "line_text": "DataOutputStream dos = new DataOutputStream(new FileOutputStream(file));"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-017E0C2B424D",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/util/AtomicFile.java",
+    "selector": "line:39",
+    "snippet": "return new FileOutputStream(this.mNewName);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492781Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/util/AtomicFile.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 39,
+          "line_text": "return new FileOutputStream(this.mNewName);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-94AE7AFF4838",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/util/AtomicFile.java",
+    "selector": "line:46",
+    "snippet": "return new FileOutputStream(this.mNewName);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492873Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/util/AtomicFile.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 46,
+          "line_text": "return new FileOutputStream(this.mNewName);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-884839CA1F66",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/graphics/TypefaceCompatUtil.java",
+    "selector": "line:117",
+    "snippet": "os = new FileOutputStream(file, false);",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.492972Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.file_output_stream",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/graphics/TypefaceCompatUtil.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "storage",
+          "line_number": 117,
+          "line_text": "os = new FileOutputStream(file, false);"
+        }
+      },
+      "finding_id": "CODE_FILE_OUTPUT_STREAM",
+      "source": "code",
+      "legacy_type": "code.pattern.file_output_stream",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-855DA6A6E36F",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/core/content/res/FontResourcesParserCompat.java",
+    "selector": "line:223",
+    "snippet": "result.add(Base64.decode(item, 0));",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.493077Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.base64_decode",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/core/content/res/FontResourcesParserCompat.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "encoding",
+          "line_number": 223,
+          "line_text": "result.add(Base64.decode(item, 0));"
+        }
+      },
+      "finding_id": "CODE_BASE64_DECODE",
+      "source": "code",
+      "legacy_type": "code.pattern.base64_decode",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  },
+  {
+    "evidence_id": "EVID-C43DF3739DC0",
+    "case_id": "androgoat-full",
+    "evidence_type": "source",
+    "source_tool": "code",
+    "artifact_path": "jadx/sources/androidx/biometric/CryptoObjectUtils.java",
+    "selector": "line:135",
+    "snippet": "Cipher cipher = Cipher.getInstance(\"AES/CBC/PKCS7Padding\");",
+    "command": null,
+    "sha256": null,
+    "timestamp": "2026-08-29T17:51:28.493185Z",
+    "metadata": {
+      "raw_evidence": {
+        "type": "code.pattern.cipher_instance",
+        "key": "artifacts/androgoat-full/jadx/sources/androidx/biometric/CryptoObjectUtils.java",
+        "value": true,
+        "source": "code_search",
+        "confidence": "high",
+        "metadata": {
+          "category": "crypto",
+          "line_number": 135,
+          "line_text": "Cipher cipher = Cipher.getInstance(\"AES/CBC/PKCS7Padding\");"
+        }
+      },
+      "finding_id": "CODE_CIPHER_USAGE",
+      "source": "code",
+      "legacy_type": "code.pattern.cipher_instance",
+      "legacy_source": "code_search",
+      "legacy_confidence": "high"
+    }
+  }
+]

@@ -1,0 +1,252 @@
+{
+  "case_id": "androgoat-full",
+  "started_at": "2026-08-29 17:49:27.657323",
+  "finished_at": "2026-08-29 17:52:23.470197",
+  "duration_seconds": 175.81288452599983,
+  "steps": [
+    {
+      "name": "validate",
+      "started_at": "2026-08-29 17:49:27.657341",
+      "finished_at": "2026-08-29 17:49:27.667536",
+      "duration_seconds": 0.010179616998357233,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "extract_manifest",
+      "started_at": "2026-08-29 17:49:27.667583",
+      "finished_at": "2026-08-29 17:49:33.920968",
+      "duration_seconds": 6.2533610520004,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_manifest_facts",
+      "started_at": "2026-08-29 17:49:33.920978",
+      "finished_at": "2026-08-29 17:49:33.921970",
+      "duration_seconds": 0.0009791919983399566,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_manifest_rules",
+      "started_at": "2026-08-29 17:49:33.921976",
+      "finished_at": "2026-08-29 17:49:33.922665",
+      "duration_seconds": 0.0006806740020692814,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "jadx_decompile",
+      "started_at": "2026-08-29 17:49:33.922670",
+      "finished_at": "2026-08-29 17:49:52.381831",
+      "duration_seconds": 18.459148629000993,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_search",
+      "started_at": "2026-08-29 17:49:52.381840",
+      "finished_at": "2026-08-29 17:49:54.671210",
+      "duration_seconds": 2.289354962998914,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_code_facts",
+      "started_at": "2026-08-29 17:49:54.671218",
+      "finished_at": "2026-08-29 17:49:54.672227",
+      "duration_seconds": 0.0009985940014303196,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "apply_code_rules",
+      "started_at": "2026-08-29 17:49:54.672233",
+      "finished_at": "2026-08-29 17:49:54.673476",
+      "duration_seconds": 0.0012342350019025616,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "build_static_bundle",
+      "started_at": "2026-08-29 17:49:54.673481",
+      "finished_at": "2026-08-29 17:49:54.675382",
+      "duration_seconds": 0.001893180000479333,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "manifest_risk_agent",
+      "started_at": "2026-08-29 17:49:54.675389",
+      "finished_at": "2026-08-29 17:50:34.617437",
+      "duration_seconds": 39.942039279998426,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "started_at": "2026-08-29 17:50:34.617446",
+      "finished_at": "2026-08-29 17:50:48.443093",
+      "duration_seconds": 13.825623791999533,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "started_at": "2026-08-29 17:50:48.443107",
+      "finished_at": "2026-08-29 17:51:13.734427",
+      "duration_seconds": 25.291288626001915,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "started_at": "2026-08-29 17:51:13.734443",
+      "finished_at": "2026-08-29 17:51:28.478937",
+      "duration_seconds": 14.744461112000863,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "static_investigation_agent",
+      "started_at": "2026-08-29 17:51:28.495096",
+      "finished_at": "2026-08-29 17:52:23.468804",
+      "duration_seconds": 54.97369745799733,
+      "success": true,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "agents": [
+    {
+      "name": "manifest_risk_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-08-29 17:49:54.676748",
+      "finished_at": "2026-08-29 17:50:34.617406",
+      "duration_seconds": 39.94062447599936,
+      "success": true,
+      "input_chars": 51243,
+      "output_chars": 2001,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "code_risk_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-08-29 17:50:34.618715",
+      "finished_at": "2026-08-29 17:50:48.443056",
+      "duration_seconds": 13.824308257997473,
+      "success": true,
+      "input_chars": 55905,
+      "output_chars": 2454,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "risk_fusion_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-08-29 17:50:48.445564",
+      "finished_at": "2026-08-29 17:51:13.734393",
+      "duration_seconds": 25.288782919997175,
+      "success": true,
+      "input_chars": 5186,
+      "output_chars": 2304,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "markdown_report_agent",
+      "model": "openai/gpt-oss-20b",
+      "started_at": "2026-08-29 17:51:13.734820",
+      "finished_at": "2026-08-29 17:51:28.478895",
+      "duration_seconds": 14.74403712899948,
+      "success": true,
+      "input_chars": 2696,
+      "output_chars": 3694,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "name": "static_investigation_agent",
+      "model": "openrouter/free",
+      "started_at": "2026-08-29 17:51:28.495130",
+      "finished_at": "2026-08-29 17:52:23.468772",
+      "duration_seconds": 54.97362561599948,
+      "success": true,
+      "input_chars": 28,
+      "output_chars": 69,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "summary": {
+    "status": "completed",
+    "analysis_profile": "full",
+    "warnings_count": 0,
+    "errors_count": 0,
+    "tool_history_count": 8,
+    "has_manifest_reasoning": true,
+    "has_code_reasoning": true,
+    "has_fused_reasoning": true,
+    "has_markdown_report": true,
+    "manifest_findings_count": 13,
+    "code_findings_count": 50,
+    "canonical_findings_count": 63,
+    "evidence_items_count": 63,
+    "dynamic_ran": false,
+    "dynamic_status": null,
+    "dynamic_observations_count": 0,
+    "dynamic_agentic_ran": false,
+    "dynamic_agentic_decisions_count": 0,
+    "dynamic_termination_reason": null,
+    "agentic_mode": "single",
+    "agentic_strategy_runtime": "single",
+    "agentic_budget": "balanced",
+    "llm_provider": "openrouter",
+    "llm_model": "openrouter/free",
+    "enabled_tools": [
+      "get_evidence",
+      "get_findings",
+      "get_manifest_facts",
+      "open_source_context",
+      "search_code"
+    ],
+    "max_questions": 5,
+    "max_tool_calls": 20,
+    "static_investigation_ran": true,
+    "static_investigation_tool_calls": 12,
+    "llm_hypotheses_count": 1,
+    "llm_candidate_findings_count": 1,
+    "llm_candidate_findings_with_evidence_count": 1,
+    "static_investigation_termination_reason": "completed"
+  }
+}

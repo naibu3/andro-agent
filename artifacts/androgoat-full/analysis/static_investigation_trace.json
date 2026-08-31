@@ -1,0 +1,457 @@
+{
+  "case_id": "androgoat-full",
+  "profile": "full",
+  "agent": "static_investigation",
+  "agentic_mode": "single",
+  "requested_agentic_mode": "single",
+  "agentic_strategy_runtime": "single",
+  "strategy_runtime": "single",
+  "agentic_budget": "balanced",
+  "llm_provider": "openrouter",
+  "llm_model": "openrouter/free",
+  "provider": "openrouter",
+  "model": "openrouter/free",
+  "enabled_tools": [
+    "get_evidence",
+    "get_findings",
+    "get_manifest_facts",
+    "open_source_context",
+    "search_code"
+  ],
+  "budget": {
+    "max_questions": 5,
+    "max_tool_calls": 20,
+    "max_search_results": 10,
+    "max_context_lines": 40,
+    "max_candidates": 10,
+    "max_output_chars_per_tool": 12000
+  },
+  "static_investigation_ran": true,
+  "current_phase": "output_writing",
+  "phases": [
+    "context_building",
+    "question_planning",
+    "tool_execution",
+    "final_synthesis",
+    "validation",
+    "output_writing"
+  ],
+  "failed_phase": null,
+  "questions": [
+    {
+      "question_id": "Q1",
+      "title": "Investigate Runtime command execution usages",
+      "rationale": "High severity code findings indicate Runtime.getRuntime().exec usage, posing command execution risk; need to review source context.",
+      "target_category": "code",
+      "related_finding_ids": [
+        "CODE_RUNTIME_EXEC"
+      ],
+      "original_planned_searches": [],
+      "needed_evidence_ids": [
+        "EVID-BFD30B31C3FE",
+        "EVID-3F2AD89FFC6C"
+      ],
+      "normalized_tool_plan": [
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-BFD30B31C3FE"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-BFD30B31C3FE"
+        },
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-3F2AD89FFC6C"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-3F2AD89FFC6C"
+        }
+      ],
+      "skipped_natural_language_searches": [],
+      "concrete_search_queries_executed": [],
+      "context_openings_from_evidence": 2,
+      "context_openings_from_search_results": 0
+    },
+    {
+      "question_id": "Q2",
+      "title": "Check exported activity permission declarations",
+      "rationale": "Multiple exported activities lack protecting permissions, a high severity manifest issue.",
+      "target_category": "manifest",
+      "related_finding_ids": [
+        "MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION"
+      ],
+      "original_planned_searches": [],
+      "needed_evidence_ids": [
+        "EVID-17A88FD93164",
+        "EVID-B171F6FC9582"
+      ],
+      "normalized_tool_plan": [
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-17A88FD93164"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-17A88FD93164"
+        },
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-B171F6FC9582"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-B171F6FC9582"
+        },
+        {
+          "tool": "get_manifest_facts",
+          "arguments": {
+            "limit": 20
+          }
+        }
+      ],
+      "skipped_natural_language_searches": [],
+      "concrete_search_queries_executed": [],
+      "context_openings_from_evidence": 0,
+      "context_openings_from_search_results": 0
+    },
+    {
+      "question_id": "Q3",
+      "title": "Verify exported provider permission declaration",
+      "rationale": "Exported provider without permission represents a high severity manifest vulnerability.",
+      "target_category": "manifest",
+      "related_finding_ids": [
+        "MANIFEST_EXPORTED_PROVIDER_NO_PERMISSION"
+      ],
+      "original_planned_searches": [],
+      "needed_evidence_ids": [
+        "EVID-12282840D302"
+      ],
+      "normalized_tool_plan": [
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-12282840D302"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-12282840D302"
+        },
+        {
+          "tool": "get_manifest_facts",
+          "arguments": {
+            "limit": 20
+          }
+        }
+      ],
+      "skipped_natural_language_searches": [],
+      "concrete_search_queries_executed": [],
+      "context_openings_from_evidence": 0,
+      "context_openings_from_search_results": 0
+    },
+    {
+      "question_id": "Q4",
+      "title": "Verify exported receiver permission declaration",
+      "rationale": "Exported receiver lacking permission is a high severity manifest issue.",
+      "target_category": "manifest",
+      "related_finding_ids": [
+        "MANIFEST_EXPORTED_RECEIVER_NO_PERMISSION"
+      ],
+      "original_planned_searches": [],
+      "needed_evidence_ids": [
+        "EVID-65DBB0A45DDB"
+      ],
+      "normalized_tool_plan": [
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-65DBB0A45DDB"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-65DBB0A45DDB"
+        },
+        {
+          "tool": "get_manifest_facts",
+          "arguments": {
+            "limit": 20
+          }
+        }
+      ],
+      "skipped_natural_language_searches": [],
+      "concrete_search_queries_executed": [],
+      "context_openings_from_evidence": 0,
+      "context_openings_from_search_results": 0
+    },
+    {
+      "question_id": "Q5",
+      "title": "Verify exported service permission declaration",
+      "rationale": "Exported service without permission poses a high severity manifest risk.",
+      "target_category": "manifest",
+      "related_finding_ids": [
+        "MANIFEST_EXPORTED_SERVICE_NO_PERMISSION"
+      ],
+      "original_planned_searches": [],
+      "needed_evidence_ids": [
+        "EVID-5342E365EFCB"
+      ],
+      "normalized_tool_plan": [
+        {
+          "tool": "get_evidence",
+          "arguments": {
+            "evidence_ids": [
+              "EVID-5342E365EFCB"
+            ],
+            "limit": 1
+          }
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-5342E365EFCB"
+        },
+        {
+          "tool": "get_manifest_facts",
+          "arguments": {
+            "limit": 20
+          }
+        }
+      ],
+      "skipped_natural_language_searches": [],
+      "concrete_search_queries_executed": [],
+      "context_openings_from_evidence": 0,
+      "context_openings_from_search_results": 0
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool": "get_findings",
+      "input_summary": {
+        "limit": 200
+      },
+      "success": true,
+      "result_summary": "success=True, count=63",
+      "evidence_ids": [
+        "EVID-9E537562B16E",
+        "EVID-B37123C1F14A",
+        "EVID-847C827CFD05",
+        "EVID-17A88FD93164",
+        "EVID-C4717658DF8D",
+        "EVID-B171F6FC9582",
+        "EVID-E7159BE9FED7",
+        "EVID-5342E365EFCB",
+        "EVID-0A2A3B852D39",
+        "EVID-65DBB0A45DDB",
+        "EVID-D49F6E3DF1DF",
+        "EVID-C9E4A3231586",
+        "EVID-12282840D302",
+        "EVID-C630DF190290",
+        "EVID-385003138952",
+        "EVID-C8ED25F14246",
+        "EVID-B8B1BC1D2EC1",
+        "EVID-9A90891CCFEC",
+        "EVID-29E2F89DA80C",
+        "EVID-F8E1F03C159D",
+        "EVID-866D745889AD",
+        "EVID-04634ECFF88B",
+        "EVID-24F3347CDA38",
+        "EVID-E76C61205931",
+        "EVID-9113CB75363A",
+        "EVID-E103C7572CBE",
+        "EVID-9D1737B1F835",
+        "EVID-579A0691E18C",
+        "EVID-BFD30B31C3FE",
+        "EVID-3F2AD89FFC6C",
+        "EVID-A6F3B7E222E1",
+        "EVID-E99D21C375B8",
+        "EVID-9FB9591CCDA3",
+        "EVID-FE129E1D0940",
+        "EVID-1344C54D5F89",
+        "EVID-4B243BFF2A7A",
+        "EVID-EE004F68EE3F",
+        "EVID-26D86AAD7297",
+        "EVID-B73E34F60A82",
+        "EVID-3111EBB8860A",
+        "EVID-13DFC6F3362B",
+        "EVID-C1308AFDE424",
+        "EVID-4645913B036F",
+        "EVID-0AADBC6C43D4",
+        "EVID-C3447C4A02EE",
+        "EVID-61093A588BBB",
+        "EVID-D7F9DD3AAF7E",
+        "EVID-8ACD62EB2007",
+        "EVID-047DCC145EEC",
+        "EVID-5CD22B00748C"
+      ]
+    },
+    {
+      "tool": "get_evidence",
+      "input_summary": {
+        "evidence_ids": [
+          "EVID-BFD30B31C3FE",
+          "EVID-3F2AD89FFC6C"
+        ],
+        "limit": 2
+      },
+      "success": true,
+      "result_summary": "success=True, count=2",
+      "evidence_ids": [
+        "EVID-BFD30B31C3FE",
+        "EVID-3F2AD89FFC6C"
+      ]
+    },
+    {
+      "tool": "open_source_context",
+      "input_summary": {
+        "artifact_path": "jadx/sources/owasp/sat/agoat/RootDetectionActivity.java",
+        "line": 72,
+        "max_lines": 40
+      },
+      "success": true,
+      "result_summary": "success=True, truncated=true",
+      "evidence_ids": [],
+      "context_source": "evidence"
+    },
+    {
+      "tool": "open_source_context",
+      "input_summary": {
+        "artifact_path": "jadx/sources/owasp/sat/agoat/InputValidationsOSCMDInjectionMain2Activity.java",
+        "line": 39,
+        "max_lines": 40
+      },
+      "success": true,
+      "result_summary": "success=True, truncated=true",
+      "evidence_ids": [],
+      "context_source": "evidence"
+    },
+    {
+      "tool": "get_evidence",
+      "input_summary": {
+        "evidence_ids": [
+          "EVID-17A88FD93164",
+          "EVID-B171F6FC9582"
+        ],
+        "limit": 2
+      },
+      "success": true,
+      "result_summary": "success=True, count=2",
+      "evidence_ids": [
+        "EVID-17A88FD93164",
+        "EVID-B171F6FC9582"
+      ]
+    },
+    {
+      "tool": "get_manifest_facts",
+      "input_summary": {
+        "limit": 20
+      },
+      "success": true,
+      "result_summary": "success=True, count=20, truncated=true",
+      "evidence_ids": []
+    },
+    {
+      "tool": "get_evidence",
+      "input_summary": {
+        "evidence_ids": [
+          "EVID-12282840D302"
+        ],
+        "limit": 1
+      },
+      "success": true,
+      "result_summary": "success=True, count=1",
+      "evidence_ids": [
+        "EVID-12282840D302"
+      ]
+    },
+    {
+      "tool": "get_manifest_facts",
+      "input_summary": {
+        "limit": 20
+      },
+      "success": true,
+      "result_summary": "success=True, count=20, truncated=true",
+      "evidence_ids": []
+    },
+    {
+      "tool": "get_evidence",
+      "input_summary": {
+        "evidence_ids": [
+          "EVID-65DBB0A45DDB"
+        ],
+        "limit": 1
+      },
+      "success": true,
+      "result_summary": "success=True, count=1",
+      "evidence_ids": [
+        "EVID-65DBB0A45DDB"
+      ]
+    },
+    {
+      "tool": "get_manifest_facts",
+      "input_summary": {
+        "limit": 20
+      },
+      "success": true,
+      "result_summary": "success=True, count=20, truncated=true",
+      "evidence_ids": []
+    },
+    {
+      "tool": "get_evidence",
+      "input_summary": {
+        "evidence_ids": [
+          "EVID-5342E365EFCB"
+        ],
+        "limit": 1
+      },
+      "success": true,
+      "result_summary": "success=True, count=1",
+      "evidence_ids": [
+        "EVID-5342E365EFCB"
+      ]
+    },
+    {
+      "tool": "get_manifest_facts",
+      "input_summary": {
+        "limit": 20
+      },
+      "success": true,
+      "result_summary": "success=True, count=20, truncated=true",
+      "evidence_ids": []
+    }
+  ],
+  "llm_retries": 0,
+  "repair_attempts": [],
+  "question_planning_source": "llm",
+  "question_planning_error": null,
+  "final_synthesis_error": null,
+  "termination_reason": "completed",
+  "errors": []
+}

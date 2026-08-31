@@ -1,0 +1,98 @@
+{
+  "case_id": "androgoat-full",
+  "apk_path": "tfm-eval/apks/AndroGoat.apk",
+  "analysis_profile": "full",
+  "agentic_mode": "single",
+  "agentic_strategy_runtime": "single",
+  "agentic_budget": "balanced",
+  "agentic_enabled_tools": [
+    "get_evidence",
+    "get_findings",
+    "get_manifest_facts",
+    "open_source_context",
+    "search_code"
+  ],
+  "agentic_max_questions": 5,
+  "agentic_max_tool_calls": 20,
+  "llm_provider": "openrouter",
+  "llm_model": "openrouter/free",
+  "manifest_json_path": "artifacts/androgoat-full/parsed/manifest.json",
+  "facts_path": "artifacts/androgoat-full/facts/manifest_facts.json",
+  "findings_path": "artifacts/androgoat-full/findings/manifest_findings.json",
+  "analysis_path": "artifacts/androgoat-full/analysis/static_analysis_reasoning.json",
+  "analysis_raw_path": "artifacts/androgoat-full/analysis/static_analysis_reasoning_raw.txt",
+  "jadx_output_dir": "artifacts/androgoat-full/jadx",
+  "code_search_results_path": "artifacts/androgoat-full/code_search/code_search_results.json",
+  "code_facts_path": "artifacts/androgoat-full/facts/code_search_facts.json",
+  "code_findings_path": "artifacts/androgoat-full/findings/code_findings.json",
+  "correlated_findings_path": "artifacts/androgoat-full/findings/canonical_findings.json",
+  "static_analysis_bundle_path": "artifacts/androgoat-full/bundle/static_analysis_bundle.json",
+  "static_report_path": "artifacts/androgoat-full/report/static_analysis_report.md",
+  "static_investigation_trace_path": "artifacts/androgoat-full/analysis/static_investigation_trace.json",
+  "llm_hypotheses_path": "artifacts/androgoat-full/analysis/llm_hypotheses.json",
+  "llm_candidate_findings_path": "artifacts/androgoat-full/findings/llm_candidate_findings.json",
+  "evidence_registry_path": "artifacts/androgoat-full/evidence/evidence.json",
+  "candidates_path": null,
+  "manifest_reasoning_path": "artifacts/androgoat-full/analysis/manifest_reasoning.json",
+  "manifest_reasoning_raw_path": "artifacts/androgoat-full/analysis/manifest_reasoning_raw.txt",
+  "code_reasoning_path": "artifacts/androgoat-full/analysis/code_reasoning.json",
+  "code_reasoning_raw_path": "artifacts/androgoat-full/analysis/code_reasoning_raw.txt",
+  "metrics_tracker": null,
+  "dynamic_plan_path": null,
+  "dynamic_results_path": null,
+  "dynamic_report_path": null,
+  "device_profile": null,
+  "package_name": null,
+  "status": "completed",
+  "current_step": "static_investigation_agent",
+  "tool_history": [
+    {
+      "tool": "extract_manifest",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "jadx_decompile",
+      "success": true,
+      "errors": []
+    },
+    {
+      "tool": "code_search",
+      "success": true,
+      "errors": [],
+      "matches_count": 50
+    },
+    {
+      "agent": "manifest_risk_agent",
+      "success": true,
+      "output": "artifacts/androgoat-full/analysis/manifest_reasoning.json",
+      "raw_output": "artifacts/androgoat-full/analysis/manifest_reasoning_raw.txt"
+    },
+    {
+      "agent": "code_risk_agent",
+      "success": true,
+      "output": "artifacts/androgoat-full/analysis/code_reasoning.json",
+      "raw_output": "artifacts/androgoat-full/analysis/code_reasoning_raw.txt"
+    },
+    {
+      "agent": "risk_fusion_agent",
+      "success": true,
+      "output": "artifacts/androgoat-full/analysis/static_analysis_reasoning.json",
+      "raw_output": "artifacts/androgoat-full/analysis/static_analysis_reasoning_raw.txt"
+    },
+    {
+      "agent": "markdown_report_agent",
+      "success": true,
+      "output": "artifacts/androgoat-full/report/static_analysis_report.md"
+    },
+    {
+      "agent": "static_investigation_agent",
+      "success": true,
+      "termination_reason": "completed",
+      "tool_calls": 12,
+      "output": "artifacts/androgoat-full/analysis/static_investigation_trace.json"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

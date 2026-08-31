@@ -159,8 +159,17 @@ def case_detail(request: Request, case_id: str):
         )
 
     state = load_case_state(Path(case["artifacts_dir"]).parent, case_id)
-    case["llm_provider"] = case.get("llm_provider") or state.get("llm_provider")
-    case["llm_model"] = case.get("llm_model") or state.get("llm_model")
+    investigation_trace = read_json_if_exists(state.get("static_investigation_trace_path"), {})
+    if not isinstance(investigation_trace, dict):
+        investigation_trace = {}
+    case["llm_provider"] = (
+        case.get("llm_provider")
+        or state.get("llm_provider")
+        or investigation_trace.get("llm_provider")
+    )
+    case["llm_model"] = (
+        case.get("llm_model") or state.get("llm_model") or investigation_trace.get("llm_model")
+    )
     case["agentic_mode"] = case.get("agentic_mode") or state.get("agentic_mode") or "none"
     case["agentic_budget"] = (
         case.get("agentic_budget") or state.get("agentic_budget") or "balanced"
@@ -200,6 +209,7 @@ def case_detail(request: Request, case_id: str):
             "is_completed": True,
             "is_non_final": False,
             "state": state,
+            "investigation_trace": investigation_trace,
             "findings": display_findings,
             "evidence": evidence,
             "evidence_count": len(evidence),

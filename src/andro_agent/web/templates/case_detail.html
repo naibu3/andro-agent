@@ -165,8 +165,11 @@
     <dd>{{ case.analysis_profile }}</dd>
 
     {% if case.llm_provider or case.llm_model %}
-    <dt>LLM provider/model</dt>
-    <dd>{{ case.llm_provider or "N/A" }} / {{ case.llm_model or "N/A" }}</dd>
+    <dt>LLM provider</dt>
+    <dd>{{ case.llm_provider or "N/A" }}</dd>
+
+    <dt>LLM model</dt>
+    <dd>{{ case.llm_model or "N/A" }}</dd>
     {% endif %}
 
     <dt>Agentic mode</dt>
@@ -174,6 +177,16 @@
 
     <dt>Agentic budget</dt>
     <dd>{{ case.agentic_budget }}</dd>
+
+    {% if investigation_trace.termination_reason %}
+    <dt>Static investigation termination reason</dt>
+    <dd>{{ investigation_trace.termination_reason }}</dd>
+    {% endif %}
+
+    {% if investigation_trace.failed_phase %}
+    <dt>Failed phase</dt>
+    <dd>{{ investigation_trace.failed_phase }}</dd>
+    {% endif %}
 
     <dt>Created</dt>
     <dd>{{ case.created_at }}</dd>
@@ -248,8 +261,14 @@
         </details>
         {% endif %}
 
-        {% if finding.missing_evidence_ids %}
-        <p class="muted">Evidence metadata missing for: {{ finding.missing_evidence_ids | join(", ") }}</p>
+        {% if finding.missing_evidence_ids and finding.linked_evidence %}
+        <p class="muted">Some evidence references could not be resolved: {{ finding.missing_evidence_ids | length }}</p>
+        <details>
+          <summary>Unresolved evidence references</summary>
+          <p class="mono">{{ finding.missing_evidence_ids | join(", ") }}</p>
+        </details>
+        {% elif finding.missing_evidence_ids %}
+        <p class="muted">No evidence metadata could be resolved for this finding.</p>
         {% endif %}
       </article>
       {% endfor %}

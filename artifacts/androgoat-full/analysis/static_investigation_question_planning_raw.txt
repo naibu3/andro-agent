@@ -1,0 +1,110 @@
+{
+  "questions": [
+    {
+      "question_id": "Q1",
+      "title": "Investigate Runtime command execution usages",
+      "rationale": "High severity code findings indicate Runtime.getRuntime().exec usage, posing command execution risk; need to review source context.",
+      "target_category": "code",
+      "related_finding_ids": ["CODE_RUNTIME_EXEC"],
+      "needed_evidence_ids": ["EVID-BFD30B31C3FE", "EVID-3F2AD89FFC6C"],
+      "tool_plan": [
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-BFD30B31C3FE"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-BFD30B31C3FE"
+        },
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-3F2AD89FFC6C"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-3F2AD89FFC6C"
+        }
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "title": "Check exported activity permission declarations",
+      "rationale": "Multiple exported activities lack protecting permissions, a high severity manifest issue.",
+      "target_category": "manifest",
+      "related_finding_ids": ["MANIFEST_EXPORTED_ACTIVITY_NO_PERMISSION"],
+      "needed_evidence_ids": ["EVID-17A88FD93164", "EVID-B171F6FC9582"],
+      "tool_plan": [
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-17A88FD93164"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-17A88FD93164"
+        },
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-B171F6FC9582"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-B171F6FC9582"
+        }
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "title": "Verify exported provider permission declaration",
+      "rationale": "Exported provider without permission represents a high severity manifest vulnerability.",
+      "target_category": "manifest",
+      "related_finding_ids": ["MANIFEST_EXPORTED_PROVIDER_NO_PERMISSION"],
+      "needed_evidence_ids": ["EVID-12282840D302"],
+      "tool_plan": [
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-12282840D302"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-12282840D302"
+        }
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "title": "Verify exported receiver permission declaration",
+      "rationale": "Exported receiver lacking permission is a high severity manifest issue.",
+      "target_category": "manifest",
+      "related_finding_ids": ["MANIFEST_EXPORTED_RECEIVER_NO_PERMISSION"],
+      "needed_evidence_ids": ["EVID-65DBB0A45DDB"],
+      "tool_plan": [
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-65DBB0A45DDB"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-65DBB0A45DDB"
+        }
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "title": "Verify exported service permission declaration",
+      "rationale": "Exported service without permission poses a high severity manifest risk.",
+      "target_category": "manifest",
+      "related_finding_ids": ["MANIFEST_EXPORTED_SERVICE_NO_PERMISSION"],
+      "needed_evidence_ids": ["EVID-5342E365EFCB"],
+      "tool_plan": [
+        {
+          "tool": "get_evidence",
+          "evidence_ids": ["EVID-5342E365EFCB"]
+        },
+        {
+          "tool": "open_source_context",
+          "from_evidence_id": "EVID-5342E365EFCB"
+        }
+      ]
+    }
+  ]
+}

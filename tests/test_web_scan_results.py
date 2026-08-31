@@ -317,19 +317,35 @@ def test_full_case_detail_displays_llm_configuration(web_context):
     )
     state_path = case_dir / "case_state.json"
     state = json.loads(state_path.read_text(encoding="utf-8"))
-    state.update({"llm_provider": "openrouter", "llm_model": "openai/gpt-oss-20b"})
+    trace_path = case_dir / "analysis" / "static_investigation_trace.json"
+    trace_path.parent.mkdir(parents=True, exist_ok=True)
+    trace_path.write_text(
+        json.dumps({"termination_reason": "completed", "failed_phase": None}),
+        encoding="utf-8",
+    )
+    state.update(
+        {
+            "llm_provider": "openrouter",
+            "llm_model": "openai/gpt-oss-20b",
+            "static_investigation_trace_path": str(trace_path),
+        }
+    )
     state_path.write_text(json.dumps(state), encoding="utf-8")
 
     body = render_case_detail(web_context, "full-config-case")
 
     assert "Analysis profile" in body
     assert "full" in body
-    assert "LLM provider/model" in body
-    assert "openrouter / openai/gpt-oss-20b" in body
+    assert "LLM provider" in body
+    assert "openrouter" in body
+    assert "LLM model" in body
+    assert "openai/gpt-oss-20b" in body
     assert "Agentic mode" in body
     assert "single" in body
     assert "Agentic budget" in body
     assert "balanced" in body
+    assert "Static investigation termination reason" in body
+    assert "completed" in body
 
 
 def test_completed_case_detail_does_not_show_stale_current_step(web_context):
@@ -376,6 +392,56 @@ def test_attach_evidence_to_web_findings_links_and_records_missing_ids():
     assert attached[0]["linked_evidence"] == evidence
     assert attached[0]["missing_evidence_ids"] == ["EVID-MISSING"]
     assert attached[0]["evidence"] == ["legacy"]
+
+
+def test_finding_with_partial_evidence_renders_compact_warning(web_context, monkeypatch):
+    make_completed_case(web_context, case_id="partial-evidence-case")
+    monkeypatch.setattr(
+        web_context["pages"],
+        "collect_findings_from_state",
+        lambda state: [
+            {
+                "title": "Partial evidence",
+                "description": "One reference resolves.",
+                "severity": "medium",
+                "evidence_ids": ["EVID-1", "EVID-MISSING"],
+            }
+        ],
+    )
+    monkeypatch.setattr(
+        web_context["pages"],
+        "load_evidence_for_case",
+        lambda state: [{"evidence_id": "EVID-1", "snippet": "resolved evidence"}],
+    )
+
+    body = render_case_detail(web_context, "partial-evidence-case")
+
+    assert "resolved evidence" in body
+    assert "Some evidence references could not be resolved: 1" in body
+    assert "EVID-MISSING" in body
+    assert "No evidence metadata could be resolved for this finding." not in body
+
+
+def test_finding_with_no_resolved_evidence_renders_clear_warning(web_context, monkeypatch):
+    make_completed_case(web_context, case_id="missing-evidence-case")
+    monkeypatch.setattr(
+        web_context["pages"],
+        "collect_findings_from_state",
+        lambda state: [
+            {
+                "title": "Missing evidence",
+                "description": "No reference resolves.",
+                "severity": "medium",
+                "evidence_ids": ["EVID-MISSING"],
+            }
+        ],
+    )
+    monkeypatch.setattr(web_context["pages"], "load_evidence_for_case", lambda state: [])
+
+    body = render_case_detail(web_context, "missing-evidence-case")
+
+    assert "No evidence metadata could be resolved for this finding." in body
+    assert "Some evidence references could not be resolved" not in body
 
 
 def test_running_detail_hides_final_sections(web_context):

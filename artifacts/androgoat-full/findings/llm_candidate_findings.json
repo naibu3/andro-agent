@@ -1,0 +1,28 @@
+[
+  {
+    "finding_id": "LLM-FIND-709D1109CCDE",
+    "title": "OS Command Injection in InputValidationsOSCMDInjectionMain2Activity",
+    "description": "The application performs unsafe command execution by concatenating unsanitized user input from an EditText into a command string used by Runtime.exec(). This can lead to arbitrary command execution on the device.",
+    "severity": "critical",
+    "confidence": "high",
+    "status": "static_candidate",
+    "category": "code_injection",
+    "affected_components": [
+      "owasp.sat.agoat.InputValidationsOSCMDInjectionMain2Activity"
+    ],
+    "evidence_ids": [
+      "EVID-3F2AD89FFC6C"
+    ],
+    "impact": "An attacker could execute arbitrary system commands with the privileges of the application, potentially leading to data theft, device compromise, or unauthorized access.",
+    "remediation": "Avoid using Runtime.exec() with string concatenation. Instead, use a list of arguments to prevent shell interpretation, or use safer APIs for specific tasks like network connectivity checks.",
+    "references": [],
+    "metadata": {
+      "source": "llm_static_investigation",
+      "why_not_already_detected": "The finding was detected by the rule engine, but the specific sink-to-source flow (OS Command Injection) requires manual verification of the input source.",
+      "related_deterministic_findings": [
+        "CODE_RUNTIME_EXEC"
+      ],
+      "tool_trace_refs": []
+    }
+  }
+]
