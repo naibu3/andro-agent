@@ -62,11 +62,20 @@ def test_openai_compatible_native_provider_configuration(
 
     llm.build_llm_model(model_id=model, provider=provider)
 
-    assert captured == {
+    expected = {
         "id": model,
         "api_key": f"{provider}-test-secret",
         "base_url": base_url,
     }
+    if provider == "deepseek":
+        expected["role_map"] = {
+            "system": "system",
+            "user": "user",
+            "assistant": "assistant",
+            "tool": "tool",
+            "model": "assistant",
+        }
+    assert captured == expected
 
 
 def test_kimi_accepts_kimi_api_key_fallback(monkeypatch):

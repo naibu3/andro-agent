@@ -121,11 +121,22 @@ def build_llm_model(
             raise RuntimeError(
                 f"{selected_provider.title()} API key is not configured. Set {env_hint}."
             )
-        return OpenAIChat(
-            id=selected_model_id,
-            api_key=api_key,
-            base_url=provider_config["base_url"],
-        )
+        kwargs = {
+            "id": selected_model_id,
+            "api_key": api_key,
+            "base_url": provider_config["base_url"],
+        }
+        if selected_provider == "deepseek":
+            # Agno uses OpenAI's newer `developer` role for instructions, while
+            # DeepSeek's chat endpoint currently accepts `system` instead.
+            kwargs["role_map"] = {
+                "system": "system",
+                "user": "user",
+                "assistant": "assistant",
+                "tool": "tool",
+                "model": "assistant",
+            }
+        return OpenAIChat(**kwargs)
 
     if selected_provider == "ollama":
         return Ollama(
