@@ -9,7 +9,12 @@ from pathlib import Path
 from typing import Any
 
 from andro_agent.agentic import AgenticRuntimeConfig
-from andro_agent.core.llm import build_llm_model, get_llm_metadata
+from andro_agent.core.llm import (
+    build_llm_model,
+    format_provider_error,
+    get_llm_metadata,
+    provider_error_diagnostic,
+)
 from andro_agent.investigation import StaticInvestigationTools
 
 ALLOWED_TOOLS = frozenset(
@@ -67,7 +72,9 @@ class LLMJSONParseError(RuntimeError):
 
 
 class LLMProviderError(RuntimeError):
-    pass
+    def __init__(self, message: str, diagnostic: dict[str, Any] | None = None) -> None:
+        super().__init__(message)
+        self.diagnostic = diagnostic
 
 
 @dataclass(frozen=True)
@@ -115,6 +122,11 @@ class StaticInvestigationAgent:
         self._deterministic_findings: list[dict[str, Any]] = []
         self._raw_response_attempts: dict[str, int] = {}
         self._last_raw_response: dict[str, str] = {}
+        self._provider_errors: list[dict[str, Any]] = []
+        self._fallback_model_used = False
+        self._fallback_from_model: str | None = None
+        self._fallback_to_model: str | None = None
+        self._fallback_reason: str | None = None
 
     def run(self) -> dict[str, Any]:
         trace = self._new_trace()
@@ -214,6 +226,14 @@ class StaticInvestigationAgent:
             trace["failed_phase"] = trace["current_phase"]
             trace["errors"].append(str(exc))
 
+        trace["provider_errors"] = self._provider_errors
+        trace["fallback_model_used"] = self._fallback_model_used
+        trace["fallback_from_model"] = self._fallback_from_model
+        trace["fallback_to_model"] = self._fallback_to_model
+        trace["fallback_reason"] = self._fallback_reason
+        if self._fallback_model_used:
+            trace["llm_model"] = self.model_id
+            trace["model"] = self.model_id
         self._set_phase(trace, "output_writing")
         paths = self._write_outputs(trace, hypotheses, candidates)
         return {
@@ -262,6 +282,11 @@ class StaticInvestigationAgent:
             "final_synthesis_error": None,
             "termination_reason": "disabled",
             "errors": [],
+            "provider_errors": [],
+            "fallback_model_used": False,
+            "fallback_from_model": None,
+            "fallback_to_model": None,
+            "fallback_reason": None,
         }
 
     @staticmethod
@@ -422,7 +447,25 @@ class StaticInvestigationAgent:
                 status = getattr(response, "status", None)
                 status_value = getattr(status, "value", status)
                 if str(status_value).upper() == "ERROR":
-                    raise LLMProviderError("LLM provider request failed with status ERROR.")
+                    error = self._agno_response_error(response)
+                    diagnostic = provider_error_diagnostic(
+                        error, provider=self.provider, model=self.model_id
+                    )
+                    if self._should_fallback(diagnostic):
+                        self._activate_deepseek_fallback(diagnostic)
+                        response = self._agno_agent.run(prompt)
+                        status = getattr(response, "status", None)
+                        status_value = getattr(status, "value", status)
+                        if str(status_value).upper() == "ERROR":
+                            error = self._agno_response_error(response)
+                            diagnostic = provider_error_diagnostic(
+                                error, provider=self.provider, model=self.model_id
+                            )
+                            self._provider_errors.append(diagnostic)
+                            raise LLMProviderError(format_provider_error(diagnostic), diagnostic)
+                    else:
+                        self._provider_errors.append(diagnostic)
+                        raise LLMProviderError(format_provider_error(diagnostic), diagnostic)
                 usage = getattr(response, "usage", None)
                 if usage:
                     self._usage.append(self._usage_dict(usage))
@@ -434,12 +477,55 @@ class StaticInvestigationAgent:
                 raise LLMProviderError(str(exc)) from exc
             if isinstance(exc, RuntimeError) and "not configured" in str(exc).lower():
                 raise
-            raise LLMProviderError(f"LLM provider request failed: {exc}") from exc
+            diagnostic = provider_error_diagnostic(exc, provider=self.provider, model=self.model_id)
+            if self._should_fallback(diagnostic):
+                self._activate_deepseek_fallback(diagnostic)
+                return self._call_model(prompt, phase=phase)
+            self._provider_errors.append(diagnostic)
+            raise LLMProviderError(format_provider_error(diagnostic), diagnostic) from exc
         self._write_raw_response(phase, raw)
         value = self._parse_json(raw)
         if not isinstance(value, dict):
             raise LLMJSONParseError("invalid_json")
         return value
+
+    @staticmethod
+    def _agno_response_error(response: Any) -> Exception:
+        events = list(getattr(response, "events", None) or [])
+        for event in reversed(events):
+            message = getattr(event, "content", None)
+            if message:
+                error = RuntimeError(str(message))
+                additional = getattr(event, "additional_data", None) or {}
+                for source, target in (("status_code", "status_code"), ("code", "code"), ("error_code", "code")):
+                    if additional.get(source) is not None:
+                        setattr(error, target, additional[source])
+                return error
+        data = getattr(response, "model_provider_data", None) or {}
+        message = data.get("error_message") or data.get("message") or getattr(response, "content", None)
+        error = RuntimeError(str(message or "LLM provider request failed with status ERROR."))
+        for source, target in (("status_code", "status_code"), ("error_code", "code"), ("code", "code")):
+            if data.get(source) is not None:
+                setattr(error, target, data[source])
+        return error
+
+    def _should_fallback(self, diagnostic: dict[str, Any]) -> bool:
+        return (
+            self.provider == "deepseek"
+            and self.model_id == "deepseek-v4-flash"
+            and not self._fallback_model_used
+            and diagnostic.get("category") == "model_not_found"
+        )
+
+    def _activate_deepseek_fallback(self, diagnostic: dict[str, Any]) -> None:
+        self._provider_errors.append(diagnostic)
+        self._fallback_model_used = True
+        self._fallback_from_model = self.model_id
+        self._fallback_to_model = "deepseek-chat"
+        self._fallback_reason = str(diagnostic.get("provider_error_code") or "model_not_found")
+        self.model_id = "deepseek-chat"
+        self._agno_agent = None
+        self._ensure_model()
 
     def _repair_question_planning(
         self,

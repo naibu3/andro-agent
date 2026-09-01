@@ -741,6 +741,11 @@ class StaticAnalysisPipeline:
             ),
             "static_investigation_termination_reason": termination,
             "static_investigation_failed_phase": trace.get("failed_phase"),
+            "fallback_model_used": trace.get("fallback_model_used", False),
+            "fallback_from_model": trace.get("fallback_from_model"),
+            "fallback_to_model": trace.get("fallback_to_model"),
+            "fallback_reason": trace.get("fallback_reason"),
+            "errors": trace.get("errors", []),
         }
 
     @staticmethod

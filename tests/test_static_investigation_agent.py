@@ -426,6 +426,121 @@ def test_provider_connection_failure_is_llm_error(tmp_path: Path) -> None:
     assert "provider unavailable" in trace["errors"][0]
 
 
+class FakeAgnoAgent:
+    def __init__(self, responses: list[object]) -> None:
+        self.responses = list(responses)
+        self.calls = 0
+
+    def run(self, prompt: str) -> object:
+        self.calls += 1
+        return self.responses.pop(0)
+
+
+def agno_error(message: str, *, status_code: int, code: str | None = None) -> object:
+    return SimpleNamespace(
+        status="ERROR",
+        content=None,
+        usage=None,
+        events=[
+            SimpleNamespace(
+                content=message,
+                additional_data={"status_code": status_code, "code": code},
+            )
+        ],
+        model_provider_data=None,
+    )
+
+
+def agno_success(content: object) -> object:
+    return SimpleNamespace(status="COMPLETED", content=content, usage=None)
+
+
+@pytest.mark.parametrize(
+    ("status_code", "code", "message", "expected"),
+    [
+        (401, "invalid_api_key", "invalid credential", "authentication failed"),
+        (402, "insufficient_balance", "billing balance exhausted", "balance or quota"),
+    ],
+)
+def test_deepseek_provider_http_errors_are_safe_llm_errors(
+    tmp_path: Path, status_code: int, code: str, message: str, expected: str
+) -> None:
+    agent = StaticInvestigationAgent(
+        case_dir=investigation_case(tmp_path),
+        profile="full",
+        provider="deepseek",
+        model_id="deepseek-v4-flash",
+    )
+    fake = FakeAgnoAgent([agno_error(message, status_code=status_code, code=code)])
+    agent._agno_agent = fake
+
+    result = agent.run()
+
+    trace = result["trace"]
+    assert trace["termination_reason"] == "llm_error"
+    assert trace["failed_phase"] == "question_planning"
+    assert expected in trace["errors"][0]
+    assert trace["provider_errors"][0]["http_status_code"] == status_code
+    assert trace["fallback_model_used"] is False
+    assert fake.calls == 1
+
+
+def test_deepseek_model_not_found_falls_back_once(tmp_path: Path, monkeypatch) -> None:
+    primary = FakeAgnoAgent(
+        [agno_error("unsupported model", status_code=400, code="model_not_found")]
+    )
+    fallback = FakeAgnoAgent(
+        [
+            agno_success({"questions": []}),
+            agno_success({"hypotheses": [], "candidate_findings": []}),
+        ]
+    )
+    agent = StaticInvestigationAgent(
+        case_dir=investigation_case(tmp_path),
+        profile="full",
+        provider="deepseek",
+        model_id="deepseek-v4-flash",
+    )
+    agent._agno_agent = primary
+
+    def fake_ensure_model() -> None:
+        if agent._agno_agent is None:
+            assert agent.model_id == "deepseek-chat"
+            agent._agno_agent = fallback
+
+    monkeypatch.setattr(agent, "_ensure_model", fake_ensure_model)
+
+    trace = agent.run()["trace"]
+
+    assert trace["termination_reason"] == "completed"
+    assert trace["fallback_model_used"] is True
+    assert trace["fallback_from_model"] == "deepseek-v4-flash"
+    assert trace["fallback_to_model"] == "deepseek-chat"
+    assert trace["fallback_reason"] == "model_not_found"
+    assert primary.calls == 1
+    assert fallback.calls == 2
+
+
+def test_provider_secret_is_absent_from_written_artifacts(tmp_path: Path, monkeypatch) -> None:
+    secret = "deepseek-super-secret-test-value"
+    monkeypatch.setenv("DEEPSEEK_API_KEY", secret)
+    agent = StaticInvestigationAgent(
+        case_dir=investigation_case(tmp_path),
+        profile="full",
+        provider="deepseek",
+        model_id="deepseek-v4-flash",
+    )
+    agent._agno_agent = FakeAgnoAgent(
+        [agno_error(f"Authorization: Bearer {secret}", status_code=401, code="invalid_api_key")]
+    )
+
+    agent.run()
+
+    for path in agent.case_dir.rglob("*"):
+        if path.is_file():
+            assert secret not in path.read_text(encoding="utf-8", errors="ignore")
+
+
 @pytest.mark.parametrize(
     ("provider", "model", "setting_names", "env_names", "message"),
     [
@@ -735,6 +850,11 @@ def test_metrics_and_report_include_static_investigation_results(tmp_path: Path)
         "llm_candidate_findings_with_evidence_count": 1,
         "static_investigation_termination_reason": "completed",
         "static_investigation_failed_phase": None,
+        "fallback_model_used": False,
+        "fallback_from_model": None,
+        "fallback_to_model": None,
+        "fallback_reason": None,
+        "errors": [],
     }
     report = state.static_report_path.read_text(encoding="utf-8")
     assert "## LLM static investigation candidates" in report
